@@ -3,8 +3,10 @@ title: "JS Learn JS"
 author: "bbauska"
 date prior editted: "8/31/2024 4+pm"
 date last editted: "9/9/2024 12+pm"
+date last editted: "9/10/2024 1+pm"
 date last editted: "9/12/2024 1+pm"
 date last editted: "9/20/2024 10+pm"
+date last editted: "10/18/2024 5+pm"
 output: 
   markdown:
     with some style
@@ -44,134 +46,156 @@ output:
 <h4><a href="#ch16">Chapter 16: Libraries and APIs</a></h4>
 </blockquote>
 
-<a href="https://github.com/bbauska/JS-Learn-JS.git" target="_blank" rel="noopener noreferrer">JS Learn JS - git</a>
+<a href="https://github.com/bbauska/JS-Learn-JS.git" target="_blank" rel="noopener noreferrer">
+JS Learn JS - git</a>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch1">Chapter 1: Introduction to JavaScript</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>What is JavaScript?</h3>
-<p>JavaScript is a lightweight, interpreted, object-oriented language with first-class functions, and is best known as
-the scripting language for web pages, but it’s used in many non-browser environments as well. JavaScript is a
-prototype-based, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g.
-functional programming) styles.</p>
-<p>Originally developed by Netscape in the mid-1990s, JavaScript has become one of the three core technologies of the
-web, along with HTML and CSS.</p>
+
+<p>JavaScript is a lightweight, interpreted, object-oriented language with first-class 
+functions, and is best known as the scripting language for web pages, but it’s used in 
+many non-browser environments as well. JavaScript is a prototype-based, multi-paradigm, 
+dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional 
+programming) styles.</p>
+
+<p>Originally developed by Netscape in the mid-1990s, JavaScript has become one of the 
+three core technologies of the web, along with HTML and CSS.</p>
 
 <h3>Variables</h3>
+
 <p>Variables are containers for storing data values. In JavaScript, we declare a variable 
 using the var keyword, followed by the name of the variable. Let’s look at how we can create 
 a variable.</p>
 
-```
+<pre>
 var name = "John Doe"
-```
+</pre>
 
 <h3>JavaScript Environment</h3>
-Before we start, we need to set up our JavaScript environment. While you can write JavaScript 
-in any text editor, you’ll need a web browser to run your scripts.
-Most web browsers have built-in JavaScript engines. You can open a JavaScript console in your 
-browser and run JavaScript code directly in the console.
+<p>Before we start, we need to set up our JavaScript environment. While you can write JavaScript 
+in any text editor, you’ll need a web browser to run your scripts. Most web browsers have 
+built-in JavaScript engines. You can open a JavaScript console in your browser and run 
+JavaScript code directly in the console.</p>
 
 <h3>Basic JavaScript Syntax</h3>
-JavaScript syntax is the set of rules, how JavaScript programs are constructed:
+<p>JavaScript syntax is the set of rules, how JavaScript programs are constructed:</p>
 
-```
+<pre>
 var x = 5; // declaring a variable
 var y = 6; // declaring another variable
 var z = x + y; // adding the variables together
 
 console.log(z); // prints the result to the console
-```
+</pre>
 
 <h3>Variables and Data Types</h3>
-JavaScript has dynamic types. This means you don’t have to specify the data type of a variable 
-when you declare it, and you can change the data type of a variable that has already been declared.
+<p>JavaScript has dynamic types. This means you don’t have to specify the data type of a variable 
+when you declare it, and you can change the data type of a variable that has already been declared.</p>
 
-```
+<pre>
 var length =16; // Number
 var lastName = "Johnson"; // String
 var x = {firstName:"John", lastName:"Doe"}; // Object
-```
+</pre>
 
-In the next chapter, we’ll dive deeper into JavaScript’s data types, how to manipulate them, 
-and how to use them effectively in your code.
+<p>In the next chapter, we’ll dive deeper into JavaScript’s data types, how to manipulate them, 
+and how to use them effectively in your code.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch2">Chapter 2: Understanding Variables and Data Types in JavaScript</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-In this chapter, we will explore variables and data types, which are fundamental concepts 
+<p>In this chapter, we will explore variables and data types, which are fundamental concepts 
 in JavaScript. As you learn about these topics, you will also get to see them in action through 
-various code examples.
+various code examples.</p>
+
 <h3>Variables</h3>
-Variables are containers for storing data values. In JavaScript, we declare a variable using 
-the var keyword, followed by the name of the variable. Let’s look at how we can create a variable.
 
-```
+<p>Variables are containers for storing data values. In JavaScript, we declare a variable using 
+the var keyword, followed by the name of the variable. Let’s look at how we can create a variable.</p>
+
+<pre>
 var name = "John Doe";
-```
+</pre>
 
-In the example above, we created a variable named name and assigned it the value “John Doe”. 
-We can also declare a variable without assigning a value, and assign it later.
+<p>In the example above, we created a variable named name and assigned it the value “John Doe”. 
+We can also declare a variable without assigning a value, and assign it later.</p>
 
-```
+<pre>
 var name;
 name = "John Doe";
-```
+</pre>
 
 JavaScript also provides two other keywords for declaring variables - let and const. The 
 let keyword is similar to var, but it has a block scope. On the other hand, const is used 
 for declaring constants, which are variables that cannot be reassigned.
 
-```
+<pre>
 let age = 25;
 const country = "USA";
-```
+</pre>
 
 <h4>Data Types</h4>
-JavaScript has several data types, including:
-1. Number - Represents numeric values. For example: 
+<p>JavaScript has several data types, including:</p>
 
-```
+<ol start="1">
+  <li>Number - Represents numeric values. For example:</li>
+</ol>
+
+<pre>
 var num = 25;
-```
+</pre>
 
-2. String - Represents sequence of characters. For example: 
+<ol start="2">
+  <li>String - Represents sequence of characters. For example:</li>
+</ol>
 
-```
+<pre>
 var str = "Hello World";
-```
+</pre>
 
-3. Boolean - Represents logical values. Can either be true or false. For example: 
+<ol start="3">
+  <li>Boolean - Represents logical values. Can either be true or false. For example:</li>
+</ol>
 
-```
+<pre>
 var isTrue = true;
-```
+</pre>
 
-4. Undefined - Represents a variable that has not been assigned a value. For example: 
+<ol start="4">
+  <li>Undefined - Represents a variable that has not been assigned a value. For example:</li>
+</ol>
 
-```
+<pre>
 var x;
-```
+</pre>
 
-5. Null - Represents a null value. For example: 
+<ol start="5">
+  <li>Null - Represents a null value. For example:</li>
+</ol>
 
-```
+<pre>
 var y = null;
-```
+</pre>
 
-6. Object - Represents an instance through which we can access methods. For example: 
+<ol start="6">
+  <li>Object - Represents an instance through which we can access methods. For example:</li>
+</ol>
 
-```
+<pre>
 var obj = {name: "John", age: 25, country: "USA"};
-```
+</pre>
 
-7. Array - Represents a group of similar items in a list. For example: 
+<ol start="7">
+  <li>Array - Represents a group of similar items in a list. For example:</li>
+</ol>
 
-```
+<pre>
 var arr = [1, 2, 3, 4, 5];
-```
+</pre>
 
-Let’s look at a few examples of these data types.
+<p>Let’s look at a few examples of these data types.</p>
 
-```
+<pre>
 // Number
 var num = 25;
 // String
@@ -186,11 +210,11 @@ var y = null;
 var obj = {name: "John", age: 25, country: "USA"};
 // Array
 var arr = [1, 2, 3, 4, 5];
-```
+</pre>
 
-In JavaScript, we can find the type of a variable using the typeof operator.
+<p>In JavaScript, we can find the type of a variable using the typeof operator.</p>
 
-```
+<pre>
 console.log(typeof num); // Returns "number"
 console.log(typeof str); // Returns "string"
 console.log(typeof isTrue); // Returns "boolean"
@@ -198,47 +222,58 @@ console.log(typeof x); // Returns "undefined"
 console.log(typeof y); // Returns "object"
 console.log(typeof obj); // Returns "object"
 console.log(typeof arr); // Returns "object
-```
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch3">Chapter 3: Variables and Data</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Types in JavaScript</h3>
-In this chapter, we will explore the foundation of any programming language: variables and data types. In
-JavaScript, we have a variety of data types and ways to declare variables, which we will be delving into in this
-chapter.
+
+<p>In this chapter, we will explore the foundation of any programming language: variables 
+and data types. In JavaScript, we have a variety of data types and ways to declare variables, 
+which we will be delving into in this chapter.</p>
+
 <h3>Variables</h3>
-In JavaScript, variables are containers for storing data values. The value stored in a variable can be changed, and it’s
-this dynamic nature that makes variables an essential part of programming.
-There are three ways to declare a variable in JavaScript
+
+<p>In JavaScript, variables are containers for storing data values. The value stored in a 
+variable can be changed, and it’s this dynamic nature that makes variables an essential 
+part of programming.</p>
+
+<p>There are three ways to declare a variable in JavaScript</p>
+
 1. Using var
 2. Using let
 3. Using const
-Let’s look at each of them.
-<h4>Var</h4>
-Before ES6, var was the only way to declare variables in JavaScript. Here is an example:
 
-```
+<p>Let’s look at each of them.</p>
+
+<h4>Var</h4>
+
+<p>Before ES6, var was the only way to declare variables in JavaScript. Here is an example:</p>
+
+<pre>
 var name = "John Doe";
-```
+</pre>
 
 <h4>Let</h4>
-Introduced in ES6, let is now the preferred way to declare variables. It has more restrictions than var, which helps
-prevent bugs in your code. Here is an example:
+<p>Introduced in ES6, let is now the preferred way to declare variables. It has more 
+restrictions than var, which helps prevent bugs in your code. Here is an example:</p>
 
-```
+<pre>
 let name = "John Doe";
-```
+</pre>
 
 <h4>Const</h4>
-Also introduced in ES6, const is used to declare constants, i.e., variables that cannot be reassigned. Here is an
-example:
+<p>Also introduced in ES6, const is used to declare constants, i.e., variables that cannot 
+be reassigned. Here is an example:</p>
 
-```
+<pre>
 const PI = 3.14159;
-```
+</pre>
 
 <h3>Data Types</h3>
-JavaScript has a few basic data types, including:
+
+<p>JavaScript has a few basic data types, including:</p>
+
 1. Number
 2. String
 3. Boolean
@@ -248,192 +283,217 @@ JavaScript has a few basic data types, including:
 7. Symbol (new in ES6)
 
 <h4>Number</h4>
-Numbers in JavaScript can be with or without decimals. For example:
 
-```
+<p>Numbers in JavaScript can be with or without decimals. For example:</p>
+
+<pre>
 letnuml = 5; // without decimal
 let num2 = 5.5; // with decimal
-```
+</pre>
 
 <h4>String</h4>
-Strings are sequences of characters, and they must be inside quotes. For example:
+<p>Strings are sequences of characters, and they must be inside quotes. For example:</p>
 
-```
+<pre>
 let strl = "Hello"; // double quotes
 let str2 = 'Hello'; // single quotes
-```
+</pre>
 
 <h4>Boolean</h4>
 Booleans can only be true or false. For example:
 
-```
+<pre>
 let isReading = true;
 let isSleeping = false;
-```
+</pre>
 
 <h4>Object</h4>
 Objects are complex data types that allow for the combination of other data types. For example:
 
-```
+<pre>
 let person = {firstName: "John", lastName: "Doe", age: 30};
-```
+</pre>
 
 <h4>Null and Undefined</h4>
 In JavaScript, null means “nothing”. It needs to be assigned:
 
-```
+<pre>
 let nothing = null;
-```
+</pre>
 
 Undefined means a variable has not been assigned a value:
 
-```
+<pre>
 let something;
 console.log(something); // Outputs: undefined
-```
+</pre>
 
 <h4>Symbol</h4>
 The Symbol data type was introduced in ES6, and it produces a unique value:
 
-```
+<pre>
 let symbol 1 = Symbol('symbol');
-```
+</pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch4">Chapter 4: Functions in JS</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-In this chapter, we will delve into one of the most fundamental aspects of JavaScript: functions. Functions are
-reusable blocks of code that perform a specific task. They can take inputs, called parameters, and return an output,
-or result.
+<p>In this chapter, we will delve into one of the most fundamental aspects of JavaScript: 
+functions. Functions are reusable blocks of code that perform a specific task. They can 
+take inputs, called parameters, and return an output, or result.</p>
+
 <h4>What are Functions?</h4>
-In JavaScript, functions are first-class objects, which means they can be stored in variables, passed as arguments to
-other functions, and returned from other functions. This flexibility gives JavaScript its power and versatility.
+
+<p>In JavaScript, functions are first-class objects, which means they can be stored in 
+variables, passed as arguments to other functions, and returned from other functions. 
+This flexibility gives JavaScript its power and versatility.</p>
+
 <h5>Here’s a simple example of a function:</h5>
 
-```
+<pre>
 function greet() {
 console.log("Hello, World!");
 greet(); // Outputs: Hello, World!
-```
+</pre>
 
-In this example, greet is the function name, and the code inside the curly braces {} is the function body. We call or
-invoke the function by using its name followed by parentheses ().
+<p>In this example, greet is the function name, and the code inside the curly braces {} is 
+the function body. We call or invoke the function by using its name followed by 
+parentheses ().</p>
+
 <h4>Function Parameters and Arguments</h4>
-Functions can take inputs, known as parameters. When we call a function, we pass values, known as arguments, into
-the function.
+
+<p>Functions can take inputs, known as parameters. When we call a function, we pass values, 
+known as arguments, into the function.</p>
+
 <h5>Here’s an example:</h5>
 
-```
+<pre>
 function greet(name) {
 console.log("Hello," + name +
 greet("Alice"); // Outputs: Hello, Alice!
-```
+</pre>
 
-In this example, name is the parameter and “Alice” is the argument.
+<p>In this example, name is the parameter and “Alice” is the argument.</p>
+
 <h5>Return Statement</h5>
-Functions can output a result using the return statement. When a function encounters a return statement, it stops
-execution and returns the specified value.
+<p>Functions can output a result using the return statement. When a function encounters a 
+return statement, it stops execution and returns the specified value.</p>
+
 <h5>Here’s an example:</h5>
 
-```
+<pre>
 function square(number) {
   return number * number;
   console.log(square(5)); // Outputs: 25
-```
+</pre>
 
-In this example, square is a function that takes one parameter, number, and returns the square of that number.
+<p>In this example, square is a function that takes one parameter, number, and returns the 
+square of that number.</p>
+
 <h5>Function Expressions</h5>
-In JavaScript, functions can also be defined using function expressions. Here’s an example:
+<p>In JavaScript, functions can also be defined using function expressions. Here’s an 
+example:</p>
 
-```
+<pre>
 var square = function(number) {
   return number * number;
   1;
 console.log(square(5)); // Outputs: 25
-```
+</pre>
 
-In this example, square is a function expression that calculates the square of a number.
+<p>In this example, square is a function expression that calculates the square of a number.</p>
+
 <h4>Arrow Functions</h4>
-ES6 introduced arrow functions, a shorter way to write functions using the = > syntax.
+
+<p>ES6 introduced arrow functions, a shorter way to write functions using the = > syntax.</p>
+
 <h5>Here’s an example:</h5>
 
-```
+<pre>
 const square = (number) => {
 return number * number;
 1;
 console.log(square(5)); // Outputs: 25
-```
+</pre>
 
-In this example, square is an arrow function that calculates the square of a number.
+<p>In this example, square is an arrow function that calculates the square of a number.
 Now that you understand the basics of functions in JavaScript, you can use them to create 
 more complex and dynamic applications. In the next chapter, we’ll look at objects and how 
-they can help us structure our code in a more logical and readable way.
+they can help us structure our code in a more logical and readable way.</p>
 
-Functions are the main building blocks in JavaScript. A function is a reusable set of statements 
-that perform a task or calculates a value.
+<p>Functions are the main building blocks in JavaScript. A function is a reusable set of 
+statements that perform a task or calculates a value.</p>
+
 <h4>Function Definition</h4>
-In JavaScript, you can define a function using the function keyword, followed by a name for the function, a list of
-parameters enclosed in parentheses (), and the JavaScript statements that define the function enclosed in curly
-brackets {}.
 
-```
+<p>In JavaScript, you can define a function using the function keyword, followed by a 
+name for the function, a list of parameters enclosed in parentheses (), and the 
+JavaScript statements that define the function enclosed in curly brackets {}.</p>
+
+<pre>
 function functionName(parameterl, parameter2, parameters) {
 // code to be executed
-```
+</pre>
 
 <h4>Calling a Function</h4>
-To call a function in JavaScript, you would simply use the function name followed by parentheses ().
+<p>To call a function in JavaScript, you would simply use the function name followed by 
+parentheses ().</p>
 
-```
+<pre>
 functionName();
-```
+</pre>
 
 <h4>Function Parameters and Arguments</h4>
-Function parameters are the names listed in the function definition. Function arguments are the real values that are
-passed to the function.
+<p>Function parameters are the names listed in the function definition. Function arguments 
+are the real values that are passed to the function.</p>
 
-```
+<pre>
 function myFunction(x; y) {
 return x * y;
 console.log(myFunction(5, 6)); // Outputs: 30
-```
+</pre>
 
 <h4>Function Return</h4>
-The return statement stops the execution of a function and returns a value from that function.
+<p>The return statement stops the execution of a function and returns a value from that 
+function.</p>
 
-```
+<pre>
 function myFunction(x, y) {
 return x * y;
 var z = myFunction(5, 6); // z equal to 30
-```
+</pre>
 
 <h4>Function Hoisting</h4>
-In JavaScript, functions can be called before they are declared. This is because function 
-declarations are hoisted to the top of the current scope.
+<p>In JavaScript, functions can be called before they are declared. This is because function 
+declarations are hoisted to the top of the current scope.</p>
 
-```
+<pre>
 console.log(myFunction(5, 6)); // Outputs: 30
 function myFunction(x, y) {
 return x * y;
-```
+</pre>
 
 <h4>Arrow Functions</h4>
-Arrow functions were introduced in ES6 as a short syntax for writing function expressions. 
-You don’t need the function keyword, the return keyword, and the curly brackets.
 
-```
-const myFunction = (x, y) = > x * y;
+<p>Arrow functions were introduced in ES6 as a short syntax for writing function 
+expressions. You don’t need the function keyword, the return keyword, and the curly 
+brackets.</p>
+
+<pre>
+const myFunction = (x, y) = &gt; x * y;
 console.log(myFunction(5,6)); // Outputs: 30
-```
+</pre>
 
-In the next chapter, we will explore more complex aspects of JavaScript functions, such as 
-closures and higher-order functions.
+<p>In the next chapter, we will explore more complex aspects of JavaScript functions, 
+such as closures and higher-order functions.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch5">Chapter 5: Arrays and Iteration in JS</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-In this chapter, we will explore one of the most important data structures in JavaScript: 
-Arrays. We will go through the basics of creating and manipulating arrays, along with the 
-different methods of iterating through arrays to manipulate or access the data stored within them.
+<p>In this chapter, we will explore one of the most important data structures in 
+JavaScript: Arrays. We will go through the basics of creating and manipulating arrays, 
+along with the different methods of iterating through arrays to manipulate or access the 
+data stored within them.</p>
+
 <h4>Understanding Arrays</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch6">Chapter 6: Objects and Object-Oriented Programming in JS</h2>
@@ -458,35 +518,6 @@ different methods of iterating through arrays to manipulate or access the data s
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch16">Chapter 16: Libraries and APIs</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-
-<!------------------------------------------------------------------------>
-
----
-title: "JS Learn JS"
-author: "bbauska"
-date prior editted: "8/31/2024 4+pm"
-date last editted: "9/9/2024 12+pm"
-date last editted: "9/10/2024 1+pm"
-output: 
-  markdown:
-    with some style
----
-
-<h1 align="center">Learn JavaScript</h1>
-
-<h6 align="center">(by Brian Bauska, educator)</h6>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ readme.md of js-learn-js.bauska.org ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01. js learn js logo (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image001.png"
-  title="JS Learn JS logo"
-  alt="JS Learn JS logo."
-  style="border: 2px solid #000000; width:45%;" />
-</p>
-<h2>Table of Contents</h2>
 
 <h3 id="JSStmts">JavaScript Statements</h3>
 
@@ -654,166 +685,148 @@ output:
   <li>splice() Method:</li>
 </ol>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 [Function Declaration :]
->
+
 [Function Call :]
->
+
 [Arrow Function :]
->
+
 Objects
 
 Objects :
->
+
 [Obiect Declaration :]
->
+
 [Accessing Object Properties :]
->
+
 [Calling Obiect Method :]
 
 [JS Events]
 
 [Examples of JS Events :]
->
+
 [Click Event :]
->
+
 [Input Event :]
 
 [JS Strings]
 
 [Examples of JS Strings :]
->
+
 [Declaring a String Variable :]
->
+
 [Concatenating Strings :]
 
 [JS String Methods]
 
 [Examples of JS String Methods :]
->
+
 [toUpperCase () Method :]
->
+
 [substring ( ) Method :]
->
+
 String Search
 
 Objects :
->
+
 [Obiect Declaration :]
->
+
 [Accessing Object Properties :]
->
+
 [Calling Obiect Method :]
 
 [JS Events]
 
 [Examples of JS Events :]
->
+
 [Click Event :]
->
+
 [Input Event :]
 
 [JS Strings]
 
 [Examples of JS Strings :]
->
+
 [Declaring a String Variable :]
->
+
 [Concatenating Strings :]
 
 [JS String Methods]
 
 [Examples of JS String Methods :]
->
+
 [toUpperCase () Method :]
->
+
 [substring ( ) Method :]
->
+
 String Search
 
 String Search :
->
+
 [indexOf () Method :]
->
+
 [includes () Method :]
 
 [JS String Templates]
 
 [Examples of JS String Templates :]
->
+
 [Basic Template Literal :]
->
+
 [Multi - line Template Literal :]
 
 [JS Numbers]
 
 [Examples of JS Numbers :]
->
+
 [Whole Numbers :]
->
+
 [Decimal Numbers :]
->
+
 [Scientific Notation :]
 
 [JS Biglnt]
 
 [Examples of JS Biglnt :]
->
+
 [Creating a Biglnt :]
->
+
 [Performing Operations with Biglnt :]
->
+
 [Number Methods]
 
-
 Number Methods :
->
+
 [toFixed () Method :]
->
+
 [parselnt ( ) Method :]
 
 [JS Number Properties]
 
 [Examples of JS Number Properties :]
->
+
 [Number MAX VALUE Propertv :]
->
+
 [Number . MIN VALUE Propertv :]
 
 [JS Arrays]
 
 [Examples of JS Arrays :]
->
+
 [Declaration :]
->
+
 [Accessing Elements :]
->
+
 [Modifving Elements :]
 
 [JS Array Methods]
 
 [Examples of JS Array Methods :]
->
+
 [push () Method :]
->
+
 [pop ( ) Method :]
->
+
 [splice ( ) Method :]
 
 [JS Array Sort]
@@ -821,15 +834,15 @@ Number Methods :
 [Examples Array Sort :]
 
 [Sorting Numbers :]
->
+
 [Sorting Strings :]
 
 [JS Array Iteration]
 
 [Examples of JS Array Iteration :]
->
+
 [forEach ( ) Method :]
->
+
 [map () Method :]
 
 [JS Array Const]
@@ -839,15 +852,15 @@ Number Methods :
 [JS Dates]
 
 [Examples of JS Dates :]
->
+
 [Creating a Date Obiect :]
->
+
 [Creating a Specific Date :]
 
 [JS Date Formats]
 
 [Examples of JS Date Formats :]
->
+
 [Formatting to String :]
 
 [Formatting to Locale String :]
@@ -857,7 +870,7 @@ Number Methods :
 [Examples of TS Date Get Methods :]
 
 [getFullYear ( ) Method :]
->
+
 [getMonth ( ) Method :]
 
 [JS Date Set Methods]
@@ -865,31 +878,31 @@ Number Methods :
 [Examples of TS Date Set Methods :]
 
 [setFullYear () Method :]
->
+
 [setMonth () Method :]
 
 [JS Math]
 
 [Examples of JS Math :]
->
+
 [Math . PI Propertv :]
->
+
 [Math . sqrt Method :]
 
 [JS Random]
 
 [Examples of JS Random :]
->
+
 [Generating Random Number :]
->
+
 [Generating Random Integer :]
 
 [JS Booleans]
 
 [Examples of JS Booleans :]
->
+
 [Declaration :]
->
+
 [Comparison :]
 
 [JS Comparisons]
@@ -900,19 +913,19 @@ Equality Operator j.&apos; Strict Equalitv Operator j:
 
 [JS If Else]
 [Examples of JS If Else :]
->
+
 [Basic if else :]
->
+
 [Nested if &period;.. else :]
 
 [JS Switch]
 
 [Examples of JS Switch :]
->
+
 [Basic switch] •
->
+
 [JS Loop For]
->
+
 [Examples of TS Loop For :]
 <p align="center">
   <img src="./images/image018.jpg"
@@ -922,19 +935,19 @@ Equality Operator j.&apos; Strict Equalitv Operator j:
 <!-- [](./images/image018.jpg){width="9.57638888888889in" height="11.805555555555555in"} -->
 
 [Basic for Loop :]
->
+
 [Looping Array Elements :]
 
 <h2 id="JSLoop">JS Loop For In</h2>
 
 [Examples of JS Loop For In :]
->
+
 [Iterating Object Properties :]
->
+
 [JS Loop For Of]
->
+
 [Examples of JS Loop For Of :]
->
+
 [Iterating Over Array Elements :]
 <p align="center">
   <img src="./images/image019.jpg"
@@ -944,19 +957,19 @@ Equality Operator j.&apos; Strict Equalitv Operator j:
 <!-- ![](./images/image019.jpg){width="5.213582677165354e-2in" height="3.125984251968504e-2in"}[JS Loop While] -->
 
 [Examples of JS Loop While :]
->
+
 [Basic while Loop :]
->
+
 [JS Break]
->
+
 [Examples of JS Break :]
->
+
 [Using break in a Loop :]
 
 [JS Iterables]
 
 [Examples of JS Iterables :]
->
+
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 20. (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -981,17 +994,17 @@ height="11.805555555555555in"}
 [JS Sets]
 
 [Examples of JS Sets :]
->
+
 [Creating a Set :]
->
+
 [Iterating Over a Set :]
 
 [JS Maps]
 
 [Examples of JS Maps :]
->
+
 [Creating a Map :]
->
+
 [Iterating Over a Map :]
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 22/23. (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1008,17 +1021,17 @@ height="11.805555555555555in"}
 <!-- ![](./images/image022.jpg){width="6.25e-2in" {width="6.25e-2in" height="2.083880139982502e-2in"}[JS Typeof] -->
 
 [Examples of JS Typeof :]
->
+
 [Using typeof :]
 
 [JS Type Conversion]
 
 [Examples of JS Type Conversion]
->
+
 [String to Number : Number to String :]
->
+
 [JS Bitwise]
->
+
 [Examples of JS Bitwise :]
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 24. (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1031,35 +1044,35 @@ height="11.805555555555555in"}
 <!-- (./images/image024.jpg){width="9.875in" height="11.805555555555555in"} -->
 
 [Bitwise AND Operator :]
->
+
 [Bitwise OR Operator :]
->
+
 [JS RegExp]
->
+
 [Examples of JS RegExp :]
->
+
 [Creating a Reeular Expression :]
->
+
 [Testing a String with RegExp :]
 
 [JS Precedence]
 
 [Examples of TS Precedence :]
->
+
 [Arithmetic Precedence :]
 
 [JS Errors]
 
 [Examples of JS Errors :]
->
+
 [Syntax Error :]
->
+
 [Reference Error :]
 
 <h2>[JS Scope]</h2>
 
 [Examples of JS Scope :]
->
+
 [Global Scope :]
 
 [JS Hoisting]
@@ -1074,37 +1087,37 @@ height="11.805555555555555in"}
 <!-- (./images/image025.jpg){width="9.743055555555555in" height="11.805555555555555in"} -->
 
 [Examples JS Hoisting :]
->
+
 [Variable Hoisting :]
->
+
 [Function Hoisting :]
 
 [JS Strict Mode]
 
 [Examples of JS Strict Mode :]
->
+
 [Enabling Strict Mode :]
->
+
 [using Strict Mode Inside a Function :]
 
 <h3>JS this Keyword</h3>
 
 [Examples of JS this Keyword :]
->
+
 [Using this in an Obiect :]
 
 <h3>JS Arrow Function</h3>
 
 [Examples of JS Arrow Function :]
->
+
 [Basic Arrow Function :]
->
+
 [Arrow Function with Multiple Lines :]
->
+
 [JS Classes]
->
+
 [Examples of JS Classes :]
->
+
 [Class Declaration :]
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 26. (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1119,31 +1132,31 @@ height="11.805555555555555in"}
 <h2>JS Modules</h2>
 
 [Examples JS Modules : Exporting a Module :]
->
+
 [Importing a Module :]
 
 <h2>JS JSON</h2>
 
 [Examples of JS JSON :]
->
+
 [Parsing JSON :]
->
+
 [Stringify Obiect to JSON :]
 
 [JS Debugging]
 
 [Examples of JS Debugging :]
->
+
 [Using console . log ( ) for Debugging :]
->
+
 [Using Browser Developer Tools :]
 
 [JS Style Guide]
 
 [Examples of JS Style Guide :]
->
+
 [Naming Conventions :]
->
+
 [Indentation :]
 
 [JS Best Practices]
@@ -1158,37 +1171,37 @@ height="11.805555555555555in"}
 <!-- ./images/image027.jpg){width="9.222222222222221in" height="11.805555555555555in"} -->
 
 [Examples TS Best Practices :]
->
+
 [Use Meaningful Variable Names :]
->
+
 [Avoid Global Variables :]
 
 [JS Mistakes]
 
 [Examples of JS Mistakes :]
->
+
 [Missing Semicolon :]
->
+
 [Uninitialized Variables :]
 
 [JS Performance]
 
 [Examples of TS Performance :]
->
+
 [Reduce DOM Manipulations :]
->
+
 [Use EffcientAl orithms :]
 
 [JS Reserved Words]
 
 [Examples of JS Reserved Words :]
->
+
 [let const function class etc .]
 
 [JS Objects]
 
 [Object Definitions :]
->
+
 [Creating an Obiect Literally :]
 
 ![](./images/image028.jpg){width="9.604166666666666in"
@@ -1199,31 +1212,31 @@ height="11.805555555555555in"}
 [Obiect Properties]
 
 [Obiect Properties Examples :]
->
+
 [Accessing Obiect Properties :]
->
+
 [Adding or Modifying Properties :]
 
 [Obiect Methods]
 
 [Obiect Methcds Examples :]
->
+
 [Accessing Obiect Methods :]
->
+
 [Adding Methods to an Obiect :]
 
 [Obiect Display]
 
 [Obiect Display Examples :]
->
+
 [Using console . Ice O:]
->
+
 [Stringify with JSON :]
 
 [Obiect Accessors]
 
 [Obiect Accessors Examples :]
->
+
 [using Getters and Setters :]
 
 [Object Constructors]
@@ -1232,19 +1245,19 @@ height="11.805555555555555in"}
 height="11.805555555555555in"}
 
 [Obiect Constructors Examples :]
->
+
 [Vsing Constructor Functions :]
 
 [Obiect Prototypes]
 
 [Obiect Protctypes Examples :]
->
+
 [Adding Methods to the Protctype :]
 
 [Obiect Iterables]
 
 [Obiect Iterables Examples : Using for .. . in Loop :]
->
+
 ![](./images/image030.jpg){width="6.253062117235346e-2in"
 height="6.251859142607175e-2in"}![](./images/image031.jpg){width="5.21084864391951e-2in"
 height="4.167979002624672e-2in"}[Ušing Obiect . keys O:]
@@ -1252,17 +1265,17 @@ height="4.167979002624672e-2in"}[Ušing Obiect . keys O:]
 [Obiect Sets]
 
 [Obiect Sets Examples :]
->
+
 [Creating a Set :]
->
+
 [Checking Set Membership :]
 
 [Obiect Maps]
 
 [Obiect Maps Examples :]
->
+
 [Creating a Map :]
->
+
 [Getting Values from a Map]
 
 ![](./images/image032.jpg){width="9.54861111111111in"
@@ -1271,33 +1284,33 @@ height="11.805555555555555in"}
 [Object Reference]
 
 [Object Reference Examples]
->
+
 [Referencing an Obiect :]
->
+
 [Changing Obiect through Reference :]
 
 [JS Functions]
 
 [Function Definitions :]
->
+
 [Function Declaration :]
->
+
 [Function Expression :]
->
+
 [Arrow Function :]
->
+
 [Function Parameters]
->
+
 [Function Parameters Examples :]
->
+
 [Single Parameter :]
->
+
 [Multiple Parameters :]
->
+
 [Function Invocation]
->
+
 [Function Invocation Examples :]
->
+
 [Calling a Function :]
 
 [Function Call]
@@ -1307,24 +1320,16 @@ height="11.805555555555555in"}
 
 [Function Call Examples]
 
-  -----------------------------------------------------------------------
-  Using call
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
+Using call
 
 [Function Apply]
 
 [Function Apply Examples :]
 
-  -----------------------------------------------------------------------
-  Using apply
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
+Using apply
 
 [Function Bind]
->
+
 [Function Bind Examples :]
 
 bind
@@ -1338,9 +1343,9 @@ bind
 [JS Classes]
 
 [Class Intro :]
->
+
 [Class Declaration :]
->
+
 [Creating Instances :]
 
 [Class Inheritance]
@@ -1351,19 +1356,19 @@ bind
 height="11.805555555555555in"}
 
 [Extending a Class]
->
+
 [Using Inherited Methods :]
 
 [Class Static]
 
 [Class Static Example :]
->
+
 [Adding a Static Method :]
 
 <h2>[JS Async]</h2>
 
 [JS Callbacks]
->
+
 [Callbacks Example :]
 
 <h3>[JS Asynchronous]</h3>
@@ -1373,15 +1378,15 @@ height="11.805555555555555in"}
 [JS Promises]
 
 [Promises Example :]
->
+
 [Creating a Promise :]
->
+
 [IS Async / Await]
->
+
 [Async / Await Example :]
->
+
 [Using Async / Await :]
->
+
 [JS HTML DOM]
 
 ![](./images/image035.jpg){width="10.090277777777779in"
@@ -1427,115 +1432,115 @@ height="11.805555555555555in"}
 height="11.805555555555555in"}
 
 [DOM Event Listener]
->
+
 [Mouseover Event Handling :]
->
+
 [DOM Navigation]
->
+
 [Traversing Child Elements :]
 
 <h3>[DOM Nodes]</h3>
 
 [Creating a New Node :]
->
+
 [DOM Collections]
->
+
 [Accessing Collection Elements :]
->
+
 [DOM Node Lists]
->
+
 [Accessing Node List Elements :]
 
 [JS Browser BOM]
 
 [JS Window]
->
+
 [Accessing Window Properties :]
->
+
 [JS Screen]
->
+
 [Accessing Screen Properties :]
->
+
 [JS Location]
->
+
 [Accessing Location Information :]
->
+
 [JS History]
 
 ![](./images/image036.jpg){width="9.61111111111111in"
 height="11.805555555555555in"}
 
 [Accessing History Methods :]
->
+
 [JS Navigator]
->
+
 [Accessing Navigator Properties :]
->
+
 [JS Popup Alert]
->
+
 [Displaying an Alert :]
->
+
 [JS Timing]
->
+
 Using setTimeout
 
   Using setlnterval                                                  
 
 [JS Coclcies]
->
+
 [Setting a Cookie :]
->
+
 [Accessing a Cookie :]
 
 <h3>[JS web APIs]</h3>
 
 [Web API Intro]
->
+
 [Accessing the Web API :]
->
+
 [Web Forms API]
->
+
 [Accessing Form Elements :]
->
+
 [Web History API]
->
+
 [Changing Browser History :]
 
 ![](./images/image037.jpg){width="9.680555555555555in"
 height="11.805555555555555in"}
 
 [Web Storage API]
->
+
 [Using localStorage :]
->
+
 [web Worker API]
->
+
 [Creating a Web Worker :]
->
+
 [Web Fetch API]
->
+
 [Making a GET Request :]
->
+
 [Web Geolocation API]
->
+
 [Getting User&apos;s Location :]
->
+
 [JS AJAX]
 
 <h3>[AJAX Intro]</h3>
 
 [Simple AJAX Request :]
->
+
 [AJAX XMLHttp using XMLHttpRequest :]
->
+
 [AJAX Request]
->
+
 [Sending POST Request :]
->
+
 [AJAX Response]
->
+
 [Handling JSON Response :]
->
+
 [AJAX XML File]
 
 ![](./images/image038.jpg){width="10.083333333333334in"
@@ -1560,15 +1565,15 @@ with ASP :
 [AJAX Examples]
 
 [AIAX Example 1 :]
->
+
 [AIAX Example 2 :]
->
+
 [AIAX Example 3 :]
->
+
 [AIAX Example 4 :]
->
+
 [AJAX Example 5 :]
->
+
 [AIAX Example 6 :]
 
 <h3>[Dynamic Content Loading]</h3>
@@ -1585,11 +1590,11 @@ with ASP :
 height="11.805555555555555in"}
 
 [AJAX Example 8 : Live Data Update]
->
+
 [AIAX Example 9 : Infinite Scroll]
->
+
 [ATAX Example 10 : File Upload with Progress Bar]
->
+
 [AIAX Example 11 : Displaying Time Dynamically]
 
 <h3>[JS JSON]</h3>
@@ -1605,87 +1610,86 @@ height="11.805555555555555in"}
 <h3>[JSON vs XML]</h3>
 
 [Example ComparJSON between JSON and XML :]
->
+
 [JSON Data Types]
->
+
 [Example of Different Data Types in JSON :]
 
 <h3>[JSON Parse]</h3>
 
 [Example of JSON Parsing :]
->
+
 [JSON Stringify]
->
+
 [Example of JSON Stringification :]
->
+
 [JSON Objects]
 
 [Example of a JSON Obiect :]
->
+
 [JSON Arrays]
->
+
 [Example of a JSON Array :]
->
+
 [JSON Server]
->
+
 [Example of JSON Data from a Server :]
->
+
 [JSON PHP]
->
+
 [Example of Encoding and Decoding JSON in PHP :]
->
+
 [JSON HTML]
->
+
 [Example of Usine JSON Data in HTML :]
 
 <h3>[JSON JSONP]</h3>
 
 [Example of JSONP Request :]
 
-1.  [. Creating a JSON Obiect :]
+1.  [.Creating a JSON Obiect :]
 
-2.  [. Accessing JSON Obiect Properties :]
+2.  [.Accessing JSON Obiect Properties :]
 
-3.  [. Nested JSON Obiects :]
+3.  [.Nested JSON Obiects :]
 
-4.  [. JSON Array of Obiects :]
+4.  [.JSON Array of Obiects :]
 
-5.  [. Converting TSON to String :]
+5.  [.Converting TSON to String :]
 
-6.  [. Parsing JSON String to Object :]
+6.  [.Parsing JSON String to Object :]
 
-7.  . Fetching JSON Data from URL ( using Fetch API
+7.  [.Fetching JSON Data from URL ( using Fetch API
 
-8.  [. Displaying JSON Data Dynamically in HTML :]
+8.  [.Displaying JSON Data Dynamically in HTML :]
 
-9.  [. Handling JSON Data in Forms :]
+9.  [.Handling JSON Data in Forms :]
 
-10. . [Stringifying and Parsing a More Complex Obiect]
+10. [.Stringifying and Parsing a More Complex Obiect]
 
-[1 1 . Filtering JSON Array Data :]
+11. [.Filtering JSON Array Data :]
 
-12. . [Updating JSON Object Properties :]
+12. [.Updating JSON Object Properties :]
 
-13. [. Removing a Propertv from JSON Object :]
+13. [.Removing a Propertv from JSON Object :]
 
-14. [Using JSON with Local Storage    :]
+14. [.Using JSON with Local Storage :]
 
-[1 5 . Handling TSON Date Strings :]
+15. [.Handling TSON Date Strings :]
 
-16. [. Using JSON in Asynchronous Functions :]
+16. [.Using JSON in Asynchronous Functions :]
 
-17. [. JSON Serialization with Custom Functions :]
+17. [.JSON Serialization with Custom Functions :]
 
-18. . Handling TSON Data from an API ( Using Axios
+18. [.Handling TSON Data from an API ( Using Axios
 
-19. [. Merging JSON Obiects :]
+19. [.Merging JSON Obiects :]
 
-20. [. Mappinz JSON Data to Another Structure :]
+20. [.Mappinz JSON Data to Another Structure :]
 
 [JayaScript vs iOuery : A Comprehensive ComparJSON]
 
 [JavaScript Overview]
-
 
 [Example of JavaScript Functionality :]
 
@@ -1693,11 +1697,11 @@ height="11.805555555555555in"}
 
 [Example of jQuery Functionality : Differences Between JavaScript and jQuery]
 
-1.  [. Syntax :]
+1.  [.Syntax :]
 
-2.  [. DOM Manipulation :]
+2.  [.DOM Manipulation :]
 
-3.  [Browser Compatibility :]
+3.  [.Browser Compatibility :]
 
 4.  [. Learning Curve :]
 
@@ -1738,19 +1742,19 @@ height="11.805555555555555in"}
 
 8.  [. Changing Text Content :]
 
-9.  [. Hidinz an Element :]
+9.  [.Hidinz an Element :]
 
-10. [. Fading In an Element :]
+10. [.Fading In an Element :]
 
-[1 1 . AIAX GET Request :]
+11. [AIAX GET Request :]
 
-[12 . AIAX POST Request :]
+12  [.AIAX POST Request :]
 
-[1 3 . Getting Attribute Value :]
+13. [Getting Attribute Value :]
 
-[14 . Setting Attribute Value :]
->
-[1 5 . Getting Form Values :]
+14. [Setting Attribute Value :]
+
+15  [. Getting Form Values :]
 
 16. [. Checking Checkbox State :]
 
@@ -1781,17 +1785,17 @@ height="0.2500732720909886in"}IS Chart is
 6.  [. JS D3 . is]
 
 [Conclusion]
->
+
 [Canvas Examples :]
->
+
 [Plotly Examples :]
->
+
 [Chart . JS Examples
 :]![](./images/image050.jpg){width="1.0426509186351705e-2in"
 height="3.125984251968504e-2in"}
->
+
 [Google Charts Examples :]
->
+
 [D3 . JS Examples :]
 
 ![](./images/image051.jpg){width="8.993055555555555in"
@@ -1800,13 +1804,13 @@ height="11.805555555555555in"}
 [Canvas Examples :]
 
 [Plotly Examples :]
->
+
 [Chart . JS Examples :]
 
 [Google Charts Examples :]
 
 [D3 . JS Examples :]
->
+
 [Basic Examples :]
 
 [String Manipulation :]
@@ -1994,14 +1998,14 @@ height="11.805555555555555in"}
 [Navigator Obiect Exploration :]
 
 [Location Obiect Manipulation :]
->
+
 [Screen Obiect Attributes :]
->
+
 [Installing JavaScript :]
->
+
 [Setting Up Visual Studio Code for JavaScript Development
 :]
->
+
 [Conclusion :]
 
 <h3>Statements</h3>
@@ -2013,20 +2017,20 @@ or complex .
 Examples of JavaScript Statements :
 
 I Variable Declaration :
->
+
 javascript code let x; // Declaring a variable &Hat;i&Hat;x&Hat;i&Hat;
 
 2.  . Conditional Statement :
 
 javascript code
 
-
-
+<pre>
 // Executed if x is equal to 5 console . log ( is 5&apos; ) ;
->
+
 } else {
->
+
 // Executed if x is not equal to 5 console . log ( &apos;x is not 5 ) ;
+</pre>
 
 3.  Loops :
 
@@ -2042,15 +2046,22 @@ understand . Examples ofJavaScript Syntax :
 
 1.  Function Definition :
 
-javascript code function greet ( name ) { return &apos;Hello, name
+javascript code
+```
+function greet ( name ) { return &apos;Hello, name
 +
+```
 
 2.  . Object Literal javascript code const person
     firstName : &apos;John&apos;, lastName &apos;Doe&apos;, age 30
 
 3.  Array Declaration :
 
-javascript code constnumbers
+javascript code
+
+```
+constnumbers
+```
 
 <h3>Comments</h3>
 
@@ -2063,22 +2074,27 @@ Examples of JavaScript Comments :
 1.  Single Line Comment :
 
 javascript code
->
+
+```
 // This is a single line comment
+```
 
 2.  . Multi - line Comment :
 
 javascript code
 
+```
 This is a multi - line comment
+```
 
 3.  Commenting Out Code :
 
 javascript code
->
+
+```
 // This code won&apos;t be executed
->
 // const x 10;
+```
 
 <h3>JavaScript Variables</h3>
 
@@ -2089,13 +2105,21 @@ Examples ofJavaScript Variables :
 
 1.  Declaring and Assigning a Variable :
 
-javascript code let age = 25; // Declaring &apos;age&Hat;i&Hat; and assigning a
+javascript code
+
+```
+let age = 25; // Declaring &apos;age&Hat;i&Hat; and assigning a
 value of 25
+```
 
 2.  . String Variable :
 
-javascript code let name &apos;Alice&apos;; // A variable holding a string
-value
+javascript code
+
+```
+let name &apos;Alice&apos;;
+// A variable holding a string value
+```
 
 3.  Object Variable :
 
@@ -2110,9 +2134,14 @@ needed
 
 Example of let in JavaScript :
 
-java script code let x 5;
->
-10; // Reassigning &apos;x&apos; to a new value
+javascript code
+
+```
+let x 5;
+
+10;
+// Reassigning &apos;x&apos; to a new value
+```
 
 <h3>JavaScript const</h3>
 
@@ -2122,10 +2151,13 @@ changed
 
 Example of const in JavaScript :
 
-java script code const PI = 3 . 14159; // Declaring a constant PI
->
-// PI - - 3; // This will throw an error as reassignment is not
-allowed
+javascript code
+
+```
+const PI = 3 . 14159; // Declaring a constant PI
+
+// PI - - 3; // This will throw an error as reassignment is not allowed
+```
 
 <h3>JavaScript Operators</h3>
 
@@ -2143,20 +2175,30 @@ Multiplication let quotient = a / b; // Division
 
 2.  . Comparison Operators :
 
-javascript code let x 5; let
+javascript code
 
-console . log ( x y ) ; // Equality check
-console . log ( x y) ; // Inequality check
-
-console . log ( x y) ; // Greater than console . log ( x &lt; y) ; //
-Less than
+```
+let x 5; let
+console.log ( x y ) ; // Equality check
+console.log ( x y) ; // Inequality check
+console.log ( x y) ; // Greater than console . log ( x &lt; y) ; //Less than
+```
 
 3.  Logical Operators :
 
-javascript code let p true; let q false; console . log ( p &&q); //
-Logical AND console . log ( p Il q ) ; // Logical OR console . log (!
+javascript code
+
+```
+let p true;
+let q false;
+console.log ( p &&q); 
+//Logical AND 
+console.log ( p Il q ) ;
+// Logical OR 
+console.log (!
 p ) ; // Logical NOT
->
+```
+
 This comprehensive guide covers various aspects of JavaScript
 statements, syntax, comments, variables ( let and const ) , and
 operators, offering examples and explanations to aid understanding ,
@@ -2166,39 +2208,64 @@ operators, offering examples and explanations to aid understanding ,
 JavaScript provides arithmetic operators to perform mathematical
 calculations on numbers ,
 
-Examples ofJS Arithmetic :
+Examples of JS Arithmetic :
 
 Addition :
->
-javascript code let sum = 5 4 3• // sum = 8
->
+
+javascript code
+
+```
+let sum = 5 4 3• // sum = 8
+```
+
 Subtraction :
->
-javascript code let difference = 10 - 4; // difference 6
->
+
+javascript code
+
+```
+let difference = 10 - 4; // difference 6
+```
+
 Multiplication :
->
-javascript code let product 7; // product 42
->
+
+javascript code
+
+```
+let product 7; // product 42
+
 Division java script code let quotient = 20/ 5;
 // quotient = 4
->
+
 Modulus ( Remainder ):
->
-javascript code let remainder = 15 % 4; // remainder
+```
+
+javascript code
+
+```
+let remainder = 15 % 4; // remainder
+```
+
 <h3>JS Assignment</h3>
 
 In JavaScript, the assignment operator (z) is used to assign values to
 variables . Examples ofJS Assignment :
->
+
 Assigning a Value to a Variable :
->
-javascript code let x = 10; // Assigning the value 10 to variable •x&apos;
->
+
+javascript code
+
+```
+let x = 10; // Assigning the value 10 to variable •x&apos;
+```
+
 Assigning the Result of an Expression :
->
-javascript code let y = x 4 5; // Assigning the result of an
+
+javascript code
+
+```
+let y = x 4 5; // Assigning the result of an
 expression to &Hat;l&Hat;y&Hat;r&Hat;
+```
 
 <h3>JS Data Types</h3>
 
@@ -2229,40 +2296,45 @@ specific task when called .
 Examples ofJS Functions :
 
 Function Declaration :
->
-javascript code function greet ( name ) { return &apos;Hello, + name
-+
->
+
+javascript code
+
+```
+function greet ( name ) { return &apos;Hello, + name +
 Function Call javascript code let message = greet (
-&apos;John&apos; ) ; // message = &apos;Hello, John ! &apos;
->
+&apos;John&apos; );
+// message = &apos;Hello, John ! &apos;
+
 Arrow Function :
->
 javascript code const multiply ( a, b ) = &gt; a
 let result multiply ( 5, 3 ) ; // result
 15
+```
 
 <h3>JS Objects</h3>
 
 Objects in JavaScript are containers for named values called
 properties and methods . Examples ofJS Objects :
->
+
 Object Declaration :
->
-javascript code let person { name : &apos;Alice&apos;, age : 30,
->
+
+javascript code
+
+```
+let person { name : &apos;Alice&apos;, age : 30,
 greet : function
 return &apos;Helloj my name is &Hat;i&Hat; -v this .
 name 
->
+
 Accessing Object Properties :
->
+
 javascript code console . log ( person . name ) ; // Output : Alice
->
+
 Calling Object Method :
->
+
 javascript code console . log ( person greet ; // Output : Hello, my
 name is Alice !
+```
 
 <h2>JS Events</h2>
 
@@ -2273,31 +2345,35 @@ field!
 Examples ofJS Events :
 
 Click Event :
->
-javascript code document . getElementById ( &apos;myButton&apos; ).
-addEventListener ( &apos;click&apos;, function
-console . log ( &apos;Button clicked ! ) ;
->
-Input Event :
->
+
 javascript code
->
+
+```
+document.getElementById ( &apos;myButton&apos; ).addEventListener ( &apos;click&apos;, function
+console.log ( &apos;Button clicked ! ) ;
+```
+
+Input Event :
+
+javascript code
+
+```
 document . getElementById ( &apos;mylnput&Hat;i&Hat; addEventListener ( &apos;input&apos;,
-function console . log ( &apos;Input changed ! &Hat;i&Hat; )
-•
+function console . log ( &apos;Input changed ! &Hat;i&Hat; ) •
+```
 
 <h2>JS Strings</h2>
 
 Strings in JavaScript are sequences of characters enclosed in single
 or double quotes
-Examples ofJS Strings :
->
+Examples of JS Strings :
+
 Declaring a String Variable :
->
+
 javascript code let message = &quot;Helloj World
->
+
 Concatenating Strings :
->
+
 javascript code let greeting &apos;Hello, &Hat;I&Hat;; let name &apos;Alice&apos;; let
 welcomeMessage greeting + name; // welcomeMessage - &apos;Hello, Alice
 
@@ -2305,14 +2381,14 @@ welcomeMessage greeting + name; // welcomeMessage - &apos;Hello, Alice
 
 JavaScript provides various methods to manipulate strings . Examples
 ofJS String Methods :
->
+
 toUpperCase () Method :
->
+
 javascript code let text = &apos;hello&apos;;
->
+
 let upperCaseText = text . toUpperCase () ; // upperCaseText = &apos;HELLO
 substring () Method :
->
+
 javascript code let sentence - This is a sentence&apos;; let subSentence
 sentence . substring( 5, 10 ) ; // subSentence - &apos;is a &apos;
 
@@ -2334,34 +2410,50 @@ sentence . includes ( &apos;sentence&apos; ) ; // containsWord true
 Template literals allow embedding expressions and variables into
 strings
 Examples ofJS String Templates :
->
+
 Basic Template Literal :
->
-javascript code let name = &apos;Alice&apos;; let message = Hello, &dollar;{name) •
+
+
+javascript code
+
+```
+let name = &apos;Alice&apos;; let message = Hello, &dollar;{name) •
 // message = &ast;Hello, Alice !
->
+
 Multi - line Template Literal :
->
-javascript code let multiLineMessage -
->
+```
+
+javascript code
+
+```
+let multiLineMessage -
+
 This is a multi - line message
 
 <h3>JS Numbers</h3>
 
 JavaScript handles numeric data using the number data type .
->
+
 Examples ofJS Numbers :
->
+
 Whole Numbers :
->
-javascript code let integerNumber
+
+javascript code
+
+```
+let integerNumber
+```
+
 Decimal Numbers :
->
-javascript code let decimalNumber 3 .
-14
->
+
+javascript code
+
+```
+let decimalNumber 3.14
+```
+
 Scientific Notation :
->
+
 javascript code let scientificNumber = 2e3; // scientificNumber &dash;-
 2000
 
@@ -8052,3 +8144,4 @@ Gulp might be beneficial to enhance your development environment
 further
 
 <!-- last editted 9-20-2024 10:17pm -->
+<!-- last editted 10/18/2024 5:51pm -->
