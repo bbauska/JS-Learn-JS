@@ -1,5 +1,5 @@
 ---
-title: "JS Learn JS"
+title: "JS Learn JavaScript"
 author: "bbauska"
 date prior editted: "8/31/2024 4+pm"
 date last editted: "9/9/2024 12+pm"
@@ -26,7 +26,7 @@ output:
   alt="JS Learn JS logo."
   style="border: 2px solid #000000; width:45%; height:33%;" />
 </p>
-<h2><a href="#table-of-contents">Table of Contents - JS Learn JavaScript</a></h2>
+<h2 id="table-of-contents"><a href="#table-of-contents">Table of Contents - JS Learn JavaScript</a></h2>
 
 <blockquote>
 <h4><a href="#ch01">Chapter 01: Introduction to JavaScript</a></h4>
