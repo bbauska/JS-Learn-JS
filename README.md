@@ -7,6 +7,7 @@ date last editted: "9/10/2024 1+pm"
 date last editted: "9/12/2024 1+pm"
 date last editted: "9/20/2024 10+pm"
 date last editted: "10/18/2024 5+pm"
+date last editted: "10/26/2024 5+pm"
 output: 
   markdown:
     with some style
@@ -16,27 +17,27 @@ output:
 
 <h6 align="center">(by Brian Bauska, educator)</h6>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ readme.md of js-learn-js.bauska.org ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ readme.md of js-learn-javascript.bauska.org ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01. js learn js logo (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01. js learn javascript logo (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center">
   <img src="./images/image001.png"
   title="JS Learn JS logo"
   alt="JS Learn JS logo."
   style="border: 2px solid #000000; width:45%; height:33%;" />
 </p>
-<h2><a href="#table-of-contents">Table of Contents - JS Learn JS</a></h2>
+<h2><a href="#table-of-contents">Table of Contents - JS Learn JavaScript</a></h2>
 
 <blockquote>
-<h4><a href="#ch1">Chapter 1: Introduction to JavaScript</a></h4>
-<h4><a href="#ch2">Chapter 2: Understanding Variables and Data Type in JS</a></h4>
-<h4><a href="#ch3">Chapter 3: Variables and Data</a></h4>
-<h4><a href="#ch4">Chapter 4: Functions in JS</a></h4>
-<h4><a href="#ch5">Chapter 5: Arrays and Iteration in JS</a></h4>
-<h4><a href="#ch6">Chapter 6: Objects and Object-Oriented Programming in JS</a></h4>
-<h4><a href="#ch7">Chapter 7: Loops in JS</a></h4>
-<h4><a href="#ch8">Chapter 8: Async and Await</a></h4>
-<h4><a href="#ch9">Chapter 9: Promises and Asynchronous Programming in JS</a></h4>
+<h4><a href="#ch01">Chapter 01: Introduction to JavaScript</a></h4>
+<h4><a href="#ch02">Chapter 02: Understanding Variables and Data Type in JS</a></h4>
+<h4><a href="#ch03">Chapter 03: Variables and Data</a></h4>
+<h4><a href="#ch04">Chapter 04: Functions in JS</a></h4>
+<h4><a href="#ch05">Chapter 05: Arrays and Iteration in JS</a></h4>
+<h4><a href="#ch06">Chapter 06: Objects and Object-Oriented Programming in JS</a></h4>
+<h4><a href="#ch07">Chapter 07: Loops in JS</a></h4>
+<h4><a href="#ch08">Chapter 08: Async and Await</a></h4>
+<h4><a href="#ch09">Chapter 09: Promises and Asynchronous Programming in JS</a></h4>
 <h4><a href="#ch10">Chapter 10: Working with JSON in JS</a></h4>
 <h4><a href="#ch11">Chapter 11: JS HTML DOM</a></h4>
 <h4><a href="#ch12">Chapter 12: JS Browser BOM</a></h4>
@@ -49,7 +50,7 @@ output:
 <a href="https://github.com/bbauska/JS-Learn-JS.git" target="_blank" rel="noopener noreferrer">
 JS Learn JS - git</a>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch1">Chapter 1: Introduction to JavaScript</h2>
+<h2 id="ch01">Chapter 01: Introduction to JavaScript</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>What is JavaScript?</h3>
 
@@ -1983,10 +1984,10 @@ understand . Examples ofJavaScript Syntax :
 1.  Function Definition :
 
 javascript code
-```
+<pre>
 function greet ( name ) { return &apos;Hello, name
 +
-```
+</pre>
 
 2.  . Object Literal javascript code const person
     firstName : &apos;John&apos;, lastName &apos;Doe&apos;, age 30
@@ -1995,9 +1996,9 @@ function greet ( name ) { return &apos;Hello, name
 
 javascript code
 
-```
+<pre>
 constnumbers
-```
+</pre>
 
 <h3>Comments</h3>
 
@@ -2011,26 +2012,26 @@ Examples of JavaScript Comments :
 
 javascript code
 
-```
+<pre>
 // This is a single line comment
-```
+</pre>
 
 2.  . Multi - line Comment :
 
 javascript code
 
-```
+<pre>
 This is a multi - line comment
-```
+</pre>
 
 3.  Commenting Out Code :
 
 javascript code
 
-```
+<pre>
 // This code won&apos;t be executed
 // const x 10;
-```
+</pre>
 
 <h3>JavaScript Variables</h3>
 
@@ -2043,19 +2044,19 @@ Examples ofJavaScript Variables :
 
 javascript code
 
-```
+<pre>
 let age = 25; // Declaring &apos;age&Hat;i&Hat; and assigning a
 value of 25
-```
+</pre>
 
 2.  . String Variable :
 
 javascript code
 
-```
+<pre>
 let name &apos;Alice&apos;;
 // A variable holding a string value
-```
+</pre>
 
 3.  Object Variable :
 
@@ -2072,12 +2073,12 @@ Example of let in JavaScript :
 
 javascript code
 
-```
+<pre>
 let x 5;
 
 10;
 // Reassigning &apos;x&apos; to a new value
-```
+</pre>
 
 <h3>JavaScript const</h3>
 
@@ -2089,11 +2090,11 @@ Example of const in JavaScript :
 
 javascript code
 
-```
+<pre>
 const PI = 3 . 14159; // Declaring a constant PI
 
 // PI - - 3; // This will throw an error as reassignment is not allowed
-```
+</pre>
 
 <h3>JavaScript Operators</h3>
 
@@ -16242,3 +16243,4 @@ further
 
 <!-- last editted 9-20-2024 10:17pm -->
 <!-- last editted 10/18/2024 5:51pm -->
+<!-- last editted 10/26/2024 5:40pm -->
