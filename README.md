@@ -11638,7 +11638,7 @@ async function processData () { let data await fetchData () ; console .
 log ( data ) ; // Output after 2 seconds : Data fetched&apos;
 
 processDatao;
->
+
 This comprehensive guide covers JavaScript classes, including an
 introduction to classes, inheritance, and static methods, as well as
 asynchronous programming concepts such as callbacks, asynchronous
@@ -11653,88 +11653,85 @@ Model ( DOM ) , representing the document as a tree structure .
 DOM Intro :
 
 Accessing an Element by ID :
->
+
 html code
 ! DOCTYPE html&gt;
 html &gt; ebodY&gt;
->
+
 &lt;hl id heading &gt;Welcome to the DOM&lt; / hl &gt;
->
+
 &lt; script&gt; let element document . getElementById (I&apos; heading l&apos;) ;
 console . log ( element . innerHTML ) ; // Output : &apos;Welcome to the
 DOM&apos;
->
+
 &lt; / script&gt;
->
+
 / bodY&gt;
->
+
 / html&gt;
 
 <h5>DOM Methods</h5>
 
 DOM methods provide various ways to manipulate HTML elements
->
+
 Changing Element Content :
->
+
 html code
 ! DOCTYPE html&gt;
 html &gt;
->
+
 epid - &Hat;i&Hat;&apos; demo &gt;This is a paragraph . &lt;
-/
->
+
 &lt;script&gt; document . getE1ementById (Il demo &quot;). innerHTML = &quot; This
 is a new paragraph
->
+
 &lt; / script&gt;
->
+
 &lt; / bodY&gt;
->
+
 &lt; / html&gt;
 
 <h6>DOM Document</h6>
 
 The document object represents the entire HTML document .
->
+
 Accessing Document
 Properties
 >
 html code
->
+
+```
 &lt; ! DOCTYPE html&gt;
->
 &lt; html &gt;
->
 escript&gt; console . log ( document . title ) ; // Output : Document
 title console . log ( document . URL ) ; // Output : Document URL
->
+```
+
 / scripts
->
-&lt; / bodY&gt; html&gt;
+
+```
+&lt;/bodY&gt;html&gt;
+```
 
 <h5>DOM Elements</h5>
 
-Elements in the DOM represent HTML tags .
->
-Changing Element Styles :
->
-html code
->
+<p>Elements in the DOM represent HTML tags.</p>
+
+<h4>Changing Element Styles:</h4>
+
+<h5>html code</h5>
+
+```
 ! DOCTYPE html&gt;
 html &gt;
->
 &lt;Pid demo &quot; &gt;This is a paragraph . &lt;
-/
->
 &lt; script&gt; let element document . getElementById demo
-element . style . color red ; element .
-style . fontSize = 20px ;
->
+element. style.color red;
+element.style.fontSize = 20px;
 &lt; / script&gt;
->
 / bodY&gt;
->
 / html&gt;
+```
 
 <h5>DOM HTML</h5>
 
@@ -16167,79 +16164,79 @@ you don&apos;t install JavaScript itself; instead, you work with
 JavaScript within environments that support its execution, such as web
 browsers and server - side platforms like Node . js .
 
-Setting Up Visual Studio Code for JavaScript Development :
+<h3>Setting Up Visual Studio Code for JavaScript Development:</h3>
 
-1.  . Download and Install Visual Studio Code
+1. Download and Install Visual Studio Code
 
-Visit the [Visual Studio Code website] and download the
+Visit the <a href="">Visual Studio Code website</a> and download the
 installer for your operating system . Run the installer and follow the
-installation instructions .
+installation instructions.
 
-2.  . Install Node js ( Optional but Recommended for Development ):
+2. Install Node.js (Optional but Recommended for Development):
 
-Node . js is a JavaScript runtime environment that allows executing
-JavaScript outside a web browser . You can download Node . js from the
+Node.js is a JavaScript runtime environment that allows executing
+JavaScript outside a web browser. You can download Node.js from the
 [omcial website] install it, and it will include the Node
-Package Manager ( npm ) with it . This is useful for running
-JavaScript programs locally and managing dependencies .
+Package Manager (npm) with it. This is useful for running
+JavaScript programs locally and managing dependencies.
 
-3.  . Install Visual Studio Cade Extensions :
+3. Install Visual Studio Cade Extensions:
 
-    -   JavaScript ( ES6 ) Code Snippets : Provides handy code snippets
+    -   <b>JavaScript (ES6) Code Snippets:</b> Provides handy code snippets
         for JavaScript development . Search for it in the Extensions tab
         in VS Code and install it .
 
-    -   Prettier - Code formatter : For auto - formatting your code
+    -   <b>Prettier - Code formatter:</b> For auto - formatting your code
         according to predefined rules . It&apos;s optional but highly
-        recommended .
+        recommended.
 
-4.  . Create a JavaScript Project :
+4. Create a JavaScript Project:
 
     -   Open Visual Studio Code .
 
     -   Create a new folder for your project or open an existing one .
 
-    -   Inside the folder, create a new JavaScript file with the . js
-        extension . Right - click in the Explorer panel &gt; New File &gt;
-        script . js .
+  - Inside the folder, create a new JavaScript file with the .js extension. Right-
+    click in the Explorer panel &gt; New File &gt; script.js.
 
-5.  . writing and Running JavaScript Code
+5. Writing and Running JavaScript Code:
 
-    -   Write your JavaScript code in the script . js file .
+  - Write your JavaScript code in the script.js file.
 
-    -   To run JavaScript code, open the integrated terminal in Visual
-        Studio Code ( Terminal &gt; New Terminal ) , navigate to your
-        project directory, and run the JavaScript file using Node . js .
-        For example :
+  - To run JavaScript code, open the integrated terminal in Visual Studio Code (Terminal 
+    &gt; New Terminal), navigate to your project directory, and run the JavaScript file 
+	using Node.js. For example :
 
-bash code node script js
+	bash code
+	node script.js
 
--   To execute JavaScript code in a browser, create an HTML file ( index
-    . html ) and link your JavaScript file in it using the «script&gt; tag
-    . Open the HTML file in your preferred web browser .
+  - To execute JavaScript code in a browser, create an HTML file (index.html) and link 
+    your JavaScript file in it using the &lt;script&gt; tag. Open the HTML file in your 
+	preferred web browser.
 
-6.  . Debugging JavaScript :
+6.  Debugging JavaScript:
 
-    -   Visual Studio Code has a powerful built - in debugger . You can
-        set breakpoints in your code, inspect variables, and step
-        through your code execution line by line .
+  - Visual Studio Code has a powerful built-in debugger. You can set breakpoints in 
+    your code, inspect variables, and step through your code execution line by line.
 
-    -   To use the debugger, add breakpoints by clicking in the margin
-        next to your code line numbers . Then, run your JavaScript code
-        in debug mode ( click the Debug icon in the left sidebar ).
+  - To use the debugger, add breakpoints by clicking in the margin next to your code 
+    line numbers. Then, run your JavaScript code in debug mode (click the Debug icon 
+	in the left sidebar).
 
-Conclusion :
+Conclusion:
 
 That&apos;s a basic setup to start coding in JavaScript with Visual Studio
 Code Remember, JavaScript development often involves web development,
-where you&apos;ll need to write JavaScript code within HTML / CSS files .
+where you&apos;ll need to write JavaScript code within HTML/CSS files.
 For web - based development, you&apos;d generally use VS Code to manage
-the entire project structure .
+the entire project structure.
 
 Additionally, for more advanced development or working on larger
 projects, using a module bundler like Webpack or a task runner like
 Gulp might be beneficial to enhance your development environment
-further
+further.
+
+<!-- the end -->
 
 <!-- last editted 9-20-2024 10:17pm -->
 <!-- last editted 10/18/2024 5:51pm -->
