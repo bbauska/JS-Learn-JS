@@ -11,7 +11,7 @@ date last editted: "10/26/2024 5+pm"
 output: 
   markdown:
     with some style
-...
+---
 
 <h1 align="center">JS Learn JavaScript</h1>
 
