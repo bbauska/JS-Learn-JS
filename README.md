@@ -14061,96 +14061,96 @@ Google Charts Examples:
 
 javascript code google charts.load(&quot;current&apos;, { packages:
 &dollar;corechart&apos; I)) ;
->
+
 google.charts.setOnLoadCa11back(drawChart) ;
->
+
 function drawChart { constdata = google, visualization.
 arrayToDataTab1e(l
->
+
 &lbrack; &apos;Task&apos;, &apos;Hours per
 Day&Hat;l&Hat;
->
+
 &lbrack; &apos;Work&apos;, 1 1 &rbrack;,
->
+
 &lbrack; &apos;Eat&apos;,
 2
->
+
 (&apos;Commute&apos;,
 2
->
+
 (&apos;Watch TV&apos;, 2 &rbrack;,
->
+
 &lbrack; &apos;Sleep&apos;, 7 &vert;
->
+
 constoptions title: &apos;My Daily Activities&apos;, pieHole
 : O.4,
->
+
 const chart = new google.visualization.PieChart(document.
 getElementById(idonutcharti)) ; chart.draw(data, options) ;
->
+
 8&period; Area Chart:
->
+
 javascript code google.charts.load(&apos;current&apos;, { packages: &lbrack;
 &apos;corechart&apos; I) ; google.charts.setOnLoadCallback(drawChart)
 ;
->
+
 function drawChart() { constdata = google.visualization.
 arrayToDataTab1e(i
->
+
 I &Hat;i&Hat;Year&apos;, &apos;Sales&apos;, &apos;Expenses&apos; &rbrack;,
->
+
 &vert; &apos;2013&apos;, 1000, 400 &rbrack;,
->
+
 &lbrack; 1 170, 460 &rbrack;, &vert; &apos;2015&apos;, 660, 1120 &rbrack;,
->
+
 &vert; &apos;2016&apos;, 1030, 540 &rbrack;
->
+
 constoptions { title: &apos;Company Performance&apos;, curveType:
 function&apos;, legend: {position:
 &apos;bottoml
->
+
 const chart = new google.visualization.AreaChart(document.
 getElementById(&apos;curve_chartl)) ; chart.draw(data, options) ;
->
+
 D3.js Examples:
 
 9. Create SVG Circle:
 
 javascript code const svg = d3.select(&apos;body&apos;)
->
+
 .append(&apos;svg&apos;)
->
+
 .attr(&apos;width&apos;, 100)
->
+
 .attr(&apos;height&apos;, 100) ;
->
+
 svg.append(&apos;circle&apos;)
 
 .attr(
 50
 
 .attr(Icy&apos;, 50)
->
+
 .attr(tri, 40)
->
+
 .attr(lfilll, &apos;blue&apos;) ;
 
 10.Create SVG Rectangle:
 
 javascript code const svg = d3.select(&apos;body&apos;)
->
+
 .append(&apos;svg&apos;)
->
+
 .attr(&apos;width&apos;, 100)
->
+
 .attr(&apos;height&apos;, 100) ;
->
+
 svg.append(irect&Hat;i&Hat;
 
 .attr(10.attr(10 
 
 .attr(•width&apos;, 80)
->
+
 .attr(&apos;height&apos;, 50)
 
 .attr(&apos;filli, &apos;greeni) ; Canvas Examples:
@@ -14169,7 +14169,7 @@ javascript code const canvas - document.getElementById(
 beginPath
 ctx arc(100, 100, 50, O, Math
 ctx, fillStyle - &apos;red&apos;; ctx.fill ;
->
+
 Plotly Examples:
 
 3. Create a Line Chart:
@@ -14177,32 +14177,31 @@ Plotly Examples:
 javascript code const data -
 10, 15, 13, 18, type: &apos;scatter&apos;) I
 ; Plotly.newP10t(&apos;myDivt, data) ;
->
+
 4, Create a Bar Chart:
->
+
 javascript code const data = &lbrack; { x: &lbrack; 1B&apos;, &apos;Cl l, y
 •10, 20, 15 &vert;, type: bar
 Plotly.newPlot(ImyDiv&apos;, data) ;
->
+
 Chart.js Examples:
->
+
 5&period; Create a Bar Chart:
->
+
 javascript code const ctx = document.getElementById imyCharti).
 getContext(i2di) ; const myChart = new Chart(ctx,
 type: &apos;bar&apos;, data.
->
+
 labels: I &apos;Red&apos;, iB1ue% &apos;Yellow&apos;, &apos;Green% iPurp1ei, &apos;Orange&apos;
 &rbrack; j datasets.
->
+
 label: of Votes&apos;, data 12, 19, 3, 5, 2, 3 1, backgroundColor.
 
->
 trgba(99, 132, o.2)
 trgba(54, 162, 235, o.2) &Hat;i&Hat;,
->
+
 // more colors
->
+
 borderWidth: 1
 
 6. Create a Line Chart:
@@ -14210,74 +14209,74 @@ borderWidth: 1
 javascript code const ctx - document.getElementById(&apos;myChart&apos;).
 getContext(&apos;2d&apos;) ; constmyChart - new Chart(ctx,(type:
 &apos;line&apos;, data:
->
+
 labels: &lbrack; &apos;January, &apos;February, &apos;March&apos;, &apos;Aprilt, &apos;May&apos;,
 &apos;June, &apos;Julyt
 datasets: &lbrack; { label: &apos;My First
 Dataset&apos;, data: &lbrack; 65, 59, 80, 81, 56, 55, 40
 borderColor.(75, 192, 192) g,
 borderWidth • 1
->
+
 Google Charts Examples:
 
 7. Create a Pie Chart:
 
 javascript code google.charts.load(dcurrenti, &lbrack; packages: &lbrack;
 &apos;corecharti I) ; google.charts.setOnLoadCa11back(drawChart) ;
->
+
 function drawChart
 constdata --- google.visualization.
 arrayToDataTab1e(l
->
+
 (&apos;Task&apos;, &apos;Hours per
 Day&apos;
->
+
 (&apos;Work&apos;, 1 1 1,
->
+
 (&apos;Eat&apos;,
 2
->
+
 (&apos;Commute&apos;, 2 &rbrack;,
->
+
 (&apos;Watch TV&apos;, 2,
->
+
 (&apos;Sleep&apos;, 7 &vert;
->
+
 constoptions =
 title: &apos;My Daily Activities &Hat;i&Hat;,
 pieHole: O 4, l;
->
+
 const chart = new google.visualization.PieChart(document.
 getElementById(&apos;donutchartl)) ; chart.draw(data, options) ;
->
+
 8&period; Create an Area Chart:
->
+
 javascript code google.charts.load(&quot;current&apos;, { packages: &lbrack;
 Icorechart&apos; I) ; google.charts.setOnLoadCallback(drawChart) ;
->
+
 function drawChart()
 constdata = google.visualization.
 arrayToDataTable(l
 &Hat;i&Hat;Year&apos;, &apos;Sales&apos;,
 Expenses&apos;
->
+
 &vert; &apos;2013% 1000, 400 &rbrack;,
->
+
 &vert; &apos;2014% 1170, 460 &rbrack;,
->
+
 &lbrack; &apos;2015, 660, 1120 &rbrack;,
->
+
 &vert; &apos;2016% 1030, 540 &rbrack;
->
+
 constoptions f title: &apos;Company Performance&apos;, curveType:
 function&apos;,
->
+
 legend: {position: &apos;bottomi
 l;
->
+
 const chart new google.visualization.AreaChart(document.
 getElementById(&apos;curve_chartl)) ; chart.draw(data, options) ;
->
+
 D3.js Examples:
 
 9. Create an SVG Circle:
@@ -14286,57 +14285,54 @@ javascript code const svg d3.select(&apos;body&apos;)
  append(&apos;svg&apos;)
  attr(&apos;width&apos;, 100)
 attr(&ast;height&apos;, 100) ;
->
+
 svg.append(&apos;circle&apos;)
->
+
 .attr(Icx&apos;, 50)
 attr(Icy&apos;, 50)
 attr(40
 
->
 .attr(Ifilll, bluel) ;
 
 10.Create an SVG Rectangle:
 
 javascript code const svg d3.select(&apos;body&apos;)
->
+
 .append(&apos;svg&apos;)
->
+
 .attr(&apos;width&apos;, 100)
->
+
 .attr(&apos;height&apos;, 100) ;
->
+
 svg.append(&apos;rect&apos;)
->
+
 .attr(ixi, 10)
->
+
 .attr(tyl, 10
 
->
 .attr(&apos;width&apos;, 80
 
->
 .attr(&apos;height&apos;, 50)
->
+
 .attr(&apos;fill&apos;, &apos;greenl) ;
->
+
 These examples demonstrate how to create basic graphics, charts, and
 visualizations using different JavaScript libraries such as Canvas,
 Plotly, Chart.js, Google Charts, and D3.js.They serve as a
 starting point for building more complex and customized graphical
 representations in web applications,
->
+
 Basic Examples:
->
+
 1&period; Convert Celsius to Fahrenheit:
->
+
 javascript code function celsiusToFahrenheit(celsius) { return(
 celsius  32;
->
+
 let templnFahrenheit - celsiusToFahrenheit(25) ; // Output: 77
->
+
 2, Calculate Area of a Circle:
->
+
 javascript code function calculateCirc1eArea(radius) { return Math
 .PI&ast; radius &ast; radius;
 
@@ -14348,7 +14344,7 @@ String Manipulation:
 
 javascript code function reverseString(str) f returnstr split().
 reverse(.join
->
+
 let reversed = reverseString(&apos;helloi) ; // Output: iollehi
 
 4. Check for Palindrome:
@@ -14356,9 +14352,9 @@ let reversed = reverseString(&apos;helloi) ; // Output: iollehi
 javascript code function isPalindrome(str) { return str str.split
 (reverse join(
 )
->
+
 let checkPa1indrome - isPalindrome(&apos;madam&apos;) ; // Output: true
->
+
 Array Manipulation:
 
 5. Find Maximum Number in Array:
@@ -14370,14 +14366,14 @@ numbers) ; // Output: 12
 6. Sort Array of Objects by Property:
 
 javascript code let products I
->
+
 name: &apos;Laptop&quot;, price
 name: iPhonet, price: 600
 name: &Hat;i&Hat;Tablet,
 price
->
+
 products.sort((aj b) = &gt;a.price- b.price) ;
->
+
 Functions:
 
 7. Higher - Order Function - Map:
@@ -14389,9 +14385,9 @@ let doubled = numbers.map(num = num
 8. Immediately Invoked Function Expression(IIFE):
 
 javascript code
->
+
 (function() f console.log(&apos;IIFE executed.;
->
+
 Object Manipulation:
 
 9. Object Destructuring:
@@ -14402,10 +14398,10 @@ let { name, age} = person;
 10.Merge Objects:
 
 javascript code
->
+
 a: 1,
 let obj2 = {C 3 d
->
+
 let mergedObj = { &period;..objlj.obj2 1; Loops and Iterations:
 
 11.For &period;..Of Loop for Arrays:
@@ -14418,15 +14414,15 @@ let color of colors) f console.log(color) ;
 javascript code let randomNums - &lbrack;l ; while(randomNums - length &lt; 5
 ) { randomNums.push(Math.floor(Math.random &ast; 10) +
 1
->
+
 Error Handling:
 
 13.Try Catch for Error Handling:
 
 javascript code try &lbrack;
->
+
 // Code that may throw an error
->
+
 JSON.parse(
 &apos;invalidJSON&apos;
 } catch(error)
@@ -14437,18 +14433,18 @@ console.error(&apos;Error occurred: error.message
 
 javascript code function throwError throw new Error(&apos;Custom error
 message&apos;
->
+
 try throwError ;
 catch(error) { console.error(
 error.message) ;
->
+
 Asynchronous JavaScript:
 
 15.Promise Example:
 
 javascript code function fetchData() { return new Promise((resolve,
 reject) - &gt; {
->
+
 // Simulate fetching data setTimeout(()
 resolve(&apos;Data fetched successfully&apos;
 ) ;
@@ -14463,9 +14459,9 @@ fetchData then(data = console.log(data)) ;
 javascript code async function fetchData() { let data - await fetch(
 &apos;https api.example com / data&ast;) ; let jsonData - await data.
 json return jsonData;
->
+
 fetchData then(data &gt; console.log(data)) ; DOM Manipulation:
->
+
 Create Element and Append to DOM:
 
 javascript code let newElement - document createE1ement(&apos;div&ast;) ;
@@ -14490,17 +14486,17 @@ let isMatch = pattern.test(&apos;Hello
 
 javascript code let str - &apos;Hello 123&apos;; let replaced - str.replace
 (/ Nd +/, &apos;456&apos;) ; // Output &apos;Hello 456&apos;
->
+
 These examples cover a range of JavaScript functionalities, including
 basic operations, string / array manipulations, functions, objects,
 loops, error handling, asynchronous operations, DOM manipulations, and
 regular expressions.
->
+
 Advanced Functions:
->
+
 1&period; Closure Example:
->
-javascript code function outerFunction(outerValue) { return
+
+Javascript code function outerFunction(outerValue) { return
 function(innerValue) { returnouterValue -v innerVa1ue;
 
 
@@ -14512,10 +14508,10 @@ let result = addFive(3) ; // Output
 
 javascript code function multiply(a) { return function(b) {
 return a &ast; b; l;
->
+
 let multiplyByTwo = multiply(2) ; let product = multiplyByTwo(5)
 ; // Output: 10
->
+
 Advanced Array Manipulation:
 
 3. Using Reduce to Sum Array
@@ -14527,11 +14523,11 @@ et sum = numbers.reduce((acc,
 
 javascript code let numbers - 1, 2, 3, 4,
 5
->
+
 let filteredAndDoubled - numbers filter(num --- &gt; num % 2 O).map
 (num &dash;- &gt; num
 Output: &vert; 4, 8 &rbrack;
->
+
 Advanced Object Manipulation:
 
 5. Object Destructuring with Default Values:
@@ -14543,7 +14539,7 @@ let { name, age = 30 I = person;
 
 javascript code let key - &apos;dynamicKey&apos;; let obj ---(I key l:
 &apos;value&apos; //(dynamicKey: &apos;value&apos;)
->
+
 Advanced Loops and Iterations:
 
 7. For &period;..In Loop for Objects:
@@ -14551,37 +14547,37 @@ Advanced Loops and Iterations:
 javascript code let obj ---
 for(let keyin obj)(console.log(
 key, obj &lbrack; key l) ;
->
+
 8, Using For Of with Iterables:
->
+
 javascript code let iterable &lbrack;
 for(let value of iterable) f console
 .log(value) ;
->
+
 Promises and Async / Await:
->
+
 9&period; Promise Chaining
 javascript code function asyncFunction
 () { return new Promise((resolve, reject) - {
->
+
 setTimeout resolve(&apos;First part
 done&apos;
 
 1000) ;
 
 asyncFunction
->
+
 .then(result = &gt; &lbrack; console.log(result) ; return &apos;Second
 part donei;
->
+
 .then(result = &gt; console.log(result)) ;
->
+
 10.Async / Await with Error Handling
 javascript code function fetchData() { return new Promise((resolve,
 reject) &gt;
 setTimeout(() &gt; { reject(&apos;Failed to
 fetch data&apos;) ;
->
+
 , 2000) ;
 
 <h2>) ;</h2>
@@ -14590,9 +14586,9 @@ async function getData() { try f let data - await fetchData() ;
 console.log(data) ;
 
 I catch(error) { console.error(error) ;
->
+
 getData
->
+
 Advanced DOM Manipulation:
 
 11.Creating and Appending Multiple Elements:
@@ -14601,7 +14597,7 @@ javascript code let fragment = document.createDocumentFragment() ;
 for(let let newElement = document.createE1ement
 (&apos;divi) ; newE1ement.textContent = Element &dollar;1i)
 fragment.appendChild(newE1ement) ;
->
+
 document.body.appendChild(fragment) ;
 
 12.Event Delegation:
@@ -14627,10 +14623,10 @@ Error Handling and Regular Expressions:
 
 javascript code function validateNumber(num) f if(typeofnum
 &apos;number&apos;) { throw new Error(&apos;Invalid number&apos;) ;
->
+
 try &lbrack; validateNumber(
 &apos;abc&Hat;i&Hat;
->
+
 } catch(error) { console.error(error.message) ;
 
 16.Regular Expression to Validate Email:
@@ -14644,126 +14640,138 @@ including advanced functions, array and object manipulation, iteration
 methods, async operations, DOM manipulation, and newer ES6 + features,
 
 Advanced Functions and Functionality:
->
+
 1&period; Higher - Order Function - Filter:
->
+
 javascript code let numbers - I
 let evenNumbers - numbers.filter(num
 --- &gt; num % 2 O) ; // Output 2, 4 &rbrack;
->
+
 2, Immediately Invoked Arrow Function Expression(IIAFE
 javascript code
->
+
 console.log(&apos;IIAFE executed,) ;
->
+
 Advanced Array Manipulation:
->
+
 3&period; Using FlatMap:
->
+
 javascript code let arr 1, 2
 let flatArray - arr, flatMap(innerArr
 &gt; innerArr map(item &gt; item &ast; 2)) ; // Output 6, 8, 10, 12 &rbrack;
->
+
 4, Using Reduce to Flatten Arrays:
->
+
 javascript code let nestedArrays = l, 2 1, &lbrack; 3/ 4 1, 1 5, 6 11 ;
 let flattenedArray = nestedArrays.reduce((acc; curr) = &gt; acc.
 concat(curr), // Output:1 1, 2, 3, 4, 5, 6 &rbrack;
->
+
 Advanced Object Manipulation:
->
+
 5&period; Object Sealing and Freezing:
->
+
 javascript code let obj = &lbrack; name: Alice&apos;
 Object.seal(obj) ; obj age = 30; //
 This change is not allowed in a sealed object
->
+
 let frozenObj -(name: &apos;Bob
 Object.freeze(frozenObj) ;
 frozenObj.age 25; // This change won&apos;t affect a frozen object
->
+
 6, Optional Chaining
-javascript code let user
-name: &apos;Alice&apos;, address:
->
+
+<h4>javascript code</h4>
+
+```
+let user name: &apos;Alice&apos;, address:
 street: &apos;123 Main st&apos;, city: &apos;New York&apos;
->
 let city - user?.address?.city; // Output: &quot;New York&apos;
->
+```
+
 Advanced Loops and Iterations:
->
+
+```
 7&period; For &period;..Await Loop for Asynchronous Operations
 javascript code async function
 asyncOperation(value) &lbrack; return new Promise(resolve =
 setTimeout(() = &gt; { console.log(
 value) ; resolve() ;
-
 async function executeAsyncOperations
 let values = I
 for await(letvalue of values)
 await asyncOperation(value) ;
->
 executeAsyncOperations
+```
 
 8. Using Array.from with Mapping:
 
 javascript code let newArray --- Array.from(length: 5), index) -
 &gt; index &ast; 2) ; // Output: I o, 2, 4, 6, 8 &vert;
->
+
 Advanced Error Handling:
 
 9. Using Finally Block:
 
-javascript code function tryCatchFinally() &lbrack; try f console.log(
+<h4>javascript code</h4>
+
+```
+function tryCatchFinally() &lbrack; try f console.log(
 &apos;Try block&apos;) ; throw new Error(&apos;Error
 occurred&apos;
->
 I catch(error) { console.error(error message) ;
->
 I finally
 console.log(&apos;Finally block&apos;) ;
->
 tryCatchFinally O ;
-
 10&period; Custom Error Class:
+```
 
-javascript code class CustomError extends Error { constructor(
+<h4>javascript code</h4>
+
+```
+class CustomError extends Error { constructor(
 message)(super(message) ; this name this.constructor.name;
->
+
 throw new CustomError(&apos;Custom error message&apos;) ;
->
+```
+
 These additional code snippets expand on various JavaScript concepts
 such as higher - order functions, array methods, object manipulation,
 advanced loops, error handling, and new features like optional
 chaining and async /
 await
->
+
 Advanced Object Manipulation
->
+
+```
 1.Object.defineProperty for Property Definition javascript code
 let obj =
->
+
 Object.defineProperty(obj, &Hat;i&Hat;fu11Name &Hat;i&Hat; /
 value: &apos;Alice Smith&ast;, writable:
 false, configurable: true
+```
 
 <h2>D;</h2>
 
 2. Object.setPrototypeOf for Setting Prototype:
 
-javascript code let animal - f
+<h4>javascript code</h4>
+
+```
+let animal - f
 makeSound f console.log(&apos;Animal
 sound&apos;
 let dog - f};
->
+
 Object.setProtctypeOf(dog, animal) ; dog makeSound() ; // Output
 &apos;Animal sound&apos;
->
+```
+
 Advanced Array Manipulation:
 
 3. Using Set to Get Unique Values:
 
-javascript code 
+<h4>javascript code</h4>
 
 ```
 let numbers
@@ -14773,7 +14781,8 @@ let uniqueNumbers = new Set(numbers ; // Output: &vert; 1, 2 j 3, 4, 5
 
 4. Array..find to Get First Matching Element:
 
-javascript code
+<h4>javascript code</h4>
+
 ```
 let users
 fid: 1, name: &apos;Alice&apos;
@@ -14787,15 +14796,22 @@ Advanced Functionality:
 
 5. Generator Function:
 
-javascript code function &ast; generatorFunction
+<h4>javascript code</h4>
+
+```
+function &ast; generatorFunction
 yield 1; yield 2; yield 3;
 
 let generator - generatorFunction
 console.log(generator.next value)
 ; console.log(generator.next value) ; 6, Async Generator
 Function:
+```
 
-javascript code async function &ast; asyncGenerator() {
+<h4>javascript code</h4>
+
+```
+async function &ast; asyncGenerator() {
 
 // Output: 1
 
@@ -14807,12 +14823,13 @@ resolve, 1000)) ; yield &apos;Second&apos;;
 async for await(let item of asyncGenerator
 onsole.log(item) ; // Output:
 &apos;First&apos; after Oms, &apos;Secondi after 1000ms
+```
 
 Advanced Error Handling:
 
 7. Handling Rejected Promises with catch:
 
-javascript code
+<h4>javascript code</h4>
 
 Promise.reject(Error message&apos;
 
@@ -14821,18 +14838,22 @@ Promise.reject(Error message&apos;
 
 8. Handling Multiple Promises with Promise all:
 
-javascript code let promise 1 - Promise.resolve(&apos;First&apos;) ; let
+<h4>javascript code</h4>
+
+```
+let promise 1 - Promise.resolve(&apos;First&apos;) ; let
 promise2 - Promise.resolve(&apos;Second&apos;) ; Promise.all(l
 promisel, promise2 1)
 
 .then(values - &gt; console.log(values)) ; // Output: I
 &apos;First&apos;, &apos;Second&apos; I
+```
 
 ES6 + Features:
 
 9. Destructuring Nested Objects:
 
-javascript code
+<h4>javascript code</h4>
 
 ```
 let user = {
@@ -14843,7 +14864,7 @@ let { details: &lbrack;name, age} I = user;
 
 10.Biglnt Data Type:
 
-javascript code
+<h4>javascript code</h4>
 
 ```
 const bigNumber Biglnt(Number.MAVSAFE_INTEGER)
@@ -14859,9 +14880,11 @@ Biglnt data type.
 
 Advanced Functions and Operations:
 
+```
 1&period; Memoization using Closure:
+```
 
-javascript code
+<h4>javascript code</h4>
 
 ```
 function memoize(fn) f const cache
@@ -14886,15 +14909,19 @@ const memoizedFactorial = memoize(factorial) ;
 
 2. Function Composition:
 
-javascript code const add = x = &gt; x + 5; const multiply = x = &gt; x &ast;
+<h4>javascript code</h4>
+
+```
+const add = x = &gt; x + 5; const multiply = x = &gt; x &ast;
 2; const compose = fns) = x = fns.reduceRight((acc, fn) = &gt; fn
 (acc), x) ; constaddAndMultip1y = compose(multiply, add) ;
+```
 
 Advanced Array Manipulation:
 
 3. Using Flat to Flatten Nested Arrays:
 
-javascript code
+<h4>javascript code</h4>
 
 let nestedArr = &vert; 1, 1 2, &lbrack; 3, 4 1, 5
 }let flattenedArr = nestedArr.flat(
@@ -14902,15 +14929,22 @@ Infinity) ;
 
 4. Using Some and Every Methods:
 
-javascript code let numbers(
+<h4>javascript code</h4>
+
+```
+let numbers(
 let allEven numbers.every(num - &gt;
 num let hasOdd numbers.some(num- &gt; num
+```
 
 Advanced Object Manipulation:
 
 5. Object.fromEntries Method:
 
-javascript code let entries - - &apos;name&apos;, &apos;Alice&apos; &apos;age&apos;,
+<h4>javascript code</h4>
+
+```
+let entries - - &apos;name&apos;, &apos;Alice&apos; &apos;age&apos;,
 30
 
 // Output:1 3, 4, 5, 6 1
@@ -14921,51 +14955,68 @@ O); // Output true
 
 let obj --- Object.fromEntries(entries) ; // Output: { name:
 &apos;Alicei, age: 30}
+```
 
 6, Object.getOwnPropertyDescriptors:
 
-javascript code const obj {name: &apos;Alice&apos;
+<h4>javascript code</h4>
+
+```
+const obj {name: &apos;Alice&apos;
 const descriptors Object.
 getOwnPropertyDescriptors(obj) ;
+```
 
-Advanced Promises and Async /
-Await
+Advanced Promises and Async / Await
 
 7. Promise.race for Fastest Response:
 
-javascript code function fetchData(url, timeout) { return Promise.
+<h4>javascript code</h4>
+
+```
+function fetchData(url, timeout) { return Promise.
 race(l fetch(url),
 
 new Promise reject) = setTimeout = &gt; reject(new Error(&Hat;i&Hat;
 Timeout&apos;)) j timeout))
+```
 
 8. Async / Await with Promise.allSettled:
 
-javascript code async function fetchData() { constpromises
+<h4>javascript code</h4>
+
+```
+async function fetchData() { constpromises
 fetch(&apos;https api example com /
 endpoint V), fetch(&apos;https api example com / endpoint?)
 
 const results await Promise.allSettled(promises) ; console, log
 (results) ;
->
+```
+
 ES6 Features:
 
 9. Optional Chaining with Ntillish Coalescing:
 
-javascript code const data - { user.
+<h4>javascript code</h4>
 
+```
+const data - { user.
 name: &apos;Alice&apos;, age: null
-
 const userName - data? - user? name ?? &apos;Unknown&apos;; // Output.•
 &apos;Alice&apos;
-
 const userAge = data?.user?.age ?? 25; // Output: 25
+```
 
 10.Array Buffer and Typed Arrays:
 
-javascript code const buffer new ArrayBuffer(16
+<h4>javascript code</h4>
+
+```
+const buffer new ArrayBuffer(16
 constintArray --- new Int32Array(buffer
 ) ; intArray 42;
+```
 
 These additional JavaScript code snippets demonstrate advanced function
 techniques, arr@Y methods, object manipulation, promises and async /
@@ -14973,10 +15024,11 @@ await functionality, ES6 + features like optional chaining and array
 buffer with typed arrays,
 
 Advanced Functions and Operations:
-
+```
 1&period; Function Bind Method:
+```
 
-javascript code
+<h4>javascript code</h4>
 
 const x: 42, getX: function
 return this.x;
@@ -14986,7 +15038,7 @@ obj) ; console.log(boundGetX ; // Output: 42
 
 2, Immediately Resolved Promises:
 
-javascript code
+<h4>javascript code</h4>
 
 const immediatePromise = Promise.resolve(&quot;Immediate resolution&Hat;i&Hat;
 immediatePromise.then(result = &gt;
@@ -14996,69 +15048,93 @@ Advanced Array Manipulation:
 
 3. Using Array.findlndex:
 
-javascript code constarray = &lbrack; 5, 12, 8, 130,44
+<h4>javascript code</h4>
+
+```
+constarray = &lbrack; 5, 12, 8, 130,44
 constindex = array.findlndex(element =
 element &gt; 10) ; // Output: 1(index of first element &gt; 10)
+```
 
 4. Using Array.fill:
 
-javascript code constarray 2,
+<h4>javascript code</h4>
+
+```
+constarray 2,
 array fill(O, 2, 4) ; // Fills array
 from index 2 to index 4 with value O
->
+```
+
 Advanced Object Manipulation:
 
 5. Using Object.entries:
 
-javascript code const obj = {foo: &Hat;i&Hat;bar% baz: 42
+<h4>javascript code</h4>
+
+```
+const obj = {foo: &Hat;i&Hat;bar% baz: 42
 constentries = Object.entries(obj)
 ; // Output: &apos;fool, &apos;bari I j I &Hat;i&Hat;baz&Hat;i&Hat;, 42 Il
+```
 
 6. Object.preventExtensions:
 
-javascript code constobj {prop: &apos;value&apos;
-)
+<h4>javascript code
 
-Object.preventExtensions(obj) ; obj newProp 10; // Cannot add new
-properties to obj
+```
+constobj {prop: &apos;value&apos;
+)
+Object.preventExtensions(obj) ; obj newProp 10; // Cannot add new properties to obj
+```
 
 Advanced Promises and Async / Await:
 
 7. Promise.allSettled for All Promise States:
 
-javascript code const promises = I
+<h4>javascript code</h4>
 
+```
+const promises = I
 Promise.resolve(&quot;Resolved&quot;), Promise.reject(&quot;Rejected&apos;
 new Promise(resolve = &gt; setTimeout
 (C) = &gt; resolve &apos;Resolved after timeouti), 1000))
-
 Promise.allSettled(promises)
-
 .then(results = &gt; console.log(results)) ;
+```
 
 8. Async Function Returning Rejected promise:
 
-javascript code async function throwError() { throw new Error(
+<h4>javascript code</h4>
+
+```
+async function throwError() { throw new Error(
 &apos;Error thrown from async
 function&apos;
-
 throwError O.catch(error - &gt; console.error(error message)) ;
 // Output: &apos;Error thrown from async function&apos;
+```
 
 ES6 + Features:
 
 9. Numeric Separators for Readability:
 
-javascript code const billion =
+<h4>javascript code</h4>
+
+```
+const billion =
 onst binary = ob1010_0001;
+```
 
 10.Promise.finally Method:
 
+```
 Promise.resolve(&apos;Success&apos;)
 finally) &gt; console log(&apos;Finally
 block executed&ast;))
  then(result --- &gt; console, log(
 result)) ; // Output: &apos;Success&apos;
+```
 
 These JavaScript code snippets showcase more advanced function
 operations, array manipulations, object methods, promises and async /
@@ -15067,27 +15143,32 @@ Promise, finally method,
 
 Advanced Functions and Operations:
 
+```
 1&period; Function Caching using Memoization:
+```
 
-javascript code const memoize ---(fn) - &gt; { const cache
+<h4>javascript code</h4>
+
+```
+const memoize ---(fn) - &gt; { const cache
 return args)
 const stringifiedArgs - JSON.stringify
 (args) ; return cache &lbrack; stringifiedArgs &rbrack; Il(cache &lbrack;
 stringifiedArgs &rbrack; - fn args ;
-
 const sum console log(&apos;Calculating sum &period;..&apos;
 )
-
 returna + b
-
 const memoizedSum - memoize(SUm) ;
-
 console.log(memoizedSum(2, 3)) ; console.log(memoizedSum(2,
 3)) ;
 
 2&period; Function Throttling:
+```
 
-javascript code const throttle -(func, limit) - &gt;(let inThrottle;
+<h4>javascript code</h4>
+
+```
+const throttle -(func, limit) - &gt;(let inThrottle;
 return function const args arguments; const context this; if(!
 inThrott1e) f func apply(context, args) ; inThrottle true;
 setTimeout(() &gt; inThrottle
@@ -15103,26 +15184,36 @@ function throttledFunc {
 console.log(&apos;Throttled function executed&apos;) ;
 
 const throttled = throttle(throttledFunc, 3000) ; Advanced Array
+```
+
 Manipulation:
 
 3. Using Array.from with Mapping and Filtering:
 
-numbers =
-constnewArray = Array.from(numbers,
+```
+numbers = constnewArray = Array.from(numbers,
 x = x &ast; 2
 filter // Output: &lbrack; 6, 8, 10, 12 &vert;
+```
 
 4. Using Array reduceRight:
 
-javascript code constarray - 1 1, 2, 3,4
+<h4>javascript code</h4>
+
+```
+constarray - 1 1, 2, 3,4
 const sum - array.reduceRight((acc,
 curr) - &gt; acc + curr // Output: 10
+```
 
 Advanced Object Manipulation:
 
 5. Object.fromEntries with Map:
 
-javascript code const entries - new
+<h4>javascript code</h4>
+
+```
+const entries - new
 Map
 
 -   &apos;name&apos;, &apos;Alice&ast; I,
@@ -15131,10 +15222,14 @@ Map
 
 constobj - Object.fromEntries(entries) ; // Output: { name
 &apos;Alice&apos;, age: 30)
+```
 
 6, Object.seal and Object.isSealed:
 
-javascript code const { name:
+<h4>javascript code</h4>
+
+```
+const { name:
 &apos;Alice&apos;
 
 Object.seal(obj) ; console log(Object.isSealed(obj)) ; //
@@ -15142,39 +15237,47 @@ Output: true
 
 Advanced Promises and Async /
 Await
+```
+
 7. Promise.any for the First Fulfilled Promise:
 
+```
 promises = I
-
 Promise.reject(&quot;Rejected li)
-
 Promise.resolve(&quot;Resolved
 2&apos;
-
 Promise.resolve(&apos;Resolved
 3&apos;
-
 Promise.any(promises)
-
-.then(result = &gt; console.log(result)) ; // Output: &apos;Resolved
-2t
+.then(result = &gt; console.log(result)) ; // Output: &apos;Resolved 2t
+```
 
 8. Async Function Using for await of:
 
-javascript code async function processltems(items) { for await(
+<h4>javascript code</h4>
+
+```
+async function processltems(items) { for await(
 letitem of items) { console.log(&apos;Processing item: &dollar;{item}) ;
+```
 
 ES6 Features:
 
 9. Dynamic Import for Modules:
 
-javascript code async function loadModule() { const module - await
+<h4>javascript code</h4>
+
+```
+async function loadModule() { const module - await
 import &apos;./ module.js&apos;) ; module doSomething() ;
+```
 
 10.Nullish Coalescing Operator:
 
+```
 x = null; const y = x ?? &apos;default value&apos;; // Output: &apos;default
 value&Hat;i&Hat;
+```
 
 These JavaScript code snippets introduce advanced function operations,
 array manipulations, object methods, promises and async / await
@@ -15185,67 +15288,93 @@ Advanced Functions and Operations:
 
 1..Partial Application of Functions:
 
-javascript code const multiply =(a, b) = &gt; a &ast; b; const
+<h4>javascript code</h4>
+
+```
+const multiply =(a, b) = &gt; a &ast; b; const
 partialMultiplyByTwo = multiply.bind(null, 2
 console.log(partialMultiplyByTwo(5
 )) ; // Output: 10
+```
 
 2. Debouncing Function:
 
-javascript code const debounce -(func, delay) - &gt;
+<h4>javascript code</h4>
+
+```
+const debounce -(func, delay) - &gt;
 let timeout; return function const
 context --- this; const args - arguments; clearTimeout(timeout) ;
 timeout - setTimeout(() - &gt; func.apply(context, args), delay)
 ; function handlelnput
 console.log(&apos;Input event handled&apos;
 ) ;
-
 const debouncedInputHand1er = debounce(handlelnput, 300) ;
+```
 
 Advanced Array Manipulation:
 
 3. Using Array flat to Flatten Arrays:
 
-javascript code const nestedArray -(1, 1 2, 3 Il, 4, &lbrack; 5
+<h4>javascript code</h4>
+
+```
+const nestedArray -(1, 1 2, 3 Il, 4, &lbrack; 5
 const flatArray nestedArray.flat(
 Infinity) ; // Output: 1 1, 2, 3, 4, 5 1
+```
 
 4, Using Array.slice to Clone Arrays:
 
-javascript code const originalArray &lbrack; 1, 2, 3, 4 1
+<h4>javascript code</h4>
+
+```
+const originalArray &lbrack; 1, 2, 3, 4 1
 const clonedArray originalArray.slice
 () ; // Clones the originalArray
+```
 
 Advanced Object Manipulation:
 
 5, Using Object.keys with Mapping:
 
-javascript code const constmappedObj = Object.fromEntries(
+<h4>javascript code</h4>
+
+```
+const constmappedObj = Object.fromEntries(
 Object.keys(obj).map(key
-&gt; &lbrack; key, obj &lbrack; key &rbrack; &quot;
-2
+&gt; &lbrack; key, obj &lbrack; key &rbrack; &quot; 2
+```
 
 6. Object.is for Strict Equality Comparison:
 
-javascript code console.log(Object.is(5, 5)) ; // Output:
+<h4>javascript code</h4>
+
+```
+console.log(Object.is(5, 5)) ; // Output:
 true console.log(Object.is(5, &apos;51)) ; // Output: false
+```
 
 Advanced Promises and Async / Await:
 
 7. Promise.allSettled with Optional Chaining
-    javascript code const promises = I
 
+<h4>javascript code</h4>
+
+```
+const promises = I
 Promise.resolve({ name: Alice&apos;, age: 301),
-
 Promise.reject(new Error(&apos;Something went wrong)),
-
 Promise.resolve(null)
-
 const results = await Promise.allSettled(promises) ;
+```
 
 8. Async Generator Function:
 
-javascript code async function asyncGenerator() { yield &apos;First&apos;;
+<h4>javascript code</h4>
+
+```
+async function asyncGenerator() { yield &apos;First&apos;;
 await new Promise(resolve - &gt; setTimeout(resolve, 1000)) ; yield
 &apos;Second&apos;;
 
@@ -15253,24 +15382,35 @@ await new Promise(resolve - &gt; setTimeout(resolve, 1000)) ; yield
 for await(let item of asyncGenerator
 ()) { console.log(item) ; // Output &apos;First&apos; after Oms,
 &apos;Second&apos; after 1000ms
+```
 
 ES6 + Features:
 
 9. Optional Chaining for Nested Properties
-    javascript code const user = {address
+
+
+<h4>javascript code</h4>
+
+```
+const user = {address
    :(city: iNew York&apos;
     const city = user.address?.city; //
     Output: &apos;New York
     const zipCode = user.address?.
     zipCode ?? &apos;Not available&apos;; // Output: &quot;Not available&apos;
+```
 
 10.Biglnt for Large Integer Values:
 
-javascript code const bigNumber Biglnt(
+<h4>javascript code</h4>
+
+```
+const bigNumber Biglnt(
 Number Biglnt(1)
 Biglnt:
 
 9007199254740992n + In
+```
 
 These JavaScript code snippets explore advanced function operations,
 array manipulations, object methods, promises and async / await
@@ -15280,13 +15420,20 @@ Advanced Functions and Operations:
 
 1. Currying Function:
 
-javascript code const multiply
+<h4>javascript code</h4>
+
+```
+const multiply
 constmultiplyByTwo = multiply(2) ;
 console.log(multiplyByTwo(5)) ; // Output • 10
+```
 
 2. Function Memoization Using Closures:
 
-javascript code const memoize -(func) &gt;(const
+<h4>javascript code</h4>
+
+```
+const memoize -(func) &gt;(const
 cache>
 return args) - - f&gt; const stringifiedArgs = JSON.stringify(args
 ) ; return cache &lbrack; stringifiedArgs &rbrack; Il(cache &lbrack; stringifiedArgs
@@ -15294,74 +15441,105 @@ return args) - - f&gt; const stringifiedArgs = JSON.stringify(args
 
 const sum =(a, b) = &gt;
 console.log(&apos;Calculating sum
-returna +
-b
-
+returna + b
 const memoizedSum = memoize(sum) ; console log(memoizedSum(2, 3
 )) ; // Output Calculating sum &period;..5 console log(memoizedSum(2.3
 ; // Output 5(Retrieved from cache)
+```
 
 Advanced Array Manipulation:
 
 3. Using Array.reduce with Initial Value:
 
-javascript code constarray = &vert; 1, 2, 3, 4, 5
+<h4>javascript code</h4>
+
+```
+constarray = &vert; 1, 2, 3, 4, 5
 const sum = array.reduce((acc, curr)
 = &gt; acc + curr,O) ; // Output: 15
+```
 
 4. Array.findlndex with Custom Predicate:
 
-javascript code const numbers - &lbrack; 10, 20, 30, 40, 50 &rbrack; ; const
+<h4>javascript code</h4>
+
+```
+const numbers - &lbrack; 10, 20, 30, 40, 50 &rbrack; ; const
 index - numbers.findlndex(num - &gt; num &gt; 25) ; // Output: 2(
 Index of first element &gt; 25)
+```
 
 Advanced Object Manipulation:
 
 5. Object.entries with Object.fromEntries:
 
-javascript code const { name: &apos;Alice&apos;, age: 30
+<h4>javascript code</h4>
+
+```
+const { name: &apos;Alice&apos;, age: 30
 const entries = Object.entries(obj)
 ; // Output: &lbrack;l •name&apos;, &apos;Alicei I, I iagei, 30 Il const
 reconstructedObj = Object.fromEntries(entries) ;
+```
 
 6. Object.freeze for Immutable Objects:
 
-javascript code constobj - {prop: •value&apos;)
+<h4>javascript code</h4>
+
+```
+constobj - {prop: •value&apos;)
 Object.freeze(obj) ; obj prop -
 &apos;newValue&dollar;; // Assignment not allowed in a frozen object
+```
 
 Advanced Promises and Async / Await:
 
 7. Promise.resolve and Promise.reject:
 
-javascript code const resolvedPromise = Promise.resolve(Resolved&apos;
+<h4>javascript code</h4>
+
+```
+const resolvedPromise = Promise.resolve(Resolved&apos;
 ) ; constrejectedPromise = Promise.reject(&apos;Rejected&apos;) ;
 
 resolvedPromise.then(result &gt; console.log(result)) ; //
 Output: Resolved&apos; rejectedPromise.catch(error &gt; console.error
 (error)) ; // Output: &apos;Rejected&apos;
+```
 
 8. Async Function Returning Resolved Promise:
 
-javascript code async function returnResolved() { return Resolved
+<h4>javascript code</h4>
+
+```
+async function returnResolved() { return Resolved
 from async function&apos;;
 
 returnResolved then(result = &gt; console.log(result)) ; //
 Output: &apos;Resolved from async functioni
+```
 
 ES6 + Features:
 
 9. Array Destructuring:
 
-javascript code const &lbrack; first, second, rest I =
+<h4>javascript code</h4>
+
+```
+const &lbrack; first, second, rest I =
 console.log(first, second, rest) ;
 // Output: 1 2 3, 4, 5 1
+```
 
 10.Rest Parameters in Functions:
 
-javascript code const sum - args) - &gt; args.reduce((acc, curr) -
+<h4>javascript code</h4>
+
+```
+const sum - args) - &gt; args.reduce((acc, curr) -
 &gt; acc + curr, O) ; console.log(sum(1, 2, 3, 4, 5)) ; //
 Output: 15
+```
 
 These JavaScript code snippets demonstrate advanced function
 operations, array manipulations, object methods, promises and async /
@@ -15371,7 +15549,10 @@ Advanced Functions and Operations:
 
 1. Function Composition with Multiple Functions:
 
-javascript code const add =(x, y)
+<h4>javascript code</h4>
+
+```
+const add =(x, y)
 const multiply =(x, y) = &gt; x y
 const compose funcs) &gt; funcs.reduce
 ((f, g) &gt; args) - f(g args))) ;
@@ -15379,47 +15560,68 @@ const compose funcs) &gt; funcs.reduce
 constaddAndMultiply = compose(multiply, add) ; console log(
 addAndMultiply(3, 4)) ; // Output: 21(3 +
 4
+```
 
 2. Using Function.toString() to Get Function Source Code:
 
-javascript code function greet() { console, log(&apos;Hello !) ;
+<h4>javascript code</h4>
+
+```
+function greet() { console, log(&apos;Hello !) ;
 
 constfunctionSource greet.toString
 console, log(functionSource) ; //
 Output: &quot;l function greet() { console log(&apos;Hello !) ;)
 I
+```
 
 Advanced Array Manipulation:
 
 3. Array.flatMap for Flattening and Mapping:
 
-javascript code constarr 1, 2, 3 &rbrack; ; constmappedAndFlattened - arr.
+<h4>javascript code</h4>
+
+```
+constarr 1, 2, 3 &rbrack; ; constmappedAndFlattened - arr.
 flatMap(x - &gt; &lbrack;x 2, 3 1); console.log(mappedAndFlattened) ; //
 Output 2, 3, 4, 6, 6, 9 &vert;
+```
 
 4, Using Array some with Custom Predicate:
 
-javascript code constnumbers &lbrack; 5, 10, 15, 20 &rbrack; ; const isEvenPresent
+<h4>javascript code</h4>
+
+```
+constnumbers &lbrack; 5, 10, 15, 20 &rbrack; ; const isEvenPresent
 numbers.some(num &gt; num
+```
+
 %// Output: true
 
 Advanced Object Manipulation:
 
 5. Using Object.keys to Get Object&apos;s Own Properties:
 
-javascript code const constkeys - Object.keys(obj) ; //
+<h4>javascript code</h4>
+
+```
+const constkeys - Object.keys(obj) ; //
 Output: &lbrack; la&apos;, &apos;c&apos; I
+```
 
 6. Object.setPrototypeOf for Dynamic Prototype Setting:
 
-javascript code const protoObj(greet() { console.log(
+<h4>javascript code</h4>
+
+```
+const protoObj(greet() { console.log(
 &apos;Greetings !) ;
 
 const newObj O;
 
 Object.setPrototypeOf(newObj, protoObj) ; newObj greet ; //
 Output: Greetings !
-
+```
 
 Advanced Promises and Async / Await:
 
@@ -15435,25 +15637,38 @@ console.log(value) ; // Output:
 
 8. Async Function Using try &period;..catch for Error Handling.
 
-javascript code async function fetchData() { try &lbrack;
+<h4>javascript code</h4>
+
+```
+async function fetchData() { try &lbrack;
 
 const response = await fetch(ihttps api.example com / data&apos;) ;
 const data = awaitresponse.json() ; console.log(data) ;
 catch(error) { console.error(
 &apos;Error fetching data: t, error) ;
+```
 
 ES6 + Features:
 
 9. Template Literals for Dynamic Strings:
 
-javascript code constname = &apos;Alice&apos;; constage = 30; console.log(
+<h4>javascript code</h4>
+
+```
+constname = &apos;Alice&apos;; constage = 30; console.log(
+
 My name is &dollar; {name} and lim &dollar;{age} years old
+```
 
 
 10.Array Spread Operator for Concatenation:
 
-javascript code constarrl - 1 1, 2, 3 1 ; constarr2 5, 6 1 ; const
+<h4>javascript code</h4>
+
+```
+constarrl - 1 1, 2, 3 1 ; constarr2 5, 6 1 ; const
 combined - arrl, arr2 1; // Output: &lbrack; 1, 2, 3, 4, &vert;
+```
 
 These JavaScript code snippets explore advanced function operations,
 array manipulations, object methods, promises and async / await
@@ -15464,61 +15679,87 @@ Advanced Functions and Operations:
 
 1. Function Returning Functions - Higher - Order Functions:
 
-javascript code const add =(x) = &gt;(y) =
+<h4>javascript code</h4>
+
+```
+const add =(x) = &gt;(y) =
 + y; constaddTwo = add(2) ; console
 .log(addTwo(3)) ; // Output: 5
+```
 
 2. Function That Delays Execution:
 
-javascript code const delayExecution(time) &gt; { return new Promise
+<h4>javascript code</h4>
+
+```
+const delayExecution(time) &gt; { return new Promise
 ((resolve)
 setTimeout(resolve, time) ; n;
 
 delayExecution(2000).then(0 = &gt; console.log(Delayed
 execution&apos;)) ; // Output after 2 seconds
+```
 
 Advanced Array Manipulation:
 
 3, Array.every with Custom Predicate:
 
-javascript code constnumbers &lbrack; 10, 20, 30
+<h4>javascript code</h4>
+
+```
+constnumbers &lbrack; 10, 20, 30
 const allGreaterThanFive numbers.every
 (num &gt; num &gt; 5) ; // Output: true
+```
 
 4. Using Array.reverse to Reverse an Array:
 
-javascript code const array = &lbrack; 1, 2, 3, &rbrack; ; const reversedArray
+<h4>javascript code</h4>
+```
+const array = &lbrack; 1, 2, 3, &rbrack; ; const reversedArray
 array.slice O.reverse // Output:1
 3, 2, 1 &rbrack;
+```
 
 Advanced Object Manipulation:
 
 5. Using Object.fromEntries to Convert Array to Object:
 
-javascript code const entries = &lbrack;l I l, I &apos;b, 2 1, I 3 ; constobj
+<h4>javascript code</h4>
+
+```
+const entries = &lbrack;l I l, I &apos;b, 2 1, I 3 ; constobj
 = Object.fromEntries(entries) ; // Output: { a: 1, b: 2, c:
 31
+```
 
 6. Object.assign for Merging Objects:
 
-javascript code constobJ1
+<h4>javascript code</h4>
+
+```
+constobJ1
 constobj2 - { b: 3, c: 4 }
 constmergedObj - Object.assign(f},
 objl, obj2) ; // Output: { a: li b
 :
+```
 
 Advanced Promises and Async / Await:
 
 7. Promise.resolve with Then Method:
 
-javascript code
+<h4>javascript code</h4>
 
 Promise.resolve(&apos;Resolved value&apos; then(value = &gt; console.log(
 value)) ; // Output: Resolved value&ast;
 
 8. Async Function with Promise..all for Parallel Execution:
 
-javascript code async function fetchData() { const I datal, data2 1
+<h4>javascript code</h4>
+
+```
+async function fetchData() { const I datal, data2 1
 await Promise, all(l fetch(&apos;https api example com / datal&apos; fetch
 (&apos;https api example com / data2&apos;
 
@@ -15527,12 +15768,16 @@ console, log(datal, data2) ;
 then(res &gt; res, json
 then(res
 &gt; res, json 0)
+```
 
 ES6 + Features:
 
 9. Computed Property Names in Objects:
 
-javascript code constkey --- &Hat;d&Hat; dynamicKey&Hat;i&Hat;;
+<h4>javascript code</h4>
+
+```
+constkey --- &Hat;d&Hat; dynamicKey&Hat;i&Hat;;
 
 const
 
@@ -15540,10 +15785,14 @@ const
 
 console.log(obj.dynamicKey) ; // Output: &quot;Value based on
 dynamic key&apos;
+```
 
 10.Array.find for Finding Elements in an Array:
 
-javascript code const users fid: 1, name:
+<h4>javascript code</h4>
+
+```
+const users fid: 1, name:
 &apos;Alice&apos;
 
 {id 2, name: &apos;Bob&apos;
@@ -15553,6 +15802,7 @@ id: 3, name:
 
 const user - users.find(user - &gt; user.id 2) ; // Output: fid: 2,
 name: &apos;Bob&apos;)
+```
 
 These JavaScript code snippets explore advanced function operations,
 array manipulations, object methods, promises and async / await
@@ -15564,7 +15814,7 @@ Advanced Functions and Operations:
 
 1. Function Returning Another Function - Closure Example:
 
-javascript code
+<h4>javascript code</h4>
 
 function outerFunction(x) { function innerFunction(y) &lbrack; return x
 -v y;
@@ -15576,70 +15826,101 @@ Output: 8
 
 2. Recursive Function for Factorial Calculation:
 
-javascript code function factorial(n) { if(n = = 0 11 n =
+<h4>javascript code</h4>
+
+```
+function factorial(n) { if(n = = 0 11 n =
 return 1;
 
 returnn &ast; factorial(n - 1) ;
 
 console.log(factorial(5)) ; // Output: 120 Advanced Array
+```
+
 Manipulation:
 
 3. Using Array.slice() for Subarray Creation:
 
-javascript code constarr = &lbrack; 1, 2, 3, 4, 5 1; const subArray arr.
+<h4>javascript code</h4>
+
+```
+constarr = &lbrack; 1, 2, 3, 4, 5 1; const subArray arr.
 slice(2,4) ; // Output: &lbrack; 3, 4 &rbrack;
+```
 
 4. Using Array includes for Checking Array Elements:
 
-javascript code const fruits &apos;apple&apos;, &apos;banana&apos;, •orange&apos; &rbrack; ;
+<h4>javascript code</h4>
+
+```
+const fruits &apos;apple&apos;, &apos;banana&apos;, •orange&apos; &rbrack; ;
 const hasBanana fruits.includes(&apos;banana&apos;) ; // Output: true
+```
 
 Advanced Object Manipulation:
 
 5. Object.keys to Get Object Keys:
 
-javascript code const const keys - Object.keys(obj) ; //
+<h4>javascript code</h4>
+
+```
+const const keys - Object.keys(obj) ; //
 Output: &lbrack; &apos;c&apos; I
+```
 
 6, Object.defineProperty() for Object Property Definition:
 
-javascript code
+<h4>javascript code</h4>
+```
 const>
 Object.defineProperty(obj, &apos;prop&apos;,
 value: &apos;some value&apos;, writable: false
 
 Advanced Promises and Async /
 Await
+```
 
 7. Promise..all for Multiple Promises Handling:
 
-javascript code const promisel Promise.resolve(&apos;Resolved 1&apos;) ;
+<h4>javascript code</h4>
+```
+const promisel Promise.resolve(&apos;Resolved 1&apos;) ;
 const promise2 Promise.resolve(&apos;Resolved 2&apos;) ;
-
 Promise.all(promisel, promise2 1).then(
 values
 
 console.log(values) ; // Output: &lbrack; &apos;Resolved &apos;Resolved 2&apos; &vert;
+```
 
 8. Async / Await with Promise.catch() for Error Handling:
 
-javascript code async function fetchUserData() { try f const
+<h4>javascript code</h4>
+```
+async function fetchUserData() { try f const
 response - await fetch(&apos;https api example com / users&apos;) ; const
 data - await response, json ; console.log(data) ;
 catch(error) { console.error(
 &apos;Error fetching user data: error) ;
+```
 
 ES6 Features:
 
 9. Object Destructuring for Variable Assignment:
 
-javascript code const user - {name: &apos;Alice&apos;, age: 30
+<h4>javascript code</h4>
+		
+const user - {name: &apos;Alice&apos;, age: 30
 const { name, age) - user; console.log
 (name, age) ; // Output: &apos;Alice&apos; 30
 
 10.Arrow Functions for Concise Function Definitions:
 
-javascript code const sum =(a, b) = &gt; a + b; console log(sum(
+<h4>javascript code</h4>
+
+```
+const sum =(a, b) = &gt; a + b; console log(sum(
+```
+
 2, 3 ; // Output: 5
 
 These JavaScript code snippets delve into advanced function
@@ -15658,80 +15939,115 @@ localVar) ;
 
 2. Function that Returns Multiple Values:
 
-javascript code function calculateValues(x, y) { return &lbrack;x + y, x
+<h4>javascript code</h4>
+
+```
+function calculateValues(x, y) { return &lbrack;x + y, x
 y, x /
 yl
 
 const &lbrack; sum, product, division &rbrack; calculateValues(10, 5
 console log(sum, product, division) ;
 // Output: 15 50 2
+```
 
 Advanced Array Manipulation:
 
 3, Using Array map() for Transformation:
 
-javascript code constnumbers &lbrack;
+<h4>javascript code</h4>
+```
+constnumbers &lbrack;
 const doubledNumhers numbers.map(num
 &gt; num &ast; 2) ; // Output: &vert; 2, 4, 6, 8, 10 &rbrack;
+```
 
 4. Array.find() to Get First Matching Element:
 
-javascript code const users = fid: 1, name: &apos;Alice&apos;
+<h4>javascript code</h4>
+
+```
+const users = fid: 1, name: &apos;Alice&apos;
 &lbrack; id: 2, name: &Hat;i&Hat;Bob&Hat;i&Hat;
 fid: 3, name:
 &apos;Charlie&apos;
 
 const user = users.find(user = &gt; user Id
 console.log(user) ; // Output: {id
+
 : 2 j name &apos;Bobi
-Advanced Object Manipulation:
+```
+
+<h4>Advanced Object Manipulation:</h4>
 
 5. Object.freeze to Prevent Object Modification:
 
-javascript code constObj = {prop: &apos;value&ast;
+<h4>javascript code</h4>
+```
+constObj = {prop: &apos;value&ast;
 Object.freeze(obj) ; obj prop = •new
 value&apos;; // This change won&apos;t take effect due to object freezing
+```
 
 6. Using Object.values() to Get Object Values:
 
-javascript code const const values --- Object.values(obj)
+<h4>javascript code</h4>
+
+```
+const const values --- Object.values(obj)
 ; // Output: &lbrack; 1, 2, 3
+```
+
 Advanced Promises and Async / Await:
 
 7. Promise chaining with.then and.catch C):
 
-javascript code async function fetchData() { return fetch(ihttps
+<h4>javascript code</h4>
+
+```
+ async function fetchData() { return fetch(ihttps
 :// api.example.com / data&apos;)
 then(response = &gt; response.json
 0)
 
 .catch(error = console.error(&apos;Error fetching data: i, error
 )) ;
+```
 
 8. Async Function with Error Handling:
 
-javascript code async function fetchData() {
+<h4>javascript code</h4>
+```
+async function fetchData() {
 
 const response await fetch(&apos;https api example com / data&apos;) ;
 const data - await response, json ; console.log(data) ;
 catch(error) { console.error(
 &apos;Error fetching data: error) ;
+```
 
 ES6 Features:
 
 9. Optional Chaining for Object Properties:
 
-javascript code const user - {profile: {email: &apos;user@example com&apos;
+<h4>javascript code</h4>
+
+```
+const user - {profile: {email: &apos;user@example com&apos;
 }); const userEmail - user?.profile?.email; // Output:
 &apos;user@example.com&apos;
+```
 
 10.Promise finally() for Cleanup Tasks:
 
-javascript code fetch(&apos;https:// api.example.com / data&apos;)
+<h4>javascript code</h4>
 
+```
+fetch(&apos;https:// api.example.com / data&apos;)
 .then(response &gt; response.json 0)
-
 .finally console.log(&Hat;i&Hat; Data fetching completed!)) ; // Runs
+```
+
 irrespective of resolution / rejection These JavaScript code snippets
 explore advanced function operations, array manipulations, object
 methods, promises and async / await functionalities, and ES6 +
@@ -15906,71 +16222,95 @@ container.appendChild(image) ;
 
 2. Adding a New Option to Select Element:
 
-javascript code const select = document.getElementById(ImySelect&apos;
+<h4>javascript code</h4>
+```
+const select = document.getElementById(ImySelect&apos;
 ) ; constoption = document.createElement(&apos;option&quot;
 option.value - &apos;valuell; option.
 text = Option Text &Hat;l&Hat; ; select.appendChild(option) ;
-
+```
 Advanced Object Manipulation:
 
 3. Setting Custom Attributes to HTML Elements:
 
-javascript code const element document.getElementByTd(
+<h4>javascript code</h4>
+```
+const element document.getElementByTd(
 &apos;myElement&apos;) ; element.setAttribute(data - custom&apos;,
 &apos;customValuel) ;
+```
 
 4. Removing Specific Attribute from an Element:
 
-javascript code const element = document.getElementByld(
+<h4>javascript code</h4>
+```
+const element = document.getElementByld(
 &apos;myElementi) ; element.removeAttribute(&apos;data - custom&apos;) ;
+```
 
 Styling HTML Objects:
 
 5. Modifying CSS Properties of an Element:
 
-javascript code const element = document.getElementById(
+<h4>javascript code</h4>
+```
+const element = document.getElementById(
 &apos;myElementI) ; element.style.backgroundColor = &apos;blue&apos; element
 .style.color = &apos;white&apos;;
+```
 
 6. Adding and Removing CSS Classes:
 
-javascript code const element - document.getElementById
+<h4>javascript code</h4>
+```
+const element - document.getElementById
 &apos;myElement&apos;) ; element.classList.add(&apos;newClass&apos;) ; element
 .classList.remove(
 •oldClass&apos;
+```
 
 Event Handling and Interaction:
 
 7. Creating and Handling Mouse Hover Effects:
 
-javascript code const element = document.getElementByld(
+<h4>javascript code</h4>
+```
+const element = document.getElementByld(
 tmyElementi) ; element.addEventListener(&apos;mouseenter
-element.style backgroundC010r =
-red
+element.style backgroundC010r = red
 
 element.addEventListener(&apos;mouseleavel,() &gt; { element.style,
 backgroundC010r blue&apos;;
+```
 
 8. Triggering Click Event Programmatically:
 
-javascript code const button = document.getElementById(
+<h4>javascript code</h4>
+```
+const button = document.getElementById(
 trnyButton&Hat;i&Hat;
 button.click() ; // Triggering click
 event on the button element
+```
 
 Advanced Content Manipulation:
 
 9. Setting HTML Content Using InnerHTML:
 
-javascript code const element = document.getElementById(
+<h4>javascript code</h4>
+
+const element = document.getElementById(
 &apos;myElement&apos;) ; element.innerHTML = &apos;€strong»New HTML Content&lt; /
 strong)&quot;
 
 10.Appending Text Node to an Element:
 
-javascript code const element - document.getElementById(
+<h4>javascript code</h4>
+```
+const element - document.getElementById(
 &apos;myElement&apos;) ; const textNode - document.createTextNode(&apos;Text
 Content&apos;) ; element.appendChild(textNode) ;
+```
 
 These JavaScript snippets demonstrate advanced techniques for
 creating, manipulating, and interacting with HTML objects, including
@@ -15981,12 +16321,18 @@ Event Handling:
 
 1. Keyboard Event Handling - Key Press:
 
-javascript code document.addEventListener(ikeypressi,(event) =
+<h4>javascript code</h4>
+```
+document.addEventListener(ikeypressi,(event) =
 &gt; f console.log(• Key pressed: &dollar;{event keyl &apos;) ; D;
+```
 
 2. Handling Focus Events - Input Focus and Blur:
 
-javascript code const inputField = document getElementById(imylnput
+<h4>javascript code</h4>
+
+```
+const inputField = document getElementById(imylnput
 &Hat;i&Hat;) ;
 
 inputField.addEventListener(&apos;focus&apos;,() &gt; { console.log(
@@ -15995,64 +16341,83 @@ inputField.addEventListener(&apos;focus&apos;,() &gt; { console.log(
 inputField addEventListener(&apos;blur()
 console.log(&apos;Input field
 blurred&apos;
+```
 
 Event Delegation and Bubbling:
 
 3. Event Delegation with Click Events:
 
-javascript code const list --- document.getElementById(ImyListl)
-;
+<h4>javascript code</h4>
+```
+const list --- document.getElementById(ImyListl);
 
 list.addEventListener(&apos;click,(event) = &gt;
 if(event.target.tagName &apos;Ll &Hat;i&Hat;
 ) { console.log(&quot; Clicked on list item: &dollar;{event.target.
 textContent}
+```
 
 4. Event Bubbling - Click Event on Parent Element:
 
-javascript code constparent - document.getElementById(
+<h4>javascript code</h4>
+```
+constparent - document.getElementById(
 &apos;parentE1ement&apos;) ;
 
 parent.addEventListener(&apos;click&apos;,(event) - &gt; {
 
 console.log(• Clicked on parent element •) ;
+```
 
 Window and Document Events:
 
 5. Window Load Event:
 
-javascript code window.addEventListener(&apos;load,() = { console.
+<h4>javascript code</h4>
+```
+window.addEventListener(&apos;load,() = { console.
 log(&apos;Page fully loaded) ;
+```
 
 6. Document Ready Event(DOMContentLoaded
-    javascript code document
+<h4>javascript code</h4>
+```
+document
     addEventListener(&apos;DOMContentLoaded&apos;,
     console.log(&apos;DOM fully loaded and
     parsed&apos;) ;
+```
 
 Form Events:
 
 7. Form Submission and Preventing Default Behavior:
 
-javascript code const form = document.getElementById(
+<h4>javascript code</h4>
+
+````
+const form = document.getElementById(
 imyFormi
 
 form.addEventListener(&apos;submit&apos;,(event) - &gt;
 event.preventDefault() ; console.log
 (&apos;Form submitted&apos;) ;
+```
 
 // Perform form data handling or validation
 
 8. Input Event for Real - time Validation:
 
-javascript code const emailFie1d - document.getE1ementById(
+<h4>avascript code</h4>
+
+```
+const emailFie1d - document.getE1ementById(
 &apos;email&apos;) ;
 
 emailField.addEventListener(&apos;input&apos;, = &gt; { if(! emailField.
 validity.valid)(emailField.setCustomValidity(Enter a valid
 email address&apos;
-
 ) else { emailField.setCustomValidity() ;
+```
 
 <h3>D;</h3>
 
@@ -16065,7 +16430,9 @@ Browser Object Model(BOM) Manipulation:
 
 I.Opening a New Browser Window:
 
-javascript code constopenWindowButton document.getElementById(
+<h4>javascript code<?h4>
+
+constopenWindowButton document.getElementById(
 &apos;openWindowButton&apos;) ;
 
 openWindowButton.addEventListener •click &gt;
@@ -16074,17 +16441,22 @@ com&apos;, Lblank&apos;, dwidth 500,height = 5001) ; D;
 
 2. Closing a Browser Window:
 
-javascript code const closeWindowButton = document getElementById(
+<h4>javascript code</h4>
+
+```
+const closeWindowButton = document 
+getElementById(
 &apos;closeWindowButton&Hat;i&Hat;) ;
 
 closeWindowButton.addEventListener(&apos;click&apos;,() &gt; { window.
 close() ;
+```
 
 Navigator Object Exploration:
 
 3. Accessing Browser Information:
 
-javascript code
+<h4>javascript code</h4>
 
 ```
 console.log(
@@ -16098,8 +16470,7 @@ Language: &dollar;{navigator, language));
 
 4, Checking Geolocation Availability:
 
-
-javascript code
+<h4>javascript code</h4>
 
 ```
 if(geolocation&apos; in navigator) { 
@@ -16122,8 +16493,7 @@ example com&quot;;
 
 6. Accessing Current URL Information:
 
-```
-javascript code
+<h4>javascript code</h4>
 
 ```
 console log(
