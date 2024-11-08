@@ -19,7 +19,7 @@ output:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~ readme.md of js-learn-javascript.bauska.org ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01.js learn javascript logo(01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01. js learn javascript logo (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center">
   <img src="./images/image001.png"
   title="JS Learn JS logo"
@@ -867,6 +867,8 @@ Equality Operator j.&apos; Strict Equalitv Operator j:
 [JS Loop For]
 
 [Examples of TS Loop For:]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 18.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center">
   <img src="./images/image018.jpg"
   title=""
@@ -889,6 +891,8 @@ Equality Operator j.&apos; Strict Equalitv Operator j:
 [Examples of JS Loop For Of:]
 
 [Iterating Over Array Elements:]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 19.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center">
   <img src="./images/image019.jpg"
   title=""
@@ -912,7 +916,6 @@ Equality Operator j.&apos; Strict Equalitv Operator j:
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 20.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center">
   <img src="./images/image020.jpg"
   title="Using Iterables with for.of"
@@ -921,15 +924,12 @@ Equality Operator j.&apos; Strict Equalitv Operator j:
 <!-- [Using Iterables with for of]![](./images/image020.jpg){width="5.213582677165354e-2in" height="5.209864391951006e-2in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center">
   <img src="./images/image021.jpg"
   title=""
   alt="."
   style="border: 2px solid #000000; width:7in;" />
-
-![](./images/image021.jpg){width="9.722222222222221in"
-height="11.805555555555555in"}
+<!-- ![](./images/image021.jpg){width="9.722222222222221in" height="11.805555555555555in"} -->
 
 [JS Sets]
 
@@ -948,7 +948,6 @@ height="11.805555555555555in"}
 [Iterating Over a Map:]
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 22/23.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center">
   <img src="./images/image022.jpg"
   title=""
@@ -975,7 +974,6 @@ height="11.805555555555555in"}
 [Examples of JS Bitwise:]
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 24.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center">
   <img src="./images/image024.jpg"
   title=""
@@ -1140,9 +1138,15 @@ height="11.805555555555555in"}
 [Object Definitions:]
 
 [Creating an Obiect Literally:]
-
-![](./images/image028.jpg){width="9.604166666666666in"
-height="11.805555555555555in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 28.  (##) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center">
+  <img src="./images/image028.png"
+  title=""
+  alt="."
+  style="border: 2px solid #000000; width:7in;" />
+</p>
+<!-- ![](./images/image028.jpg){width="9.604166666666666in" height="11.805555555555555in"} -->
 
 [using the Obiect Constructor:]
 
@@ -1177,9 +1181,14 @@ height="11.805555555555555in"}
 [using Getters and Setters:]
 
 [Object Constructors]
-
-![](./images/image029.jpg){width="9.645833333333334in"
-height="11.805555555555555in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 29.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center">
+  <img src="./images/image029.jpg"
+  title=""
+  alt="."
+  style="border: 2px solid #000000; width:7in;" />
+<!-- ![](./images/image029.jpg){width="9.645833333333334in" height="11.805555555555555in"} -->
 
 [Obiect Constructors Examples:]
 
@@ -1194,10 +1203,19 @@ height="11.805555555555555in"}
 [Obiect Iterables]
 
 [Obiect Iterables Examples: Using for...in Loop:]
-
-![](./images/image030.jpg){width="6.253062117235346e-2in"
-height="6.251859142607175e-2in"}![](./images/image031.jpg){width="5.21084864391951e-2in"
-height="4.167979002624672e-2in"}[Ušing Obiect.keys O:]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 30/31.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center">
+  <img src="./images/image030.jpg"
+  title=""
+  alt="."
+  style="border: 2px solid #000000; width:6in;" />
+  <img src="./images/image031.jpg"
+  title=""
+  alt="."
+  style="border: 2px solid #000000; width:6in;" />
+<!-- ![](./images/image030.jpg){width="6.253062117235346e-2in" height="6.251859142607175e-2in"} -->
+<!-- ![](./images/image031.jpg){width="5.21084864391951e-2in" height="4.167979002624672e-2in"}[Ušing Obiect.keys O:] -->
 
 [Obiect Sets]
 
@@ -1214,9 +1232,14 @@ height="4.167979002624672e-2in"}[Ušing Obiect.keys O:]
 [Creating a Map:]
 
 [Getting Values from a Map]
-
-![](./images/image032.jpg){width="9.54861111111111in"
-height="11.805555555555555in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 32.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center">
+  <img src="./images/image032.jpg"
+  title=""
+  alt="."
+  style="border: 2px solid #000000; width:7in;" />
+<!-- ![](./images/image032.jpg){width="9.54861111111111in" height="11.805555555555555in"} -->
 
 [Object Reference]
 
@@ -3196,6 +3219,7 @@ data stored within them.</p>
 <h3 id="JSStmts">JavaScript Statements</h3>
 
 <h4>Examples of JavaScript Statements:</h4>
+
 <ol type="1" start="1">
   <li>Variable Declaration:</li>
   <li>Conditional Statement:</li>
@@ -3204,25 +3228,28 @@ data stored within them.</p>
 
 <h3 id="JSSyntax">JavaScript Syntax</h3>
 
-[Examples of JavaScript Syntax:]
+<h4>Examples of JavaScript Syntax:</h4>
+
 <ol type="1" start="1">
-
-1. [.Function Definition:]
-
-2. [.Object Literal:]
-
-3. [.Array Declaration:]
+  <li>.Function Definition:</li>
+  <li>.Object Literal:</li>
+  <li>.Array Declaration:</li>
+</ol>
 
 <h3 id="JSComments">JavaScript Comments</h3>
+
 <h4>Examples of TavaScript Comments:</h4>
+
 <ol type="1" start="1">
   <li>Single Line Comment:</li>
   <li>Multi - line Comment:</li>
   <li>Commenting Out Code:</li>
 </ol>
 
-<h3 id="JSVars">JavaScript Variables</h3
+<h3 id="JSVars">JavaScript Variables</h3>
+
 <h4>Examples of JavaScript  Variables</h4>
+
 <ol type="1" start="1">
   <li>Declaring and Assigning a Variable:</li>
   <li>String Variable:</li>
@@ -3230,7 +3257,9 @@ data stored within them.</p>
 </ol>
 
 <h3 id="JSVars">JavaScript Variables</h3>
+
 <h4>Examples of JavaScript  Variables</h4>
+
 <ol type="1" start="1">
   <li>Declaring and Assigning a Variable:</li>
   <li>String Variable:</li>
@@ -3238,16 +3267,22 @@ data stored within them.</p>
 </ol>
 
 <h3 id="JSlet">JavaScript let</h3>
+
 <h4>Example of let in JavaScript</h4>
+
 <ol type="1" start="1">
   <li>String Variable</li>
   <li>Object Variable</li>
 </ol>
+
 <h3 id="JSconst">JavaScript const</h3>
+
 <h4>Example of const in JavaScript</h4>
 
 <h3 id="JSOper">JavaScript Operators</h3>
+
 <h4>Examples of JavaScript  Operators</h4>
+
 <ol type="1" start="1">
   <li>Arithmetic Operators:</li>
   <li>Comparison Operators:</li>
@@ -3255,7 +3290,9 @@ data stored within them.</p>
 </ol>
 
 <h3 id="JSArithmetic">JS Arithmetic</h3>
+
 <h4>Examples of JavaScript  Arithmetic</h4>
+
 <ol type="1" start="1">
   <li>Addition:</li>
   <li>Subtraction:</li>
@@ -3265,21 +3302,27 @@ data stored within them.</p>
 </ol>
 
 <h3 id="JSAssign">JS Assignment</h3>
+
 <h4>Examples of JavaScript Assignment</h4>
+
 <ol type="1" start="1">
   <li>Assigning a Value to a Variable:</li>
   <li>Assigning the Result of an Expression:</li>
 </ol>
 
 <h3 id="JSDataTypes">JS Data Types</h3>
+
 <h4>Examples of JS Data Types:</h4>
+
 <ol type="1" start="1">
   <li>Primitive Data Tvpes:</li>
   <li>Complex Data Types:</li>
 </ol>
 
 <h3 id="JSFunctions">JS Functions</h3>
+
 <h4>Examples of JS Functions:</h4>
+
 <ol type="1" start="1">
   <li>Function Declaration:</li>
   <li>Function Call:</li>
@@ -3287,7 +3330,9 @@ data stored within them.</p>
 </ol>
 
 <h3 id="JSObjects">JS Objects</h3>
+
 <h4>Examples of JS Objects:</h4>
+
 <ol type="1" start="1">
   <li>Object Declaration:</li>
   <li>Accessing Object Properties:</li>
@@ -3295,56 +3340,72 @@ data stored within them.</p>
 </ol>
 
 <h3 id="JSEvents">JS Events</h3>
+
 <h4>Examples of JS Events:</h4>
+
 <ol type="1" start="1">
   <li>Click Events:</li>
   <li>Input Events:</li>
 </ol>
 
 <h3 id="JSStrings">JS Strings</h3>
+
 <h4>Examples of JS String:</h4>
+
 <ol type="1" start="1">
   <li>Declaring a String Variable:</li>
   <li>Concatenating Strings:</li>
 </ol>
 
 <h3 id="JSStringMethods">JS String Methods</h3>
+
 <h4>Examples of JS String Methods:</h4>
+
 <ol type="1" start="1">
   <li>toUpperCase() Method:</li>
   <li>substring() Method:</li>
 </ol>
 
 <h3 id="JSStringMethods">JS String Templates</h3>
+
 <h4>Examples of JS String Templates:</h4>
+
 <ol type="1" start="1">
   <li>Basic Template Literal:</li>
   <li>Multi-line Template Literal:</li>
 </ol>
 
 <h3 id="JSNumbers">JS Numbers</h3>
+
 <h4>Examples of JS Numbers:</h4>
+
 <ol type="1" start="1">
   <li>Whole Numbers:</li>
   <li>Decimal Numbers:</li>
 </ol>
 
 <h3 id="JSBigInt">JS BigInt</h3>
+
 <h4>Examples of JS BigInt:</h4>
+
 <ol type="1" start="1">
   <li>Creating a BigInt:</li>
   <li>Performing Operations with BigInt:</li>
 </ol>
 
 <h3 id="JSNumProperties">JS Number Properties</h3>
+
 <h4>Examples of JS Number Properties:</h4>
+
 <ol type="1" start="1">
   <li>Number_MAX_VALUE Property:</li>
   <li>Number_MIN_VALUE Property:</li>
 </ol>
 
 <h3 id="JSArrays">JS Arrays</h3>
+
 <h4>Examples of JS Arrays:</h4>
+
 <ol type="1" start="1">
   <li>Declaration:</li>
   <li>Accessing Elements:</li>
@@ -3352,7 +3413,9 @@ data stored within them.</p>
 </ol>
 
 <h3 id="JSArrayMethods">JS Array Methods</h3>
+
 <h4>Examples of JS Array Methods:</h4>
+
 <ol type="1" start="1">
   <li>push() Method:</li>
   <li>pop() Method:</li>
@@ -3365,11 +3428,12 @@ data stored within them.</p>
 
 [Arrow Function:]
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Objects
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Objects:
 
-[Obiect Declaration:]
+[Object Declaration:]
 
 [Accessing Object Properties:]
 
@@ -3382,8 +3446,9 @@ Objects:
 [Click Event:]
 
 [Input Event:]
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 [JS Strings]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 [Examples of JS Strings:]
 
@@ -3403,12 +3468,13 @@ String Search
 
 Objects:
 
-[Obiect Declaration:]
+[Object Declaration:]
 
 [Accessing Object Properties:]
 
 [Calling Obiect Method:]
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 [JS Events]
 
 [Examples of JS Events:]
@@ -3601,6 +3667,8 @@ Equality Operator j.&apos; Strict Equalitv Operator j:
 [JS Loop For]
 
 [Examples of TS Loop For:]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 18.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center">
   <img src="./images/image018.jpg"
   title=""
@@ -3623,6 +3691,8 @@ Equality Operator j.&apos; Strict Equalitv Operator j:
 [Examples of JS Loop For Of:]
 
 [Iterating Over Array Elements:]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 19.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center">
   <img src="./images/image019.jpg"
   title=""
@@ -3646,7 +3716,6 @@ Equality Operator j.&apos; Strict Equalitv Operator j:
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 20.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center">
   <img src="./images/image020.jpg"
   title="Using Iterables with for.of"
@@ -3655,15 +3724,12 @@ Equality Operator j.&apos; Strict Equalitv Operator j:
 <!-- [Using Iterables with for of]![](./images/image020.jpg){width="5.213582677165354e-2in" height="5.209864391951006e-2in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center">
   <img src="./images/image021.jpg"
   title=""
   alt="."
   style="border: 2px solid #000000; width:7in;" />
-
-![](./images/image021.jpg){width="9.722222222222221in"
-height="11.805555555555555in"}
+<!-- ![](./images/image021.jpg){width="9.722222222222221in" height="11.805555555555555in"} -->
 
 [JS Sets]
 
@@ -3682,7 +3748,6 @@ height="11.805555555555555in"}
 [Iterating Over a Map:]
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 22/23.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center">
   <img src="./images/image022.jpg"
   title=""
@@ -3709,7 +3774,6 @@ height="11.805555555555555in"}
 [Examples of JS Bitwise:]
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 24.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center">
   <img src="./images/image024.jpg"
   title=""
@@ -3752,7 +3816,6 @@ height="11.805555555555555in"}
 [JS Hoisting]
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 25.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center">
   <img src="./images/image025.jpg"
   title=""
@@ -3795,7 +3858,6 @@ height="11.805555555555555in"}
 [Class Declaration:]
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 26.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center">
   <img src="./images/image026.jpg"
   title=""
@@ -3836,7 +3898,6 @@ height="11.805555555555555in"}
 [JS Best Practices]
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 27.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center">
   <img src="./images/image027.jpg"
   title=""
@@ -4573,7 +4634,8 @@ height="11.805555555555555in"}
 [Advanced Promises and Async / Await:]
 
 [ES6 + Features]
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 54.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ![](./images/image054.jpg){width="9.131944444444445in"
 height="11.805555555555555in"}
 
@@ -5202,7 +5264,7 @@ javascript code fruits &lbrack; 1 &vert; = &apos;grapes&apos;; // Changing banan
 <h4>JS Array Methods</h4>
 
 JavaScript provides various methods to manipulate arrays effciently.
-Examples ofJS Array Methods:
+Examples of JS Array Methods:
 >
 push() Method:
 >
