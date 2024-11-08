@@ -8,6 +8,7 @@ date last editted: "9/12/2024 1+pm"
 date last editted: "9/20/2024 10+pm"
 date last editted: "10/18/2024 5+pm"
 date last editted: "10/26/2024 5+pm"
+date last editted: "11/08/2024 2+pm"
 output: 
   markdown:
     with some style
@@ -81,6 +82,10 @@ JavaScript code directly in the console.</p>
 
 <h3>Basic JavaScript Syntax</h3>
 <p>JavaScript syntax is the set of rules, how JavaScript programs are constructed:</p>
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ Back To Top</a></b>
+</div>
 
 <pre>
 var x = 5; // declaring a variable
@@ -2722,7 +2727,7 @@ output:
   alt="JS Learn JS logo."
   style="border: 2px solid #000000; width:45%; height:33%;" />
 </p>
-<h2><a href="#table-of-contents">Table of Contents - JS Learn JS</a></h2>
+<h2><a href="#table-of-contents">Table of Contents - JS Learn JavaScript</a></h2>
 
 <blockquote>
 <h4><a href="#ch1">Chapter 1: Introduction to JavaScript</a></h4>
@@ -16682,3 +16687,4 @@ further.
 <!-- last editted 9-20-2024 10:17pm -->
 <!-- last editted 10/18/2024 5:51pm -->
 <!-- last editted 10/26/2024 5:40pm -->
+<!-- last editted 11/08/2024 2:44pm -->
