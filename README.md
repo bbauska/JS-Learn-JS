@@ -2332,52 +2332,69 @@ Examples of JS Strings:
 
 Declaring a String Variable:
 
-javascript code let message = &quot;Helloj World
-
+javascript code
+```
+let message = &quot;Helloj World
+```
 Concatenating Strings:
 
-javascript code let greeting &apos;Hello, &Hat;I&Hat;; let name &apos;Alice&apos;; let
-welcomeMessage greeting + name; // welcomeMessage - &apos;Hello, Alice
+javascript code
+```
+let greeting &apos;Hello, &Hat;I&Hat;;
+let name &apos;Alice&apos;; 
+let welcomeMessage greeting + name; // welcomeMessage - &apos;Hello, Alice
+```
 
 <h3>JS String Methods</h3>
 
-JavaScript provides various methods to manipulate strings.Examples
-ofJS String Methods:
+JavaScript provides various methods to manipulate strings.
 
+Examples of JS String Methods:
+```
 toUpperCase() Method:
+```
 
-javascript code let text = &apos;hello&apos;;
+javascript code
+```
+let text = &apos;hello&apos;;
+let upperCaseText = text.toUpperCase() ; // upperCaseText = &apos;
+HELLO substring() Method:
+```
 
-let upperCaseText = text.toUpperCase() ; // upperCaseText = &apos;HELLO
-substring() Method:
-
-javascript code let sentence - This is a sentence&apos;; let subSentence
-sentence.substring(5, 10) ; // subSentence - &apos;is a &apos;
+javascript code
+```
+let sentence - This is a sentence&apos;; 
+let subSentence sentence.substring(5, 10) ; // subSentence - &apos;is a &apos;
+```
 
 <h3>JS String Search</h3>
 
 JavaScript provides methods to search for substrings within a string.
 Examples ofJS String Search:
->
+
 indexOf() Method:
 
-javascript code let text = &apos;Hello, World ! &apos;i let position text.
+javascript code
+```
+let text = &apos;Hello, World ! &apos;i let position text.
 indexOf(&apos;Worldl) ; // position = 7 includes Method:
+```
 
-javascript code let sentence This is a sentence&apos;; let containsWord
-sentence.includes(&apos;sentence&apos;) ; // containsWord true
+javascript code
+```
+let sentence This is a sentence&apos;;
+let containsWord sentence.includes(&apos;sentence&apos;) ; // containsWord true
+```
 
 <h3>JS String Templates</h3>
 
-Template literals allow embedding expressions and variables into
-strings
-Examples ofJS String Templates:
+Template literals allow embedding expressions and variables into strings
+
+Examples of JS String Templates:
 
 Basic Template Literal:
 
-
 javascript code
-
 ```
 let name = &apos;Alice&apos;; let message = Hello, &dollar;{name) •
 // message = &ast;Hello, Alice !
@@ -2387,7 +2404,6 @@ Multi - line Template Literal:
 
 javascript code
 
-```
 let multiLineMessage -
 
 This is a multi - line message
@@ -2401,7 +2417,6 @@ Examples ofJS Numbers:
 Whole Numbers:
 
 javascript code
-
 ```
 let integerNumber
 ```
@@ -2409,60 +2424,76 @@ let integerNumber
 Decimal Numbers:
 
 javascript code
-
 ```
 let decimalNumber 3.14
 ```
 
 Scientific Notation:
 
-javascript code let scientificNumber = 2e3; // scientificNumber &dash;-
-2000
-
+javascript code
+```
+let scientificNumber = 2e3; // scientificNumber &dash;- 2000
+```
 <h4>JS Biglnt</h4>
 
 Biglnt is a numeric data type in JavaScript that can represent
 integers with arbitrary
 precision
 
-Examples ofJS Biglnt:
+Examples of JS Biglnt:
 
 Creating a Biglnt:
->
-javascript code let bigNumber 123456789012345678901234567890n;
->
-Performing Operations with Biglnt:
->
-javascript code let bigSum = bigNumher In;
 
+javascript code
+```
+let bigNumber 123456789012345678901234567890n;
+```
+
+Performing Operations with Biglnt:
+
+javascript code
+```
+let bigSum = bigNumher In;
+```
 <h6>JS Number Methods</h6>
 
 JavaScript provides methods for performing operations and
 manipulations with numbers.Examples ofJS Number Methods:
->
+
 toFixed() Method:
->
-java script code let number = 3.14159; let roundedNumber = number.
-toFixed(2) ; // roundedNumber = &Hat;i&Hat; 3 • 14
+
+java script code
+```
+let number = 3.14159; let roundedNumber = number.toFixed(2) ; // roundedNumber = &Hat;i&Hat; 3 • 14
+```
+
 parselnt() Method:
 
-javascript code let stringNumber &apos;42; let parsedNumber = parselnt(
-stringNumber) ; // parsedNumber 42
+javascript code
+```
+let stringNumber &apos;42; 
+let parsedNumber = parselnt(stringNumber) ; // parsedNumber 42
+```
 
 <h3>JS Number Properties</h3>
 
 JavaScript has some built - in properties associated with numbers.
-Examples ofJS Number Properties:
->
+
+Examples of JS Number Properties:
+
 Number.MAX_VALUE Property:
->
-javascript code console.log(Number.MAX_VALUE); // Output: 1.
-7976931348623157e 308
+
+javascript code
+```
+console.log(Number.MAX_VALUE); // Output: 1.7976931348623157e 308
+```
 
 Number.MIN_VALUE Property:
 
-javascript code console.log(Number.MIN_VALUE // Output: 324
->
+javascript code
+```
+console.log(Number.MIN_VALUE // Output: 324
+```
 This comprehensive guide covers various aspects of JavaScript,
 including arithmetic operations, assignment, data types, functions,
 objects, events, strings, string methods, string search, string
@@ -2471,169 +2502,203 @@ providing examples and explanations for each topic.
 
 <h4>JS Arrays</h4>
 
-Arrays in JavaScript are used to store multiple values in a single
-variable.Examples ofJS Arrays:
->
+Arrays in JavaScript are used to store multiple values in a single variable.
+Examples of JS Arrays:
+
 Declaration java script code let numbers 1, 2, 3,
 &rbrack; ; // Array of numbers let fruits &apos;apple&apos;, &apos;banana&apos;, &apos;orange&apos;
 I ; // Array of strings
->
-Accessing Elements:
->
-javascript code console.log(fruits I O &rbrack;) ; // Output: &apos;apple&apos;
->
-Modifying Elements:
->
-javascript code fruits &lbrack; 1 &vert; = &apos;grapes&apos;; // Changing banana&apos; to
-&apos;grapes&apos;
 
+Accessing Elements:
+
+javascript code
+```
+console.log(fruits I O &rbrack;) ; // Output: &apos;apple&apos;
+```
+Modifying Elements:
+
+javascript code
+```
+fruits &lbrack; 1 &vert; = &apos;grapes&apos;; // Changing banana&apos; to &apos;grapes&apos;
+```
 <h4>JS Array Methods</h4>
 
 JavaScript provides various methods to manipulate arrays effciently.
 Examples ofJS Array Methods:
->
-push() Method:
->
-javascript code fruits.push(&apos;melonl) ; // Adds Imelonl to the
-end of the array pop Method:
->
-javascript code let removedFruit = fruits.POP) ; // Removes and
-returns the last element(&apos;melon&apos;) splice() Method:
->
-javascript code numbers splice(2, 1) ; // Removes 1 element at
-index 2(removes 131)
 
+push() Method:
+
+javascript code
+```
+fruits.push(&apos;melonl) ; // Adds Imelonl to the end of the array pop Method:
+```
+
+javascript code
+```
+let removedFruit = fruits.POP) ; // Removes and returns the last element(&apos;melon&apos;) splice() Method:
+```
+javascript code
+```
+numbers splice(2, 1) ; // Removes 1 element at index 2(removes 131)
+```
 <h6>JS Array Sort</h6>
 
-JavaScript offers methods to sort arrays in various ways
-Examples ofJS Array Sort:
->
+JavaScript offers methods to sort arrays in various ways 
+
+Examples of JS Array Sort:
+
 Sorting Numbers:
->
-java script code numbers.sort((a, b)
-b) // Ascending order
->
-Sorting Strings javascript code fruits.sortO ; //
-Alphabetical order
+```
+java script code numbers.sort((a, b) b) // Ascending order
+
+Sorting Strings javascript code fruits.sortO ; // Alphabetical order
 
 <h2>JS Array Iteration</h2>
 
 Array iteration involves looping through arrays to perform operations
 on each element.Examples ofJS Array Iteration:
->
+
 forEach() Method:
->
-javascript code numbers.fcrEach(number
-console.log(number) ;
->
+
+javascript code
+```
+numbers.fcrEach(number console.log(number) ;
+```
 map() Method:
->
-javascript code let doubledNumbers numbers.map(number &gt; number &ast;
-2);
+
+javascript code
+```
+let doubledNumbers numbers.map(number &gt; number &ast;2);
+```
 
 <h3>JS Array Const</h3>
 
-Arrays declared with const can&apos;t be reassigned but their elements can
-be modified.
+Arrays declared with const can&apos;t be reassigned but their elements can be modified.
 
 Examples ofJS Array Const:
 
-javascript code constweekdays = &lbrack; &apos;Monday&apos;, &apos;Tuesday&apos;,
-&apos;Wednesday&apos; I ; weekdays &vert; 1 &vert; = &apos;Thursday&apos;; // Modifying an
-element is allowed
->
-// weekdays = &apos;Monday&apos;, &apos;Thursday&apos;, &Hat;i&Hat;Wednesday&apos; &rbrack; ; // This
-will throw an error
+javascript code
+```
+constweekdays = &lbrack; &apos;Monday&apos;, &apos;Tuesday&apos;,
+&apos;Wednesday&apos; I ; weekdays &vert; 1 &vert; = &apos;Thursday&apos;; // Modifying an element is allowed
+weekdays = &apos;Monday&apos;, &apos;Thursday&apos;, &Hat;i&Hat;Wednesday&apos; &rbrack; ; // This will throw an error
+```
 
 <h3>JS Dates</h3>
 
 JavaScript provides a Date object to work with dates and times
 <h4>Examples ofJS Dates:</h4>
->
+
 <h5>Creating a Date Object:</h5>
 <p>javascript code</p>
+```
 let currentDate = newDate();  // Current date and time.
+```
 
 <h5>Creating a Specific Date:</h5>
 <p>javascript code
-<h6>let specificDate new Date(&apos;2023&dash;12&dash;31&apos;); // December 31, 2023.</h6>
+```
+let specificDate new Date(&apos;2023&dash;12&dash;31&apos;); // December 31, 2023.
+```
 
 <h4>JS Date Formats</h4>
 <p class="desc">Date formatting in JavaScript involves converting dates to different formats.</p>
-Examples ofJS Date Formats:
->
+
+Examples of JS Date Formats:
+
 <h4>Examples of JS Date Formats:</h4>
 <h4>Formatting to String:</h4>
 javascript code
+```
 let dateString = specificDate.toDateString(); // Convert to a human-readable string.
+```
 
 <h4>Formatting to Locale String:</h4>
 javascript code
+```
 let localString = specificDate.toLocaleString(); // Converts to local date and time string.
+```
 
 <h4>JS Date Get Methods</h4>
 <p class="desc">JavaScript Date object provides various methods to retrieve specific date.</p>
-components![](./images/image110.jpg){width="4.1666666666666664e-2in"
-height="4.167869641294838e-2in"}
+components![](./images/image110.jpg){width="4.1666666666666664e-2in" height="4.167869641294838e-2in"}
 
 Examples of JS Date Get Methods:
 
 getFu11Year() Method
-![](./images/image111.jpg){width="6.25e-2in"
-height="0.14587598425196852in"}javascript code let year = specificDate
-.getFullYearO; // Get the year(2023) getMonth() Method:
->
-javascript code let month = specificDate.getMonth ; // Get the month
-(11 for December)
+![](./images/image111.jpg){width="6.25e-2in" height="0.14587598425196852in"}
+
+javascript code
+```
+let year = specificDate .getFullYearO; // Get the year(2023) 
+```
+
+getMonth() Method:
+
+javascript code
+```
+let month = specificDate.getMonth ; // Get the month (11 for December)
+```
 
 <h3>JS Date Set Methods</h3>
 
-JavaScript Date object also has methods to set specific date
-components.
+JavaScript Date object also has methods to set specific date components.
 
 Examples ofJS Date Set Methods:
-
+```
 setFuIIYear() Method:
->
-javascript code specificDate.setFullYear(2024) ; // Set the year
-to 2024 setMonth() Method:
->
-javascript code specificDate.setMonth(O) ; // Set the month to
-January(O index)
+
+javascript code
+```
+specificDate.setFullYear(2024) ; // Set the year to 2024 setMonth() Method:
+```
+javascript code
+```
+specificDate.setMonth(O) ; // Set the month to January(O index)
+```
 
 <h3>Math</h3>
 
 JavaScript Math object provides mathematical constants and functions
-![](./images/image112.jpg){width="4.1666666666666664e-2in"
-height="4.167869641294838e-2in"}
+![](./images/image112.jpg){width="4.1666666666666664e-2in" height="4.167869641294838e-2in"}
 
 Examples ofJS Math:
 
 Math.PI Property:
->
-javascript code let piValue = Math.PI; // Value ofPl(3.
-141592653589793)
->
+
+javascript code
+```
+let piValue = Math.PI; // Value ofPl(3.141592653589793)
+```
+
 Math.sqrt() Method:
->
-javascript code let squareRcot Math.sqrt(25) ; // Square root of
-25(5)
+
+javascript code
+```
+let squareRcot Math.sqrt(25) ; // Square root of 25(5)
+```
 
 <h4>JS Random</h4>
 
+```
 JavaScript Math.random() generates pseudo - random numbers.
+```
 
 Examples ofJS Random:
 
 Generating Random Number:
->
-javascript code let randomNumber = Math.random &apos; // Random number
-between O and 1
->
+
+javascript code
+```
+let randomNumber = Math.random &apos; // Random number between O and 1
+```
+
 Generating Random Integer:
->
-javascript code let randomlnteger = Math.floor(Math.random 10)
-; // Random integer between O and 9
+
+javascript code
+```
+let randomlnteger = Math.floor(Math.random 10); // Random integer between O and 9
+```
 
 <h4>Booleans</h4>
 
@@ -2642,26 +2707,33 @@ Booleans:
 >
 Declaration:
 
-javascript code let isTrue = true
+javascript code
+```
+let isTrue = true
 let isFalse = false; Comparison:
 
-javascript code let greaterThan // true let equalTo 5 5; // true
-
+javascript code
+```
+let greaterThan // true let equalTo 5 5; // true
+```
 <h3>JS Comparisons</h3>
 
 JavaScript offers various comparison operators to compare values.
 Examples ofJS Comparisons:
->
+
 ==(Equality Operator):
->
-javascript code console.log(5) ; // true(coerces types)
->
+
+javascript code
+```
+console.log(5) ; // true(coerces types)
+```
 Strict Equality Operator):
->
-javascript code console.log(5
-151) ; // false(compares both value
-and type)
->
+
+javascript code
+```
+console.log(5151) ; // false(compares both value and type)
+```
+
 This comprehensive guide covers various aspects of JavaScript
 including arrays, array methods, array sort, array iteration; array
 const, dates, date formats, date get methods, date set methods, math,
@@ -2688,13 +2760,16 @@ positive&apos;
 
 Nested if &period;..else:
 
-javascript code let x 5; if(x &gt; O) { console.
+javascript code
+```
+let x 5; if(x &gt; O) { console.
 logis
 positive&apos;
 } else if(x &lt; O)
 console log
- &quot;x is
-negativel
+ &quot;x is negativel
+```
+
 ---
 title: "JS Learn JS"
 author: "bbauska"
@@ -9067,97 +9142,95 @@ D3.js Examples:
 
 9. Create SVG Circle:
 
-javascript code const svg = d3.select(&apos;body&apos;)
-
+javascript code
+```
+const svg = d3.select(&apos;body&apos;)
 .append(&apos;svg&apos;)
-
 .attr(&apos;width&apos;, 100)
-
 .attr(&apos;height&apos;, 100) ;
-
 svg.append(&apos;circle&apos;)
-
-.attr(
-50
-
+.attr(50
 .attr(Icy&apos;, 50)
-
 .attr(tri, 40)
-
 .attr(lfilll, &apos;blue&apos;) ;
+```
 
 10.Create SVG Rectangle:
 
-javascript code const svg = d3.select(&apos;body&apos;)
-
+javascript code
+```
+const svg = d3.select(&apos;body&apos;)
 .append(&apos;svg&apos;)
-
 .attr(&apos;width&apos;, 100)
-
 .attr(&apos;height&apos;, 100) ;
-
 svg.append(irect&Hat;i&Hat;
-
 .attr(10.attr(10 
-
 .attr(•width&apos;, 80)
->
 .attr(&apos;height&apos;, 50)
-
 .attr(&apos;filli, &apos;greeni) ; Canvas Examples:
+```
 
 1. Draw a Rectangle:
 
-javascript code const canvas document.getElementById(&apos;myCanvasl)
+javascript code
+```
+const canvas document.getElementById(&apos;myCanvasl)
 ; const ctx = canvas.getContext i2d&apos;) ; ctx.fillStyle =
 &apos;blue&apos;; ctx.fillRect(10, 10, 100,
 50
-
+```
 2. Draw a Circle:
 
-javascript code const canvas - document.getElementById(
+javascript code
+```
+const canvas - document.getElementById(
 &apos;myCanvas&apos;) ; const ctx - canvas, getContext(&apos;2d&apos;) ; ctx,
 beginPath
 ctx arc(100, 100, 50, O, Math
 ctx, fillStyle - &apos;red&apos;; ctx.fill ;
-
+```
 Plotly Examples:
 
 3. Create a Line Chart:
 
-javascript code const data -
+javascript code
+```
+const data -
 10, 15, 13, 18, type: &apos;scatter&apos;) I
 ; Plotly.newP10t(&apos;myDivt, data) ;
-
+```
 4, Create a Bar Chart:
 
-javascript code const data = &lbrack; { x: &lbrack; 1B&apos;, &apos;Cl l, y
+javascript code
+```
+const data = &lbrack; { x: &lbrack; 1B&apos;, &apos;Cl l, y
 •10, 20, 15 &vert;, type: bar
 Plotly.newPlot(ImyDiv&apos;, data) ;
+```
 
 Chart.js Examples:
 
 5&period; Create a Bar Chart:
 
-javascript code const ctx = document.getElementById imyCharti).
+javascript code
+```
+const ctx = document.getElementById imyCharti).
 getContext(i2di) ; const myChart = new Chart(ctx,
 type: &apos;bar&apos;, data.
-
 labels: I &apos;Red&apos;, iB1ue% &apos;Yellow&apos;, &apos;Green% iPurp1ei, &apos;Orange&apos;
 &rbrack; j datasets.
-
 label: of Votes&apos;, data 12, 19, 3, 5, 2, 3 1, backgroundColor.
-
 trgba(99, 132, o.2)
 trgba(54, 162, 235, o.2) &Hat;i&Hat;,
-
 // more colors
-
 borderWidth: 1
+```
 
 6. Create a Line Chart:
 
-javascript code const ctx - document.getElementById(&apos;myChart&apos;).
+javascript code
+```
+const ctx - document.getElementById(&apos;myChart&apos;).
 getContext(&apos;2d&apos;) ; constmyChart - new Chart(ctx,(type:
 &apos;line&apos;, data:
 
@@ -9167,42 +9240,38 @@ datasets: &lbrack; { label: &apos;My First
 Dataset&apos;, data: &lbrack; 65, 59, 80, 81, 56, 55, 40
 borderColor.(75, 192, 192) g,
 borderWidth • 1
+```
 
 Google Charts Examples:
 
 7. Create a Pie Chart:
 
-javascript code google.charts.load(dcurrenti, &lbrack; packages: &lbrack;
+javascript code
+```
+google.charts.load(dcurrenti, &lbrack; packages: &lbrack;
 &apos;corecharti I) ; google.charts.setOnLoadCa11back(drawChart) ;
 
 function drawChart
 constdata --- google.visualization.
 arrayToDataTab1e(l
-
 (&apos;Task&apos;, &apos;Hours per
 Day&apos;
-
 (&apos;Work&apos;, 1 1 1,
-
-(&apos;Eat&apos;,
-2
-
+(&apos;Eat&apos;,2
 (&apos;Commute&apos;, 2 &rbrack;,
-
 (&apos;Watch TV&apos;, 2,
-
 (&apos;Sleep&apos;, 7 &vert;
-
 constoptions =
 title: &apos;My Daily Activities &Hat;i&Hat;,
 pieHole: O 4, l;
-
 const chart = new google.visualization.PieChart(document.
 getElementById(&apos;donutchartl)) ; chart.draw(data, options) ;
-
 8&period; Create an Area Chart:
+```
 
-javascript code google.charts.load(&quot;current&apos;, { packages: &lbrack;
+javascript code
+```
+google.charts.load(&quot;current&apos;, { packages: &lbrack;
 Icorechart&apos; I) ; google.charts.setOnLoadCallback(drawChart) ;
 
 function drawChart()
@@ -9212,11 +9281,8 @@ arrayToDataTable(l
 Expenses&apos;
 
 &vert; &apos;2013% 1000, 400 &rbrack;,
-
 &vert; &apos;2014% 1170, 460 &rbrack;,
-
 &lbrack; &apos;2015, 660, 1120 &rbrack;,
-
 &vert; &apos;2016% 1030, 540 &rbrack;
 
 constoptions f title: &apos;Company Performance&apos;, curveType:
@@ -9227,12 +9293,15 @@ l;
 
 const chart new google.visualization.AreaChart(document.
 getElementById(&apos;curve_chartl)) ; chart.draw(data, options) ;
+```
 
 D3.js Examples:
 
 9. Create an SVG Circle:
 
-javascript code const svg d3.select(&apos;body&apos;)
+javascript code
+```
+const svg d3.select(&apos;body&apos;)
  append(&apos;svg&apos;)
  attr(&apos;width&apos;, 100)
 attr(&ast;height&apos;, 100) ;
@@ -9244,28 +9313,23 @@ attr(Icy&apos;, 50)
 attr(40
 
 .attr(Ifilll, bluel) ;
+```
 
 10.Create an SVG Rectangle:
 
-javascript code const svg d3.select(&apos;body&apos;)
-
+javascript code
+```
+const svg d3.select(&apos;body&apos;)
 .append(&apos;svg&apos;)
-
 .attr(&apos;width&apos;, 100)
-
 .attr(&apos;height&apos;, 100) ;
-
 svg.append(&apos;rect&apos;)
-
 .attr(ixi, 10)
-
 .attr(tyl, 10
-
 .attr(&apos;width&apos;, 80
-
 .attr(&apos;height&apos;, 50)
-
 .attr(&apos;fill&apos;, &apos;greenl) ;
+```
 
 These examples demonstrate how to create basic graphics, charts, and
 visualizations using different JavaScript libraries such as Canvas,
@@ -9275,103 +9339,134 @@ representations in web applications,
 
 Basic Examples:
 
+```
 1&period; Convert Celsius to Fahrenheit:
+```
 
-javascript code function celsiusToFahrenheit(celsius) { return(
-celsius  32;
+javascript code
+```
+function celsiusToFahrenheit(celsius) { return(celsius  32;
 
 let templnFahrenheit - celsiusToFahrenheit(25) ; // Output: 77
+```
 
 2, Calculate Area of a Circle:
 
-javascript code function calculateCirc1eArea(radius) { return Math
+javascript code
+```
+function calculateCirc1eArea(radius) { return Math
 .PI&ast; radius &ast; radius;
 
 let area = calculateCircleArea(5) ; // Output.•.54
+```
 
 String Manipulation:
 
 3. Reverse a String:
 
-javascript code function reverseString(str) f returnstr split().
+javascript code
+```
+function reverseString(str) f returnstr split().
 reverse(.join
->
+
 let reversed = reverseString(&apos;helloi) ; // Output: iollehi
 
 4. Check for Palindrome:
 
-javascript code function isPalindrome(str) { return str str.split
+javascript code
+```
+function isPalindrome(str) { return str str.split
 (reverse join(
 )
 
 let checkPa1indrome - isPalindrome(&apos;madam&apos;) ; // Output: true
+```
 
 Array Manipulation:
 
 5. Find Maximum Number in Array:
 
-javascript code let numbers = I 5, 8, 3, 12, 6
+javascript code
+```
+let numbers = I 5, 8, 3, 12, 6
 let maxNumber = Math.max(...
 numbers) ; // Output: 12
+```
 
 6. Sort Array of Objects by Property:
 
-javascript code let products I
-
+javascript code
+```
+let products I
 name: &apos;Laptop&quot;, price
 name: iPhonet, price: 600
 name: &Hat;i&Hat;Tablet,
 price
 
 products.sort((aj b) = &gt;a.price- b.price) ;
+```
 
 Functions:
 
 7. Higher - Order Function - Map:
 
-javascript code let numbers = I
+javascript code
+```
+let numbers = I
 let doubled = numbers.map(num = num
  &ast; 2) ; // Output: &vert; 2, 4, 6
+```
 
 8. Immediately Invoked Function Expression(IIFE):
 
 javascript code
-
+```
 (function() f console.log(&apos;IIFE executed.;
+```
 
 Object Manipulation:
 
 9. Object Destructuring:
 
-javascript code let person = name: &apos;Alice&apos;, age: 30
+javascript code
+```
+let person = name: &apos;Alice&apos;, age: 30
 let { name, age} = person;
+```
 
 10.Merge Objects:
 
 javascript code
-
+```
 a: 1,
 let obj2 = {C 3 d
 
 let mergedObj = { &period;..objlj.obj2 1; Loops and Iterations:
+```
 
 11.For &period;..Of Loop for Arrays:
 
-javascript code let colors = &apos;red&apos;, •green&apos;, &apos;blue&apos; &rbrack; ; for(
+javascript code
+```
+let colors = &apos;red&apos;, •green&apos;, &apos;blue&apos; &rbrack; ; for(
 let color of colors) f console.log(color) ;
+```
 
 12.While Loop to Generate Random Numbers:
 
-javascript code let randomNums - &lbrack;l ; while(randomNums - length &lt; 5
-) { randomNums.push(Math.floor(Math.random &ast; 10) +
-1
+javascript code
+```
+let randomNums - &lbrack;l ; while(randomNums - length &lt; 5
+) { randomNums.push(Math.floor(Math.random &ast; 10) + 1
+```
 
 Error Handling:
 
 13.Try Catch for Error Handling:
 
-javascript code try &lbrack;
-
+javascript code
+```
+try &lbrack;
 // Code that may throw an error
 
 JSON.parse(
@@ -9379,62 +9474,81 @@ JSON.parse(
 } catch(error)
 
 console.error(&apos;Error occurred: error.message
+```
 
 14.Custom Error Handling:
 
-javascript code function throwError throw new Error(&apos;Custom error
+javascript code
+```
+function throwError throw new Error(&apos;Custom error
 message&apos;
 
 try throwError ;
 catch(error) { console.error(
 error.message) ;
+```
 
 Asynchronous JavaScript:
 
 15.Promise Example:
 
-javascript code function fetchData() { return new Promise((resolve,
-reject) - &gt; {
+javascript code
+```
+function fetchData() { return new Promise((resolve,reject) - &gt; {
 
 // Simulate fetching data setTimeout(()
 resolve(&apos;Data fetched successfully&apos;
 ) ;
-
-
 fetchData then(data = console.log(data)) ;
+```
 
 16.Async / Await Example:
 
-javascript code async function fetchData() { let data - await fetch(
+javascript code
+```
+async function fetchData() { let data - await fetch(
 &apos;https api.example com / data&ast;) ; let jsonData - await data.
 json return jsonData;
 
 fetchData then(data &gt; console.log(data)) ; DOM Manipulation:
+```
 
 Create Element and Append to DOM:
 
-javascript code let newElement - document createE1ement(&apos;div&ast;) ;
+javascript code
+```
+let newElement - document createE1ement(&apos;div&ast;) ;
 newE1ement.textContent - &apos;New Element% document body.appendChild(
 newE1ement) ;
+```
 
 18, Add Event Listener to Button Click:
 
-javascript code let button document.getElementById(ImyButton&apos;
+javascript code
+```
+let button document.getElementById(ImyButton&apos;
 button.addEventListener(&apos;click&apos;,
 () &gt; { console.log(&apos;Button clicked !) ;
+```
 
 Regular Expressions:
 
 19.Regular Expression Test:
 
-javascript code let pattern
+javascript code
+```
+let pattern
 let isMatch = pattern.test(&apos;Hello
 123i) ; // Output.true
+```
 
 20.Replacing String with Regex:
 
-javascript code let str - &apos;Hello 123&apos;; let replaced - str.replace
+javascript code
+```
+let str - &apos;Hello 123&apos;; let replaced - str.replace
 (/ Nd +/, &apos;456&apos;) ; // Output &apos;Hello 456&apos;
+```
 
 These examples cover a range of JavaScript functionalities, including
 basic operations, string / array manipulations, functions, objects,
@@ -9445,13 +9559,14 @@ Advanced Functions:
 
 1&period; Closure Example:
 
-javascript code function outerFunction(outerValue) { return
+javascript code
+```
+function outerFunction(outerValue) { return
 function(innerValue) { returnouterValue -v innerVa1ue;
-
-
 let addFive = outerFunction(5
 let result = addFive(3) ; // Output
 : 8
+```
 
 2. Currying Example:
 
@@ -9470,49 +9585,65 @@ et sum = numbers.reduce((acc,
 
 4. Using Filter and Map Together:
 
-javascript code let numbers - 1, 2, 3, 4,
-5
+javascript code
+```
+let numbers - 1, 2, 3, 4,5
 
 let filteredAndDoubled - numbers filter(num --- &gt; num % 2 O).map
 (num &dash;- &gt; num
 Output: &vert; 4, 8 &rbrack;
+```
 
 Advanced Object Manipulation:
 
 5. Object Destructuring with Default Values:
 
-javascript code let person = name: iAlicei
+javascript code
+```
+let person = name: iAlicei
 let { name, age = 30 I = person;
+```
 
 6. Computed Property Names:
 
-javascript code let key - &apos;dynamicKey&apos;; let obj ---(I key l:
+javascript code
+```
+let key - &apos;dynamicKey&apos;; let obj ---(I key l:
 &apos;value&apos; //(dynamicKey: &apos;value&apos;)
+```
 
 Advanced Loops and Iterations:
 
 7. For &period;..In Loop for Objects:
 
-javascript code let obj ---
+javascript code
+```
+let obj ---
 for(let keyin obj)(console.log(
 key, obj &lbrack; key l) ;
+```
 
 8, Using For Of with Iterables:
 
-javascript code let iterable &lbrack;
+javascript code
+```
+let iterable &lbrack;
 for(let value of iterable) f console
 .log(value) ;
+```
 
 Promises and Async / Await:
 
 9&period; Promise Chaining
-javascript code function asyncFunction
-() { return new Promise((resolve, reject) - {
 
+javascript code
+```
+function asyncFunction
+() { return new Promise((resolve, reject) - {
 setTimeout resolve(&apos;First part
 done&apos;
-
 1000) ;
+```
 
 asyncFunction
 
@@ -10901,7 +11032,7 @@ strong)&quot;
 javascript code const element - document.getElementById(
 &apos;myElement&apos;) ; const textNode - document.createTextNode(&apos;Text
 Content&apos;) ; element.appendChild(textNode) ;
->
+
 These JavaScript snippets demonstrate advanced techniques for
 creating, manipulating, and interacting with HTML objects, including
 DOM creation, object manipulation, styling, event handling, and
@@ -10942,7 +11073,7 @@ textContent}
 
 javascript code constparent - document.getElementById(
 &apos;parentE1ement&apos;) ;
->
+
 parent.addEventListener(&apos;click&apos;,(event) - &gt; {
 
 console.log(• Clicked on parent element •) ;
@@ -11049,7 +11180,7 @@ Protocol: &dollar;{window.location,
 protocol}) ; console log(
 Pathname: &dollar;{window.location,
 pathname}) ;
->
+
 Screen Object Attributes:
 
 7. Retrieving Screen Dimensions:
@@ -11170,18 +11301,18 @@ further
 The switch statement in JavaScript executes different actions based on
 different conditions
 Examples of JS Switch:
->
+
 Basic switch:
->
+
 javascript code let day
 ![](./images/image125.jpg){width="0.5104166666666666in"
 height="0.2500732720909886in"}switch(day) &lbrack; case 1
 ![](./images/image126.jpg){width="4.1666666666666664e-2in"
 height="0.13545603674540682in"}console.log(iMonday•) ; break;
 case 2:
->
+
 console.log(&Hat;i&Hat; Tuesday) ; break; default:
->
+
 console.log(Other day&apos;) ;
 
 <h4>JS Loop For</h4>
@@ -11196,9 +11327,9 @@ Examples of JS Loop For:
 Basic for Loop:
 
 javascript code for(let i = + +) I console.log(i) ;
->
+
 Looping Array Elements:
->
+
 javascript code let arr &apos;applet, banana&apos;, &apos;orange&apos; &rbrack; ; for(let
 i O; i &lt; arr.length; i ++) { console.log(arr &lbrack; i &rbrack;) ;
 
@@ -11223,9 +11354,9 @@ The for of loop in JavaScript iterates over iterable objects such as
 arrays, strings, etc
 ![](./images/image129.jpg){width="4.1666666666666664e-2in"
 height="4.167869641294838e-2in"}Examples ofJS Loop For Of:
->
+
 Iterating Over Array Elements:
->
+
 java script code let numbers
 ![](./images/image130.jpg){width="1.8125in"
 height="0.2813331146106737in"}for(let num of numbers) f console.
@@ -11243,9 +11374,9 @@ Basic while Loop:
 java script code let count = o; while(count &lt;
 5![](./images/image132.jpg){width="0.3229166666666667in"
 height="0.26049431321084865in"}
->
+
 console.log(count) ;
->
+
 ![](./images/image133.jpg){width="1.3020833333333333in"
 height="0.21881452318460193in"}
 
@@ -11255,17 +11386,17 @@ The break statement in JavaScript terminates the current loop or
 switch statement
 ![](./images/image134.jpg){width="4.1666666666666664e-2in"
 height="4.167869641294838e-2in"}Examples ofJS Break:
->
+
 Using break in a Loop:
->
+
 javascript code
->
+
 for(let 1
 ![](./images/image135.jpg){width="2.2604166666666665in"
 height="0.2813331146106737in"}if(i 5) {
->
+
 break;
->
+
 console.log(i) ;
 
 <h3>JS Iterables</h3>
@@ -11273,13 +11404,13 @@ console.log(i) ;
 Iterables in JavaScript are objects that can be iterated over using
 loops ![](./images/image112.jpg){width="4.1666666666666664e-2in"
 height="4.167979002624672e-2in"}Examples ofJS Iterables:
->
+
 Using Iterables with for of:
->
+
 javascript code let iterable = I 10, 20,
 30![](./images/image136.jpg){width="0.19791666666666666in"
 height="0.2813331146106737in"}
->
+
 for(let value of iterable) { console.log(value) ;
 
 <h3>JS Sets</h3>
@@ -11287,9 +11418,9 @@ for(let value of iterable) { console.log(value) ;
 Sets in JavaScript are collections of unique values
 ![](./images/image127.jpg){width="4.1666666666666664e-2in"
 height="4.167869641294838e-2in"}Examples ofJS Sets:
->
+
 Creating a Set:
->
+
 javascript code let mySet = new Set() ; mySet.add(1
 ![](./images/image137.jpg){width="0.21875in"
 height="0.2813331146106737in"}mySet.add(2
@@ -11297,7 +11428,7 @@ height="0.2813331146106737in"}mySet.add(2
 height="0.2813331146106737in"}mySet.add(3
 ![](./images/image139.jpg){width="0.21875in"
 height="0.2813331146106737in"}Iterating Over a Set:
->
+
 java script code for(letitem of mySet)
 ![](./images/image140.jpg){width="8.333333333333333e-2in"
 height="0.26049431321084865in"}console log(item) ;
@@ -11313,9 +11444,9 @@ Creating a Map ![](./images/image141.jpg){width="6.25e-2in"
 height="0.14587598425196852in"}javascript code let myMap = new Map ;
 myMap.set(&apos;key 1&apos;, &apos;valueli) ; myMap.set(ikey2i, &apos;value2i
 ) ;
->
+
 Iterating Over a Map:
->
+
 javascript code for(let &lbrack; key, value I of myMap) { console.log(
 key &lowbar; • value) ;
 
@@ -11323,9 +11454,9 @@ key &lowbar; • value) ;
 
 The typeof operator in JavaScript returns the data type of its operand
 .Examples ofJS Typeof:
->
+
 Using typeof:
->
+
 javascript code console.log(typeof5) // Output: &apos;numberl
 console.log(typeof&apos;Hello&apos;) ; // Output: &apos;string&apos; console.
 log(typeoftrue) ; // Output: boolean&apos;
@@ -11334,13 +11465,13 @@ log(typeoftrue) ; // Output: boolean&apos;
 
 Type conversion in JavaScript involves converting values from one data
 type to another.Examples ofJS Type Conversion:
->
+
 String to Number:
->
+
 javascript code let strNumber = &apos;10
 ![](./images/image142.jpg){width="0.11458333333333333in"
 height="0.1146172353455818in"}let num = parselnt(strNumber) ;
->
+
 Number to String ![](./images/image143.jpg){width="6.25e-2in"
 height="0.15629593175853018in"}javascript code let number
 ![](./images/image144.jpg){width="0.6979166666666666in"
@@ -11356,7 +11487,7 @@ representations of numeric values.
 Examples ofJS Bitwise:
 
 Bitwise AND Operator:
->
+
 javascript code let result 5 & 3; // Output: 1
 
 Bitwise OR Operator ![](./images/image146.jpg){width="6.25e-2in"
@@ -11367,18 +11498,18 @@ Output: 7
 
 Regular expressions in JavaScript are used for pattern matching within
 strings.Examples ofJS RegExp:
->
+
 Creating a Regular Expression:
->
+
 javascript code let pattern = / hello / i; // Case - insensitive
 &apos;hello&Hat;i&Hat;
->
+
 Testing a String with RegExp:
->
+
 javascript code let str = &apos;Hello, World
 !![](./images/image147.jpg){width="0.11458333333333333in"
 height="0.2604932195975503in"}
->
+
 console.log(pattern.test(str)) ; // Output: true
 
 <h5>JS Precedence</h5>
@@ -11389,7 +11520,7 @@ in an expression.
 Examples of JS Precedence:
 
 Arithmetic Precedence:
->
+
 java script code let result 5 3&ast; 2; // Output: 11(Multiplication
 has higher precedence)
 
@@ -11401,39 +11532,38 @@ encountered during execution.
 Examples ofJS Errors:
 
 Syntax Error:
->
+
 javascript code let x = 10
->
+
 This will throw a syntax error due to the missing semicolon.
->
+
 Reference Error:
->
+
 javascript code console.log(undefinedVariable) ;
->
-This will throw a reference error as undefinedVariable is not defined
-.
+
+This will throw a reference error as undefinedVariable is not defined.
 
 <h5>JS Scope</h5>
 
 Scope in JavaScript defines the visibility and accessibility of
 variables.Examples ofJS Scope:
->
+
 Global Scope ![](./images/image148.jpg){width="6.25e-2in"
 height="0.15629593175853018in"}javascript code let globalVar Il am
 global&apos;;
->
+
 function test f console.log(globalVar) ; // Accessible inside
 function
->
+
 console.log(globalVar) ; // Accessible outside function
 
 <h3>JS Hoisting</h3>
 
 Hoisting in JavaScript allows variables and functions to be used
 before they are declared Examples ofJS Hoisting:
->
+
 Variable Hoisting:
->
+
 javascript code console.log(myVar) ; // Outputs: undefined
 varmyVar &dash;- 10; Function Hoisting:
 
@@ -11445,24 +11575,24 @@ height="0.2604932195975503in"}console.log(&apos;Hello&apos;) ;
 
 Strict mode in JavaScript enforces stricter rules and better error
 handling.Examples ofJS Strict Mode:
->
+
 Enabling Strict Mode
 ![](./images/image150.jpg){width="6.25e-2in"
 height="0.15629593175853018in"}javascript code &apos;use strict&apos;;
->
+
 Using Strict Mode Inside a Function
 ![](./images/image105.jpg){width="6.25e-2in"
 height="0.15629593175853018in"}javascript code function myFunction {
->
+
 &apos;use strict&apos;;
->
+
 // Strict mode only applies inside this function
 
 <h3>JS this Keyword</h3>
 
 The this keyword in JavaScript refers to the object it belongs to.
 Examples ofJS this Keyword:
->
+
 Using this in an Object
 ![](./images/image109.jpg){width="6.25e-2in"
 height="0.15629593175853018in"}javascript code let person = { name:
@@ -11470,7 +11600,7 @@ height="0.15629593175853018in"}javascript code let person = { name:
 ![](./images/image151.jpg){width="0.4166666666666667in"
 height="0.26049431321084865in"}console.log(&apos;Hello, my name is &apos;
 this.name) ;
->
+
 person.greet ; // Outputs: &apos;Hello, my name is Alice&apos;
 
 <h3>JS Arrow Function</h3>
@@ -11481,9 +11611,9 @@ functions.
 Arrow Function:
 
 Basic Arrow Function:
->
+
 javascript code let multiply =(aj b) = s a &ast; b;
->
+
 Arrow Function with Multiple Lines
 ![](./images/image152.jpg){width="6.25e-2in"
 height="0.15629593175853018in"}javascript code let greet(name) &gt; {
@@ -11499,12 +11629,12 @@ blueprint.
 Examples ofJS Classes:
 
 Class Declaration:
->
+
 javascript code class Person { constructor(name) { this.name
 name;
->
+
 greet() { console.log(&apos;Hello, my name is &apos; this.name) ;
->
+
 let alice = new Person(&apos;Alice&apos;
 ![](./images/image154.jpg){width="0.21875in"
 height="0.2604932195975503in"}alice.greet ; // Outputs: &apos;Hello, my
@@ -11516,15 +11646,15 @@ Modules in JavaScript allow splitting code into separate files or
 modules for better organization
 ![](./images/image134.jpg){width="4.1666666666666664e-2in"
 height="4.167869641294838e-2in"}Examples ofJS Modules:
->
+
 Exporting a Module ![](./images/image155.jpg){width="6.25e-2in"
 height="0.14587598425196852in"}javascript code // Module.js export
 function greet(name) { console.log(&apos;Hello, i 4
 name![](./images/image156.jpg){width="0.8854166666666666in"
 height="0.2813331146106737in"}
->
+
 Importing a Module:
->
+
 java script code // Main.js import &lbrack; greet } from./ Module.js&apos;;
 greet(&apos;Alice&apos;) ; // Outputs: &apos;Hello, Alice ! I
 
@@ -11532,9 +11662,9 @@ greet(&apos;Alice&apos;) ; // Outputs: &apos;Hello, Alice ! I
 
 JSON(JavaScript Object Notation) is a lightweight data interchange
 format.
->
+
 JSON:
->
+
 Parsing JSON:
 
 javascript code let jsonStr = name Alice j age u: 30)&Hat;i&Hat;; let obj = JSON
@@ -11542,7 +11672,7 @@ javascript code let jsonStr = name Alice j age u: 30)&Hat;i&Hat;; let obj = JSON
 &apos;Alice&apos;
 
 Stringify Object to JSON:
->
+
 javascript code let obj {name: Alice&apos;, age: 30 l; let jsonString =
 JSON.stringify(obj) ;
 
@@ -11550,55 +11680,55 @@ JSON.stringify(obj) ;
 
 Debugging in JavaScript involves identifying and fixing errors or
 issues in the code.Examples ofJS Debugging:
->
+
 Using console.log() for Debugging:
 
 javascript code let x 5; console.log(x) ;
 
 Using Browser Developer Tools:
->
+
 Inspect elements, view console logs, set breakpoints, etc.
 
 <h3>JS Style Guide</h3>
 
 A JavaScript style guide defines a set of rules and conventions for
 writing clean and maintainable code.Examples ofJS Style Guide:
->
+
 Naming Conventions:
->
+
 Use camelCase for variable and function names.
->
+
 Indentation:
->
+
 Use consistent spaces or tabs for indentation.
 
 <h3>JS Best Practices</h3>
 
 Best practices in JavaScript ensure code quality, readability, and
 maintainability.Examples ofJS Best Practices:
->
+
 Use Meaningful Variable Names:
->
+
 javascript code letd new Date() ; // Instead, use let currentDate new
 Date() ;
->
+
 Avoid Global Variables:
->
+
 Encapsulate code to avoid polluting the global scope.
 
 <h3>JS Mistakes</h3>
 
 Common mistakes in JavaScript and how to avoid thern.
->
+
 Mistakes:
->
+
 Missing Semicolon:
->
+
 javascript code let x = 5
->
+
 Remember to add a semicolon at the end of the
 statement
->
+
 Uninitialized Variables:
 
 javascript code let y; console.log(y) ; // Outputs: undefined
@@ -11607,14 +11737,14 @@ javascript code let y; console.log(y) ; // Outputs: undefined
 
 Improving performance in JavaScript involves optimizing code for speed
 and emciency.Examples ofJS Performance:
->
+
 Reduce DOM Manipulations:
->
+
 Combine multiple DOM updates into one to reduce reflows.
->
+
 Use Eficient
 Algorithms
->
+
 Choose algorithms that have better time complexity for operations.
 
 <h4>JS Reserved Words</h4>
@@ -11626,12 +11756,12 @@ names
 Examples ofJS Reserved Words:
 
 let, const function class, etc.
->
+
 This comprehensive guide covers a wide range of JavaScript topics
 including conditional statements, loops, data structures, type
 handling, advanced features, error handling, best practices, common
 mistakes, and performance optimization.JS Objects
->
+
 Objects in JavaScript are collections of key - value pairs.They
 store data as properties(variables) and functionality as methods(
 functions
@@ -11639,27 +11769,27 @@ functions
 Object Definitions:
 
 Creating an Object Literally:
->
+
 javascript code let person = f name: &apos;Alice% age 30, greet:
 function return &apos;Helloj my name is &Hat;i&Hat; -v this
 .name;
->
+
 Using the Object Constructor:
->
+
 javascript code let car new Object O;
->
+
 car.brand = &apos;Toyota&apos;; car.model = &apos;Camry&apos;; Object Properties
->
+
 Properties in JavaScript objects are variables that hold values
 Object Properties Examples:
->
+
 Accessing Object Properties:
->
+
 javascript code console.log(person name) // Accessing property
 &apos;namet
->
+
 Adding or Modifying Properties:
->
+
 javascript code car.color &apos;blue&apos;; // Adding property &apos;color&apos; car
 .model &apos;Corolla&apos;; // Modifying property &apos;model&apos;
 
@@ -11667,11 +11797,11 @@ javascript code car.color &apos;blue&apos;; // Adding property &apos;color&apos;
 
 Methods in JavaScript objects are functions that define behavior.
 Object Methods Examples:
->
+
 Accessing Object Methods
 javascript code console.log(person
 .greet ; // Accessing method greet&apos;
->
+
 Adding Methods to an Object:
 >
 java script code
@@ -11682,12 +11812,12 @@ car.start = function return &apos;Car started&apos;; l;
 
 Displaying objects in JavaScript can be done using various methods.
 Object Display Examples:
->
+
 Using console.log javascript code console.log(person)
 ; // Output the entire object
->
+
 Stringify with JSON:
->
+
 javascript code let carString JSON.stringify(car) ; console.log
 (carString) ; // Output the string representation of the object
 
@@ -11695,14 +11825,14 @@ javascript code let carString JSON.stringify(car) ; console.log
 
 Accessors in JavaScript objects provide a way to get and set the
 values of object properties.Object Accessors Examples:
->
+
 Using Getters and Setters:
->
+
 javascript code let user --- firstName: &apos;John&apos;,
->
+
 lastName: &apos;Doe&apos;, get fullName() f return this.firstName + + this
 lastName;
->
+
 set fullName(name) f let parts = name.split ; this.firstName =
 parts &lbrack; O this.lastName = parts &lbrack; 1 &rbrack; ;
 
