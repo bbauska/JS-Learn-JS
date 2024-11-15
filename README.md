@@ -11,7 +11,7 @@ output:
 
 <h1 align="center">JS Learn JavaScript</h1>
 
-<p align="center"><small>(by Brian Bauska, educator)</small></p>
+<p align="center"><small><small>(by Brian Bauska, educator)</small></small></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~ readme.md of js-learn-javascript.bauska.org ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
