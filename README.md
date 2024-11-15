@@ -1,14 +1,9 @@
 ---
 title: "JS Learn JavaScript"
 author: "bbauska"
-date prior editted: "8/31/2024 4+pm"
-date last editted: "9/9/2024 12+pm"
-date last editted: "9/10/2024 1+pm"
-date last editted: "9/12/2024 1+pm"
-date last editted: "9/20/2024 10+pm"
-date last editted: "10/18/2024 5+pm"
-date last editted: "10/26/2024 5+pm"
-date last editted: "11/08/2024 2+pm"
+date first created: "8/31/2024 4+pm"
+date prior editted: "9/9/2024 12+pm"
+date last editted: "11/15/2024 1+am"
 output: 
   markdown:
     with some style
@@ -16,7 +11,7 @@ output:
 
 <h1 align="center">JS Learn JavaScript</h1>
 
-<h6 align="center">(by Brian Bauska, educator)</h6>
+<p align="center"><small>(by Brian Bauska, educator)</small></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~ readme.md of js-learn-javascript.bauska.org ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -16983,3 +16978,4 @@ further.
 <!-- last editted 10/18/2024 5:51pm -->
 <!-- last editted 10/26/2024 5:40pm -->
 <!-- last editted 11/08/2024 2:44pm -->
+<!-- last editted 11/15/2024 1:01am -->
