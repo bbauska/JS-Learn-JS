@@ -2,7 +2,7 @@
 layout: editorial
 chapter: 8
 pageNumber: 53
-description: Analyzing an algorithm's efiiciency is most important part of writing an optimal program. This chapter deep dives into analayzing the efficiency by understanding the space and time complexity.
+description: Analyzing an algorithm's efficiency is most important part of writing an optimal program. This chapter deep dives into analyzing the efficiency by understanding the space and time complexity.
 ---
 
 # Chapter 8
