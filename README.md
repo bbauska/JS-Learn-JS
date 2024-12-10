@@ -11293,22 +11293,28 @@ further
 
 <!-- last editted 9-20-2024 10:17pm -->
 <!-- last editted 10/18/2024 5:51pm -->
->
+
 ) else f console.log(is zeroi) ;
 
 <h3>JS Switch</h3>
 
-The switch statement in JavaScript executes different actions based on
-different conditions
+The switch statement in JavaScript executes different actions based on different conditions
+
 Examples of JS Switch:
 
 Basic switch:
 
-javascript code let day
-![](./images/image125.jpg){width="0.5104166666666666in"
-height="0.2500732720909886in"}switch(day) &lbrack; case 1
-![](./images/image126.jpg){width="4.1666666666666664e-2in"
-height="0.13545603674540682in"}console.log(iMonday•) ; break;
+javascript code
+
+let day
+
+![](./images/image125.jpg){width="0.5104166666666666in" height="0.2500732720909886in"}
+
+switch(day) &lbrack; case 1
+
+![](./images/image126.jpg){width="4.1666666666666664e-2in" height="0.13545603674540682in"}
+
+console.log(iMonday•) ; break;
 case 2:
 
 console.log(&Hat;i&Hat; Tuesday) ; break; default:
@@ -11319,8 +11325,8 @@ console.log(Other day&apos;) ;
 
 The for loop in JavaScript repeatedly executes a block of code until a
 specified condition evaluates to false
-![](./images/image127.jpg){width="4.1666666666666664e-2in"
-height="4.167869641294838e-2in"}
+
+![](./images/image127.jpg){width="4.1666666666666664e-2in" height="4.167869641294838e-2in"}
 
 Examples of JS Loop For:
 
@@ -11341,8 +11347,12 @@ properties of an object.
 Examples ofJS Loop For In:
 
 Iterating Object Properties
-![](./images/image128.jpg){width="6.25e-2in"
-height="0.15629702537182852in"}javascript code let person = { name:
+
+![](./images/image128.jpg){width="6.25e-2in" height="0.15629702537182852in"}
+
+javascript code
+
+let person = { name:
 IAIiceI, age 30, gender: female&apos;
 
 for(let prop in person) { console.log(prop + person &lbrack; prop l)
@@ -11366,26 +11376,32 @@ log(num) ;
 
 The while loop in JavaScript executes a block of code while a
 specified condition is true
-![](./images/image131.jpg){width="4.1666666666666664e-2in"
-height="4.167979002624672e-2in"}Examples ofJS Loop While:
+
+![](./images/image131.jpg){width="4.1666666666666664e-2in" height="4.167979002624672e-2in"}
+
+Examples of JS Loop While:
 
 Basic while Loop:
 
-java script code let count = o; while(count &lt;
-5![](./images/image132.jpg){width="0.3229166666666667in"
-height="0.26049431321084865in"}
+javascript code
+
+let count = o; 
+while(count &lt; 5![]
+
+(./images/image132.jpg){width="0.3229166666666667in" height="0.26049431321084865in"}
 
 console.log(count) ;
 
-![](./images/image133.jpg){width="1.3020833333333333in"
-height="0.21881452318460193in"}
+![](./images/image133.jpg){width="1.3020833333333333in" height="0.21881452318460193in"}
 
 <h4>JS Break</h4>
 
 The break statement in JavaScript terminates the current loop or
 switch statement
-![](./images/image134.jpg){width="4.1666666666666664e-2in"
-height="4.167869641294838e-2in"}Examples ofJS Break:
+
+![](./images/image134.jpg){width="4.1666666666666664e-2in" height="4.167869641294838e-2in"}
+
+Examples ofJS Break:
 
 Using break in a Loop:
 
@@ -11402,8 +11418,10 @@ console.log(i) ;
 <h3>JS Iterables</h3>
 
 Iterables in JavaScript are objects that can be iterated over using
-loops ![](./images/image112.jpg){width="4.1666666666666664e-2in"
-height="4.167979002624672e-2in"}Examples ofJS Iterables:
+loops 
+![](./images/image112.jpg){width="4.1666666666666664e-2in" height="4.167979002624672e-2in"}
+
+Examples of JS Iterables:
 
 Using Iterables with for of:
 
@@ -11416,22 +11434,31 @@ for(let value of iterable) { console.log(value) ;
 <h3>JS Sets</h3>
 
 Sets in JavaScript are collections of unique values
-![](./images/image127.jpg){width="4.1666666666666664e-2in"
-height="4.167869641294838e-2in"}Examples ofJS Sets:
+![](./images/image127.jpg){width="4.1666666666666664e-2in" height="4.167869641294838e-2in"}
+Examples ofJS Sets:
 
 Creating a Set:
 
-javascript code let mySet = new Set() ; mySet.add(1
-![](./images/image137.jpg){width="0.21875in"
-height="0.2813331146106737in"}mySet.add(2
-![](./images/image138.jpg){width="0.21875in"
-height="0.2813331146106737in"}mySet.add(3
-![](./images/image139.jpg){width="0.21875in"
-height="0.2813331146106737in"}Iterating Over a Set:
+javascript code
 
-java script code for(letitem of mySet)
-![](./images/image140.jpg){width="8.333333333333333e-2in"
-height="0.26049431321084865in"}console log(item) ;
+let mySet = new Set() ; 
+mySet.add(1
+![](./images/image137.jpg){width="0.21875in" height="0.2813331146106737in"}
+
+mySet.add(2
+
+![](./images/image138.jpg){width="0.21875in" height="0.2813331146106737in"}
+
+mySet.add(3
+![](./images/image139.jpg){width="0.21875in" height="0.2813331146106737in"}
+
+Iterating Over a Set:
+
+javascript code
+for(letitem of mySet)
+![](./images/image140.jpg){width="8.333333333333333e-2in" height="0.26049431321084865in"}
+
+console log(item) ;
 
 <h4>JS Maps</h4>
 
@@ -11440,14 +11467,20 @@ be any type.
 
 Examples ofJS Maps:
 
-Creating a Map ![](./images/image141.jpg){width="6.25e-2in"
-height="0.14587598425196852in"}javascript code let myMap = new Map ;
+Creating a Map 
+![](./images/image141.jpg){width="6.25e-2in" height="0.14587598425196852in"}
+
+javascript code
+
+let myMap = new Map ;
 myMap.set(&apos;key 1&apos;, &apos;valueli) ; myMap.set(ikey2i, &apos;value2i
 ) ;
 
 Iterating Over a Map:
 
-javascript code for(let &lbrack; key, value I of myMap) { console.log(
+javascript code 
+
+for(let &lbrack; key, value I of myMap) { console.log(
 key &lowbar; • value) ;
 
 <h4>JS Typeof</h4>
@@ -11472,8 +11505,12 @@ javascript code let strNumber = &apos;10
 ![](./images/image142.jpg){width="0.11458333333333333in"
 height="0.1146172353455818in"}let num = parselnt(strNumber) ;
 
-Number to String ![](./images/image143.jpg){width="6.25e-2in"
-height="0.15629593175853018in"}javascript code let number
+Number to String 
+![](./images/image143.jpg){width="6.25e-2in" height="0.15629593175853018in"}
+
+javascript code
+
+let number
 ![](./images/image144.jpg){width="0.6979166666666666in"
 height="0.19797462817147857in"}let str = number.
 toString![](./images/image145.jpg){width="0.3229166666666667in"
@@ -11488,7 +11525,8 @@ Examples ofJS Bitwise:
 
 Bitwise AND Operator:
 
-javascript code let result 5 & 3; // Output: 1
+javascript code
+let result 5 & 3; // Output: 1
 
 Bitwise OR Operator ![](./images/image146.jpg){width="6.25e-2in"
 height="0.15629702537182852in"}javascript code let result 5 1 3; //
@@ -11539,7 +11577,8 @@ This will throw a syntax error due to the missing semicolon.
 
 Reference Error:
 
-javascript code console.log(undefinedVariable) ;
+javascript code
+console.log(undefinedVariable);
 
 This will throw a reference error as undefinedVariable is not defined.
 
@@ -11567,9 +11606,12 @@ Variable Hoisting:
 javascript code console.log(myVar) ; // Outputs: undefined
 varmyVar &dash;- 10; Function Hoisting:
 
-javascript code sayHellc ; // Outputs: &apos;Hello&apos; function sayHello
-![](./images/image149.jpg){width="0.4166666666666667in"
-height="0.2604932195975503in"}console.log(&apos;Hello&apos;) ;
+javascript code
+sayHello;
+// Outputs: &apos;Hello&apos; 
+function sayHello
+![](./images/image149.jpg){width="0.4166666666666667in" height="0.2604932195975503in"}
+console.log(&apos;Hello&apos;) ;
 
 <h2>JS Strict Mode</h2>
 
@@ -11581,12 +11623,12 @@ Enabling Strict Mode
 height="0.15629593175853018in"}javascript code &apos;use strict&apos;;
 
 Using Strict Mode Inside a Function
-![](./images/image105.jpg){width="6.25e-2in"
-height="0.15629593175853018in"}javascript code function myFunction {
+![](./images/image105.jpg){width="6.25e-2in" height="0.15629593175853018in"}
+javascript code
 
-&apos;use strict&apos;;
-
-// Strict mode only applies inside this function
+function myFunction {
+  &apos;use strict&apos;;
+  // Strict mode only applies inside this function
 
 <h3>JS this Keyword</h3>
 
@@ -11605,28 +11647,26 @@ person.greet ; // Outputs: &apos;Hello, my name is Alice&apos;
 
 <h3>JS Arrow Function</h3>
 
-Arrow functions in JavaScript provide a concise syntax for writing
-functions.
+Arrow functions in JavaScript provide a concise syntax for writing functions.
 
 Arrow Function:
 
 Basic Arrow Function:
 
-javascript code let multiply =(aj b) = s a &ast; b;
+javascript code
+let multiply =(aj b) = s a &ast; b;
 
 Arrow Function with Multiple Lines
-![](./images/image152.jpg){width="6.25e-2in"
-height="0.15629593175853018in"}javascript code let greet(name) &gt; {
+![](./images/image152.jpg){width="6.25e-2in" height="0.15629593175853018in"}javascript code let greet(name) &gt; {
 return &apos;Hello, &apos; + name +
-![](./images/image153.jpg){width="0.375in"
-height="0.2604932195975503in"}
+![](./images/image153.jpg){width="0.375in" height="0.2604932195975503in"}
 
 <h3>JS Classes</h3>
 
 Classes in JavaScript provide a way to create objects using a
 blueprint.
 
-Examples ofJS Classes:
+Examples of JS Classes:
 
 Class Declaration:
 
@@ -17109,3 +17149,4 @@ further.
 <!-- last editted 10/26/2024 5:40pm -->
 <!-- last editted 11/08/2024 2:44pm -->
 <!-- last editted 11/15/2024 1:01am -->
+<!-- last editted 12/09/2024 7:37pm -->
