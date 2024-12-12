@@ -323,37 +323,34 @@ children will have different fonts, we can create subclasses.
 
 <pre>
 .heading {
-  //style
+  // style
 }
 .heading-email {
-  //style
+  // style
 }
 .heading-news {
-  //style
+  // style
 }
 </pre>
 
-Using this approach mixed with subclasses, we can define one standard styling for the 
+<p>Using this approach mixed with subclasses, we can define one standard styling for the 
 header and change the email and news header fonts or any other style specifically. In 
-the HTML, we just have to use both the classes:
-
-<h3 class = “heading heading-email>This is email header</h3>
-1
+the HTML, we just have to use both the classes:</p>
 
 <h3 class = “heading heading-email>This is email header</h3>
 
-Now we can create a sorted document without any coupling between the elements.
+<p>Now we can create a sorted document without any coupling between the elements.</p>
 
-State Rules
-After we have carefully crafted the layout and module rules, we need to take care of the 
+<h4>State Rules</h4>
+<p>After we have carefully crafted the layout and module rules, we need to take care of the 
 design of the state of the element. A state rule is applied when an element has multiple 
 states. For example, a module can be in an error state (depending on the error received) 
 or a success state. For both of the states, the module needs to render different styles. 
-This is where state rules come in.
+This is where state rules come in.</p>
 
-In this complete document, the focus has been increasing the readability of CSS and 
+<p>In this complete document, the focus has been increasing the readability of CSS and 
 simplifying the style sheet as much as possible. On the same thoughts, consider the 
-following code:
+following code:</p>
 
 <pre>
 &lt;div&gt;
@@ -372,7 +369,7 @@ parent element.
 
 <pre>
 .application-form {
-  //style
+  // style
 }
 </pre>
 
@@ -382,10 +379,10 @@ code – error and success. Hence, the following classes can be attached:
 
 <pre>
 .is-error {
-  //style
+  // style
 }
 .is-success {
-  //style
+  // style
 }
 </pre>
 
@@ -393,49 +390,50 @@ We can combine them with other modules or layout classes to give a meaningful de
 the client machine.
 
 <pre>
-<div class = “application-form“>
-    <div class = “msg is-error”> This is an error </div>
-    <div class = “msg is-success”> This is a success </div>
-<div>
+&lt;div class = “application-form“&gt;
+    &lt;div class = “msg is-error”&gt; This is an error &lt;/div&gt;
+    &lt;div class = “msg is-success”&gt; This is a success &lt;/div&gt;
+&lt;div&gt;
 </pre>
 
-Note: The msg class can be a message styling class that generates some message design.
+<p>Note: The msg class can be a message styling class that generates some message design.</p>
 
-So, what is the difference between module rules and state rules? They do look similar, 
-don’t they?
+<p>So, what is the difference between module rules and state rules? They do look similar, 
+don’t they?</p>
 
-For two very important reasons, module and state rules are similar in working and 
+<p>For two very important reasons, module and state rules are similar in working and 
 styling. The lesser important reason is that they are “states” of a module or layout. 
 Hence they are defined within these elements and prefer a different naming as seen above. 
 They are attached within these modules and layouts and increase readability and 
-simplicity.
+simplicity.</p>
 
-The more important reason for using the state rules is the JavaScript-based changes that 
+<p>The more important reason for using the state rules is the JavaScript-based changes that 
 run on the client-side based on the user’s response (hence we cannot lay down the rules 
 from the server). The JavaScript code can catch the elements and apply appropriate 
-classes to them by their current state.
+classes to them by their current state.</p>
 
-Jonathan has repeatedly shown his disinterest towards using the !important attribute as 
+<p>Jonathan has repeatedly shown his disinterest towards using the !important attribute as 
 it hinders the specificity of the code. But while stating state rules, Jonathan finds 
 it important to make use of !important as we know that one element can be in only one 
 state during execution. Hence, it becomes necessary that the state rules we are trying 
-to apply do not override other rules.
+to apply do not override other rules.</p>
 
-Also read – A Complete Guide To CSS Variables [With Examples]
+<p>Also read – A Complete Guide To CSS Variables [With Examples]</p>
 
-Theme Rules
-As the name suggests, theme rules are defined for the theme of the web application. For 
+<h4>Theme Rules</h4>
+
+<p>As the name suggests, theme rules are defined for the theme of the web application. For 
 example, every website has a theme reflecting business or based on other strategies. The 
 theme design remains consistent throughout the web app, no matter what module you are 
 in. A classic example of theme design is typography. CSS Typography often helps connect 
 with the user, and if you are using a unique font style, users generally remember it well 
-after they have closed the browser.
+after they have closed the browser.</p>
 
-Theme rules are not considered core rules as the author considered the previous four. The 
+<p>Theme rules are not considered core rules as the author considered the previous four. The 
 reason is that they are not required for every web-based project. Theme layout has no 
 special guidelines except to keep them in separate files for simplicity. Since class 
 names can sometimes be similar, it provides a clear distinction between layout classes, 
-module classes or theme classes.
+module classes or theme classes.</p>
 
 As a web developer, keep the bigger design things in the theme classes to remain 
 consistent. For example, the background color of each module may be different, so keeping 
@@ -1044,7 +1042,6 @@ rel="noopener noreferrer" target="_blank">syntax</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 2:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>CSS</h4>
 
 <ul>
@@ -1501,38 +1498,34 @@ value.</p>
 
 <h4>Position Absolute Demo</h4>
 
-<p>When an element has a fixed height and width and is absolutely
-positioned, the top property takes priority should both
-the top and bottom offset properties be declared. As with the relatively
-positioned elements, should an element with a fixed width have both
-the left and right box offset properties, priority is given to the
-direction of which the language of the page is written.</p>
+<p>When an element has a fixed height and width and is absolutely positioned, the top 
+property takes priority should both the top and bottom offset properties be declared. As 
+with the relatively positioned elements, should an element with a fixed width have both
+the left and right box offset properties, priority is given to the direction of which the 
+language of the page is written.</p>
 
-<p>If an element doesn't have a specific height or width and is absolutely
-positioned, using a combination of the top and bottom box offset
-properties displays an element with a height spanning the entire
-specified size. Same goes for using both the left and right box offset
-properties, resulting in an element with a full width based on both of
-the left and right box offset properties. Using all four box offset
-properties will display an element with a full specified height and
-width.</p>
+<p>If an element doesn't have a specific height or width and is absolutely positioned, 
+using a combination of the top and bottom box offset properties displays an element with 
+a height spanning the entire specified size. Same goes for using both the left and right 
+box offset properties, resulting in an element with a full width based on both of the 
+left and right box offset properties. Using all four box offset properties will display 
+an element with a full specified height and width.</p>
 
 <h4>Position Fixed</h4>
 
-<p>Using the positioning value of fixed works just like that of absolute,
-however the positioning is relative to the browser viewport, and it does
-not scroll with the page. That said, elements will always be present no
-matter where a user stands on a page. The only caveat
-with fixed positioning is that it doesn't work with Internet Explorer 6.
-Should you want to force fixed positioning within Internet Explorer 6
-there are suitable hacks.</p>
+<p>Using the positioning value of fixed works just like that of absolute, however the 
+positioning is relative to the browser viewport, and it does not scroll with the page. 
+That said, elements will always be present no matter where a user stands on a page. The 
+only caveat with fixed positioning is that it doesn't work with Internet Explorer 6.
+Should you want to force fixed positioning within Internet Explorer 6 there are suitable 
+hacks.</p>
 
-<p>Using multiple box offset properties with fixed positioning will produce
-the same behaviors as an absolutely positioned element.</p>
+<p>Using multiple box offset properties with fixed positioning will produce the same 
+behaviors as an absolutely positioned element.</p>
 
-<p>Keeping the same box offset properties from the previous demonstration,
-watch how the boxes are positioned in relation to the browser's viewport
-and not the containing, relatively positioned parent.</p>
+<p>Keeping the same box offset properties from the previous demonstration, watch how the 
+boxes are positioned in relation to the browser's viewport and not the containing, 
+relatively positioned parent.</p>
 
 <h4>HTML</h4>
 
@@ -1578,15 +1571,14 @@ and not the containing, relatively positioned parent.</p>
 
 <h4>Fixed Header or Footer</h4>
 
-<p>One of the most common uses of fixed positioning is to build a fixed header, 
-or footer, anchored to one side of a page. As a user scrolls the element stays 
-prevalent, always within the viewport for users to interact with.</p>
+<p>One of the most common uses of fixed positioning is to build a fixed header, or footer, 
+anchored to one side of a page. As a user scrolls the element stays prevalent, always 
+within the viewport for users to interact with.</p>
 
-<p>The code and demonstration below outline how this may be achieved. Notice how 
-both left and right box offset properties are declared. This allows the footer 
-to span the entire width of the bottom of the page, and it does so without 
-disrupting the box model, allowing margins, borders, and padding to be applied 
-freely.</p>
+<p>The code and demonstration below outline how this may be achieved. Notice how both 
+left and right box offset properties are declared. This allows the footer to span the 
+entire width of the bottom of the page, and it does so without disrupting the box model, 
+allowing margins, borders, and padding to be applied freely.</p>
 
 <h4>HTML</h4>
 
@@ -1616,31 +1608,28 @@ freely.</p>
 
 <h4 id="z-index-property">Z-Index Property</h4>
 
-<p>By nature web pages are often considered to be two dimensional,
-displaying elements upon a x and y axis. However when you begin to
-position elements they are occasionally placed on top of one another. To
-change the order of 
+<p>By nature web pages are often considered to be two dimensional, displaying elements 
+upon a x and y axis. However when you begin to position elements they are occasionally 
+placed on top of one another. To change the order of 
 <a href="http://www.impressivewebs.com/a-detailed-look-at-the-z-index-css-property/" 
-rel="noopener noreferrer" target="_blank">how these elements are stacked</a>, 
-also known as the z-axis, the z-index property is to be used.</p>
+rel="noopener noreferrer" target="_blank">how these elements are stacked</a>, also known 
+as the z-axis, the z-index property is to be used.</p>
 
-<p>Generally, elements are positioned upon the z-axis as they appear within
-the DOM. Elements coming at the top of the DOM are positioned behind
-elements coming after them. Changing this stacking using
-the z-index property is pretty straight forward. The element with the
-highest z-index value will appear on the top regardless of its placement
-in the DOM.</p>
+<p>Generally, elements are positioned upon the z-axis as they appear within the DOM. 
+Elements coming at the top of the DOM are positioned behind elements coming after them. 
+Changing this stacking using the z-index property is pretty straight forward. The element 
+with the highest z-index value will appear on the top regardless of its placement in the 
+DOM.</p>
 
-<p>In order to apply the z-index property to an element, you must first
-apply a position value of relative, absolute, or fixed. The same as if
-you were to apply any box offset properties.</p>
+<p>In order to apply the z-index property to an element, you must first apply a position 
+value of relative, absolute, or fixed. The same as if you were to apply any box offset 
+properties.</p>
 
-<p>In the example below, without the z-index property each box will be
-positioned precisely, starting with box two sitting on top of box one,
-then box three sitting on top of box two, and so forth. Reordering the
-stacking with the z-index property now positions box two on top of every
-other box, followed by box three underneath it, and box four underneath
-box three.</p>
+<p>In the example below, without the z-index property each box will be positioned 
+precisely, starting with box two sitting on top of box one, then box three sitting on top 
+of box two, and so forth. Reordering the stacking with the z-index property now positions 
+box two on top of every other box, followed by box three underneath it, and box four 
+underneath box three.</p>
 
 <h4>HTML</h4>
 
@@ -1741,37 +1730,32 @@ box three.</p>
 
 <b>SHARE</b>
 
-<p>Selectors are one of, if not, the most important parts of CSS. They
-shape the cascade and determine how styles are to be applied to elements
-on a page.</p>
+<p>Selectors are one of, if not, the most important parts of CSS. They shape the cascade 
+and determine how styles are to be applied to elements on a page.</p>
 
-<p>Up until recently the focus of CSS never really touched on selectors.
-Occasionally there would be incremental updates within the selectors
-specification, but never any real ground breaking improvements.
-Fortunately, more attention has been given to selectors as of late,
-taking a look at how to select different types of elements and elements
-in different states of use.</p>
+<p>Up until recently the focus of CSS never really touched on selectors. Occasionally 
+there would be incremental updates within the selectors specification, but never any real 
+ground breaking improvements. Fortunately, more attention has been given to selectors as 
+of late, taking a look at how to select different types of elements and elements in 
+different states of use.</p>
 
-<p>CSS3 brought new selectors, opening a whole new world of opportunities
-and improvements to existing practices. Here we'll discuss 
+<p>CSS3 brought new selectors, opening a whole new world of opportunities and 
+improvements to existing practices. Here we'll discuss 
 <a href="http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/" 
 rel="noopener noreferrer" target="_blank">selectors</a>, old and new, and how to 
 best put them to use.</p>
 
 <h4 id="common-selectors">Common Selectors</h4>
 
-<p>Before diving too deep into some of the more complex selectors, and
-those offered within CSS3, let's take a quick look at some of the more
-common selectors seen today. These selectors include the type, class,
-and ID selectors.</p>
+<p>Before diving too deep into some of the more complex selectors, and those offered 
+within CSS3, let's take a quick look at some of the more common selectors seen today. 
+These selectors include the type, class, and ID selectors.</p>
 
-<p>The <b>type</b> selector identifies an element based on its type,
-specifically how that element is declared within HTML.
-The <b>class</b> selector identifies an element based on its class
-attribute value, which may be reused on multiple elements as necessary
-to help share popular styles. Lastly, the <b>ID</b> selector identifies an
-element based on its ID attribute value, which is unique and should only
-be used once per page.</p>
+<p>The <b>type</b> selector identifies an element based on its type, specifically how 
+that element is declared within HTML. The <b>class</b> selector identifies an element 
+based on its class attribute value, which may be reused on multiple elements as necessary
+to help share popular styles. Lastly, the <b>ID</b> selector identifies an element based 
+on its ID attribute value, which is unique and should only be used once per page.</p>
 
 <h4>CSS</h4>
 
@@ -1792,36 +1776,33 @@ be used once per page.</p>
 
 <h4>Common Selectors Overview</h4>
 
-  | <b>Example</b>|<b>Classification</b> | <b>Explanation</b> |
-  -----------|-----------------------------|-----------------------------------------------------|
-  | h1       | Type Selector | Selects an element by its type.  |
-  | .tagline | Class         | Selects an element by the class attribute value, which may be reused |
-  |          | Selector      | multiple times per page. |
-  | <b>#intro</b>   | ID Selector   | Selects an element by the ID attribute value, which is unique and to |
-  |          |               | only be used once per page. |
+| <b>Example</b> | <b>Classification</b> | <b>Explanation</b> |
+|-----------|-----------------------------|-----------------------------------------------------|
+| h1       | Type Selector | Selects an element by its type.  |
+| .tagline | Class         | Selects an element by the class attribute value, which may be reused |
+|          | Selector      | multiple times per page. |
+| <b>#intro</b>   | ID Selector   | Selects an element by the ID attribute value, which is unique and to |
+|          |               | only be used once per page. |
 
 <h4>Child Selectors</h4>
 
-<p>Child selectors provide a way to select elements that fall within one
-another, thus making them children of their parent element. These
-selections can be made two different ways, using either descendant or
-direct child selectors.</p>
+<p>Child selectors provide a way to select elements that fall within one another, thus 
+making them children of their parent element. These selections can be made two different 
+ways, using either descendant or direct child selectors.</p>
 
 <h4>Descendant Selector</h4>
 
-<p>The most common child selector is the descendant selector, which matches
-every element that follows an identified ancestor. The descendant
-element does not have to come directly after the ancestor element inside
-the document tree, such as a parent-child relationship, but may fall
-anywhere within the ancestor element. Descendant selectors are created
-by spacing apart elements within a selector, creating a new level of
-hierarchy for each element list.</p>
+<p>The most common child selector is the descendant selector, which matches every element 
+that follows an identified ancestor. The descendant element does not have to come directly 
+after the ancestor element inside the document tree, such as a parent-child relationship, 
+but may fall anywhere within the ancestor element. Descendant selectors are created by 
+spacing apart elements within a selector, creating a new level of hierarchy for each 
+element list.</p>
 
-<p>The article h2 selector is a descendant selector, only
-selecting h2 elements that fall inside of an article element. Notice, no
-matter where a h2 element lives, so long as it is within
-the article element, it will always be selected. Additionally,
-any h2 element outside of the article element is not selected.</p>
+<p>The article h2 selector is a descendant selector, only selecting h2 elements that fall 
+inside of an article element. Notice, no matter where a h2 element lives, so long as it is 
+within the article element, it will always be selected. Additionally, any h2 element 
+outside of the article element is not selected.</p>
 
 <p>Below, the headings on lines 3 and 5 are selected.</p>
 
@@ -1845,20 +1826,19 @@ any h2 element outside of the article element is not selected.</p>
 
 <h4>Direct Child Selector</h4>
 
-<p>Sometimes descendant selectors go a bit overboard, selecting more than
-hoped. At times only the direct children of a parent element need to be
-selected, not every instance of the element nested deeply inside of an
-ancestor. In this event the direct child selector may be used by placing
-a greater than sign, &gt;, between the parent element and child element
-within the selector.</p>
+<p>Sometimes descendant selectors go a bit overboard, selecting more than hoped. At times 
+only the direct children of a parent element need to be selected, not every instance of 
+the element nested deeply inside of an ancestor. In this event the direct child selector 
+may be used by placing a greater than sign, &gt;, between the parent element and child 
+element within the selector.</p>
 
-<p>For example, article &gt; p is a direct child selector only
-identifying p elements that fall directly within an article element.
-Any p element placed outside of an article element, or nested inside of
-another element other than the article element, will not be selected.</p>
+<p>For example, article &gt; p is a direct child selector only identifying p elements 
+that fall directly within an article element. Any p element placed outside of an article 
+element, or nested inside of another element other than the article element, will not be 
+selected.</p>
 
-<p>Below, the paragraph on line 3 is the only direct child of its parent
-article, thus selected.</p>
+<p>Below, the paragraph on line 3 is the only direct child of its parent article, thus 
+selected.</p>
 
 <h4>CSS</h4>
 
@@ -1890,26 +1870,25 @@ article, thus selected.</p>
 <h4 id="sibling-selectors">Sibling Selectors</h4>
 
 <p>Knowing how to <a href="https://css-tricks.com/child-and-sibling-selectors/" 
-rel="noopener noreferrer" target="_blank">select children</a> of an element is 
-largely beneficial, and quite commonly seen. However sibling elements, those 
-elements that share a common parent, may also need to be selected. These sibling 
-selections can be made by way of the general sibling and adjacent sibling selectors.</p>
+rel="noopener noreferrer" target="_blank">select children</a> of an element is largely 
+beneficial, and quite commonly seen. However sibling elements, those elements that share 
+a common parent, may also need to be selected. These sibling selections can be made by 
+way of the general sibling and adjacent sibling selectors.</p>
 
 <h4>General Sibling Selector</h4>
 
-<p>The general sibling selector allow elements to be selected based on
-their sibling elements, those which share the same common parent. They
-are created by using the tilde character, &tilde;, between two elements
-within a selector. The first element identifies what the second element
-shall be a sibling with, and both of which must share the same parent.</p>
+<p>The general sibling selector allow elements to be selected based on their sibling 
+elements, those which share the same common parent. They are created by using the tilde 
+character, &tilde;, between two elements within a selector. The first element identifies 
+what the second element shall be a sibling with, and both of which must share the same 
+parent.</p>
 
-<p>The h2 &tilde; p selector is a general sibling selector that looks
-for p elements that follow, and share the same parent, of any h2 elements. 
-In order for a p element to be selected it must come after any h2 element.</p>
+<p>The h2 &tilde; p selector is a general sibling selector that looks for p elements that 
+follow, and share the same parent, of any h2 elements. In order for a p element to be 
+selected it must come after any h2 element.</p>
 
-<p>The paragraphs on lines 5 and 9 are selected as they come after the
-heading within the document tree and share the same parent as their
-sibling heading.</p>
+<p>The paragraphs on lines 5 and 9 are selected as they come after the heading within the 
+document tree and share the same parent as their sibling heading.</p>
 
 <h4>CSS</h4>
 
@@ -1937,25 +1916,21 @@ sibling heading.</p>
 
 <h4>Adjacent Sibling Selector</h4>
 
-<p>Occasionally a little more control may be desired, including the ability
-to select a sibling element that directly follows after another sibling
-element, which is where the adjacent sibling element comes in. The
-adjacent sibling selector will only select sibling elements directly
-following after another sibling element.</p>
+<p>Occasionally a little more control may be desired, including the ability to select a 
+sibling element that directly follows after another sibling element, which is where the 
+adjacent sibling element comes in. The adjacent sibling selector will only select sibling 
+elements directly following after another sibling element.</p>
 
-<p>Instead of using the tilde character, as with general sibling selectors, 
-the adjacent sibling selector uses a plus character, +, between the two elements 
-within a selector. Again, the first element identifies what the second element
-shall directly follow after and be a sibling with, and both of which must 
-share the same parent.</p>
+<p>Instead of using the tilde character, as with general sibling selectors, the adjacent 
+sibling selector uses a plus character, +, between the two elements within a selector. 
+Again, the first element identifies what the second element shall directly follow after 
+and be a sibling with, and both of which must share the same parent.</p>
 
-<p>Looking at the adjacent sibling selector h2 + p only p elements directly
-following after h2 elements will be selected. Both of which must also
-share the same parent element.</p>
+<p>Looking at the adjacent sibling selector h2 + p only p elements directly following 
+after h2 elements will be selected. Both of which must also share the same parent element.</p>
 
-<p>The paragraph on line 5 is selected as it directly follows after its
-sibling heading along with sharing the same parent element, thus
-selected.</p>
+<p>The paragraph on line 5 is selected as it directly follows after its sibling heading 
+along with sharing the same parent element, thus selected.</p>
 
 <h4>CSS</h4>
 
@@ -2075,24 +2050,21 @@ selected.</p>
 
 <h4 id="attribute-selectors">Attribute Selectors</h4>
 
-<p>Some of the common selectors looked at early may also be defined as
-attribute selectors, in which an element is selected based upon its
-class or ID value. These class and ID attribute selectors are widely
-used and extremely powerful but only the beginning. Other 
-<a href="http://www.css3.info/preview/attribute-selectors/" 
-rel="noopener noreferrer" target="_blank">attribute selectors</a> have emerged 
-over the years, specifically taking a large leap forward with CSS3. Now elements 
-can be selected based on whether an attribute is present and what its value may 
-contain.</p>
+<p>Some of the common selectors looked at early may also be defined as attribute 
+selectors, in which an element is selected based upon its class or ID value. These class 
+and ID attribute selectors are widely used and extremely powerful but only the beginning. 
+Other <a href="http://www.css3.info/preview/attribute-selectors/" rel="noopener noreferrer" 
+target="_blank">attribute selectors</a> have emerged over the years, specifically taking a 
+large leap forward with CSS3. Now elements can be selected based on whether an attribute 
+is present and what its value may contain.</p>
 
 <h4>Attribute Present Selector</h4>
 
-<p>The first attribute selector identifies an element based on whether it
-includes an attribute or not, regardless of any actual value. To select
-an element based on if an attribute is present or not, include the
-attribute name in square brackets, &lbrack;&rbrack;, within a selector. 
-The square brackets may or may not follow any qualifier such as an element 
-type or class, all depending on the level of specificity desired.</p>
+<p>The first attribute selector identifies an element based on whether it includes an 
+attribute or not, regardless of any actual value. To select an element based on if an attribute is present or not, include the
+attribute name in square brackets, &lbrack;&rbrack;, within a selector. The square 
+brackets may or may not follow any qualifier such as an element type or class, all 
+depending on the level of specificity desired.</p>
 
 <h4>CSS</h4>
 
