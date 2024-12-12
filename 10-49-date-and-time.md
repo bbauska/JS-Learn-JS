@@ -13,6 +13,12 @@ The `date` object stores date and time and provides methods for managing it. Dat
 To create  `date` we use a `new Date()` constructor and can be created in the following ways.
 
 ```javascript
+const start = Date.now();
+doSomeLongRunningProcess();
+console.log(`Time elapsed: ${Date.now() - start} ms`);
+```
+
+```javascript
 new Date()
 new Date(date string)
 new Date(year,month)
