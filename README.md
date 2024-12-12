@@ -1,17152 +1,9715 @@
 ---
-title: "JS Learn JavaScript"
-author: "bbauska"
-date first created: "8/31/2024 4+pm"
-date prior editted: "9/9/2024 12+pm"
-date last editted: "11/15/2024 1+am"
-output: 
+title: "Shay-Howe's Advanced HTML and CSS"
+author: "Brian Bauska (bbauska)"
+date created: "3/31/2024 6+pm"
+date last editted: "8/16/2024 3+pm"
+date last editted: "10/21/2024 11+pm"
+date last editted: "12/11/2024 1+pm"
+output:
   markdown:
-    with some style
 ---
 
-<h1 align="center">JS Learn JavaScript</h1>
-
-<p align="center"><small><small>(by Brian Bauska, educator)</small></small></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~ readme.md of js-learn-javascript.bauska.org ~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!---~~~~~~~~~~~~~~~~~~~~~~~~ readme.md of 2015-shayhowe-Adv-HTML-CSS ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01. js learn javascript logo (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image001.png"
-  title="JS Learn JS logo"
-  alt="JS Learn JS logo."
-  style="border: 2px solid #000000; width:45%; height:33%;" />
-</p>
-<h2 id="table-of-contents"><a href="#table-of-contents">Table of Contents - JS Learn JavaScript</a></h2>
-
-<blockquote>
-<h4><a href="#ch01">Chapter 01: Introduction to JavaScript</a></h4>
-<h4><a href="#ch02">Chapter 02: Understanding Variables and Data Type in JS</a></h4>
-<h4><a href="#ch03">Chapter 03: Variables and Data</a></h4>
-<h4><a href="#ch04">Chapter 04: Functions in JS</a></h4>
-<h4><a href="#ch05">Chapter 05: Arrays and Iteration in JS</a></h4>
-<h4><a href="#ch06">Chapter 06: Objects and Object-Oriented Programming in JS</a></h4>
-<h4><a href="#ch07">Chapter 07: Loops in JS</a></h4>
-<h4><a href="#ch08">Chapter 08: Async and Await</a></h4>
-<h4><a href="#ch09">Chapter 09: Promises and Asynchronous Programming in JS</a></h4>
-<h4><a href="#ch10">Chapter 10: Working with JSON in JS</a></h4>
-<h4><a href="#ch11">Chapter 11: JS HTML DOM</a></h4>
-<h4><a href="#ch12">Chapter 12: JS Browser BOM</a></h4>
-<h4><a href="#ch13">Chapter 13: JS Libraries and Web APIs</a></h4>
-<h4><a href="#ch14">Chapter 14: JS AJAX</a></h4>
-<h4><a href="#ch15">Chapter 15: Handling Errors and Exceptions in JS</a></h4>
-<h4><a href="#ch16">Chapter 16: Libraries and APIs</a></h4>
-</blockquote>
-
-<a href="https://github.com/bbauska/JS-Learn-JS.git" target="_blank" rel="noopener noreferrer">
-JS Learn JS - git</a>
+<h1 align="center" width="100%">Advanced HTML &amp; CSS</h1>
+<p align="center"><small><small>by Shay-Howe</small></small></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch01">Chapter 01: Introduction to JavaScript</h2>
+<h2 align="center" id="1-performance-organization">Lesson 1: Performance &amp; Organization</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>What is JavaScript?</h3>
+<h3>In this Lesson 1:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>HTML</h4>
 
-<p>JavaScript is a lightweight, interpreted, object-oriented language with first-class 
-functions, and is best known as the scripting language for web pages, but it’s used in 
-many non-browser environments as well.JavaScript is a prototype-based, multi-paradigm, 
-dynamic language, supporting object-oriented, imperative, and declarative(e.g.functional 
-programming) styles.</p>
+<ul>
+  <li><a href="#minify-compress-files">Minify &amp; Compress Files</a></li>
+  <li><a href="#cache-common-files">Cache Common Files</a></li>
+</ul>
 
-<p>Originally developed by Netscape in the mid-1990s, JavaScript has become one of the 
-three core technologies of the web, along with HTML and CSS.</p>
+<h4>CSS</h4>
 
-<h3>Variables</h3>
+<ul>
+  <li><a href="#strategy-structure">Strategy &amp; Structure</a></li>
+  <li><a href="#performance-driven-selectors">Performance Driven Selectors</a></li>
+  <li><a href="#reusable-code">Reusable Code</a></li>
+  <li><a href="#reduce-http-requests">Reduce HTTP Requests</a></li>
+</ul>
 
-<p>Variables are containers for storing data values.In JavaScript, we declare a variable 
-using the var keyword, followed by the name of the variable.Let’s look at how we can create 
-a variable.</p>
+<p>Having the ability to <a href="https://learn.shayhowe.com/html-css/writing-your-best-code/" 
+rel="noopener noreferrer" target="_blank">write HTML and CSS</a> with a solid 
+understanding is a great expertise to have. As a website's code base and traffic 
+grows, a new skill set comes into play, one that is extremely important to both 
+development time and user experience. Knowing the fundamentals of website 
+<a href="http://developer.yahoo.com/performance/rules.html" 
+rel="noopener noreferrer" target="_blank">performance</a> and organization can 
+go a long way.</p>
+
+<p>The organization and architecture of a code base can greatly affect not only 
+the speed of development, but also the speed at which pages render. Both of which 
+can be sizeable concerns not only for developers but also users. Taking the time 
+to design the right structure for a code base, and identify how all of the different 
+components will work together, can speed up production and make for a better 
+experience all around.</p>
+
+<p>Additionally, taking a few small steps to improve the performance of a website 
+can pay off in dividends. <a href="https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/" 
+rel="noopener noreferrer" target="_blank">Website performance (2012)</a> greatly resembles 
+the 80/20 rule, where 20% of the optimizations will speed up roughly 80% of the 
+website.</p>
+
+<h4 id="strategy-structure">Strategy & Structure</h4>
+
+<p>The first part to improving a website's performance and organization revolves 
+around identifying a good strategy and structure for developing the code base. 
+Specifically, building a strong directory architecture, outlining design patterns, 
+and finding ways to reuse common code.</p>
+
+<h4>Style Architecture</h4>
+
+<p>Exactly how to organize styles boils down to personal preference and what is 
+best for a given website but generally speaking there are best practices to follow. 
+One practice includes separating styles based on intent, which includes creating 
+directories for common base styles, user interface components, and business logic 
+modules.</p>
 
 <pre>
-var name = "John Doe"
+ 1  # Base
+ 2    -- normalize.css
+ 3    -- layout.css
+ 4    -- typography.css
+ 5  
+ 6  # Components
+ 7    -- alerts.css
+ 8    -- buttons.css
+ 9    -- forms.css
+ 10   -- list.css
+ 11   -- nav.css
+ 12   -- tables.css
+ 13  
+ 14 # Modules
+ 15   -- aside.css
+ 16   -- footer.css
+ 17   -- header.css
+ 18 
 </pre>
 
-<h3>JavaScript Environment</h3>
-<p>Before we start, we need to set up our JavaScript environment.While you can write JavaScript 
-in any text editor, you’ll need a web browser to run your scripts.Most web browsers have 
-built-in JavaScript engines.You can open a JavaScript console in your browser and run 
-JavaScript code directly in the console.</p>
+<p>The architecture outlined above includes three directories, all with individual 
+groups of styles. The goal here is to <b>start thinking of websites as systems</b> 
+rather than individual pages, and the code architecture should reflect this mindset. 
+Notice how there aren't any page specific styles here.</p>
 
-<h3>Basic JavaScript Syntax</h3>
-<p>JavaScript syntax is the set of rules, how JavaScript programs are constructed:</p>
+<p>The <span class="hl-red">base</span> directory includes common styles and variables 
+to be used across the entire website, layout and typography styles for example. The 
+<span class="hl-green">components</span> directory 
+includes styles for specific user interface elements which are broken down into 
+different component files such as alerts and buttons. Lastly, the modules directory 
+includes styles for different sections of a page, which are determined by business 
+needs.</p>
 
-<div align="right">
-  <b><a href="#table-of-contents">↥ Back To Top</a></b>
+<p>The component styles are purely interface driven and have nothing to do with 
+the core business logic of the website. Modules then include styles specific to 
+the business logic. When marking up a module in HTML it is common to use different 
+user interface components within it. For example, the sidebar of a page may have 
+list and button styles that are defined within component styles while other styles 
+needed for the sidebar are inherited from the module style. The separation of style
+encourages well thought out presets and the ability for styles to be widely shared 
+and reused.</p>
+
+<p>The strategy of organizing styles this way isn't exactly new, and has been 
+previously mentioned in different CSS methodologies including Object Oriented 
+CSS, OOCSS, and the Scalable and Modular Architecture for CSS, SMACSS. These 
+methodologies have their own opinions on structure, as well as on how to use 
+styles.</p>
+
+<h4>Object Oriented CSS</h4>
+
+<p>The <a href="http://oocss.org/" rel="noopener noreferrer" target="_blank">
+Object Oriented CSS (2014)</a> methodology was pioneered by Nicole Sullivan in her 
+work with writing styles for larger websites. Object Oriented CSS identifies 
+two principles that will help build scalable websites with a strong architecture 
+and a reasonable amount of code. These two principles include:</p>
+
+<ul>
+  <li>Separate structure from skin</li>
+  <li>Separate content from container</li>
+</ul>
+
+<p>Overall <b>separating structure from skin</b> includes abstracting the layout 
+of an element away from the theme of a website. The structure of a module should 
+be transparent, allowing other styles to be inherited and displayed without conflict. 
+Most commonly this requires a solid grid and layout structure, along with well 
+crafted modules.</p>
+
+<p><b>Separating content from the container</b> involves removing the dependency 
+of a parent element nesting children elements. A heading should look the same 
+regardless of its parent container. To accomplish this, elements need to inherit 
+default styles, then be extended with multiple classes as necessary.</p>
+
+<h5>HTML</h5>
+
+<pre>
+ 1  &lt;div class="alert alert-error"&gt;
+ 2    &lt;p class="msg"&gt;...&lt;/p&gt;
+ 3  &lt;/div&gt;
+ 4 
+</pre>
+
+<h5>CSS</h5>
+
+<pre>
+ 1  .alert {...}
+ 2  .alert-error {...}
+ 3  .msg {...}
+ 4 
+</pre>
+
+<p>Object Oriented CSS advocates building a component library, staying flexible, 
+and utilizing a grid. These are good ground rules, and they can help you avoid 
+the need to add additional styles every time you add a new page or feature to a 
+website.</p>
+
+<h4>Scalable & Modular Architecture for CSS</h4>
+
+</p>Along the same line of Object Oriented CSS is the <a href="http://smacss.com/" 
+rel="noopener noreferrer" target="_blank">Scalable and Modular Architecture for CSS 
+(2011)</a> methodology developed by Jonathan Snook. Also worth a look is 
+<a href="https://www.lambdatest.com/blog/smacss-scalable-modular-architecture-for-css/" 
+rel="noopener noreferrer" target="_blank">Implementing SMACSS</a>. The Scalable and 
+Modular Architecture for CSS promotes breaking up styles into <b>five</b> core categories, 
+including:</p>
+
+<ul>
+  <li>Base</li>
+  <li>Layout</li>
+  <li>Module</li>
+  <li>State</li>
+  <li>Theme</li>
+</ul>
+
+<p>The <b>base</b> category includes core element styles, covering the general defaults. 
+The <b>layout</b> category then identifies the sizing and grid styles of different 
+elements, determining their layout. <b>Module</b> styles are more specific styles 
+targeting individual parts of the page, such as navigation or feature styles. The 
+<b>state</b> styles are then used to augment or override other styles in the event that a 
+module includes an alternate state, an active tab for example. Lastly, the <b>theme</b> 
+category may be added which could include styles based around the skin, or look and feel, 
+of different modules.</p>
+
+<!--   -->
+The Categorization Of CSS Rules Under SMACSS
+Besides organizing our complete CSS code separately for better readability, Jonathan 
+Snooks categorizes CSS rules into five categories. Before categorizing, he mentions, 
+“By categorizing CSS rules, we begin to see patterns and can define better practices 
+around each of these patterns.” This line summarizes quite well why we aim for 
+categorization in CSS rules.
+
+The five categories in which CSS rules are divided are:
+
+Base
+Layout
+Module
+State
+Theme
+
+Let’s explore them one by one.
+
+Base Rules
+As the name suggests, the base rules need to be applied to the base elements of a web 
+page. The below SMACSS example can be considered a part of base rules in SMACSS:
+
+<pre>
+body {
+  margin-left : 20px;
+}
+p {
+  font-family: xyz;
+}
+</pre>
+
+We apply base rules to the elements that will remain consistent throughout the web page. 
+In the above SMACSS example, we want the content to be displayed 20px from the left, and 
+the paragraph element should have a certain “font family”.
+
+You can also go for a descendent selector, child selector, and pseudo-classes, apart 
+from the direct elements. However, while creating the base rules, Jonathan strictly 
+restricts “! important” in any rules. This could be due to unwanted behavior displayed 
+when our style starts overriding from different sections or specificity issues (discussed 
+later).
+
+You also need to avoid using CSS-resets, a popular approach, to reset the CSS before 
+laying down your own. This increases the amount of code sent to the client from the 
+server. Therefore, if there is any default setting that you want to create, the base 
+rules are a great place to note them down.
+
+Also read – Getting Started With CSS Flexbox [Tutorial]
+
+Layout Rules
+The second rule talks about designing the CSS for the layout of the web app. The major 
+part of the web page is considered under the category of layouts. Designing CSS for 
+them often poses challenges as there are a lot of elements involved, and defining each 
+layout with multiple IDs makes things a bit complex.
+
+A simple example of a naive CSS design is as follows:
+
+<pre>
+#header , #features, #sidebar {
+//STYLES
+}
+#header , #features, #sidebar {
+</pre>
+ 
+But the above naive CSS design will fail when we need multiple layouts based on multiple 
+preferences. In such a case, a naming convention with the prefix ‘l’ can determine that 
+this class selector is based on a layout element.
+
+<pre>
+#header {
+  //style
+}
+#sidebar {
+  //styles
+}
+.l-mobile #sidebar {
+  //mobile-specific styling such as width
+}
+</pre>
+In the above SMACSS example, the l-mobile class determines that it has been constructed 
+to change the “layout” of an element related to mobile. Therefore, the name “l” is not 
+necessary to use in the layout rules of SMACSS. However, the author does recommend using 
+it as a standard for better readability.
+
+Also read – How To Use CSS Breakpoints For Responsive Design
+
+Module Rules
+Modules are the smaller parts of the layout elements such as navigation, widgets, 
+dialogues etc. Considering modules as part of the layout creates unnecessary complexity 
+because modules are used at several places than large layouts. You can think of layouts 
+as major layouts and modules as minor ones (referring to the book convention). Keeping 
+them separate helps us achieve simplicity in the code.
+
+Modules need to have a reusable code because of its high involvement on a web page. If we 
+keep tagging IDs to different elements, again and again, we will be in a trap before we 
+realize. The better method is to use class selectors and child elements or any other 
+inheritance in the code.
+
+<pre>
+.module > h2 {
+  //style code
+}
+.module span {
+  //styling code
+}
+</pre>
+
+The above-given approach is good only in two cases. First, when the relationships are 
+extremely clear, the developer is confident that newer relations won’t arise. Second, 
+the child selector you have used will not be confused and modified with other children 
+of the same parent. This approach is a simplified example and can easily get confusing 
+as our project grows. For SMACSS example, one more relation can be added as follows:
+
+<pre>
+.module h2 #heading-top {
+  //style
+}
+</pre>
+
+Such arrangements collide with each other and lead to specificity issues. To abstain from 
+letting the browser decide, we often go for the !important approach, which is extremely 
+dangerous, especially for larger projects. The better solution to this is using subclasses.
+
+CSS subclasses can divide styling among each other, simplifying the relationships between 
+children and their parent(s). For example, if the parent element always has to be red, but 
+children will have different fonts, we can create subclasses.
+
+<pre>
+.heading {
+  //style
+}
+.heading-email {
+  //style
+}
+.heading-news {
+  //style
+}
+</pre>
+
+Using this approach mixed with subclasses, we can define one standard styling for the 
+header and change the email and news header fonts or any other style specifically. In 
+the HTML, we just have to use both the classes:
+
+<h3 class = “heading heading-email>This is email header</h3>
+1
+
+<h3 class = “heading heading-email>This is email header</h3>
+
+Now we can create a sorted document without any coupling between the elements.
+
+State Rules
+After we have carefully crafted the layout and module rules, we need to take care of the 
+design of the state of the element. A state rule is applied when an element has multiple 
+states. For example, a module can be in an error state (depending on the error received) 
+or a success state. For both of the states, the module needs to render different styles. 
+This is where state rules come in.
+
+In this complete document, the focus has been increasing the readability of CSS and 
+simplifying the style sheet as much as possible. On the same thoughts, consider the 
+following code:
+
+<pre>
+&lt;div&gt;
+    &lt;div&gt; This is an error &lt;/div&gt;
+    &lt;div&gt; This is a success &lt;/div&gt;
+&lt;div&gt;
+</pre>
+
+I have excluded every selector from the above code as this code changes state from error 
+to success depending on the user action. Can you take a moment and think about what 
+classes can be attached to this code that satisfies SMACSS guidelines?
+
+Taking notes from the module rules, it is always better to separate things when we know 
+some style will stay stationary after the CSS has first loaded. So that becomes our 
+parent element.
+
+<pre>
+.application-form {
+  //style
+}
+</pre>
+
+For the state classes, it is always better to use names that define state even if the 
+reader has no idea about it. For the SMACSS example, we have two states in the above 
+code – error and success. Hence, the following classes can be attached:
+
+<pre>
+.is-error {
+  //style
+}
+.is-success {
+  //style
+}
+</pre>
+
+We can combine them with other modules or layout classes to give a meaningful design to 
+the client machine.
+
+<pre>
+<div class = “application-form“>
+    <div class = “msg is-error”> This is an error </div>
+    <div class = “msg is-success”> This is a success </div>
+<div>
+</pre>
+
+Note: The msg class can be a message styling class that generates some message design.
+
+So, what is the difference between module rules and state rules? They do look similar, 
+don’t they?
+
+For two very important reasons, module and state rules are similar in working and 
+styling. The lesser important reason is that they are “states” of a module or layout. 
+Hence they are defined within these elements and prefer a different naming as seen above. 
+They are attached within these modules and layouts and increase readability and 
+simplicity.
+
+The more important reason for using the state rules is the JavaScript-based changes that 
+run on the client-side based on the user’s response (hence we cannot lay down the rules 
+from the server). The JavaScript code can catch the elements and apply appropriate 
+classes to them by their current state.
+
+Jonathan has repeatedly shown his disinterest towards using the !important attribute as 
+it hinders the specificity of the code. But while stating state rules, Jonathan finds 
+it important to make use of !important as we know that one element can be in only one 
+state during execution. Hence, it becomes necessary that the state rules we are trying 
+to apply do not override other rules.
+
+Also read – A Complete Guide To CSS Variables [With Examples]
+
+Theme Rules
+As the name suggests, theme rules are defined for the theme of the web application. For 
+example, every website has a theme reflecting business or based on other strategies. The 
+theme design remains consistent throughout the web app, no matter what module you are 
+in. A classic example of theme design is typography. CSS Typography often helps connect 
+with the user, and if you are using a unique font style, users generally remember it well 
+after they have closed the browser.
+
+Theme rules are not considered core rules as the author considered the previous four. The 
+reason is that they are not required for every web-based project. Theme layout has no 
+special guidelines except to keep them in separate files for simplicity. Since class 
+names can sometimes be similar, it provides a clear distinction between layout classes, 
+module classes or theme classes.
+
+As a web developer, keep the bigger design things in the theme classes to remain 
+consistent. For example, the background color of each module may be different, so keeping 
+them in the module CSS makes more sense. At the same time, the borders of each module 
+might remain consistent with showcasing the website’s theme. Therefore, it should be 
+kept in the theme rules file.
+
+Also read – The Complete CSS Animations Tutorial [With Examples]
+<!--   -->
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;div class="alert is-error"&gt;
+ 2    &lt;p&gt;...&lt;/p&gt;
+ 3  &lt;/div&gt;
+ 4  
+</pre>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  .alert {...}
+ 2  .alert.is-error {...}
+ 3  .alert p {...}
+ 4  .alert.is-error p {...}
+ 5  
+</pre>
+
+<p>In the example above the alert class falls into the module category while the 
+is-error class falls into the state category. Styles from each of these categories 
+are then inherited as necessary.</p>
+
+<h4>Choosing a Methodology</h4>
+
+<p>Choosing which methodology to use, if any, is completely 
+<a href="http://viget.com/inspire/css-squareoff" rel="noopener noreferrer" 
+target="_blank">up to you</a> and what you feel is best for a given website. 
+Generally speaking, a solid mix of both OOCSS and SMACSS works well, borrowing 
+principles from each methodology as you prefer.</p>
+
+<h4 id="performance-drive-selectors">Performance Driven Selectors</h4>
+
+<p>One functionality of CSS often abused without awareness
+are <a href="http://csswizardry.com/2011/09/writing-efficient-css-selectors/" 
+rel="noopener noreferrer" target="_blank">selectors (2011)</a>. Much of the attention 
+within CSS is given to properties and values. So long as these styles are applied 
+to the correct element, everything looks to be fine. This is a very poor assumption. 
+How elements are selected within CSS affects performance, including how fast a page
+renders as well as how practical and modular the styles are in the overall site 
+architecture.</p>
+
+<h4>Keep Selectors Short</h4>
+
+<p>There are a handful of benefits to keeping CSS selectors as short as
+possible. These include minimizing specificity, allowing for better
+inheritance and portability, and improving efficiency. Long, over
+qualified selectors reduce performance because they force the browser to
+render each individual selector type from right to left. They also put a
+burden on all other selectors to be more specific.</p>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  /* Bad */
+ 2  header nav ul li a {...}
+ 3  
+ 4  /* Good */
+ 5  .primary-link {...}
+ 6  
+ 7  /* Bad */
+ 8  button strong span {...}
+ 9  button strong span .callout {...}
+ 10 
+ 11 /* Good */
+ 12 button span {...}
+ 13 button .callout {...}
+ 14 
+</pre>
+
+</details>
+
+<p>In the code above, the first selector is extremely specific and could be
+identified, and rendered, much quicker with the use of a class.
+Additionally, using a class in this case greatly reduces the need to
+identify an element's parent, allowing that elements location to change
+over time without breaking any styles.</p>
+
+<p>The second example includes selectors shorter than the first example but
+it can be improved by providing the same level of specificity to each
+selector. Avoid using overly specific selectors, in return they are less
+likely to break should the order of elements change. Cutting out some of
+the individual selector units, and giving all of the selectors the same
+strength, allows them to better cooperate.</p>
+
+<p>The overall goal with short selectors is to decrease specificity, creating 
+cleaner, more charitable code.</p>
+
+<h4>Favor Classes</h4>
+
+<p>Classes are great, they render quickly, allow for styles to be reused,
+and are already commonly used in building a website. When using classes
+though, there are common practices to observe in order to see that they
+are leveraged properly.</p>
+
+<p>Since selectors are rendered from right to left it is important to keep
+an eye on the <b>key selector</b>. The key selector is the selector unit at
+the end, furthest to the right. The key selector is crucial as it
+identifies the first element a browser is going to find. Having a poor
+key selector can send the browser on a wild goose hunt. Don't be afraid
+to use a class to be more unique simply for the benefit of performance.</p>
+
+<p>Additionally, do not prefix class selectors with an element. Doing so
+prohibits those styles from easily being applied to a different element
+and increases the overall specificity of the selector.</p>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  /* Bad */
+ 2  #container header nav {...}
+ 3 
+ 4  /* Good */
+ 5  .primary-nav {...}
+ 6 
+ 7  /* Bad */
+ 8  article.feat-post {...}
+ 9 
+ 10 /* Good */
+ 11 .feat-post {...}
+ 12
+</pre>
+
+</details>
+
+<p>It is also worth noting, stay away from ID selectors where possible as
+they are overly specific and do not allow for any repetition. At the end
+of the day using an ID isn't a whole lot different than using !important.</p>
+
+<h4 id="reusable-code">Reusable Code</h4>
+
+<p>One of the largest performance drawbacks comes with bloated file sizes
+and unnecessary browser rendering. One quick way to help largely cut
+down on CSS file sizes is to reuse styles as much as possible. Any
+repeating styles or interface patterns should be combined, allowing code
+to be shared. If two modules share a background, rounded corners, and a
+box shadow there is no reason to explicitly state those same styles
+twice. Instead they can be combined, within a single class, allowing the
+styles to be written once and then shared.</p>
+
+<p>Reusing code doesn't have to come at the cost of semantics either. One
+technique would be to pair selectors together, separating them with a
+comma, allowing the same styles to be inherited across two selectors.
+Another approach, often seen within the OOCSS and SMACSS methodologies
+previously mentioned, includes binding styles to one class, then using
+multiple classes on the same element.</p>
+
+<details>
+  <summary>CSS Examples</summary>
+  
+<pre>
+ 1  /* Bad */
+ 2  .news { 
+ 3    background: #eee;  
+ 4    border-radius: 5px;
+ 5    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25); 
+ 6  }
+ 7  .social {
+ 8    background: #eee;
+ 9    border-radius: 5px;
+ 10   box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
+ 11 }
+ 12
+ 13 /* Good */
+ 14 .news,
+ 15 .social {
+ 16   background: #eee;
+ 17   border-radius: 5px;
+ 18   box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
+ 19 }
+ 20 
+ 21 /* Even Better */
+ 22 .modal {
+ 23   background: #eee;
+ 24   border-radius: 5px;
+ 25   box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
+ 26 }
+ 27 
+</pre>
+
+</details>
+
+<p>Which approach you take doesn't make a huge difference, so long as code
+is being shared and reused, and the overall file size is reduced.</p>
+
+<h4 id="minify-compress-files">Minify &amp; Compress Files</h4>
+
+<p>Simply removing duplicate and unnecessary code is the best way to cut
+down on file size, however there are additional ways. One way includes 
+<a href="http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx" 
+rel="noopener noreferrer" target="_blank">minifying (2011)</a> and compressing 
+files, such as HTML, CSS, and JavaScript files. Additionally, images may be 
+compressed, removing any unnecessary comments and color profiles.</p>
+
+<h4>gzip Compression</h4>
+
+<p>One of the more popular types of file compression is called gzip. gzip
+compression takes common files, including HTML, CSS, JavaScript, and so
+forth, and identifies similar strings to compress down. The more
+matching strings identified, the smaller the file can be compressed,
+thus sending a smaller file from the server to the browser.</p>
+
+<p>Setting up gzip is fairly painless, and the <a href="http://html5boilerplate.com/" 
+rel="noopener noreferrer" target="_blank">HTML5 Boilerplate (Jan, 2010)</a> team has done
+a great job of getting this going. To gzip files an .htaccess file needs to be added 
+to the root directory of the web server, labeling the specific files to be gzipped. 
+The dot at the beginning of the file name is correct, as the .htaccess file is a 
+hidden file.</p>
+
+<p>Within the HTML5 Boilerplate Apache Server Configs, they instruct which files gzip 
+compression should be applied to. Keep in mind, the code for this compression should live 
+within a .htaccess file in the root directory of the web server. Additionally, it is 
+worth noting that .htaccess files only work on Apache web servers, which need to have 
+the following modules enabled.</p>
+
+<ul>
+  <li>mod_setenvif.c</li>
+  <li>mod_headers.c</li>
+  <li>mod_deflate.c</li>
+  <li>mod_filter.c</li>
+  <li>mod_expires.c</li>
+  <li>mod_rewrite.c</li>
+</ul>
+
+<p>Generally speaking this isn't an issue, and some web servers may even set up 
+compression for you. After all, it is in the web server's best interest to compress files 
+too.</p>
+
+<h4>Measuring Compression</h4>
+
+<p>Within the Google Chrome web browser the web inspector gives a plethora of data 
+around performance, particularly within the Network tab. Additionally, there are a few 
+websites that help identify if gzip compression is enabled.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01. gzip overview screenshot ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image001.png"
+  style="width:40%"
+  title="gzip Overview Screenshot"
+  alt="gzip Overview Screenshot." />
+</p>
+
+<p align="center"><small><small>Fig. 1</small></small></p>
+
+<p>The Network tab identifies each file loaded within the browser and displays the file 
+size and load time. Notice how gzipping has reduced the file sizes by around 60%.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 02. gzip detail screenshot ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image002.png"
+  style="width:40%"
+  title="gzip Detail Screenshot"
+  alt="gzip Detail Screenshot." />
+</p>
+<p align="center"><small><small>Fig. 1</small></small></p>
+
+<p>Looking at a file specifically identifies what type of compression encoding the 
+browser supports. In this case gzip, deflate, and sdch are all supported as noted within 
+the request headers.</p>
+
+<p>Looking at the response headers identifies that the file was sent using the gzip 
+compression encoding.</p>
+
+<h4>Image Compression</h4>
+
+<p>Cutting down the size of a text file helps, but you get even better results by 
+compressing the file size of images. The total file size of all the images across a 
+website can quickly add up, and compressing images will greatly help keep the file size 
+under control.</p>
+
+<p>Many people steer away from compressing images in fear that compression involves 
+reducing the quality of the image itself. For the most part this is incorrect, and images 
+can be compressed in a lossless fashion, allowing unnecessary color profiles and comments 
+to be removed from the image without changing the quality of the image at all.</p>
+
+<p>There are a handful of tools to help compress images, two of the best are 
+<a href="http://imageoptim.com/" rel="noopener noreferrer" target="_blank">ImageOptim</a> 
+for Mac and <a href="http://pnggauntlet.com/" rel="noopener noreferrer" target="_blank">
+PNGGauntlet</a> for Windows. Both of these services compress the most commonly used image 
+formats, specifically JPG and PNG files.</p>
+
+<h4>Image Compression Demo</h4>
+
+<h4>Uncompressed, 455kb</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 03. uncompressed ocean picture (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image003.jpeg"
+  style="width:40%"
+  title="Uncompressed Ocean Picture"
+  alt="Uncompressed Ocean Picture." />
+</p>
+
+<h4>Compressed, 401kb</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 04. compressed ocean picture (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image004.jpeg"
+  style="width:40%"
+  title="Compressed Ocean Picture"
+  alt="Compressed Ocean Picture." />
+</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 05. imageOptim screenshot (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image005.png"
+  style="width:40%"
+  title="ImageOptim Screenshot"
+  alt="ImageOptim Screenshot." />
+</p>
+<p align="center"><small><small>Fig. 4</small></small></p>
+
+<p>Using ImageOptim the above image was reduced over 14% without any reduction or loss in 
+quality.</p>
+
+<p>It should also be noted, setting an image's dimensions in HTML by way of the height 
+and width attributes <b>does help</b> render the page quicker, setting aside the 
+appropriate space for the image. Understand, these attributes are to only be used to 
+identify the exact image dimensions and not to shrink an image. Using a larger image, 
+then scaling it down with the height and width attributes is bad practice as it loads 
+more data than necessary.</p>
+
+<pre>
+ 1  &lt;img src="ocean.jpg" height="440" width="660" alt="Oceanview"&gt;
+</pre>
+
+<h4 id="reduce-http-requests">Reduce HTTP Requests</h4>
+
+<p>Next to file size, the number of HTTP requests a website makes is one of the largest 
+performance pitfalls. Each time a request is made to the server the page load time 
+increases. Some request have to finish before others can start, and too many requests can 
+bloat the server.</p>
+
+<h4>Combine Like Files</h4>
+
+<p>One way, and perhaps the easiest way, to reduce the number of HTTP requests is to 
+combine like files. Specifically, combine all of the CSS files into one and all of the 
+JavaScript files into one. Combining these files then compressing them creating one, 
+hopefully small, HTTP request.</p>
+
+<pre>
+ 1  &lt;!-- Bad --&gt;
+ 2  &lt;link href="css/reset.css" rel="stylesheet"&gt;
+ 3  &lt;link href="css/base.css" rel="stylesheet"&gt;
+ 4  &lt;link href="css/site.css" rel="stylesheet"&gt;
+ 5  
+ 6  &lt;!-- Good --&gt;
+ 7  &lt;link href="css/styles.css" rel="stylesheet"&gt;
+</pre>
+
+<p>In general, the CSS for a web page should be loaded at the <b>beginning</b> of the 
+document within the head, while the JavaScript for a web page should be loaded at the 
+<b>end</b>, just before the closing body tag. The reason for these unique placements is 
+because CSS can be loaded while the rest of the website is being loaded as well.</p>
+
+<p>JavaScript, on the other hand, can only render one file at a time, thus prohibiting 
+anything else from loading. One caveat here is when JavaScript files are asynchronously 
+loaded after the page itself is done rendering. Another caveat is when JavaScript is 
+needed in helping render the page, as such the case with the HTML5 shiv.</p>
+
+<h4>Image Sprites</h4>
+
+<p>The practice of <i>spriting</i> images within CSS includes using one background image 
+across multiple elements. The goal here is to cut down the number of HTTP requests made 
+by using multiple background images.</p>
+
+<p>To create a sprite take a handful of background images, ones that are commonly used, 
+and arrange them into one single image. Then using CSS add the sprite as a background 
+image to an element, and use the background-position property to display the correct 
+background image.</p>
+
+<p>Think of the background image sliding around behind elements, only to expose the 
+proper background image on a given element. For example, if an element is 16 pixels wide 
+by 16 pixels tall it can only expose a background image of 16 pixels by 16 pixels, with 
+the rest of the background image being hidden.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 06. menu sprite (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image006.png"
+  style="width:40%"
+  title="Menu Sprite"
+  alt="Menu Sprite." />
+</p>
+
+<p align="center"><small><small>Fig. 1</small></small></p>
+
+<p>Here is a sprite for a text editor menu, outlined with guides for
+reference of how the images background position will change.</p>
+
+<p>Using the image sprite above, a menu can be created by using the image
+sprite as a background on the span element. Then, using classes to
+change the background position of the image sprite, different icons can
+be shown accordingly.</p>
+
+<details>
+  <summary>HTML</summary>
+
+<pre>
+ 1  &lt;ul&gt;
+ 2    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="bold"&gt;Bold Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ 3    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="italic"&gt;Italicize 4 Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ 4    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="underline"&gt;Underline Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ 5    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="size"&gt;Size 7  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ 6    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="bullet"&gt;Bullet Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ 7    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="number"&gt;Number 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ 8    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="quote"&gt;Quote 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ 9    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="left"&gt;Left Align 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ 10   &lt;li&gt;&lt;a href="#"&gt;&lt;span class="center"&gt;Center Align 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ 11   &lt;li&gt;&lt;a href="#"&gt;&lt;span class="right"&gt;Right Align Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ 12 &lt;/ul&gt;
+</pre>
+
+</details>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  ul {
+ 2    margin: 0;
+ 3    padding: 0;
+ 4  }
+ 5  li {
+ 6    float: left;
+ 7    list-style: none;
+ 8    margin: 2px;
+ 9  }
+ 10 li a {
+ 11   background: linear-gradient(#fff, #eee);
+ 12   border: 1px solid #ccc;
+ 13   border-radius: 3px;
+ 14   display: block;
+ 15   padding: 3px;
+ 16 }
+ 17 li a:hover {
+ 18   border-color: #999;
+ 19 }
+ 20 li span {
+ 21   background: url("sprite.png") 0 0 no-repeat;
+ 22   color: transparent;
+ 23   display: block;
+ 24   font: 0/0 a;
+ 25   height: 16px;
+ 26   width: 16px;
+ 27 }
+ 28 .italic {
+ 29   background-position: -16px 0;
+ 30 }
+ 31 .underline { 
+ 32   background-position: -32px 0;
+ 33 }
+ 34 .size { 
+ 35   background-position: -48px 0;
+ 36 }
+ 37 .bullet {
+ 38   background-position: -64px 0;
+ 39 }
+ 40 .number {
+ 41   background-position: -80px 0;
+ 42 }
+ 43 .quote {
+ 44   background-position: -96px 0;
+ 45 }
+ 46 .left {
+ 47   background-position: -112px 0;
+ 48 }
+ 49 .center {
+ 50   background-position: -128px 0;
+ 51 }
+ 52 .right {
+ 53   background-position: -144px 0;
+ 54 }
+</pre>
+
+</details>
+
+<h4>Image Sprites Demo</h4>
+
+<h4>Image Data URI</h4>
+
+<p>Additionally, instead of spriting images, the encoded data for an image
+can be included within HTML and CSS directly by way of the 
+<a href="https://css-tricks.com/data-uris/" rel="noopener noreferrer" target="_blank">
+data URI</a>, removing the need for a HTTP request all together. Using the image 
+data URI works great for small images, likely to never change, and where the HTML 
+and CSS can be heavily cached. There are, however, a couple of problems with data
+URIs. They can be difficult to change and maintain, leading to having to generate 
+another encoding. And, they don't work in older browsers, specifically Internet 
+Explorer 7 and below.</p>
+
+<p>If using data URIs helps cut down a few HTTP requests, and the HTML or CSS can 
+be heavily cached, the benefits tend to outweigh the risk. A few tools to help 
+generate data URIs include 
+<a href="http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/" 
+rel="noopener noreferrer" target="_blank">converters</a> and 
+<a href="http://www.patternify.com/" rel="noopener noreferrer" target="_blank">
+pattern generators</a>. Be careful though, and always double check to see that 
+the actual data URI is less weight than the actual image.</p>
+
+<h5>HTML</h5>
+
+<pre>
+ 1  &lt;img height="100" width="660" alt="Rigged Pattern" src="data:image/png;base64,
+ 2  iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxoguji 
+ 3  IAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJ
+ 4  hohQAyIyYy0nBAGgAAAABJRU5ErkJggg=="&gt;
+</pre>
+
+<h5>CSS</h5>
+
+<pre>
+ 1  div {
+ 2    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAA 
+ 3    ADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxogujiIAU4RNMVwhuiQ6H6wQl3XI4oy4F
+ 4    MHcCJPHcDS6J2A2EqUQpJhohQAyIyYy0nBAGgAAAABJRU5ErkJggg==") repeat;
+ 5  }
+</pre>
+
+<h4>Image Data URI Demo</h4>
+
+<h4 id="cache-common-files">Cache Common Files</h4>
+
+<p>Another way to help cut down HTTP requests, and to serve up pages
+faster, is to cache common files. When a page loads for the first time
+specific files may then be cached. Now the browser doesn't have to
+request the same files again on repeating visits for quite some time.
+How long a period of time is up to you, all depending on how long you
+would like users to hold on to specific file types.</p>
+
+<p>As with gzipping files, setting the expires headers for caching files
+can be set within the .htaccess file. And again, the HTML5 Boilerplate
+team is one step ahead of us. In their Apache Server Configs there is a
+file specifically for setting up expires headers.</p>
+
+<p>Images, videos, web fonts, and common media types are often cached for a
+month, while CSS and JavaScript files are often cached for a year.
+Should the CSS, or any other file, change more often than once each year
+the file name will need to be changed, preferably versioned, in order to
+be loaded. Alternatively, the expires headers can be changed to a
+smaller period of time.</p>
+
+<pre>
+ 1  ExpiresByType text/css "access plus 1 year"
+ 2  ExpiresByType application/javascript "access plus 1 year"
+</pre>
+
+<p>Changing the "access plus 1 year" value to "access plus 1 week" is
+better suited for CSS and JavaScript files that are changing weekly but
+are not version controlled with separate file names. For accepted
+expires header values reference the mod_expires 
+<a href="http://httpd.apache.org/docs/current/mod/mod_expires.html" 
+rel="noopener noreferrer" target="_blank">syntax</a>.</p>
+
+<h4>Resources & Links</h4>
+
+<ul>
+  <li><a href="http://developer.yahoo.com/performance/rules.html" 
+    rel="noopener noreferrer" target="_blank">
+	Best Practices for Speeding Up Your Web Site</a> via Yahoo! Developer Network</li>
+  <li><a href="https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/"
+    rel="noopener noreferrer" target="_blank">
+    Rules for Faster-Loading Web  Sites</a> via Steve Sounders</li>
+  <li><a href="http://viget.com/inspire/css-squareoff"
+    rel="noopener noreferrer" target="_blank">
+    CSS Strategy Square-off</a> via Viget Labs</li>
+  <li><a href="http://csswizardry.com/2011/09/writing-efficient-css-selectors/"
+    rel="noopener noreferrer" target="_blank">
+    Writing Efficient CSS Selectors</a> via Harry Roberts</li>
+  <li><a href="http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx"
+    rel="noopener noreferrer" target="_blank">
+    Minifying and Optimizing Files</a> via Scott Hanselman</li>
+  <li><a href="http://html5boilerplate.com/"
+    rel="noopener noreferrer" target="_blank">
+	HTML5 Boilerplate</a></li>
+  <li><a href="https://css-tricks.com/data-uris/"
+    rel="noopener noreferrer" target="_blank">
+    Data URIs</a> via CSS-Tricks</li>
+</ul>
+
+<!-- 70 spaces -->
+<div>
+    <b>Lesson 1: </b><a href="#1-performance-organization">Performance &amp; Organization</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Lesson 3: </b><a href="#3-complex-selectors">Complex Selectors</a>
 </div>
 
-<pre>
-var x = 5; // declaring a variable
-var y = 6; // declaring another variable
-var z = x + y; // adding the variables together
-
-console.log(z); // prints the result to the console
-</pre>
-
-<h3>Variables and Data Types</h3>
-<p>JavaScript has dynamic types.This means you don’t have to specify the data type of a variable 
-when you declare it, and you can change the data type of a variable that has already been declared.</p>
-
-<pre>
-var length =16; // Number
-var lastName = "Johnson"; // String
-var x = {firstName:"John", lastName:"Doe"}; // Object
-</pre>
-
-<p>In the next chapter, we’ll dive deeper into JavaScript’s data types, how to manipulate them, 
-and how to use them effectively in your code.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch02">Chapter 02: Understanding Variables and Data Types in JavaScript</h2>
+<h2 align="center" id="2-detailed-positioning">Lesson 2: Detailed Positioning</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>In this chapter, we will explore variables and data types, which are fundamental concepts 
-in JavaScript.As you learn about these topics, you will also get to see them in action through 
-various code examples.</p>
-
-<h3>Variables</h3>
-
-<p>Variables are containers for storing data values.In JavaScript, we declare a variable using 
-the var keyword, followed by the name of the variable.Let’s look at how we can create a variable.</p>
-
-<pre>
-var name = "John Doe";
-</pre>
-
-<p>In the example above, we created a variable named name and assigned it the value “John Doe”.
-We can also declare a variable without assigning a value, and assign it later.</p>
-
-<pre>
-var name;
-name = "John Doe";
-</pre>
-
-JavaScript also provides two other keywords for declaring variables - let and const.The 
-let keyword is similar to var, but it has a block scope.On the other hand, const is used 
-for declaring constants, which are variables that cannot be reassigned.
-
-<pre>
-let age = 25;
-const country = "USA";
-</pre>
-
-<h4>Data Types</h4>
-<p>JavaScript has several data types, including:</p>
-
-<ol start="1">
-  <li>Number - Represents numeric values.For example:</li>
-</ol>
-
-<pre>
-var num = 25;
-</pre>
-
-<ol start="2">
-  <li>String - Represents sequence of characters.For example:</li>
-</ol>
-
-<pre>
-var str = "Hello World";
-</pre>
-
-<ol start="3">
-  <li>Boolean - Represents logical values.Can either be true or false.For example:</li>
-</ol>
-
-<pre>
-var isTrue = true;
-</pre>
-
-<ol start="4">
-  <li>Undefined - Represents a variable that has not been assigned a value.For example:</li>
-</ol>
-
-<pre>
-var x;
-</pre>
-
-<ol start="5">
-  <li>Null - Represents a null value.For example:</li>
-</ol>
-
-<pre>
-var y = null;
-</pre>
-
-<ol start="6">
-  <li>Object - Represents an instance through which we can access methods.For example:</li>
-</ol>
-
-<pre>
-var obj = {name: "John", age: 25, country: "USA"};
-</pre>
-
-<ol start="7">
-  <li>Array - Represents a group of similar items in a list.For example:</li>
-</ol>
-
-<pre>
-var arr = [1, 2, 3, 4, 5];
-</pre>
-
-<p>Let’s look at a few examples of these data types.</p>
-
-<pre>
-// Number
-var num = 25;
-// String
-var str = "Hello World";
-// Boolean
-var isTrue = true;
-// Undefined
-var x;
-// Null
-var y = null;
-// Object
-var obj = {name: "John", age: 25, country: "USA"};
-// Array
-var arr = [1, 2, 3, 4, 5];
-</pre>
-
-<p>In JavaScript, we can find the type of a variable using the typeof operator.</p>
-
-<pre>
-console.log(typeof num); // Returns "number"
-console.log(typeof str); // Returns "string"
-console.log(typeof isTrue); // Returns "boolean"
-console.log(typeof x); // Returns "undefined"
-console.log(typeof y); // Returns "object"
-console.log(typeof obj); // Returns "object"
-console.log(typeof arr); // Returns "object
-</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch03">Chapter 03: Variables and Data</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Types in JavaScript</h3>
-
-<p>In this chapter, we will explore the foundation of any programming language: variables 
-and data types.In JavaScript, we have a variety of data types and ways to declare variables, 
-which we will be delving into in this chapter.</p>
-
-<h3>Variables</h3>
-
-<p>In JavaScript, variables are containers for storing data values.The value stored in a 
-variable can be changed, and it’s this dynamic nature that makes variables an essential 
-part of programming.</p>
-
-<p>There are three ways to declare a variable in JavaScript</p>
-
-1.Using var
-2.Using let
-3.Using const
-
-<p>Let’s look at each of them.</p>
-
-<h4>Var</h4>
-
-<p>Before ES6, var was the only way to declare variables in JavaScript.Here is an example:</p>
-
-<pre>
-var name = "John Doe";
-</pre>
-
-<h4>Let</h4>
-<p>Introduced in ES6, let is now the preferred way to declare variables.It has more 
-restrictions than var, which helps prevent bugs in your code.Here is an example:</p>
-
-<pre>
-let name = "John Doe";
-</pre>
-
-<h4>Const</h4>
-<p>Also introduced in ES6, const is used to declare constants, i.e., variables that cannot 
-be reassigned.Here is an example:</p>
-
-<pre>
-const PI = 3.14159;
-</pre>
-
-<h3>Data Types</h3>
-
-<p>JavaScript has a few basic data types, including:</p>
-
-1.Number
-2.String
-3.Boolean
-4.Object
-5.Null
-6.Undefined
-7.Symbol(new in ES6)
-
-<h4>Number</h4>
-
-<p>Numbers in JavaScript can be with or without decimals.For example:</p>
-
-<pre>
-letnuml = 5; // without decimal
-let num2 = 5.5; // with decimal
-</pre>
-
-<h4>String</h4>
-<p>Strings are sequences of characters, and they must be inside quotes.For example:</p>
-
-<pre>
-let strl = "Hello"; // double quotes
-let str2 = 'Hello'; // single quotes
-</pre>
-
-<h4>Boolean</h4>
-Booleans can only be true or false.For example:
-
-<pre>
-let isReading = true;
-let isSleeping = false;
-</pre>
-
-<h4>Object</h4>
-Objects are complex data types that allow for the combination of other data types.For example:
-
-<pre>
-let person = {firstName: "John", lastName: "Doe", age: 30};
-</pre>
-
-<h4>Null and Undefined</h4>
-In JavaScript, null means “nothing”.It needs to be assigned:
-
-<pre>
-let nothing = null;
-</pre>
-
-Undefined means a variable has not been assigned a value:
-
-<pre>
-let something;
-console.log(something); // Outputs: undefined
-</pre>
-
-<h4>Symbol</h4>
-The Symbol data type was introduced in ES6, and it produces a unique value:
-
-<pre>
-let symbol 1 = Symbol('symbol');
-</pre>
-
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch04">Chapter 04: Functions in JS</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>In this chapter, we will delve into one of the most fundamental aspects of JavaScript: 
-functions.Functions are reusable blocks of code that perform a specific task.They can 
-take inputs, called parameters, and return an output, or result.</p>
-
-<h4>What are Functions?</h4>
-
-<p>In JavaScript, functions are first-class objects, which means they can be stored in 
-variables, passed as arguments to other functions, and returned from other functions.
-This flexibility gives JavaScript its power and versatility.</p>
-
-<h5>Here’s a simple example of a function:</h5>
-
-<pre>
-function greet() {
-console.log("Hello, World!");
-greet(); // Outputs: Hello, World!
-</pre>
-
-<p>In this example, greet is the function name, and the code inside the curly braces {} is 
-the function body.We call or invoke the function by using its name followed by 
-parentheses().</p>
-
-<h4>Function Parameters and Arguments</h4>
-
-<p>Functions can take inputs, known as parameters.When we call a function, we pass values, 
-known as arguments, into the function.</p>
-
-<h5>Here’s an example:</h5>
-
-<pre>
-function greet(name) {
-console.log("Hello," + name +
-greet("Alice"); // Outputs: Hello, Alice!
-</pre>
-
-<p>In this example, name is the parameter and “Alice” is the argument.</p>
-
-<h5>Return Statement</h5>
-<p>Functions can output a result using the return statement.When a function encounters a 
-return statement, it stops execution and returns the specified value.</p>
-
-<h5>Here’s an example:</h5>
-
-<pre>
-function square(number) {
-  return number * number;
-  console.log(square(5)); // Outputs: 25
-</pre>
-
-<p>In this example, square is a function that takes one parameter, number, and returns the 
-square of that number.</p>
-
-<h5>Function Expressions</h5>
-<p>In JavaScript, functions can also be defined using function expressions.Here’s an 
-example:</p>
-
-<pre>
-var square = function(number) {
-  return number * number;
-  1;
-console.log(square(5)); // Outputs: 25
-</pre>
-
-<p>In this example, square is a function expression that calculates the square of a number.</p>
-
-<h4>Arrow Functions</h4>
-
-<p>ES6 introduced arrow functions, a shorter way to write functions using the = > syntax.</p>
-
-<h5>Here’s an example:</h5>
-
-<pre>
-const square =(number) => {
-return number * number;
-1;
-console.log(square(5)); // Outputs: 25
-</pre>
-
-<p>In this example, square is an arrow function that calculates the square of a number.
-Now that you understand the basics of functions in JavaScript, you can use them to create 
-more complex and dynamic applications.In the next chapter, we’ll look at objects and how 
-they can help us structure our code in a more logical and readable way.</p>
-
-<p>Functions are the main building blocks in JavaScript.A function is a reusable set of 
-statements that perform a task or calculates a value.</p>
-
-<h4>Function Definition</h4>
-
-<p>In JavaScript, you can define a function using the function keyword, followed by a 
-name for the function, a list of parameters enclosed in parentheses(), and the 
-JavaScript statements that define the function enclosed in curly brackets {}.</p>
-
-<pre>
-function functionName(parameterl, parameter2, parameters) {
-// code to be executed
-</pre>
-
-<h4>Calling a Function</h4>
-<p>To call a function in JavaScript, you would simply use the function name followed by 
-parentheses().</p>
-
-<pre>
-functionName();
-</pre>
-
-<h4>Function Parameters and Arguments</h4>
-<p>Function parameters are the names listed in the function definition.Function arguments 
-are the real values that are passed to the function.</p>
-
-<pre>
-function myFunction(x; y) {
-return x * y;
-console.log(myFunction(5, 6)); // Outputs: 30
-</pre>
-
-<h4>Function Return</h4>
-<p>The return statement stops the execution of a function and returns a value from that 
-function.</p>
-
-<pre>
-function myFunction(x, y) {
-return x * y;
-var z = myFunction(5, 6); // z equal to 30
-</pre>
-
-<h4>Function Hoisting</h4>
-<p>In JavaScript, functions can be called before they are declared.This is because function 
-declarations are hoisted to the top of the current scope.</p>
-
-<pre>
-console.log(myFunction(5, 6)); // Outputs: 30
-function myFunction(x, y) {
-return x * y;
-</pre>
-
-<h4>Arrow Functions</h4>
-
-<p>Arrow functions were introduced in ES6 as a short syntax for writing function 
-expressions.You don’t need the function keyword, the return keyword, and the curly 
-brackets.</p>
-
-<pre>
-const myFunction =(x, y) = &gt; x * y;
-console.log(myFunction(5,6)); // Outputs: 30
-</pre>
-
-<p>In the next chapter, we will explore more complex aspects of JavaScript functions, 
-such as closures and higher-order functions.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch05">Chapter 05: Arrays and Iteration in JS</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>In this chapter, we will explore one of the most important data structures in 
-JavaScript: Arrays.We will go through the basics of creating and manipulating arrays, 
-along with the different methods of iterating through arrays to manipulate or access the 
-data stored within them.</p>
-
-<h4>Understanding Arrays</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch06">Chapter 06: Objects and Object-Oriented Programming in JS</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch07">Chapter 07: Loops in JS</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch08">Chapter 08: Async and Await</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch09">Chapter 09: Promises and Asynchronous Programming in JS</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch10">Chapter 10: Working with JSON in JS</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch11">Chapter 11: JS HTML DOM</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch12">Chapter 12: JS Browser BOM</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch13">Chapter 13: JS Libraries and Web APIs</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch14">Chapter 14: JS AJAX</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch15">Chapter 15: Handling Errors and Exceptions in JS</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch16">Chapter 16: Libraries and APIs</h2>
+<h3>In this Lesson 2:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<h3 id="JSStmts">JavaScript Statements</h3>
-
-<h4>Examples of JavaScript Statements:</h4>
-<ol type="1" start="1">
-  <li>Variable Declaration:</li>
-  <li>Conditional Statement:</li>
-  <li>Loops</li>
-</ol>
-
-<h3 id="JSSyntax">JavaScript Syntax</h3>
-
-[Examples of JavaScript Syntax:]
-<ol type="1" start="1">
-
-1. [.Function Definition:]
-
-2. [.Object Literal:]
-
-3. [.Array Declaration:]
-
-<h3 id="JSComments">JavaScript Comments</h3>
-<h4>Examples of TavaScript Comments:</h4>
-<ol type="1" start="1">
-  <li>Single Line Comment:</li>
-  <li>Multi - line Comment:</li>
-  <li>Commenting Out Code:</li>
-</ol>
-
-<h3 id="JSVars">JavaScript Variables</h3
-<h4>Examples of JavaScript  Variables</h4>
-<ol type="1" start="1">
-  <li>Declaring and Assigning a Variable:</li>
-  <li>String Variable:</li>
-  <li>Object Variable:</li>
-</ol>
-
-<h3 id="JSVars">JavaScript Variables</h3>
-<h4>Examples of JavaScript  Variables</h4>
-<ol type="1" start="1">
-  <li>Declaring and Assigning a Variable:</li>
-  <li>String Variable:</li>
-  <li>Object Variable:</li>
-</ol>
-
-<h3 id="JSlet">JavaScript let</h3>
-<h4>Example of let in JavaScript</h4>
-<ol type="1" start="1">
-  <li>String Variable</li>
-  <li>Object Variable</li>
-</ol>
-<h3 id="JSconst">JavaScript const</h3>
-<h4>Example of const in JavaScript</h4>
-
-<h3 id="JSOper">JavaScript Operators</h3>
-<h4>Examples of JavaScript  Operators</h4>
-<ol type="1" start="1">
-  <li>Arithmetic Operators:</li>
-  <li>Comparison Operators:</li>
-  <li>Logical Operators:</li>
-</ol>
-
-<h3 id="JSArithmetic">JS Arithmetic</h3>
-<h4>Examples of JavaScript  Arithmetic</h4>
-<ol type="1" start="1">
-  <li>Addition:</li>
-  <li>Subtraction:</li>
-  <li>Multiplication:</li>
-  <li>Division:</li>
-  <li>Modulus(Remainder):</li>
-</ol>
-
-<h3 id="JSAssign">JS Assignment</h3>
-<h4>Examples of JavaScript Assignment</h4>
-<ol type="1" start="1">
-  <li>Assigning a Value to a Variable:</li>
-  <li>Assigning the Result of an Expression:</li>
-</ol>
-
-<h3 id="JSDataTypes">JS Data Types</h3>
-<h4>Examples of JS Data Types:</h4>
-<ol type="1" start="1">
-  <li>Primitive Data Tvpes:</li>
-  <li>Complex Data Types:</li>
-</ol>
-
-<h3 id="JSFunctions">JS Functions</h3>
-<h4>Examples of JS Functions:</h4>
-<ol type="1" start="1">
-  <li>Function Declaration:</li>
-  <li>Function Call:</li>
-  <li>Arrow Function:</li>
-</ol>
-
-<h3 id="JSObjects">JS Objects</h3>
-<h4>Examples of JS Objects:</h4>
-<ol type="1" start="1">
-  <li>Object Declaration:</li>
-  <li>Accessing Object Properties:</li>
-  <li>Calling Object Method:</li>
-</ol>
-
-<h3 id="JSEvents">JS Events</h3>
-<h4>Examples of JS Events:</h4>
-<ol type="1" start="1">
-  <li>Click Events:</li>
-  <li>Input Events:</li>
-</ol>
-
-<h3 id="JSStrings">JS Strings</h3>
-<h4>Examples of JS String:</h4>
-<ol type="1" start="1">
-  <li>Declaring a String Variable:</li>
-  <li>Concatenating Strings:</li>
-</ol>
-
-<h3 id="JSStringMethods">JS String Methods</h3>
-<h4>Examples of JS String Methods:</h4>
-<ol type="1" start="1">
-  <li>toUpperCase() Method:</li>
-  <li>substring() Method:</li>
-</ol>
-
-<h3 id="JSStringMethods">JS String Templates</h3>
-<h4>Examples of JS String Templates:</h4>
-<ol type="1" start="1">
-  <li>Basic Template Literal:</li>
-  <li>Multi-line Template Literal:</li>
-</ol>
-
-<h3 id="JSNumbers">JS Numbers</h3>
-<h4>Examples of JS Numbers:</h4>
-<ol type="1" start="1">
-  <li>Whole Numbers:</li>
-  <li>Decimal Numbers:</li>
-</ol>
-
-<h3 id="JSBigInt">JS BigInt</h3>
-<h4>Examples of JS BigInt:</h4>
-<ol type="1" start="1">
-  <li>Creating a BigInt:</li>
-  <li>Performing Operations with BigInt:</li>
-</ol>
-
-<h3 id="JSNumProperties">JS Number Properties</h3>
-<h4>Examples of JS Number Properties:</h4>
-<ol type="1" start="1">
-  <li>Number_MAX_VALUE Property:</li>
-  <li>Number_MIN_VALUE Property:</li>
-</ol>
-
-<h3 id="JSArrays">JS Arrays</h3>
-<h4>Examples of JS Arrays:</h4>
-<ol type="1" start="1">
-  <li>Declaration:</li>
-  <li>Accessing Elements:</li>
-  <li>Modifying Elements:</li>
-</ol>
-
-<h3 id="JSArrayMethods">JS Array Methods</h3>
-<h4>Examples of JS Array Methods:</h4>
-<ol type="1" start="1">
-  <li>push() Method:</li>
-  <li>pop() Method:</li>
-  <li>splice() Method:</li>
-</ol>
-
-[Function Declaration:]
-[Function Call:]
-[Arrow Function:]
-
-Objects
-Objects:
-[Object Declaration:]
-[Accessing Object Properties:]
-[Calling Obiect Method:]
-
-[JS Events]
-[Examples of JS Events:]
-[Click Event:]
-[Input Event:]
-
-[JS Strings]
-[Examples of JS Strings:]
-[Declaring a String Variable:]
-[Concatenating Strings:]
-[JS String Methods]
-[Examples of JS String Methods:]
-[toUpperCase() Method:]
-[substring() Method:]
-
-String Search
-Objects:
-[Obiect Declaration:]
-[Accessing Object Properties:]
-[Calling Obiect Method:]
-[JS Events]
-[Examples of JS Events:]
-[Click Event:]
-[Input Event:]
-[JS Strings]
-[Examples of JS Strings:]
-[Declaring a String Variable:]
-[Concatenating Strings:]
-[JS String Methods]
-[Examples of JS String Methods:]
-[toUpperCase() Method:]
-[substring() Method:]
-String Search
-String Search:
-[indexOf() Method:]
-[includes() Method:]
-[JS String Templates]
-[Examples of JS String Templates:]
-[Basic Template Literal:]
-[Multi - line Template Literal:]
-[JS Numbers]
-[Examples of JS Numbers:]
-[Whole Numbers:]
-[Decimal Numbers:]
-[Scientific Notation:]
-[JS Biglnt]
-[Examples of JS Biglnt:]
-[Creating a Biglnt:]
-[Performing Operations with Biglnt:]
-[Number Methods]
-Number Methods:
-[toFixed() Method:]
-[parselnt() Method:]
-[JS Number Properties]
-[Examples of JS Number Properties:]
-[Number MAX VALUE Propertv:]
-[Number.MIN VALUE Propertv:]
-[JS Arrays]
-[Examples of JS Arrays:]
-[Declaration:]
-[Accessing Elements:]
-
-[Modifving Elements:]
-
-[JS Array Methods]
-
-[Examples of JS Array Methods:]
-
-[push() Method:]
-
-[pop() Method:]
-
-[splice() Method:]
-
-[JS Array Sort]
-
-[Examples Array Sort:]
-
-[Sorting Numbers:]
-
-[Sorting Strings:]
-
-[JS Array Iteration]
-
-[Examples of JS Array Iteration:]
-
-[forEach() Method:]
-
-[map() Method:]
-
-[JS Array Const]
-
-[Examples of JS Array Const:]
-
-[JS Dates]
-
-[Examples of JS Dates:]
-
-[Creating a Date Obiect:]
-
-[Creating a Specific Date:]
-
-[JS Date Formats]
-
-[Examples of JS Date Formats:]
-
-[Formatting to String:]
-
-[Formatting to Locale String:]
-
-[JS Date Get Methods]
-
-[Examples of TS Date Get Methods:]
-
-[getFullYear() Method:]
-
-[getMonth() Method:]
-
-[JS Date Set Methods]
-
-[Examples of TS Date Set Methods:]
-
-[setFullYear() Method:]
-
-[setMonth() Method:]
-
-[JS Math]
-
-[Examples of JS Math:]
-
-[Math.PI Propertv:]
-
-[Math.sqrt Method:]
-
-[JS Random]
-
-[Examples of JS Random:]
-
-[Generating Random Number:]
-
-[Generating Random Integer:]
-
-[JS Booleans]
-
-[Examples of JS Booleans:]
-
-[Declaration:]
-
-[Comparison:]
-
-[JS Comparisons]
-
-[Examples of JS Comparisons:]
-
-Equality Operator j.&apos; Strict Equalitv Operator j:
-
-[JS If Else]
-[Examples of JS If Else:]
-
-[Basic if else:]
-
-[Nested if &period;..else:]
-
-[JS Switch]
-
-[Examples of JS Switch:]
-
-[Basic switch] •
-
-[JS Loop For]
-
-[Examples of TS Loop For:]
+<h4>CSS</h4>
+
+<ul>
+  <li><a href="#containing-floats">Containing Floats</a></li>
+  <li><a href="#position-property">Position Property</a></li>
+  <li><a href="#z-index-property">Z-Index Property</a></li>
+</ul>
+
+<b>Share</b>
+
+<p>When it comes to building layouts and positioning content on a page
+there are a handful of different techniques to use. Which technique to
+use largely depends on the content and the goals of the page, as some
+techniques may be better than others.</p>
+
+<p>For example, the ability to float elements side by side provides a nice,
+clean layout that is receptive to the different elements on a page.
+However, when more strict control is needed, elements may be positioned
+using other techniques, including relative or absolute positioning.</p>
+
+<p>In this lesson, we'll start by taking a look at how to contain floats.
+Following that, we'll cover more detailed positioning techniques,
+including how to precisely position elements on both the x and y axis as
+well as the z axis.</p>
+
+<h4 id="containing-floats">Containing Floats</h4>
+
+<p>Floating elements is a natural process when building a website's layout,
+and is the instinctive method for positioning elements on a page. Floats
+allow elements to appear next to, or apart from, one another. They
+provide the ability to build a natural flow within a layout and allow
+elements to interact with one another based on their size and the size
+of their containing parent.</p>
+
+<p>When floated, an element's position is dependent on the other elements
+positioned around it. Will that element run into the one next to it?
+Will it appear on a new line? This all depends on the DOM (Document
+Object Model) and what surrounds an element.</p>
+
+<h4>What is the DOM?</h4>
+
+<p>The DOM, or Document Object Model, is an API for HTML and XML documents
+which provides their structural representation. In our case, we are
+speaking specifically to HTML documents, thus the DOM represents all of
+the different elements and their relationship to each other.</p>
+
+<p>The representation can be considered a tree of sorts, with each element
+having a different relationship with those around it. Elements nested
+inside others have a parent and child relationship while elements that
+share the same parent have a sibling relationship.</p>
+
+<p>While <a href="https://css-tricks.com/all-about-floats/" 
+rel="noopener noreferrer" target="_blank">floats</a> do provide quite a bit of 
+fire power, they do come with a few of their own problems. The most popular 
+problem involves a parent element that contains numerous floated elements. 
+Content on the page will respect the size and placement of the floated children 
+element, but these floated elements no longer impact the outer edges of the 
+parent container. In this event the parent element loses context of exactly what 
+it contains and collapses, thus giving the parent element a height of 0 and 
+ignoring various other properties. A lot of times this may go unnoticed, 
+specifically when the parent element doesn't have any styles tied to it and the 
+nested elements look to have aligned correctly.</p>
+
+<p>Should the nested elements not line up correctly, styling errors may
+appear. Taking a look at the demo below, the .box-set division should
+have a light gray background, however the background is not seen as all
+of the elements nested within it are floated. Upon inspecting
+the .box-set division you will see it has a height of 0.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;div class="box-set"&gt;
+ 2    &lt;figure class="box"&gt;Box 1&lt;/figure&gt;
+ 3    &lt;figure class="box"&gt;Box 2&lt;/figure&gt;
+ 4    &lt;figure class="box"&gt;Box 3&lt;/figure&gt;
+ 5  &lt;/div&gt;
+ 6  
+</pre>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  .box-set {
+ 2    background: #eaeaed;
+ 3  }
+ 4  .box {
+ 5    background: #2db34a;
+ 6    float: left;
+ 7    margin: 1.858736059%;
+ 8    width: 29.615861214%;
+ 9  }
+</pre>
+
+<h4>Containing Floats Demo</h4>
+
+<p>One way to force containing these floats would be to place an empty
+element just before the parent elements closing tag, of which would need
+to include the style declaration clear: both;. Clearing the floats this
+way works and is valid in most cases, but it isn't exactly semantic.
+Depending on how many different floats need to be cleared on a page the
+number of empty elements can begin to stack up quickly, while not
+providing any real contextual value to the page.</p>
+
+<p>Fortunately there are a couple of different techniques we can use to
+contain these floats, the most popular of which include the overflow
+technique and the clearfix technique.</p>
+
+<h4>The Overflow Technique</h4>
+
+<p>One technique for containing floats within a parent element is to use
+the CSS overflow property. Setting the overflow property value
+to auto within the parent element will contain the floats, resulting in
+an actual height for the parent element, thus including a gray
+background in our example.</p>
+
+<p>For this to work within Internet Explorer 6 a height or width is
+required on the parent element. Since the height may likely be variable
+a width of 100% will do the trick. Using overflow: auto; in Internet
+Explorer on an Apple computer will also add scrollbars to the parent
+element, in which it is better to use the overflow: hidden; declaration.</p>
+
+<pre>
+ 1  .box-set {
+ 2    overflow: auto;
+ 3  }
+</pre>
+
+<h4>Overflow Technique Demo</h4>
+
+<p>Using the overflow technique does come with a few drawbacks. For
+example, when adding styles or moving nested elements that span outside
+of the parent, like when trying to implement box shadows and dropdown
+menus. In the demonstration below, you can see how the box shadow is
+being cut off wherever it lies outside the parent element. Additionally,
+the second box is cropped outside of the parent element.</p>
+
+<p>Different browsers treat the overflow property differently, and thus
+could also implement scrollbars in different fashions here too. Look at
+the example below in different browsers, noticing how the columns
+display differently in each browser.</p>
+
+<h4>Overflow Pitfall Demo</h4>
+
+<h4>The Clearfix Technique</h4>
+
+<p>Depending on the context of the floated elements a better technique to
+contain floats may be the <a href="http://nicolasgallagher.com/micro-clearfix-hack/"
+rel="noopener noreferrer" target="_blank">clearfix</a> technique. The clearfix technique 
+is a bit more complex but does have better support as compared to the overflow technique.</p>
+
+<p>The clearfix technique is based off using
+the :before and :after pseudo-elements on the parent element. Using
+these pseudo-elements we can create hidden elements above and below the
+parent containing the floats. The :before pseudo-element is used to
+prevent the top margin of child elements from collapsing by creating an
+anonymous table-cell element using the display: table; declaration. This
+also helps ensure consistency within Internet Explorer 6 and 7.
+The :after pseudo-element is used to prevent the bottom margin of child
+elements from collapsing, as well as to clear the nested floats.</p>
+
+<p>Adding the &ast;zoom property to the parent element triggers
+the hasLayout mechanism specifically within Internet Explorer 6 and 7,
+which determines how elements should draw and bound their content, as
+well as how elements should interact with and relate to other elements.</p>
+
+<p>Taking the same example from above you can see how the floats are
+contained and the elements are able to live outside of the parent
+element.</p>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .box-set:before,
+ 2  .box-set:after {
+ 3    content: "";
+ 4    display: table;
+ 5  }
+ 6  .box-set:after {
+ 7    clear: both;
+ 8  }
+ 9  .box-set {
+ 10   *zoom: 1;
+ 11 }
+</pre>
+
+</details>
+
+<h4>Clearfix Technique Demo</h4>
+
+<h4>Effectively Containing Floats</h4>
+
+<p>Which techniques to use boils down to the content at hand and your
+personal preference. Some people prefer to stick strictly with the
+clearfix technique as it is consistent across the board. Others feel the
+clearfix technique is a bit too much code in some cases and prefer a mix
+of techniques based on the content. What you decide to use is up to you,
+just make sure it is well documented and easily identifiable either way.</p>
+
+<p>One common practice is to assign a class to the parent element which
+includes the floats needing to be contained. Using the clearfix
+technique for example, Dan Cederholm helped coin the class name group.
+The group class name can then be applied to any parent element needing
+to contain floats.</p>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .group:before,
+ 2  .group:after {
+ 3    content: "";
+ 4    display: table;
+ 5  }
+ 6  .group:after {
+ 7    clear: both;
+ 8  }
+ 9  .group {
+ 10   *zoom: 1;
+ 11  }
+</pre>
+
+</details>
+
+<h4>Single Pseudo-Elements</h4>
+
+<p>It is worth noting only one :before and one :after pseudo-element are
+allowed per element, for the time being. When trying to use the clearfix
+technique with other :before and :after pseudo-element content you may
+not achieve the desired outcome.</p>
+
+<p>In the examples above, the clearfix styles would not live under
+the box-set class. Instead, the class of group would need to be added to
+the parent element containing the floats.</p>
+
+<h4 id="position-property">Position Property</h4>
+
+<p>Occasionally you need more control over the position of an element, more
+than a float can provide, in which case the position property comes into
+play. The position property accepts five different values, each of which
+provide different ways to <a href="http://www.alistapart.com/articles/css-positioning-101/" 
+rel="noopener noreferrer" target="_blank">uniquely position</a> an element.</p>
+
+<h4>Position Static</h4>
+
+<p>Elements by default have the position value of static, meaning they
+don't have, nor will they accept, any specific 
+<a href="https://learn.shayhowe.com/html-css/opening-the-box-model/" 
+rel="noopener noreferrer" target="_blank">box offset properties</a>. 
+Furthermore, elements will be positioned as intended, with their default
+behaviors.</p>
+
+<p>In the demonstration below, all the boxes are stacked one on top of the
+other as they are block level elements and are not floated in any
+specific direction.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;div class="box-set"&gt;
+ 2    &lt;figure class="box box-1"&gt;Box 1&lt;/figure&gt;
+ 3    &lt;figure class="box box-2"&gt;Box 2&lt;/figure&gt;
+ 4    &lt;figure class="box box-3"&gt;Box 3&lt;/figure&gt;
+ 5    &lt;figure class="box box-4"&gt;Box 4&lt;/figure&gt;
+ 6  &lt;/div&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  .box-set {
+ 2    background: #eaeaed;
+ 3  }
+ 4  .box {
+ 5    background: #2db34a;
+ 6    height: 80px;
+ 7    width: 80px;
+ 8  }
+</pre>
+
+<h4>Position Static Demo</h4>
+
+<h4>Position Relative</h4>
+
+<p>The relative value for the position property is very similar to that of
+the static value. The primary difference is that the relative value
+accepts the box offset properties top, right, bottom, and left. These
+box offset properties allow the element to be precisely positioned,
+shifting the element from its default position in any direction.</p>
+
+<h4>How Box Offset Properties Work</h4>
+
+<p>The box offset properties, top, right, bottom, and left, specify how
+elements may be positioned, and in which direction. These offset
+properties only work on elements with a relative, absolute,
+or fixed positioning value.</p>
+
+<p>For relatively positioned elements, these properties specify how an
+element should be moved from its default position. For example, using
+a top value of 20px on a relatively positioned element will push the
+element 20 pixels down from where it was originally placed. Switching
+the top value to -20px will instead pull the element 20 pixels up from
+where it was originally placed.</p>
+
+<p>For elements using absolute or fixed positioning these properties
+specify the distance between the element and the edges of its parent
+element. For example, using a top value of 20px on an absolutely
+positioned element will push the element 20 pixels down from the top of
+its relatively positioned parent. Switching the top value to -20px will
+then pull the element 20 pixels up from the top of its relatively
+positioned parent.</p>
+
+<p>While the relative position does accept box offset properties the
+element still remains in the normal, or static, flow of the page. In
+this case other elements will not impede on where the relatively
+positioned element was originally placed. Additionally, the relatively
+positioned element may overlap, or underlap, other elements without
+moving them from their default position.</p>
+
+<p>In the demonstration below you will notice that the elements are still
+stacked on top of one another, however they are shifted from their
+default positions according to their individual box offset property
+values. These values cause the boxes to overlap one another, yet do not
+push each other in different directions. When an element is positioned
+relatively the surrounding elements will observe the relatively
+positioned elements default position.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;div class="box-set"&gt;
+ 2    &lt;figure class="box box-1"&gt;Box 1&lt;/figure&gt;
+ 3    &lt;figure class="box box-2"&gt;Box 2&lt;/figure&gt;
+ 4    &lt;figure class="box box-3"&gt;Box 3&lt;/figure&gt;
+ 5    &lt;figure class="box box-4"&gt;Box 4&lt;/figure&gt;
+ 6  &lt;/div&gt;
+</pre>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .box-set {
+ 2    background: #eaeaed;
+ 3  }
+ 4  .box {
+ 5    background: #2db34a;
+ 6    height: 80px;
+ 7    position: relative;
+ 8    width: 80px;
+ 9  }
+ 10 .box-1 {
+ 11   top: 20px;
+ 12 }
+ 13 .box-2 {
+ 14   left: 40px;
+ 15 }
+ 16 .box-3 {
+ 17   bottom: -10px;
+ 18   right: 20px;
+ 19 }
+</pre>
+
+</details>
+
+<h4>Position Relative Demo</h4>
+
+<p>In the event that the top and bottom box offset properties are both
+declared on a relatively positioned element, the top properties will
+take priority. Additionally, if both the left and right box offset
+properties are declared on a relatively positioned element, priority is
+given in the direction in which the language of the page is written. For
+example, in English pages the left offset property is given priority,
+and for Arabic pages the right offset property is given priority.</p>
+
+<h4>Position Absolute</h4>
+
+<p>Absolutely positioned elements accept box offset properties, however
+they are removed from the normal flow of the document. Upon removing the
+element from the normal flow, elements are positioned directly in
+relation to their containing parent whom is relatively or absolutely
+positioned. Should a relatively or absolutely positioned parent not be
+present, the absolutely positioned element will be positioned in
+relation to the body of the page.</p>
+
+<p>Using absolutely positioned elements and specifying both vertical and
+horizontal offset properties will move the element with those property
+values in relation to its relatively positioned parent. For example, an
+element with a top value of 50px and a right value of 100px will
+position the element 50 pixels down from the top of its relatively
+positioned parent and 100 pixels in from the right of its relatively
+positioned parent.</p>
+
+<p>Furthermore, using an absolutely positioned element and not specifying
+any box offset property will position the element in the top left of its
+closest relatively positioned parent. Setting one box offset property,
+such as top, will absolutely position the element vertically but will
+leave the horizontal positioning to the default value of flush left.</p>
+
+<p>In the demonstration below you can see how each box is absolutely
+positioned in relation to the parent division, of which is relatively
+positioned. Each individual box is moved in from a specific side with a
+positive value, or pulled out from a specific side with a negative
+value.</p>
+
+<details>
+  <summary>HTML</summary>
+
+<pre>
+ 1  &lt;div class="box-set"&gt;
+ 2    &lt;figure class="box box-1"&gt;Box 1&lt;/figure&gt;
+ 3    &lt;figure class="box box-2"&gt;Box 2&lt;/figure&gt;
+ 4    &lt;figure class="box box-3"&gt;Box 3&lt;/figure&gt;
+ 5    &lt;figure class="box box-4"&gt;Box 4&lt;/figure&gt;
+ 6  &lt;/div&gt;
+</pre>
+
+</details>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .box-set {
+ 2    background: #eaeaed;
+ 3    height: 200px;
+ 4    position: relative;
+ 5  }
+ 6  .box {
+ 7    background: #2db34a;
+ 8    height: 80px;
+ 9    position: absolute;
+ 10   width: 80px;
+ 11 }
+ 12 .box-1 {
+ 13   top: 6%;
+ 14   left: 2%;
+ 15  }
+ 16 .box-2 {
+ 17   top: 0;
+ 18   right: -40px;
+ 19 }
+ 20 .box-3 {
+ 21   bottom: -10px;
+ 22   right: 20px;
+ 23 }
+ 24 .box-4 {
+ 25   bottom: 0;
+ 26 }
+</pre>
+
+</details>
+
+<h4>Position Absolute Demo</h4>
+
+<p>When an element has a fixed height and width and is absolutely
+positioned, the top property takes priority should both
+the top and bottom offset properties be declared. As with the relatively
+positioned elements, should an element with a fixed width have both
+the left and right box offset properties, priority is given to the
+direction of which the language of the page is written.</p>
+
+<p>If an element doesn't have a specific height or width and is absolutely
+positioned, using a combination of the top and bottom box offset
+properties displays an element with a height spanning the entire
+specified size. Same goes for using both the left and right box offset
+properties, resulting in an element with a full width based on both of
+the left and right box offset properties. Using all four box offset
+properties will display an element with a full specified height and
+width.</p>
+
+<h4>Position Fixed</h4>
+
+<p>Using the positioning value of fixed works just like that of absolute,
+however the positioning is relative to the browser viewport, and it does
+not scroll with the page. That said, elements will always be present no
+matter where a user stands on a page. The only caveat
+with fixed positioning is that it doesn't work with Internet Explorer 6.
+Should you want to force fixed positioning within Internet Explorer 6
+there are suitable hacks.</p>
+
+<p>Using multiple box offset properties with fixed positioning will produce
+the same behaviors as an absolutely positioned element.</p>
+
+<p>Keeping the same box offset properties from the previous demonstration,
+watch how the boxes are positioned in relation to the browser's viewport
+and not the containing, relatively positioned parent.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;div class="box-set"&gt;
+ 2    &lt;figure class="box box-1"&gt;Box 1&lt;/figure&gt;
+ 3    &lt;figure class="box box-2"&gt;Box 2&lt;/figure&gt;
+ 4    &lt;figure class="box box-3"&gt;Box 3&lt;/figure&gt;
+ 5    &lt;figure class="box box-4"&gt;Box 4&lt;/figure&gt;
+ 6  &lt;/div&gt;
+</pre>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .box {
+ 2    background: #2db34a;
+ 3    height: 80px;
+ 4    position: fixed;
+ 5    width: 80px;
+ 6  }
+ 7  .box-1 {
+ 8    top: 6%;
+ 9    left: 2%;
+ 10 }
+ 11 .box-2 {
+ 12   top: 0;
+ 13   right: -40px;
+ 14 }
+ 15 .box-3 {
+ 16   bottom: -10px;
+ 17   right: 20px; 
+ 18 } 
+ 19 .box-4 {
+ 20   bottom: 0;
+ 21 }
+</pre>
+
+</details>
+
+<h4>Position Fixed Demo</h4>
+
+<h4>Fixed Header or Footer</h4>
+
+<p>One of the most common uses of fixed positioning is to build a fixed header, 
+or footer, anchored to one side of a page. As a user scrolls the element stays 
+prevalent, always within the viewport for users to interact with.</p>
+
+<p>The code and demonstration below outline how this may be achieved. Notice how 
+both left and right box offset properties are declared. This allows the footer 
+to span the entire width of the bottom of the page, and it does so without 
+disrupting the box model, allowing margins, borders, and padding to be applied 
+freely.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;footer&gt;Fixed Footer&lt;/footer&gt;
+</pre>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  body {
+ 2    background: #eaeaed;
+ 3  }
+ 4  footer {
+ 5    background: #2db34a;
+ 6    bottom: 0;
+ 7    left: 0;
+ 8    position: fixed;
+ 9    right: 0;
+ 10 }
+</pre>
+
+</details>
+
+<h4>Fixed Footer Demo</h4>
+
+<h4 id="z-index-property">Z-Index Property</h4>
+
+<p>By nature web pages are often considered to be two dimensional,
+displaying elements upon a x and y axis. However when you begin to
+position elements they are occasionally placed on top of one another. To
+change the order of 
+<a href="http://www.impressivewebs.com/a-detailed-look-at-the-z-index-css-property/" 
+rel="noopener noreferrer" target="_blank">how these elements are stacked</a>, 
+also known as the z-axis, the z-index property is to be used.</p>
+
+<p>Generally, elements are positioned upon the z-axis as they appear within
+the DOM. Elements coming at the top of the DOM are positioned behind
+elements coming after them. Changing this stacking using
+the z-index property is pretty straight forward. The element with the
+highest z-index value will appear on the top regardless of its placement
+in the DOM.</p>
+
+<p>In order to apply the z-index property to an element, you must first
+apply a position value of relative, absolute, or fixed. The same as if
+you were to apply any box offset properties.</p>
+
+<p>In the example below, without the z-index property each box will be
+positioned precisely, starting with box two sitting on top of box one,
+then box three sitting on top of box two, and so forth. Reordering the
+stacking with the z-index property now positions box two on top of every
+other box, followed by box three underneath it, and box four underneath
+box three.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;div class="box-set"&gt;
+ 2  &lt;figure class="box box-1"&gt;Box 1&lt;/figure&gt;  
+ 3  &lt;figure class="box box-2"&gt;Box 2&lt;/figure&gt;  
+ 4  &lt;figure class="box box-3"&gt;Box 3&lt;/figure&gt;  
+ 5  &lt;figure class="box box-4"&gt;Box 4&lt;/figure&gt;  
+ 6  &lt;/div&gt;
+</pre>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .box-set {
+ 2    background: #eaeaed;
+ 3    height: 160px;
+ 4    position: relative;
+ 5  }
+ 6  .box {
+ 7    background: #2db34a;
+ 8    border: 2px solid #ff7b29;
+ 9    position: absolute;
+ 10  }
+ 11 .box-1 {
+ 12   left: 10px;
+ 13   top: 10px;
+ 14 }
+ 15 .box-2 {
+ 16   bottom: 10px;
+ 17   left: 70px;
+ 18   z-index: 3;
+ 19 }
+ 20 .box-3 {
+ 21   left: 130px;
+ 22   top: 10px;
+ 23   z-index: 2;
+ 24 }
+ 25 .box-4 {
+ 26   bottom: 10px;
+ 27   left: 190px;
+ 28   z-index: 1;
+ 29 }
+</pre>
+
+</details>
+
+<h4>Z-Index Demo</h4>
+
+<h4>Resources & Links</h4>
+
+<ul>
+  <li><a href="https://css-tricks.com/all-about-floats/" 
+    rel="noopener noreferrer" target="_blank">
+	All About Floats</a> via CSS-Tricks</li>
+  <li><a href="http://nicolasgallagher.com/micro-clearfix-hack/" 
+    rel="noopener noreferrer" target="_blank">
+	A New Micro Clearfix Hack</a> via Nicolas Gallagher</li>
+  <li><a href="http://www.alistapart.com/articles/css-positioning-101/" 
+    rel="noopener noreferrer" target="_blank">
+	CSS Positioning 101</a> via A List Apart</li>
+  <li><a href="http://www.impressivewebs.com/a-detailed-look-at-the-z-index-css-property/"
+    rel="noopener noreferrer" target="_blank">
+	A Detailed Look at the z-index CSS Property</a> via Impressive Webs</li>
+</ul>
+
+<!--  -->
+<div>
+    <b>Lesson 2: </b><a href="#2-detailed-positioning">Detailed Positioning</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Lesson 4: </b><a href="#4-responsive-web-design/">Responsive Web Design</a>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 18.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image018.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:5in;" />
-<!-- [](./images/image018.jpg){width="9.57638888888889in" height="11.805555555555555in"} -->
-
-[Basic for Loop:]
-
-[Looping Array Elements:]
-
-<h2 id="JSLoop">JS Loop For In</h2>
-
-[Examples of JS Loop For In:]
-
-[Iterating Object Properties:]
-
-[JS Loop For Of]
-
-[Examples of JS Loop For Of:]
-
-[Iterating Over Array Elements:]
+<h2 align="center" id="3-complex-selectors">Lesson 3: Complex Selectors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 19.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image019.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:5in;" />
-<!-- ![](./images/image019.jpg){width="5.213582677165354e-2in" height="3.125984251968504e-2in"}[JS Loop While] -->
-
-[Examples of JS Loop While:]
-
-[Basic while Loop:]
-
-[JS Break]
-
-[Examples of JS Break:]
-
-[Using break in a Loop:]
-
-[JS Iterables]
-
-[Examples of JS Iterables:]
-
+<h3>In this Lesson 3:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 20.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image020.jpg"
-  title="Using Iterables with for.of"
-  alt="Using Iterables with for.of."
-  style="border: 2px solid #000000; width:5in;" />
-<!-- [Using Iterables with for of]![](./images/image020.jpg){width="5.213582677165354e-2in" height="5.209864391951006e-2in"} -->
+
+<h4>CSS</h4>
+
+<ul>
+  <li><a href="#common-selectors">Common Selectors</a></li>
+  <li><a href="#child-selectors">Child Selectors</a></li>
+  <li><a href="#sibling-selectors">Sibling Selectors</a></li>
+  <li><a href="#attribute-selectors">Attribute Selectors</a></li>
+  <li><a href="#pseudo-classes">Pseudo-classes</a></li>
+  <li><a href="#pseudo-elements">Pseudo-elements</a></li>
+</ul>
+
+<b>SHARE</b>
+
+<p>Selectors are one of, if not, the most important parts of CSS. They
+shape the cascade and determine how styles are to be applied to elements
+on a page.</p>
+
+<p>Up until recently the focus of CSS never really touched on selectors.
+Occasionally there would be incremental updates within the selectors
+specification, but never any real ground breaking improvements.
+Fortunately, more attention has been given to selectors as of late,
+taking a look at how to select different types of elements and elements
+in different states of use.</p>
+
+<p>CSS3 brought new selectors, opening a whole new world of opportunities
+and improvements to existing practices. Here we'll discuss 
+<a href="http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/" 
+rel="noopener noreferrer" target="_blank">selectors</a>, old and new, and how to 
+best put them to use.</p>
+
+<h4 id="common-selectors">Common Selectors</h4>
+
+<p>Before diving too deep into some of the more complex selectors, and
+those offered within CSS3, let's take a quick look at some of the more
+common selectors seen today. These selectors include the type, class,
+and ID selectors.</p>
+
+<p>The <b>type</b> selector identifies an element based on its type,
+specifically how that element is declared within HTML.
+The <b>class</b> selector identifies an element based on its class
+attribute value, which may be reused on multiple elements as necessary
+to help share popular styles. Lastly, the <b>ID</b> selector identifies an
+element based on its ID attribute value, which is unique and should only
+be used once per page.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  h1 {...}
+ 2  .tagline {...}
+ 3  #intro {...}
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;section id="intro"&gt;
+ 2    &lt;h1&gt;...&lt;/h1&gt;
+ 3    &lt;h2 class="tagline"&gt;...&lt;/h2&gt;
+ 4  &lt;/section&gt;
+</pre>
+
+<h4>Common Selectors Overview</h4>
+
+  | <b>Example</b>|<b>Classification</b> | <b>Explanation</b> |
+  -----------|-----------------------------|-----------------------------------------------------|
+  | h1       | Type Selector | Selects an element by its type.  |
+  | .tagline | Class         | Selects an element by the class attribute value, which may be reused |
+  |          | Selector      | multiple times per page. |
+  | <b>#intro</b>   | ID Selector   | Selects an element by the ID attribute value, which is unique and to |
+  |          |               | only be used once per page. |
+
+<h4>Child Selectors</h4>
+
+<p>Child selectors provide a way to select elements that fall within one
+another, thus making them children of their parent element. These
+selections can be made two different ways, using either descendant or
+direct child selectors.</p>
+
+<h4>Descendant Selector</h4>
+
+<p>The most common child selector is the descendant selector, which matches
+every element that follows an identified ancestor. The descendant
+element does not have to come directly after the ancestor element inside
+the document tree, such as a parent-child relationship, but may fall
+anywhere within the ancestor element. Descendant selectors are created
+by spacing apart elements within a selector, creating a new level of
+hierarchy for each element list.</p>
+
+<p>The article h2 selector is a descendant selector, only
+selecting h2 elements that fall inside of an article element. Notice, no
+matter where a h2 element lives, so long as it is within
+the article element, it will always be selected. Additionally,
+any h2 element outside of the article element is not selected.</p>
+
+<p>Below, the headings on lines 3 and 5 are selected.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  article h2 {...}  
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;h2&gt;...&lt;/h2&gt;  
+ 2  &lt;article&gt;
+ 3    &lt;h2&gt;This heading will be selected&lt;/h2&gt;
+ 4    &lt;div&gt; 
+ 5      &lt;h2&gt;This heading will be selected&lt;/h2&gt;
+ 6    &lt;/div&gt;
+ 7  &lt;/article&gt; 
+</pre>
+
+<h4>Direct Child Selector</h4>
+
+<p>Sometimes descendant selectors go a bit overboard, selecting more than
+hoped. At times only the direct children of a parent element need to be
+selected, not every instance of the element nested deeply inside of an
+ancestor. In this event the direct child selector may be used by placing
+a greater than sign, &gt;, between the parent element and child element
+within the selector.</p>
+
+<p>For example, article &gt; p is a direct child selector only
+identifying p elements that fall directly within an article element.
+Any p element placed outside of an article element, or nested inside of
+another element other than the article element, will not be selected.</p>
+
+<p>Below, the paragraph on line 3 is the only direct child of its parent
+article, thus selected.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  article &gt; p {...}
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;p&gt;...&lt;/p&gt; 
+ 2  &lt;article&gt;
+ 3    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 4    &lt;div&gt; 
+ 5      &lt;p&gt;...&lt;/p&gt; 
+ 6    &lt;/div&gt;
+ 7  &lt;/article&gt; 
+</pre>
+
+<h4 id="child-selectors">Child Selectors Overview</h4>
+
+  | <b>Example</b>|<b>Classification</b> | <b>Explanation</b> |
+  --------------|-----------------------------|-----------------------------------------------------|
+  | article h2  | Descendant   | Selects an element that resides anywhere within an    |
+  |             | Selector     | identified ancestor element.                          |
+  | article > p | Direct Child | Selects an element that resides immediately inside an |
+  |             | Selector     | identified parent element.                            |
+
+<h4 id="sibling-selectors">Sibling Selectors</h4>
+
+<p>Knowing how to <a href="https://css-tricks.com/child-and-sibling-selectors/" 
+rel="noopener noreferrer" target="_blank">select children</a> of an element is 
+largely beneficial, and quite commonly seen. However sibling elements, those 
+elements that share a common parent, may also need to be selected. These sibling 
+selections can be made by way of the general sibling and adjacent sibling selectors.</p>
+
+<h4>General Sibling Selector</h4>
+
+<p>The general sibling selector allow elements to be selected based on
+their sibling elements, those which share the same common parent. They
+are created by using the tilde character, &tilde;, between two elements
+within a selector. The first element identifies what the second element
+shall be a sibling with, and both of which must share the same parent.</p>
+
+<p>The h2 &tilde; p selector is a general sibling selector that looks
+for p elements that follow, and share the same parent, of any h2 elements. 
+In order for a p element to be selected it must come after any h2 element.</p>
+
+<p>The paragraphs on lines 5 and 9 are selected as they come after the
+heading within the document tree and share the same parent as their
+sibling heading.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  h2 ~ p {...}  
+</pre>
+
+<details>
+  <summary>HTML</summary>
+  
+<pre>
+ 1  &lt;p&gt;...&lt;/p&gt; 
+ 2  &lt;section&gt;
+ 3    &lt;p&gt;...&lt;/p&gt; 
+ 4    &lt;h2&gt;...&lt;/h2&gt;  
+ 5    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 6    &lt;div&gt; 
+ 7      &lt;p&gt;...&lt;/p&gt; 
+ 8    &lt;/div&gt;
+ 9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 10 &lt;/section&gt; 
+</pre>
+
+</details>
+
+<h4>Adjacent Sibling Selector</h4>
+
+<p>Occasionally a little more control may be desired, including the ability
+to select a sibling element that directly follows after another sibling
+element, which is where the adjacent sibling element comes in. The
+adjacent sibling selector will only select sibling elements directly
+following after another sibling element.</p>
+
+<p>Instead of using the tilde character, as with general sibling selectors, 
+the adjacent sibling selector uses a plus character, +, between the two elements 
+within a selector. Again, the first element identifies what the second element
+shall directly follow after and be a sibling with, and both of which must 
+share the same parent.</p>
+
+<p>Looking at the adjacent sibling selector h2 + p only p elements directly
+following after h2 elements will be selected. Both of which must also
+share the same parent element.</p>
+
+<p>The paragraph on line 5 is selected as it directly follows after its
+sibling heading along with sharing the same parent element, thus
+selected.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  h2 + p {...}
+</pre>
+
+<details>
+  <summary>HTML</summary>
+
+<pre>
+ 1  &lt;p&gt;...&lt;/p&gt;
+ 2  &lt;section&gt;
+ 3    &lt;p&gt;...&lt;/p&gt; 
+ 4    &lt;h2&gt;...&lt;/h2&gt;  
+ 5    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 6    &lt;div&gt; 
+ 7      &lt;p&gt;...&lt;/p&gt; 
+ 8    &lt;/div&gt;
+ 9    &lt;p&gt;...&lt;/p&gt; 
+ 10 &lt;/section&gt; 
+</pre>
+
+</details>
+
+<h4>Sibling Selectors Example</h4>
+
+<details>
+  <summary>HTML</summary>
+
+<pre>
+ 1  &lt;input type="checkbox" id="toggle"&gt; 
+ 2  &lt;label for="toggle"&gt;&#9776;&lt;/label&gt; 
+ 3  &lt;nav&gt; 
+ 4    &lt;ul&gt;  
+ 5      &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+ 6      &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;  
+ 7      &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;  
+ 8      &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+ 9    &lt;/ul&gt; 
+ 10 &lt;/nav&gt;
+</pre>
+
+</details>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1   input { 
+ 2     display: none;  
+ 3   } 
+ 4   label,  
+ 5   ul { 
+ 6     border: 1px solid #cecfd5;  
+ 7     border-radius: 6px;
+ 8   } 
+ 9   label { 
+ 10    color: #0087cc; 
+ 11    cursor: pointer;
+ 12    display: inline-block;
+ 13    font-size: 18px; 
+ 14    padding: 5px 9px;  
+ 15    transition: all .15s ease;  
+ 16  } 
+ 17  label:hover {
+ 18    color: #ff7b29; 
+ 19  } 
+ 20  input:checked + label {  
+ 21    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+ 22    color: #9799a7; 
+ 23  }
+ 24  nav {
+ 25    max-height: 0;  
+ 26    overflow: hidden;  
+ 27    transition: all .15s ease;  
+ 28  } 
+ 19    input:checked &tilde; nav {
+ 30    max-height: 500px; 
+ 31  } 
+ 32  ul { 
+ 33    list-style: none;  
+ 34    margin: 8px 0 0 0; 
+ 35    padding: 0;  
+ 36    width: 100px;
+ 37  } 
+ 38  li { 
+ 39    border-bottom: 1px solid #cecfd5; 
+ 40  } 
+ 41  li:last-child { 
+ 42    border-bottom: 0;  
+ 43  } 
+ 44  a {  
+ 45    color: #0087cc; 
+ 46    display: block; 
+ 47    padding: 6px 12px; 
+ 48    text-decoration: none;
+ 49  } 
+ 50  a:hover { 
+ 51    color: #ff7b29; 
+ 52  } 
+</pre>
+
+</details>
+
+<h4>Demo</h4>
+
+<h4>Sibling Selectors Overview</h4>
+
+  | <b>Example</b>|<b>Classification</b> | <b>Explanation</b> |
+  --------------|-----------------------------|-----------------------------------------------------|
+  | h2 ~ p | General Sibling  | Selects an element that follows anywhere after the prior          |
+  |        | Selector         | element, in which both elements share the same parent.            |
+  | h2 + p | Adjacent Sibling | Selects an element that follows directly after the prior element, |
+  |        | Selector         | in which both elements share the same parent.                     |
+
+
+<h4 id="attribute-selectors">Attribute Selectors</h4>
+
+<p>Some of the common selectors looked at early may also be defined as
+attribute selectors, in which an element is selected based upon its
+class or ID value. These class and ID attribute selectors are widely
+used and extremely powerful but only the beginning. Other 
+<a href="http://www.css3.info/preview/attribute-selectors/" 
+rel="noopener noreferrer" target="_blank">attribute selectors</a> have emerged 
+over the years, specifically taking a large leap forward with CSS3. Now elements 
+can be selected based on whether an attribute is present and what its value may 
+contain.</p>
+
+<h4>Attribute Present Selector</h4>
+
+<p>The first attribute selector identifies an element based on whether it
+includes an attribute or not, regardless of any actual value. To select
+an element based on if an attribute is present or not, include the
+attribute name in square brackets, &lbrack;&rbrack;, within a selector. 
+The square brackets may or may not follow any qualifier such as an element 
+type or class, all depending on the level of specificity desired.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  a&lbrack;target&rbrack; {...} 
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;a href="#" target="_blank"&gt;...&lt;/a&gt;
+</pre>
+
+<h4>Attribute Equals Selector</h4>
+
+<p>To identify an element with a specific, and exact matching, attribute
+value the same selector from before may be used, however this time
+inside of the square brackets following the attribute name, include the
+desired matching value. Inside the square brackets should be the
+attribute name followed by an equals sign, =, quotations, "", and
+inside of the quotations should be the desired matching attribute value.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  a&lbrack;href="http://google.com/"&rbrack; {...} 
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;a href="http://google.com/"&gt;...&lt;/a&gt;
+</pre>
+
+<h4>Attribute Contains Selector</h4>
+
+<p>When looking to find an element based on part of an attribute value, but
+not an exact match, the asterisk character, &ast;, may be used within the
+square brackets of a selector. The asterisk should fall just after the
+attribute name, directly before the equals sign. Doing so denotes that
+the value to follow only needs to appear, or be contained, within the
+attribute value.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  a&lbrack;href*="login"&rbrack; {...}
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;a href="/login.php"&gt;...&lt;/a&gt;
+</pre>
+
+<h4>Attribute Begins With Selector</h4>
+
+<p>In addition to selecting an element based on if an attribute value
+contains a stated value, it is also possible to select an element based
+on what an attribute value begins with. Using a circumflex accent, &Hat;,
+within the square brackets of a selector between the attribute name and
+equals sign denotes that the attribute value should begin with the
+stated value.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  a&lbrack;href&Hat;="https://"&rbrack; {...}
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;a href="https://chase.com/"&gt;...&lt;/a&gt;
+</pre>
+
+<h4>Attribute Ends With Selector</h4>
+
+<p>Opposite of the begins with selector, there is also an ends with
+attribute selector. Instead of using the circumflex accent, the ends
+with attribute selector uses the dollar sign, $, within the square
+brackets of a selector between the attribute name and equals sign. Using
+the dollar sign denotes that the attribute value needs to end with the
+stated value.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  a&lbrack;href$=".pdf"&rbrack; {...} 
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;a href="/docs/menu.pdf"&gt;...&lt;/a&gt;
+</pre>
+
+<h4>Attribute Spaced Selector</h4>
+
+<p>At times attribute values may be spaced apart, in which only one of the
+words needs to be matched in order to make a selection. In this event
+using the tilde character, &tilde;, within the square brackets of a selector
+between the attribute name and equals sign denotes an attribute value
+that should be whitespace-separated, with one word matching the exact
+stated value.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  a&lbrack;rel&tilde;="tag"&rbrack; {...}
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;a href="#" rel="tag nofollow"&gt;...&lt;/a&gt;
+</pre>
+
+<h4>Attribute Hyphenated Selector</h4>
+
+<p>When an attribute value is hyphen-separated, rather than
+whitespace-separated, the vertical line character, &#0124;, may be used
+within the square brackets of a selector between the attribute name and
+equals sign. The vertical line denotes that the attribute value may be
+hyphen-separated however the hyphen-separated words must begin with the
+stated value.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  a&lbrack;lang&#0124;="en"&rbrack; {...}
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;a href="#" lang="en-US"&gt;...&lt;/a&gt;
+</pre>
+
+<h4>Attribute Selectors Example</h4>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;ul&gt;  
+ 2    &lt;li&gt;&lt;a href="#.pdf"&gt;PDF Document&lt;/a&gt;&lt;/li&gt;
+ 3    &lt;li&gt;&lt;a href="#.doc"&gt;Word Document&lt;/a&gt;&lt;/li&gt;  
+ 4    &lt;li&gt;&lt;a href="#.jpg"&gt;Image File&lt;/a&gt;&lt;/li&gt;  
+ 5    &lt;li&gt;&lt;a href="#.mp3"&gt;Audio File&lt;/a&gt;&lt;/li&gt;  
+ 6    &lt;li&gt;&lt;a href="#.mp4"&gt;Video File&lt;/a&gt;&lt;/li&gt;  
+ 7  &lt;/ul&gt;
+</pre>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  ul { 
+ 2    list-style: none;  
+ 3    margin: 0;
+ 4    padding: 0;  
+ 5  } 
+ 6  a {  
+ 7    background-position: 0 50%; 
+ 8    background-repeat: no-repeat;  
+ 9    color: #0087cc; 
+ 10   padding-left: 22px;
+ 11   text-decoration: none;
+ 12 } 
+ 13 a:hover { 
+ 14   color: #ff7b29; 
+ 15 } 
+ 16 a&lbrack;href&$=".pdf"&rbrack; {
+ 17   background-image: url("images/pdf.png");
+ 18 } 
+ 19 a&lbrack;href$=".doc"&rbrack; {
+ 20   background-image: url("images/doc.png");
+ 21 } 
+ 22 a&lbrack;href$=".jpg"&rbrack; {
+ 23   background-image: url("images/image.png"); 
+ 24 } 
+ 25 a&lbrack;href$=".mp3"&rbrack; {
+ 26   background-image: url("images/audio.png"); 
+ 27 } 
+ 28 a&lbrack;href$=".mp4"&rbrack; {
+ 29   background-image: url("images/video.png"); 
+ 30 } 
+</pre>
+
+</details>
+
+<h4>Demo</h4>
+
+<h4>Attribute Selectors Overview</h4>
+
+  | <b>Example</b> | <b>Classification</b> | <b>Explanation</b> |
+  |---------------|----------------------|----------------------------------------------|
+  | a[target]     | Attribute Present    | Selects an element if the given attribute is |
+  |               | Selector             | present. |
+  | a[href="http://google.com/"] | Attribute Equals | Selects an element if the given attribute value |
+  |                              | Selector         | exactly matches the value stated. |
+  | a[href&ast;="login"]             | Attribute Contains           | Selects an element if the given attribute value |
+  |                              | Selector                     | contains at least one instance of the value stated |
+  | a[href&Hat;="https://"] | Attribute Begins | Selects an element if the given attribute value |
+  |                         | with Selector    | begins with the value stated.                   |
+  | a[href$=".pdf"]         | Attribute Ends   | Selects an element if the given attribute value |
+  |                         | With Selector    | ends with the value stated.                     |
+  | a[rel&tilde;="tag"]     | Attribute Spaced | Selects an element if the given attribute value |
+  |                         | Selector         | is whitespace-separated with one word being     |
+  |                         |                  | exactly as stated.                              |
+  | a[lang&#0124;="en"]     | Attribute        | Selects an element if the given attribute value |
+  |                         | Hyphenated       | is hyphen-separated and begins with the word stated. |
+
+<h4 id="pseudo-classes">Pseudo-classes</h4>
+
+<p><a href="http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/" 
+rel="noopener noreferrer" target="_blank">
+Pseudo-classes</a> are similar to regular classes in HTML however they are not 
+directly stated within the markup, instead they are dynamically populated as a 
+result of users' actions or the document structure. The most common pseudo-class,
+and one you've likely seen before, is :hover. Notice how this pseudo-class begins 
+with the colon character, :, as will all other pseudo-classes.</p>
+
+<h4>Link Pseudo-classes</h4>
+
+<p>Some of the more basic pseudo-classes include two revolving around links
+specifically. The :link and :visited pseudo-classes define if a link has
+or hasn't been visited. To style an anchor which has not been visited
+the :link pseudo-class comes into play, where the :visited pseudo-class
+styles links that a user has already visited based on their browsing
+history.</p>
+
+<pre>
+ 1  a:link {...}
+ 2  a:visited {...}
+</pre>
+
+<h4>User Action Pseudo-classes</h4>
+
+<p>Based on a users' actions different pseudo-classes may be dynamically
+applied to an element, of which include the :hover, :active,
+and :focus pseudo-classes. The :hover pseudo-class is applied to an
+element when a user moves their cursor over the element, most commonly
+used with anchor elements. The :active pseudo-class is applied to an
+element when a user engages an element, such as clicking on an element.
+Lastly, the :focus pseudo-class is applied to an element when a user has
+made an element the focus point of the page, often by using the keyboard
+to tab from one element to another.</p>
+
+<pre>
+ 1  a:hover {...}  
+ 2  a:active {...} 
+ 3  a:focus {...}  
+</pre>
+
+<h4>User Interface State Pseudo-classes</h4>
+
+<p>As with the link pseudo-classes there are also some pseudo-classes
+generated around the user interface state of elements, particularly
+within form elements. These user interface element state pseudo-classes
+include :enabled, :disabled, :checked, and :indeterminate.</p>
+
+<p>The :enabled pseudo-class selects an input that is in the default state
+of enabled and available for use, where the :disabled pseudo-class
+selects an input that has the disabled attribute tied to it. Many
+browsers by default will fade out disabled inputs to inform users that
+the input is not available for interaction, however those styles may be
+adjusted as wished with the :disabled pseudo-class.</p>
+
+<pre>
+ 1  input:enabled {...}
+ 2  input:disabled {...}
+</pre>
+
+<p>The last two user interface element state pseudo-classes
+of :checked and :indeterminate revolve around checkbox and radio button
+input elements. The :checked pseudo-class selects checkboxes or radio
+buttons that are, as you may expect, checked. When a checkbox or radio
+button has neither been selected nor unselected it lives in an
+indeterminate state, from which the :indeterminate pseudo-class can be
+used to target these elements.</p>
+
+<pre>
+ 1  input:checked {...}
+ 2  input:indeterminate {...}
+</pre>
+
+<h4>Structural & Position Pseudo-classes</h4>
+
+<p>A handful of pseudo-classes are structural and position based, in which
+they are determined based off where elements reside in the document
+tree. These structural and position based pseudo-classes come in a few
+different shapes and sizes, each of which provides their own unique
+function. Some pseudo-classes have been around longer than others,
+however CSS3 brought way of an entire new set of pseudo-classes to
+supplement the existing ones.</p>
+
+<h3>:first-child, :last-child, &amp; :only-child</h3>
+
+<p>The first structural and position based pseudo-classes one is likely to
+come across are the :first-child, :last-child,
+and :only-child pseudo-classes. The :first-child pseudo-class will
+select an element if it's the first child within its parent, while
+the :last-child pseudo-class will select an element if it's the last
+element within its parent. These pseudo-classes are perfect for
+selecting the first or last items in a list and so forth. Additionally,
+the :only-child will select an element if it is the only element within
+a parent. Alternately, the :only-child pseudo-class could be written
+as :first-child:last-child, however :only-child holds a lower
+specificity.</p>
+
+<p>Here the selector li:first-child identifies the first list item within a
+list, while the selector li:last-child identifies the last list item
+within a list, thus lines 2 and 10 are selected. The
+selector div:only-child is looking for a division which is the single
+child of a parent element, without any other other siblings. In this
+case line 4 is selected as it is the only division within the specific
+list item.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  li:first-child {...}
+ 2  li:last-child {...}
+ 3  div:only-child {...}
+</pre>
+
+<details>
+  <summary>HTML</summary>
+
+<pre>
+ 1  &lt;ul&gt;
+ 2    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 3    &lt;li&gt;
+ 4      &lt;div&gt;This div will be selected&lt;/div&gt;
+ 5    &lt;/li&gt;
+ 6    &lt;li&gt;
+ 7      &lt;div&gt;...&lt;/div&gt;
+ 8      &lt;div&gt;...&lt;/div&gt;
+ 9    &lt;/li&gt;
+ 10   &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 11 &lt;/ul&gt;
+</pre>
+
+</details>
+
+<h3>:first-of-type, :last-of-type, &amp; :only-of-type</h3>
+
+<p>Finding the first, last, and only children of a parent is pretty
+helpful, and often all that is needed. However sometimes you only want
+to select the first, last, or only child of a specific type of element.
+For example, should you only want to select the first or last paragraph
+within an article, or perhaps the only image within an article.
+Fortunately this is where the :first-of-type, :last-of-type,
+and :only-of-type pseudo-selectors come into place.</p>
+
+<p>The :first-of-type pseudo-class will select the first element of its type 
+within a parent, while the :last-of-type pseudo-class will select the last 
+element of its type within a parent. The :only-of-type pseudo-class will select 
+an element if it is the only of its type within a parent.</p>
+
+</p>In the example below the p:first-of-type and p:last-of-type pseudo-classes 
+select the first and last paragraphs within the article respectively, regardless 
+if they are actually the first or last children within the article. Lines 3 and
+6 are selected, reflecting these selectors. The img:only-of-type selector 
+identifies the image on line 5 as it is the only image to appear within the 
+article, thus also selected.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  p:first-of-type {...}
+ 2  p:last-of-type {...}
+ 3  img:only-of-type {...}
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;article&gt;
+ 2    &lt;h1&gt;...&lt;/h1&gt;
+ 3    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 4    &lt;p&gt;...&lt;/p&gt;
+ 5    &lt;img src="#"&gt;&lt;!-- This image will be selected --&gt;
+ 6    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 7    &lt;h6&gt;...&lt;/h6&gt;
+ 8  &lt;/article&gt;
+</pre>
+
+<p>Lastly, there are a few structural and position based pseudo-classes that
+select elements based on a number or an algebraic expression. These pseudo-classes
+include :nth-child(n), :nth-last-child(n), :nth-of-type(n), and :nth-last-of-type(n). 
+All of these unique pseudo-classes are prefixed with nth and accept a number or 
+expression inside of the parenthesis, indicated by the character n argument.</p>
+
+<p>The number or expression that falls within the parenthesis determines
+exactly what element, or elements, are to be selected. Using a number
+outright will count individual elements from the beginning or end of the
+document tree and then select one element, while using an expression
+will count numerous elements from the beginning or end of the document
+tree and select them in groups or multiples.</p>
+
+<h4>Using Pseudo-class Numbers &amp; Expressions</h4>
+
+<p>As mentioned, using numbers outright within a pseudo-class will count
+from the beginning, or end, of the document tree and select one element
+accordingly. For example, the li:nth-child(4) selector will select the
+fourth list item within a list. Counting begins with the first list item
+and increases by one for each list item, until finally locating and
+selecting the fourth item. When using a number outright it must be a
+positive number.</p>
+
+<p><a href="http://reference.sitepoint.com/css/understandingnthchildexpressions" 
+rel="noopener noreferrer" target="_blank">
+Expressions for pseudo-classes</a> fall in the format of *a*n, *a*n+*b*, *a*n-*b*, 
+n+*b*, *-*n+*b*, and *-a*n+*b*. The same expression may be translated and read
+as (a×n)±b. The a variable stands for the multiplier in which elements
+will be counted in while the b variable stands for where the counting
+will begin or take place.</p>
+
+<p>For example, the li:nth-child(3n) selector will identify every third
+list item within a list. Using the expression this equates
+to 3×0, 3×1, 3×2, and so forth. As you can see the results of this
+expression lead to the third, sixth, and every element a multiple of
+three being selected.</p>
+
+<p>Additionally, the odd and even keyword values may be used. As expected,
+these will select odd or even elements respectively. Should keyword
+values not be appealing the expression of 2n+1 would select all odd
+elements while the expression of 2n would select all even elements.</p>
+
+<p>Using the li:nth-child(4n+7) selector will identify every fourth list
+item starting with the seventh list item. Again, using the expression
+this equates to (4×0)+7, (4×1)+7, (4×2)+7, and so forth. The results of
+this expression leading to the seventh, eleventh, fifteenth, and every
+element that is a multiple of four here on out being selected.</p>
+
+<p>Using the n argument without being prefixed by a number results in
+the a variable being interpreted as 1. With
+the li:nth-child(n+5) selector every list item will be selected starting
+with the fifth list item, leaving the first four list items unselected.
+Within the expression this breaks down as (1×0)+5, (1×1)+5, (1×2)+5, and
+so forth.</p>
+
+<p>To make things a bit more complicated negative numbers may also be used. For 
+example, the li:nth-child(6n-4) selector will start counting every sixth list 
+item starting at negative four, selecting the second, eighth, and fourteenth 
+list items and so forth. The same selector, li:nth-child(6n-4), could also be 
+written as li:nth-child(6n+2), without the use of a negative b variable.</p>
+
+<p>A negative a variable, or a negative n argument, must be followed by a positive 
+b variable. When preceded by a negative a variable or negative n argument the b 
+variable identifies how high the counting will reach. For example, the 
+li:nth-child(-3n+12) selector will select every third list item within the first 
+twelve list items. The selector li:nth-child(-n+9) will select the first nine 
+list items within a list, as the n argument, without any stated a variable, is 
+defaulted to -1.</p>
+
+<h4>:nth-child(n) & :nth-last-child(n)</h4>
+
+<p>With a general understanding of how the pseudo-class numbers and expressions 
+work let's take a look at the actual pseudo-classes in which these numbers and 
+expressions may be used, the first of which being the :nth-child(n) and 
+:nth-last-child(n) pseudo-classes. These pseudo-classes work a bit like the 
+:first-child and :last-child pseudo-classes in that they look, and count, all 
+of the elements within a parent and only select the element specifically 
+identified. The :nth-child(n) works from the beginning of the document tree 
+while the :nth-last-child(n) works from the end of the document tree.</p>
+
+<p>Using the :nth-child(n) pseudo-class, let's look at
+the li:nth-child(3n) selector. The selector here will identify every
+third list item, thus lines 4 and 7 are selected.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  li:nth-child(3n) {...}
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;ul&gt;
+ 2    &lt;li&gt;...&lt;/li&gt;
+ 3    &lt;li&gt;...&lt;/li&gt;
+ 4    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 5    &lt;li&gt;...&lt;/li&gt;
+ 6    &lt;li&gt;...&lt;/li&gt;
+ 7    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 8  &lt;/ul&gt;
+</pre>
+
+<p>Using a different expression within the :nth-child(n) pseudo-class will
+yield a different selection. The li:nth-child(2n+3) selector, for
+example, will identify every second list item starting with the third
+and then onward. As a result, the list items lines 4 and 6 are selected.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  li:nth-child(2n+3) {...}
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;ul&gt;
+ 2    &lt;li&gt;...&lt;/li&gt;
+ 3    &lt;li&gt;...&lt;/li&gt;
+ 4    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 5    &lt;li&gt;...&lt;/li&gt;
+ 6    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 7    &lt;li&gt;...&lt;/li&gt;
+ 8  &lt;/ul&gt;
+ 9 
+</pre>
+
+<p>Changing the expression again, this time with a negative value, yields
+new selection. Here the li:nth-child(-n+4) selector is identifying the
+top four list items, leaving the rest of the list items unselected, thus
+lines 2 through 5 are selected.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  li:nth-child(-n+4) {...}
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;ul&gt;
+ 2    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 3    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 4    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 5    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 6    &lt;li&gt;...&lt;/li&gt;
+ 7    &lt;li&gt;...&lt;/li&gt;
+ 8  &lt;/ul&gt;
+</pre>
+
+<p>Adding a negative integer before the n argument changes the selection
+again. Here the li:nth-child(-2n+5) selector identifies every second
+list item within the first five list items starting with the first list
+item, thus the list items on lines 2, 4, and 6 are selected.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  li:nth-child(-2n+5) {...}
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;ul&gt;
+ 2    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 3    &lt;li&gt;...&lt;/li&gt;
+ 4    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 5    &lt;li&gt;...&lt;/li&gt;
+ 6    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 7    &lt;li&gt;...&lt;/li&gt;
+ 8  &lt;/ul&gt;
+</pre>
+
+<p>Changing from the :nth-child(n) pseudo-class to the :nth-last-child(n) pseudo-class 
+switches the direction of counting, with counting starting from the end of the 
+document tree using the :nth-last-child(n) pseudo-class. The li:nth-last-child(3n+2) 
+selector, for example, will identify every third list item starting from the second 
+to last item in a list, moving towards the beginning of the list. Here the list 
+items on lines 3 and 6 are selected.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  li:nth-last-child(3n+2) {...}
+
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;ul&gt;
+ 2    &lt;li&gt;...&lt;/li&gt;
+ 3    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 4    &lt;li&gt;...&lt;/li&gt;
+ 5    &lt;li&gt;...&lt;/li&gt;
+ 6    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 7    &lt;li&gt;...&lt;/li&gt;
+ 8  &lt;/ul&gt;
+</pre>
+
+<h4>:nth-of-type(n) & :nth-last-of-type(n)</h4>
+
+<p>The :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes are very similar to 
+that of the :nth-child(n) and :nth-last-child(n) pseudo-classes, however instead
+of counting every element within a parent the :nth-of-type(n) and 
+:nth-last-of-type(n) pseudo-classes only count elements of their own type. For 
+example, when counting paragraphs within an article,  the :nth-of-type(n) and 
+:nth-last-of-type(n) pseudo-classes will skip any headings, divisions, or 
+miscellaneous elements that are not paragraphs, while the :nth-child(n) and 
+:nth-last-child(n) would count every element, no matter its type, only selecting 
+the ones that match the element within the stated selector.</p>
+
+<p>Additionally, all of the same expression possibilities used within the 
+:nth-child(n) and :nth-last-child(n) pseudo-classes are also available within 
+the :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes.</p>
+
+<p>Using the :nth-of-type(n) pseudo-class within the p:nth-of-type(3n) selector 
+we are able to identify every third paragraph within a parent, regardless of 
+other sibling elements within the parent. Here the paragraphs on lines 5 and 9 
+are selected.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  p:nth-of-type(3n) {...}
+</pre>
+
+<details>
+  <summary>HTML</summary>
+
+<pre>
+ 1  &lt;article&gt;
+ 2    &lt;h1&gt;...&lt;/h1&gt;
+ 3    &lt;p&gt;...&lt;/p&gt;
+ 4    &lt;p&gt;...&lt;/p&gt;
+ 5    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 6    &lt;h2&gt;...&lt;/h2&gt;
+ 7    &lt;p&gt;...&lt;/p&gt;
+ 8    &lt;p&gt;...&lt;/p&gt;
+ 9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 10 &lt;/article&gt;
+</pre>
+
+</details>
+
+<p>As with the :nth-child(n) and :nth-last-child(n) pseudo-classes, the primary 
+difference between the :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes 
+is that the :nth-of-type(n) pseudo-class counts elements from the beginning of
+the document tree and the :nth-last-of-type(n) pseudo-class counts elements 
+from the end of the document tree.</p>
+
+<p>Using the :nth-last-of-type(n) pseudo-class we can write
+the p:nth-last-of-type(2n+1) selector which identifies every second
+paragraph from the end of a parent element starting with the last
+paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  p:nth-last-of-type(2n+1) {...}
+</pre>
+
+<details>
+  <summary>HTML</summary>
+
+<pre>
+ 1  &lt;article&gt;
+ 2    &lt;h1&gt;...&lt;/h1&gt;
+ 3    &lt;p&gt;...&lt;/p&gt;
+ 4    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 5    &lt;p&gt;...&lt;/p&gt;
+ 6    &lt;h2&gt;...&lt;/h2&gt;
+ 7    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 8    &lt;p&gt;...&lt;/p&gt;
+ 9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 10 &lt;/article&gt;
+</pre>
+
+</details>
+
+<h4>Target Pseudo-class</h4>
+
+<p>The :target pseudo-class is used to style elements when an element's ID
+attribute value matches that of the URI fragment identifier. The
+fragment identifier within a URI can be recognized by the hash
+character, #, and what directly follows it. The
+URL http://example.com/index.html#hello includes the fragment identifier
+of hello. When this identifier matches the ID attribute value of an
+element on the page, &lt;section id="hello"&gt; for example, that element
+may be identified and stylized using the :target pseudo-class. Fragment
+identifiers are most commonly seen when using 
+<a href="https://learn.shayhowe.com/html-css/getting-to-know-html/#hyperlinks" 
+rel="noopener noreferrer" target="_blank">
+on page links</a>, or linking to another part of the same page.</p>
+
+<p>Looking at the code below, if a user would visit a page with the URI
+fragment identifier of #hello, the section with that same ID attribute
+value would be stylized accordingly using the :target pseudo-class. If
+the URI fragment identifier changes, and matches the ID attribute value
+of another section, that new section may be stylized using the same
+selector and pseudo-class from before.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  section:target {...}
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;section id="hello"&gt;...&lt;/section&gt;
+</pre>
+
+<h4>Empty Pseudo-class</h4>
+
+<p>The :empty pseudo-class allows elements that do not contain children or
+text nodes to be selected. Comments, processing instructions, and empty
+text nodes are not considered children and are not treated as such.</p>
+
+<p>Using the div:empty pseudo-class will identify divisions without any children 
+or text nodes. Below the divisions on lines 2 and 3 are selected, as they are 
+completely empty. Even though the second division contains a comment, it is not 
+considered to be a child, thus leaving the division empty. The first division 
+contains text, the fourth division contains one blank text space, and the last 
+division contains a strong child element, thus they are all ruled out and are 
+not selected.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  div:empty {...}
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;div&gt;Hello&lt;/div&gt;
+ 2  &lt;div&gt;&lt;!-- Coming soon --&gt;&lt;/div&gt;&lt;!-- This div will be 
+ 3  selected --&gt;
+ 4  &lt;div&gt;&lt;/div&gt;&lt;!-- This div will be selected --&gt;
+ 5  &lt;div&gt; &lt;/div&gt;
+ 6  &lt;div&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/div&gt;
+</pre>
+
+<h4>Negation Pseudo-class</h4>
+
+<p>The negation pseudo-class, :not(x), is a pseudo-class that takes an
+argument which is filtered out from the selection to be made.
+The p:not(.intro) selector uses the negation pseudo-class to identify
+every paragraph element without the class of intro. The paragraph
+element is identified at the beginning of the selector followed by
+the :not(x) pseudo-class. Inside of the parentheses falls the negation
+selector, the class of .intro in this case.</p>
+
+<p>Below, both the div:not(.awesome) and :not(div) selectors use
+the :not(x) pseudo-class. The div:not(.awesome) selector identifies any
+division without the class of awesome, while the :not(div) selector
+identifies any element that isn't a division. As a result the, division
+on line 1 is selected, as well as the two sections on lines 3 and 4,
+thus they are marked bold. The only element not selected is the division
+with the class of awesome, as it falls outside of the two negation
+pseudo-classes.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  div:not(.awesome) {...}
+ 2  :not(div) {...}
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;div&gt;This div will be selected&lt;/div&gt;
+ 2  &lt;div class="awesome"&gt;...&lt;/div&gt;
+ 3  &lt;section&gt;This section will be selected&lt;/section&gt;
+ 4  &lt;section class="awesome"&gt;This section will be selected&lt;/section&gt;
+</pre>
+
+<h4>Pseudo-classes Example</h4>
+
+<details>
+  <summary>HTML</summary>
+
+<pre>
+ 1  &lt;table&gt;
+ 2    &lt;thead&gt;
+ 3      &lt;tr&gt;
+ 4        &lt;th&gt;Number&lt;/th&gt;
+ 5        &lt;th&gt;Player&lt;/th&gt;
+ 6        &lt;th&gt;Position&lt;/th&gt;
+ 7        &lt;th&gt;Height&lt;/th&gt;
+ 8        &lt;th&gt;Weight&lt;/th&gt;
+ 9      &lt;/tr&gt;
+ 10   &lt;/thead&gt;
+ 11   &lt;tbody&gt;
+ 12     &lt;tr&gt;
+ 13       &lt;td&gt;8&lt;/td&gt;
+ 14       &lt;td&gt;Marco Belinelli&lt;/td&gt;
+ 15       &lt;td&gt;G&lt;/td&gt;
+ 16       &lt;td&gt;6-5&lt;/td&gt;
+ 17       &lt;td&gt;195&lt;/td&gt;
+ 18     &lt;/tr&gt;
+ 19     &lt;tr&gt;
+ 20       &lt;td&gt;5&lt;/td&gt;
+ 21       &lt;td&gt;Carlos Boozer&lt;/td&gt;
+ 22       &lt;td&gt;F&lt;/td&gt;
+ 23       &lt;td&gt;6-9&lt;/td&gt;
+ 24       &lt;td&gt;266&lt;/td&gt;
+ 25     &lt;/tr&gt;
+ 26     ...
+ 27   &lt;/tbody&gt;
+ 28 &lt;/table&gt;
+</pre>
+
+</details>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1   table {
+ 2     border-collapse: separate;
+ 3     border-spacing: 0;
+ 4     width: 100%;
+ 5   }
+ 6   th,
+ 7   td {
+ 8     padding: 6px 15px;
+ 9   }
+ 10  th {
+ 11    background: #42444e;
+ 12    color: #fff;
+ 13    text-align: left;
+ 14  }
+ 15  tr:first-child th:first-child {
+ 16    border-top-left-radius: 6px;
+ 17  }
+ 18  tr:first-child th:last-child {
+ 19    border-top-right-radius: 6px;
+ 20  }
+ 21  td {
+ 22    border-right: 1px solid #c6c9cc;
+ 23    border-bottom: 1px solid #c6c9cc;
+ 24  }
+ 25  td:first-child {
+ 26    border-left: 1px solid #c6c9cc;
+ 27  }
+ 28  tr:nth-child(even) td {
+ 29    background: #eaeaed;
+ 30  }
+ 31  tr:last-child td:first-child {
+ 32    border-bottom-left-radius: 6px;
+ 33  }
+ 34  tr:last-child td:last-child {
+ 35    border-bottom-right-radius: 6px;
+ 36  }
+</pre>
+
+</details>
+
+<h4>Demo</h4>
+
+<h4>Pseudo-classes Overview</h4>
+
+  | <b>Example</b> | <b>Classification</b> | <b>Explanation</b> |
+  |---------------|----------------------|---------------------------------------------------|
+  | a:link        | Link Pseudo-    | Selects a link that has not been visited by a user.    |
+  |               | class           |                                                        |
+  | a:visited     | Link Pseudo-    | Selects a link that has been visited by a user.        |
+  |               | class           |                                                        |
+  | a:hover       | Action Pseudo-  | Selects an element when a user has hovered their       |
+  |               | class           | cursor over it.                                        |
+  | a:active      | Action Pseudo-  | Selects an element when a user has engaged it.         |
+  |               | class           |                                                        |
+  | a:focus       | Action Pseudo-  | Selects an element when a user has made it their focus |
+  |               | class           | point.                                                 |
+  | input:enabled | State Pseudo-   | Selects an element in the default enabled state.       |
+  |               | class           |                                                        |
+  | input:disabled | State Pseudo-  | Selects an element in the disabled state, by way of the |
+  |               | class           | disabled attribute.                                    |
+  | input:checked | State Pseudo-   | Selects a checkbox or radio button that has been       |
+  |               | class           | checked.                                               |
+  | input:indeterminate | State Pseudo-  | Selects a checkbox or radio button thats neither been |
+  |                     | class          | checked or unchecked, leaving it in an indeterminate  |
+  |                     |                | state.                                                |
+  | li:first-child | Structural   | Selects an element that is the first within a parent. |
+  |                | Pseudo-class |                                                        |
+  | li:last-child  | Structural   | Selects an element that is the last within a parent. |
+  |                | Pseudo-class |                                                        |
+  | div:only-child  | Structural   | Selects an element that is the only element within a |
+  |                | Pseudo-class  | parent.                                                   |
+  | p:first-of-type | Structural   | Selects an element that is the first of its type within a |
+  |                | Pseudo-class  | parent.                                                   |
+  | p:last-of-type | Structural   | Selects an element that is the last of its type within a |
+  |                | Pseudo-class  | parent.                                                   |
+  | img:only-of-type | Structural   | Selects an element that is the only one of its type within a |
+  |                | Pseudo-class  | parent.                                                   |
+  | li:nth-child(2n+3) | Structural    | Selects an element that matches the given number or |
+  |                   | Pseudo-class  | expression, counting all elements from the beginning of |
+  |                   |               | the document tree.                                       |
+  | li:nth-last-   | Structural  | Selects an element that matches the given number or      |
+  | type(3n+2)     | Pseudo-class | expression, counting all elements from the end of the |
+  |                |              | document tree.                         |
+  | p:nth-of-type(3n) | Structural   | Selects an element that matches the given number or      |
+  |                   | Pseudo-class | expression, counting all elements of its type from the |
+  |                   |              | beginning of the document tree.                        |
+  | p:nth-last-of- | Structural  | Selects an element that matches the given number or      |
+  | type(2n+1)     | Pseudo-class | expression, counting all elements of its type from the |
+  |                |              | end of the document tree.                              |
+  | section:target  | Target Pseudo- | Selects an element whose ID attribute value matches    |
+  |                 | class          | that of the URI fragment identifier. |
+  | div:empty       | Empty Pseudo- | Selects an element that does not contain any children  |
+  |                 | class          | or text nodes. |
+  | div:not(.awesome) | Negation     | Selects an element not represented by the stated  |
+  |                   | Pseudo-class | argument. |
+  
+<h4 id="pseudo-elements">Pseudo-elements</h4>
+
+<p>Pseudo-elements are dynamic elements that don't exist in the document tree, and 
+when used within selectors these 
+<a href="http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/" 
+rel="noopener noreferrer" target="_blank">pseudo-elements</a> allow unique parts of 
+the page to be stylized. One important point to note, only one pseudo-element may 
+be used within a selector at a given time.</p>
+
+<h4>Textual Pseudo-elements</h4>
+
+<p>The first pseudo-elements ever released were the :first-letter and :first-line 
+textual pseudo-elements. The :first-letter pseudo-element will identify the first 
+letter of text within an element, while the :first-line pseudo-element will identify
+the first line of text within an element.</p>
+
+<p>In the demonstration below the first letter of the paragraph with the
+class of alpha is set in a larger font size and colored orange, as is
+the first line of the paragraph with the class of bravo. These
+selections are made by use of the :first-letter and :first-line textual
+pseudo-elements respectively.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  .alpha:first-letter,
+ 2  .bravo:first-line {
+ 3    color: #ff7b29;
+ 4    font-size: 18px;
+ 5  }
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;p class="alpha"&gt;Lorem ipsum dolor...&lt;/p&gt;
+ 2  &lt;p class="bravo"&gt;Integer eget enim...&lt;/p&gt;
+</pre>
+
+<h4>Textual Pseudo-elements Demo</h4>
+
+<h4>Generated Content Pseudo-elements</h4>
+
+<p>The :before and :after generated content pseudo-elements create new
+inline level pseudo-elements just inside the selected element. Most
+commonly these pseudo-elements are used in conjunction with
+the content property to add insignificant information to a page, however
+that is not always the case. Additional uses of these psuedo-elements
+may be to add user interface components to the page without having to
+clutter the document with unsemantic elements.</p>
+
+<p>The :before pseudo-element creates a pseudo-element before, or in front
+of, the selected element, while the :after pseudo-element creates a
+pseudo-element after, or behind, the selected element. These
+pseudo-elements appear nested within the selected element, not outside
+of it. Below the :after pseudo-element is used to display
+the href attribute value of anchor links within parentheses after the
+actual links. The information here is helpful, but not ultimately
+necessary should a browser not support these pseudo-elements.</p>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  a:after {
+ 2    color: #9799a7;
+ 3    content: " (" attr(href) ")";
+ 4    font-size: 11px;
+ 5  }
+</pre>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;a href="http://google.com/"&gt;Search the Web&lt;/a&gt;
+ 2  &lt;a href="http://learn.shayhowe.com/"&gt;Learn How to Build Websites&lt;/a&gt;
+</pre>
+
+<h4>Generated Content Pseudo-elements Demo</h4>
+
+<h4>Fragment Pseudo-element</h4>
+
+<p>The ::selection fragment pseudo-element identifies part of the document that 
+has been selected, or highlighted, by a user's actions. The selection may then 
+be stylized, however only using the color, background, background-color, and 
+text-shadow properties. It is worth noting, the background-image property is 
+ignore. While the shorthand background property may be used to add a color, any 
+images will be ignored.</p>
+
+<h4>Single Colon (:) versus Double Colons (::)</h4>
+
+<p>The fragment pseudo-element was added with CSS3 and in attempt to differentiate 
+pseudo-classes from pseudo-elements the double colons were added to pseudo-elements. 
+Fortunately most browsers will support both values, single or double colons, for 
+pseudo-elements however the ::selection pseudo-element must always start with double 
+colons.</p>
+
+<p>When selecting any of the text within the demonstration below the background 
+will appear orange and any text shadows will be removed thanks to the ::selection 
+fragment pseudo-element. Also note, the ::-moz-selection Mozilla prefixed fragment 
+pseudo-element has been added to ensure the best support for all browsers.</p>
+
+<pre>
+ 1  ::-moz-selection {
+ 2    background: #ff7b29;
+ 3  }
+ 4  ::selection {
+ 5    background: #ff7b29;
+ 6  }
+</pre>
+
+<h4>Fragment Pseudo-element Demo</h4>
+
+<h4>Pseudo-elements Example</h4>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;a class="arrow" href="#"&gt;Continue Reading&lt;/a&gt;
+</pre>
+
+<details>
+  <summary>CSS</summary>
+  
+<pre>
+ 1   .arrow {
+ 2     background: #2db34a;
+ 3     color: #fff;
+ 4     display: inline-block;
+ 5     height: 30px;
+ 6     line-height: 30px;
+ 7     padding: 0 12px;
+ 8     position: relative;
+ 9     text-decoration: none;
+ 10  }
+ 11  .arrow:before,  
+ 12  .arrow:after {
+ 13    content: "";
+ 14    height: 0;
+ 15    position: absolute;
+ 16    width: 0;
+ 17  }
+ 18  .arrow:before {
+ 19    border-bottom: 15px solid #2db34a;
+ 20    border-left: 15px solid transparent;
+ 21    border-top: 15px solid #2db34a;
+ 22    left: -15px;
+ 23  }
+ 24  .arrow:after {
+ 25    border-bottom: 15px solid transparent;
+ 26    border-left: 15px solid #2db34a;
+ 27    border-top: 15px solid transparent;
+ 28    right: -15px;
+ 29  }
+ 30  .arrow:hover {
+ 31    background: #ff7b29;
+ 32  }
+ 33  .arrow:hover:before {
+ 34    border-bottom: 15px solid #ff7b29;
+ 35    border-top: 15px solid #ff7b29;
+ 36  }
+ 37  .arrow:hover:after {
+ 39    border-left: 15px solid #ff7b29;
+ 40  }
+</pre>
+
+</details>
+
+<h4>Demo</h4>
+
+<h4>Pseudo-elements Overview</h4>
+
+| <b>Example</b> | <b>Classification</b> | <b>Explanation</b> |
+|----------------|-------------------|---------------------------------------------------------|
+| .alpha:first-letter  | Textual Pseudo-elements   | Selects the first letter of text within an element.     |
+| .bravo:first-line  | Textual Pseudo-elements   | Selects the first line of text within an element.       |
+| div:before     | Generated Content | Creates a pseudo-element inside the selected element at the beginning. |
+| a:after        | Generated Content | Creates a pseudo-element inside the selected element at the end. |
+| ::selection    | Fragment Pseudo-element  | Selects the part of a document which has been selected, or highlighted, by a users' action.|
+  
+
+<h4>Selector Browser Support</h4>
+
+<p>While these selectors provide a variety of opportunity and the ability
+to do some truly amazing things with CSS, they are at times plagued by
+poor browser support. Before doing anything too critical check the
+selectors you are wishing to use across your visitor's most common
+browsers, and then make the judgment call as to whether they are
+appropriate or not.</p>
+
+<p>CSS3.info provides a <a href="https://www.css3.info/selectors-test/" 
+rel="noopener noreferrer" target="_blank">
+CSS3 Selectors Test</a> tool which will inform you as to which selectors 
+are supported by the browser in use. It's also never a bad idea to check 
+browser support directly from the vendor.</p>
+
+<p>Additionally, <a href="http://selectivizr.com/" 
+rel="noopener noreferrer" target="_blank">Selectivizr</a>, a
+JavaScript utility, provides great support for these selectors in
+Internet Explorer 6-8. More support, should it be necessary, can also be
+provided by <a href="http://api.jquery.com/category/selectors/" 
+rel="noopener noreferrer" target="_blank">jQuery selectors</a>.</p>
+
+<h4>Selector Speed & Performance</h4>
+
+<p>It is important to pay attention the speed and performance of selectors,
+as using too many intricate selectors can slow down the rendering of a
+page. Be attentive and when a selector begins to look a bit foreign
+think about revisiting it, and seeing if a better solution can be found.</p>
+
+<h4>Resources & Links</h4>
+
+<ul>
+  <li><a href="http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/"
+    rel="noopener noreferrer" target="_blank">
+    The 30 CSS Selectors you Must Memorize</a> via Nettuts+.</li>
+  <li><a href="https://css-tricks.com/child-and-sibling-selectors/"
+    rel="noopener noreferrer" target="_blank">
+	Child and Sibling Selectors</a> via CSS-Tricks.</li>
+  <li><a href="http://www.css3.info/preview/attribute-selectors/"
+    rel="noopener noreferrer" target="_blank">
+	CSS3 Substring Matching Attribute Selectors</a> via CSS3.info</li>
+  <li><a href="http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/"
+    rel="noopener noreferrer" target="_blank">
+	How To Use CSS3 Pseudo-Classes</a> via Smashing Magazine.</li>
+  <li><a href="http://reference.sitepoint.com/css/understandingnthchildexpressions"
+    rel="noopener noreferrer" target="_blank">
+	Understanding :nth-child Pseudo-class Expressions</a> via SitePoint.</li>
+  <li<a href="http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/"
+    rel="noopener noreferrer" target="_blank">
+	Taming Advanced CSS Selectors</a> via Smashing Magazine.</li>
+</ul>
+
+<!-- 103 spaces = perfect w/30 chars 17 left + 13 right -->
+<div>
+    <b>Lesson 3: </b><a href="#3-complex-selectors">Complex Selectors</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Lesson 5: </b><a href="#5-preprocessors">Preprocessors</a>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image021.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:7in;" />
-<!-- ![](./images/image021.jpg){width="9.722222222222221in" height="11.805555555555555in"} -->
-
-[JS Sets]
-
-[Examples of JS Sets:]
-
-[Creating a Set:]
-
-[Iterating Over a Set:]
-
-[JS Maps]
-
-[Examples of JS Maps:]
-
-[Creating a Map:]
-
-[Iterating Over a Map:]
+<h2 align="center" id="4-responsive-web-design">Lesson 4: Responsive Web Design</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 22/23.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image022.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:3.5in;" />
-<img src="./images/image023.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:3.5in;" />
-<!-- ![](./images/image022.jpg){width="6.25e-2in" {width="6.25e-2in" height="2.083880139982502e-2in"}[JS Typeof] -->
-
-[Examples of JS Typeof:]
-
-[Using typeof:]
-
-[JS Type Conversion]
-
-[Examples of JS Type Conversion]
-
-[String to Number: Number to String:]
-
-[JS Bitwise]
-
-[Examples of JS Bitwise:]
+<h3>In this Lesson 4:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 24.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image024.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:7in;" />
-<!--(./images/image024.jpg){width="9.875in" height="11.805555555555555in"} -->
 
-[Bitwise AND Operator:]
+<h4>HTML</h4>
 
-[Bitwise OR Operator:]
+<ul>
+  <li><a href="#responsive-overview">Responsive Overview</a></li>
+  <li><a href="#viewport">Viewport</a></li>
+</ul>
 
-[JS RegExp]
+<h4>CSS</h4>
 
-[Examples of JS RegExp:]
+<ul>
+  <li><a href="#flexible-layouts">Flexible Layouts</a></li>
+  <li><a href="#media-queries">Media Queries</a></li>
+  <li><a href="#mobile-first">Mobile First</a></li>
+  <li><a href="#flexible-media">Flexible Media</a></li>
+</ul>
 
-[Creating a Reeular Expression:]
+<h4>SHARE</h4>
 
-[Testing a String with RegExp:]
+<p>The Internet took off quicker than anyone would have predicted, growing
+like crazy. Now, for the past few years, mobile growth has exploded onto
+the scene. The growth of mobile Internet usage is also far out pacing
+that of general Internet usage growth.</p>
 
-[JS Precedence]
+<p>These days it is hard to find someone who doesn't own a mobile device,
+or multiple, connected to the Internet. In the UK there are more mobile
+phones than people, and should 
+<a href="http://www.digitalbuzzblog.com/2011-mobile-statistics-stats-facts-marketing-infographic/" 
+rel="noopener noreferrer" target="_blank">trends continue</a> mobile Internet usage 
+will surpass that of desktop Internet usage within the year.</p>
 
-[Examples of TS Precedence:]
+<p>With the growth in mobile Internet usage comes the question of how to
+build websites suitable for all users. The industry response to this
+question has become responsive web design, also known as RWD.</p>
 
-[Arithmetic Precedence:]
+<h4 id="responsive-overview">Responsive Overview</h4>
 
-[JS Errors]
+<p>Responsive web design is the practice of building a website suitable to
+work on every device and every screen size, no matter how large or
+small, mobile or desktop. Responsive web design is focused around
+providing an intuitive and gratifying experience for everyone. Desktop
+computer and cell phone users alike all benefit from responsive
+websites.</p>
 
-[Examples of JS Errors:]
-
-[Syntax Error:]
-
-[Reference Error:]
-
-<h2>[JS Scope]</h2>
-
-[Examples of JS Scope:]
-
-[Global Scope:]
-
-[JS Hoisting]
+<p>The <a href="http://www.alistapart.com/articles/responsive-web-design/" 
+rel="noopener noreferrer" target="_blank">responsive web design</a> term
+itself was coined, and largely developed, by Ethan Marcotte. A lot of what is 
+covered in this lesson was first talked about by Ethan online and in his book 
+<i><a href="http://www.abookapart.com/products/responsive-web-design/" 
+rel="noopener noreferrer" target="_blank"></i>Responsive Web Design</a>, 
+which is worth a read.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 25.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image025.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:7in;" />
-<!--(./images/image025.jpg){width="9.743055555555555in" height="11.805555555555555in"} -->
-
-[Examples JS Hoisting:]
-
-[Variable Hoisting:]
-
-[Function Hoisting:]
-
-[JS Strict Mode]
-
-[Examples of JS Strict Mode:]
-
-[Enabling Strict Mode:]
-
-[using Strict Mode Inside a Function:]
-
-<h3>JS this Keyword</h3>
-
-[Examples of JS this Keyword:]
-
-[Using this in an Obiect:]
-
-<h3>JS Arrow Function</h3>
-
-[Examples of JS Arrow Function:]
-
-[Basic Arrow Function:]
-
-[Arrow Function with Multiple Lines:]
-
-[JS Classes]
-
-[Examples of JS Classes:]
-
-[Class Declaration:]
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 26.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image026.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:7in;" />
-<!--(./images/image026.jpg){width="9.347222222222221in" height="11.805555555555555in"} -->
-
-<h2>JS Modules</h2>
-
-[Examples JS Modules: Exporting a Module:]
-
-[Importing a Module:]
-
-<h2>JS JSON</h2>
-
-[Examples of JS JSON:]
-
-[Parsing JSON:]
-
-[Stringify Obiect to JSON:]
-
-[JS Debugging]
-
-[Examples of JS Debugging:]
-
-[Using console.log() for Debugging:]
-
-[Using Browser Developer Tools:]
-
-[JS Style Guide]
-
-[Examples of JS Style Guide:]
-
-[Naming Conventions:]
-
-[Indentation:]
-
-[JS Best Practices]
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 27.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image027.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:7in;" />
-<!--./images/image027.jpg){width="9.222222222222221in" height="11.805555555555555in"} -->
-
-[Examples TS Best Practices:]
-
-[Use Meaningful Variable Names:]
-
-[Avoid Global Variables:]
-
-[JS Mistakes]
-
-[Examples of JS Mistakes:]
-
-[Missing Semicolon:]
-
-[Uninitialized Variables:]
-
-[JS Performance]
-
-[Examples of TS Performance:]
-
-[Reduce DOM Manipulations:]
-
-[Use EffcientAl orithms:]
-
-[JS Reserved Words]
-
-[Examples of JS Reserved Words:]
-
-[let const function class etc.]
-
-[JS Objects]
-
-[Object Definitions:]
-
-[Creating an Obiect Literally:]
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 28.  (##) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image028.png"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:7in;" />
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07. food sense responsive layout (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image007.png"
+   style="width:40%"
+   title="Food Sense Responsive Layout"
+   alt="Food Sense Responsive Layout." />
 </p>
-<!-- ![](./images/image028.jpg){width="9.604166666666666in" height="11.805555555555555in"} -->
 
-[using the Obiect Constructor:]
+<p align="center"><small><small>Fig. 4</small></small></p>
 
-[Obiect Properties]
+<p><a href="http://foodsense.is/" 
+rel="noopener noreferrer" target="_blank">Food Sense</a> has a beautiful
+website, responsive to all different viewport sizes. No matter how large
+or small the viewport may be the Food Sense website adjust, creating a
+natural user experience.</p>
 
-[Obiect Properties Examples:]
+<h4>Responsive vs. Adaptive vs. Mobile</h4>
 
-[Accessing Obiect Properties:]
+<p>For some the term <i>responsive</i> may not be new, and others might be even
+more acquainted with the terms <i>adaptive</i> or <i>mobile</i>. Which may leave
+you wondering what exactly is the difference between all of them.</p>
 
-[Adding or Modifying Properties:]
+<p>Responsive and adaptive web design are closely related, and often
+transposed as one in the same. Responsive generally means to react
+quickly and positively to any change, while adaptive means to be easily
+modified for a new purpose or situation, such as change. With responsive
+design websites continually and fluidly change based on different
+factors, such as viewport width, while adaptive websites are built to a
+group of preset factors. A combination of the two is ideal, providing
+the perfect formula for functional websites. Which term is used
+specifically doesn't make a huge difference.</p>
 
-[Obiect Methods]
+<p>Mobile, on the other hand, generally means to build a separate website
+commonly on a new domain solely for mobile users. While this does
+occasionally have its place, it normally isn't a great idea. Mobile
+websites can be extremely light but they do come with the dependencies
+of a new code base and browser sniffing, all of which can become an
+obstacle for both developers and users.</p>
 
-[Obiect Methcds Examples:]
+<p>Currently the most popular technique lies within responsive web design,
+favoring design that dynamically adapts to different browser and device
+viewports, changing layout and content along the way. This solution has
+the benefits of being all three, responsive, adaptive, and mobile.</p>
 
-[Accessing Obiect Methods:]
+<h4>Flexible Layouts</h4>
 
-[Adding Methods to an Obiect:]
+<p>Responsive web design is broken down into three main components,
+including flexible layouts, media queries, and flexible media. The first
+part, flexible layouts, is the practice of building the layout of a
+website with a flexible grid, capable of dynamically resizing to any
+width. Flexible grids are built using relative length units, most
+commonly percentages or em units. These relative lengths are then used
+to declare common grid property values such as width, margin,
+or padding.</p>
 
-[Obiect Display]
+<h4>Relative Viewport Lengths</h4>
 
-[Obiect Display Examples:]
+<p>CSS3 <a href="http://dev.w3.org/csswg/css3-values/#viewport-relative-lengths" 
+rel="noopener noreferrer" target="_blank">introduced</a> some new relative length 
+units, specifically related to the viewport size of the browser or device. These 
+new units include vw, vh, vmin, and vmax. Overall support for these new units isn't 
+great, but it is growing. In time they look to play a large roll in building 
+responsive websites.</p>
 
-[Using console.Ice O:]
+<ul>
+  <li>vw<br>
+    Viewports width</li>
+  <li>vh<br>
+    Viewports height</li>
+  <li>vmin<br>
+    Minimum of the viewport's height and width</li>
+  <li>vmax<br>
+    Maximum of the viewport's height and width</li>
+</ul>
 
-[Stringify with JSON:]
+<p>Flexible layouts do not advocate the use of fixed measurement units,
+such as pixels or inches. Reason being, the viewport height and width
+continually change from device to device. Website layouts need to adapt
+to this change and fixed values have too many constraints. Fortunately,
+Ethan pointed out an easy formula to help identify the proportions of a
+fvlexible layout using relative values.</p>
 
-[Obiect Accessors]
+<p>The formula is based around taking the target width of an element and
+dividing it by the width of it's parent element. The result is the
+relative width of the target element.</p>
 
-[Obiect Accessors Examples:]
+<pre>
+ 1  target ÷ context = result
+</pre>
 
-[using Getters and Setters:]
+<h4>Flexible Grid</h4>
 
-[Object Constructors]
+<p>Let's see how this formula works inside of a two column layout. Below we
+have a parent division with the class of container wrapping both
+the section and aside elements. The goal is to have the section on the
+left and the aside on the right, with equal margins between the two.
+Normally the markup and styles for this layout would look a bit like the
+following.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;div class="container"> 
+ 2    &lt;section>...&lt;/section> 
+ 3    &lt;aside>...&lt;/aside>  
+ 4  &lt;/div>
+</pre>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .container { 
+ 2    width: 538px;
+ 3  }
+ 4  section,
+ 5  aside {
+ 6    margin: 10px;
+ 7  }
+ 8  section {
+ 9    float: left;
+ 10   width: 340px;
+ 11 }
+ 12 aside {
+ 13   float: right;
+ 14   width: 158px;
+ 15 }
+</pre>
+
+</details>
+
+<h4>Fixed Grid Demo</h4>
+
+<p>Using the flexible grid formula we can take all of the fixed units of
+length and turn them into relative units. In this example we'll use
+percentages but em units would work equally as well. Notice, no matter
+how wide the parent container becomes, the section and aside margins and
+widths scale proportionally.</p>
+
+<details>
+  <summary>Fixed Grid Demo</summary>
+
+<pre>
+ 1  section,
+ 2  aside {
+ 3    margin: 1.858736059%; /* 10px ÷ 538px = .018587361 */
+ 4  }
+ 5  section {
+ 6    float: left;
+ 7    width: 63.197026%; /* 340px ÷ 538px = .63197026 */
+ 8  }
+ 9  aside {
+ 10   float: right;
+ 11   width: 29.3680297%; /* 158px ÷ 538px = .293680297 */
+ 12 }
+</pre>
+
+</details>
+
+<h4>Flexible Grid Demo</h4>
+
+<p>Taking the flexible layout concept, and formula, and reapplying it to
+all parts of a grid will create a completely dynamic website, scaling to
+every viewport size. For even more control within a flexible layout, you
+can also leverage the min-width, max-width, min-height,
+and max-height properties.</p>
+
+<p>The flexible layout approach alone isn't enough. At times the width of a
+browser viewport may be so small that even scaling the the layout
+proportionally will create columns that are too small to effectively
+display content. Specifically, when the layout gets too small, or too
+large, text may become illegible and the layout may begin to break. In
+this event, media queries can be used to help build a better experience.</p>
+
+<h4>Media Queries</h4>
+
+<p>Media queries were built as an extension to media types commonly found when 
+targeting and including styles. Media queries provide the ability to specify 
+different styles for individual browser and device circumstances, the width 
+of the viewport or device orientation for example. Being able to apply uniquely 
+<a href="https://css-tricks.com/css-media-queries/" 
+rel="noopener noreferrer" target="_blank">targeted styles</a> opens up a world 
+of opportunity and leverage to responsive web design.</p>
+
+<h4>Initializing Media Queries</h4>
+
+<p>There are a couple different ways to use media queries, using
+the @media rule inside of an existing style sheet, importing a new style
+sheet using the @import rule, or by linking to a separate style sheet
+from within the HTML document. Generally speaking it is recommend to use
+the @media rule inside of an existing style sheet to avoid any
+additional HTTP requests.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;!-- Separate CSS File --&gt;
+ 2  &lt;link href="styles.css" rel="stylesheet" media="all and (max-width: 1024px)"&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  /* @media Rule */  
+ 2  @media all and (max-width: 1024px) {...}
+ 3  /* @import Rule */ 
+ 4  @import url(styles.css) all and (max-width: 1024px) {...} 
+</pre>
+
+<p>Each media query may include a media type followed by one or more
+expressions. Common media types include all, screen, print, tv,
+and braille. The HTML5 specification includes new media types, even
+including 3d-glasses. Should a media type not be specified the media
+query will default the media type to screen.</p>
+
+<p>The media query expression that follows the media type may include
+different media features and values, which then allocate to be true or
+false. When a media feature and value allocate to true, the styles are
+applied. If the media feature and value allocate to false the styles are
+ignored.</p>
+
+<h4>Logical Operators in Media Queries</h4>
+
+<p>Logical operators in media queries help build powerful expressions.
+There are three different logical operators available for use within
+media queries, including and, not, and only.</p>
+
+<p>Using the and logical operator within a media query allows an extra
+condition to be added, making sure that a browser or devices does
+both a, b, c, and so forth. Multiple individual media queries can be
+comma separated, acting as an unspoken or operator. The example below
+selects all media types between 800 and 1024 pixels wide.</p>
+
+<pre>
+ 1  @media all and (min-width: 800px) and (max-width: 1024px) {...} 
+</pre>
+
+<p>The not logical operator negates the query, specifying any query but the
+one identified. In the example below the expression applies to any
+device that does not have a color screen. Black and white or monochrome
+screens would apply here for example.</p>
+
+<pre>
+ 1  @media not screen and (color) {...}
+</pre>
+
+<p>The only logical operator is a new operator and is not recognized by
+user agents using the HTML4 algorithm, thus hiding the styles from
+devices or browsers that don't support media queries. Below, the
+expression selects only screens in a portrait orientation that have a
+user agent capable of rending media queries.</p>
+
+<pre>
+ 1  @media only screen and (orientation: portrait) {...}
+</pre>
+
+<h4>Omitting a Media Type</h4>
+
+<p>When using the not and only logical operators the media type may be left
+off. In this case the media type is defaulted to all.</p>
+
+<h4>Media Features in Media Queries</h4>
+
+<p>Knowing the media query syntax and how logical operators work is a great
+introduction to media queries but the true work comes with media
+features. Media features identify what attributes or properties will be
+targeted within the media query expression.</p>
+
+<h4>Height & Width Media Features</h4>
+
+<p>One of the most common media features revolves around determining a
+height or width for a device or browser viewport. The height and width
+may be found by using the height and width media features. Each of these
+media features may then also be prefixed with the min or max qualifiers,
+building a feature such as min-width or max-width.</p>
+
+<p>The height and width features are based off the height and width of the
+viewport rendering area, the browser window for example. Values for
+these height and width media features may be any length unit, relative
+or absolute.</p>
+
+<pre>
+ 1  @media all and (min-width: 320px) and (max-width: 780px) {...}  
+</pre>
+
+<p>Within responsive design the most commonly used features
+include min-width and max-width. These help build responsive websites on
+desktops and mobile devices equally, avoiding any confusion with device
+features.</p>
+
+<h4>Using Minimum & Maximum Prefixes</h4>
+
+<p>The min and max prefixes can be used on quite a few media features.
+The min prefix indicates a values of <i>greater than or equal to</i> while
+the max prefix indicates a value of <i>less than or equal to</i>.
+Using min and max prefixes avoid any conflict with the general HTML
+syntax, specifically not using the &lt; and &gt; symbols.</p>
+
+<h4>Orientation Media Feature</h4>
+
+<p>The orientation media feature determines if a device is in
+the landscape or portrait orientation. The landscape mode is triggered
+when the display is wider than taller, and the portrait mode is
+triggered when the display is taller than wider. This media feature
+plays a large part with mobile devices.</p>
+
+<pre>
+ 1  @media all and (orientation: landscape) {...} 
+</pre>
+
+<h4>Aspect Ratio Media Features</h4>
+
+<p>The aspect-ratio and device-aspect-ratio features specifies
+the width/height pixel ratio of the targeted rendering area or output
+device. The min and max prefixes are available to use with the different
+aspect ratio features, identifying a ratio above or below that of which
+is stated.</p>
+
+<p>The value for the aspect ratio feature consist of two positive integers
+separated by a forward slash. The first integer identifies the width in
+pixels while the second integer identifies the height in pixels.</p>
+
+<pre>
+ 1  @media all and (min-device-aspect-ratio: 16/9) {...}
+</pre>
+
+<h4>Pixel Ratio Media Features</h4>
+
+<p>In addition to the aspect ratio media features there are
+also pixel-ratio media features. These features do include
+the device-pixel-ratio feature as well as min and max prefixes.
+Specifically, the pixel ratio feature is great for identifying high
+definition devices, including retina displays. Media queries for doing
+so look like the following.</p>
+
+<pre>
+ 1  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), 
+    only screen and (min-device-pixel-ratio: 1.3) {...}
+</pre>
+
+<h4>Resolution Media Feature</h4>
+
+<p>The resolution media feature specifies the resolution of the output
+device in pixel density, also known as dots per inch or DPI.
+The resolution media feature does accept the min and max prefixes.
+Additionally, the resolution media feature will accept dots per pixel
+(1.3dppx), dots per centimeter (118dpcm), and other length based
+resolution values.</p>
+
+<pre>
+ 1  @media print and (min-resolution: 300dpi) {...}  
+</pre>
+
+<h4>Other Media Features</h4>
+
+<p>Other media features include identifying available output colors with
+use of the color, color-index, and monochrome features, identifying
+bitmap devices with the grid feature, and identifying the scanning
+process of a television with the scan feature. These features are less
+common but equally as helpful when needed.</p>
+
+<h4>Media Query Browser Support</h4>
+
+<p>Unfortunately media queries do not work within Internet Explorer 8 and
+below, as well as other legacy browsers. There are, however, a couple
+suitable polyfills written in Javascript.</p>
+
+<p><a href="https://github.com/scottjehl/Respond/" 
+rel="noopener noreferrer" target="_blank">Respond.js</a> is a lightweight 
+polyfill that only looks for min/max-width media types, which is perfect should 
+those be the only media query types used. 
+<a href="https://code.google.com/p/css3-mediaqueries-js/" 
+rel="noopener noreferrer" target="_blank">CSS3-MediaQueries.js</a> is a more 
+developed, and heavier, polyfill offering support for a larger array of more 
+complex media queries. Additionally, keep in mind any polyfill can have 
+performance concerns, and potentially slow down websites. Make sure that any 
+given polyfill is worth the performance trade off.</p>
+
+<h4>Media Queries Demo</h4>
+
+<p>Using media queries we will now rewrite the flexible layout we built
+previously. One of the current problems within the demo appears when the
+aside width becomes uselessly small within smaller viewports. Adding a
+media query for viewports under 420 pixels wide we can change the layout
+by turning off the floats and changing the widths of
+the section and aside.</p>
+
+<pre>
+ 1  @media all and (max-width: 420px) { 
+ 2    section, aside {
+ 3      float: none; 
+ 4      width: auto; 
+ 5    } 
+ 6  } 
+</pre>
+
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 29.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image029.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:7in;" />
-<!-- ![](./images/image029.jpg){width="9.645833333333334in" height="11.805555555555555in"} -->
-
-[Obiect Constructors Examples:]
-
-[Vsing Constructor Functions:]
-
-[Obiect Prototypes]
-
-[Obiect Protctypes Examples:]
-
-[Adding Methods to the Protctype:]
-
-[Obiect Iterables]
-
-[Obiect Iterables Examples: Using for...in Loop:]
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 30/31.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image030.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:6in;" />
-  <img src="./images/image031.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:6in;" />
-<!-- ![](./images/image030.jpg){width="6.253062117235346e-2in" height="6.251859142607175e-2in"} -->
-<!-- ![](./images/image031.jpg){width="5.21084864391951e-2in" height="4.167979002624672e-2in"}[Ušing Obiect.keys O:] -->
-
-[Obiect Sets]
-
-[Obiect Sets Examples:]
-
-[Creating a Set:]
-
-[Checking Set Membership:]
-
-[Obiect Maps]
-
-[Obiect Maps Examples:]
-
-[Creating a Map:]
-
-[Getting Values from a Map]
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 32.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image032.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:7in;" />
-<!-- ![](./images/image032.jpg){width="9.54861111111111in" height="11.805555555555555in"} -->
-
-[Object Reference]
-
-[Object Reference Examples]
-
-[Referencing an Obiect:]
-
-[Changing Obiect through Reference:]
-
-[JS Functions]
-
-[Function Definitions:]
-
-[Function Declaration:]
-
-[Function Expression:]
-
-[Arrow Function:]
-
-[Function Parameters]
-
-[Function Parameters Examples:]
-
-[Single Parameter:]
-
-[Multiple Parameters:]
-
-[Function Invocation]
-
-[Function Invocation Examples:]
-
-[Calling a Function:]
-
-[Function Call]
-
-![](./images/image033.jpg){width="9.38888888888889in"
-height="11.805555555555555in"}
-
-[Function Call Examples]
-
-Using call
-
-[Function Apply]
-
-[Function Apply Examples:]
-
-Using apply
-
-[Function Bind]
-
-[Function Bind Examples:]
-
-bind
-
-[Function Closures]
-
-[Function Closures Examples:]
-
-[Closure Example:]
-
-[JS Classes]
-
-[Class Intro:]
-
-[Class Declaration:]
-
-[Creating Instances:]
-
-[Class Inheritance]
-
-[Class Inheritance Example:]
-
-![](./images/image034.jpg){width="10.11111111111111in"
-height="11.805555555555555in"}
-
-[Extending a Class]
-
-[Using Inherited Methods:]
-
-[Class Static]
-
-[Class Static Example:]
-
-[Adding a Static Method:]
-
-<h2>[JS Async]</h2>
-
-[JS Callbacks]
-
-[Callbacks Example:]
-
-<h3>[JS Asynchronous]</h3>
-
-[Asynchronous Example:]
-
-[JS Promises]
-
-[Promises Example:]
-
-[Creating a Promise:]
-
-[IS Async / Await]
-
-[Async / Await Example:]
-
-[Using Async / Await:]
-
-[JS HTML DOM]
-
-![](./images/image035.jpg){width="10.090277777777779in"
-height="11.805555555555555in"}
-
-[DOM Intro:]
-
-[Accessing an Element by ID:]
-
-[DOM Methods]
-
-[Changing Element Content:]
-
-<h2>[DOM Document]</h2>
-
-[Accessing Document Properties:]
-
-[DOM Elements]
-
-       Element Styles:
-
-<h2>DOM HTML</h2>
-
-[Changing HTML Attributes:]
-
-[DOM Forms]
-
-[Accessing Form Elements:]
-
-<h2>[DOM CSS]</h2>
-
-[Changing CSS Classes:]
-
-<h3>[DOM Animations]</h3>
-
-[Animating an Element:]
-
-[DOM Events]
-
-[Click Event Handling:]
-
-![](./images/image029.jpg){width="9.645833333333334in"
-height="11.805555555555555in"}
-
-[DOM Event Listener]
-
-[Mouseover Event Handling:]
-
-[DOM Navigation]
-
-[Traversing Child Elements:]
-
-<h3>[DOM Nodes]</h3>
-
-[Creating a New Node:]
-
-[DOM Collections]
-
-[Accessing Collection Elements:]
-
-[DOM Node Lists]
-
-[Accessing Node List Elements:]
-
-[JS Browser BOM]
-
-[JS Window]
-
-[Accessing Window Properties:]
-
-[JS Screen]
-
-[Accessing Screen Properties:]
-
-[JS Location]
-
-[Accessing Location Information:]
-
-[JS History]
-
-![](./images/image036.jpg){width="9.61111111111111in"
-height="11.805555555555555in"}
-
-[Accessing History Methods:]
-
-[JS Navigator]
-
-[Accessing Navigator Properties:]
-
-[JS Popup Alert]
-
-[Displaying an Alert:]
-
-[JS Timing]
-
-Using setTimeout
-
-  Using setlnterval                                                  
-
-[JS Coclcies]
-
-[Setting a Cookie:]
-
-[Accessing a Cookie:]
-
-<h3>[JS web APIs]</h3>
-
-[Web API Intro]
-
-[Accessing the Web API:]
-
-[Web Forms API]
-
-[Accessing Form Elements:]
-
-[Web History API]
-
-[Changing Browser History:]
-
-![](./images/image037.jpg){width="9.680555555555555in"
-height="11.805555555555555in"}
-
-[Web Storage API]
-
-[Using localStorage:]
-
-[web Worker API]
-
-[Creating a Web Worker:]
-
-[Web Fetch API]
-
-[Making a GET Request:]
-
-[Web Geolocation API]
-
-[Getting User&apos;s Location:]
-
-[JS AJAX]
-
-<h3>[AJAX Intro]</h3>
-
-[Simple AJAX Request:]
-
-[AJAX XMLHttp using XMLHttpRequest:]
-
-[AJAX Request]
-
-[Sending POST Request:]
-
-[AJAX Response]
-
-[Handling JSON Response:]
-
-[AJAX XML File]
-
-![](./images/image038.jpg){width="10.083333333333334in"
-height="11.805555555555555in"}
-
-[Fetching XML File:]
-
-[AJAX PHP]
-
-[Handling AIAX in PHP:]
-
-<h3>[AJAX ASP]</h3>
-with ASP:
-[AJAX Database]
-
-[Database Interaction with ATAX:]
-
-[AJAX Applications]
-
-[Real - time Chat Application:]
-
-[AJAX Examples]
-
-[AIAX Example 1:]
-
-[AIAX Example 2:]
-
-[AIAX Example 3:]
-
-[AIAX Example 4:]
-
-[AJAX Example 5:]
-
-[AIAX Example 6:]
-
-<h3>[Dynamic Content Loading]</h3>
-
-[Form Submission with AJAX]
-
-[Fetching JSON Data]
-
- Example 7:  | Autocomplete Search
-
-[Image Gallery with ATAX]
-
-![](./images/image039.jpg){width="8.618055555555555in"
-height="11.805555555555555in"}
-
-[AJAX Example 8: Live Data Update]
-
-[AIAX Example 9: Infinite Scroll]
-
-[ATAX Example 10: File Upload with Progress Bar]
-
-[AIAX Example 11: Displaying Time Dynamically]
-
-<h3>[JS JSON]</h3>
-
-<h3>[JSON Intro]</h3>
-
-[Example of JSON Data:]
->
-[JSON Syntax]
->
-[Example of JSON Syntax:]
-
-<h3>[JSON vs XML]</h3>
-
-[Example ComparJSON between JSON and XML:]
-
-[JSON Data Types]
-
-[Example of Different Data Types in JSON:]
-
-<h3>[JSON Parse]</h3>
-
-[Example of JSON Parsing:]
-
-[JSON Stringify]
-
-[Example of JSON Stringification:]
-
-[JSON Objects]
-
-[Example of a JSON Obiect:]
-
-[JSON Arrays]
-
-[Example of a JSON Array:]
-
-[JSON Server]
-
-[Example of JSON Data from a Server:]
-
-[JSON PHP]
-
-[Example of Encoding and Decoding JSON in PHP:]
-
-[JSON HTML]
-
-[Example of Usine JSON Data in HTML:]
-
-<h3>[JSON JSONP]</h3>
-
-[Example of JSONP Request:]
-
-1. [.Creating a JSON Obiect:]
-
-2. [.Accessing JSON Obiect Properties:]
-
-3. [.Nested JSON Obiects:]
-
-4. [.JSON Array of Obiects:]
-
-5. [.Converting TSON to String:]
-
-6. [.Parsing JSON String to Object:]
-
-7. [.Fetching JSON Data from URL(using Fetch API
-
-8. [.Displaying JSON Data Dynamically in HTML:]
-
-9. [.Handling JSON Data in Forms:]
-
-10.[.Stringifying and Parsing a More Complex Obiect]
-
-11.[.Filtering JSON Array Data:]
-
-12.[.Updating JSON Object Properties:]
-
-13.[.Removing a Propertv from JSON Object:]
-
-14.[.Using JSON with Local Storage:]
-
-15.[.Handling TSON Date Strings:]
-
-16.[.Using JSON in Asynchronous Functions:]
-
-17.[.JSON Serialization with Custom Functions:]
-
-18.[.Handling TSON Data from an API(Using Axios
-
-19.[.Merging JSON Obiects:]
-
-20.[.Mappinz JSON Data to Another Structure:]
-
-[JayaScript vs iOuery: A Comprehensive ComparJSON]
-
-[JavaScript Overview]
-
-[Example of JavaScript Functionality:]
-
-[jQuery Overview]
-
-[Example of jQuery Functionality: Differences Between JavaScript and jQuery]
-
-1. [.Syntax:]
-
-2. [.DOM Manipulation:]
-
-3. [.Browser Compatibility:]
-
-4. [.Learning Curve:]
-
-[jQuery Selectors]
-
-[Example of jQuery Selectors:]
-
-[jQuery HTML Manipulation]
-
-[Example of jQuery HTML Manipulation:]
-
-<h4>[jQuery CSS Manipulation]</h4>
-
-[Example ofiOuery CSS Manipulation:]
-
-[jQuery DOM Traversal]
-
-[Example of jQuery DOM Traversal:]
-
-<h4>[Conclusion]</h4>
-
-1. [.Selecting an Element by ID:]
-
-![](./images/image047.jpg){width="9.125in"
-height="11.805555555555555in"}
-
-2. [.Selecting Multiple Elements by Class:]
-
-3. [.Adding Event Listeners:]
-
-4. [.Handling Document Ready Event:]
-
-5. [.Creating a New Element:]
-
-6. [.Removine an Element:]
-
-7. [.Manipulating CSS Class:]
-
-8. [.Changing Text Content:]
-
-9. [.Hidinz an Element:]
-
-10.[.Fading In an Element:]
-
-11.[AIAX GET Request:]
-
-12  [.AIAX POST Request:]
-
-13.[Getting Attribute Value:]
-
-14.[Setting Attribute Value:]
-
-15  [.Getting Form Values:]
-
-16.[.Checking Checkbox State:]
-
-17.[.Iteratine Over NodeList:]
-
-![](./images/image048.jpg){width="9.090277777777779in"
-height="11.805555555555555in"}
-
-18.[.Handling Form Submission:]
-
-19.[.Animating Element:]
-
-20.[.Changing Background Color on Click:]
-
-[JavaScript Graphics Libraries: Explained]
-
-1. [.JavaScript Graphics]
-
-2. [.JS Canvas]
-
-3. [.JS Plotly]
-
-![](./images/image049.jpg){width="0.469174321959755in"
-height="0.2500732720909886in"}IS Chart is
-
-5. [.JS Google Chart]
-
-6. [.JS D3.is]
-
-[Conclusion]
-
-[Canvas Examples:]
-
-[Plotly Examples:]
-
-[Chart.JS Examples
-:]![](./images/image050.jpg){width="1.0426509186351705e-2in"
-height="3.125984251968504e-2in"}
-
-[Google Charts Examples:]
-
-[D3.JS Examples:]
-
-![](./images/image051.jpg){width="8.993055555555555in"
-height="11.805555555555555in"}
-
-[Canvas Examples:]
-
-[Plotly Examples:]
-
-[Chart.JS Examples:]
-
-[Google Charts Examples:]
-
-[D3.JS Examples:]
-
-[Basic Examples:]
-
-[String Manipulation:]
-
-[Array Manipulation:]
-
-[Functions:]
-
-[Obiect Manipulation:]
-
-[Loops and Iterations:]
-
-[Error Handling:]
-
-[Asynchronous JavaScript:]
-
-[DOM Manipulation:]
-
-[Regular Expressions:]
-
-[Advanced Functions]
-
-![](./images/image052.jpg){width="10.069444444444445in"
-height="11.805555555555555in"}
-
-[Advanced Array Manipulation:]
-
-[Advanced Obiect Manipulation:]
-
-[Advanced Loops and Iterations:]
-
-[Promises and Async / Await:]
-
-[Advanced DOM Manipulation:]
-
-[ES6 + Features:]
-
-[Error Handling and Regular Expressions:]
-
-[Advanced Functions and Functionality:]
-
-[Advanced Array Manipulation:]
-
-[Advanced Object Manipulation: Advanced Loops and Iterations
-:]
-
-[Advanced Error Handling:]
-
-[Advanced Object Manipulation:]
-
-[Advanced Array Manipulation:]
-
-[Advanced Functicnality: Advanced Error Handling]
-
-![](./images/image053.jpg){width="9.07638888888889in"
-height="11.805555555555555in"}
-
-[ES6 + Features:]
-
-[Advanced Functions and Operations:]
-
-[Advanced Array Manipulation:]
-
-[Advanced Object Manipulation:]
-
-[Advanced Promises and Async / Await:]
-
-[ES6 + Features:]
-
-[Advanced Functions and Operations:]
-
-[Advanced Array Manipulation:]
-
-[Advanced Object Manipulation:]
-
-[Advanced Promises and Async / Await:]
-
-[ES6 + Features:]
-
-[Advanced Functions and Operations:]
-
-[Advanced Array Manipulation:]
-
-[Advanced Obiect Manipulation:]
-
-[Advanced Promises and Async / Await:]
-
-[ES6 + Features]
-
-![](./images/image054.jpg){width="9.131944444444445in"
-height="11.805555555555555in"}
-
-[Advanced Functions and Operations:]
-
-[Advanced Array Manipulation:]
-
-[Advanced Object Manipulation:]
-
-[Advanced Promises and Async / Await:]
-
-[ES6 + Features:]
-
-[Advanced Functions and Operations:]
-
-[Advanced Array Manipulation:]
-
-[Advanced Obiect Manipulation:]
-
-[Advanced Promises and Async / Await: ES6 + Features:]
-
-[Advanced Functions and Operations:]
-
-[Advanced Array Manipulation:]
-
-[Advanced Object Manipulation:]
-
-[Advanced Promises and Async / Await: ES6 + Features:]
-
-[Advanced Functions and Operations:]
-
-
-[Advanced Array Manipulation:]
-
-[Advanced Obiect Manipulation:]
-
-[Advanced Promises and Async / Await:]
-
-[ES6 + Features:]
-
-[Advanced Functions and Operations:]
-
-[Advanced Array Manipulation:]
-
-[Advanced Obiect Manipulation:]
-
-[Advanced Promises and Async / Await:]
-
-[ES6 + Features:]
-
-[Advanced Functions and Operations:]
-
-[Advanced Array Manipulation:]
-
-[Advanced Obiect Manipulation:]
-
-[Advanced Promises and Async / Await:]
-
-[ES6 + Features:]
-
-[Advanced DOM Manipulation:]
-
-[DOM Traversal and Manipulation:]
-
-
-[Advanced Event Handling:]
-
-[DOM Content Manipulation:]
-
-[Input Event Handling:]
-
-[Form Validation and Submission:]
-
-<h4>[Advanced Input Handling]</h4>
-
-[DOM Obiect Creation and Manipulation:]
-
-[Advanced Obiect Manipulation:]
-
-[Styling HTML Obiects:]
-
-[Event Handling and Interaction:]
-
-[Advanced Content Manipulation:]
-
-[Event Handling:]
-
-[Event Delegation and Bubbling:]
-
-[Window and Docurnent Events:]
-
-[Form Events:]
-
-[Browser Object Model(BOM) Manipulation:]
-
-[Navigator Obiect Exploration:]
-
-[Location Obiect Manipulation:]
-
-[Screen Obiect Attributes:]
-
-[Installing JavaScript:]
-
-[Setting Up Visual Studio Code for JavaScript Development
-:]
-
-[Conclusion:]
-
-<h3>Statements</h3>
-
-JavaScript statements are individual commands or instructions that the
-browser executes.They form the logic of a program and can be simple
-or complex.
-
-Examples of JavaScript Statements:
-
-I Variable Declaration:
-
-javascript code let x; // Declaring a variable &Hat;i&Hat;x&Hat;i&Hat;
-
-2..Conditional Statement:
-
-javascript code
-
-<pre>
-// Executed if x is equal to 5 console.log(is 5&apos;) ;
-
-} else {
-
-// Executed if x is not equal to 5 console.log(&apos;x is not 5) ;
-</pre>
-
-3. Loops:
-
-javascript code for(let i O; i &lt; 5; i + +) { // Executed 5 times
-console.log(i) ;
-
-<h2>Syntax</h2>
-
-JavaScript syntax refers to the rules that define the structure of
-valid JavaScript code.It includes rules for writing statements,
-variables, and functions in a way that the interpreter or browser can
-understand.Examples ofJavaScript Syntax:
-
-1. Function Definition:
-
-javascript code
-<pre>
-function greet(name) { return &apos;Hello, name
-+
-</pre>
-
-2..Object Literal javascript code const person
-    firstName: &apos;John&apos;, lastName &apos;Doe&apos;, age 30
-
-3. Array Declaration:
-
-javascript code
-
-<pre>
-constnumbers
-</pre>
-
-<h3>Comments</h3>
-
-Comments in JavaScript are used to add explanatory notes within the
-code They are ignored by the interpreter and are only meant for human
-readers
-
-Examples of JavaScript Comments:
-
-1. Single Line Comment:
-
-javascript code
-
-<pre>
-// This is a single line comment
-</pre>
-
-2..Multi - line Comment:
-
-javascript code
-
-<pre>
-This is a multi - line comment
-</pre>
-
-3. Commenting Out Code:
-
-javascript code
-
-<pre>
-// This code won&apos;t be executed
-// const x 10;
-</pre>
-
-<h3>JavaScript Variables</h3>
-
-Variables in JavaScript are used to store data values.They can hold
-various types of data such as numbers, strings, objects, and more,
-
-Examples ofJavaScript Variables:
-
-1. Declaring and Assigning a Variable:
-
-javascript code
-
-<pre>
-let age = 25; // Declaring &apos;age&Hat;i&Hat; and assigning a
-value of 25
-</pre>
-
-2..String Variable:
-
-javascript code
-
-<pre>
-let name &apos;Alice&apos;;
-// A variable holding a string value
-</pre>
-
-3. Object Variable:
-
-javascript code let person {name: &apos;Bob, age: 30 // A variable
-holding an object
-
-<h3>JavaScript let</h3>
-
-The let keyword is used to declare variables in JavaScript.It allows
-the declared variable to be reassigned a new value if
-needed
-
-Example of let in JavaScript:
-
-javascript code
-
-<pre>
-let x 5;
-
-10;
-// Reassigning &apos;x&apos; to a new value
-</pre>
-
-<h3>JavaScript const</h3>
-
-The const keyword is used to declare constants in JavaScript.Once
-assigned, the value of a const cannot be
-changed
-
-Example of const in JavaScript:
-
-javascript code
-
-<pre>
-const PI = 3.14159; // Declaring a constant PI
-
-// PI - - 3; // This will throw an error as reassignment is not allowed
-</pre>
-
-<h3>JavaScript Operators</h3>
-
-JavaScript operators are symbols used to perform operations on
-operands, such as arithmetic operations, assignment, comparison,
-logical operations, etc.
-
-Examples ofJavaScript Operators:
-
-1..Arithmetic Operators:
-
-<h4>javascript code</h4>
-let a = 10;
-let b
-difference = a - b; // Subtraction let product = a &ast; b; //
-Multiplication let quotient = a / b; // Division
-
-2. Comparison Operators:
-
-<h4>javascript code</h4>
-
-```
-let x 5; let
-console.log(x y) ; // Equality check
-console.log(x y) ; // Inequality check
-console.log(x y) ; // Greater than console.log(x &lt; y) ; //Less than
-```
-
-3. Logical Operators:
-
-<h4>javascript code</h4>
-
-```
-let p true;
-let q false;
-console.log(p &&q); 
-//Logical AND 
-console.log(p Il q) ;
-// Logical OR 
-console.log(!
-p) ; // Logical NOT
-```
-
-This comprehensive guide covers various aspects of JavaScript
-statements, syntax, comments, variables(let and const), and
-operators, offering examples and explanations to aid understanding,
-
-<h2>JS Arithmetic</h2>
-
-JavaScript provides arithmetic operators to perform mathematical
-calculations on numbers,
-
-Examples of JS Arithmetic:
-
-Addition:
-
-javascript code
-
-```
-let sum = 5 4 3• // sum = 8
-```
-
-Subtraction:
-
-javascript code
-
-```
-let difference = 10 - 4; // difference 6
-```
-
-Multiplication:
-
-javascript code
-
-```
-let product 7; // product 42
-
-Division java script code let quotient = 20/ 5;
-// quotient = 4
-
-Modulus(Remainder):
-```
-
-javascript code
-
-```
-let remainder = 15 % 4; // remainder
-```
-
-<h3>JS Assignment</h3>
-
-In JavaScript, the assignment operator(z) is used to assign values to
-variables.Examples ofJS Assignment:
-
-Assigning a Value to a Variable:
-
-javascript code
-
-```
-let x = 10; // Assigning the value 10 to variable •x&apos;
-```
-
-Assigning the Result of an Expression:
-
-javascript code
-
-```
-let y = x 4 5; // Assigning the result of an
-expression to &Hat;l&Hat;y&Hat;r&Hat;
-```
-
-<h3>JS Data Types</h3>
-
-JavaScript has several data types that define the kinds of values it
-can work with.Examples ofJS Data Types: Primitive Data Types:
-
-Number: letnum - 10;
-
--   String: let text - &apos;Hello&apos;;
-
--   Boolean: let isTrue true;
-
--   Undefined let value;
-
--   Null T.let emptyValue null;
-
-Complex Data Types:
-
--   Object.let person =(name: &apos;Alice&apos;, age: 25 1;
-
--   Array: let numbers &lbrack; 1, 2, 3, 41 5 &rbrack; ;
-
-<h2>JS Functions</h2>
-
-Functions in JavaScript are reusable blocks of code that perform a
-specific task when called.
-
-Examples ofJS Functions:
-
-Function Declaration:
-
-javascript code
-
-```
-function greet(name) { return &apos;Hello, + name +
-Function Call javascript code let message = greet(
-&apos;John&apos;);
-// message = &apos;Hello, John ! &apos;
-
-Arrow Function:
-javascript code const multiply(a, b) = &gt; a
-let result multiply(5, 3) ; // result
-15
-```
-
-<h3>JS Objects</h3>
-
-Objects in JavaScript are containers for named values called
-properties and methods.Examples ofJS Objects:
-
-Object Declaration:
-
-javascript code
-
-```
-let person { name: &apos;Alice&apos;, age: 30,
-greet: function
-return &apos;Helloj my name is &Hat;i&Hat; -v this.
-name 
-
-Accessing Object Properties:
-
-javascript code console.log(person.name) ; // Output: Alice
-
-Calling Object Method:
-
-javascript code console.log(person greet ; // Output: Hello, my
-name is Alice !
-```
-
-<h2>JS Events</h2>
-
-JavaScript events are actions that occur when a user interacts with a
-web page, like clicking a button or typing in a form
-field!
-
-Examples ofJS Events:
-
-Click Event:
-
-javascript code
-
-```
-document.getElementById(&apos;myButton&apos;).addEventListener(&apos;click&apos;, function
-console.log(&apos;Button clicked !) ;
-```
-
-Input Event:
-
-javascript code
-
-```
-document.getElementById(&apos;mylnput&Hat;i&Hat; addEventListener(&apos;input&apos;,
-function console.log(&apos;Input changed ! &Hat;i&Hat;) •
-```
-
-<h2>JS Strings</h2>
-
-Strings in JavaScript are sequences of characters enclosed in single
-or double quotes
-Examples of JS Strings:
-
-Declaring a String Variable:
-
-javascript code
-```
-let message = &quot;Helloj World
-```
-Concatenating Strings:
-
-javascript code
-```
-let greeting &apos;Hello, &Hat;I&Hat;;
-let name &apos;Alice&apos;; 
-let welcomeMessage greeting + name; // welcomeMessage - &apos;Hello, Alice
-```
-
-<h3>JS String Methods</h3>
-
-JavaScript provides various methods to manipulate strings.
-
-Examples of JS String Methods:
-```
-toUpperCase() Method:
-```
-
-javascript code
-```
-let text = &apos;hello&apos;;
-let upperCaseText = text.toUpperCase() ; // upperCaseText = &apos;
-HELLO substring() Method:
-```
-
-javascript code
-```
-let sentence - This is a sentence&apos;; 
-let subSentence sentence.substring(5, 10) ; // subSentence - &apos;is a &apos;
-```
-
-<h3>JS String Search</h3>
-
-JavaScript provides methods to search for substrings within a string.
-Examples ofJS String Search:
-
-indexOf() Method:
-
-javascript code
-```
-let text = &apos;Hello, World ! &apos;i let position text.
-indexOf(&apos;Worldl) ; // position = 7 includes Method:
-```
-
-javascript code
-```
-let sentence This is a sentence&apos;;
-let containsWord sentence.includes(&apos;sentence&apos;) ; // containsWord true
-```
-
-<h3>JS String Templates</h3>
-
-Template literals allow embedding expressions and variables into strings
-
-Examples of JS String Templates:
-
-Basic Template Literal:
-
-javascript code
-```
-let name = &apos;Alice&apos;; let message = Hello, &dollar;{name) •
-// message = &ast;Hello, Alice !
-
-Multi - line Template Literal:
-```
-
-javascript code
-
-let multiLineMessage -
-
-This is a multi - line message
-
-<h3>JS Numbers</h3>
-
-JavaScript handles numeric data using the number data type.
-
-Examples ofJS Numbers:
-
-Whole Numbers:
-
-javascript code
-```
-let integerNumber
-```
-
-Decimal Numbers:
-
-javascript code
-```
-let decimalNumber 3.14
-```
-
-Scientific Notation:
-
-javascript code
-```
-let scientificNumber = 2e3; // scientificNumber &dash;- 2000
-```
-<h4>JS Biglnt</h4>
-
-Biglnt is a numeric data type in JavaScript that can represent
-integers with arbitrary
-precision
-
-Examples of JS Biglnt:
-
-Creating a Biglnt:
-
-javascript code
-```
-let bigNumber 123456789012345678901234567890n;
-```
-
-Performing Operations with Biglnt:
-
-javascript code
-```
-let bigSum = bigNumher In;
-```
-<h6>JS Number Methods</h6>
-
-JavaScript provides methods for performing operations and
-manipulations with numbers.Examples ofJS Number Methods:
-
-toFixed() Method:
-
-java script code
-```
-let number = 3.14159; let roundedNumber = number.toFixed(2) ; // roundedNumber = &Hat;i&Hat; 3 • 14
-```
-
-parselnt() Method:
-
-javascript code
-```
-let stringNumber &apos;42; 
-let parsedNumber = parselnt(stringNumber) ; // parsedNumber 42
-```
-
-<h3>JS Number Properties</h3>
-
-JavaScript has some built - in properties associated with numbers.
-
-Examples of JS Number Properties:
-
-Number.MAX_VALUE Property:
-
-javascript code
-```
-console.log(Number.MAX_VALUE); // Output: 1.7976931348623157e 308
-```
-
-Number.MIN_VALUE Property:
-
-javascript code
-```
-console.log(Number.MIN_VALUE // Output: 324
-```
-This comprehensive guide covers various aspects of JavaScript,
-including arithmetic operations, assignment, data types, functions,
-objects, events, strings, string methods, string search, string
-templates, numbers, Biglnt, number methods, and number properties,
-providing examples and explanations for each topic.
-
-<h4>JS Arrays</h4>
-
-Arrays in JavaScript are used to store multiple values in a single variable.
-Examples of JS Arrays:
-
-Declaration java script code let numbers 1, 2, 3,
-&rbrack; ; // Array of numbers let fruits &apos;apple&apos;, &apos;banana&apos;, &apos;orange&apos;
-I ; // Array of strings
-
-Accessing Elements:
-
-javascript code
-```
-console.log(fruits I O &rbrack;) ; // Output: &apos;apple&apos;
-```
-Modifying Elements:
-
-javascript code
-```
-fruits &lbrack; 1 &vert; = &apos;grapes&apos;; // Changing banana&apos; to &apos;grapes&apos;
-```
-<h4>JS Array Methods</h4>
-
-JavaScript provides various methods to manipulate arrays effciently.
-Examples ofJS Array Methods:
-
-push() Method:
-
-javascript code
-```
-fruits.push(&apos;melonl) ; // Adds Imelonl to the end of the array pop Method:
-```
-
-javascript code
-```
-let removedFruit = fruits.POP) ; // Removes and returns the last element(&apos;melon&apos;) splice() Method:
-```
-javascript code
-```
-numbers splice(2, 1) ; // Removes 1 element at index 2(removes 131)
-```
-<h6>JS Array Sort</h6>
-
-JavaScript offers methods to sort arrays in various ways 
-
-Examples of JS Array Sort:
-
-Sorting Numbers:
-```
-java script code numbers.sort((a, b) b) // Ascending order
-
-Sorting Strings javascript code fruits.sortO ; // Alphabetical order
-
-<h2>JS Array Iteration</h2>
-
-Array iteration involves looping through arrays to perform operations
-on each element.Examples ofJS Array Iteration:
-
-forEach() Method:
-
-javascript code
-```
-numbers.fcrEach(number console.log(number) ;
-```
-map() Method:
-
-javascript code
-```
-let doubledNumbers numbers.map(number &gt; number &ast;2);
-```
-
-<h3>JS Array Const</h3>
-
-Arrays declared with const can&apos;t be reassigned but their elements can be modified.
-
-Examples ofJS Array Const:
-
-javascript code
-```
-constweekdays = &lbrack; &apos;Monday&apos;, &apos;Tuesday&apos;,
-&apos;Wednesday&apos; I ; weekdays &vert; 1 &vert; = &apos;Thursday&apos;; // Modifying an element is allowed
-weekdays = &apos;Monday&apos;, &apos;Thursday&apos;, &Hat;i&Hat;Wednesday&apos; &rbrack; ; // This will throw an error
-```
-
-<h3>JS Dates</h3>
-
-JavaScript provides a Date object to work with dates and times
-<h4>Examples ofJS Dates:</h4>
-
-<h5>Creating a Date Object:</h5>
-<p>javascript code</p>
-```
-let currentDate = newDate();  // Current date and time.
-```
-
-<h5>Creating a Specific Date:</h5>
-<p>javascript code
-```
-let specificDate new Date(&apos;2023&dash;12&dash;31&apos;); // December 31, 2023.
-```
-
-<h4>JS Date Formats</h4>
-<p class="desc">Date formatting in JavaScript involves converting dates to different formats.</p>
-
-Examples of JS Date Formats:
-
-<h4>Examples of JS Date Formats:</h4>
-<h4>Formatting to String:</h4>
-javascript code
-```
-let dateString = specificDate.toDateString(); // Convert to a human-readable string.
-```
-
-<h4>Formatting to Locale String:</h4>
-javascript code
-```
-let localString = specificDate.toLocaleString(); // Converts to local date and time string.
-```
-
-<h4>JS Date Get Methods</h4>
-<p class="desc">JavaScript Date object provides various methods to retrieve specific date.</p>
-components![](./images/image110.jpg){width="4.1666666666666664e-2in" height="4.167869641294838e-2in"}
-
-Examples of JS Date Get Methods:
-
-getFu11Year() Method
-![](./images/image111.jpg){width="6.25e-2in" height="0.14587598425196852in"}
-
-javascript code
-```
-let year = specificDate .getFullYearO; // Get the year(2023) 
-```
-
-getMonth() Method:
-
-javascript code
-```
-let month = specificDate.getMonth ; // Get the month (11 for December)
-```
-
-<h3>JS Date Set Methods</h3>
-
-JavaScript Date object also has methods to set specific date components.
-
-Examples ofJS Date Set Methods:
-```
-setFuIIYear() Method:
-
-javascript code
-```
-specificDate.setFullYear(2024) ; // Set the year to 2024 setMonth() Method:
-```
-javascript code
-```
-specificDate.setMonth(O) ; // Set the month to January(O index)
-```
-
-<h3>Math</h3>
-
-JavaScript Math object provides mathematical constants and functions
-![](./images/image112.jpg){width="4.1666666666666664e-2in" height="4.167869641294838e-2in"}
-
-Examples ofJS Math:
-
-Math.PI Property:
-
-javascript code
-```
-let piValue = Math.PI; // Value ofPl(3.141592653589793)
-```
-
-Math.sqrt() Method:
-
-javascript code
-```
-let squareRcot Math.sqrt(25) ; // Square root of 25(5)
-```
-
-<h4>JS Random</h4>
-
-```
-JavaScript Math.random() generates pseudo - random numbers.
-```
-
-Examples ofJS Random:
-
-Generating Random Number:
-
-javascript code
-```
-let randomNumber = Math.random &apos; // Random number between O and 1
-```
-
-Generating Random Integer:
-
-javascript code
-```
-let randomlnteger = Math.floor(Math.random 10); // Random integer between O and 9
-```
-
-<h4>Booleans</h4>
-
-Booleans in JavaScript represent true or false values.Examples ofJS
-Booleans:
->
-Declaration:
-
-javascript code
-```
-let isTrue = true
-let isFalse = false; Comparison:
-
-javascript code
-```
-let greaterThan // true let equalTo 5 5; // true
-```
-<h3>JS Comparisons</h3>
-
-JavaScript offers various comparison operators to compare values.
-Examples ofJS Comparisons:
-
-==(Equality Operator):
-
-javascript code
-```
-console.log(5) ; // true(coerces types)
-```
-Strict Equality Operator):
-
-javascript code
-```
-console.log(5151) ; // false(compares both value and type)
-```
-
-This comprehensive guide covers various aspects of JavaScript
-including arrays, array methods, array sort, array iteration; array
-const, dates, date formats, date get methods, date set methods, math,
-random, booleans, and comparisons, providing examples and explanations
-for each topic.
-
-<h4>JS If Else</h4>
-
-The if else statement in JavaScript executes a block of code if a
-specified condition is true and another block of code if the condition
-is false
-
-Examples ofJS If Else:
-
-Basic if else:
-
-java script code let num = 10;
-
-If(num &gt; O) { console.log(&quot;Number is
-positive&apos;
-
-) else f console.log(&apos;Number is not
-positive&apos;
-
-Nested if &period;..else:
-
-javascript code
-```
-let x 5; if(x &gt; O) { console.
-logis
-positive&apos;
-} else if(x &lt; O)
-console log
- &quot;x is negativel
-```
-
----
-title: "JS Learn JS"
-author: "bbauska"
-date prior editted: "8/31/2024 4+pm"
-date last editted: "9/9/2024 12+pm"
-date last editted: "9/10/2024 1+pm"
-date last editted: "9/12/2024 1+pm"
-date last editted: "9/20/2024 10+pm"
-date last editted: "10/18/2024 5+pm"
-output: 
-  markdown:
-    with some style
----
-
-<h1 align="center">JS Learn JavaScript</h1>
-
-<h6 align="center">(by Brian Bauska, educator)</h6>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ readme.md of js-learn-js.bauska.org ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01.js learn js logo(01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image001.png"
-  title="JS Learn JS logo"
-  alt="JS Learn JS logo."
-  style="border: 2px solid #000000; width:45%; height:33%;" />
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 08. demo without media queries (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image008.png"
+  style="width:40%"
+  title="Demo Without Media Queries"
+  alt="Demo Without Media Queries." />
 </p>
-<h2><a href="#table-of-contents">Table of Contents - JS Learn JavaScript</a></h2>
-
-<blockquote>
-<h4><a href="#ch1">Chapter 1: Introduction to JavaScript</a></h4>
-<h4><a href="#ch2">Chapter 2: Understanding Variables and Data Type in JS</a></h4>
-<h4><a href="#ch3">Chapter 3: Variables and Data</a></h4>
-<h4><a href="#ch4">Chapter 4: Functions in JS</a></h4>
-<h4><a href="#ch5">Chapter 5: Arrays and Iteration in JS</a></h4>
-<h4><a href="#ch6">Chapter 6: Objects and Object-Oriented Programming in JS</a></h4>
-<h4><a href="#ch7">Chapter 7: Loops in JS</a></h4>
-<h4><a href="#ch8">Chapter 8: Async and Await</a></h4>
-<h4><a href="#ch9">Chapter 9: Promises and Asynchronous Programming in JS</a></h4>
-<h4><a href="#ch10">Chapter 10: Working with JSON in JS</a></h4>
-<h4><a href="#ch11">Chapter 11: JS HTML DOM</a></h4>
-<h4><a href="#ch12">Chapter 12: JS Browser BOM</a></h4>
-<h4><a href="#ch13">Chapter 13: JS Libraries and Web APIs</a></h4>
-<h4><a href="#ch14">Chapter 14: JS AJAX</a></h4>
-<h4><a href="#ch15">Chapter 15: Handling Errors and Exceptions in JS</a></h4>
-<h4><a href="#ch16">Chapter 16: Libraries and APIs</a></h4>
-</blockquote>
-
-<a href="https://github.com/bbauska/JS-Learn-JS.git" target="_blank" rel="noopener noreferrer">
-JS Learn JS - git</a>
+<p align="center" width="40%"><small><small>Fig. 4. Without any media queries the section and aside become quite
+small. Perhaps too small to even contain any real content.</small></small></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch1">Chapter 1: Introduction to JavaScript</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 09. demo with media queries (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image009.png"
+  style="width:40%"
+  title="Demo with Media Queries"
+  alt="Demo with Media Queries." />
+</p>
+<p align="center" width="40%"><small><small>Fig. 4. Using media queries to remove the floats and change their
+widths, the section and aside are now able to span the full width of the
+viewport, allowing breathing room for any existing content.</small></small></p>
+
+<h4>Identifying Breakpoints</h4>
+
+<p>Your instinct might be to write media query breakpoints around common
+viewport sizes as determined by different device resolutions, such
+as 320px, 480px, 768px, 1024px, 1224px, and so forth. This is
+a <b>bad</b> idea.</p>
+
+<p>When building a responsive website it should adjust to an array of
+different viewport sizes, regardless of the device. Breakpoints should
+only be introduced when a website starts to break, look weird, or the
+experience is being hampered.</p>
+
+<p>Additionally, new devices and resolutions are being released all of the
+time. Trying to keep up with these changes could be an endless process.</p>
+
+<h4>Mobile First</h4>
+
+<p>One popular technique with using media queries is called <i>mobile first</i>.
+The <a href="https://abookapart.com/products/mobile-first" 
+rel="noopener noreferrer" target="_blank">mobile first</a> approach
+includes using styles targeted at smaller viewports as the default
+styles for a website, then use media queries to add styles as the
+viewport grows.</p>
+
+<p>The operating belief behind mobile first design is that a user on a
+mobile device, commonly using a smaller viewport, shouldn't have to load
+the styles for a desktop computer only to have them over written with
+mobile styles later. Doing so is a waste of bandwidth. Bandwidth that is
+precious to any users looking for a snappy website.</p>
+
+<p>The mobile first approach also advocates designing with the constraints
+of a mobile user in mind. Before too long, the majority of Internet
+consumption will be done on a mobile device. Plan for them accordingly
+and develop intrinsic mobile experiences.</p>
+
+<p>A breakout of mobile first media queries might look abit like the following.</p>
+
+<pre>
+ 1  /* Default styles first then media queries */ 
+ 2  @media screen and (min-width: 400px) {...} 
+ 3  @media screen and (min-width: 600px) {...} 
+ 4  @media screen and (min-width: 1000px) {...}
+ 5  @media screen and (min-width: 1400px) {...}
+</pre>
+
+<p>Additionally, downloading unnecessary media assets can be stopped by
+using media queries. Generally speaking, avoiding CSS3 shadows,
+gradients, transforms, and animations within mobile styles isn't a bad
+idea either. When used excessively, they cause heavy loading and can
+even reduce a device's battery life.</p>
+
+<pre>
+ 1  /* Default media */
+ 2  body {
+ 3    background: #ddd;
+ 4  }
+ 5  /* Media for larger devices */
+ 6  @media screen and (min-width: 800px) {
+ 7    body {
+ 8      background-image: url("bg.png") 50% 50% no-repeat;  
+ 9    }
+ 10 }
+</pre>
+
+<h4>Mobile First Demo</h4>
+
+<p>Adding media queries to our previous example, we overwrote a handful of
+styles in order to have a better layout on viewports under 420 pixels
+wide. Rewriting this code to use the mobile styles first by default then
+adding media queries to adjust for viewports over 420 pixels wide we
+build the following:</p>
+
+<details>
+  <summary>Mobile First Demo</summary>
+
+<pre>
+ 1  section,
+ 2  aside { 
+ 3    margin: 1.858736059%; 
+ 4  } 
+ 5  @media all and (min-width: 420px) { 
+ 6    .container { 
+ 7      max-width: 538px;  
+ 8    } 
+ 9    section {  
+ 10     float: left; 
+ 11     width: 63.197026%; 
+ 12   } 
+ 13   aside { 
+ 14     float: right;
+ 15     width: 29.3680297%;
+ 16   } 
+ 17 } 
+</pre>
+
+</details>
+
+<h4>Mobile First Demo</h4>
+
+<p>Notice, this is the same amount of code as before. The only exception
+here is that mobile devices only have to render only <b>one</b> CSS
+declaration. All of the other styles are deferred, only loading on
+larger viewports and done so without overwriting any initial styles.</p>
+
+<h4>Viewport</h4>
+
+<p>Mobile devices generally do a pretty decent job of displaying websites
+these days. Sometimes they could use a little assistance though,
+particularly around identifying
+the <a href="http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/" 
+rel="noopener noreferrer" target="_blank">viewport</a> size, scale, and resolution 
+of a website. To remedy this, Apple invented the viewport meta tag.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>What is JavaScript?</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 10. website without viewport meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image010.png"
+  style="width:40%"
+  title="Website without Viewport Meta Tag"
+  alt="Website without Viewport Meta Tag." />
+</p>
+<p align="center" width="40%"><small><small>Fig. 4. Although this demo has media queries, many mobile devices
+still do not know the initial width or scale of the website. Therefore,
+they may not interrupt media queries.</small></small></p>
 
-<p>JavaScript is a lightweight, interpreted, object-oriented language with first-class 
-functions, and is best known as the scripting language for web pages, but it’s used in 
-many non-browser environments as well.JavaScript is a prototype-based, multi-paradigm, 
-dynamic language, supporting object-oriented, imperative, and declarative(e.g.functional 
-programming) styles.</p>
+<h4>Viewport Height & Width</h4>
 
-<p>Originally developed by Netscape in the mid-1990s, JavaScript has become one of the 
-three core technologies of the web, along with HTML and CSS.</p>
+<p>Using the viewport meta tag with either the height or width values will
+define the height or width of the viewport respectively. Each value
+accepts either a positive integer or keyword. For the height property
+the keyword device-height value is accepted, and for the width property
+the keyword device-width is accepted. Using these keywords will inherit
+the device's default height and width value.</p>
 
-<h3>Variables</h3>
-
-<p>Variables are containers for storing data values.In JavaScript, we declare a variable 
-using the var keyword, followed by the name of the variable.Let’s look at how we can create 
-a variable.</p>
-
-<pre>
-var name = "John Doe"
-</pre>
-
-<h3>JavaScript Environment</h3>
-<p>Before we start, we need to set up our JavaScript environment.While you can write JavaScript 
-in any text editor, you’ll need a web browser to run your scripts.Most web browsers have 
-built-in JavaScript engines.You can open a JavaScript console in your browser and run 
-JavaScript code directly in the console.</p>
-
-<h3>Basic JavaScript Syntax</h3>
-<p>JavaScript syntax is the set of rules, how JavaScript programs are constructed:</p>
+<p>For the best results, and the best looking website, it is recommend that you use 
+the device defaults by applying the device-height and device-width values.</p>
 
 <pre>
-var x = 5; // declaring a variable
-var y = 6; // declaring another variable
-var z = x + y; // adding the variables together
-
-console.log(z); // prints the result to the console
-</pre>
-
-<h3>Variables and Data Types</h3>
-<p>JavaScript has dynamic types.This means you don’t have to specify the data type of a variable 
-when you declare it, and you can change the data type of a variable that has already been declared.</p>
-
-<pre>
-var length =16; // Number
-var lastName = "Johnson"; // String
-var x = {firstName:"John", lastName:"Doe"}; // Object
-</pre>
-
-<p>In the next chapter, we’ll dive deeper into JavaScript’s data types, how to manipulate them, 
-and how to use them effectively in your code.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch2">Chapter 2: Understanding Variables and Data Types in JavaScript</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>In this chapter, we will explore variables and data types, which are fundamental concepts 
-in JavaScript.As you learn about these topics, you will also get to see them in action through 
-various code examples.</p>
-
-<h3>Variables</h3>
-
-<p>Variables are containers for storing data values.In JavaScript, we declare a variable using 
-the var keyword, followed by the name of the variable.Let’s look at how we can create a variable.</p>
-
-<pre>
-var name = "John Doe";
-</pre>
-
-<p>In the example above, we created a variable named name and assigned it the value “John Doe”.
-We can also declare a variable without assigning a value, and assign it later.</p>
-
-<pre>
-var name;
-name = "John Doe";
-</pre>
-
-JavaScript also provides two other keywords for declaring variables - let and const.The 
-let keyword is similar to var, but it has a block scope.On the other hand, const is used 
-for declaring constants, which are variables that cannot be reassigned.
-
-<pre>
-let age = 25;
-const country = "USA";
-</pre>
-
-<h4>Data Types</h4>
-<p>JavaScript has several data types, including:</p>
-
-<ol start="1">
-  <li>Number - Represents numeric values.For example:</li>
-</ol>
-
-<pre>
-var num = 25;
-</pre>
-
-<ol start="2">
-  <li>String - Represents sequence of characters.For example:</li>
-</ol>
-
-<pre>
-var str = "Hello World";
-</pre>
-
-<ol start="3">
-  <li>Boolean - Represents logical values.Can either be true or false.For example:</li>
-</ol>
-
-<pre>
-var isTrue = true;
-</pre>
-
-<ol start="4">
-  <li>Undefined - Represents a variable that has not been assigned a value.For example:</li>
-</ol>
-
-<pre>
-var x;
-</pre>
-
-<ol start="5">
-  <li>Null - Represents a null value.For example:</li>
-</ol>
-
-<pre>
-var y = null;
-</pre>
-
-<ol start="6">
-  <li>Object - Represents an instance through which we can access methods.For example:</li>
-</ol>
-
-<pre>
-var obj = {name: "John", age: 25, country: "USA"};
-</pre>
-
-<ol start="7">
-  <li>Array - Represents a group of similar items in a list.For example:</li>
-</ol>
-
-<pre>
-var arr = [1, 2, 3, 4, 5];
-</pre>
-
-<p>Let’s look at a few examples of these data types.</p>
-
-<pre>
-// Number
-var num = 25;
-// String
-var str = "Hello World";
-// Boolean
-var isTrue = true;
-// Undefined
-var x;
-// Null
-var y = null;
-// Object
-var obj = {name: "John", age: 25, country: "USA"};
-// Array
-var arr = [1, 2, 3, 4, 5];
-</pre>
-
-<p>In JavaScript, we can find the type of a variable using the typeof operator.</p>
-
-<pre>
-console.log(typeof num); // Returns "number"
-console.log(typeof str); // Returns "string"
-console.log(typeof isTrue); // Returns "boolean"
-console.log(typeof x); // Returns "undefined"
-console.log(typeof y); // Returns "object"
-console.log(typeof obj); // Returns "object"
-console.log(typeof arr); // Returns "object
-</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch3">Chapter 3: Variables and Data</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Types in JavaScript</h3>
-
-<p>In this chapter, we will explore the foundation of any programming language: variables 
-and data types.In JavaScript, we have a variety of data types and ways to declare variables, 
-which we will be delving into in this chapter.</p>
-
-<h3>Variables</h3>
-
-<p>In JavaScript, variables are containers for storing data values.The value stored in a 
-variable can be changed, and it’s this dynamic nature that makes variables an essential 
-part of programming.</p>
-
-<p>There are three ways to declare a variable in JavaScript</p>
-
-1.Using var
-2.Using let
-3.Using const
-
-<p>Let’s look at each of them.</p>
-
-<h4>Var</h4>
-
-<p>Before ES6, var was the only way to declare variables in JavaScript.Here is an example:</p>
-
-<pre>
-var name = "John Doe";
-</pre>
-
-<h4>Let</h4>
-<p>Introduced in ES6, let is now the preferred way to declare variables.It has more 
-restrictions than var, which helps prevent bugs in your code.Here is an example:</p>
-
-<pre>
-let name = "John Doe";
-</pre>
-
-<h4>Const</h4>
-<p>Also introduced in ES6, const is used to declare constants, i.e., variables that cannot 
-be reassigned.Here is an example:</p>
-
-<pre>
-const PI = 3.14159;
-</pre>
-
-<h3>Data Types</h3>
-
-<p>JavaScript has a few basic data types, including:</p>
-
-1.Number
-2.String
-3.Boolean
-4.Object
-5.Null
-6.Undefined
-7.Symbol(new in ES6)
-
-<h4>Number</h4>
-
-<p>Numbers in JavaScript can be with or without decimals.For example:</p>
-
-<pre>
-letnuml = 5; // without decimal
-let num2 = 5.5; // with decimal
-</pre>
-
-<h4>String</h4>
-<p>Strings are sequences of characters, and they must be inside quotes.For example:</p>
-
-<pre>
-let strl = "Hello"; // double quotes
-let str2 = 'Hello'; // single quotes
-</pre>
-
-<h4>Boolean</h4>
-Booleans can only be true or false.For example:
-
-<pre>
-let isReading = true;
-let isSleeping = false;
-</pre>
-
-<h4>Object</h4>
-Objects are complex data types that allow for the combination of other data types.For example:
-
-<pre>
-let person = {firstName: "John", lastName: "Doe", age: 30};
-</pre>
-
-<h4>Null and Undefined</h4>
-In JavaScript, null means “nothing”.It needs to be assigned:
-
-<pre>
-let nothing = null;
-</pre>
-
-Undefined means a variable has not been assigned a value:
-
-<pre>
-let something;
-console.log(something); // Outputs: undefined
-</pre>
-
-<h4>Symbol</h4>
-The Symbol data type was introduced in ES6, and it produces a unique value:
-
-<pre>
-let symbol 1 = Symbol('symbol');
+ 1  &lt;meta name="viewport" content="width=device-width"&gt;
 </pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch04">Chapter 04: Functions in JS</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>In this chapter, we will delve into one of the most fundamental aspects of JavaScript: 
-functions.Functions are reusable blocks of code that perform a specific task.They can 
-take inputs, called parameters, and return an output, or result.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~ 11. website with viewport meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image011.png"
+  style="width:40%"
+  title="Website with Viewport Meta Tag"
+  alt="Website with Viewport Meta Tag." />
+</p>
+<p align="center" width="40%"><small><small>Fig. 3. Letting devices know the intended width of the
+website, device-width in this case, allows the website to be sized
+properly and to pick up any qualifying media queries.</small></small></p>
 
-<h4>What are Functions?</h4>
+<h4>Viewport Scale</h4>
 
-<p>In JavaScript, functions are first-class objects, which means they can be stored in 
-variables, passed as arguments to other functions, and returned from other functions.
-This flexibility gives JavaScript its power and versatility.</p>
+<p>To control how a website is scaled on a mobile device, and how users can continue 
+to scale a website, use the minimum-scale, maximum-scale, initial-scale, and 
+user-scalable properties.</p>
 
-<h5>Here’s a simple example of a function:</h5>
-
-<pre>
-function greet() {
-console.log("Hello, World!");
-greet(); // <i>Outputs: Hello, World!</i>
-</pre>
-
-<p>In this example, greet is the function name, and the code inside the curly braces {} is 
-the function body.We call or invoke the function by using its name followed by 
-parentheses().</p>
-
-<h4>Function Parameters and Arguments</h4>
-
-<p>Functions can take inputs, known as parameters.When we call a function, we pass values, 
-known as arguments, into the function.</p>
-
-<h5>Here’s an example:</h5>
+<p>The initial-scale of a website should be set to 1 as this defines the
+ratio between the device height, while in a portrait orientation, and
+the viewport size. Should a device be in landscape mode this would be
+the ratio between the device width and the viewport size. Values
+for initial-scale should always be a positive integer between 0 and 10.</p>
 
 <pre>
-function greet(name) {
-console.log("Hello," + name +
-greet("Alice"); // <i>Outputs: Hello, Alice!</i>
+ 1  &lt;meta name="viewport" content="initial-scale=2"&gt;
 </pre>
 
-<p>In this example, name is the parameter and “Alice” is the argument.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 12. viewport scale meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image012.png"
+  style="width:40%"
+  title="Viewport Scale Meta Tag"
+  alt="Viewport Scale Meta Tag." />
+</p>
+<p align="center" width="40%"><small><small>Fig. 4. Using an integer above 1 will zoom the website to be larger
+than the default scale. Generally speaking, this value will most commonly be set to 1.</small></small></p>
 
-<h5>Return Statement</h5>
-<p>Functions can output a result using the return statement.When a function encounters a 
-return statement, it stops execution and returns the specified value.</p>
-
-<h5>Here’s an example:</h5>
+<p>The minimum-scale and maximum-scale values determine how small and how
+large a viewport may be scaled. When using minimum-scale the value
+should be a positive integer lower than or equal to the initial-scale.
+Using the same reasoning, the maximum-scale value should be a positive
+integer greater than or equal to the initial-scale. Values for both of
+these must also be between 0 and 10.</p>
 
 <pre>
-function square(number) {
-  return number * number;
-  console.log(square(5)); // <i>Outputs: 25</i>
+ 1  &lt;meta name="viewport" content="minimum-scale=0"&gt;
 </pre>
 
-<p>In this example, square is a function that takes one parameter, number, and returns the 
-square of that number.</p>
+<p>Generally speaking, these values should not be set to the same value as
+the initial-scale. This would disable any zooming, which can be
+accomplished instead by using the user-scalable value. Setting
+the user-scalable value to no will disable any zooming. Alternatively,
+setting the user-scalable value to yes will turn on zooming.</p>
 
-<h5>Function Expressions</h5>
-<p>In JavaScript, functions can also be defined using function expressions.Here’s an 
-example:</p>
+<p>Turning off the ability to scale a website is a <b>bad idea</b>. It harms
+accessibility and usability, preventing those with disabilities from
+viewing a website as desired.</p>
 
 <pre>
-var square = function(number) {
-  return number * number;
-  1;
-console.log(square(5)); // <i>Outputs: 25</i>
+ 1  &lt;meta name="viewport" content="user-scalable=yes"&gt;
 </pre>
 
-<p>In this example, square is a function expression that calculates the square of a number.</p>
+<h4>Viewport Resolution</h4>
 
-<h4>Arrow Functions</h4>
+<p>Letting the browser decide how to scale a website based off any viewport scale 
+values usually does the trick. When more control is needed, specifically over the 
+resolution of a device, the target-densitydpi value may be used. The 
+target-densitydpi viewport accepts a handful of values including device-dpi, 
+high-dpi, medium-dpi, low-dpi, or an actual DPI number.</p>
 
-<p>ES6 introduced arrow functions, a shorter way to write functions using the = > syntax.</p>
-
-<h5>Here’s an example:</h5>
+<p>Using the target-densitydpi viewport value is rare, but extremely
+helpful when pixel by pixel control is needed.</p>
 
 <pre>
-const square =(number) => {
-return number * number;
-1;
-console.log(square(5)); // <i>Outputs: 25</i>
+ 1  &lt;meta name="viewport" content="target-densitydpi=device-dpi"&gt;
 </pre>
 
-<p>In this example, square is an arrow function that calculates the square of a number.
-Now that you understand the basics of functions in JavaScript, you can use them to create 
-more complex and dynamic applications.In the next chapter, we’ll look at objects and how 
-they can help us structure our code in a more logical and readable way.</p>
+<h4>Combining Viewport Values</h4>
 
-<p>Functions are the main building blocks in JavaScript.A function is a reusable set of 
-statements that perform a task or calculates a value.</p>
-
-<h4>Function Definition</h4>
-
-<p>In JavaScript, you can define a function using the function keyword, followed by a 
-name for the function, a list of parameters enclosed in parentheses(), and the 
-JavaScript statements that define the function enclosed in curly brackets {}.</p>
+<p>The viewport meta tag will accept individual values as well as multiple
+values, allowing multiple viewport properties to be set at once. Setting
+multiple values requires comma separating them within
+the content attribute value. One of the recommended viewport values is
+outlined below, using both the width and initial-scale properties.</p>
 
 <pre>
-function functionName(parameterl, parameter2, parameters) {
-// <i>code to be executed</i>
+ 1  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
 </pre>
 
-<h4>Calling a Function</h4>
-<p>To call a function in JavaScript, you would simply use the function name followed by 
-parentheses().</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~ 11. website with viewport meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image011.png"
+  style="width:40%"
+  title="Website with Viewport Meta Tag"
+  alt="Website with Viewport Meta Tag." />
+</p>
+<p align="center" width="40%"><small><small>Fig. 5. A combination of width=device-width and initial-scale=1 
+provide the initial size and zoom commonly required.</small></small></p>
+
+<h4>CSS Viewport Rule</h4>
+
+<p>Since the viewport meta tag revolves so heavily around setting the
+styles of how a website should be rendered it has been recommend to move
+the viewport from a meta tag with HTML to an @ rule within CSS. This
+helps keep the style separated from content, providing a more semantic
+approach.</p>
+
+<p>Currently some browsers have already implemented the @viewport rule, however 
+support isn't great across the board. The previously recommended viewport meta 
+tag would look like the following @viewport rule in CSS.</p>
 
 <pre>
-functionName();
+ 1  @viewport {  
+ 2    width: device-width;
+ 3    zoom: 1; 
+ 4  }  
 </pre>
 
-<h4>Function Parameters and Arguments</h4>
-<p>Function parameters are the names listed in the function definition.Function arguments 
-are the real values that are passed to the function.</p>
+<h4>Flexible Media</h4>
+
+<p>The final, equally important aspect to responsive web design involves
+flexible media. As viewports begin to change size media doesn't always
+follow suit. Images, videos, and other media types need to be scalable,
+changing their size as the size of the viewport changes.</p>
+
+<p>One quick way to make media scalable is by using the max-width property
+with a value of 100%. Doing so ensures that as the viewport gets smaller
+any media will scale down according to its containers width.</p>
 
 <pre>
-function myFunction(x; y) {
-return x * y;
-console.log(myFunction(5, 6)); // <i>Outputs: 30</i>
+ 1  img, video, canvas {  
+ 2    max-width: 100%;
+ 3  } 
 </pre>
 
-<h4>Function Return</h4>
-<p>The return statement stops the execution of a function and returns a value from that 
-function.</p>
+<h4>Flexible Media Demo</h4>
+
+<h4>Flexible Embedded Media</h4>
+
+<p>Unfortunately the max-width property doesn't work well for all instances
+of media, specifically around iframes and embedded media. When it comes
+to third party websites, such as YouTube, who use iframes for embedded
+media this is a huge disappointment. Fortunately, there is a 
+<a href="http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/" 
+rel="noopener noreferrer" target="_blank">work around</a>.</p>
+
+<p>To get embedded media to be fully responsive, the embedded element needs
+to be absolutely positioned within a parent element. The parent element
+needs to have a width of 100% so that it may scale based on the width of
+the viewport. The parent element also needs to have a height of 0 to
+trigger the hasLayout mechanism within Internet Explorer.</p>
+
+<p>Padding is then given to the bottom of the parent element, the value of
+which is set in the same aspect ratio of the video. This allows the
+height of the parent element to be proportionate to that of it's width.
+Remember the responsive design formula from before? If a video has an
+aspect ratio of 16:9, 9 divided by 16 equals .5625, thus requiring a
+bottom padding of 56.25%. Padding on the bottom and not the top is
+specifically used to prevent Internet Explorer 5.5 from breaking, and
+treating the parent element as an absolutely positioned element.</p>
+
+<h4>HTML</h4>
 
 <pre>
-function myFunction(x, y) {
-return x * y;
-var z = myFunction(5, 6); // <i>z equal to 30</i>
+ 1  &lt;figure&gt;
+ 2    &lt;iframe src="https://www.youtube.com/embed/Sv3xVOs7_No"&gt;&lt;/iframe&gt;
+ 3  &lt;/figure&gt;
 </pre>
 
-<h4>Function Hoisting</h4>
-<p>In JavaScript, functions can be called before they are declared.This is because function 
-declarations are hoisted to the top of the current scope.</p>
+<details>
+  <summary>CSS</summary>
 
 <pre>
-console.log(myFunction(5, 6)); // <i>Outputs: 30</i>
-function myFunction(x, y) {
-return x * y;
+ 1  figure {
+ 2    height: 0; 
+ 3    padding-bottom: 56.25%; /* 16:9 */ 
+ 4    position: relative;
+ 5    width: 100%; 
+ 6  } 
+ 7  iframe {
+ 8    height: 100%;
+ 9    left: 0;
+ 10   position: absolute;
+ 11   top: 0; 
+ 13   width: 100%; 
+ 14 } 
 </pre>
 
-<h4>Arrow Functions</h4>
+</details>
 
-<p>Arrow functions were introduced in ES6 as a short syntax for writing function 
-expressions.You don’t need the function keyword, the return keyword, and the curly 
-brackets.</p>
+<h4>Flexible Embedded Media Demo</h4>
+
+<p>For security reasons CodePen doesn't allow iframes within embedded code
+samples, however you may <a href="https://codepen.io/shayhowe/pen/cbmsI" 
+rel="noopener noreferrer" target="_blank">review and edit this code</a> on their 
+website.</p>
+
+100% Wide Container
+
+75% Wide Container
+
+50% Wide Container
+
+<h4>Resources & Links</h4>
+
+<ul>
+  <li><a href="http://www.alistapart.com/articles/responsive-web-design/"
+    rel="noopener noreferrer" target="_blank">
+    Responsive Web Design</a> via A List Apart</li>
+  <li><a href="http://dev.w3.org/csswg/css3-values/#viewport-relative-lengths"
+    rel="noopener noreferrer" target="_blank">
+    Viewport Percentage Lengths</a> via W3C</li>
+  <li><a href="https://css-tricks.com/css-media-queries/"
+    rel="noopener noreferrer" target="_blank">
+    CSS Media Queries</a> via CSS-Tricks</li>
+  <li><a href="https://abookapart.com/products/mobile-first"
+    rel="noopener noreferrer" target="_blank">
+    Mobile First</a> via Luke Wroblewski></li>
+  <li><a href="http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/"
+    rel="noopener noreferrer" target="_blank">
+    An Introduction to Meta Viewport and  @viewport</a> via Dev. Opera</li>
+</ul>
+
+<!-- 115 spaces + 6 right + 21 left -->
+<div>
+    <b>Lesson 4: </b><a href="#4-responsive-web-design">Responsive Web Design</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Lesson 6: </b><a href="#6-jquery">jQuery</a>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 align="center" id="5-preprocessors">Lesson 5: Preprocessors</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>In this Lesson 5:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>HTML</h4>
+
+<ul>
+  <li><a href="#haml">Haml</a></li>
+</ul>
+
+<h4>CSS</h4>
+
+<ul>
+  <li><a href="#scss-sass">SCSS & Sass</a></li>
+  <li><a href="#other-preprocessors">Other Preprocessors</a></li>
+</ul>
+
+<h4>SHARE</h4>
+
+<p>In time writing HTML and CSS may feel a bit taxing, requiring a lot of
+the same tasks to be completed over and over again. Tasks such as
+closing tags in HTML or repetitively having to looking up hexadecimal
+color values in CSS.</p>
+
+<p>These different tasks, while commonly small, do add up to quite a bit of
+inefficiency. Fortunately these, and a handful of other inefficiencies,
+have been recognized and preprocessor solutions have risen to the
+challenge.</p>
+
+<p>A preprocessor is a program that takes one type of data and converts it
+to another type of data. In the case of HTML and CSS, some of the more
+popular preprocessor languages
+include <a href="http://haml.info/" 
+rel="noopener noreferrer" target="_blank">Haml</a> and <a href="http://sass-lang.com/" 
+rel="noopener noreferrer" target="_blank">Sass</a>.</p>
+
+<p>Haml is processed into HTML and Sass is processed into CSS.</p>
+
+<p>Upon setting out to solve some of the more common problems, Haml and
+Sass found many additional ways to empower HTML and CSS, not only by
+removing the inefficiencies but also in creating ways to make building
+websites easier and more logical. The popularity of preprocessors have
+also brought along different frameworks to support them, one of the more
+popular being Compass.</p>
+
+<h4 id="haml">Haml</h4>
+
+<p>Haml, known as <a href="http://haml.info/docs/yardoc/file.REFERENCE.html"
+rel="noopener noreferrer" target="_blank">HTML abstraction markup language</a>, 
+is a markup language with the single goal of providing the ability to write 
+beautiful markup. Serving as its own markup language, code written in Haml is 
+later processed to HTML. Haml promotes DRY and well structured markup, providing 
+a pleasing experience for anyone having to write or read it.</p>
+
+<h4>Installation</h4>
+
+<p>Haml requires Ruby to be compiled to HTML, so the first step to using it
+is to ensure that Ruby is installed. Fortunately for those on Mac OS X
+Ruby comes preinstalled, and those on a Windows machine may
+visit <a href="http://rubyinstaller.org/" rel="noopener noreferrer" target="_blank">
+Windows Installer</a> for directions. Upon confirming Ruby is installed the gem install
+haml command needs to be run from the command line, using Terminal or
+the alike command line program, to install Haml.</p>
 
 <pre>
-const myFunction =(x, y) = &gt; x * y;
-console.log(myFunction(5,6)); // <i>Outputs: 30</i>
+ 1  gem install haml
 </pre>
 
-<p>In the next chapter, we will explore more complex aspects of JavaScript functions, 
-such as closures and higher-order functions.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch5">Chapter 5: Arrays and Iteration in JS</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>In this chapter, we will explore one of the most important data structures in 
-JavaScript: Arrays.We will go through the basics of creating and manipulating arrays, 
-along with the different methods of iterating through arrays to manipulate or access the 
-data stored within them.</p>
-
-<h4>Understanding Arrays</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch6">Chapter 6: Objects and Object-Oriented Programming in JS</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch7">Chapter 7: Loops in JS</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch8">Chapter 8: Async and Await</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch9">Chapter 9: Promises and Asynchronous Programming in JS</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch10">Chapter 10: Working with JSON in JS</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch11">Chapter 11: JS HTML DOM</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch12">Chapter 12: JS Browser BOM</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch13">Chapter 13: JS Libraries and Web APIs</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch14">Chapter 14: JS AJAX</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch15">Chapter 15: Handling Errors and Exceptions in JS</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch16">Chapter 16: Libraries and APIs</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-<h3 id="JSStmts">JavaScript Statements</h3>
-
-<h4>Examples of JavaScript Statements:</h4>
-
-<ol type="1" start="1">
-  <li>Variable Declaration:</li>
-  <li>Conditional Statement:</li>
-  <li>Loops</li>
-</ol>
-
-<h3 id="JSSyntax">JavaScript Syntax</h3>
-
-<h4>Examples of JavaScript Syntax:</h4>
-
-<ol type="1" start="1">
-  <li>.Function Definition:</li>
-  <li>.Object Literal:</li>
-  <li>.Array Declaration:</li>
-</ol>
-
-<h3 id="JSComments">JavaScript Comments</h3>
-
-<h4>Examples of TavaScript Comments:</h4>
-
-<ol type="1" start="1">
-  <li>Single Line Comment:</li>
-  <li>Multi - line Comment:</li>
-  <li>Commenting Out Code:</li>
-</ol>
-
-<h3 id="JSVars">JavaScript Variables</h3>
-
-<h4>Examples of JavaScript  Variables</h4>
-
-<ol type="1" start="1">
-  <li>Declaring and Assigning a Variable:</li>
-  <li>String Variable:</li>
-  <li>Object Variable:</li>
-</ol>
-
-<h3 id="JSVars">JavaScript Variables</h3>
-
-<h4>Examples of JavaScript  Variables</h4>
-
-<ol type="1" start="1">
-  <li>Declaring and Assigning a Variable:</li>
-  <li>String Variable:</li>
-  <li>Object Variable:</li>
-</ol>
-
-<h3 id="JSlet">JavaScript let</h3>
-
-<h4>Example of let in JavaScript</h4>
-
-<ol type="1" start="1">
-  <li>String Variable</li>
-  <li>Object Variable</li>
-</ol>
-
-<h3 id="JSconst">JavaScript const</h3>
-
-<h4>Example of const in JavaScript</h4>
-
-<h3 id="JSOper">JavaScript Operators</h3>
-
-<h4>Examples of JavaScript  Operators</h4>
-
-<ol type="1" start="1">
-  <li>Arithmetic Operators:</li>
-  <li>Comparison Operators:</li>
-  <li>Logical Operators:</li>
-</ol>
-
-<h3 id="JSArithmetic">JS Arithmetic</h3>
-
-<h4>Examples of JavaScript  Arithmetic</h4>
-
-<ol type="1" start="1">
-  <li>Addition:</li>
-  <li>Subtraction:</li>
-  <li>Multiplication:</li>
-  <li>Division:</li>
-  <li>Modulus(Remainder):</li>
-</ol>
-
-<h3 id="JSAssign">JS Assignment</h3>
-
-<h4>Examples of JavaScript Assignment</h4>
-
-<ol type="1" start="1">
-  <li>Assigning a Value to a Variable:</li>
-  <li>Assigning the Result of an Expression:</li>
-</ol>
-
-<h3 id="JSDataTypes">JS Data Types</h3>
-
-<h4>Examples of JS Data Types:</h4>
-
-<ol type="1" start="1">
-  <li>Primitive Data Tvpes:</li>
-  <li>Complex Data Types:</li>
-</ol>
-
-<h3 id="JSFunctions">JS Functions</h3>
-
-<h4>Examples of JS Functions:</h4>
-
-<ol type="1" start="1">
-  <li>Function Declaration:</li>
-  <li>Function Call:</li>
-  <li>Arrow Function:</li>
-</ol>
-
-<h3 id="JSObjects">JS Objects</h3>
-
-<h4>Examples of JS Objects:</h4>
-
-<ol type="1" start="1">
-  <li>Object Declaration:</li>
-  <li>Accessing Object Properties:</li>
-  <li>Calling Object Method:</li>
-</ol>
-
-<h3 id="JSEvents">JS Events</h3>
-
-<h4>Examples of JS Events:</h4>
-
-<ol type="1" start="1">
-  <li>Click Events:</li>
-  <li>Input Events:</li>
-</ol>
-
-<h3 id="JSStrings">JS Strings</h3>
-
-<h4>Examples of JS String:</h4>
-
-<ol type="1" start="1">
-  <li>Declaring a String Variable:</li>
-  <li>Concatenating Strings:</li>
-</ol>
-
-<h3 id="JSStringMethods">JS String Methods</h3>
-
-<h4>Examples of JS String Methods:</h4>
-
-<ol type="1" start="1">
-  <li>toUpperCase() Method:</li>
-  <li>substring() Method:</li>
-</ol>
-
-<h3 id="JSStringMethods">JS String Templates</h3>
-
-<h4>Examples of JS String Templates:</h4>
-
-<ol type="1" start="1">
-  <li>Basic Template Literal:</li>
-  <li>Multi-line Template Literal:</li>
-</ol>
-
-<h3 id="JSNumbers">JS Numbers</h3>
-
-<h4>Examples of JS Numbers:</h4>
-
-<ol type="1" start="1">
-  <li>Whole Numbers:</li>
-  <li>Decimal Numbers:</li>
-</ol>
-
-<h3 id="JSBigInt">JS BigInt</h3>
-
-<h4>Examples of JS BigInt:</h4>
-
-<ol type="1" start="1">
-  <li>Creating a BigInt:</li>
-  <li>Performing Operations with BigInt:</li>
-</ol>
-
-<h3 id="JSNumProperties">JS Number Properties</h3>
-
-<h4>Examples of JS Number Properties:</h4>
-
-<ol type="1" start="1">
-  <li>Number_MAX_VALUE Property:</li>
-  <li>Number_MIN_VALUE Property:</li>
-</ol>
-
-<h3 id="JSArrays">JS Arrays</h3>
-
-<h4>Examples of JS Arrays:</h4>
-
-<ol type="1" start="1">
-  <li>Declaration:</li>
-  <li>Accessing Elements:</li>
-  <li>Modifying Elements:</li>
-</ol>
-
-<h3 id="JSArrayMethods">JS Array Methods</h3>
-
-<h4>Examples of JS Array Methods:</h4>
-
-<ol type="1" start="1">
-  <li>push() Method:</li>
-  <li>pop() Method:</li>
-  <li>splice() Method:</li>
-</ol>
-
-[Function Declaration:]
-
-[Function Call:]
-
-[Arrow Function:]
-
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Objects
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Objects:
-
-[Object Declaration:]
-
-[Accessing Object Properties:]
-
-[Calling Obiect Method:]
-
-[JS Events]
-
-[Examples of JS Events:]
-
-[Click Event:]
-
-[Input Event:]
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-[JS Strings]
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-[Examples of JS Strings:]
-
-[Declaring a String Variable:]
-
-[Concatenating Strings:]
-
-[JS String Methods]
-
-[Examples of JS String Methods:]
-
-[toUpperCase() Method:]
-
-[substring() Method:]
-
-String Search
-
-Objects:
-
-[Object Declaration:]
-
-[Accessing Object Properties:]
-
-[Calling Obiect Method:]
-
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-[JS Events]
-
-[Examples of JS Events:]
-
-[Click Event:]
-
-[Input Event:]
-
-[JS Strings]
-
-[Examples of JS Strings:]
-
-[Declaring a String Variable:]
-
-[Concatenating Strings:]
-
-[JS String Methods]
-
-[Examples of JS String Methods:]
-
-[toUpperCase() Method:]
-
-[substring() Method:]
-
-String Search
-
-String Search:
-
-[indexOf() Method:]
-
-[includes() Method:]
-
-[JS String Templates]
-
-[Examples of JS String Templates:]
-
-[Basic Template Literal:]
-
-[Multi - line Template Literal:]
-
-[JS Numbers]
-
-[Examples of JS Numbers:]
-
-[Whole Numbers:]
-
-[Decimal Numbers:]
-
-[Scientific Notation:]
-
-[JS Biglnt]
-
-[Examples of JS Biglnt:]
-
-[Creating a Biglnt:]
-
-[Performing Operations with Biglnt:]
-
-[Number Methods]
-
-Number Methods:
-
-[toFixed() Method:]
-
-[parselnt() Method:]
-
-[JS Number Properties]
-
-[Examples of JS Number Properties:]
-
-[Number MAX VALUE Propertv:]
-
-[Number.MIN VALUE Propertv:]
-
-[JS Arrays]
-
-[Examples of JS Arrays:]
-
-[Declaration:]
-
-[Accessing Elements:]
-
-[Modifving Elements:]
-
-[JS Array Methods]
-
-[Examples of JS Array Methods:]
-
-[push() Method:]
-
-[pop() Method:]
-
-[splice() Method:]
-
-[JS Array Sort]
-
-[Examples Array Sort:]
-
-[Sorting Numbers:]
-
-[Sorting Strings:]
-
-[JS Array Iteration]
-
-[Examples of JS Array Iteration:]
-
-[forEach() Method:]
-
-[map() Method:]
-
-[JS Array Const]
-
-[Examples of JS Array Const:]
-
-[JS Dates]
-
-[Examples of JS Dates:]
-
-[Creating a Date Obiect:]
-
-[Creating a Specific Date:]
-
-[JS Date Formats]
-
-[Examples of JS Date Formats:]
-
-[Formatting to String:]
-
-[Formatting to Locale String:]
-
-[JS Date Get Methods]
-
-[Examples of TS Date Get Methods:]
-
-[getFullYear() Method:]
-
-[getMonth() Method:]
-
-[JS Date Set Methods]
-
-[Examples of TS Date Set Methods:]
-
-[setFullYear() Method:]
-
-[setMonth() Method:]
-
-[JS Math]
-
-[Examples of JS Math:]
-
-[Math.PI Propertv:]
-
-[Math.sqrt Method:]
-
-[JS Random]
-
-[Examples of JS Random:]
-
-[Generating Random Number:]
-
-[Generating Random Integer:]
-
-[JS Booleans]
-
-[Examples of JS Booleans:]
-
-[Declaration:]
-
-[Comparison:]
-
-[JS Comparisons]
-
-[Examples of JS Comparisons:]
-
-Equality Operator j.&apos; Strict Equalitv Operator j:
-
-[JS If Else]
-[Examples of JS If Else:]
-
-[Basic if else:]
-
-[Nested if &period;..else:]
-
-[JS Switch]
-
-[Examples of JS Switch:]
-
-[Basic switch] •
-
-[JS Loop For]
-
-[Examples of TS Loop For:]
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 18.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image018.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:5in;" />
-<!-- [](./images/image018.jpg){width="9.57638888888889in" height="11.805555555555555in"} -->
-
-[Basic for Loop:]
-
-[Looping Array Elements:]
-
-<h2 id="JSLoop">JS Loop For In</h2>
-
-[Examples of JS Loop For In:]
-
-[Iterating Object Properties:]
-
-[JS Loop For Of]
-
-[Examples of JS Loop For Of:]
-
-[Iterating Over Array Elements:]
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 19.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image019.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:5in;" />
-<!-- ![](./images/image019.jpg){width="5.213582677165354e-2in" height="3.125984251968504e-2in"}[JS Loop While] -->
-
-[Examples of JS Loop While:]
-
-[Basic while Loop:]
-
-[JS Break]
-
-[Examples of JS Break:]
-
-[Using break in a Loop:]
-
-[JS Iterables]
-
-[Examples of JS Iterables:]
-
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 20.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image020.jpg"
-  title="Using Iterables with for.of"
-  alt="Using Iterables with for.of."
-  style="border: 2px solid #000000; width:5in;" />
-<!-- [Using Iterables with for of]![](./images/image020.jpg){width="5.213582677165354e-2in" height="5.209864391951006e-2in"} -->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image021.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:7in;" />
-<!-- ![](./images/image021.jpg){width="9.722222222222221in" height="11.805555555555555in"} -->
-
-[JS Sets]
-
-[Examples of JS Sets:]
-
-[Creating a Set:]
-
-[Iterating Over a Set:]
-
-[JS Maps]
-
-[Examples of JS Maps:]
-
-[Creating a Map:]
-
-[Iterating Over a Map:]
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 22/23.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image022.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:3.5in;" />
-<img src="./images/image023.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:3.5in;" />
-<!-- ![](./images/image022.jpg){width="6.25e-2in" {width="6.25e-2in" height="2.083880139982502e-2in"}[JS Typeof] -->
-
-[Examples of JS Typeof:]
-
-[Using typeof:]
-
-[JS Type Conversion]
-
-[Examples of JS Type Conversion]
-
-[String to Number: Number to String:]
-
-[JS Bitwise]
-
-[Examples of JS Bitwise:]
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 24.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image024.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:7in;" />
-<!--(./images/image024.jpg){width="9.875in" height="11.805555555555555in"} -->
-
-[Bitwise AND Operator:]
-
-[Bitwise OR Operator:]
-
-[JS RegExp]
-
-[Examples of JS RegExp:]
-
-[Creating a Reeular Expression:]
-
-[Testing a String with RegExp:]
-
-[JS Precedence]
-
-[Examples of TS Precedence:]
-
-[Arithmetic Precedence:]
-
-[JS Errors]
-
-[Examples of JS Errors:]
-
-[Syntax Error:]
-
-[Reference Error:]
-
-<h2>[JS Scope]</h2>
-
-[Examples of JS Scope:]
-
-[Global Scope:]
-
-[JS Hoisting]
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 25.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image025.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:7in;" />
-<!--(./images/image025.jpg){width="9.743055555555555in" height="11.805555555555555in"} -->
-
-[Examples JS Hoisting:]
-
-[Variable Hoisting:]
-
-[Function Hoisting:]
-
-[JS Strict Mode]
-
-[Examples of JS Strict Mode:]
-
-[Enabling Strict Mode:]
-
-[using Strict Mode Inside a Function:]
-
-<h3>JS this Keyword</h3>
-
-[Examples of JS this Keyword:]
-
-[Using this in an Obiect:]
-
-<h3>JS Arrow Function</h3>
-
-[Examples of JS Arrow Function:]
-
-[Basic Arrow Function:]
-
-[Arrow Function with Multiple Lines:]
-
-[JS Classes]
-
-[Examples of JS Classes:]
-
-[Class Declaration:]
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 26.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image026.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:7in;" />
-<!--(./images/image026.jpg){width="9.347222222222221in" height="11.805555555555555in"} -->
-
-<h2>JS Modules</h2>
-
-[Examples JS Modules: Exporting a Module:]
-
-[Importing a Module:]
-
-<h2>JS JSON</h2>
-
-[Examples of JS JSON:]
-
-[Parsing JSON:]
-
-[Stringify Obiect to JSON:]
-
-[JS Debugging]
-
-[Examples of JS Debugging:]
-
-[Using console.log() for Debugging:]
-
-[Using Browser Developer Tools:]
-
-[JS Style Guide]
-
-[Examples of JS Style Guide:]
-
-[Naming Conventions:]
-
-[Indentation:]
-
-[JS Best Practices]
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 27.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-  <img src="./images/image027.jpg"
-  title=""
-  alt="."
-  style="border: 2px solid #000000; width:7in;" />
-<!--./images/image027.jpg){width="9.222222222222221in" height="11.805555555555555in"} -->
-
-[Examples TS Best Practices:]
-
-[Use Meaningful Variable Names:]
-
-[Avoid Global Variables:]
-
-[JS Mistakes]
-
-[Examples of JS Mistakes:]
-
-[Missing Semicolon:]
-
-[Uninitialized Variables:]
-
-[JS Performance]
-
-[Examples of TS Performance:]
-
-[Reduce DOM Manipulations:]
-
-[Use EffcientAl orithms:]
-
-[JS Reserved Words]
-
-[Examples of JS Reserved Words:]
-
-[let const function class etc.]
-
-[JS Objects]
-
-[Object Definitions:]
-
-[Creating an Obiect Literally:]
-
-![](./images/image028.jpg){width="9.604166666666666in"
-height="11.805555555555555in"}
-
-[using the Obiect Constructor:]
-
-[Obiect Properties]
-
-[Obiect Properties Examples:]
-
-[Accessing Obiect Properties:]
-
-[Adding or Modifying Properties:]
-
-[Obiect Methods]
-
-[Obiect Methcds Examples:]
-
-[Accessing Obiect Methods:]
-
-[Adding Methods to an Obiect:]
-
-[Obiect Display]
-
-[Obiect Display Examples:]
-
-[Using console.Ice O:]
-
-[Stringify with JSON:]
-
-[Obiect Accessors]
-
-[Obiect Accessors Examples:]
-
-[using Getters and Setters:]
-
-[Object Constructors]
-
-![](./images/image029.jpg){width="9.645833333333334in"
-height="11.805555555555555in"}
-
-[Obiect Constructors Examples:]
-
-[Vsing Constructor Functions:]
-
-[Obiect Prototypes]
-
-[Obiect Protctypes Examples:]
-
-[Adding Methods to the Protctype:]
-
-[Obiect Iterables]
-
-[Obiect Iterables Examples: Using for...in Loop:]
-
-![](./images/image030.jpg){width="6.253062117235346e-2in"
-height="6.251859142607175e-2in"}![](./images/image031.jpg){width="5.21084864391951e-2in"
-height="4.167979002624672e-2in"}[Ušing Obiect.keys O:]
-
-[Obiect Sets]
-
-[Obiect Sets Examples:]
-
-[Creating a Set:]
-
-[Checking Set Membership:]
-
-[Obiect Maps]
-
-[Obiect Maps Examples:]
-
-[Creating a Map:]
-
-[Getting Values from a Map]
-
-![](./images/image032.jpg){width="9.54861111111111in"
-height="11.805555555555555in"}
-
-[Object Reference]
-
-[Object Reference Examples]
-
-[Referencing an Obiect:]
-
-[Changing Obiect through Reference:]
-
-[JS Functions]
-
-[Function Definitions:]
-
-[Function Declaration:]
-
-[Function Expression:]
-
-[Arrow Function:]
-
-[Function Parameters]
-
-[Function Parameters Examples:]
-
-[Single Parameter:]
-
-[Multiple Parameters:]
-
-[Function Invocation]
-
-[Function Invocation Examples:]
-
-[Calling a Function:]
-
-[Function Call]
-
-![](./images/image033.jpg){width="9.38888888888889in"
-height="11.805555555555555in"}
-
-[Function Call Examples]
-
-Using call
-
-[Function Apply]
-
-[Function Apply Examples:]
-
-Using apply
-
-[Function Bind]
-
-[Function Bind Examples:]
-
-bind
-
-[Function Closures]
-
-[Function Closures Examples:]
-
-[Closure Example:]
-
-[JS Classes]
-
-[Class Intro:]
-
-[Class Declaration:]
-
-[Creating Instances:]
-
-[Class Inheritance]
-
-[Class Inheritance Example:]
-
-![](./images/image034.jpg){width="10.11111111111111in"
-height="11.805555555555555in"}
-
-[Extending a Class]
-
-[Using Inherited Methods:]
-
-[Class Static]
-
-[Class Static Example:]
-
-[Adding a Static Method:]
-
-<h2>[JS Async]</h2>
-
-[JS Callbacks]
-
-[Callbacks Example:]
-
-<h3>[JS Asynchronous]</h3>
-
-[Asynchronous Example:]
-
-[JS Promises]
-
-[Promises Example:]
-
-[Creating a Promise:]
-
-[IS Async / Await]
-
-[Async / Await Example:]
-
-[Using Async / Await:]
-
-[JS HTML DOM]
-
-![](./images/image035.jpg){width="10.090277777777779in"
-height="11.805555555555555in"}
-
-[DOM Intro:]
-
-[Accessing an Element by ID:]
-
-[DOM Methods]
-
-[Changing Element Content:]
-
-<h2>[DOM Document]</h2>
-
-[Accessing Document Properties:]
-
-[DOM Elements]
-
-       Element Styles:
-
-<h2>DOM HTML</h2>
-
-[Changing HTML Attributes:]
-
-[DOM Forms]
-
-[Accessing Form Elements:]
-
-<h2>[DOM CSS]</h2>
-
-[Changing CSS Classes:]
-
-<h3>[DOM Animations]</h3>
-
-[Animating an Element:]
-
-[DOM Events]
-
-[Click Event Handling:]
-
-![](./images/image029.jpg){width="9.645833333333334in"
-height="11.805555555555555in"}
-
-[DOM Event Listener]
-
-[Mouseover Event Handling:]
-
-[DOM Navigation]
-
-[Traversing Child Elements:]
-
-<h3>[DOM Nodes]</h3>
-
-[Creating a New Node:]
-
-[DOM Collections]
-
-[Accessing Collection Elements:]
-
-[DOM Node Lists]
-
-[Accessing Node List Elements:]
-
-[JS Browser BOM]
-
-[JS Window]
-
-[Accessing Window Properties:]
-
-[JS Screen]
-
-[Accessing Screen Properties:]
-
-[JS Location]
-
-[Accessing Location Information:]
-
-[JS History]
-
-![](./images/image036.jpg){width="9.61111111111111in"
-height="11.805555555555555in"}
-
-[Accessing History Methods:]
-
-[JS Navigator]
-
-[Accessing Navigator Properties:]
-
-[JS Popup Alert]
-
-[Displaying an Alert:]
-
-[JS Timing]
-
-Using setTimeout
-
-  Using setlnterval                                                  
-
-[JS Coclcies]
-
-[Setting a Cookie:]
-
-[Accessing a Cookie:]
-
-<h3>[JS web APIs]</h3>
-
-[Web API Intro]
-
-[Accessing the Web API:]
-
-[Web Forms API]
-
-[Accessing Form Elements:]
-
-[Web History API]
-
-[Changing Browser History:]
-
-![](./images/image037.jpg){width="9.680555555555555in"
-height="11.805555555555555in"}
-
-[Web Storage API]
-
-[Using localStorage:]
-
-[web Worker API]
-
-[Creating a Web Worker:]
-
-[Web Fetch API]
-
-[Making a GET Request:]
-
-[Web Geolocation API]
-
-[Getting User&apos;s Location:]
-
-[JS AJAX]
-
-<h3>[AJAX Intro]</h3>
-
-[Simple AJAX Request:]
-
-[AJAX XMLHttp using XMLHttpRequest:]
-
-[AJAX Request]
-
-[Sending POST Request:]
-
-[AJAX Response]
-
-[Handling JSON Response:]
-
-[AJAX XML File]
-
-![](./images/image038.jpg){width="10.083333333333334in"
-height="11.805555555555555in"}
-
-[Fetching XML File:]
-
-[AJAX PHP]
-
-[Handling AIAX in PHP:]
-
-<h3>[AJAX ASP]</h3>
-with ASP:
-[AJAX Database]
-
-[Database Interaction with ATAX:]
-
-[AJAX Applications]
-
-[Real - time Chat Application:]
-
-[AJAX Examples]
-
-[AIAX Example 1:]
-
-[AIAX Example 2:]
-
-[AIAX Example 3:]
-
-[AIAX Example 4:]
-
-[AJAX Example 5:]
-
-[AIAX Example 6:]
-
-<h3>[Dynamic Content Loading]</h3>
-
-[Form Submission with AJAX]
-
-[Fetching JSON Data]
-
- Example 7:  | Autocomplete Search
-
-[Image Gallery with ATAX]
-
-![](./images/image039.jpg){width="8.618055555555555in"
-height="11.805555555555555in"}
-
-[AJAX Example 8: Live Data Update]
-
-[AIAX Example 9: Infinite Scroll]
-
-[ATAX Example 10: File Upload with Progress Bar]
-
-[AIAX Example 11: Displaying Time Dynamically]
-
-<h3>[JS JSON]</h3>
-
-<h3>[JSON Intro]</h3>
-
-[Example of JSON Data:]
->
-[JSON Syntax]
->
-[Example of JSON Syntax:]
-
-<h3>[JSON vs XML]</h3>
-
-[Example ComparJSON between JSON and XML:]
-
-[JSON Data Types]
-
-[Example of Different Data Types in JSON:]
-
-<h3>[JSON Parse]</h3>
-
-[Example of JSON Parsing:]
-
-[JSON Stringify]
-
-[Example of JSON Stringification:]
-
-[JSON Objects]
-
-[Example of a JSON Obiect:]
-
-[JSON Arrays]
-
-[Example of a JSON Array:]
-
-[JSON Server]
-
-[Example of JSON Data from a Server:]
-
-[JSON PHP]
-
-[Example of Encoding and Decoding JSON in PHP:]
-
-[JSON HTML]
-
-[Example of Usine JSON Data in HTML:]
-
-<h3>[JSON JSONP]</h3>
-
-[Example of JSONP Request:]
-
-1. [.Creating a JSON Obiect:]
-
-2. [.Accessing JSON Obiect Properties:]
-
-3. [.Nested JSON Obiects:]
-
-4. [.JSON Array of Obiects:]
-
-5. [.Converting TSON to String:]
-
-6. [.Parsing JSON String to Object:]
-
-7. [.Fetching JSON Data from URL(using Fetch API
-
-8. [.Displaying JSON Data Dynamically in HTML:]
-
-9. [.Handling JSON Data in Forms:]
-
-10.[.Stringifying and Parsing a More Complex Obiect]
-
-11.[.Filtering JSON Array Data:]
-
-12.[.Updating JSON Object Properties:]
-
-13.[.Removing a Propertv from JSON Object:]
-
-14.[.Using JSON with Local Storage:]
-
-15.[.Handling TSON Date Strings:]
-
-16.[.Using JSON in Asynchronous Functions:]
-
-17.[.JSON Serialization with Custom Functions:]
-
-18.[.Handling TSON Data from an API(Using Axios
-
-19.[.Merging JSON Obiects:]
-
-20.[.Mappinz JSON Data to Another Structure:]
-
-[JayaScript vs iOuery: A Comprehensive ComparJSON]
-
-[JavaScript Overview]
-
-[Example of JavaScript Functionality:]
-
-[jQuery Overview]
-
-[Example of jQuery Functionality: Differences Between JavaScript and jQuery]
-
-1. [.Syntax:]
-
-2. [.DOM Manipulation:]
-
-3. [.Browser Compatibility:]
-
-4. [.Learning Curve:]
-
-[jQuery Selectors]
-
-[Example of jQuery Selectors:]
-
-[jQuery HTML Manipulation]
-
-[Example of jQuery HTML Manipulation:]
-
-<h4>[jQuery CSS Manipulation]</h4>
-
-[Example ofiOuery CSS Manipulation:]
-
-[jQuery DOM Traversal]
-
-[Example of jQuery DOM Traversal:]
-
-<h4>[Conclusion]</h4>
-
-1. [.Selecting an Element by ID:]
-
-![](./images/image047.jpg){width="9.125in"
-height="11.805555555555555in"}
-
-2. [.Selecting Multiple Elements by Class:]
-
-3. [.Adding Event Listeners:]
-
-4. [.Handling Document Ready Event:]
-
-5. [.Creating a New Element:]
-
-6. [.Removine an Element:]
-
-7. [.Manipulating CSS Class:]
-
-8. [.Changing Text Content:]
-
-9. [.Hidinz an Element:]
-
-10.[.Fading In an Element:]
-
-11.[AIAX GET Request:]
-
-12  [.AIAX POST Request:]
-
-13.[Getting Attribute Value:]
-
-14.[Setting Attribute Value:]
-
-15  [.Getting Form Values:]
-
-16.[.Checking Checkbox State:]
-
-17.[.Iteratine Over NodeList:]
-
-![](./images/image048.jpg){width="9.090277777777779in"
-height="11.805555555555555in"}
-
-18.[.Handling Form Submission:]
-
-19.[.Animating Element:]
-
-20.[.Changing Background Color on Click:]
-
-[JavaScript Graphics Libraries: Explained]
-
-1. [.JavaScript Graphics]
-
-2. [.JS Canvas]
-
-3. [.JS Plotly]
-
-![](./images/image049.jpg){width="0.469174321959755in"
-height="0.2500732720909886in"}IS Chart is
-
-5. [.JS Google Chart]
-
-6. [.JS D3.is]
-
-[Conclusion]
-
-[Canvas Examples:]
-
-[Plotly Examples:]
-
-[Chart.JS Examples
-:]![](./images/image050.jpg){width="1.0426509186351705e-2in"
-height="3.125984251968504e-2in"}
-
-[Google Charts Examples:]
-
-[D3.JS Examples:]
-
-![](./images/image051.jpg){width="8.993055555555555in"
-height="11.805555555555555in"}
-
-[Canvas Examples:]
-
-[Plotly Examples:]
-
-[Chart.JS Examples:]
-
-[Google Charts Examples:]
-
-[D3.JS Examples:]
-
-[Basic Examples:]
-
-[String Manipulation:]
-
-[Array Manipulation:]
-
-[Functions:]
-
-[Obiect Manipulation:]
-
-[Loops and Iterations:]
-
-[Error Handling:]
-
-[Asynchronous JavaScript:]
-
-[DOM Manipulation:]
-
-[Regular Expressions:]
-
-[Advanced Functions]
-
-![](./images/image052.jpg){width="10.069444444444445in"
-height="11.805555555555555in"}
-
-[Advanced Array Manipulation:]
-
-[Advanced Obiect Manipulation:]
-
-[Advanced Loops and Iterations:]
-
-[Promises and Async / Await:]
-
-[Advanced DOM Manipulation:]
-
-[ES6 + Features:]
-
-[Error Handling and Regular Expressions:]
-
-[Advanced Functions and Functionality:]
-
-[Advanced Array Manipulation:]
-
-[Advanced Object Manipulation: Advanced Loops and Iterations
-:]
-
-[Advanced Error Handling:]
-
-[Advanced Object Manipulation:]
-
-[Advanced Array Manipulation:]
-
-[Advanced Functicnality: Advanced Error Handling]
-
-![](./images/image053.jpg){width="9.07638888888889in"
-height="11.805555555555555in"}
-
-[ES6 + Features:]
-
-[Advanced Functions and Operations:]
-
-[Advanced Array Manipulation:]
-
-[Advanced Object Manipulation:]
-
-[Advanced Promises and Async / Await:]
-
-[ES6 + Features:]
-
-[Advanced Functions and Operations:]
-
-[Advanced Array Manipulation:]
-
-[Advanced Object Manipulation:]
-
-[Advanced Promises and Async / Await:]
-
-[ES6 + Features:]
-
-[Advanced Functions and Operations:]
-
-[Advanced Array Manipulation:]
-
-[Advanced Obiect Manipulation:]
-
-[Advanced Promises and Async / Await:]
-
-[ES6 + Features]
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 54.(xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-![](./images/image054.jpg){width="9.131944444444445in"
-height="11.805555555555555in"}
-
-[Advanced Functions and Operations:]
-
-[Advanced Array Manipulation:]
-
-[Advanced Object Manipulation:]
-
-[Advanced Promises and Async / Await:]
-
-[ES6 + Features:]
-
-[Advanced Functions and Operations:]
-
-[Advanced Array Manipulation:]
-
-[Advanced Obiect Manipulation:]
-
-[Advanced Promises and Async / Await: ES6 + Features:]
-
-[Advanced Functions and Operations:]
-
-[Advanced Array Manipulation:]
-
-[Advanced Object Manipulation:]
-
-[Advanced Promises and Async / Await: ES6 + Features:]
-
-[Advanced Functions and Operations:]
-
-
-[Advanced Array Manipulation:]
-
-[Advanced Obiect Manipulation:]
-
-[Advanced Promises and Async / Await:]
-
-[ES6 + Features:]
-
-[Advanced Functions and Operations:]
-
-[Advanced Array Manipulation:]
-
-[Advanced Obiect Manipulation:]
-
-[Advanced Promises and Async / Await:]
-
-[ES6 + Features:]
-
-[Advanced Functions and Operations:]
-
-[Advanced Array Manipulation:]
-
-[Advanced Obiect Manipulation:]
-
-[Advanced Promises and Async / Await:]
-
-[ES6 + Features:]
-
-[Advanced DOM Manipulation:]
-
-[DOM Traversal and Manipulation:]
-
-
-[Advanced Event Handling:]
-
-[DOM Content Manipulation:]
-
-[Input Event Handling:]
-
-[Form Validation and Submission:]
-
-<h4>[Advanced Input Handling]</h4>
-
-[DOM Obiect Creation and Manipulation:]
-
-[Advanced Obiect Manipulation:]
-
-[Styling HTML Obiects:]
-
-[Event Handling and Interaction:]
-
-[Advanced Content Manipulation:]
-
-[Event Handling:]
-
-[Event Delegation and Bubbling:]
-
-[Window and Docurnent Events:]
-
-[Form Events:]
-
-[Browser Object Model(BOM) Manipulation:]
-
-[Navigator Obiect Exploration:]
-
-[Location Obiect Manipulation:]
-
-[Screen Obiect Attributes:]
-
-[Installing JavaScript:]
-
-[Setting Up Visual Studio Code for JavaScript Development
-:]
-
-[Conclusion:]
-
-<h3>Statements</h3>
-
-JavaScript statements are individual commands or instructions that the
-browser executes.They form the logic of a program and can be simple
-or complex.
-
-Examples of JavaScript Statements:
-
-I Variable Declaration:
-
-javascript code let x; // <i>Declaring a variable &Hat;i&Hat;x&Hat;i&Hat;</i>
-
-2..Conditional Statement:
-
-javascript code
+<p>Files written in the Haml markup should be saved with the file extension
+of .haml. To then convert these files from Haml to HTML the haml command
+below needs to be run to compile each individual file.</p>
 
 <pre>
-// <i>Executed if x is equal to 5 console.log(is 5&apos;);</i>
-
-} else {
-
-// <i>Executed if x is not equal to 5 console.log(&apos;x is not 5);</i>
+ 1  haml index.haml index.html  
 </pre>
 
-3. Loops:
+<p>In the example above, the file index.haml is converted to HTML and saved
+as index.html within the same directory. This command has to be run
+within the same directory the files reside in. Should the command be run
+outside this directory the path where the files reside need to be
+included within the command. At any time the command haml --help may be
+run to see a list of different available options.</p>
+
+<h4>Watching a File or Directory</h4>
+
+<p>Unfortunately Haml doesn't provide a way to watch a file, or directory,
+for changes without the use of another dependency.</p>
+
+<p>Inside of a Rails application a Haml dependency may be added in the
+Gemfile, thus automatically compiling Haml files to HTML upon any
+changes. There are a few desktop applications available for those not
+using Rails, one of the more popular being <a href="https://codekitapp.com/" 
+rel="noopener noreferrer" target="_blank">CodeKit</a>.</p>
+
+<p>On top of Haml CodeKit also supports other preprocessors, which may also
+come in handy.</p>
+
+<h4>Doctype</h4>
+
+<p>The first part to writing a document in Haml is knowing what type
+of doctype is to be used. When working with HTML documents, the general
+document type is going to be the HTML5 doctype. In Haml document types
+are identified with three exclamation points, !!! followed by any
+specifics if necessary.</p>
+
+<p>The default doctype in Haml is the HTML 1.0 Transitional document type
+so in order to make this the HTML5 doctype the number five has to be
+passed in after the exclamation points, !!! 5.</p>
+
+<h4>Haml</h4>
+
+<pre>
+ 1  !!! 5
+</pre>
+
+<h4>Compiled HTML</h4>
+
+<pre>
+ 1  &lt;!DOCTYPE html&gt;
+</pre>
+
+<h4>Declaring Elements</h4>
+
+<p>One of the defining features of Haml is its syntax, and how to 
+<a href="https://coderwall.com/p/aivizg/introduction-to-haml--2" 
+rel="noopener noreferrer" target="_blank">declare and nest</a> elements.
+HTML elements generally have opening and closing tags, however within
+Haml elements only have one tag, the opening. Elements are initialized
+with a percent sign, %, and then indented to identify nesting.
+Indentation with Haml can be accomplish with one or more spaces, however
+what is important is that the indentation remain consistent. Hard tabs
+or spaces cannot be mixes together, and the same number of tabs or
+spaces must be the same throughout an entire document.</p>
+
+<p>Removing the need for both opening and closing tags, as well as
+mandating the structure with indentation creates an easy to follow
+outline. At any given time the markup can be scanned and changed without
+struggle.</p>
+
+<h4>Haml</h4>
+
+<pre>
+ 1  %body
+ 2  %header 
+ 3  %h1 Hello World 
+ 4  %section
+ 5  %p Lorem ipsum dolor sit amet. 
+</pre>
+
+<h4>Compiled HTML</h4>
+
+<pre>
+ 1  &lt;body&gt;
+ 2    &lt;header&gt; 
+ 3      &lt;h1&gt;Hello World&lt;/h1&gt; 
+ 4    &lt;/header&gt;
+ 5    &lt;section&gt;
+ 6      &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;  
+ 7    &lt;/section&gt; 
+ 8  &lt;/body&gt;  
+</pre>
+
+<h4>Handling Text</h4>
+
+<p>Text within Haml can be placed on the same line as the declared element,
+or indented below the element. Text cannot be both on the same line as
+the declared element and nested below it, it has to be either or. The
+example from above could be rewritten as the following:</p>
+
+<pre>
+ 1  %body 
+ 2  %header  
+ 3  %h1
+ 4  Hello World
+ 5  %section 
+ 6  %p 
+ 7  Lorem ipsum dolor sit amet.  
+</pre>
 
-javascript code for(let i O; i &lt; 5; i + +) { // <i>Executed 5 times</i>
-console.log(i) ;
+<h4>Attributes</h4>
 
-<h2>Syntax</h2>
+<p>Attributes, as with elements, are declared a bit differently in Haml.
+Attributes are declared directly after the element in either {} or (),
+all depending if you wish to use Ruby or HTML syntax. Ruby style
+attributes will use the standard hash syntax inside of {}, while HTML
+style attributes will use standard HTML syntax inside of ().</p>
 
-JavaScript syntax refers to the rules that define the structure of
-valid JavaScript code.It includes rules for writing statements,
-variables, and functions in a way that the interpreter or browser can
-understand.Examples ofJavaScript Syntax:
+<h4>Haml</h4>
 
-1. Function Definition:
+<pre>
+ 1  %img{:src => "shay.jpg", :alt => "Shay Howe"}
+ 2  %img{src: "shay.jpg", alt: "Shay Howe"}  
+ 3  %img(src="shay.jpg" alt="Shay Howe")
+</pre>
 
-javascript code
-```
-function greet(name) { return &apos;Hello, name
-+
-```
+<h4>Compiled HTML</h4>
 
-2..Object Literal javascript code const person
-    firstName: &apos;John&apos;, lastName &apos;Doe&apos;, age 30
+<pre>
+ 1  &lt;img src="shay.jpg" alt="Shay Howe"&gt;
+</pre>
 
-3. Array Declaration:
+<h4>Classes &amp; IDs</h4>
 
-javascript code
+<p>If you wish to, Class and ID attributes may be declared the same as all
+other attributes, however they may also be treated a bit differently.
+Rather than listing out the class or ID attribute name and value
+inside {} or () the value can be identified directly after the element.
+Using either a . for classes or a # for an ID the value can be added
+directly after the element.</p>
 
-```
-constnumbers
-```
+<p>Additionally, attributes may be mixed and matched, chaining them
+together in the appropriate format. Classes are to be separated with
+a . and other attributes may be added using one of the previously
+outlined formats.</p>
 
-<h3>Comments</h3>
+<h4>Haml</h4>
 
-Comments in JavaScript are used to add explanatory notes within the
-code They are ignored by the interpreter and are only meant for human
-readers
+<pre>
+ 1  %section.feature
+ 2  %section.feature.special 
+ 3  %section#hello  
+ 4  %section#hello.feature(role="region") 
+</pre>
 
-Examples of JavaScript Comments:
+<h4>Compiled HTML</h4>
+
+<pre>
+ 1  &lt;section class="feature"&gt;&lt;/section&gt; 
+ 2  &lt;section class="feature special"&gt;&lt;/section&gt;  
+ 3  &lt;section id="hello"&gt;&lt;/section&gt; 
+ 4  &lt;section class="feature" id="hello" role="region"&gt;&lt;/section&gt;  
+</pre>
 
-1. Single Line Comment:
+<h4>Division Classes &amp; IDs</h4>
 
-javascript code
+<p>In the event a class or ID is used on a div the %div may be omitted, and
+the class or ID value can be used outright. Again, classes are to be
+identified with a . and IDs are to be identified with a #.</p>
 
-```
-// <i>This is a single line comment</i>
-```
+<h4>Haml</h4>
 
-2..Multi - line Comment:
+<pre>
+ 1  .awesome
+ 2  .awesome.lesson 
+ 3  #getting-started.lesson  
+</pre>
 
-javascript code
+<h4>Compiled HTML</h4>
 
-```
-This is a multi - line comment
-```
+<pre>
+ 1  &lt;div class="awesome"&gt;&lt;/div&gt; 
+ 2  &lt;div class="awesome lesson"&gt;&lt;/div&gt;
+ 3  &lt;div class="lesson" id="getting-started"&gt;&lt;/div&gt;  
+</pre>
 
-3. Commenting Out Code:
+<h4>Boolean Attributes</h4>
 
-javascript code
-
-```
-// <i>This code won&apos;t be executed</i>
-// <i>const x 10;</i>
-```
-
-<h3>JavaScript Variables</h3>
-
-Variables in JavaScript are used to store data values.They can hold
-various types of data such as numbers, strings, objects, and more,
-
-Examples ofJavaScript Variables:
-
-1. Declaring and Assigning a Variable:
-
-javascript code
-
-```
-let age = 25; // <i>Declaring &apos;age&Hat;i&Hat; and assigning a value of 25</i>
-```
-
-2..String Variable:
-
-<h4>javascript code</h4>
-
-```
-let name &apos;Alice&apos;;
-// <i>A variable holding a string value</i>
-```
-
-3. Object Variable:
-
-<h4>javascript code</h4>
-
-let person {name: &apos;Bob, age: 30 // <i>A variable holding an object</i>
-
-<h3>JavaScript let</h3>
-
-The let keyword is used to declare variables in JavaScript.It allows
-the declared variable to be reassigned a new value if
-needed
-
-Example of let in JavaScript:
-
-<h4>javascript code</h4>
-
-```
-let x 5;
-
-10;
-// Reassigning &apos;x&apos; to a new value
-```
-
-<h3>JavaScript const</h3>
-
-The const keyword is used to declare constants in JavaScript.Once
-assigned, the value of a const cannot be
-changed
-
-Example of const in JavaScript:
-
-<h4>javascript code</h4>
-
-```
-const PI = 3.14159; // Declaring a constant PI
-
-// PI - - 3; // This will throw an error as reassignment is not allowed
-```
-
-<h3>JavaScript Operators</h3>
-
-JavaScript operators are symbols used to perform operations on
-operands, such as arithmetic operations, assignment, comparison,
-logical operations, etc.
-
-Examples ofJavaScript Operators:
-
-1. Arithmetic Operators:
-
-<h4>javascript code</h4>
-
-```
-let a = 10; let b
-difference = a - b; // Subtraction 
-let product = a &ast; b; // Multiplication 
-let quotient = a / b; // Division
-```
-
-2. Comparison Operators:
-
-<h4>javascript code</h4>
-
-```
-let x 5; let
-console.log(x y) ; // Equality check
-console.log(x y) ; // Inequality check
-console.log(x y) ; // Greater than console.log(x &lt; y) ; //Less than
-```
-
-3. Logical Operators:
-
-<h4>javascript code</h4>
-
-```
-let p true;
-let q false;
-console.log(p &&q); 
-//Logical AND 
-console.log(p Il q) ;
-// Logical OR 
-console.log(!
-p) ; // Logical NOT
-```
-
-This comprehensive guide covers various aspects of JavaScript
-statements, syntax, comments, variables(let and const), and
-operators, offering examples and explanations to aid understanding,
-
-<h2>JS Arithmetic</h2>
-
-JavaScript provides arithmetic operators to perform mathematical
-calculations on numbers,
-
-Examples of JS Arithmetic:
-
-Addition:
-
-<h4>javascript code</h4>
-
-```
-let sum = 5 4 3• // sum = 8
-```
-
-Subtraction:
-
-<h4>javascript code</h4>
-
-```
-let difference = 10 - 4; // difference 6
-```
-
-Multiplication:
-
-<h4>javascript code</h4>
-
-```
-let product 7; // product 42
-
-Division java script code let quotient = 20/ 5;
-// quotient = 4
-
-Modulus(Remainder):
-```
-
-<h4>javascript code</h4>
-
-```
-let remainder = 15 % 4; // remainder
-```
-
-<h3>JS Assignment</h3>
-
-In JavaScript, the assignment operator(z) is used to assign values to
-variables.Examples ofJS Assignment:
-
-Assigning a Value to a Variable:
-
-<h4>javascript code</h4>
-
-```
-let x = 10; // Assigning the value 10 to variable •x&apos;
-```
-
-Assigning the Result of an Expression:
-
-<h4>javascript code</h4>
-
-```
-let y = x 4 5; // Assigning the result of an
-expression to &Hat;l&Hat;y&Hat;r&Hat;
-```
-
-<h3>JS Data Types</h3>
-
-JavaScript has several data types that define the kinds of values it
-can work with.Examples ofJS Data Types: Primitive Data Types:
-
-Number: letnum - 10;
-
--   String: let text - &apos;Hello&apos;;
-
--   Boolean: let isTrue true;
-
--   Undefined let value;
-
--   Null T.let emptyValue null;
-
-Complex Data Types:
-
--   Object.let person =(name: &apos;Alice&apos;, age: 25 1;
-
--   Array: let numbers &lbrack; 1, 2, 3, 41 5 &rbrack; ;
-
-<h2>JS Functions</h2>
-
-Functions in JavaScript are reusable blocks of code that perform a
-specific task when called.
-
-Examples ofJS Functions:
-
-Function Declaration:
-
-<h4>javascript code</h4>
-
-```
-function greet(name) { return &apos;Hello, + name +
-```
-
-Function Call 
-
-<h4>javascript code</h4>
-
-let message = greet(
-&apos;John&apos;);
-// message = &apos;Hello, John ! &apos;
-
-Arrow Function:
-
-<h4>javascript code</h4>
-
-```
-const multiply(a, b) = &gt; a
-let result multiply(5, 3) ; // result
-15
-```
-
-<h3>JS Objects</h3>
-
-Objects in JavaScript are containers for named values called
-properties and methods.Examples ofJS Objects:
-
-Object Declaration:
-
-<h4>javascript code</h4>
-
-```
-let person { name: &apos;Alice&apos;, age: 30,
-greet: function
-return &apos;Helloj my name is &Hat;i&Hat; -v this.
-name 
-
-Accessing Object Properties:
-
-javascript code
-
-```
-console.log(person.name) ; // Output: Alice
-```
-
-Calling Object Method:
-
-javascript code
-
-```
-console.log(person greet ; // Output: Hello, my
-name is Alice !
-```
-
-<h2>JS Events</h2>
-
-JavaScript events are actions that occur when a user interacts with a
-web page, like clicking a button or typing in a form
-field!
-
-Examples ofJS Events:
-
-Click Event:
-
-javascript code
-
-```
-document.getElementById(&apos;myButton&apos;).addEventListener(&apos;click&apos;, function
-console.log(&apos;Button clicked !) ;
-```
-
-Input Event:
-
-javascript code
-
-```
-document.getElementById(&apos;mylnput&Hat;i&Hat; addEventListener(&apos;input&apos;,
-function console.log(&apos;Input changed ! &Hat;i&Hat;) •
-```
-
-<h2>JS Strings</h2>
-
-Strings in JavaScript are sequences of characters enclosed in single
-or double quotes
-Examples of JS Strings:
-
-Declaring a String Variable:
-
-javascript code
-```
-let message = &quot;Helloj World
-```
-
-Concatenating Strings:
-
-javascript code
-
-let greeting &apos;Hello, &Hat;I&Hat;; let name &apos;Alice&apos;; let
-welcomeMessage greeting + name; // welcomeMessage - &apos;Hello, Alice
-
-<h3>JS String Methods</h3>
-
-JavaScript provides various methods to manipulate strings.Examples
-ofJS String Methods:
-
-toUpperCase() Method:
-
-javascript code
-
-```
-let text = &apos;hello&apos;;
-
-let upperCaseText = text.toUpperCase() ; // upperCaseText = &apos;HELLO
-substring() Method:
-```
-
-javascript code
-
-```
-let sentence - This is a sentence&apos;; let subSentence
-sentence.substring(5, 10) ; // subSentence - &apos;is a &apos;
-```
-
-<h3>JS String Search</h3>
-
-JavaScript provides methods to search for substrings within a string.
-Examples ofJS String Search:
->
-indexOf() Method:
-
-javascript code
-```
-let text = &apos;Hello, World ! &apos;i let position text.
-indexOf(&apos;Worldl) ; // position = 7 includes Method:
-```
-
-javascript code
-
-```
-let sentence This is a sentence&apos;; let containsWord
-sentence.includes(&apos;sentence&apos;) ; // containsWord true
-```
-
-<h3>JS String Templates</h3>
-
-Template literals allow embedding expressions and variables into
-strings
-Examples ofJS String Templates:
-
-Basic Template Literal:
-
-
-javascript code
-
-```
-let name = &apos;Alice&apos;; let message = Hello, &dollar;{name) •
-// message = &ast;Hello, Alice !
-
-Multi - line Template Literal:
-```
-
-javascript code
-
-```
-let multiLineMessage -
-
-This is a multi - line message
-
-<h3>JS Numbers</h3>
-
-JavaScript handles numeric data using the number data type.
-
-Examples ofJS Numbers:
-
-Whole Numbers:
-
-javascript code
-
-```
-let integerNumber
-```
-
-Decimal Numbers:
-
-javascript code
-
-```
-let decimalNumber 3.14
-```
-
-Scientific Notation:
-
-javascript code
-
-```
-let scientificNumber = 2e3; // scientificNumber &dash;-
-2000
-```
-
-<h4>JS Biglnt</h4>
-
-Biglnt is a numeric data type in JavaScript that can represent
-integers with arbitrary
-precision
-
-Examples ofJS Biglnt:
-
-Creating a Biglnt:
->
-javascript code
-
-```
-let bigNumber 123456789012345678901234567890n;
-```
-
-Performing Operations with Biglnt:
-
-javascript code
-
-```
-let bigSum = bigNumher In;
-```
-<h6>JS Number Methods</h6>
-
-JavaScript provides methods for performing operations and
-manipulations with numbers.
-
-Examples of JS Number Methods:
-
-toFixed() Method:
-
-javascript code
-
-```
-let number = 3.14159; let roundedNumber = number.
-toFixed(2) ; // roundedNumber = &Hat;i&Hat; 3 • 14
-parselnt() Method:
-```
-
-javascript code
-
-```
-let stringNumber &apos;42; let parsedNumber = parselnt(
-stringNumber) ; // parsedNumber 42
-```
-
-<h3>JS Number Properties</h3>
-
-JavaScript has some built - in properties associated with numbers.
-Examples ofJS Number Properties:
-
-Number.MAX_VALUE Property:
-
-javascript code
-
-```
-console.log(Number.MAX_VALUE); // Output: 1.7976931348623157e 308
-```
-
-Number.MIN_VALUE Property:
-
-javascript code
-
-```
-console.log(Number.MIN_VALUE // Output: 324
-```
-
-This comprehensive guide covers various aspects of JavaScript,
-including arithmetic operations, assignment, data types, functions,
-objects, events, strings, string methods, string search, string
-templates, numbers, Biglnt, number methods, and number properties,
-providing examples and explanations for each topic.
-
-<h4>JS Arrays</h4>
-
-Arrays in JavaScript are used to store multiple values in a single
-variable.Examples ofJS Arrays:
-
-Declaration java script code let numbers 1, 2, 3,
-&rbrack; ; // Array of numbers let fruits &apos;apple&apos;, &apos;banana&apos;, &apos;orange&apos;
-I ; // Array of strings
-
-Accessing Elements:
-
-javascript code
-```
-console.log(fruits I O &rbrack;) ; // Output: &apos;apple&apos;
-```
-
-Modifying Elements:
-
-javascript code
-
-```
-fruits &lbrack; 1 &vert; = &apos;grapes&apos;; // Changing banana&apos; to &apos;grapes&apos;
-```
-
-<h4>JS Array Methods</h4>
-
-JavaScript provides various methods to manipulate arrays effciently.
-Examples of JS Array Methods:
-
-push() Method:
-
-javascript code
-
-```
-fruits.push(&apos;melonl) ; // Adds Imelonl to the end of the array pop Method:
-```
-
-javascript code
-
-```
-let removedFruit = fruits.POP) ; // Removes and
-returns the last element(&apos;melon&apos;) splice() Method:
-```
-
-javascript code
-```
-numbers splice(2, 1) ; // Removes 1 element at
-index 2(removes 131)
-```
-
-<h6>JS Array Sort</h6>
-
-JavaScript offers methods to sort arrays in various ways
-
-Examples of JS Array Sort:
-
-Sorting Numbers:
-
-javascript code
-
-```
-numbers.sort((a, b)
-b) // Ascending order
-
-Sorting Strings
-
-javascript code
-```
-fruits.sortO ; // Alphabetical order
-```
-
-<h2>JS Array Iteration</h2>
-
-Array iteration involves looping through arrays to perform operations
-on each element.Examples ofJS Array Iteration:
-
-forEach() Method:
-
-javascript code
-```
-numbers.fcrEach(number console.log(number) ;
-
-map() Method:
-
-javascript code
-
-let doubledNumbers numbers.map(number &gt; number &ast;
-2);
-
-<h3>JS Array Const</h3>
-
-Arrays declared with const can&apos;t be reassigned but their elements can
-be modified.
-
-Examples ofJS Array Const:
-
-javascript code
-```
-constweekdays = &lbrack; &apos;Monday&apos;, &apos;Tuesday&apos;,
-&apos;Wednesday&apos; I ; weekdays &vert; 1 &vert; = &apos;Thursday&apos;; // Modifying an element is allowed
-
-// weekdays = &apos;Monday&apos;, &apos;Thursday&apos;, &Hat;i&Hat;Wednesday&apos; &rbrack; ; // This will throw an error
-```
-
-<h3>JS Dates</h3>
-
-JavaScript provides a Date object to work with dates and times
-<h4>Examples ofJS Dates:</h4>
->
-<h5>Creating a Date Object:</h5>
-
-<h4>javascript code</h4>
-```
-let currentDate = newDate();  // Current date and time.
-```
-
-<h5>Creating a Specific Date:</h5>
-
-<h4>javascript code</h4>
-
-<h6>let specificDate new Date(&apos;2023&dash;12&dash;31&apos;); // December 31, 2023.</h6>
-
-<h4>JS Date Formats</h4>
-<p class="desc">Date formatting in JavaScript involves converting dates to different formats.</p>
-Examples ofJS Date Formats:
-
-<h4>Examples of JS Date Formats:</h4>
-<h4>Formatting to String:</h4>
-javascript code
-let dateString = specificDate.toDateString(); // Convert to a human-readable string.
-
-<h4>Formatting to Locale String:</h4>
-javascript code
-let localString = specificDate.toLocaleString(); // Converts to local date and time string.
-
-<h4>JS Date Get Methods</h4>
-<p class="desc">JavaScript Date object provides various methods to retrieve specific date.</p>
-components![](./images/image110.jpg){width="4.1666666666666664e-2in"
-height="4.167869641294838e-2in"}
-
-Examples of JS Date Get Methods:
-
-getFu11Year() Method
-![](./images/image111.jpg){width="6.25e-2in"
-height="0.14587598425196852in"}
-
-javascript code
-```
-let year = specificDate
-.getFullYearO; // Get the year(2023) getMonth() Method:
-```
-
-javascript code
-
-```
-let month = specificDate.getMonth ; // Get the month (11 for December)
-```
-
-<h3>JS Date Set Methods</h3>
-
-JavaScript Date object also has methods to set specific date
-components.
-
-Examples ofJS Date Set Methods:
-
-setFuIIYear() Method:
->
-javascript code
-```
-specificDate.setFullYear(2024) ; // Set the year to 2024 setMonth() Method:
-
-javascript code
-```
-specificDate.setMonth(O) ; // Set the month to January(O index)
-```
-<h3>Math</h3>
-
-JavaScript Math object provides mathematical constants and functions
-![](./images/image112.jpg){width="4.1666666666666664e-2in"
-height="4.167869641294838e-2in"}
-
-Examples ofJS Math:
-
-Math.PI Property:
-
-javascript code let piValue = Math.PI; // Value ofPl(3.
-141592653589793)
-
-Math.sqrt() Method:
-
-javascript code let squareRcot Math.sqrt(25) ; // Square root of
-25(5)
-
-<h4>JS Random</h4>
-
-JavaScript Math.random() generates pseudo - random numbers.
-
-Examples ofJS Random:
-
-Generating Random Number:
-
-javascript code let randomNumber = Math.random &apos; // Random number
-between O and 1
-
-Generating Random Integer:
-
-javascript code let randomlnteger = Math.floor(Math.random 10)
-; // Random integer between O and 9
-
-<h4>Booleans</h4>
-
-Booleans in JavaScript represent true or false values.Examples ofJS
-Booleans:
-
-Declaration:
-
-javascript code let isTrue = true
-let isFalse = false; Comparison:
-
-javascript code let greaterThan // true let equalTo 5 5; // true
-
-<h3>JS Comparisons</h3>
-
-JavaScript offers various comparison operators to compare values.
-Examples ofJS Comparisons:
-
-==(Equality Operator):
-
-javascript code console.log(5) ; // true(coerces types)
-
-Strict Equality Operator):
-
-javascript code console.log(5
-151) ; // false(compares both value
-and type)
-
-This comprehensive guide covers various aspects of JavaScript
-including arrays, array methods, array sort, array iteration; array
-const, dates, date formats, date get methods, date set methods, math,
-random, booleans, and comparisons, providing examples and explanations
-for each topic.
-
-<h4>JS If Else</h4>
-
-The if else statement in JavaScript executes a block of code if a
-specified condition is true and another block of code if the condition
-is false
-
-
-Examples ofJS If Else:
-
-Basic if else:
-
-java script code let num = 10;
-
-If(num &gt; O) { console.log(&quot;Number is
-positive&apos;
-
-) else f console.log(&apos;Number is not
-positive&apos;
-
-Nested if &period;..else:
-
-javascript code let x 5; if(x &gt; O) { console.
-logis
-positive&apos;
-} else if(x &lt; O)
-console log
- &quot;x is
-negativel
-
-) else f console.log(is zeroi) ;
-
-<h3>JS Switch</h3>
-
-The switch statement in JavaScript executes different actions based on
-different conditions
-Examples of JS Switch:
-
-Basic switch:
-
-javascript code let day
-![](./images/image125.jpg){width="0.5104166666666666in"
-height="0.2500732720909886in"}switch(day) &lbrack; case 1
-![](./images/image126.jpg){width="4.1666666666666664e-2in"
-height="0.13545603674540682in"}console.log(iMonday•) ; break;
-case 2:
-
-console.log(&Hat;i&Hat; Tuesday) ; break; default:
-
-console.log(Other day&apos;) ;
-
-<h4>JS Loop For</h4>
-
-The for loop in JavaScript repeatedly executes a block of code until a
-specified condition evaluates to false
-![](./images/image127.jpg){width="4.1666666666666664e-2in"
-height="4.167869641294838e-2in"}
-
-Examples of JS Loop For:
-
-Basic for Loop:
-
-javascript code for(let i = + +) I console.log(i) ;
-
-Looping Array Elements:
-
-javascript code let arr &apos;applet, banana&apos;, &apos;orange&apos; &rbrack; ; for(let
-i O; i &lt; arr.length; i ++) { console.log(arr &lbrack; i &rbrack;) ;
-
-<h4>JS Loop For In</h4>
-
-The for &period;..in loop in JavaScript iterates over the enumerable
-properties of an object.
-
-Examples ofJS Loop For In:
-
-Iterating Object Properties
-![](./images/image128.jpg){width="6.25e-2in"
-height="0.15629702537182852in"}javascript code let person = { name:
-IAIiceI, age 30, gender: female&apos;
-
-for(let prop in person) { console.log(prop + person &lbrack; prop l)
-;
-
-<h4>JS Loop For Of</h4>
-
-The for of loop in JavaScript iterates over iterable objects such as
-arrays, strings, etc
-![](./images/image129.jpg){width="4.1666666666666664e-2in"
-height="4.167869641294838e-2in"}Examples ofJS Loop For Of:
-
-Iterating Over Array Elements:
-
-javascript code
-
-let numbers
-![](./images/image130.jpg){width="1.8125in"
-height="0.2813331146106737in"}for(let num of numbers) f console.
-log(num) ;
-
-<h4>JS Loop While</h4>
-
-The while loop in JavaScript executes a block of code while a
-specified condition is true
-![](./images/image131.jpg){width="4.1666666666666664e-2in"
-height="4.167979002624672e-2in"}
-
-Examples of JS Loop While:
-
-Basic while Loop:
-
-javascript code
-```
-let count = o; while(count &lt; 5![](./images/image132.jpg){width="0.3229166666666667in"
-height="0.26049431321084865in"}
-
-console.log(count) ;
-```
-
-![](./images/image133.jpg){width="1.3020833333333333in"
-height="0.21881452318460193in"}
-
-<h4>JS Break</h4>
-
-The break statement in JavaScript terminates the current loop or
-switch statement
-![](./images/image134.jpg){width="4.1666666666666664e-2in"
-height="4.167869641294838e-2in"}Examples ofJS Break:
-
-Using break in a Loop:
-
-javascript code
-
-for(let 1
-![](./images/image135.jpg){width="2.2604166666666665in"
-height="0.2813331146106737in"}if(i 5) {
-
-break;
-
-console.log(i) ;
-
-<h3>JS Iterables</h3>
-
-Iterables in JavaScript are objects that can be iterated over using
-loops ![](./images/image112.jpg){width="4.1666666666666664e-2in"
-height="4.167979002624672e-2in"}Examples ofJS Iterables:
-
-Using Iterables with for of:
-
-javascript code let iterable = I 10, 20,
-30![](./images/image136.jpg){width="0.19791666666666666in"
-height="0.2813331146106737in"}
-
-for(let value of iterable) { console.log(value) ;
-
-<h3>JS Sets</h3>
-
-Sets in JavaScript are collections of unique values
-![](./images/image127.jpg){width="4.1666666666666664e-2in"
-height="4.167869641294838e-2in"}Examples ofJS Sets:
-
-Creating a Set:
-
-javascript code let mySet = new Set() ; mySet.add(1
-![](./images/image137.jpg){width="0.21875in"
-height="0.2813331146106737in"}mySet.add(2
-![](./images/image138.jpg){width="0.21875in"
-height="0.2813331146106737in"}mySet.add(3
-![](./images/image139.jpg){width="0.21875in"
-height="0.2813331146106737in"}Iterating Over a Set:
-
-java script code for(letitem of mySet)
-![](./images/image140.jpg){width="8.333333333333333e-2in"
-height="0.26049431321084865in"}console log(item) ;
-
-<h4>JS Maps</h4>
-
-Maps in JavaScript are collections of key - value pairs where keys can
-be any type.
-
-Examples ofJS Maps:
-
-Creating a Map ![](./images/image141.jpg){width="6.25e-2in"
-height="0.14587598425196852in"}javascript code let myMap = new Map ;
-myMap.set(&apos;key 1&apos;, &apos;valueli) ; myMap.set(ikey2i, &apos;value2i
-) ;
-
-Iterating Over a Map:
-
-javascript code for(let &lbrack; key, value I of myMap) { console.log(
-key &lowbar; • value) ;
-
-<h4>JS Typeof</h4>
-
-The typeof operator in JavaScript returns the data type of its operand
-.Examples ofJS Typeof:
-
-Using typeof:
-
-javascript code console.log(typeof5) // Output: &apos;numberl
-console.log(typeof&apos;Hello&apos;) ; // Output: &apos;string&apos; console.
-log(typeoftrue) ; // Output: boolean&apos;
-
-<h6>JS Type Conversion</h6>
-
-Type conversion in JavaScript involves converting values from one data
-type to another.Examples ofJS Type Conversion:
-
-String to Number:
-
-javascript code let strNumber = &apos;10
-![](./images/image142.jpg){width="0.11458333333333333in"
-height="0.1146172353455818in"}let num = parselnt(strNumber) ;
-
-Number to String ![](./images/image143.jpg){width="6.25e-2in"
-height="0.15629593175853018in"}javascript code let number
-![](./images/image144.jpg){width="0.6979166666666666in"
-height="0.19797462817147857in"}let str = number.
-toString![](./images/image145.jpg){width="0.3229166666666667in"
-height="0.270913167104112in"}
-
-<h6>JS Bitwise</h6>
-
-Bitwise operators in JavaScript perform operations on the binary
-representations of numeric values.
-
-Examples ofJS Bitwise:
-
-Bitwise AND Operator:
-
-javascript code
-
-let result 5 & 3; // Output: 1
-
-Bitwise OR Operator ![](./images/image146.jpg){width="6.25e-2in"
-height="0.15629702537182852in"}javascript code let result 5 1 3; //
-Output: 7
-
-<h6>JS RegExp</h6>
-
-Regular expressions in JavaScript are used for pattern matching within
-strings.Examples ofJS RegExp:
-
-Creating a Regular Expression:
-
-javascript code let pattern = / hello / i; // Case - insensitive
-&apos;hello&Hat;i&Hat;
-
-Testing a String with RegExp:
-
-javascript code
-
-let str = &apos;Hello, World
-!![](./images/image147.jpg){width="0.11458333333333333in"
-height="0.2604932195975503in"}
-
-console.log(pattern.test(str)) ; // Output: true
-
-<h5>JS Precedence</h5>
-
-Operator precedence in JavaScript determines the order of operations
-in an expression.
-
-Examples of JS Precedence:
-
-Arithmetic Precedence:
-
-javascript code
-```
-let result 5 3&ast; 2; // Output: 11(Multiplication has higher precedence)
-```
-<h4>JS Errors</h4>
-
-Errors in JavaScript can be generated when an incorrect code is
-encountered during execution.
-
-Examples ofJS Errors:
-
-Syntax Error:
-
-javascript code
-
-let x = 10
-
-This will throw a syntax error due to the missing semicolon.
-
-Reference Error:
-
-javascript code
-
-console.log(undefinedVariable) ;
-
-This will throw a reference error as undefinedVariable is not defined.
-
-<h5>JS Scope</h5>
-
-Scope in JavaScript defines the visibility and accessibility of
-variables.Examples ofJS Scope:
-
-Global Scope ![](./images/image148.jpg){width="6.25e-2in"
-height="0.15629593175853018in"}
-
-javascript code
-
-let globalVar Il am global&apos;;
-
-function test f console.log(globalVar) ; // Accessible inside function
-
-console.log(globalVar) ; // Accessible outside function
-
-<h3>JS Hoisting</h3>
-
-Hoisting in JavaScript allows variables and functions to be used
-before they are declared Examples ofJS Hoisting:
-
-Variable Hoisting:
-
-javascript code
-```
-console.log(myVar) ; // Outputs: undefined varmyVar &dash;- 10; Function Hoisting:
-```
-
-javascript code
-```
-sayHellc ; // Outputs: &apos;Hello&apos; function sayHello
-```
-
-![](./images/image149.jpg){width="0.4166666666666667in"
-height="0.2604932195975503in"}console.log(&apos;Hello&apos;) ;
-
-<h2>JS Strict Mode</h2>
-
-Strict mode in JavaScript enforces stricter rules and better error
-handling.Examples ofJS Strict Mode:
-
-Enabling Strict Mode
-![](./images/image150.jpg){width="6.25e-2in"
-height="0.15629593175853018in"}
-
-javascript code
-
-&apos;use strict&apos;;
-
-Using Strict Mode Inside a Function
-![](./images/image105.jpg){width="6.25e-2in"
-height="0.15629593175853018in"}
-
-javascript code
-
-function myFunction {
-
-&apos;use strict&apos;;
-
-// Strict mode only applies inside this function
-
-<h3>JS this Keyword</h3>
-
-The this keyword in JavaScript refers to the object it belongs to.
-Examples ofJS this Keyword:
-
-Using this in an Object
-![](./images/image109.jpg){width="6.25e-2in"
-height="0.15629593175853018in"}
-
-javascript code
-
-let person = { name: &apos;Alice&apos;, greet: function
-![](./images/image151.jpg){width="0.4166666666666667in"
-height="0.26049431321084865in"}console.log(&apos;Hello, my name is &apos;
-this.name) ;
-
-person.greet ; // Outputs: &apos;Hello, my name is Alice&apos;
-
-<h3>JS Arrow Function</h3>
-
-Arrow functions in JavaScript provide a concise syntax for writing
-functions.
-
-Arrow Function:
-
-Basic Arrow Function:
-
-javascript code
-
-let multiply =(aj b) = s a &ast; b;
-
-Arrow Function with Multiple Lines
-![](./images/image152.jpg){width="6.25e-2in"
-height="0.15629593175853018in"}
-
-javascript code
-
-let greet(name) &gt; {
-return &apos;Hello, &apos; + name +
-![](./images/image153.jpg){width="0.375in"
-height="0.2604932195975503in"}
-
-<h3>JS Classes</h3>
-
-Classes in JavaScript provide a way to create objects using a
-blueprint.
-
-Examples ofJS Classes:
-
-Class Declaration:
-
-javascript code
-
-class Person { constructor(name) { this.name name;
-
-greet() { console.log(&apos;Hello, my name is &apos; this.name) ;
-
-let alice = new Person(&apos;Alice&apos;
-![](./images/image154.jpg){width="0.21875in"
-height="0.2604932195975503in"}alice.greet ; // Outputs: &apos;Hello, my
-name is Alice&apos;
-
-<h3>JS Modules</h3>
-
-Modules in JavaScript allow splitting code into separate files or
-modules for better organization
-![](./images/image134.jpg){width="4.1666666666666664e-2in"
-height="4.167869641294838e-2in"}Examples ofJS Modules:
-
-Exporting a Module ![](./images/image155.jpg){width="6.25e-2in"
-height="0.14587598425196852in"}
-
-javascript code
-
-// Module.js export function greet(name) { console.log(&apos;Hello, i 4
-name![](./images/image156.jpg){width="0.8854166666666666in"
-height="0.2813331146106737in"}
-
-Importing a Module:
-
-java script code // Main.js import &lbrack; greet } from./ Module.js&apos;;
-greet(&apos;Alice&apos;) ; // Outputs: &apos;Hello, Alice ! I
-
-<h4>JS JSON</h4>
-
-JSON(JavaScript Object Notation) is a lightweight data interchange
-format.
-
-JSON:
-
-Parsing JSON:
-
-javascript code
-
-let jsonStr = name Alice j age u: 30)&Hat;i&Hat;; let obj = JSON
-.parse(jsonStr) ; console.log(obj.name) ; // Output:
-&apos;Alice&apos;
-
-Stringify Object to JSON:
-
-javascript code
-
-let obj {name: Alice&apos;, age: 30 l; let jsonString =
-JSON.stringify(obj) ;
-
-<h3>JS Debugging</h3>
-
-Debugging in JavaScript involves identifying and fixing errors or
-issues in the code.Examples ofJS Debugging:
-
-Using console.log() for Debugging:
-
-javascript code
-
-let x 5; console.log(x) ;
-
-Using Browser Developer Tools:
-
-Inspect elements, view console logs, set breakpoints, etc.
-
-<h3>JS Style Guide</h3>
-
-A JavaScript style guide defines a set of rules and conventions for
-writing clean and maintainable code.Examples ofJS Style Guide:
-
-Naming Conventions:
-
-Use camelCase for variable and function names.
-
-Indentation:
-
-Use consistent spaces or tabs for indentation.
-
-<h3>JS Best Practices</h3>
-
-Best practices in JavaScript ensure code quality, readability, and
-maintainability.Examples ofJS Best Practices:
-
-Use Meaningful Variable Names:
-
-javascript code
-
-letd new Date() ; // Instead, use let currentDate new
-Date() ;
-
-Avoid Global Variables:
-
-Encapsulate code to avoid polluting the global scope.
-
-<h3>JS Mistakes</h3>
-
-Common mistakes in JavaScript and how to avoid thern.
-
-Mistakes:
-
-Missing Semicolon:
-
-javascript code
-
-let x = 5
-
-Remember to add a semicolon at the end of the statement
-
-Uninitialized Variables:
-
-javascript code
-```
-let y; console.log(y) ; // Outputs: undefined
-```
-<h3>JS Performance</h3>
-
-Improving performance in JavaScript involves optimizing code for speed
-and emciency.Examples ofJS Performance:
-
-Reduce DOM Manipulations:
-
-Combine multiple DOM updates into one to reduce reflows.
-
-Use Eficient Algorithms
-
-Choose algorithms that have better time complexity for operations.
-
-<h4>JS Reserved Words</h4>
-
-Reserved words in JavaScript have special meanings and cannot be used
-as identifiers(variable or function
-names
-
-Examples ofJS Reserved Words:
-
-let, const function class, etc.
-
-This comprehensive guide covers a wide range of JavaScript topics
-including conditional statements, loops, data structures, type
-handling, advanced features, error handling, best practices, common
-mistakes, and performance optimization.JS Objects
-
-Objects in JavaScript are collections of key - value pairs.They
-store data as properties(variables) and functionality as methods(
-functions
-
-Object Definitions:
-
-Creating an Object Literally:
-
-javascript code
-
-let person = f name: &apos;Alice% age 30, greet:
-function return &apos;Helloj my name is &Hat;i&Hat; -v this
-.name;
-
-Using the Object Constructor:
-
-javascript code
-
-let car new Object O;
-
-car.brand = &apos;Toyota&apos;; car.model = &apos;Camry&apos;; Object Properties
-
-Properties in JavaScript objects are variables that hold values
-Object Properties Examples:
-
-Accessing Object Properties:
-
-javascript code
-
-console.log(person name) // Accessing property
-&apos;namet
-
-Adding or Modifying Properties:
-
-javascript code car.color &apos;blue&apos;; // Adding property &apos;color&apos; car
-.model &apos;Corolla&apos;; // Modifying property &apos;model&apos;
-
-<h4>Object Methods</h4>
-
-Methods in JavaScript objects are functions that define behavior.
-Object Methods Examples:
-
-Accessing Object Methods
-javascript code console.log(person
-.greet ; // Accessing method greet&apos;
-
-Adding Methods to an Object:
-
-javascript code
-
-car.start = function return &apos;Car started&apos;; l;
-
-<h5>Object Display</h5>
-
-Displaying objects in JavaScript can be done using various methods.
-Object Display Examples:
-
-Using console.log javascript code console.log(person)
-; // Output the entire object
-
-Stringify with JSON:
-
-javascript code let carString JSON.stringify(car) ; console.log
-(carString) ; // Output the string representation of the object
-
-<h3>Object Accessors</h3>
-
-Accessors in JavaScript objects provide a way to get and set the
-values of object properties.Object Accessors Examples:
-
-Using Getters and Setters:
-
-javascript code let user --- firstName: &apos;John&apos;,
-
-lastName: &apos;Doe&apos;, get fullName() f return this.firstName + + this
-lastName;
-
-set fullName(name) f let parts = name.split ; this.firstName =
-parts &lbrack; O this.lastName = parts &lbrack; 1 &rbrack; ;
-
-console.log(user.fullName) ; // Output: John Doe&apos; user.
-fullName = &apos;Alice Smith&apos;; // Setting fiillName using setter console.
-log(user.firstName) ; // Output: &apos;Alice&apos;
-
-<h3>Object Constructors</h3>
-
-Constructors in JavaScript are functions used for creating objects and
-setting initial values
-Object Constructors Examples:
-
-Using Constructor Functions:
-
-javascript code function Person(name, age) { this.name name; this
-.age age; this.greet = function
-return &apos;Helloj my name is &Hat;i&Hat; -v this.
-name;
-
-let newPerson &ast; new Person(&apos;Bob&apos;, 25
-console.log(newPerson.greet()) ;
-// Output: &apos;Hello, my narne is Bob&apos;
-
-<h3>Object Prototypes</h3>
-
-Prototypes in JavaScript are a mechanism to share properties and
-methods between objects.Object Prototypes Examples:
-
-Adding Methods to the Prototype:
-
-javascript code
-
-Person.prototype.info function
-return &apos;Name: + this.name +
-this.age;
-
-console.log(newPerson.info()) ; // Output: &apos;Name: Bob, Age
-251
-
-<h3>Object Iterables</h3>
-
-Iterables in JavaScript are objects that can be iterated using loops.
-
-Object Iterables Examples:
-
-Using for &period;..in Loop:
-
-javascript code
-
-for(let key in person) { console.log(key person &lbrack; key l) ;
-
-Using Object.keys C):
-
-javascript code
-
-let keys = Object.keys(person) ; // Get an array
-of object keys
-
-<h4>Object Sets</h4>
-
-Sets in JavaScript are collections of unique values.
-
-Object Sets Examples:
-
-Creating a Set:
-
-javascript code let mySet = new Set ; mySet.add(1
-mySet.add(2
-mySet.add(
-3!
-
-Checking Set Membership:
-
-javascript code console.log(mySet.has(2)) ; // Output: true
-
-<h4>Object Maps</h4>
-
-Maps in JavaScript are collections of key - value pairs where keys can
-be any type.
-
-Object Maps Examples:
-
-Creating a Mapjavascript code let myMap = new Map ;
-myMap.set(ikeyli, &apos;valueli) ; myMap.set(ikey2&apos;, ivalue2i)
-; Getting Values from a Map:
-
-javascript code
-
-console.log(myMap.get(&apos;key Il)) ; // Output
-: &apos;value?
-
-<h4>Object Reference</h4>
-
-In JavaScript, objects are stored and passed by reference.Object
-Reference Examples:
-
-Referencing an Object:
-
-javascript code let objectl - {name: &apos;John&apos;&rbrack;
-let object2 = objectl; // object2 points
-to the same object as objectl
-
-Changing Object through Reference:
-
-javascript code
-
-object2 name = &apos;Alice&apos;; console.log(objectl.name
-) ; // Output: &apos;Alice&apos;
-
-This comprehensive guide covers various aspects of JavaScript objects,
-including definitions, properties, methods, display, accessors,
-constructorsj prototypes, iterables, sets; maps, and object
-references, with examples and explanations for each concept.
-
-<h3>JS Functions</h3>
-
-Functions in JavaScript are reusable blocks of code that perform a
-specific task when
-called
-
-Function Definitions:
-Function Declaration:
-javascript code function greet() &lbrack; return &apos;Hello ! &apos;i
-Function Expression javascript code let greet function {
-return &apos;Hello
-Arrow Function:
-
-javascript code
-
-let greet &gt; {
-return &apos;Hello ! &apos;;
-<h3>Function Parameters</h3>
-Function parameters are placeholders for values that a function will
-receive when it&apos;s called
-Function Parameters Examples:
-Single Parameter:
-
-javascript code
-
-function greet(name) { return &apos;Hello, + name
-+
-Multiple Parameters javascript code function sum(a, b) {
-return
-<h3>Function Invocation</h3>
-Function invocation means calling a function to execute its code.
-Function Invocation Examples:
-Calling a Function:
-
-javascript code
-
-greet O ; // Function call let result sum(5, 3) ;
-// Function call with arguments
-
-<h4>Function Call</h4>
-
-The call() method in JavaScript allows a function to be called with a
-specified this value and arguments provided individually.
-
-Function Call Examples:
-
-Using call javascript code function greet() &lbrack;
-return &apos;Hello, + this.name + t&apos;
-
-let person { name: &apos;Alice&apos;
-let message greet.call(person) ;
-
-<h4>Function Apply</h4>
-
-The apply() method in JavaScript allows a function to be called with
-a specified this value and arguments provided as an
-array
-
-Function Apply Examples:
-
-Using apply C):
-
-javascript code
-
-function greet()
-return &apos;Hello, + this.name +
-
-let person name
-let args = &lbrack;l ; let message = greet.
-apply(person, args) ;
-
-<h4>Function Bind</h4>
-
-The bind() method in JavaScript creates a new function that, when
-called, has its this keyword set to a specified value.Function Bind
-Examples:
-Using bind C):
-
-javascript code
-
-function greet() &lbrack; return &apos;Hello, &apos; + this.name
-+
-let person {name: &apos;Charlie&apos;
-let newGreet greet.bind(person) ;
-let message = newGreet() ;
-
-<h4>Function Closures</h4>
-
-Closures in JavaScript are functions that retain access to variables
-in the scope where they were defined, Function Closures Examples:
-Closure Example:
-javascript code
-
-function outerFunction let outerVariable = &apos;I am from
-the outer function&apos;;
-function innerFunction() { console.log(outerVariable) ;
-return innerFunction;
-let closure = outerFunction
-closure() ; // Output: il am from
-the outer functioni
-This comprehensive guide covers various aspects of JavaScript
-functions, including definitions, parameters, invocation, call, apply,
-bind, and closures, with examples and explanations for each concept
-<h5>JS Classes</h5>
-Classes in JavaScript provide a way to create objects using a
-blueprint Class Intro: Class Declaration:
-
-javascript code
-
-class Animal constructor(name, age) { this.name =
-name;
-this age = age;
-sound() f return &apos;Animal sound&apos;;
-Creating Instances
-
-javascript code
-
-let dog = new Animal(
-&apos;Buddy&apos;, 3) ; console.log(dog.sound ; // Output: &apos;Animal
-soundl
-
-<h2>Class Inheritance</h2>
-
-Inheritance in JavaScript classes allows a subclass to inherit
-properties and methods from a superclass.
-
-Class Inheritance Example:
-
-Extending a Class:
-
-javascript code
-
-class Dog extends Animal { constructor(name, age,
-breed) &lbrack; super(name, age) ; this.breed breed;
-sound() f return &Hat;i&Hat;Woof
-Using Inherited Methods:
-
-javascript code
-
-let puppy = new Dog(&apos;Max&apos;, 1, &apos;Labrador&apos;) ;
-console.log(puppy.sound ; // Output &apos;Woof !
-
-<h3>Class Static</h3>
-Static methods in JavaScript classes are called on the class itself
-rather than on instances of the class.
-Class Static Example:
-Adding a Static Method:
-
-javascript code
-
-class Calculator static add(a, b) { returna 4 b;
-let result = Calculator.add(5, 3
-console.log(result) ; // Output: 8
-
-<h3>JS Async</h3>
-
-Asynchronous programming in JavaScript involves handling operations
-that don&apos;t execute immediately.
-
-JS Callbacks
-
-Callbacks in JavaScript are functions passed as arguments to another
-function to be executed later
-Callbacks Example:
-
-javascript code
-
-function fetchData(callback) { setTimeout = &gt; let
-data = &apos;Some data&apos;; callback(data) ;
-2000) ;
-function processData(data) { console.log(&apos;Data received + data
-) ;
-fetchData(processData) ; // Output after 2 seconds &apos;Data received
-: Some data&apos;
-
-<h3>JS Asynchronous</h3>
-
-Asynchronous operations in JavaScript allow non - blocking execution
-of code
-Asynchronous Example:
-javascript code
-
-console.log(
-&apos;Start&apos;>
-setTimeout(O = &gt;
-
-console.log(&apos;Inside setTimeout&apos;) ;
-console.log(&apos;End&apos;) ;
-// Output: &apos;Start&apos;, &apos;End&apos;, &apos;Inside setTimeoutI(After 2 seconds
-) JS Promises
-Promises in JavaScript represent a value that might not be available
-yet but will resolve or reject in the future.
-Promises Example:
-Creating a Promise:
-javascript code
-
-let myPromise &ast; new Prornise((resolve, reject) &gt;
-{ setTimeout(O &gt;
-resolve(&apos;Promise
-resolvedl
-2000) ;
-myPromise.then result) = &gt;
-console.log(result) ; // Output
-after 2 seconds: &apos;Promise resolved&apos;
-
-<h3>JS Async / Await</h3>
-
-Async / await in JavaScript provides a more synchronous way to write
-asynchronous code using promises.
-
-Async / Await Example:
-
-Using Async / Await:
-
-javascript code
-
-async function fetchData { return new Promise resolve
-) setTimeout(Oof resolve(&apos;Data
-fetched&apos;) ; l,2000
-async function processData() { let data await fetchData() ; console.
-log(data) ; // Output after 2 seconds: Data fetched&apos;
-
-processDatao;
-
-This comprehensive guide covers JavaScript classes, including an
-introduction to classes, inheritance, and static methods, as well as
-asynchronous programming concepts such as callbacks, asynchronous
-operations, promises, and async / await, with examples and
-explanations for each concept.
-
-<h4>JS HTML DOM</h4>
-
-JavaScript interacts with HTML documents through the Document Object
-Model(DOM), representing the document as a tree structure.
-
-DOM Intro:
-
-Accessing an Element by ID:
-
-html code
-! DOCTYPE html&gt;
-html &gt; ebodY&gt;
-
-&lt;hl id heading &gt;Welcome to the DOM&lt; / hl &gt;
-
-&lt; script&gt; let element document.getElementById(I&apos; heading l&apos;) ;
-console.log(element.innerHTML) ; // Output: &apos;Welcome to the
-DOM&apos;
-
-&lt; / script&gt;
-
-/ bodY&gt;
-
-/ html&gt;
-
-<h5>DOM Methods</h5>
-
-DOM methods provide various ways to manipulate HTML elements
-
-Changing Element Content:
-
-html code
-! DOCTYPE html&gt;
-html &gt;
-
-epid - &Hat;i&Hat;&apos; demo &gt;This is a paragraph.&lt;
-/
-
-&lt;script&gt; document.getE1ementById(Il demo &quot;).innerHTML = &quot; This
-is a new paragraph
-
-&lt; / script&gt;
-
-&lt; / bodY&gt;
-
-&lt; / html&gt;
-
-<h6>DOM Document</h6>
-
-The document object represents the entire HTML document.
-
-Accessing Document
-Properties
-
-html code
-
-&lt; ! DOCTYPE html&gt;
-
-&lt; html &gt;
-
-escript&gt; console.log(document.title) ; // Output: Document
-title console.log(document.URL) ; // Output: Document URL
-
-/ scripts
-
-&lt; / bodY&gt; html&gt;
-
-<h5>DOM Elements</h5>
-
-Elements in the DOM represent HTML tags.
-
-Changing Element Styles:
-
-html code
-
-! DOCTYPE html&gt;
-html &gt;
-
-&lt;Pid demo &quot; &gt;This is a paragraph.&lt;
-/
-
-&lt; script&gt; let element document.getElementById demo
-element.style.color red ; element.
-style.fontSize = 20px ;
-
-&lt; / script&gt;
-
-/ bodY&gt;
-
-/ html&gt;
-
-<h5>DOM HTML</h5>
-
-The DOM HTML includes properties that deal with the HTML content.
-
-Changing HTML Attributes:
-
-html code
-
-! DOCTYPE html&gt;
-
-html &gt;
-
-&lt;img id mylmage &quot; src image.jpg &gt;
-
-&lt; script&gt; let image = document.getElementById(41 mylmage
-image.src new_image.
-jpg>
-&lt; / script&gt;
-
-/ body)
-
- / html&gt;
-
-DOM Forms
-
-The DOM allows rnanipulation of HTML forms.
-
-Accessing Form Elements:
-
-html code
-
-! DOCTYPE html&gt;
-html &gt;
-
-&lt;form id a&quot; myForm &gt;
-
-&lt;input type text &quot; id username name - username
-
-&lt;input type submit value z&quot; Submit &gt; form&gt;
-
-&lt; script&gt; let form = document.getE1ementById(t&apos; myForm • let
-username = form.elements username value;
-
-/ script&gt;
-
-&lt; / bodY&gt;
-
-&lt; / html&gt;
-
-<h6>DOM CSS</h6>
-
-The DOM CSS allows manipulation of CSS styles.
-
-Changing CSS Classes:
-
-html code
-
-&lt; ! DOCTYPE html&gt;
-
-&lt; html &gt;
-
-&lt;Pid demo &gt; This is a paragraph.&lt;
-
-escript&gt; let element = document.getE1ementById demo
-element classList.add(&apos;i new -
-class &quot;)
-
-/ script&gt;
-
-&lt; / bodY&gt; html&gt;
-
-<h6>DOM Animations
-
-The DOM supports creating simple
-animations
-
-Animating an Element:
-
-html code
-
-! DOCTYPE html&gt;
-html &gt;
-
-&lt;d1V id box &apos;l style width: IOOpx;height: IOOpx;background - color:
-red;position relative; &quot; / diV&gt;
-
-&lt; script&gt; let elem = document.getElementById(Il box ; let pos
-let id setlnterval(frame, 10) ;
-
-function frame()
-pos 350) f clearlnterval(id) ;
-
-elem style.top = pos -v &apos;px&Hat;i&Hat; ; elem style.left = pos + &Hat;i&Hat; px ;
-/ script&gt;
-
-&lt; / bodY&gt;
-
-&lt; / html&gt;
-
-DOM Events
-
-Events in the DOM represent interactions by users or by the browser.
-
-Click Event Handling:
-
-html code
-
-&lt; ! DOCTYPE html&gt;
-
-&lt; html &gt;
-
-&lt;button id z&quot; myButton &Hat;l&Hat; &apos; &gt;Click me&lt; / button&gt;
-
-&lt; script&gt; document.getE1ementById(i&apos; myButton &quot;).
-addEventListener(&apos; click, function f alert(i&apos; Button clicked &quot;)
-;D;
-
- / script&gt;
-
-&lt; / bodY&gt;
-
-&lt; / html&gt;
-
-DOM Event Listener
-
-The addEventListener method is used to attach an event to an element.
-
-Mouseover Event Handling:
-
-html code
-
-&lt; ! DOCTYPE html&gt;
-
-&lt; html &gt;
-
-ed1V id myDiv &Hat;i&Hat;&apos; &gt;Mouse over mec / diV&gt;
-
-&lt;script&gt; document.getElementById(I&apos; myDiv n).addEventListener
-(&apos;l mouseover &quot; function
-alert(I&apos; Mouse over event triggered Il)
-;
-
-&lt; / script&gt;
-
-&lt; / bodY&gt;
-
-&lt; / html&gt;
-
-<h6>DOM Navigation</h6>
-
-The DOM allows navigation between elements Traversing Child Elements:
-
-html code
-
-&lt; ! DOCTYPE html&gt;
-
-&lt; html &gt;
-
-eul id myList &gt;
-
-
-&lt;script&gt; let list document.getElementById(VI myList
-let items = list.getElementsByTagName
-(&quot; li console.log(items.length) ; //
-Output: 3
-
-&lt; / script&gt;
-
-&lt; / bodY&gt;
-
-&lt; / html&gt;
-
-<h6>DOM Nodes</h6>
-
-Nodes are the fundamental building blocks in the DOM.
-
-Creating a New Node:
-
-html code
-
-&lt; ! DOCTYPE html&gt;
-
-&lt; html &gt;
-
-edivid myDiv / divs
-
-&lt;script&gt; let node = document.createE1ement(I&apos; p &apos;I) ;
-
-let textNode = document.createTextNode(i&apos; New paragraph U) ; node
-appendChild(textNode) ; document.getElementById myDiv &quot;).
-appendChild(node) ;
-
- / script&gt;
-
-&lt; / bodY&gt;
-
-&lt; / html&gt;
-
-<h6>DOM Collections</h6>
-
-Collections in the DOM are arrays of HTML elements.
-
-Accessing Collection Elements:
-
-html code
-
-&lt; ! DOCTYPE html&gt;
-
-&lt; html &gt;
-
-&lt;p&gt;Click the button to get the collection length.&lt; /
-ebutton onclick getLength &gt;Get
-Collection Length&lt; / buttons
-
-&lt;script&gt; function getLength() { let elements document.links;
-alert(I&apos; Number of links: + elements.length) ;
-
-&lt; / script&gt;
-
- / bodY&gt;
-
- / html&gt;
-
-DOM Node Lists
-
-Node lists in the DOM are similar to collections and contain nodes or
-elements.
-
-Accessing Node List Elements:
-
-html code
-
- ! DOCTYPE html&gt;
-html &gt;
-
-&lt;Pid demo &gt;This is a paragraph.&lt;
-/
-
-&lt; script&gt; let nodeList document.querySelectorAll(L&apos; #demo
-console.log(nodeList I O l.innerHTML
-) ; // Output: &apos;This is a paragraph.
-
-
-&lt; / script&gt;
-
- / bodY&gt;
-
- / html&gt;
-
-This comprehensive guide covers JavaScript&apos;s HTML DOM, including an
-introduction to the DOM, methods, document, elements, HTML forms, CSS,
-animations, events, event listeners, navigation, nodes, collections,
-and node lists, with examples and explanations for each topic.
-
-<h4>JS Browser BOM</h4>
-
-The Browser Object Model(BOM) in JavaScript represents the browser
-window and its
-components
-
-<h5>JS Window</h5>
-
-The window object is the global object in a browser&apos;s JavaScript
-environment.
-
-Accessing Window Properties:
-
-javascript code
-
-console.log(window.innerHeight) ; // Output:
-Inner height of the window console.log(window.innerWidth) ; //
-Output: Inner width of the window
-
-<h5>JS Screen</h5>
-
-The screen object represents the screen of a device.
-
-Accessing Screen Properties:
-
-javascript code
-
-console.log(screen.width) ; // Output: Screen
-width in pixels console.log(screen.height) ; // Output: Screen
-height in pixels
-
-<h5>JS Location</h5>
-
-The location object contains information about the current URL.
-
-Accessing Location Information:
-
-java script code console.log(location.href) ; // Output: Full
-URL ofthe current page console.log(location hostname) ; // Output
-Hostname of the current URL
-
-<h5>JS History</h5>
-
-The history object contains the browsing history of the window.
-
-Accessing History Methods:
-
-javascript code
-
-history.back() ; // Go back to the previous page
-history.forward() ; // Go forward to the next page
-
-<h6>JS Navigator</h6>
-
-The navigator object contains information about the browser.
-
-Accessing Navigator Properties:
-
-javascript code
-
-console.log(navigator.userAgent) ; // Output:
-User - Agent header of the browser console.log(navigator.
-platform) ; // Output: Platform of the browser
-
-<h6>JS Popup Alert</h6>
-
-Popup alerts in JavaScript display messages to users.
-
-Displaying an Alert:
-
-javascript code
-
-alert This is an alert
-message
-
-<h5>JS Timing</h5>
-
-JavaScript&apos;s timing functions allow scheduling of code execution.
-
-Using setTimeout
-
-javascript code
-
-setTimeout
-console.log(l&apos; Delayed message I&apos;)
-;
-
-2000) ; // Execute after 2 seconds
-
-Using setlnterval
-
-javascript code
-
-setlnterval
-console.log(l&apos; Repeated message &apos;J)
-;
-
-3000) ; // Execute every 3 seconds
-
-<h6>JS Cookies</h6>
-
-Cookies in JavaScript store small pieces of information on the
-client&apos;s machine.
-
-Setting a Cookie:
-
-javascript code document.cookie username John Doe; expires - - Thu,
-18 Dec 2023 12: OO: OO UTC; path z/&quot; ;
-
-Accessing a Cookie:
-
-javascript code let username = document cookie.split(o l.split(
-console.log(username) ; // Output:
-&apos;John Doe&apos;
-
-This comprehensive guide covers JavaScript&apos;s Browser Object Model(BOM
-), including the window object, screen, location, history, navigat0%
-popup alerts; timing functions, and cookies, with examples and
-explanations for each concept
-
-<h5>JS Web APIs</h5>
-
-Web APIs are sets of tools and interfaces provided by web browsers to
-interact with various functionalities of the browser or device
-
-<h6>Web API Intro</h6>
-
-Web APIs enable web developers to access various browser features and
-functionalities.
-
-Accessing the Web API:
-
-javascript code
-
-// Example: Using the Geolocation API if(&apos;i geolocation in
-navigator) f navigator.geolocation.getCurrentPosition((position
-) = &gt; console.log(i Latitude: position
-coords latitude) ; console.log(&apos;i Longitude:, position.coords
-longitude) ;
-
-<h6>D;
-
-Web Forms API
-
-The Web Forms API provides methods and properties to manipulate HTML
-form elements.
-
-Accessing Form Elements:
-
-javascript code
-
-let form = document.getElementById(&apos;i myForm v)
-letinputFie1d = form.elements &lbrack;i&apos;
-username ; console.log(inputField value) ;
-
-<h6>Web History API
-
-The Web History API allows manipulation ofthe browser&apos;s history.
-
-Changing Browser History:
-
-javascript code
-
-window.history.pushState({ page 1 Title, ?page =
-1 I) ;
-
-<h6>Web Storage API
-
-The Web Storage API provides methods to store data in the browser.
-
-Using localStorage:
-
-javascript code
-
-localStorage.setltem(&apos;i key &apos;&Hat;i&Hat;&apos; value
-let data = localStorage.getltem(0
-key
-
-web Worker API
-
-The Web Worker API enables running scripts in the background to handle
-time - consuming tasks without blocking the
-
-UI.
-
-Creating a Web Worker:
-
-javascript code
-
-// worker js self.onmessage = function(event) f
-console.log(t&apos; Message received from the main script • event data
-) ; self.postMessage(0 Message from worker &quot;)
-
-// main.js let worker = new Worker(&Hat;i&Hat;&apos; worker js
-worker onmessage = function(event) {
-console.log(t&apos; Message received from worker, event.data) ;
-
-worker.postMessage(&apos;i Message from main &quot;) j
-
-<h6>web Fetch API
-
-The Fetch API provides a way to make HTTP requests.
-
-Making a GET Request:
-
-javascript code
-
-fetch(&Hat;i&Hat;&apos; https api example com / data &quot;)
-
-.then((response) ---- &gt; response.json 0)
-
-.then((data) = &gt; console.log(data))
-
-.catch error) &dash;- &gt; console.log(t&apos; Error, error)) ;
-
-<h6>Web Geolocation API
-
-The Geolocation API retrieves geographical information about the
-user&apos;s device.
-
-Getting User&apos;s Location:
-
-javascript code
-
-navigator.geolocation.getCurrentPosition((
-position) =
-console.log(&quot; Latitude: &apos;&Hat;i&Hat;,
-position.coords.latitude) ; console.log(&quot; Longitude,
-position coords longitude) ; This comprehensive guide covers various
-Web APIs in JavaScript, including an introduction to Web APIs.Web
-Forms API, Web History APL Web Storage API, Web Worker API, Web Fetch
-API, and Web Geolocation API, with examples and explanations for each
-concept.
-
-JS AJAX
-
-AJAX(Asynchronous JavaScript and XML) is a technique used to send
-and receive data asynchronously between a web browser and a
-server
-
-<h6>AJAX Intro
-
-AJAX allows web pages to update content without reloading the entire
-page.
-
-Simple AJAX Request:
-
-javascript code
-
-letxhttp = new XMLHttpRequest
-xhttp.onreadystatechange = function0 1
-if(this.readyState 4 this.status 200)
-document.getElementById demo &quot;).
-innerHTML = this responseText;
-
-xhttp.open GET &quot; ajax_info.txt, true
-xhttp.send() ;
-
-AJAX XMLHttp
-
-The XMLHttpRequest object(XHR) is a core component of AJAX used to
-exchange data between a web browser and a server.
-
-Using XMLHttpRequest:
-
-javascript code
-
-let xhttp new XMLHttpRequest() ; xhttp.
-onreadystatechange function
-if(this.readyState 4 this.status
-200) console.log(this.responseText) ;
-
-xhttp.open GET data.txt, true) ; xhttp.send() ;
-
-AJAX Request
-
-AJAX requests enable communication between the browser and the server
-.
-
-Sending POST Request:
-
-javascript code
-
-let xhttp new XMLHttpRequest() ; xhttp.
-onreadystatechange = function0 1 if(this.readyState 4 this.status
-200) console.log(this.responseText) ;
-
-xhttp.open POST, process.php true)
-xhttp.setRequestHeader(&apos;d Content -
-type &apos;I, &apos;i application / x - www - form - urlencoded I&apos;) ; xhttp
-.send(0 name John&age =
-30
-
-Response
-
-Handling AJAX responses involves processing data received from the
-server.
-
-Handling &apos;SON Response:
-
-javascript code
-
-letxhttp = new XMLHttpRequest() ; xhttp.
-onreadystatechange = function
-if(this readyState 4 this.status
-200) et data = JSON.parse(this.
-responseText) ; console.log(data) ;
-
-xhttp.open GET &quot; data json &Hat;i&Hat; &apos;, true) ; xhttp.send() ;
-
-<h6>AJAX XML File
-
-AJAX can be used to fetch and handle XML files.
-
-Fetching XML File:
-
-javascript code
-
-let xhttp = new XMLHttpRequest
-xhttp.onreadystatechange = function
-if(this.readyState 4 this.status
-200) let xmlDoc = this responseXML;
-
-console.log(xmlDoc) ;
-
-xhttp.open GET &quot; data.xml &quot;, true) ; xhttp.send() ;
-
-<h6>AJAX PHP
-
-AJAX can interact with server - side technologies like PHP to exchange
-data
-
-Handling AJAX in PHP:
-
-javascript code
-
-letxhttp = new XMLHttpRequest() ; xhttp.
-onreadystatechange = function0 1 if(this readyState 4 this.status
-200) { console.log this.responseText) ;
-
-xhttp.open &quot; GET &quot; &apos; process php &quot;, true
-xhttp.send() ; php code
-
-// process php
-
-? php echo Hello from
-PHP
-
-ASP
-
-SimilarlY% AJAX can communicate with server - side technologies like
-ASP.
-
-AJAX with ASP:
-
-javascript code
-
-letxhttp = new XMLHttpRequest() ; xhttp.
-onreadystatechange = function
-if(this readyState 4 this.status
-200) 
-
-console.log this.responseText) ;
-
-1
-
-xhttp.open &quot; GET &quot; &apos; process.asp, true
-xhttp.send() ; asp code
-process asp &dash;-
-
-Response.Write(i&apos; Hello from ASP ! ii)
-
-<h6>AJAX Database
-
-AJAX can be used to interact with databases on the server.
-
-Database Interaction with AJAX:
-
-javascript code
-
-letxhttp = new XMLHttpRequest
-xhttp.onreadystatechange = function
-if(this.readyState 4 this.status
-200) console.log this.responseText) ;
-
-xhttp.open GET &quot;, fetch_data.php true)
-xhttp.send() ; php code
-
-// fetch_data.php
-
-? php
-
-// Fetch data from database and return as JSON
-
-<h6>AJAX Applications</h6>
-
-AJAX enables building interactive web applications with real - time
-data.
-
-Real - time Chat Application:
-
-javascript code
-
-setlnterval(O = &gt; {
-
-// Fetch new messages and update chat interface l, 5000) ;
-
-<h6>AJAX Examples</h6>
-
-Here are more examples demonstrating various AJAX functionalities.
-
-Example 1:
-
-javascript code
-
-// Fetch weather data from an API and display on a webpage
-
-AJAX Example 2:
-
-javascript code
-
-// Fetch user - specific data and update profile information
-dynamically
-
-This comprehensive guide covers AJAX(Asynchronous JavaScript and
-XML), including an introduction to AJAX, using XMLHttp, making AJAX
-requests and handling responses, fetching XML files, interacting with
-server - side technologies like PHP and ASP, working with databases,
-building AJAX applications, and providing examples and explanations
-for each concept.
-
-AJAX Example 3: Dynamic Content Loading
-
-HTML:
-
-html code &lt; ! DOCTYPE html&gt;
-
-&lt; html &gt;
-
-&lt; head&gt;
-
-&lt;title&gt;AJAX Dynamic Content&lt; / title&gt;
-
-&lt; script&gt; function loadContent() &lbrack; let xhttp = new XMLHttpRequest
-() ; xhttp.onreadystatechange = function
-}if(this.readyState 4 this.status
-200) &lbrack; document.getElementById(&apos;l dynamicContent &quot;).innerHTML
-this.responseText;
-
-xhttp.open(&apos;&Hat;i&Hat; GET content.html, true
-xhttp.
-send
-
- / script&gt;
-
- / heads
-
-&lt;button onclick z&quot; loadContent &gt;Load Content&lt; / button&gt;
-
-{div id dynamicContent / dip
-
- / bodY&gt;
-
-/ html&gt; content.html(Sample Content
-):
-
-html code
-
-<h2>Welcome to Dynamic Content</h2>
-
-&lt;p&gt;This content was loaded dynamically using AJAX.&lt; / ps
-
-This example demonstrates a simple button that triggers an AJAX
-request to load content from an external HTML file and displays it on
-the webpage without refreshing the entire page.
->
-AJAX Example 4: Form Submission with AJAX
->
-HTML:
->
-html code
->
- ! DOCTYPE html&gt;
-html &gt;
->
-ehead&gt;
->
-&lt;title&gt;AJAX Form Submission &lt; / title&gt;
->
-•script&gt; function submitForm let formData = new FormData(document.
-getElementById(t&Hat;i&Hat; myForm
-let xhttp = new XMLHttpRequest ; xhttp.
-onreadystatechange = function
-if(this readyState 4 this status 200)
-&lbrack; document.getElementById(&apos;i response &quot; innerHTML = this.
-responseText;
->
-xhttp.open POST, processForm.php t&apos;, true
-xhttp.send(formData) ;
->
- / scripts
->
- / heads
->
->
-&lt;input type text name username placeholder Username &gt;
->
-&lt;input type password t&apos; name password placeholder Password
-&lt;button type button onclick submitForm
-/ button&gt;
->
- / form&gt;
-
-IV id response &apos;i / divs
-
- / bodY&gt;
-
- / html&gt; processForm php(Server - side
-Processing
-php code
-
-&lt; ? php
-
-&dollar;&lowbar;SERVER &lbrack;l&apos; REQUEST_METHOD &apos;I&rbrack;
-POST
-
-&dollar;username &dollar;&lowbar;POST username
-&quot;l
->
-&dollar;password &dollar;&lowbar;POST &lbrack; l&apos;
-password
->
-// Perform validation or database operations echo Form submitted
-successfully by
-&dollar;username
-
-} else { echo Invalid request •
-
-This example demonstrates a form submission using AJAX.When the form
-is submitted, the data is sent asynchronously to a server - side PHP
-script for processing.The response from the server is displayed on
-the webpage without refreshing the entire page.
-
-AJAX Example 5: Fetching JSON Data
-
-JavaScript:
-
-javascript code
-
-fetch(&apos;data jsont
-
-.then(response = &gt; response.json 0)
-
-.then(data = { console.log(data) ;
-
-// Process and use the retrieved JSON data
-
-.catch(error = &gt; console.error(&apos;Error: error)) ; data json
-(Sample JSON Data):
-
-json code
-
-name &Hat;i&Hat;&apos;: John Doe
-age 30,
-
-&quot; city n: New York &quot;
-
-This example utilizes the Fetch API to make an AJAX request to fetch
-JSON data from a file.Upon successful retrievål, the JSON data is
-processed and used within the JavaScript code.
-
-These additional examples showcase various use cases of AJAX, such as
-loading dynamic content, form submission without page refresh, and
-fetching and using JSON data asynchronously.
-
-AJAX Example 6: Image Gallery with AJAX
-
-HTML:
-
-html code
-
- ! DOCTYPE html&gt;
-html &gt;
-
-&lt;title&gt;AJAX Image Gallery&lt; / title)
-
-•script&gt; function
-loadlmages
-
-let xhttp = new XMLHttpRequest ; xhttp onreadystatechange = function
-if(this readyState 4 this.status 200
-) &lbrack; let images = JSON.parse(this.responseText) ; let gallery =
-document.getElementById imageGallery t&apos;) ; images.forEach(img =
-{ let imageNode = document.createElement(i&apos; img &quot; ; imageNode.
-src = img url; gallery appendChild(imageNode) ;
->
->
-xhttp.open(0 GET o, images.json &quot;, true) ; xhttp.
-send
->
-&lt; / script&gt;
->
- / heads
->
-&lt;body onload loadlmages
-
-IV id imageGallery &quot; / diV&gt;
-
- / bodY&gt;
-
- / html&gt; images.json(Sample Image
-Data in JSON Format):
-
-json code
->
-url imagel.jpg,
-caption i&apos;.Image
-1
->
-url i&apos;: image2.jpg
-caption it.Image
-2
->
-// Add more image objects as needed
->
-This example demonstrates loading images dynamically into an image
-gallery on a webpage using AJAX.The images and their respective URLs
-are stored in a JSON file, which is fetched asynchronously, and the
-images are displayed in the gallery.
->
-AJAX Example 7: Autocomplete Search
->
-HTML:
-
-html code
-
-&lt; ! DOCTYPE html&gt;
->
-&lt; html &gt;
->
-&lt;head&gt;
->
-&lt;title&gt;Autocomplete Search&lt; / title&gt;
->
-&lt;script&gt; function search() { let query = document.getElementById
-searchlnput value; fetch(&apos; search.php?q &dollar;(query} &apos;
-
-
--   then(response = &gt; response.json 0)
-     then(data = &gt; { let results =
-    document.getElementById(&apos;i searchResults &quot;)
-    results.innerHTML =
-    
-let listltem = document.
-    createE1ement(&apos;i li ; listltem textContent = item name; results.
-    appendChild(listltem) ;
-
--   catch(error = console.error(&apos;Error: t, error ;
-
-&lt; / script&gt;
->
-/ heads
->
-&lt;input type text id searchlnput onkeyup search(Y&apos; placeholder
-Search cul id searchResu1ts /
-/ bodY&gt;
-
-/ html&gt; search php(Server - side
-Script Handling Search):
-
-php code
->
-&lt; ? php
->
-&dollar;searchTerm = &dollar;&lowbar;GET I &apos;q&apos; &rbrack; ; // Get search query
->
-// Perform database or data search operations based on the query and
-return results
->
-&dollar;results = ame &gt; Result &vert; 4&apos;&rbrack;,
-name &gt; Result 2 &Hat;il&Hat; l,
->
-// Add more search results as needed
->
-echojson_encode(&dollar;results) ; // Return results as JSON
->
-This example demonstrates an autocomplete search feature using AJAX.
-As the user types in the search input field, an AJAX request is made
-to a server - side PHP script(search.php) that processes the
-search query and returns matching results in JSON format, which are
-then displayed as autocomplete suggestions
-
->
-These additional examples showcase different functionalities of AJAX,
-such as creating an image gallery dynamically and implementing an
-autocomplete search feature, using asynchronous data fetching and
-manipulation on a webpage.
->
-AJAX Example 8: Live Data Update
->
-HTML:
-
-html code
-
-&lt; ! DOCTYPE html&gt;
->
-&lt; html &gt;
->
-&lt;head&gt;
->
-&lt;title&gt;Live Data Update&lt; / title&gt;
->
-&lt;script&gt; function updateData() { setlnterval
-fetch(&apos;live_data, php•
-
->
-.then(response = response json0)
-then(data = &lbrack; document.
-getElementById(&Hat;i&Hat; liveData&apos; inner Text = data.value;
->
-.catch(error = &gt; console.error(&apos;Error: j, error ;
->
-5000) ; // Update every 5 seconds
->
-window.onload = updateData;
->
- / scripts
->
-/ heads
-
-Data &lt; spanid liveData / span&gt;&lt; /
-h
-
- / bodY&gt;
->
- / html&gt; live_data.php(Server -
-side Script Providing Live Data
-php code
->
-&lt; ? php
->
-// Simulate live data update
->
-&dollar;data &lbrack; &apos;value&apos; &gt; rand(1, 100 ; // Generate random value echo
-json_encode(&dollar;data) ; // Return live data as JSON
->
-This example demonstrates updating live data on a webpage at regular
-intervals using AJAX.The JavaScript function updateData uses
-setlnterval to fetch updated data from the server - side PHP script(
-live_data.php) every 5 seconds and displays it on the webpage.
->
-AJAX Example 9: Infinite Scroll
->
-HTML: html code
->
-&lt; ! DOCTYPE html&gt;
-
-&lt; html &gt;
-
-&lt;head&gt;
->
-&lt;title&gt;lnfinite Scroll&lt; / titles
->
-&lt; style &gt;
->
-#content height: 200px; overflow - y:
-scroll;
->
-&lt; / style&gt; &lt;script&gt; let page
-function loadMoreContent { let content
-document.getElementById(&apos;content&apos;) let scrollHeight content.
-scrollHeight; let scrollTop content.scrollTop; let offsetHeight
-content.offsetHeight; if(scrollHeight - scrollTop offsetHeight) {
-fetch(content, php?page &dollar;{page}) then(response &gt; response text
-C)) then(data &gt;
-
-
-
-content.innerHTML +- data; page +4.
->
-.catch(error = &gt; console.error &apos;Error:, error)) ;
->
-window.onscroll = loadMoreContent;
-/ script&gt;
->
-/ heads
->
-IV id content t&apos; onscroll
-loadMoreContent(Y&Hat;i&Hat; 
->
-&lt; !&dash;- Initially loaded content &dash;- &gt;
-
-<h6>&lt; / dip
-
- / bodY&gt;
-
-/ html&gt; content.php(Server - side
-Script Providing Content
-php code
-
-&lt; ? php
->
-&dollar;page = &dollar;&lowbar;GET I &apos;page&apos; I ; // Get page number
->
-&dollar;limit= 10; // Number of items per page
-
-&dollar;start --- &dollar;page- 1 &dollar;limit; // Calculate starting index
-
-// Fetch content based on page number and limit
->
-// Example: &dollar;results = fetchDataFromDatabase(&dollar;start, &dollar;limit) ;
->
-// Generate sample content for demonstration
->
-&dollar;results = range(&dollar;start 1, &dollar;start + &dollar;limit) ; foreach(
-&dollar;results as &dollar;result) { echo cp&gt;ltem &dollar;result&lt;
-
->
-This example demonstrates an infinite scroll functionality using AJAX
-.As the user scrolls down the pagej the loadMoreContent function
-detects when the user reaches the bottom of the content area and
-triggers an AJAX request to fetch more content(content.php) from
-the server - side PHP script, which is then dynamically appended to
-the existing content on the webpage
-
->
-These additional examples showcase different functionalities of AJAX,
-such as live data updates and implementing infinite scroll behavior on
-a webpage, demonstrating how AJAX can be used to fetch and display
-data dynamically without page reloads.
->
-AJAX Example 10 File Upload with Progress Bar
->
-HTML:
-
-html code
-
-&lt; ! DOCTYPE html&gt;
->
-&lt; html &gt;
->
-&lt;head&gt;
->
-&lt;title&gt;File Upload with Progress&lt; / title&gt;
->
-&lt;script&gt; function uploadFile { let filelnput document.
-getElementById(&apos;filelnput&apos;) ; let file filelnput.files I O ;
->
-let formData = new FormData ; formData.append(file&apos;, file) ;
->
-let xhr = new XMLHttpRequest() ; xhr.open(&apos;POST&apos;, &apos;upload.
-phpl, true) xhr, upload.onprogress function(e
-) { e lengthComputab1e) { let
-percentComplete(e.loaded / e.total) &ast; 100; document.
-getElementById(&apos;progressBar&apos; style.width percentComplete
-+
->
-Xhr.onload function if(xhr.status
-alert(&apos;File uploaded successfully !
-) ;
->
-alert(&apos;Error uploading file
-,
->
-xhr.send(formData) ;
->
-&lt; / scripts
->
-&lt; / heads
->
-&lt;input type file &quot; id filelnput &quot; &gt;
->
-&lt;button onclick uploadFile(YI &gt;Upload&lt; / button&gt;
->
-&lt;div id progressBarContainer &Hat;0&Hat; &gt;
-
-&lt;div id progressBar / diV&gt;
-
- / dip
-
- / bodY&gt;
-
-} / html&gt; upload php(Server - side
-Script for File Upload):
-
-php code &lt; ? php
->
-&dollar;&lowbar;SERVER I &apos;REQUEST_METHOD I TOSTI
-isset(&dollar;&lowbar;FILES &lbrack; &apos;file&apos; l)) { &dollar;targetDir = &apos;uploads / I;
->
-&dollar;targetFile = &dollar;targetDir.basename(&dollar;&lowbar;FILES &lbrack; &apos;file&apos; Inamel
-l) if(move_uploaded_file(&dollar;&lowbar;FILES &lbrack;
-&ast;filet Il &apos;tmp_name• I &dollar;targetFile)) &lbrack; echo &apos;File uploaded
-successfully ! I;
-
-} else &lbrack; echo &apos;Error uploading file
-
-
-
-This example demonstrates a file upload functionality using AJAX with
-a progress bar.When a user selects a file and clicks the Upload I&apos;
-button, the file is uploaded asynchronously to the server using an
-XMLHttpRequest.The progress bar visually indicates the upload
-progress.
-
-AJAX Example 11: Displaying Time Dynamically
-
-HTML:
-
-html code
-
- ! DOCTYPE html&gt;
-html &gt;
-
-&lt;title&gt;Displaying Time Dynamically&lt; / title&gt;
-
-•script&gt; function displayTime() { let timeDisp1ay = document.
-getE1ementById(&apos;timeDisplay&Hat;i&Hat;) ; setlnterval
-fetch(&apos;getTime php &Hat;i&Hat;)
-then(response = response text C))
-
-.then(data = &lbrack; timeDisplay.innerHTML = data;
->
-.catch(error = &gt; console.error(&apos;Error: i, error ;
->
-1000) ; // Update every second
->
-window.onload = displayTime;
- / script&gt;
-
- / heads
-
-Chl &gt;Current Time(span id timeDisplay / span&gt;&lt; / 111b
-
- / bodY&gt;
-
- / html&gt;
-
-getTime.php(Server - side Script to Get Current Time):
-
-php code
-
-&lt; ? php echo date(&apos;h: i: s A&apos;) ; // Return current time
-
-This example demonstrates dynamically displaying the current time on a
-webpage using AJAX.The displayTime function fetches the current time
-from the server - side PHP script(getTime.php) at intervals of
-one second and updates the time display on the webpage.
-
-These examples showcase different functionalities of AJAX, including
-file uploads with progress tracking and displaying dynamic content(
-such as current time) on a webpage.AJAX allows for seamless
-interactions between the client and server without page reloads,
-enhancing user experience and providing dynamic content updates.
-
-<h6>JS JSON
-
-JSON(JavaScript Object Notation) is a lightweight data interchange
-format that is easy for humans to read and write and easy for machines
-to parse and generate.It is commonly used to transmit data between a
-server and a web application.
-
-<h6>JSON Intro
-
-JSON serves as a language - independent data format derived from
-JavaScript object literals It&apos;s widely used for data exchange between
-web servers and web clients
-
-Example of JSON Data
-json code
-
-name John Doe
-age n: 30, &Hat;i&Hat;&quot; email john@example com
-t&apos; isStudent i&apos;: false,
-address
-street i&apos;: 123 Main St
-city
-Anytown
-l, hobbies reading coding, traveling &quot;l
-
-<h6>JSON Syntax
-
-JSON syntax is derived from JavaScript object notation, consisting of
-key - value pairs enclosed in curly braces O, and values can be
-strings, numbers, objects, arrays, booleans, or null.
-
-Example of JSON Syntax:
-
-json code
-
-&quot; keyl &apos;4: valuel 
-
-&quot; key2 &apos;i: 123,
-
-&quot; key3 &apos;&Hat;i&Hat;: true,
-
-&quot; key4 &apos;i: null,
-
-&quot; key5 &apos;i: {
-nestedKey &apos;t:
-nestedValue
-
-key6 &quot;: &apos;i arrayVa1ue1 arrayVälue2
-&Hat;t&Hat;&apos; &rbrack;
-
-<h6>JSON vs XML</h6>
-
-JSON and XML are both used for data interchange, but JSON is generally
-more lightweight and easier to read and parse than XML.
-
-Example Comparison between JSON and XML:
-
-json code
-
-// JSON
-
-name John, age 25,
-city New
-York
-
-xml code
-
-XML
-euser&gt;
-
-•namesJohn&lt; / name&gt;
-
-/ ago
-
-•citY&gt;New York&lt; / citY&gt;
-
-
-/ user)
-
-JSON Data Types
-
-JSON supports several data types: strings, numbers, booleans,
-objects, arrays, null,
->
-Example of Different Data Types in JSON:
-
-json code
-
-&quot; string Hello, World
-number &Hat;Il&Hat;: 42,
-
-&quot; boolean I&apos;: true,
-
-&quot; nullValue &Hat;it&Hat;: null,
-object(&quot; key &apos;l: &quot; value
-l&apos
-
-&quot; array &lbrack; 1, 2, 3
-
-JSON Parse
-
-JSON.parse() is a method in JavaScript used to parse JSON data into
-a JavaScript object
-
-
-Example ofJSON Parsing:
-
-javascript code
-
-let jsonString - name &quot; Alice age •r: 28B; letjsonObj
-= JSON.parse(jsonString) ; console.log(jsonObj.name); //
-Output: Alice
-
-<h6>JSON Stringify
-
-JSON.stringify() is a method in JavaScript used to convert a
-JavaScript object into a JSON string.
-
-Example of JSON Stringification:
-
-javascript code
-
-let obj {name Bob age: 30
-let jsonString = JSON.stringify(obj
-) ; console.log(jsonString) ; // Output: { &apos;&Hat;i&Hat; name Bob, age
-30)
-
-<h6>JSON Objects
-
-JSON objects contain key - value pairs enclosed in curly braces f}.
-Keys must be strings, and values can be of any JSON data type.
-
-Example of a JSON Object:
-
-json code
-
-name Sarah t&apos; age 35,
-city &apos;i:
-London
-
-JSON Arrays
-
-JSON arrays are ordered lists of values enclosed in square brackets
-l&rbrack;, The values can be of any JSON data type
-
-
-Example of a JSON Array:
-
-json code apple, banana,
-orange
-
-###<h6>JSON Server
-
-JSON is commonly used to transfer data between a server and a web
-client in web development.Servers often provide data in JSON format
-through APIs.
->
-Example of JSON Data from a
-Server
-
-json code
-
-// Received from a server API endpoint
-
-
-
-title &apos;I: Sample
-Post
-
-&quot; content it: &quot; This is a sample post content.11
-
-JSON PHP
-
-In PHP, JSON data can be encoded and decoded using json_encode() and
-json_decode() functions respectively, to convert data to and from
-JSON format.
-
-Example of Encoding and Decoding JSON in PHP
-php code
-
-// Encoding PHP array to JSON
-
-&dollar;data array(It name &quot; Peter&quot; &quot; age &gt; 28) ;
-
-&dollar;jsonData = json_encode(&dollar;data) ;
-
-// Decoding JSON to PAP array
-
-&dollar;jsonString= name t&apos;: Alice, age &apos;i: 30}i;
-
-&dollar;decodedData = json_decode(&dollar;jsonString, true
-)
-
-JSON HTML
-
-JSON data can be used in HTML to dynamically generate content on
-webpages using JavaScript.
-
-Example of Using JSON Data in
-HTML
-
-html code id userList
-
-&lt; script&gt; const users
-name &apos; John &quot; age 25 1,
-name Alice &quot; age 301,
-name Bob &quot;, age 28
-
-&Hat;I&Hat;
-
-const userList = document.getElementByld(&apos;i userList ; users.
-forEach(user = &gt; f let listltem = document.createElement(&apos;i li
-t&apos;) ; listltem.textContent = &dollar;fuser name} - &dollar;{user.age) years
-old, userList.appendChi1d(listltem) ;
-
- / script&gt;
-
-JSON JSONP
-
-JSONP(JSON with Padding) is a technique for requesting JSON data
-from a different domain in web development to bypass the same - origin
-policy limitations.
-
-Example of JSONP Request:
-
-javascript code
-
-function handleData(data) f console.log(data);
-
-let script document.createElement(&apos;script&apos;) ; script, src
-&apos;https:// example.com / data?callback handleData&apos;; document.
-head.appendChild(script) ;
-
-This comprehensive guide covers JSON(JavaScript Object Notation) in
-detail, including an introduction, syntax, comparison with XML, data
-types, parsing, stringifying, JSON objects and arrays, working with
-JSON in server - side technologies like FHP, HTML, and JSONP, with
-examples and explanations for each topic JSON plays a crucial role in
-data interchange in web development due to its simplicity, ease of
-use, and widespread support.
-
-I Creating aJSON Object:
-
-javascript code
-
-let person = {
-name John, age 30, t&apos; city &apos;i: i&apos;
-New York
-l;
-
-2..Accessing JSON Object Properties:
-
-javascript code
-
-console.log(person.name) ; // Output: John
-console.log(person.age) ; // Output: 30
-
-3. Nested JSON Objects:
-
-java script code
-
-let employee
-
-name Alice
-position &apos;i: Engineer
-contact
-email: alice@example com t&apos;
-phone &quot; 123 - 456 -
-7890
-
-4. JSON Array of Objects:
-
-javascript code
-
-let books
-
-&quot; title.
-&apos;  Book
-1, &quot; author Author 1
-title 0: Book 2
-,
-author Author 2
-&quot;
-title  Book3  &quot; author &apos;l: Author 3
-
-5. Converting JSON to String:
-
-javascript code
-
-let jsonString z JSON.stringify(person) ; console
-.log(jsonString) ; // Output: { name &quot; John&apos;, &quot; age 1&apos;• 30, &quot;
-city New York
-
-6. Parsing JSON String to Object:
-
-javascript code
-
-let jsonObject = JSON.parse(name Alice j age •t: 25,
-city London y) ; console.log(jsonObject.name) ; // Output: Alice
-
-7..Fetching JSON Data from URL(using Fetch API
-javascript code
-
-fetch(&apos;data.
-    json&apos;
-
-.then(response &gt; response.json C))
-
-.then(data &gt; console.log(data))
-
-.catch(error = &gt; console.error(&apos;Error: error)) ;
-
-8. Displaying JSON Data Dynamically in HTML: javascript code
-    letjsonData { &quot; name &apos;1: Bob &quot;, age
-    28
-
-let displayDiv document.getElementById(&apos;jsonDataDisplay&apos;) ;
-displayDiv.innerHTML = &lt;p&gt;Name: &dollar;fjsonData.name}&lt; / p&gt;&lt;p&gt;Age
-: &dollar;&lbrack;jsonData./ •
-
-9. Handling JSON Data in Forms:
-
-javascript code
-
-let form - document.getElementById(ImyForm&apos;) ;
-form.addEventListener(&apos;submit&apos;, function(event) { event.
-preventDefault() ; let formData = new FormData(form) ;
-letjsonObject O; formData.forEach((value, key) &gt; { jsonObject &lbrack;
-key I value;
-
-console.log(jsonObject) ;
-
-10. Stringifying and Parsing a More Complex Object:
-
-javascript code
-
-let complexObj &lbrack;
-
-&quot; name Sam &quot;,
-
-&quot; age 35,
-addresses
-type &Hat;1&Hat;&apos;: &quot; home address 123 Main St
-&quot;type u: &quot; work &quot;, &quot; address 456
-Business
-Ave
-
-let complexString = JSON.stringify(complexObj) ; let parsedObj =
-JSON.parse(complexString) ; console.log(parsedObj.addresses
-I O l.address) ; // Output: 123 Main St
-
-11. Filtering JSON Array Data:
-
-java script code let
-employees
-
-&quot; name n: &quot; John, department HR }
-&quot; name &Hat;n&Hat;: &quot; Alice, department
-IT
-
-&quot; name n: &quot; Bob &quot;,
-department
-
-let hrEmployees = employees.filter(employee &dash;- &gt; employee
-department HR &apos;)
-console.log(hrEmployees) ; //
-Output: name John
-department name &apos;i &quot; Bob
-department &apos;i: HR I &rbrack;
-
-12. Updating JSON Object Properties:
-
-javascript code
-
-let product &lbrack; name Chair price 50
-product.price 60; console.log(
-product) ; // Output: &lbrack; name &quot; Chair u price 60)
-
-13. Removing a Property from JSON Object:
-
-javascript code
-
-let data { &quot; name &apos;t: Kate &quot;age&quot;: 25 }
-delete data, age; console.log(data
-) ; // Output: f &quot; name.
-Kate
-
-14. Using JSON with Local Storage:
-
-javascript code
-
-let userData = f username i&apos;: user 123 email
-user@example.com localStorage.setltem(•userData&Hat;i&Hat; &dollar;
-JSON.stringify(userData)) ; let storedData = JSON.parse(
-localStorage.getltem(iuserData&Hat;i&Hat;
-console.log(storedData email) ; //
-Output: user@example.com
-
-15. Handling JSON Date Strings:
-
-java script code letjsonData date n: 2023 - 12 - 31T08: OO: OOZ
-let date = new Date(jsonData.date) ;
-console.log(date.toDateString ; // Output: Fri Dec 31 2023
-
-16. Using JSON in Asynchronous Functions:
-
-javascript code
-
-async function fetchData O
-try &lbrack; let response = await fetch(
-&apos;data.jsonl let data await response.json
-console.log(data) ;
-
-} catch(error) { console.error(&apos;Error l, error) ;
-
-fetchData ;
-
-17. JSON Serialization with Custom Functions
-
-javascript code
-
-let obj - {
-
-&quot; name &apos;l Joe  birthday n: new Date(&apos;1990 - 01 -
-15TOO: OO: OOZ),
-
-&quot; toJson function &lbrack; return &quot; name &dollar;{this.name} &quot; birthday 1&apos;:
-&quot; &dollar;{this.birthday, tolSOString()
-l&apos;
-
-let jsonString obj.toJson
-console.log(jsonString) ; // Output:
-{ &quot; name &Hat;I&Hat; &apos;.&quot; Joe &quot; &quot; birthday l&apos; 1990 - 01 - 15TOO: 00:
-00 OOOZ
-
-18. Handling JSON Data from an API(Using Axios):
-
-javascript code axios.get(lhttps api.example.com / datal)
-
-.then(response &gt; console.log(response.data)).catch(
-error = &gt; console.error(&apos;Error: error)) ;
-
-19. Merging JSON Objects:
-
-javascript code let 0b) 1 name &quot; Tom age &Hat;u&Hat;: 30
-letobj2 { &quot; city &apos;l: Paris, country
-France let mergedObj &lbrack; • objl, &period;..obj2
-console.log(mergedObj) ; // Output: {
-&quot; name &apos;I: &quot; Tom &quot;, I&apos; age
-1&apos;
-20. Mapping JSON Data to Another Structure:
-
-javascript code let data = I
-
-name.Item 1 name &apos;i: Item 2 name Item
-3
-
-let mappedData = data.map(item = &gt;(&lbrack; itemld: item.idi
-itemName  console.log(mappedData) ;
-
-// Output: &lbrack; { itemld 1, &quot;itemName Item 1 Ij itemld &Hat;i&Hat; &apos;: 2,
-itemName Item 3 I
-
-city 1&apos;: Paris &apos;l country &quot;: &Hat;F&Hat;&apos;
-France
-
-item.name})) ;
-
-itemName Item
-2 itemld 0: 3,
-
-These examples showcase different aspects of using JSON in JavaScript,
-including creating, manipulating; parsingj and working with JSON data
-in various scenarios.
-
-<h3>JavaScript vs jQuery: A Comprehensive Comparison</h3>
-
-JavaScript and jQuery are both powerful tools used in web development
-JavaScript is a programming language, while jQuery is a library built
-with JavaScript.Understanding their differences, capabilities, and
-usage scenarios is crucial for developers.
-
-JavaScript Overview
-
-JavaScript is a versatile programming language primarily used for
-enhancing interactivity on web pages.It&apos;s a core technology in web
-development, enabling dynamic content updates, user interactions, and
-handling client - side functionalities.
-
-Example of JavaScript Functionality:
-
-javascript code
-
-// JavaScript code to change text color on button click function
-changeColor
-document.getElementById text I&apos;).
-style, color &quot; blue,
-
-JavaScript offers native methods and APIs to interact with the
-Document Object Model(DOM) and manipulate HTML elements, enabling
-developers to create dynamic web applications.
-
-<h3>jQuery Overview</h3>
-
-jQueryj on the other hand, is a fast, lightweight JavaScript library
-designed to simplify the process of client - side scripting and DOM
-manipulation It abstracts many complexities of JavaScript and provides
-a concise syntax for common tasks.
-
-Example of jQuery Functionality:
-
-javascript code
-
-// jQuery code to change text color on button click
-
-&dollar;(&apos;I #text &Hat;0&Hat;).CSS(&Hat;I&Hat;&apos; color &apos;l blue &apos;&Hat;l&Hat;) ;
-
-jQuery simplifies common JavaScript tasks, such as event handling,
-animations, AJAX requests, and DOM manipulation, offering a more
-concise syntax compared to native JavaScript.Differences Between
-JavaScript and jQuery
-
-I.Syntax:
-
--   JavaScript: Uses native syntax and methods provided by the language
-   .
-
--   jQuery: Offers a simpler syntax and concise methods for common
-    tasks, making code shorter and more readable,
-
-2. DOM Manipulation:
-
-    -   JavaScript: Provides direct DOM manipulation using methods like
-        getElementById and querySe1ector
- jQuery: Simplifies DOM
-        traversal and manipulation with methods like &dollar;() allowing
-        easier element selection and modification.
-
-3. Browser Compatibility:
-
-    -   JavaScript: Works across all modern browsers, but handling
-        cross - browser compatibility may require additional code.
-
-    -   jQuery: Provides cross - browser compatibility out - of- the -
-        box, reducing the need for explicit compatibility
-        handling
-
-4. Learning Curve:
-
-    -   JavaScript: Requires understanding core language concepts,
-        which might have a steeper learning curve for beginners
- jQuery: Offers a simpler
-        learning curve due to its concise syntax and abstraction of
-        complex JavaScript operations.
-
-<h3>jQuery Selectors</h3>
-
-jQuery provides powerful selectors that allow developers to effciently
-target and manipulate HTML elements
-
-
-Example of jQuery Selectors:
-
-javascript code
-
-// Selecting elements with class iexample&Hat;i&Hat;
-
-.example CSS(&apos;t font - size &Hat;i&Hat;
-16px
-
-// Selecting all elements inside &lt;div&gt; with ID &apos;content&apos; &dollar;(&quot;
-#content p addClass highlight &quot;) ; jQuery selectors, similar to CSS
-selectors, enable developers to target elements based on IDs, classes,
-attributes, element types, and more
-jQuery HTML Manipulation
-
-jQuery simplifies HTML content manipulation by providing methods to
-insert, remove, and modify HTML elements and their content.
-
-Example of jQuery HTML Manipulation
-javascript code
-
-// Appending a new element to an unordered list
-
-ul append(t&apos; &lt;li&gt;New Item&lt; / t&apos;)
-
-// Changing text content inside a &lt;div&gt; element
-
-&dollar; #content text(I&apos; Updated
-content
-
-With jQuery&apos;s methods like append, html text and remove, developers
-can effciently modify HTML content on the fly.
-
-<h3>jQuery CSS Manipulation</h3>
-
-jQuery facilitates CSS maniptilation, allowing changes to element
-styles dynamically.
-
-Example of jQuery CSS Manipulation:
-
-javascript code
-
-// Changing the background color of an element
-
-&dollar;(&apos;I #box Il).CSS background - color, #f2f2f2
-&quot;)
-
-// Toggling a CSS class on an element
-
-&dollar;(&apos;I #toggleBtn Il).click(function {
-
-#content toggleClass(I&apos; active &apos;1) ;
-
-jQueryls css, addClass, removeClass and toggleClass methods simplify
-applying, removing, and toggling CSS styles.
-
-<h3>jQuery DOM Traversal</h3>
-
-jQuery simplifies DOM traversal, enabling easy navigation between
-elements and their relationships within the
-DOM
-
-Example of jQuery DOM Traversal:
-
-javascript code
-
-// Finding the next sibling element
-
-&dollar;(&quot; #current next addClass highlight &apos;&Hat;i&Hat;) ;
-
-// Traversing up the DOM to find parent elements
-
-&dollar;(&quot; a &apos;l).closest div Il).addClass(&apos;I parent - div
-u)
-
-Using methods like next, prev.find, closest and siblings jQuery
-provides effcient ways to navigate and manipulate elements within the
-DOM.
-
-<h3>Conclusion</h3>
-
-JavaScript and jQuery each have their strengths and use cases in web
-development.JavaScript is the foundation language that provides
-extensive capabilities for building complex applications.jQuery, as
-a library built on JavaScript, simplifies common tasks, particularly
-DOM manipulation, offering a more concise syntax.
-
-For modern development, JavaScript&apos;s native features are often
-preferred due to advancements in web standards, while jQuery remains
-relevant for legacy projects or when compatibility with older browsers
-is a concern.Understanding both JavaScript and jQuery empowers
-developers to choose the right tool for the job and build robust,
-interactive web applications.
-
-JavaScript and jQuery in various Examples:
-
-I Selecting an Element by ID:
-
-JavaScript:
-
-javascript code let element = document.getElementById(t&apos; myElement
-&quot;) ; element.style color = blue ; jQuery:
-
-javascript code
-
-#myElement &ast; &Hat;I&Hat;).CSS(&apos;i color blue
-t&apos;) ; 2.Selecting Multiple Elements by Class:
-
-JavaScr ipt:
-
-javascript code let elements document.getElementsByClassName(&apos;t
-myClass &apos;l), for(let i O; i &lt; elements.length; i +4) { elements
-I i style fontWeight &quot; bold l&apos;,
-
-j Query:
-
-javascript code
-myClass CSS(t&apos; font - weight, bold
-&apos;
-
-3.Adding Event
-Listeners
-
-JavaScr ipt:
-
-java script code document.getElementById(I&apos; myButton
-addEventListener(&apos;l click function
-alert Button clicked !&quot;
-
-j Query:
-
-javascript code
-
-&dollar;(&quot; #myButtan on(t&apos; click &apos;&Hat;i&Hat; function
-alert(t&apos; Button clicked l&quot;) •
-
-4.Handling Document Ready
-Event
-
-JavaScr ipt:
-
-java script code document.addEventListener(&apos;l DOMContentLoaded n
-function() {
-
-// Code to execute when DOM is ready
-
-j Query:
-
-javascript code
-document ready(
-function
-
-// Code to execute when DOM is ready
-
-5.Creating a New Element:
-
-JavaScr ipt:
-
-java script code let newElement = document.createElement(&apos;I div
-&quot;) newElement.textContent &quot; New Content
-document.body.appendChild(
-newElement) ;
-
-j Query:
-
-javascript code
-
-&dollar;(&apos;i body 0).append(&apos;i &lt;div&gt;New Content&lt; / divs &apos;&Hat;i&Hat;)
-
-
-6.Removing an Element:
-
-JavaScript:
-
-javascript code let elementToRemove = document.getElementById(i&apos;
-toBeRemoved i&apos;) ; elementToRemove.parentNode.removeChild(
-elementToRemove) ; jQuery:
-
-javascript code
-
-&dollar; #toBeRemoved &apos;).remove
-7 Manipulating CSS Class:
-
-JavaScript:
-
-javascript code document.getElementById(&apos;i myDiv classList.add
-active jQuery:
-
-javascript code
-
-&dollar; #myDiv addClass(&apos;I active
-I&apos;)
-
-8. Changing Text
-    Content
-
-JavaScript:
-
-javascript code document.getElementById(0 mySpan) textContent =
-Updated Text,
-
-jQuery:
-
-javascript code
-
-&dollar;(&quot; #mySpan text(&apos;l Updated Text o) ;
-
-9. Hiding an Element:
-
-JavaScript:
-
-javascript code document.getE1ementById toHide i).style.display =
-none jQuery:
-
-javascript code
-
-&dollar; #toHide 0).hide() ;
-
-10..Fading In an
-    Element
-
-JavaScript:
-
-javascript code let elementToFade = document.getElementById toFade
-&quot;) ; elementToFade.style.opacity
-elementToFade style.transition =
-opacity Is elementToFade.style.opacity = 1;
-jQuery:
-
-javascript code
-
-&dollar; #toFade fadeln(1000
-)
-
-11..AJAX GET Request:
-
-JavaScript:
-
-javascript code let xhr = new XMLHttpRequest() ; xhr.
-onreadystatechange = function
-if(this.readyState 4 this.status
-200) { console.log this.responseText) ;
-
-l; xhr.open GET data.txt
-xhr.send ; jQuery:
-
-javascript code
-
-&dollar;.get(&apos;l data.txt,function(data) { console.log(data) ;
-
-12.AJAX POST Request:
-
-JavaScript:
-
-java script code let xhr = new XMLHttpRequest() ; xhr.open POST
-saveData true xhr.setRequestHeader Content - Type &quot;
-, application / json &Hat;i&Hat;&apos;) ; xhr.send(JSON.stringify({ name:
-John, age: 30)) ; jQuery:
-
-javascript code
-
-&dollar;.ajax(&lbrack; url saveData
-method: &quot; POST &quot;, contentType:
-application / json I
-data: JSON.stringify(&lbrack; name: &quot;
-John, age: 301)
-success: function(response) {
-
-console.log(response) ; 1
-
-13.Getting Attribute Value:
-
-JavaScr ipt:
-
-javascript code let linkHref &ast; document.getElementById(l&apos; myLink
-getAttribute(href ;
-
-j Query:
-
-javascript code let linkHref = &dollar;(&apos;i #myLink attr(i&apos; href &quot;) ;
-
-14.Setting Attribute Value:
-
-JavaScr ipt:
-
-javascript code document.getElementById(&apos;l mylmage &Hat;Il&Hat;).
-setAttribute(&apos;l src l&apos; new-image jpg &apos;I) ;
-
-j Query:
-
-javascript code
-
-#mylmage attr(&apos;t src new_image jpg
-N&apos;) ; 15.Getting Form Values:
-
-JavaScr ipt:
-
-javascript code let inputValue document.getElementById(&apos;l mylnput
-value;
-
-jQuery:
-
-javascript code let inputValue = &dollar;(&Hat;I&Hat;&apos; #mylnput &quot;) val ;
-
-16..Checking Checkbox State:
-
-JavaScript:
->
-javascript code let isChecked = document.getElementById myCheckbox
-checked;
-
-jQuery:
-
-javascript code let isChecked = &dollar;(&Hat;Il&Hat; #myCheckbox &apos;I).prop
-checked &quot;) ;
-
-17..Iterating Over NodeList:
-
-JavaScript:
-
-javascript code let elements = document.querySelectorAll myClass
-elements.forEach(function(element)
-{ console.log(element.textContent) ;
-
-jQuery:
-
-javascript code
-myClass each(function
-console.log(&dollar;(this).
-text
-
-18..Handling Form Submission:
-
-JavaScr ipt:
-
-java script code document.getElementById C&apos; myForm addEventListener
-(Q submit I, function(event) { event.preventDefau.lt() ; let
-formData new FormData(
-this
-
-// Process form data
-
-j Query:
-
-javascript code
-
-&dollar;(&quot; #myForm submit(function(event) f event.preventDefault()
-; let formData &dash;- &dollar;(this serialize() ; // Process form data
-
-19.Animating Element:
-
-JavaScr ipt:
-
-javascript code let element = document.getElementById(&apos;I myElement
-; element.style transition = transform 2s &apos;i ; element.style
-transform &quot; rotate(
-360deg
-
-j Query:
-
-javascript code
-
-&dollar;(&apos;i #myElement animate({rotate: 360deg 2000
-)
-
-20.Changing Background Color on Click:
-
-JavaScr ipt:
-
-javascript code let myDiv document.getElementById myDiv I
-myDiv.addEventListener(Il click &Hat;I&Hat;&apos;
-, function this.style backgroundC010r Il&quot; red ;
-
-j Query:
-
-javascript code
-
-&dollar;(&apos;i #myDiv click(function() f
-
-&dollar;(this css(&Hat;i&Hat;&apos; background - color red ;
-
-These examples demonstrate how JavaScript and jQuery can achieve
-similar tasks, showcasing the differences in syntax and complexity
-between the two when performing common web development operations
-JavaScript Graphics Libraries: Explained
-
-I JavaScript Graphics
-
-JavaScript is a versatile language that allows developers to create
-interactive graphics and visualizations on the web
-Several libraries and tools empower
-developers to generate captivating graphics for data representation,
-animations, games, and more.
-
-2..JS Canvas
-
-The HTML &lt;canvas&gt; element is a powerful tool in JavaScript for
-drawing graphics on a web page dynamically.It provides a bitmap area
-where JavaScript code can be used to create animations, render shapes,
-images, and complex visualizations.
-
-Example - Drawing a Circle on Canvas:
-
-javascript code const canvas = document.getElementById &apos;myCanvasI)
-; constctx = canvas.getContext(&apos;2dl) ; ctx.beginPath() ; ctx
-.arc(100, 100, 50, O, 2&ast; Math.PI) ; ctx.stroke() ;
-
-3. JS Plotly
-
-Plotly is a JavaScript graphing library that allows developers to
-create interactive and publication - quality graphs.It supports
-various chart types, including line plots, bar charts, pie charts,
-scatter plots, and more.Plotly provides easy to - use APIs for
-customization and interactivity.
-
-Example - Creating a Line Chart with Plotly
-javascript code constdata = &lbrack; 1, 2,
- 10, 15, 13,
-18&apos;scatteril I ; Plotly.newPlot(
-&apos;myDivi, data) ;
-
-4. JS Chart.js
-
-Chart.js is a popular JavaScript library for creating simple yet
-flexible charts.It supports various chart types and provides easy
-integration.With Chart.js, developers can create responsive and
-visually appealing charts.
-
-Example - Creating a Bar Chart with Chart.js:
-
-javascript code const ctx - document.getElementById(&apos;myChartI).
-getContext(&apos;2d&apos;) ;
-
-constmyChart = new Chart(ctx, { type: &apos;barf, data
-labels: &lbrack; &apos;Red&apos;, &apos;Blue, tYellow&apos;,
-&apos;Green&apos;, &apos;Purple&apos;, &apos;Orange&apos; datasets.
-
-label: of Votes&apos;, data &lbrack; 12, 19, 3, 5, 2, 3
-backgroundColor.
-
-132, 0 2
-)
-
-•rgba(54, 162, 235, 0 2
-)
-86, 0 2
-)
-
-•rgba(75, 192, 192, 0 2
-)
-
-&apos;rgba(153, 102, 255,0) t,
-
-•rgba(255, 159, O.2) t
-
-borderColor: I
-
-&apos;rgba(255, 99, 132, 1
-)
-
-•rgba(54, 162, 235, 1
-)
-
-•rgba(255, 206, 86, 1
-)
-
-•rgba(75, 192, 192, 1
-)
-
-&apos;rgba(153, 102, 255, 1) i,
-
-•rgba(255, 159, 64, 1) &apos;
-
-borderWidth: 1
-
-1,
-
-5.JS Google Chart
-
-Google Charts is a feature - rich JavaScript charting library that
-offers a wide range of visualization options.It allows the creation
-of interactive charts, maps, and graphs using declarative JavaScript
-syntax.
-
-Example - Creating a Pie Chart with Google Charts: javascript code
-google.charts.load(&apos;current&apos;, { packages: &lbrack; &apos;corechart&apos;
-google.charts.setOnLoadCallback(
-drawChart) ;
-
-function drawChart f constdata = google.visualization.
-arrayToDataTable(l
-
- &apos;Task&apos;, &apos;Hours per Day&apos; &rbrack;
-
-&lbrack; &apos;Work&apos;, 1 1
-
-I Eat&apos;, 2
-
- &apos;Commute&apos;, 2 &rbrack;
-&lbrack; &apos;Watch TV&apos;, 2
-
-1 &apos;Sleep&apos;, 7
-
-constoptions = &lbrack; title: &apos;My Daily Activities&apos;, pieHole: O 4,
-
-const chart new google.visualization.PieChart(document.
-getElementById(&apos;donutchartl)) ; chart.draw(data, options) ;
-
-6.JSD3.js
-
-D3 js(Data - Driven Documents) is a powerful JavaScript library
-used for creating data visualizations in SVG, HTML, and CSS.It
-provides comprehensive functionalities to manipulate documents based
-on data, enabling the creation of interactive and dynamic
-visualizations.
-
-Example - Creating a Basic SVG Circle with D3 js:
-
-java script code constsvg = d3.select(&apos;body&apos;)
-
-.append(Isvg&apos;)
-
-.attr(&apos;width&apos;, 100)
-attr(&quot;height&apos;, 100) ;
-
-svg.append(&Hat;i&Hat;circle&Hat;i&Hat;
-
-
-.attr(&Hat;i&Hat; cxt,
-50
-
-.attr(&Hat;i&Hat; cy&apos;&ast;
-50
-
-.attr(iri,
-40
-
-.attr(ibluei) ;
-
-Conclusion
-
-JavaScript graphics libraries and tools like Canvas, Plotly, Chart.
-js, Google Charts, and D3.js offer diverse capabilities for creating
-stunning visualizations and interactive graphics on the web.Each
-library has its strengths, from simplicity and ease of use to
-extensive customization and advanced features, catering to various
-needs in data representationj UI / UX enhancements, and more in web
-development.Understanding and leveraging these libraries empower
-developers to craft visually compelling and data - driven web
-applications
-
-You
-
-Canvas Examples:
-
-1. Draw Rectangle:
-
-javascript code const canvas = document.getElementById(&apos;myCanvasl
-const ctx = canvas.getContext(&apos;2d&apos;
-ctx.fillStyle &apos;blue&apos;; ctx.fillRect
-(10, 10, 100,
-50
-
-2. Draw Circle:
-
-javascript code const canvas = document.getE1ementById(imyCanvasi
-) ; const ctx = canvas.getContext(i2di) ; ctx.beginPath() ;
-ctx.arc(100, 100, 50, OJ Math.PI &ast; 2) ; ctx.fillStyle =
-iredi; ctx.fill O ;
-
-Plotly Examples:
-
-3. Create Line Chart:
-
-javascript code const data = &lbrack; { x: &lbrack; 1,
-2, 10, 15, 13, 18 1, type: &apos;scatter) I
-; Plotly.newP10t(&Hat;i&Hat; myDivt, data) ;
-
-4. Create Bar Chart:
-
-javascript code const data -({ x: I &apos;A, &apos;B, &apos;Cl l, y,
- 10, 20, 15 &vert;, type: &apos;bar&apos;) ; Plotly
-.newPlot(&apos;myDiv&apos;, data) ;
-
-Chart.js Examples:
-
-5. Bar Chart:
-
-javascript code const ctx - document.getElementById(&apos;myChart&apos;
-getContext(&apos;2d&apos;) ; constmyChart - new Chart(ctx, { type:
-&apos;bar&apos;, data: { labels(&apos;Red&apos;, &apos;Blue&apos;, &apos;Yellow&apos;, &apos;Green&apos;,
-&apos;Purple&apos;, &apos;Orange&apos;
-datasets.
-
-label: of Votes&apos;, data 12, 19, 3, 5, 2, 3 1, backgroundC010r:
-
-
-&apos;rgba(255, 99, 132.0.2
-)
-
-&apos;rgba(54, 162, 235, 0.2
-)
-
-// more colors
-
-borderWidth • 1
-
-6. Line Chart javascript code const ctx - document
-    getElementById(ImyChart&ast; getContext(&ast;2d&apos;) ; constmyChart -
-    new Chart(ctx,(type: &apos;line&apos;, data
-    labels:(&apos;January&apos;, &apos;February,
-    &apos;March&apos;, April&apos;, &apos;May&apos;, &apos;June&apos;, &apos;July&apos; I, datasets
-    label: &apos;My First Dataset&apos;, data
-    65, 59, 80, 81, 56, 55, 40 &vert;
-    borderColor: &apos;rgb(75, 192, 192)
-    g, borderWidth: 1
-
-Google Charts Examples:
-
-7. Pie Chart:
-
-javascript code google charts.load(&quot;current&apos;, { packages:
-&dollar;corechart&apos; I)) ;
-
-google.charts.setOnLoadCa11back(drawChart) ;
-
-function drawChart { constdata = google, visualization.
-arrayToDataTab1e(l
-
-&lbrack; &apos;Task&apos;, &apos;Hours per
-Day&Hat;l&Hat;
-
-&lbrack; &apos;Work&apos;, 1 1 &rbrack;,
-
-&lbrack; &apos;Eat&apos;,
-2
-
-(&apos;Commute&apos;,
-2
-
-(&apos;Watch TV&apos;, 2 &rbrack;,
-
-&lbrack; &apos;Sleep&apos;, 7 &vert;
-
-constoptions title: &apos;My Daily Activities&apos;, pieHole
-: O.4,
-
-const chart = new google.visualization.PieChart(document.
-getElementById(idonutcharti)) ; chart.draw(data, options) ;
-
-8&period; Area Chart:
-
-javascript code google.charts.load(&apos;current&apos;, { packages: &lbrack;
-&apos;corechart&apos; I) ; google.charts.setOnLoadCallback(drawChart)
-;
-
-function drawChart() { constdata = google.visualization.
-arrayToDataTab1e(i
-
-I &Hat;i&Hat;Year&apos;, &apos;Sales&apos;, &apos;Expenses&apos; &rbrack;,
-
-&vert; &apos;2013&apos;, 1000, 400 &rbrack;,
-
-&lbrack; 1 170, 460 &rbrack;, &vert; &apos;2015&apos;, 660, 1120 &rbrack;,
-
-&vert; &apos;2016&apos;, 1030, 540 &rbrack;
-
-constoptions { title: &apos;Company Performance&apos;, curveType:
-function&apos;, legend: {position:
-&apos;bottoml
-
-const chart = new google.visualization.AreaChart(document.
-getElementById(&apos;curve_chartl)) ; chart.draw(data, options) ;
-
-D3.js Examples:
-
-9. Create SVG Circle:
-
-javascript code
-```
-const svg = d3.select(&apos;body&apos;)
-.append(&apos;svg&apos;)
-.attr(&apos;width&apos;, 100)
-.attr(&apos;height&apos;, 100) ;
-svg.append(&apos;circle&apos;)
-.attr(50
-.attr(Icy&apos;, 50)
-.attr(tri, 40)
-.attr(lfilll, &apos;blue&apos;) ;
-```
-
-10.Create SVG Rectangle:
-
-javascript code
-```
-const svg = d3.select(&apos;body&apos;)
-.append(&apos;svg&apos;)
-.attr(&apos;width&apos;, 100)
-.attr(&apos;height&apos;, 100) ;
-svg.append(irect&Hat;i&Hat;
-.attr(10.attr(10 
-.attr(•width&apos;, 80)
-.attr(&apos;height&apos;, 50)
-.attr(&apos;filli, &apos;greeni) ; Canvas Examples:
-```
-
-1. Draw a Rectangle:
-
-javascript code
-```
-const canvas document.getElementById(&apos;myCanvasl)
-; const ctx = canvas.getContext i2d&apos;) ; ctx.fillStyle =
-&apos;blue&apos;; ctx.fillRect(10, 10, 100,
-50
-```
-2. Draw a Circle:
-
-javascript code
-```
-const canvas - document.getElementById(
-&apos;myCanvas&apos;) ; const ctx - canvas, getContext(&apos;2d&apos;) ; ctx,
-beginPath
-ctx arc(100, 100, 50, O, Math
-ctx, fillStyle - &apos;red&apos;; ctx.fill ;
-```
-Plotly Examples:
-
-3. Create a Line Chart:
-
-javascript code
-```
-const data -
-10, 15, 13, 18, type: &apos;scatter&apos;) I
-; Plotly.newP10t(&apos;myDivt, data) ;
-```
-4, Create a Bar Chart:
-
-javascript code
-```
-const data = &lbrack; { x: &lbrack; 1B&apos;, &apos;Cl l, y
-•10, 20, 15 &vert;, type: bar
-Plotly.newPlot(ImyDiv&apos;, data) ;
-```
-
-Chart.js Examples:
-
-5&period; Create a Bar Chart:
-
-javascript code
-```
-const ctx = document.getElementById imyCharti).
-getContext(i2di) ; const myChart = new Chart(ctx,
-type: &apos;bar&apos;, data.
-labels: I &apos;Red&apos;, iB1ue% &apos;Yellow&apos;, &apos;Green% iPurp1ei, &apos;Orange&apos;
-&rbrack; j datasets.
-label: of Votes&apos;, data 12, 19, 3, 5, 2, 3 1, backgroundColor.
-trgba(99, 132, o.2)
-trgba(54, 162, 235, o.2) &Hat;i&Hat;,
-// more colors
-borderWidth: 1
-```
-
-6. Create a Line Chart:
-
-javascript code
-```
-const ctx - document.getElementById(&apos;myChart&apos;).
-getContext(&apos;2d&apos;) ; constmyChart - new Chart(ctx,(type:
-&apos;line&apos;, data:
-
-labels: &lbrack; &apos;January, &apos;February, &apos;March&apos;, &apos;Aprilt, &apos;May&apos;,
-&apos;June, &apos;Julyt
-datasets: &lbrack; { label: &apos;My First
-Dataset&apos;, data: &lbrack; 65, 59, 80, 81, 56, 55, 40
-borderColor.(75, 192, 192) g,
-borderWidth • 1
-```
-
-Google Charts Examples:
-
-7. Create a Pie Chart:
-
-javascript code
-```
-google.charts.load(dcurrenti, &lbrack; packages: &lbrack;
-&apos;corecharti I) ; google.charts.setOnLoadCa11back(drawChart) ;
-
-function drawChart
-constdata --- google.visualization.
-arrayToDataTab1e(l
-(&apos;Task&apos;, &apos;Hours per
-Day&apos;
-(&apos;Work&apos;, 1 1 1,
-(&apos;Eat&apos;,2
-(&apos;Commute&apos;, 2 &rbrack;,
-(&apos;Watch TV&apos;, 2,
-(&apos;Sleep&apos;, 7 &vert;
-constoptions =
-title: &apos;My Daily Activities &Hat;i&Hat;,
-pieHole: O 4, l;
-const chart = new google.visualization.PieChart(document.
-getElementById(&apos;donutchartl)) ; chart.draw(data, options) ;
-8&period; Create an Area Chart:
-```
-
-javascript code
-```
-google.charts.load(&quot;current&apos;, { packages: &lbrack;
-Icorechart&apos; I) ; google.charts.setOnLoadCallback(drawChart) ;
-
-function drawChart()
-constdata = google.visualization.
-arrayToDataTable(l
-&Hat;i&Hat;Year&apos;, &apos;Sales&apos;,
-Expenses&apos;
-
-&vert; &apos;2013% 1000, 400 &rbrack;,
-&vert; &apos;2014% 1170, 460 &rbrack;,
-&lbrack; &apos;2015, 660, 1120 &rbrack;,
-&vert; &apos;2016% 1030, 540 &rbrack;
-
-constoptions f title: &apos;Company Performance&apos;, curveType:
-function&apos;,
-
-legend: {position: &apos;bottomi
-l;
-
-const chart new google.visualization.AreaChart(document.
-getElementById(&apos;curve_chartl)) ; chart.draw(data, options) ;
-```
-
-D3.js Examples:
-
-9. Create an SVG Circle:
-
-javascript code
-```
-const svg d3.select(&apos;body&apos;)
- append(&apos;svg&apos;)
- attr(&apos;width&apos;, 100)
-attr(&ast;height&apos;, 100) ;
-
-svg.append(&apos;circle&apos;)
-
-.attr(Icx&apos;, 50)
-attr(Icy&apos;, 50)
-attr(40
-
-.attr(Ifilll, bluel) ;
-```
-
-10.Create an SVG Rectangle:
-
-javascript code
-```
-const svg d3.select(&apos;body&apos;)
-.append(&apos;svg&apos;)
-.attr(&apos;width&apos;, 100)
-.attr(&apos;height&apos;, 100) ;
-svg.append(&apos;rect&apos;)
-.attr(ixi, 10)
-.attr(tyl, 10
-.attr(&apos;width&apos;, 80
-.attr(&apos;height&apos;, 50)
-.attr(&apos;fill&apos;, &apos;greenl) ;
-```
-
-These examples demonstrate how to create basic graphics, charts, and
-visualizations using different JavaScript libraries such as Canvas,
-Plotly, Chart.js, Google Charts, and D3.js.They serve as a
-starting point for building more complex and customized graphical
-representations in web applications,
-
-Basic Examples:
-
-```
-1&period; Convert Celsius to Fahrenheit:
-```
-
-javascript code
-```
-function celsiusToFahrenheit(celsius) { return(celsius  32;
-
-let templnFahrenheit - celsiusToFahrenheit(25) ; // Output: 77
-```
-
-2, Calculate Area of a Circle:
-
-javascript code
-```
-function calculateCirc1eArea(radius) { return Math
-.PI&ast; radius &ast; radius;
-
-let area = calculateCircleArea(5) ; // Output.•.54
-```
-
-String Manipulation:
-
-3. Reverse a String:
-
-javascript code
-```
-function reverseString(str) f returnstr split().
-reverse(.join
-
-let reversed = reverseString(&apos;helloi) ; // Output: iollehi
-
-4. Check for Palindrome:
-
-javascript code
-```
-function isPalindrome(str) { return str str.split
-(reverse join(
-)
-
-let checkPa1indrome - isPalindrome(&apos;madam&apos;) ; // Output: true
-```
-
-Array Manipulation:
-
-5. Find Maximum Number in Array:
-
-javascript code
-```
-let numbers = I 5, 8, 3, 12, 6
-let maxNumber = Math.max(...
-numbers) ; // Output: 12
-```
-
-6. Sort Array of Objects by Property:
-
-javascript code
-```
-let products I
-name: &apos;Laptop&quot;, price
-name: iPhonet, price: 600
-name: &Hat;i&Hat;Tablet,
-price
-
-products.sort((aj b) = &gt;a.price- b.price) ;
-```
-
-Functions:
-
-7. Higher - Order Function - Map:
-
-javascript code
-```
-let numbers = I
-let doubled = numbers.map(num = num
- &ast; 2) ; // Output: &vert; 2, 4, 6
-```
-
-8. Immediately Invoked Function Expression(IIFE):
-
-javascript code
-```
-(function() f console.log(&apos;IIFE executed.;
-```
-
-Object Manipulation:
-
-9. Object Destructuring:
-
-javascript code
-```
-let person = name: &apos;Alice&apos;, age: 30
-let { name, age} = person;
-```
-
-10.Merge Objects:
-
-javascript code
-```
-a: 1,
-let obj2 = {C 3 d
-
-let mergedObj = { &period;..objlj.obj2 1; Loops and Iterations:
-```
-
-11.For &period;..Of Loop for Arrays:
-
-javascript code
-```
-let colors = &apos;red&apos;, •green&apos;, &apos;blue&apos; &rbrack; ; for(
-let color of colors) f console.log(color) ;
-```
-
-12.While Loop to Generate Random Numbers:
-
-javascript code
-```
-let randomNums - &lbrack;l ; while(randomNums - length &lt; 5
-) { randomNums.push(Math.floor(Math.random &ast; 10) + 1
-```
-
-Error Handling:
-
-13.Try Catch for Error Handling:
-
-javascript code
-```
-try &lbrack;
-// Code that may throw an error
-
-JSON.parse(
-&apos;invalidJSON&apos;
-} catch(error)
-
-console.error(&apos;Error occurred: error.message
-```
-
-14.Custom Error Handling:
-
-javascript code
-```
-function throwError throw new Error(&apos;Custom error
-message&apos;
-
-try throwError ;
-catch(error) { console.error(
-error.message) ;
-```
-
-Asynchronous JavaScript:
-
-15.Promise Example:
-
-javascript code
-```
-function fetchData() { return new Promise((resolve,reject) - &gt; {
-
-// Simulate fetching data setTimeout(()
-resolve(&apos;Data fetched successfully&apos;
-) ;
-fetchData then(data = console.log(data)) ;
-```
-
-16.Async / Await Example:
-
-javascript code
-```
-async function fetchData() { let data - await fetch(
-&apos;https api.example com / data&ast;) ; let jsonData - await data.
-json return jsonData;
-
-fetchData then(data &gt; console.log(data)) ; DOM Manipulation:
-```
-
-Create Element and Append to DOM:
-
-javascript code
-```
-let newElement - document createE1ement(&apos;div&ast;) ;
-newE1ement.textContent - &apos;New Element% document body.appendChild(
-newE1ement) ;
-```
-
-18, Add Event Listener to Button Click:
-
-javascript code
-```
-let button document.getElementById(ImyButton&apos;
-button.addEventListener(&apos;click&apos;,
-() &gt; { console.log(&apos;Button clicked !) ;
-```
-
-Regular Expressions:
-
-19.Regular Expression Test:
-
-javascript code
-```
-let pattern
-let isMatch = pattern.test(&apos;Hello
-123i) ; // Output.true
-```
-
-20.Replacing String with Regex:
-
-javascript code
-```
-let str - &apos;Hello 123&apos;; let replaced - str.replace
-(/ Nd +/, &apos;456&apos;) ; // Output &apos;Hello 456&apos;
-```
-
-These examples cover a range of JavaScript functionalities, including
-basic operations, string / array manipulations, functions, objects,
-loops, error handling, asynchronous operations, DOM manipulations, and
-regular expressions.
-
-Advanced Functions:
-
-1&period; Closure Example:
-
-javascript code
-```
-function outerFunction(outerValue) { return
-function(innerValue) { returnouterValue -v innerVa1ue;
-let addFive = outerFunction(5
-let result = addFive(3) ; // Output
-: 8
-```
-
-2. Currying Example:
-
-javascript code function multiply(a) { return function(b) {
-return a &ast; b; l;
-
-let multiplyByTwo = multiply(2) ; let product = multiplyByTwo(5)
-; // Output: 10
-
-Advanced Array Manipulation:
-
-3. Using Reduce to Sum Array
-javascript code let numbers = I
-et sum = numbers.reduce((acc,
-    curr) = acc + curr // Output: 15
-
-4. Using Filter and Map Together:
-
-javascript code
-```
-let numbers - 1, 2, 3, 4,5
-
-let filteredAndDoubled - numbers filter(num --- &gt; num % 2 O).map
-(num &dash;- &gt; num
-Output: &vert; 4, 8 &rbrack;
-```
-
-Advanced Object Manipulation:
-
-5. Object Destructuring with Default Values:
-
-javascript code
-```
-let person = name: iAlicei
-let { name, age = 30 I = person;
-```
-
-6. Computed Property Names:
-
-javascript code
-```
-let key - &apos;dynamicKey&apos;; let obj ---(I key l:
-&apos;value&apos; //(dynamicKey: &apos;value&apos;)
-```
-
-Advanced Loops and Iterations:
-
-7. For &period;..In Loop for Objects:
-
-javascript code
-```
-let obj ---
-for(let keyin obj)(console.log(
-key, obj &lbrack; key l) ;
-```
-
-8, Using For Of with Iterables:
-
-javascript code
-```
-let iterable &lbrack;
-for(let value of iterable) f console
-.log(value) ;
-```
-
-Promises and Async / Await:
-
-9&period; Promise Chaining
-
-javascript code
-```
-function asyncFunction
-() { return new Promise((resolve, reject) - {
-setTimeout resolve(&apos;First part
-done&apos;
-1000) ;
-```
-
-asyncFunction
-
-.then(result = &gt; &lbrack; console.log(result) ; return &apos;Second
-part donei;
-
-.then(result = &gt; console.log(result)) ;
-
-10.Async / Await with Error Handling
-javascript code function fetchData() { return new Promise((resolve,
-reject) &gt;
-setTimeout(() &gt; { reject(&apos;Failed to
-fetch data&apos;) ;
-
-, 2000) ;
-
-<h2>) ;</h2>
-
-async function getData() { try f let data - await fetchData() ;
-console.log(data) ;
-
-I catch(error) { console.error(error) ;
-
-getData
-
-Advanced DOM Manipulation:
-
-11.Creating and Appending Multiple Elements:
-
-javascript code let fragment = document.createDocumentFragment() ;
-for(let let newElement = document.createE1ement
-(&apos;divi) ; newE1ement.textContent = Element &dollar;1i)
-fragment.appendChild(newE1ement) ;
-
-document.body.appendChild(fragment) ;
-
-12.Event Delegation:
-
-javascript code document addEventListener(&apos;click&apos;, function(
-event) { if(event.target.matches(&apos;button&apos;)) f console log(
-&apos;Button clicked) ;
-
-<h2>D;</h2>
-
-ES6 + Features:
-
-13.Template Literals:
-
-javascript code let name = &apos;Alice&apos;; let message = • Hello, &dollar;{name)
-
-14.Spread Operator:
-
-javascript code letarr let newArr - arr, 4, 5) ; // &lbrack; 1, 2, 3, 4, 5
-Error Handling and Regular Expressions:
-
-15.Throwing Custom Errors:
-
-javascript code function validateNumber(num) f if(typeofnum
-&apos;number&apos;) { throw new Error(&apos;Invalid number&apos;) ;
-
-try &lbrack; validateNumber(
-&apos;abc&Hat;i&Hat;
-
-} catch(error) { console.error(error.message) ;
-
-16.Regular Expression to Validate Email:
-
-javascript code let emailPattern
-let isVa1idEmail - emailPattern.test
-(&apos;test@example, com&apos;) ; // Output: true
-
-These examples delve deeper into JavaScript&apos;s functionalities,
-including advanced functions, array and object manipulation, iteration
-methods, async operations, DOM manipulation, and newer ES6 + features,
-
-Advanced Functions and Functionality:
-
-1&period; Higher - Order Function - Filter:
-
-javascript code let numbers - I
-let evenNumbers - numbers.filter(num
---- &gt; num % 2 O) ; // Output 2, 4 &rbrack;
-
-2, Immediately Invoked Arrow Function Expression(IIAFE
-javascript code
-
-console.log(&apos;IIAFE executed,) ;
-
-Advanced Array Manipulation:
-
-3&period; Using FlatMap:
-
-javascript code let arr 1, 2
-let flatArray - arr, flatMap(innerArr
-&gt; innerArr map(item &gt; item &ast; 2)) ; // Output 6, 8, 10, 12 &rbrack;
-
-4, Using Reduce to Flatten Arrays:
-
-javascript code let nestedArrays = l, 2 1, &lbrack; 3/ 4 1, 1 5, 6 11 ;
-let flattenedArray = nestedArrays.reduce((acc; curr) = &gt; acc.
-concat(curr), // Output:1 1, 2, 3, 4, 5, 6 &rbrack;
-
-Advanced Object Manipulation:
-
-5&period; Object Sealing and Freezing:
-
-javascript code let obj = &lbrack; name: Alice&apos;
-Object.seal(obj) ; obj age = 30; //
-This change is not allowed in a sealed object
-
-let frozenObj -(name: &apos;Bob
-Object.freeze(frozenObj) ;
-frozenObj.age 25; // This change won&apos;t affect a frozen object
-
-6, Optional Chaining
-javascript code let user
-name: &apos;Alice&apos;, address:
-
-street: &apos;123 Main st&apos;, city: &apos;New York&apos;
-
-let city - user?.address?.city; // Output: &quot;New York&apos;
-
-Advanced Loops and Iterations:
-
-7&period; For &period;..Await Loop for Asynchronous Operations
-javascript code async function
-asyncOperation(value) &lbrack; return new Promise(resolve =
-setTimeout(() = &gt; { console.log(
-value) ; resolve() ;
-
-async function executeAsyncOperations
-let values = I
-for await(letvalue of values)
-await asyncOperation(value) ;
-
-executeAsyncOperations
-
-8. Using Array.from with Mapping:
-
-javascript code let newArray --- Array.from(length: 5), index) -
-&gt; index &ast; 2) ; // Output: I o, 2, 4, 6, 8 &vert;
-
-Advanced Error Handling:
-
-9. Using Finally Block:
-
-javascript code function tryCatchFinally() &lbrack; try f console.log(
-&apos;Try block&apos;) ; throw new Error(&apos;Error
-occurred&apos;
-
-I catch(error) { console.error(error message) ;
-
-I finally
-console.log(&apos;Finally block&apos;) ;
-
-tryCatchFinally O ;
-
-10&period; Custom Error Class:
-
-javascript code class CustomError extends Error { constructor(
-message)(super(message) ; this name this.constructor.name;
-
-throw new CustomError(&apos;Custom error message&apos;) ;
-
-These additional code snippets expand on various JavaScript concepts
-such as higher - order functions, array methods, object manipulation,
-advanced loops, error handling, and new features like optional
-chaining and async /
-await
-
-Advanced Object Manipulation
-
-1.Object.defineProperty for Property Definition javascript code
-let obj =
-
-Object.defineProperty(obj, &Hat;i&Hat;fu11Name &Hat;i&Hat; /
-value: &apos;Alice Smith&ast;, writable:
-false, configurable: true
-
-<h2>D;</h2>
-
-2. Object.setPrototypeOf for Setting Prototype:
-
-javascript code let animal - f
-makeSound f console.log(&apos;Animal
-sound&apos;
-let dog - f};
-
-Object.setProtctypeOf(dog, animal) ; dog makeSound() ; // Output
-&apos;Animal sound&apos;
-
-Advanced Array Manipulation:
-
-3. Using Set to Get Unique Values:
-
-javascript code let numbers
-
-let uniqueNumbers = new Set(numbers ; // Output: &vert; 1, 2 j 3, 4, 5
-&vert;
-
-4. Array..find to Get First Matching Element:
-
-javascript code let users
-fid: 1, name: &apos;Alice&apos;
-}f id: 2, name: &apos;Bob&apos;), fid: 3, name
-: &apos;Charlie&apos; }
-
-let user - users find(user &gt; user,
-Id// Output • 2, name
-&apos;Bob&apos;
-
-Advanced Functionality:
-
-5. Generator Function:
-
-javascript code function &ast; generatorFunction
-yield 1; yield 2; yield 3;
-
-let generator - generatorFunction
-console.log(generator.next value)
-; console.log(generator.next value) ; 6, Async Generator
-Function:
-
-javascript code async function &ast; asyncGenerator() {
-
-// Output: 1
-
-// Output: 2
-
-yield &apos;First&quot;; await new Promise(resolve = &gt; setTimeout(
-resolve, 1000)) ; yield &apos;Second&apos;;
-
-async for await(let item of asyncGenerator
-onsole.log(item) ; // Output:
-&apos;First&apos; after Oms, &apos;Secondi after 1000ms
-
-Advanced Error Handling:
-
-7. Handling Rejected Promises with catch:
-
-javascript code
-
-Promise.reject(Error message&apos;
-
-.catch(error = console.error(&apos;Caught error: i, error)) ;
-
-8. Handling Multiple Promises with Promise all:
-
-javascript code let promise 1 - Promise.resolve(&apos;First&apos;) ; let
-promise2 - Promise.resolve(&apos;Second&apos;) ; Promise.all(l
-promisel, promise2 1)
-
-.then(values - &gt; console.log(values)) ; // Output: I
-&apos;First&apos;, &apos;Second&apos; I
-
-ES6 + Features:
-
-9. Destructuring Nested Objects:
-
-javascript code
-
-let user = {
-
-details:
-
-name: &apos;Alice&apos;, age: 30
-
-let { details: &lbrack;name, age} I = user;
-
-10.Biglnt Data Type:
-
-javascript code const bigNumber Biglnt(Number.MAVSAFE_INTEGER)
-Biglnt(l) ;Biglnt:
->
-9007199254740992n + In
-
-These code snippets expand on JavaScript functionalities like object
-manipulation, array methods, generator functions, async operations,
-error handling with promises, and ES6 + features like destructuring and
-Biglnt data type.
-
-Advanced Functions and Operations:
-
-1&period; Memoization using Closure:
-
-javascript code function memoize(fn) f const cache
-return function args) { constkey -
-JSON.stringify(args) ; if(cache I key l) { returncache &lbrack; key I ;
-
-const result = fn.apply(this, args) ; cache &lbrack; key I = result;
-return result;
-
-<h2>l;</h2>
-
-function factorial
-f(n 0 11 n 1) { return 1;
-
-return n &ast;
-factorial
-
-const memoizedFactorial = memoize(factorial) ;
-
-2. Function Composition:
-
-javascript code const add = x = &gt; x + 5; const multiply = x = &gt; x &ast;
-2; const compose = fns) = x = fns.reduceRight((acc, fn) = &gt; fn
-(acc), x) ; constaddAndMultip1y = compose(multiply, add) ;
-
-Advanced Array Manipulation:
-
-3. Using Flat to Flatten Nested Arrays:
-
-javascript code
-
-let nestedArr = &vert; 1, 1 2, &lbrack; 3, 4 1, 5
-}let flattenedArr = nestedArr.flat(
-Infinity) ;
-
-4. Using Some and Every Methods:
-
-javascript code let numbers(
-let allEven numbers.every(num - &gt;
-num let hasOdd numbers.some(num- &gt; num
-
-Advanced Object Manipulation:
-
-5. Object.fromEntries Method:
-
-javascript code let entries - - &apos;name&apos;, &apos;Alice&apos; &apos;age&apos;,
-30
-
-// Output:1 3, 4, 5, 6 1
-
-O); // Output: false
-
-O); // Output true
-
-let obj --- Object.fromEntries(entries) ; // Output: { name:
-&apos;Alicei, age: 30}
-
-6, Object.getOwnPropertyDescriptors:
-
-javascript code const obj {name: &apos;Alice&apos;
-const descriptors Object.
-getOwnPropertyDescriptors(obj) ;
-
-Advanced Promises and Async /
-Await
-
-7. Promise.race for Fastest Response:
-
-javascript code function fetchData(url, timeout) { return Promise.
-race(l fetch(url),
-
-new Promise reject) = setTimeout = &gt; reject(new Error(&Hat;i&Hat;
-Timeout&apos;)) j timeout))
-
-8. Async / Await with Promise.allSettled:
-
-javascript code async function fetchData() { constpromises
-fetch(&apos;https api example com /
-endpoint V), fetch(&apos;https api example com / endpoint?)
-
-const results await Promise.allSettled(promises) ; console, log
-(results) ;
-
-ES6 Features:
-
-9. Optional Chaining with Ntillish Coalescing:
-
-javascript code const data - { user.
-
-name: &apos;Alice&apos;, age: null
-
-const userName - data? - user? name ?? &apos;Unknown&apos;; // Output.•
-&apos;Alice&apos;
-
-const userAge = data?.user?.age ?? 25; // Output: 25
-
-10.Array Buffer and Typed Arrays:
-
-javascript code const buffer new ArrayBuffer(16
-constintArray --- new Int32Array(buffer
-) ; intArray 42;
-
-These additional JavaScript code snippets demonstrate advanced function
-techniques, arr@Y methods, object manipulation, promises and async /
-await functionality, ES6 + features like optional chaining and array
-buffer with typed arrays,
-
-Advanced Functions and Operations:
-
-1&period; Function Bind Method:
-
-javascript code
-
-const x: 42, getX: function
-return this.x;
-
-constunboundGetX - obj - getX; const boundGetX - unboundGetX.bind(
-obj) ; console.log(boundGetX ; // Output: 42
-
-2, Immediately Resolved Promises:
-
-javascript code
-
-const immediatePromise = Promise.resolve(&quot;Immediate resolution&Hat;i&Hat;
-immediatePromise.then(result = &gt;
-console.log(result)) ; // Output: &apos;Immediate resolution&apos;
-
-Advanced Array Manipulation:
-
-3. Using Array.findlndex:
-
-javascript code constarray = &lbrack; 5, 12, 8, 130,44
-constindex = array.findlndex(element =
-element &gt; 10) ; // Output: 1(index of first element &gt; 10)
-
-4. Using Array.fill:
-
-javascript code constarray 2,
-array fill(O, 2, 4) ; // Fills array
-from index 2 to index 4 with value O
-
-Advanced Object Manipulation:
-
-5. Using Object.entries:
-
-javascript code const obj = {foo: &Hat;i&Hat;bar% baz: 42
-constentries = Object.entries(obj)
-; // Output: &apos;fool, &apos;bari I j I &Hat;i&Hat;baz&Hat;i&Hat;, 42 Il
-
-6. Object.preventExtensions:
-
-javascript code constobj {prop: &apos;value&apos;
-)
-
-Object.preventExtensions(obj) ; obj newProp 10; // Cannot add new
-properties to obj
-
-Advanced Promises and Async / Await:
-
-7. Promise.allSettled for All Promise States:
-
-javascript code const promises = I
-
-Promise.resolve(&quot;Resolved&quot;), Promise.reject(&quot;Rejected&apos;
-new Promise(resolve = &gt; setTimeout
-(C) = &gt; resolve &apos;Resolved after timeouti), 1000))
-
-Promise.allSettled(promises)
-
-.then(results = &gt; console.log(results)) ;
-
-8. Async Function Returning Rejected promise:
-
-javascript code async function throwError() { throw new Error(
-&apos;Error thrown from async
-function&apos;
-
-throwError O.catch(error - &gt; console.error(error message)) ;
-// Output: &apos;Error thrown from async function&apos;
-
-ES6 + Features:
-
-9. Numeric Separators for Readability:
-
-javascript code const billion =
-onst binary = ob1010_0001;
-
-10.Promise.finally Method:
-
-Promise.resolve(&apos;Success&apos;)
-finally) &gt; console log(&apos;Finally
-block executed&ast;))
- then(result --- &gt; console, log(
-result)) ; // Output: &apos;Success&apos;
-
-These JavaScript code snippets showcase more advanced function
-operations, array manipulations, object methods, promises and async /
-await functionalities, and ES6 + features like numeric separators and
-Promise, finally method,
-
-Advanced Functions and Operations:
-
-1&period; Function Caching using Memoization:
-
-javascript code const memoize ---(fn) - &gt; { const cache
-return args)
-const stringifiedArgs - JSON.stringify
-(args) ; return cache &lbrack; stringifiedArgs &rbrack; Il(cache &lbrack;
-stringifiedArgs &rbrack; - fn args ;
-
-const sum console log(&apos;Calculating sum &period;..&apos;
-)
-
-returna + b
-
-const memoizedSum - memoize(SUm) ;
-
-console.log(memoizedSum(2, 3)) ; console.log(memoizedSum(2,
-3)) ;
-
-2&period; Function Throttling:
-
-javascript code const throttle -(func, limit) - &gt;(let inThrottle;
-return function const args arguments; const context this; if(!
-inThrott1e) f func apply(context, args) ; inThrottle true;
-setTimeout(() &gt; inThrottle
-
-function throttledFunc {
-
-// Output Calculating sum 5
-
-// Output 5(Retrieved from cache)
-
--   false, limit) ;
-
-console.log(&apos;Throttled function executed&apos;) ;
-
-const throttled = throttle(throttledFunc, 3000) ; Advanced Array
-Manipulation:
-
-3. Using Array.from with Mapping and Filtering:
-
-numbers =
-constnewArray = Array.from(numbers,
-x = x &ast; 2
-filter // Output: &lbrack; 6, 8, 10, 12 &vert;
-
-4. Using Array reduceRight:
-
-javascript code constarray - 1 1, 2, 3,4
-const sum - array.reduceRight((acc,
-curr) - &gt; acc + curr // Output: 10
-
-Advanced Object Manipulation:
-
-5. Object.fromEntries with Map:
-
-javascript code const entries - new
-Map
-
--   &apos;name&apos;, &apos;Alice&ast; I,
-
-&apos;age&apos;, 30
-
-constobj - Object.fromEntries(entries) ; // Output: { name
-&apos;Alice&apos;, age: 30)
-
-6, Object.seal and Object.isSealed:
-
-javascript code const { name:
-&apos;Alice&apos;
-
-Object.seal(obj) ; console log(Object.isSealed(obj)) ; //
-Output: true
-
-Advanced Promises and Async /
-Await
-7. Promise.any for the First Fulfilled Promise:
-
-promises = I
-
-Promise.reject(&quot;Rejected li)
-
-Promise.resolve(&quot;Resolved
-2&apos;
-
-Promise.resolve(&apos;Resolved
-3&apos;
-
-Promise.any(promises)
-
-.then(result = &gt; console.log(result)) ; // Output: &apos;Resolved
-2t
-
-8. Async Function Using for await of:
-
-javascript code async function processltems(items) { for await(
-letitem of items) { console.log(&apos;Processing item: &dollar;{item}) ;
-
-ES6 Features:
-
-9. Dynamic Import for Modules:
-
-javascript code async function loadModule() { const module - await
-import &apos;./ module.js&apos;) ; module doSomething() ;
-
-10.Nullish Coalescing Operator:
-
-x = null; const y = x ?? &apos;default value&apos;; // Output: &apos;default
-value&Hat;i&Hat;
-
-These JavaScript code snippets introduce advanced function operations,
-array manipulations, object methods, promises and async / await
-functionalities, and ES6 features like dynamic import and nullish
-coalescing operator.
-
-Advanced Functions and Operations:
-
-1..Partial Application of Functions:
-
-javascript code const multiply =(a, b) = &gt; a &ast; b; const
-partialMultiplyByTwo = multiply.bind(null, 2
-console.log(partialMultiplyByTwo(5
-)) ; // Output: 10
-
-2. Debouncing Function:
-
-javascript code const debounce -(func, delay) - &gt;
-let timeout; return function const
-context --- this; const args - arguments; clearTimeout(timeout) ;
-timeout - setTimeout(() - &gt; func.apply(context, args), delay)
-; function handlelnput
-console.log(&apos;Input event handled&apos;
-) ;
-
-const debouncedInputHand1er = debounce(handlelnput, 300) ;
-
-Advanced Array Manipulation:
-
-3. Using Array flat to Flatten Arrays:
-
-javascript code const nestedArray -(1, 1 2, 3 Il, 4, &lbrack; 5
-const flatArray nestedArray.flat(
-Infinity) ; // Output: 1 1, 2, 3, 4, 5 1
-
-4, Using Array.slice to Clone Arrays:
-
-javascript code const originalArray &lbrack; 1, 2, 3, 4 1
-const clonedArray originalArray.slice
-() ; // Clones the originalArray
-
-Advanced Object Manipulation:
-
-5, Using Object.keys with Mapping:
-
-javascript code const constmappedObj = Object.fromEntries(
-Object.keys(obj).map(key
-&gt; &lbrack; key, obj &lbrack; key &rbrack; &quot;
-2
-
-6. Object.is for Strict Equality Comparison:
-
-javascript code console.log(Object.is(5, 5)) ; // Output:
-true console.log(Object.is(5, &apos;51)) ; // Output: false
-
-Advanced Promises and Async / Await:
-
-7. Promise.allSettled with Optional Chaining
-    javascript code const promises = I
-
-Promise.resolve({ name: Alice&apos;, age: 301),
-
-Promise.reject(new Error(&apos;Something went wrong)),
-
-Promise.resolve(null)
-
-const results = await Promise.allSettled(promises) ;
-
-8. Async Generator Function:
-
-javascript code async function asyncGenerator() { yield &apos;First&apos;;
-await new Promise(resolve - &gt; setTimeout(resolve, 1000)) ; yield
-&apos;Second&apos;;
-
-(async O
-for await(let item of asyncGenerator
-()) { console.log(item) ; // Output &apos;First&apos; after Oms,
-&apos;Second&apos; after 1000ms
-
-ES6 + Features:
-
-9. Optional Chaining for Nested Properties
-    javascript code const user = {address
-   :(city: iNew York&apos;
-    const city = user.address?.city; //
-    Output: &apos;New York
-    const zipCode = user.address?.
-    zipCode ?? &apos;Not available&apos;; // Output: &quot;Not available&apos;
-
-10.Biglnt for Large Integer Values:
-
-javascript code const bigNumber Biglnt(
-Number Biglnt(1)
-Biglnt:
-
-9007199254740992n + In
-
-These JavaScript code snippets explore advanced function operations,
-array manipulations, object methods, promises and async / await
-functionalities, and ES6 + features like optional chaining and Biglnt
-
-Advanced Functions and Operations:
-
-1. Currying Function:
-
-javascript code const multiply
-constmultiplyByTwo = multiply(2) ;
-console.log(multiplyByTwo(5)) ; // Output • 10
-
-2. Function Memoization Using Closures:
-
-javascript code const memoize -(func) &gt;(const
-cache>
-return args) - - f&gt; const stringifiedArgs = JSON.stringify(args
-) ; return cache &lbrack; stringifiedArgs &rbrack; Il(cache &lbrack; stringifiedArgs
-&rbrack; - func args)) ; l;
-
-const sum =(a, b) = &gt;
-console.log(&apos;Calculating sum
-returna +
-b
-
-const memoizedSum = memoize(sum) ; console log(memoizedSum(2, 3
-)) ; // Output Calculating sum &period;..5 console log(memoizedSum(2.3
-; // Output 5(Retrieved from cache)
-
-Advanced Array Manipulation:
-
-3. Using Array.reduce with Initial Value:
-
-javascript code constarray = &vert; 1, 2, 3, 4, 5
-const sum = array.reduce((acc, curr)
-= &gt; acc + curr,O) ; // Output: 15
-
-4. Array.findlndex with Custom Predicate:
-
-javascript code const numbers - &lbrack; 10, 20, 30, 40, 50 &rbrack; ; const
-index - numbers.findlndex(num - &gt; num &gt; 25) ; // Output: 2(
-Index of first element &gt; 25)
-
-Advanced Object Manipulation:
-
-5. Object.entries with Object.fromEntries:
-
-javascript code const { name: &apos;Alice&apos;, age: 30
-const entries = Object.entries(obj)
-; // Output: &lbrack;l •name&apos;, &apos;Alicei I, I iagei, 30 Il const
-reconstructedObj = Object.fromEntries(entries) ;
-
-6. Object.freeze for Immutable Objects:
-
-javascript code constobj - {prop: •value&apos;)
-Object.freeze(obj) ; obj prop -
-&apos;newValue&dollar;; // Assignment not allowed in a frozen object
-
-Advanced Promises and Async / Await:
-
-7. Promise.resolve and Promise.reject:
-
-javascript code const resolvedPromise = Promise.resolve(Resolved&apos;
-) ; constrejectedPromise = Promise.reject(&apos;Rejected&apos;) ;
-
-resolvedPromise.then(result &gt; console.log(result)) ; //
-Output: Resolved&apos; rejectedPromise.catch(error &gt; console.error
-(error)) ; // Output: &apos;Rejected&apos;
-
-8. Async Function Returning Resolved Promise:
-
-javascript code async function returnResolved() { return Resolved
-from async function&apos;;
-
-returnResolved then(result = &gt; console.log(result)) ; //
-Output: &apos;Resolved from async functioni
-
-ES6 + Features:
-
-9. Array Destructuring:
-
-javascript code const &lbrack; first, second, rest I =
-console.log(first, second, rest) ;
-// Output: 1 2 3, 4, 5 1
-
-10.Rest Parameters in Functions:
-
-javascript code const sum - args) - &gt; args.reduce((acc, curr) -
-&gt; acc + curr, O) ; console.log(sum(1, 2, 3, 4, 5)) ; //
-Output: 15
-
-These JavaScript code snippets demonstrate advanced function
-operations, array manipulations, object methods, promises and async /
-await functionalities,
-
-Advanced Functions and Operations:
-
-1. Function Composition with Multiple Functions:
-
-javascript code const add =(x, y)
-const multiply =(x, y) = &gt; x y
-const compose funcs) &gt; funcs.reduce
-((f, g) &gt; args) - f(g args))) ;
-
-constaddAndMultiply = compose(multiply, add) ; console log(
-addAndMultiply(3, 4)) ; // Output: 21(3 +
-4
-
-2. Using Function.toString() to Get Function Source Code:
-
-javascript code function greet() { console, log(&apos;Hello !) ;
-
-constfunctionSource greet.toString
-console, log(functionSource) ; //
-Output: &quot;l function greet() { console log(&apos;Hello !) ;)
-I
-
-Advanced Array Manipulation:
-
-3. Array.flatMap for Flattening and Mapping:
-
-javascript code constarr 1, 2, 3 &rbrack; ; constmappedAndFlattened - arr.
-flatMap(x - &gt; &lbrack;x 2, 3 1); console.log(mappedAndFlattened) ; //
-Output 2, 3, 4, 6, 6, 9 &vert;
-
-4, Using Array some with Custom Predicate:
-
-javascript code constnumbers &lbrack; 5, 10, 15, 20 &rbrack; ; const isEvenPresent
-numbers.some(num &gt; num
-%// Output: true
-
-Advanced Object Manipulation:
-
-5. Using Object.keys to Get Object&apos;s Own Properties:
-
-javascript code const constkeys - Object.keys(obj) ; //
-Output: &lbrack; la&apos;, &apos;c&apos; I
-
-6. Object.setPrototypeOf for Dynamic Prototype Setting:
-
-javascript code const protoObj(greet() { console.log(
-&apos;Greetings !) ;
-
-const newObj O;
-
-Object.setPrototypeOf(newObj, protoObj) ; newObj greet ; //
-Output: Greetings !
-
-Advanced Promises and Async / Await:
-
-7. Promise.race to Get Fastest Resolved Promise:
-
-javascript code const promise 1 - new Promise((resolve) - &gt;
-setTimeout(resolve, 1000, &apos;First&apos;)) ; constpromise2 - new Promise
-((resolve) - &gt; setTimeout(resolve, 500, &ast;Second&apos;)) ;
-
-Promise.race(promisel, promise2 1).then value)
-console.log(value) ; // Output:
-&apos;Secondl(Resolved earlier)
-
-8. Async Function Using try &period;..catch for Error Handling.
-
-javascript code async function fetchData() { try &lbrack;
-
-const response = await fetch(ihttps api.example com / data&apos;) ;
-const data = awaitresponse.json() ; console.log(data) ;
-catch(error) { console.error(
-&apos;Error fetching data: t, error) ;
-
-ES6 + Features:
-
-9. Template Literals for Dynamic Strings:
-
-javascript code constname = &apos;Alice&apos;; constage = 30; console.log(
-My name is &dollar; {name} and lim &dollar;{age} years old
-
-
-10.Array Spread Operator for Concatenation:
-
-javascript code constarrl - 1 1, 2, 3 1 ; constarr2 5, 6 1 ; const
-combined - arrl, arr2 1; // Output: &lbrack; 1, 2, 3, 4, &vert;
-
-These JavaScript code snippets explore advanced function operations,
-array manipulations, object methods, promises and async / await
-functionalities, and ES6 + features like template literals and array
-spread operator.
-
-Advanced Functions and Operations:
-
-1. Function Returning Functions - Higher - Order Functions:
-
-javascript code const add =(x) = &gt;(y) =
-+ y; constaddTwo = add(2) ; console
-.log(addTwo(3)) ; // Output: 5
-
-2. Function That Delays Execution:
-
-javascript code const delayExecution(time) &gt; { return new Promise
-((resolve)
-setTimeout(resolve, time) ; n;
-
-delayExecution(2000).then(0 = &gt; console.log(Delayed
-execution&apos;)) ; // Output after 2 seconds
-
-Advanced Array Manipulation:
-
-3, Array.every with Custom Predicate:
-
-javascript code constnumbers &lbrack; 10, 20, 30
-const allGreaterThanFive numbers.every
-(num &gt; num &gt; 5) ; // Output: true
-
-4. Using Array.reverse to Reverse an Array:
-
-javascript code const array = &lbrack; 1, 2, 3, &rbrack; ; const reversedArray
-array.slice O.reverse // Output:1
-3, 2, 1 &rbrack;
-
-Advanced Object Manipulation:
-
-5. Using Object.fromEntries to Convert Array to Object:
-
-javascript code const entries = &lbrack;l I l, I &apos;b, 2 1, I 3 ; constobj
-= Object.fromEntries(entries) ; // Output: { a: 1, b: 2, c:
-31
-
-6. Object.assign for Merging Objects:
-
-javascript code constobJ1
-constobj2 - { b: 3, c: 4 }
-constmergedObj - Object.assign(f},
-objl, obj2) ; // Output: { a: li b
-:
-
-Advanced Promises and Async / Await:
-
-7. Promise.resolve with Then Method:
-
-javascript code
-
-Promise.resolve(&apos;Resolved value&apos; then(value = &gt; console.log(
-value)) ; // Output: Resolved value&ast;
-
-8. Async Function with Promise..all for Parallel Execution:
-
-javascript code async function fetchData() { const I datal, data2 1
-await Promise, all(l fetch(&apos;https api example com / datal&apos; fetch
-(&apos;https api example com / data2&apos;
-
-console, log(datal, data2) ;
-
-then(res &gt; res, json
-then(res
-&gt; res, json 0)
-
-ES6 + Features:
-
-9. Computed Property Names in Objects:
-
-javascript code constkey --- &Hat;d&Hat; dynamicKey&Hat;i&Hat;;
-
-const
-
-&lbrack; key l: &apos;Value based on dynamic key&Hat;i&Hat;
-
-console.log(obj.dynamicKey) ; // Output: &quot;Value based on
-dynamic key&apos;
-
-10.Array.find for Finding Elements in an Array:
-
-javascript code const users fid: 1, name:
-&apos;Alice&apos;
-
-{id 2, name: &apos;Bob&apos;
-
-id: 3, name:
-&apos;Charlie&apos;
-
-const user - users.find(user - &gt; user.id 2) ; // Output: fid: 2,
-name: &apos;Bob&apos;)
-
-These JavaScript code snippets explore advanced function operations,
-array manipulations, object methods, promises and async / await
-functionalities, and ES6 + features like computed property names and
-array.find
-method
-
-Advanced Functions and Operations:
-
-1. Function Returning Another Function - Closure Example:
-
-javascript code
-
-function outerFunction(x) { function innerFunction(y) &lbrack; return x
--v y;
-
-returninnerFunction;
-
-const addFive outerFunction(5) ; console log(addFive(3)) ; //
-Output: 8
-
-2. Recursive Function for Factorial Calculation:
-
-javascript code function factorial(n) { if(n = = 0 11 n =
-return 1;
-
-returnn &ast; factorial(n - 1) ;
-
-console.log(factorial(5)) ; // Output: 120 Advanced Array
-Manipulation:
-
-3. Using Array.slice() for Subarray Creation:
-
-javascript code constarr = &lbrack; 1, 2, 3, 4, 5 1; const subArray arr.
-slice(2,4) ; // Output: &lbrack; 3, 4 &rbrack;
-
-4. Using Array includes for Checking Array Elements:
-
-javascript code const fruits &apos;apple&apos;, &apos;banana&apos;, •orange&apos; &rbrack; ;
-const hasBanana fruits.includes(&apos;banana&apos;) ; // Output: true
-
-Advanced Object Manipulation:
-
-5. Object.keys to Get Object Keys:
-
-javascript code const const keys - Object.keys(obj) ; //
-Output: &lbrack; &apos;c&apos; I
-
-6, Object.defineProperty() for Object Property Definition:
-
-javascript code
-const>
-Object.defineProperty(obj, &apos;prop&apos;,
-value: &apos;some value&apos;, writable: false
-
-Advanced Promises and Async /
-Await
-
-7. Promise..all for Multiple Promises Handling:
-
-javascript code const promisel Promise.resolve(&apos;Resolved 1&apos;) ;
-const promise2 Promise.resolve(&apos;Resolved 2&apos;) ;
-
-Promise.all(promisel, promise2 1).then(
-values
-
-console.log(values) ; // Output: &lbrack; &apos;Resolved &apos;Resolved 2&apos; &vert;
-
-8. Async / Await with Promise.catch() for Error Handling:
-
-javascript code async function fetchUserData() { try f const
-response - await fetch(&apos;https api example com / users&apos;) ; const
-data - await response, json ; console.log(data) ;
-catch(error) { console.error(
-&apos;Error fetching user data: error) ;
-
-ES6 Features:
-
-9. Object Destructuring for Variable Assignment:
-
-javascript code const user - {name: &apos;Alice&apos;, age: 30
-const { name, age) - user; console.log
-(name, age) ; // Output: &apos;Alice&apos; 30
-
-10.Arrow Functions for Concise Function Definitions:
-
-javascript code const sum =(a, b) = &gt; a + b; console log(sum(
-2, 3 ; // Output: 5
-
-These JavaScript code snippets delve into advanced function
-operations, array manipulations, object methods, promises and async /
-await functionalities, and ES6 features like object destructuring and
-arrow functions
-
-Advanced Functions and Operations:
-
-1. IIFE(Immediately Invoked Function Expression):
-
-javascript code
-
-(function() f const localVar = Local variablei; console.log(
-localVar) ;
-
-2. Function that Returns Multiple Values:
-
-javascript code function calculateValues(x, y) { return &lbrack;x + y, x
-y, x /
-yl
-
-const &lbrack; sum, product, division &rbrack; calculateValues(10, 5
-console log(sum, product, division) ;
-// Output: 15 50 2
-
-Advanced Array Manipulation:
-
-3, Using Array map() for Transformation:
-
-javascript code constnumbers &lbrack;
-const doubledNumhers numbers.map(num
-&gt; num &ast; 2) ; // Output: &vert; 2, 4, 6, 8, 10 &rbrack;
-
-4. Array.find() to Get First Matching Element:
-
-javascript code const users = fid: 1, name: &apos;Alice&apos;
-&lbrack; id: 2, name: &Hat;i&Hat;Bob&Hat;i&Hat;
-fid: 3, name:
-&apos;Charlie&apos;
-
-const user = users.find(user = &gt; user Id
-console.log(user) ; // Output: {id
-: 2 j name &apos;Bobi
-Advanced Object Manipulation:
-
-5. Object.freeze to Prevent Object Modification:
-
-javascript code constObj = {prop: &apos;value&ast;
-Object.freeze(obj) ; obj prop = •new
-value&apos;; // This change won&apos;t take effect due to object freezing
-
-6. Using Object.values() to Get Object Values:
-
-javascript code const const values --- Object.values(obj)
-; // Output: &lbrack; 1, 2, 3
-Advanced Promises and Async / Await:
-
-7. Promise chaining with.then and.catch C):
-
-javascript code async function fetchData() { return fetch(ihttps
-:// api.example.com / data&apos;)
-then(response = &gt; response.json
-0)
-
-.catch(error = console.error(&apos;Error fetching data: i, error
-)) ;
-
-8. Async Function with Error Handling:
-
-javascript code async function fetchData() {
-
-const response await fetch(&apos;https api example com / data&apos;) ;
-const data - await response, json ; console.log(data) ;
-catch(error) { console.error(
-&apos;Error fetching data: error) ;
-
-ES6 Features:
-
-9. Optional Chaining for Object Properties:
-
-javascript code const user - {profile: {email: &apos;user@example com&apos;
-}); const userEmail - user?.profile?.email; // Output:
-&apos;user@example.com&apos;
-
-10.Promise finally() for Cleanup Tasks:
-
-javascript code fetch(&apos;https:// api.example.com / data&apos;)
-
-.then(response &gt; response.json 0)
-
-.finally console.log(&Hat;i&Hat; Data fetching completed!)) ; // Runs
-irrespective of resolution / rejection These JavaScript code snippets
-explore advanced function operations, array manipulations, object
-methods, promises and async / await functionalities, and ES6 +
-features like optional chaining and promise
-finally
-
-Advanced DOM Manipulation:
-
-1. Creating and Appending DOM Elements:
-javascript code
-
-// Create a new paragraph element const paragraph = document.
-createElement(&apos;p&apos;
-paragraph.textContent = This is a new
-paragraphi;
-// Append the paragraph to an existing element with id &ast;container&apos;
-const container - document.getE1ementById(&apos;container&apos;) ;
-container, appendChild(paragraph) ;
-2. Adding Event Listeners:
-javascript code const button document.getElementById(&apos;myButtonl)
-; button.addEventListener(&apos;click()
-console.log(&apos;Button clicked&apos;) ;
-D;
-DOM Traversal and Manipulation:
-3, Querying Elements and Modifying Styles:
-javascript code
-// Select all elements with class &apos;box&apos; and change their background
-color
-const boxes = document.querySelectorA11(box) ; boxes.forEach(
-box = { box.style.backgroundColor = &Hat;i&Hat; lightblue&apos;;
-4. Removing Elements from the DOM:
-javascript code const elementToRemove - document.getElementById(
-&apos;elementToRemove&apos;) ; if(elementToRemove) { elementToRemove,
-remove() ;
-Advanced Event Handling:
-5. Delegating Events using Event Bubbling:
-javascript code const list --- document getElementById(tmyList&apos;) ;
-list.addEventListener(&apos;click&apos;,(event)
-if(event.target.tagName
-console log(Clicked on list item:
-&dollar;{event.target.
-textContent}
-
-6, Creating and Dispatching Custom Events:
-javascript code const customEvent &dash;- new Custom Event(
-•customEventName•, detail &apos;Some datal}) ; document.dispatchEvent(
-customEvent) ;
-// Listening for the custom event document.addEventListener(
-icustomEventNamei,(event) = &gt; { console.log(Custom event
-triggered with data: &dollar;fevent.detail}
-D;
-DOM Content Manipulation:
-7. Changing Inner HTML of Elements:
-javascript code const element = document.getElementById(
-imyElement&apos;) ; element.innerHTML = icstronpNew HTML content&lt; /
-strong» &Hat;i&Hat;;
-8. Working with Forms and Input Elements:
-
-    javascript code const form - document.getElementById(&apos;myForrn&ast;
-form addEventListener(&apos;submit&apos;,(
-event) &gt; f event.preventDefault() ; const formData --- new
-FormData(event.target) ; constvalue - formData.get(
-&apos;inputFieldName&apos; console.log(Form submitted with
-value: &dollar;{value)) ;
-
-These JavaScript snippets demonstrate advanced techniques for
-interacting with the HTML DOM, including creating elements, event
-handling, manipulation, traversal, form interactions, and custom event
-creation.
-
-Input Event Handling:
-
-1. Input Event for Live Character Count:
-
-javascript code const inputField = document.getElementById(
-•textlnput&Hat;i&Hat;) ; const charCount = document.getE1ementById(
-icharCounti) ;
-
-inputField.addEventListener(&apos;input&apos;, oof charCount.textContent
-&apos; Character count: &dollar;finputField, value, length},
-
-2. Detecting Changes in Input Fields:
-
-javascript code constinputField document.getElementById(
-•textlnputl) ;
-
-inputField.addEventListener(&apos;change&apos;,(event) = &gt;
-console.log(Input value changed to:
-&dollar; {event.target.
-value)
-
-Form Validation and Submission:
-
-3. Real - time Password Strength Checker:
-
-javascript code const passwordField document.getElementById(
-&apos;password&apos;) ; const strengthlndicator --- document.getE1ementById
-(&apos;passwordStrengthl) ;
-
-passwordField.addEventListener(&apos;input&apos;,() - &gt;
-constpassword - passwordFie1d.value;
-let strength -
-i&apos;
-
-// Perform password strength checks
-
-// Update the &apos;strength&apos; variable based on password complexity
-strengthlndicator textContent Password Strength: &dollar;{strengthl
-&quot;
-
-4. Form Submission with Validation:
-
-javascript code const form = document.getElementById(&apos;myForm&Hat;I&Hat;
-const emailField - document.
-getElementById(&apos;email&apos;) ;
-
-form.addEventListener(&apos;submit&rbrack;(event)
-event.
-preventDefau1t
-
-// Validate the email input before submission if(! validateEmai1(
-emailField, value)) { console.error(&apos;Invalid email addresS) ;
-return;
-
-// Form is valid, proceed with submission form.submit() ;
-D,
-
-function validateEmai1(email) {
-
-// Regular expression or other validation logic for email validation
-return/ + + \\.NS +1.test(email) ;
-
-Advanced Input Handling:
-
-5&period; Using Range Input for Dynamic UI Updates
-javascript code constrangelnput =
-document.getElementById(•rangeSlideri) ; constvalueDisp1ay =
-document.getElementById(
-&Hat;i&Hat;rangeVa1ue&apos;
-
-rangelnput.addEventListener(&apos;input&apos;,
-valueDisplqy, textContent- Value: &dollar;
-{rangelnput.value)
-// Update UI based on range input value
-changes
-
-6, Input Masking for Phone Number Input:
-
-javascript code const phonelnput document.getElementById(
-&apos;phoneNumber&apos;) ;
-
-phonelnput addEventListener(&apos;input&apos;, - &gt;
-let value phonelnput.value.replace
-(/ / g,) ; value value.slice(OJ 10) ; // Limit to 10 digits for
-a phone number phonelnput.value value;
-
-These JavaScript snippets demonstrate input event handling, form
-validation, real - time UI updates based on input changes, and
-advanced input manipulation like input masking and range input
-handling in HTML forms.
-
-DOM Object Creation and Manipulation:
-
-1. Creating and Appending a New Image Element:
-
-javascript code const image = document.createE1ement(iimgi
-image.src = &apos;path / to / image.
-jpg&apos;; image alt = &apos;Image Description&apos;;
-
-const container document.getElementById(&apos;imageContainer&apos;) ;
-container.appendChild(image) ;
-
-2. Adding a New Option to Select Element:
-
-javascript code const select = document.getElementById(ImySelect&apos;
-) ; constoption = document.createElement(&apos;option&quot;
-option.value - &apos;valuell; option.
-text = Option Text &Hat;l&Hat; ; select.appendChild(option) ;
-
-Advanced Object Manipulation:
-
-3. Setting Custom Attributes to HTML Elements:
-
-javascript code const element document.getElementByTd(
-&apos;myElement&apos;) ; element.setAttribute(data - custom&apos;,
-&apos;customValuel) ;
-
-4. Removing Specific Attribute from an Element:
-
-javascript code const element = document.getElementByld(
-&apos;myElementi) ; element.removeAttribute(&apos;data - custom&apos;) ;
-
-Styling HTML Objects:
-
-5. Modifying CSS Properties of an Element:
-
-javascript code const element = document.getElementById(
-&apos;myElementI) ; element.style.backgroundColor = &apos;blue&apos; element
-.style.color = &apos;white&apos;;
-
-6. Adding and Removing CSS Classes:
-
-javascript code const element - document.getElementById
-&apos;myElement&apos;) ; element.classList.add(&apos;newClass&apos;) ; element
-.classList.remove(
-•oldClass&apos;
-
-Event Handling and Interaction:
-
-7. Creating and Handling Mouse Hover Effects:
-
-javascript code const element = document.getElementByld(
-tmyElementi) ; element.addEventListener(&apos;mouseenter
-element.style backgroundC010r =
-red
-
-element.addEventListener(&apos;mouseleavel,() &gt; { element.style,
-backgroundC010r blue&apos;;
-
-8. Triggering Click Event Programmatically:
-
-javascript code const button = document.getElementById(
-trnyButton&Hat;i&Hat;
-button.click() ; // Triggering click
-event on the button element
-
-Advanced Content Manipulation:
-
-9. Setting HTML Content Using InnerHTML:
-
-javascript code const element = document.getElementById(
-&apos;myElement&apos;) ; element.innerHTML = &apos;€strong»New HTML Content&lt; /
-strong)&quot;
-
-10.Appending Text Node to an Element:
-
-javascript code const element - document.getElementById(
-&apos;myElement&apos;) ; const textNode - document.createTextNode(&apos;Text
-Content&apos;) ; element.appendChild(textNode) ;
-
-These JavaScript snippets demonstrate advanced techniques for
-creating, manipulating, and interacting with HTML objects, including
-DOM creation, object manipulation, styling, event handling, and
-content manipulation.
-
-Event Handling:
-
-1. Keyboard Event Handling - Key Press:
-
-javascript code document.addEventListener(ikeypressi,(event) =
-&gt; f console.log(• Key pressed: &dollar;{event keyl &apos;) ; D;
-
-2. Handling Focus Events - Input Focus and Blur:
-
-javascript code const inputField = document getElementById(imylnput
-&Hat;i&Hat;) ;
-
-inputField.addEventListener(&apos;focus&apos;,() &gt; { console.log(
-&apos;Input field focused&apos;) ;
-
-inputField addEventListener(&apos;blur()
-console.log(&apos;Input field
-blurred&apos;
-
-Event Delegation and Bubbling:
-
-3. Event Delegation with Click Events:
-
-javascript code const list --- document.getElementById(ImyListl)
-;
-
-list.addEventListener(&apos;click,(event) = &gt;
-if(event.target.tagName &apos;Ll &Hat;i&Hat;
-) { console.log(&quot; Clicked on list item: &dollar;{event.target.
-textContent}
-
-4. Event Bubbling - Click Event on Parent Element:
-
-javascript code constparent - document.getElementById(
-&apos;parentE1ement&apos;) ;
-
-parent.addEventListener(&apos;click&apos;,(event) - &gt; {
-
-console.log(• Clicked on parent element •) ;
-
-Window and Document Events:
-
-5. Window Load Event:
-
-javascript code window.addEventListener(&apos;load,() = { console.
-log(&apos;Page fully loaded) ;
-
-6. Document Ready Event(DOMContentLoaded
-    javascript code document
-    addEventListener(&apos;DOMContentLoaded&apos;,
-    console.log(&apos;DOM fully loaded and
-    parsed&apos;) ;
-
-Form Events:
-
-7. Form Submission and Preventing Default Behavior:
-
-javascript code const form = document.getElementById(
-imyFormi
-
-form.addEventListener(&apos;submit&apos;,(event) - &gt;
-event.preventDefault() ; console.log
-(&apos;Form submitted&apos;) ;
-
-// Perform form data handling or validation
-
-8. Input Event for Real - time Validation:
-
-javascript code const emailFie1d - document.getE1ementById(
-&apos;email&apos;) ;
-
-emailField.addEventListener(&apos;input&apos;, = &gt; { if(! emailField.
-validity.valid)(emailField.setCustomValidity(Enter a valid
-email address&apos;
-
-) else { emailField.setCustomValidity() ;
-
-<h3>D;</h3>
-
-These JavaScript snippets showcase various event handling techniques,
-including keyboard events, focus and blur events, event delegation,
-bubbling, window and document events, and form - related events for
-submission and input validation.
-
-Browser Object Model(BOM) Manipulation:
-
-I.Opening a New Browser Window:
-
-javascript code constopenWindowButton document.getElementById(
-&apos;openWindowButton&apos;) ;
->
-openWindowButton.addEventListener •click &gt;
-window.open(&apos;https:// example.
-com&apos;, Lblank&apos;, dwidth 500,height = 5001) ; D;
-
-2. Closing a Browser Window:
-
-javascript code const closeWindowButton = document getElementById(
-&apos;closeWindowButton&Hat;i&Hat;) ;
-
-closeWindowButton.addEventListener(&apos;click&apos;,() &gt; { window.
-close() ;
-
-Navigator Object Exploration:
-
-3. Accessing Browser Information:
-
-javascript code console.log(
-Browser name: &dollar;{navigator, appName}
-) ; console log(Browser version: &dollar;{navigator.
-appVersion)) ; console log(
-User Agent: &dollar;{navigator, userAgent}
-console log(
-Language: &dollar;{navigator, language))
-;
-
-4, Checking Geolocation Availability:
-
-javascript code if(geolocation&apos; in navigator) { console.log(
-&apos;Geolocation is supported) ; else console.log(&apos;Geolocation is
-not supported) ;
-
-Location Object Manipulation:
-
-5, Redirecting to Another Page:
-
-javascript code
-
-function redirectToPage
-window location.href= ihttps://
-example com&quot;;
-
-6. Accessing Current URL Information:
-
-javascript code console log(
-Current URL: &dollar;fwindow location href)
-) ; console log(Hostname: &dollar;fwindow, location,
-hostname}) ; console, log(
-Protocol: &dollar;{window.location,
-protocol}) ; console log(
-Pathname: &dollar;{window.location,
-pathname}) ;
-
-Screen Object Attributes:
-
-7. Retrieving Screen Dimensions:
-
-javascript code console.log(Screen width: &dollar;{window.screen.
-width) console.log(Screen height:
-&dollar;{window.screen.height)) ;
-
-8, Opening in Full Screen Mode:
-
-javascript code const fullScreenButton document.getElementById(
-&apos;fullScreenButtonI) ;
-
-fullScreenButton.addEventListener &apos;click
-if(document.fullscreenEnabled) &lbrack;
-document.documentElement.
-requestFullscreen
-
-<h3>D;</h3>
-
-These JavaScript snippets showcase browser manipulation using the
-Browser Object Model(BOM) exploring navigator and location objects,
-screen attributes, opening / closing windows, accessing browser
-information, geolocation availability, URL manipulation, and full -
-screen mode functionality.
-
-Installing JavaScript:
-
-JavaScript is an interpreted programming language that runs in web
-browsers.As it&apos;s not a separate entity that needs to be installed,
-you don&apos;t install JavaScript itself; instead, you work with
-JavaScript within environments that support its execution, such as web
-browsers and server - side platforms like Node.js.
-
-Setting Up Visual Studio Code for JavaScript Development:
-
-1..Download and Install Visual Studio
-    Code
-
-Visit the [Visual Studio Code website] and download the
-installer for your operating system.Run the installer and follow the
-installation instructions.
-
-2..Install Node js(Optional but Recommended for Development):
-
-Node.js is a JavaScript runtime environment that allows executing
-JavaScript outside a web browser.You can download Node.js from the
-[omcial website] install it, and it will include the Node
-Package Manager(npm) with it.This is useful for running
-JavaScript programs locally and managing dependencies.
-
-3..Install Visual Studio Cade Extensions:
-
-    -   JavaScript(ES6) Code Snippets: Provides handy code snippets
-        for JavaScript development.Search for it in the Extensions tab
-        in VS Code and install it.
-
-    -   Prettier - Code formatter: For auto - formatting your code
-        according to predefined rules.It&apos;s optional but highly
-        recommended.
-
-4..Create a JavaScript Project:
-
-    -   Open Visual Studio Code.
-
-    -   Create a new folder for your project or open an existing one.
-
-    -   Inside the folder, create a new JavaScript file with the.js
-        extension.Right - click in the Explorer panel &gt; New File &gt;
-        script.js.
-
-5..writing and Running JavaScript
-    Code
-
-    -   Write your JavaScript code in the script.js file.
-
-    -   To run JavaScript code, open the integrated terminal in Visual
-        Studio Code(Terminal &gt; New Terminal), navigate to your
-        project directory, and run the JavaScript file using Node.js.
-        For example:
-
-bash code node script js
-
--   To execute JavaScript code in a browser, create an HTML file(index
-   .html) and link your JavaScript file in it using the «script&gt; tag
-   .Open the HTML file in your preferred web browser.
-
-6..Debugging JavaScript:
-
-    -   Visual Studio Code has a powerful built - in debugger.You can
-        set breakpoints in your code, inspect variables, and step
-        through your code execution line by line.
-
-    -   To use the debugger, add breakpoints by clicking in the margin
-        next to your code line numbers.Then, run your JavaScript code
-        in debug mode(click the Debug icon in the left sidebar).
-
-Conclusion:
-
-That&apos;s a basic setup to start coding in JavaScript with Visual Studio
-Code Remember, JavaScript development often involves web development,
-where you&apos;ll need to write JavaScript code within HTML / CSS files.
-For web - based development, you&apos;d generally use VS Code to manage
-the entire project structure.
-
-Additionally, for more advanced development or working on larger
-projects, using a module bundler like Webpack or a task runner like
-Gulp might be beneficial to enhance your development environment
-further
-
-<!-- last editted 9-20-2024 10:17pm -->
-<!-- last editted 10/18/2024 5:51pm -->
-
-) else f console.log(is zeroi) ;
-
-<h3>JS Switch</h3>
-
-The switch statement in JavaScript executes different actions based on different conditions
-
-Examples of JS Switch:
-
-Basic switch:
-
-javascript code
-
-let day
-
-![](./images/image125.jpg){width="0.5104166666666666in" height="0.2500732720909886in"}
-
-switch(day) &lbrack; case 1
-
-![](./images/image126.jpg){width="4.1666666666666664e-2in" height="0.13545603674540682in"}
-
-console.log(iMonday•) ; break;
-case 2:
-
-console.log(&Hat;i&Hat; Tuesday) ; break; default:
-
-console.log(Other day&apos;) ;
-
-<h4>JS Loop For</h4>
-
-The for loop in JavaScript repeatedly executes a block of code until a
-specified condition evaluates to false
-
-![](./images/image127.jpg){width="4.1666666666666664e-2in" height="4.167869641294838e-2in"}
-
-Examples of JS Loop For:
-
-Basic for Loop:
-
-javascript code for(let i = + +) I console.log(i) ;
-
-Looping Array Elements:
-
-javascript code let arr &apos;applet, banana&apos;, &apos;orange&apos; &rbrack; ; for(let
-i O; i &lt; arr.length; i ++) { console.log(arr &lbrack; i &rbrack;) ;
-
-<h4>JS Loop For In</h4>
-
-The for &period;..in loop in JavaScript iterates over the enumerable
-properties of an object.
-
-Examples ofJS Loop For In:
-
-Iterating Object Properties
-
-![](./images/image128.jpg){width="6.25e-2in" height="0.15629702537182852in"}
-
-javascript code
-
-let person = { name:
-IAIiceI, age 30, gender: female&apos;
-
-for(let prop in person) { console.log(prop + person &lbrack; prop l)
-;
-
-<h4>JS Loop For Of</h4>
-
-The for of loop in JavaScript iterates over iterable objects such as
-arrays, strings, etc
-![](./images/image129.jpg){width="4.1666666666666664e-2in"
-height="4.167869641294838e-2in"}Examples ofJS Loop For Of:
-
-Iterating Over Array Elements:
-
-java script code let numbers
-![](./images/image130.jpg){width="1.8125in"
-height="0.2813331146106737in"}for(let num of numbers) f console.
-log(num) ;
-
-<h4>JS Loop While</h4>
-
-The while loop in JavaScript executes a block of code while a
-specified condition is true
-
-![](./images/image131.jpg){width="4.1666666666666664e-2in" height="4.167979002624672e-2in"}
-
-Examples of JS Loop While:
-
-Basic while Loop:
-
-javascript code
-
-let count = o; 
-while(count &lt; 5![]
-
-(./images/image132.jpg){width="0.3229166666666667in" height="0.26049431321084865in"}
-
-console.log(count) ;
-
-![](./images/image133.jpg){width="1.3020833333333333in" height="0.21881452318460193in"}
-
-<h4>JS Break</h4>
-
-The break statement in JavaScript terminates the current loop or
-switch statement
-
-![](./images/image134.jpg){width="4.1666666666666664e-2in" height="4.167869641294838e-2in"}
-
-Examples ofJS Break:
-
-Using break in a Loop:
-
-javascript code
-
-for(let 1
-![](./images/image135.jpg){width="2.2604166666666665in"
-height="0.2813331146106737in"}if(i 5) {
-
-break;
-
-console.log(i) ;
-
-<h3>JS Iterables</h3>
-
-Iterables in JavaScript are objects that can be iterated over using
-loops 
-![](./images/image112.jpg){width="4.1666666666666664e-2in" height="4.167979002624672e-2in"}
-
-Examples of JS Iterables:
-
-Using Iterables with for of:
-
-javascript code let iterable = I 10, 20,
-30![](./images/image136.jpg){width="0.19791666666666666in"
-height="0.2813331146106737in"}
-
-for(let value of iterable) { console.log(value) ;
-
-<h3>JS Sets</h3>
-
-Sets in JavaScript are collections of unique values
-![](./images/image127.jpg){width="4.1666666666666664e-2in" height="4.167869641294838e-2in"}
-Examples ofJS Sets:
-
-Creating a Set:
-
-javascript code
-
-let mySet = new Set() ; 
-mySet.add(1
-![](./images/image137.jpg){width="0.21875in" height="0.2813331146106737in"}
-
-mySet.add(2
-
-![](./images/image138.jpg){width="0.21875in" height="0.2813331146106737in"}
-
-mySet.add(3
-![](./images/image139.jpg){width="0.21875in" height="0.2813331146106737in"}
-
-Iterating Over a Set:
-
-javascript code
-for(letitem of mySet)
-![](./images/image140.jpg){width="8.333333333333333e-2in" height="0.26049431321084865in"}
-
-console log(item) ;
-
-<h4>JS Maps</h4>
-
-Maps in JavaScript are collections of key - value pairs where keys can
-be any type.
-
-Examples ofJS Maps:
-
-Creating a Map 
-![](./images/image141.jpg){width="6.25e-2in" height="0.14587598425196852in"}
-
-javascript code
-
-let myMap = new Map ;
-myMap.set(&apos;key 1&apos;, &apos;valueli) ; myMap.set(ikey2i, &apos;value2i
-) ;
-
-Iterating Over a Map:
-
-javascript code 
-
-for(let &lbrack; key, value I of myMap) { console.log(
-key &lowbar; • value) ;
-
-<h4>JS Typeof</h4>
-
-The typeof operator in JavaScript returns the data type of its operand
-.Examples ofJS Typeof:
-
-Using typeof:
-
-javascript code console.log(typeof5) // Output: &apos;numberl
-console.log(typeof&apos;Hello&apos;) ; // Output: &apos;string&apos; console.
-log(typeoftrue) ; // Output: boolean&apos;
-
-<h6>JS Type Conversion</h6>
-
-Type conversion in JavaScript involves converting values from one data
-type to another.Examples ofJS Type Conversion:
-
-String to Number:
-
-javascript code let strNumber = &apos;10
-![](./images/image142.jpg){width="0.11458333333333333in"
-height="0.1146172353455818in"}let num = parselnt(strNumber) ;
-
-Number to String 
-![](./images/image143.jpg){width="6.25e-2in" height="0.15629593175853018in"}
-
-javascript code
-
-let number
-![](./images/image144.jpg){width="0.6979166666666666in"
-height="0.19797462817147857in"}let str = number.
-toString![](./images/image145.jpg){width="0.3229166666666667in"
-height="0.270913167104112in"}
-
-<h6>JS Bitwise</h6>
-
-Bitwise operators in JavaScript perform operations on the binary
-representations of numeric values.
-
-Examples ofJS Bitwise:
-
-Bitwise AND Operator:
-
-javascript code
-let result 5 & 3; // Output: 1
-
-Bitwise OR Operator ![](./images/image146.jpg){width="6.25e-2in"
-height="0.15629702537182852in"}javascript code let result 5 1 3; //
-Output: 7
-
-<h6>JS RegExp</h6>
-
-Regular expressions in JavaScript are used for pattern matching within
-strings.Examples ofJS RegExp:
-
-Creating a Regular Expression:
-
-javascript code let pattern = / hello / i; // Case - insensitive
-&apos;hello&Hat;i&Hat;
-
-Testing a String with RegExp:
-
-javascript code let str = &apos;Hello, World
-!![](./images/image147.jpg){width="0.11458333333333333in"
-height="0.2604932195975503in"}
-
-console.log(pattern.test(str)) ; // Output: true
-
-<h5>JS Precedence</h5>
-
-Operator precedence in JavaScript determines the order of operations
-in an expression.
-
-Examples of JS Precedence:
-
-Arithmetic Precedence:
-
-java script code let result 5 3&ast; 2; // Output: 11(Multiplication
-has higher precedence)
-
-<h4>JS Errors</h4>
-
-Errors in JavaScript can be generated when an incorrect code is
-encountered during execution.
-
-Examples ofJS Errors:
-
-Syntax Error:
-
-javascript code let x = 10
-
-This will throw a syntax error due to the missing semicolon.
-
-Reference Error:
-
-javascript code
-console.log(undefinedVariable);
-
-This will throw a reference error as undefinedVariable is not defined.
-
-<h5>JS Scope</h5>
-
-Scope in JavaScript defines the visibility and accessibility of
-variables.Examples ofJS Scope:
-
-Global Scope ![](./images/image148.jpg){width="6.25e-2in"
-height="0.15629593175853018in"}javascript code let globalVar Il am
-global&apos;;
-
-function test f console.log(globalVar) ; // Accessible inside
-function
-
-console.log(globalVar) ; // Accessible outside function
-
-<h3>JS Hoisting</h3>
-
-Hoisting in JavaScript allows variables and functions to be used
-before they are declared Examples ofJS Hoisting:
-
-Variable Hoisting:
-
-javascript code console.log(myVar) ; // Outputs: undefined
-varmyVar &dash;- 10; Function Hoisting:
-
-javascript code
-sayHello;
-// Outputs: &apos;Hello&apos; 
-function sayHello
-![](./images/image149.jpg){width="0.4166666666666667in" height="0.2604932195975503in"}
-console.log(&apos;Hello&apos;) ;
-
-<h2>JS Strict Mode</h2>
-
-Strict mode in JavaScript enforces stricter rules and better error
-handling.Examples ofJS Strict Mode:
-
-Enabling Strict Mode
-![](./images/image150.jpg){width="6.25e-2in"
-height="0.15629593175853018in"}javascript code &apos;use strict&apos;;
-
-Using Strict Mode Inside a Function
-![](./images/image105.jpg){width="6.25e-2in" height="0.15629593175853018in"}
-javascript code
-
-function myFunction {
-  &apos;use strict&apos;;
-  // Strict mode only applies inside this function
-
-<h3>JS this Keyword</h3>
-
-The this keyword in JavaScript refers to the object it belongs to.
-Examples ofJS this Keyword:
-
-Using this in an Object
-![](./images/image109.jpg){width="6.25e-2in"
-height="0.15629593175853018in"}javascript code let person = { name:
-&apos;Alice&apos;, greet: function
-![](./images/image151.jpg){width="0.4166666666666667in"
-height="0.26049431321084865in"}console.log(&apos;Hello, my name is &apos;
-this.name) ;
-
-person.greet ; // Outputs: &apos;Hello, my name is Alice&apos;
-
-<h3>JS Arrow Function</h3>
-
-Arrow functions in JavaScript provide a concise syntax for writing functions.
-
-Arrow Function:
-
-Basic Arrow Function:
-
-javascript code
-let multiply =(aj b) = s a &ast; b;
-
-Arrow Function with Multiple Lines
-![](./images/image152.jpg){width="6.25e-2in" height="0.15629593175853018in"}javascript code let greet(name) &gt; {
-return &apos;Hello, &apos; + name +
-![](./images/image153.jpg){width="0.375in" height="0.2604932195975503in"}
-
-<h3>JS Classes</h3>
-
-Classes in JavaScript provide a way to create objects using a
-blueprint.
-
-Examples of JS Classes:
-
-Class Declaration:
-
-javascript code class Person { constructor(name) { this.name
-name;
-
-greet() { console.log(&apos;Hello, my name is &apos; this.name) ;
-
-let alice = new Person(&apos;Alice&apos;
-![](./images/image154.jpg){width="0.21875in"
-height="0.2604932195975503in"}alice.greet ; // Outputs: &apos;Hello, my
-name is Alice&apos;
-
-<h3>JS Modules</h3>
-
-Modules in JavaScript allow splitting code into separate files or
-modules for better organization
-![](./images/image134.jpg){width="4.1666666666666664e-2in"
-height="4.167869641294838e-2in"}Examples ofJS Modules:
-
-Exporting a Module ![](./images/image155.jpg){width="6.25e-2in"
-height="0.14587598425196852in"}javascript code // Module.js export
-function greet(name) { console.log(&apos;Hello, i 4
-name![](./images/image156.jpg){width="0.8854166666666666in"
-height="0.2813331146106737in"}
-
-Importing a Module:
-
-java script code // Main.js import &lbrack; greet } from./ Module.js&apos;;
-greet(&apos;Alice&apos;) ; // Outputs: &apos;Hello, Alice ! I
-
-<h4>JS JSON</h4>
-
-JSON(JavaScript Object Notation) is a lightweight data interchange
-format.
-
-JSON:
-
-Parsing JSON:
-
-javascript code let jsonStr = name Alice j age u: 30)&Hat;i&Hat;; let obj = JSON
-.parse(jsonStr) ; console.log(obj.name) ; // Output:
-&apos;Alice&apos;
-
-Stringify Object to JSON:
-
-javascript code let obj {name: Alice&apos;, age: 30 l; let jsonString =
-JSON.stringify(obj) ;
-
-<h3>JS Debugging</h3>
-
-Debugging in JavaScript involves identifying and fixing errors or
-issues in the code.Examples ofJS Debugging:
-
-Using console.log() for Debugging:
-
-javascript code let x 5; console.log(x) ;
-
-Using Browser Developer Tools:
-
-Inspect elements, view console logs, set breakpoints, etc.
-
-<h3>JS Style Guide</h3>
-
-A JavaScript style guide defines a set of rules and conventions for
-writing clean and maintainable code.Examples ofJS Style Guide:
-
-Naming Conventions:
-
-Use camelCase for variable and function names.
-
-Indentation:
-
-Use consistent spaces or tabs for indentation.
-
-<h3>JS Best Practices</h3>
-
-Best practices in JavaScript ensure code quality, readability, and
-maintainability.Examples ofJS Best Practices:
-
-Use Meaningful Variable Names:
-
-javascript code letd new Date() ; // Instead, use let currentDate new
-Date() ;
-
-Avoid Global Variables:
-
-Encapsulate code to avoid polluting the global scope.
-
-<h3>JS Mistakes</h3>
-
-Common mistakes in JavaScript and how to avoid thern.
-
-Mistakes:
-
-Missing Semicolon:
-
-javascript code let x = 5
-
-Remember to add a semicolon at the end of the
-statement
-
-Uninitialized Variables:
-
-javascript code let y; console.log(y) ; // Outputs: undefined
-
-<h3>JS Performance</h3>
-
-Improving performance in JavaScript involves optimizing code for speed
-and emciency.Examples ofJS Performance:
-
-Reduce DOM Manipulations:
-
-Combine multiple DOM updates into one to reduce reflows.
-
-Use Eficient
-Algorithms
-
-Choose algorithms that have better time complexity for operations.
-
-<h4>JS Reserved Words</h4>
-
-Reserved words in JavaScript have special meanings and cannot be used
-as identifiers(variable or function
-names
-
-Examples ofJS Reserved Words:
-
-let, const function class, etc.
-
-This comprehensive guide covers a wide range of JavaScript topics
-including conditional statements, loops, data structures, type
-handling, advanced features, error handling, best practices, common
-mistakes, and performance optimization.JS Objects
-
-Objects in JavaScript are collections of key - value pairs.They
-store data as properties(variables) and functionality as methods(
-functions
-
-Object Definitions:
-
-Creating an Object Literally:
-
-javascript code let person = f name: &apos;Alice% age 30, greet:
-function return &apos;Helloj my name is &Hat;i&Hat; -v this
-.name;
-
-Using the Object Constructor:
-
-javascript code let car new Object O;
-
-car.brand = &apos;Toyota&apos;; car.model = &apos;Camry&apos;; Object Properties
-
-Properties in JavaScript objects are variables that hold values
-Object Properties Examples:
-
-Accessing Object Properties:
-
-javascript code console.log(person name) // Accessing property
-&apos;namet
-
-Adding or Modifying Properties:
-
-javascript code car.color &apos;blue&apos;; // Adding property &apos;color&apos; car
-.model &apos;Corolla&apos;; // Modifying property &apos;model&apos;
-
-<h4>Object Methods</h4>
-
-Methods in JavaScript objects are functions that define behavior.
-Object Methods Examples:
-
-Accessing Object Methods
-javascript code console.log(person
-.greet ; // Accessing method greet&apos;
-
-Adding Methods to an Object:
->
-java script code
->
-car.start = function return &apos;Car started&apos;; l;
-
-<h5>Object Display</h5>
-
-Displaying objects in JavaScript can be done using various methods.
-Object Display Examples:
-
-Using console.log javascript code console.log(person)
-; // Output the entire object
-
-Stringify with JSON:
-
-javascript code let carString JSON.stringify(car) ; console.log
-(carString) ; // Output the string representation of the object
-
-<h3>Object Accessors</h3>
-
-Accessors in JavaScript objects provide a way to get and set the
-values of object properties.Object Accessors Examples:
-
-Using Getters and Setters:
-
-javascript code let user --- firstName: &apos;John&apos;,
-
-lastName: &apos;Doe&apos;, get fullName() f return this.firstName + + this
-lastName;
-
-set fullName(name) f let parts = name.split ; this.firstName =
-parts &lbrack; O this.lastName = parts &lbrack; 1 &rbrack; ;
-
-console.log(user.fullName) ; // Output: John Doe&apos; user.
-fullName = &apos;Alice Smith&apos;; // Setting fiillName using setter console.
-log(user.firstName) ; // Output: &apos;Alice&apos;
-
-<h3>Object Constructors</h3>
-
-Constructors in JavaScript are functions used for creating objects and
-setting initial values
-Object Constructors Examples:
->
-Using Constructor Functions:
->
-javascript code function Person(name, age) { this.name name; this
-.age age; this.greet = function
-return &apos;Helloj my name is &Hat;i&Hat; -v this.
-name;
->
-let newPerson &ast; new Person(&apos;Bob&apos;, 25
-console.log(newPerson.greet()) ;
-// Output: &apos;Hello, my narne is Bob&apos;
-
-<h3>Object Prototypes</h3>
-
-Prototypes in JavaScript are a mechanism to share properties and
-methods between objects.Object Prototypes Examples:
->
-Adding Methods to the Prototype:
->
-javascript code
->
-Person.prototype.info function
-return &apos;Name: + this.name +
-this.age;
->
-console.log(newPerson.info()) ; // Output: &apos;Name: Bob, Age
-251
-
-<h3>Object Iterables</h3>
-
-Iterables in JavaScript are objects that can be iterated using loops.
-
-Object Iterables Examples:
-
-Using for &period;..in Loop:
->
-javascript code
->
-for(let key in person) { console.log(key person &lbrack; key l) ;
->
-Using Object.keys C):
->
-java script code let keys = Object.keys(person) ; // Get an array
-of object keys
-
-<h4>Object Sets</h4>
-
-Sets in JavaScript are collections of unique values.
-
-Object Sets Examples:
-
-Creating a Set:
->
-javascript code let mySet = new Set ; mySet.add(1
-mySet.add(2
-mySet.add(
-3!
->
-Checking Set Membership:
->
-javascript code console.log(mySet.has(2)) ; // Output: true
-
-<h4>Object Maps</h4>
-
-Maps in JavaScript are collections of key - value pairs where keys can
-be any type.
-
-Object Maps Examples:
-
-Creating a Mapjavascript code let myMap = new Map ;
-myMap.set(ikeyli, &apos;valueli) ; myMap.set(ikey2&apos;, ivalue2i)
-; Getting Values from a Map:
->
-javascript code console.log(myMap.get(&apos;key Il)) ; // Output
-: &apos;value?
-
-<h4>Object Reference</h4>
-
-In JavaScript, objects are stored and passed by reference.Object
-Reference Examples:
->
-Referencing an Object:
-
-javascript code let objectl - {name: &apos;John&apos;&rbrack;
-let object2 = objectl; // object2 points
-to the same object as objectl
-
-Changing Object through Reference:
-
-javascript code object2 name = &apos;Alice&apos;; console.log(objectl.name
-) ; // Output: &apos;Alice&apos;
-
-This comprehensive guide covers various aspects of JavaScript objects,
-including definitions, properties, methods, display, accessors,
-constructorsj prototypes, iterables, sets; maps, and object
-references, with examples and explanations for each concept.
-
-<h3>JS Functions</h3>
-
-Functions in JavaScript are reusable blocks of code that perform a
-specific task when
-called
-
-Function Definitions:
-Function Declaration:
-javascript code function greet() &lbrack; return &apos;Hello ! &apos;i
-Function Expression javascript code let greet function {
-return &apos;Hello
-Arrow Function:
-javascript code let greet &gt; {
-return &apos;Hello ! &apos;;
-<h3>Function Parameters</h3>
-Function parameters are placeholders for values that a function will
-receive when it&apos;s called
-Function Parameters Examples:
-Single Parameter:
-javascript code function greet(name) { return &apos;Hello, + name
-+
-Multiple Parameters javascript code function sum(a, b) {
-return
-<h3>Function Invocation</h3>
-Function invocation means calling a function to execute its code.
-Function Invocation Examples:
-Calling a Function:
->
-javascript code greet O ; // Function call let result sum(5, 3) ;
-// Function call with arguments
-
-<h4>Function Call</h4>
-
-The call() method in JavaScript allows a function to be called with a
-specified this value and arguments provided individually.
-
-Function Call Examples:
-
-Using call javascript code function greet() &lbrack;
-return &apos;Hello, + this.name + t&apos;
->
-let person { name: &apos;Alice&apos;
-let message greet.call(person) ;
-
-<h4>Function Apply</h4>
-
-The apply() method in JavaScript allows a function to be called with
-a specified this value and arguments provided as an
-array
-
-Function Apply Examples:
-
-Using apply C):
->
-javascript code function greet()
-return &apos;Hello, + this.name +
-
->
-let person name
-let args = &lbrack;l ; let message = greet.
-apply(person, args) ;
-
-<h4>Function Bind</h4>
-
-The bind() method in JavaScript creates a new function that, when
-called, has its this keyword set to a specified value.Function Bind
-Examples:
-Using bind C):
-javascript code function greet() &lbrack; return &apos;Hello, &apos; + this.name
-+
-let person {name: &apos;Charlie&apos;
-let newGreet greet.bind(person) ;
-let message = newGreet() ;
-
-<h4>Function Closures</h4>
-
-Closures in JavaScript are functions that retain access to variables
-in the scope where they were defined, Function Closures Examples:
-Closure Example:
-javascript code function outerFunction let outerVariable = &apos;I am from
-the outer function&apos;;
-function innerFunction() { console.log(outerVariable) ;
-return innerFunction;
-let closure = outerFunction
-closure() ; // Output: il am from
-the outer functioni
-This comprehensive guide covers various aspects of JavaScript
-functions, including definitions, parameters, invocation, call, apply,
-bind, and closures, with examples and explanations for each concept
-<h5>JS Classes</h5>
-Classes in JavaScript provide a way to create objects using a
-blueprint Class Intro: Class Declaration:
-javascript code class Animal constructor(name, age) { this.name =
-name;
-this age = age;
-sound() f return &apos;Animal sound&apos;;
-Creating Instances javascript code let dog = new Animal(
-&apos;Buddy&apos;, 3) ; console.log(dog.sound ; // Output: &apos;Animal
-soundl
-
-<h2>Class Inheritance</h2>
-
-Inheritance in JavaScript classes allows a subclass to inherit
-properties and methods from a superclass.
-
-Class Inheritance Example:
-
-Extending a Class:
-javascript code class Dog extends Animal { constructor(name, age,
-breed) &lbrack; super(name, age) ; this.breed breed;
-sound() f return &Hat;i&Hat;Woof
-Using Inherited Methods:
-
-javascript code let puppy = new Dog(&apos;Max&apos;, 1, &apos;Labrador&apos;) ;
-console.log(puppy.sound ; // Output &apos;Woof !
-
-<h3>Class Static</h3>
-Static methods in JavaScript classes are called on the class itself
-rather than on instances of the class.
-Class Static Example:
-Adding a Static Method:
-javascript code class Calculator static add(a, b) { returna 4 b;
-let result = Calculator.add(5, 3
-console.log(result) ; // Output: 8
-
-<h3>JS Async</h3>
-
-Asynchronous programming in JavaScript involves handling operations
-that don&apos;t execute immediately.
-
-JS Callbacks
-
-Callbacks in JavaScript are functions passed as arguments to another
-function to be executed later
-Callbacks Example:
-javascript code function fetchData(callback) { setTimeout = &gt; let
-data = &apos;Some data&apos;; callback(data) ;
-2000) ;
-function processData(data) { console.log(&apos;Data received + data
-) ;
-fetchData(processData) ; // Output after 2 seconds &apos;Data received
-: Some data&apos;
-
-<h3>JS Asynchronous</h3>
-
-Asynchronous operations in JavaScript allow non - blocking execution
-of code
-Asynchronous Example:
-javascript code console.log(
-&apos;Start&apos;>
-setTimeout(O = &gt;
-
-console.log(&apos;Inside setTimeout&apos;) ;
-console.log(&apos;End&apos;) ;
-// Output: &apos;Start&apos;, &apos;End&apos;, &apos;Inside setTimeoutI(After 2 seconds
-) JS Promises
-Promises in JavaScript represent a value that might not be available
-yet but will resolve or reject in the future.
-Promises Example:
-Creating a Promise:
-javascript code let myPromise &ast; new Prornise((resolve, reject) &gt;
-{ setTimeout(O &gt;
-resolve(&apos;Promise
-resolvedl
-2000) ;
-myPromise.then result) = &gt;
-console.log(result) ; // Output
-after 2 seconds: &apos;Promise resolved&apos;
-
-<h3>JS Async / Await</h3>
-
-Async / await in JavaScript provides a more synchronous way to write
-asynchronous code using promises.
-
-Async / Await Example:
-
-Using Async / Await:
-
-javascript code async function fetchData { return new Promise resolve
-) setTimeout(Oof resolve(&apos;Data
-fetched&apos;) ; l,2000
-async function processData() { let data await fetchData() ; console.
-log(data) ; // Output after 2 seconds: Data fetched&apos;
-
-processDatao;
-
-This comprehensive guide covers JavaScript classes, including an
-introduction to classes, inheritance, and static methods, as well as
-asynchronous programming concepts such as callbacks, asynchronous
-operations, promises, and async / await, with examples and
-explanations for each concept.
-
-<h4>JS HTML DOM</h4>
-
-JavaScript interacts with HTML documents through the Document Object
-Model(DOM), representing the document as a tree structure.
-
-DOM Intro:
-
-Accessing an Element by ID:
-
-html code
-! DOCTYPE html&gt;
-html &gt; ebodY&gt;
-
-&lt;hl id heading &gt;Welcome to the DOM&lt; / hl &gt;
-
-&lt; script&gt; let element document.getElementById(I&apos; heading l&apos;) ;
-console.log(element.innerHTML) ; // Output: &apos;Welcome to the
-DOM&apos;
-
-&lt; / script&gt;
-
-/ bodY&gt;
-
-/ html&gt;
-
-<h5>DOM Methods</h5>
-
-DOM methods provide various ways to manipulate HTML elements
-
-Changing Element Content:
-
-html code
-! DOCTYPE html&gt;
-html &gt;
-
-epid - &Hat;i&Hat;&apos; demo &gt;This is a paragraph.&lt;
-
-&lt;script&gt; document.getE1ementById(Il demo &quot;).innerHTML = &quot; This
-is a new paragraph
-
-&lt; / script&gt;
-
-&lt; / bodY&gt;
-
-&lt; / html&gt;
-
-<h6>DOM Document</h6>
-
-The document object represents the entire HTML document.
-
-Accessing Document
-Properties
->
-html code
-
-```
-&lt; ! DOCTYPE html&gt;
-&lt; html &gt;
-escript&gt; console.log(document.title) ; // Output: Document
-title console.log(document.URL) ; // Output: Document URL
-```
-
-/ scripts
-
-```
-&lt;/bodY&gt;html&gt;
-```
-
-<h5>DOM Elements</h5>
-
-<p>Elements in the DOM represent HTML tags.</p>
-
-<h4>Changing Element Styles:</h4>
-
-<h5>html code</h5>
-
-```
-! DOCTYPE html&gt;
-html &gt;
-&lt;Pid demo &quot; &gt;This is a paragraph.&lt;
-&lt; script&gt; let element document.getElementById demo
-element.style.color red;
-element.style.fontSize = 20px;
-&lt; / script&gt;
-/ bodY&gt;
-/ html&gt;
-```
-
-<h5>DOM HTML</h5>
-
-The DOM HTML includes properties that deal with the HTML content.
->
-Changing HTML Attributes:
->
-html code
->
-! DOCTYPE html&gt;
->
-html &gt;
->
-&lt;img id mylmage &quot; src image.jpg &gt;
->
-&lt; script&gt; let image = document.getElementById(41 mylmage
-image.src new_image.
-jpg>
-&lt; / script&gt;
->
-/ body)
->
- / html&gt;
-
-DOM Forms
-
-The DOM allows rnanipulation of HTML forms.
-
-Accessing Form Elements:
->
-html code
->
-! DOCTYPE html&gt;
-html &gt;
->
-&lt;form id a&quot; myForm &gt;
-
-&lt;input type text &quot; id username name - username
-
-&lt;input type submit value z&quot; Submit &gt; form&gt;
-
-&lt; script&gt; let form = document.getE1ementById(t&apos; myForm • let
-username = form.elements username value;
->
-/ script&gt;
->
-&lt; / bodY&gt;
->
-&lt; / html&gt;
-
-<h6>DOM CSS</h6>
-
-The DOM CSS allows manipulation of CSS styles.
->
-Changing CSS Classes:
-
-html code
-
-&lt; ! DOCTYPE html&gt;
->
-&lt; html &gt;
->
-&lt;Pid demo &gt; This is a paragraph.&lt;
->
-escript&gt; let element = document.getE1ementById demo
-element classList.add(&apos;i new -
-class &quot;)
-
->
-/ script&gt;
->
-&lt; / bodY&gt; html&gt;
-
-<h6>DOM Animations
-
-The DOM supports creating simple
-animations
->
-Animating an Element:
->
-html code
->
-! DOCTYPE html&gt;
-html &gt;
-
-&lt;d1V id box &apos;l style width: IOOpx;height: IOOpx;background - color:
-red;position relative; &quot; / diV&gt;
-
-&lt; script&gt; let elem = document.getElementById(Il box ; let pos
-let id setlnterval(frame, 10) ;
->
-function frame()
-pos 350) f clearlnterval(id) ;
->
-elem style.top = pos -v &apos;px&Hat;i&Hat; ; elem style.left = pos + &Hat;i&Hat; px ;
-/ script&gt;
->
-&lt; / bodY&gt;
->
-&lt; / html&gt;
-
-DOM Events
-
-Events in the DOM represent interactions by users or by the browser.
->
-Click Event Handling:
-
-html code
-
-&lt; ! DOCTYPE html&gt;
->
-&lt; html &gt;
->
-&lt;button id z&quot; myButton &Hat;l&Hat; &apos; &gt;Click me&lt; / button&gt;
->
-&lt; script&gt; document.getE1ementById(i&apos; myButton &quot;).
-addEventListener(&apos; click, function f alert(i&apos; Button clicked &quot;)
-;D;
-
- / script&gt;
->
-&lt; / bodY&gt;
->
-&lt; / html&gt;
-
-DOM Event Listener
-
-The addEventListener method is used to attach an event to an element.
->
-Mouseover Event Handling:
-
-html code
-
-&lt; ! DOCTYPE html&gt;
->
-&lt; html &gt;
->
-ed1V id myDiv &Hat;i&Hat;&apos; &gt;Mouse over mec / diV&gt;
->
-&lt;script&gt; document.getElementById(I&apos; myDiv n).addEventListener
-(&apos;l mouseover &quot; function
-alert(I&apos; Mouse over event triggered Il)
-;
->
-&lt; / script&gt;
->
-&lt; / bodY&gt;
->
-&lt; / html&gt;
-
-<h6>DOM Navigation</h6>
-
-The DOM allows navigation between elements Traversing Child Elements:
-
-html code
-
-&lt; ! DOCTYPE html&gt;
->
-&lt; html &gt;
->
-eul id myList &gt;
->
->
-&lt;script&gt; let list document.getElementById(VI myList
-let items = list.getElementsByTagName
-(&quot; li console.log(items.length) ; //
-Output: 3
->
-&lt; / script&gt;
->
-&lt; / bodY&gt;
->
-&lt; / html&gt;
-
-<h6>DOM Nodes</h6>
-
-Nodes are the fundamental building blocks in the DOM.
->
-Creating a New Node:
-
-html code
-
-&lt; ! DOCTYPE html&gt;
->
-&lt; html &gt;
-
-edivid myDiv / divs
-
-&lt;script&gt; let node = document.createE1ement(I&apos; p &apos;I) ;
-
-let textNode = document.createTextNode(i&apos; New paragraph U) ; node
-appendChild(textNode) ; document.getElementById myDiv &quot;).
-appendChild(node) ;
->
- / script&gt;
->
-&lt; / bodY&gt;
->
-&lt; / html&gt;
-
-<h6>DOM Collections</h6>
-
-Collections in the DOM are arrays of HTML elements.
->
-Accessing Collection Elements:
-
-html code
-
-&lt; ! DOCTYPE html&gt;
->
-&lt; html &gt;
->
-&lt;p&gt;Click the button to get the collection length.&lt; /
-ebutton onclick getLength &gt;Get
-Collection Length&lt; / buttons
->
-&lt;script&gt; function getLength() { let elements document.links;
-alert(I&apos; Number of links: + elements.length) ;
->
-&lt; / script&gt;
->
- / bodY&gt;
->
- / html&gt;
->
-DOM Node Lists
->
-Node lists in the DOM are similar to collections and contain nodes or
-elements.
->
-Accessing Node List Elements:
->
-html code
->
- ! DOCTYPE html&gt;
-html &gt;
->
-&lt;Pid demo &gt;This is a paragraph.&lt;
-/
->
-&lt; script&gt; let nodeList document.querySelectorAll(L&apos; #demo
-console.log(nodeList I O l.innerHTML
-) ; // Output: &apos;This is a paragraph.
-
->
-&lt; / script&gt;
->
- / bodY&gt;
->
- / html&gt;
->
-This comprehensive guide covers JavaScript&apos;s HTML DOM, including an
-introduction to the DOM, methods, document, elements, HTML forms, CSS,
-animations, events, event listeners, navigation, nodes, collections,
-and node lists, with examples and explanations for each topic.
-
-<h4>JS Browser BOM</h4>
-
-The Browser Object Model(BOM) in JavaScript represents the browser
-window and its
-components
-
-<h5>JS Window</h5>
-
-The window object is the global object in a browser&apos;s JavaScript
-environment.
->
-Accessing Window Properties:
->
-javascript code console.log(window.innerHeight) ; // Output:
-Inner height of the window console.log(window.innerWidth) ; //
-Output: Inner width of the window
-
-<h5>JS Screen</h5>
-
-The screen object represents the screen of a device.
->
-Accessing Screen Properties:
->
-javascript code console.log(screen.width) ; // Output: Screen
-width in pixels console.log(screen.height) ; // Output: Screen
-height in pixels
-
-<h5>JS Location</h5>
-
-The location object contains information about the current URL.
->
-Accessing Location Information:
->
-java script code console.log(location.href) ; // Output: Full
-URL ofthe current page console.log(location hostname) ; // Output
-Hostname of the current URL
-
-<h5>JS History</h5>
-
-The history object contains the browsing history of the window.
->
-Accessing History Methods:
->
-javascript code history.back() ; // Go back to the previous page
-history.forward() ; // Go forward to the next page
-
-<h6>JS Navigator</h6>
-
-The navigator object contains information about the browser.
-
-Accessing Navigator Properties:
-
-javascript code console.log(navigator.userAgent) ; // Output:
-User - Agent header of the browser console.log(navigator.
-platform) ; // Output: Platform of the browser
-
-<h6>JS Popup Alert</h6>
-
-Popup alerts in JavaScript display messages to users.
-
-Displaying an Alert:
-
-javascript code alert This is an alert
-message
-
-<h5>JS Timing</h5>
-
-JavaScript&apos;s timing functions allow scheduling of code execution.
-
-Using setTimeout javascript code setTimeout
-console.log(l&apos; Delayed message I&apos;)
-;
-
-2000) ; // Execute after 2 seconds
-
-Using setlnterval
-javascript code setlnterval
-console.log(l&apos; Repeated message &apos;J)
-;
-
-3000) ; // Execute every 3 seconds
-
-<h6>JS Cookies</h6>
-
-Cookies in JavaScript store small pieces of information on the
-client&apos;s machine.
-
-Setting a Cookie:
-
-javascript code document.cookie username John Doe; expires - - Thu,
-18 Dec 2023 12: OO: OO UTC; path z/&quot; ;
-
-Accessing a Cookie:
-
-javascript code let username = document cookie.split(o l.split(
-console.log(username) ; // Output:
-&apos;John Doe&apos;
-
-This comprehensive guide covers JavaScript&apos;s Browser Object Model(BOM
-), including the window object, screen, location, history, navigat0%
-popup alerts; timing functions, and cookies, with examples and
-explanations for each concept
-
-<h5>JS Web APIs</h5>
-
-Web APIs are sets of tools and interfaces provided by web browsers to
-interact with various functionalities of the browser or device
-
-<h6>Web API Intro</h6>
-
-Web APIs enable web developers to access various browser features and
-functionalities.
-
-Accessing the Web API:
-
-javascript code
-
-// Example: Using the Geolocation API if(&apos;i geolocation in
-navigator) f navigator.geolocation.getCurrentPosition((position
-) = &gt; console.log(i Latitude: position
-coords latitude) ; console.log(&apos;i Longitude:, position.coords
-longitude) ;
-
-<h6>D;</h6>
-
-Web Forms API
-
-The Web Forms API provides methods and properties to manipulate HTML
-form elements.
-
-Accessing Form Elements:
-
-java script code let form = document.getElementById(&apos;i myForm v)
-letinputFie1d = form.elements &lbrack;i&apos;
-username ; console.log(inputField value) ;
-
-<h6>Web History API</h6>
-
-The Web History API allows manipulation ofthe browser&apos;s history.
-
-Changing Browser History:
-
-javascript code window.history.pushState({ page 1 Title, ?page =
-1 I) ;
-
-<h6>Web Storage API</h6>
-
-The Web Storage API provides methods to store data in the browser.
-
-Using localStorage:
-
-javascript code
-
-localStorage.setltem(&apos;i key &apos;&Hat;i&Hat;&apos; value
-let data = localStorage.getltem(0
-key
-
-web Worker API
-
-The Web Worker API enables running scripts in the background to handle
-time - consuming tasks without blocking the
-
-UI.
-
-Creating a Web Worker:
-
-javascript code
-// worker js self.onmessage = function(event) f
-
-console.log(t&apos; Message received from the main script • event data;
-self.postMessage(0 Message from worker &quot;)
-
-// main.js let worker = new Worker(&Hat;i&Hat;&apos; worker js
-worker onmessage = function(event) {
-console.log(t&apos; Message received from worker, event.data) ;
-
-worker.postMessage(&apos;i Message from main &quot;) j
-
-<h6>web Fetch API</h6>
-
-The Fetch API provides a way to make HTTP requests.
-
-Making a GET Request:
-
-javascript code
-fetch(&Hat;
-i&Hat;&apos; 
-https api example com / data &quot;)
-
-.then((response) ---- &gt; response.json 0)
-
-.then((data) = &gt; console.log(data))
-
-.catch error) &dash;- &gt; console.log(t&apos; Error, error)) ;
-
-<h6>Web Geolocation API</h6>
-
-The Geolocation API retrieves geographical information about the
-user&apos;s device.
-
-Getting User&apos;s Location:
-
-javascript code
-
-navigator.geolocation.getCurrentPosition((
-position) =
-console.log(&quot; Latitude: &apos;&Hat;i&Hat;,
-position.coords.latitude) ; console.log(&quot; Longitude,
-position coords longitude) ; 
-
-This comprehensive guide covers various Web APIs in JavaScript, including an introduction 
-to Web APIs. Web Forms API, Web History APL Web Storage API, Web Worker API, Web Fetch
-API, and Web Geolocation API, with examples and explanations for each concept.
-
-JS AJAX
-
-AJAX(Asynchronous JavaScript and XML) is a technique used to send
-and receive data asynchronously between a web browser and a
-server
-
-<h6>AJAX Intro</h6>
-
-AJAX allows web pages to update content without reloading the entire
-page.
-
-Simple AJAX Request:
-
-javascript code letxhttp = new XMLHttpRequest
-xhttp.onreadystatechange = function0 1
-if(this.readyState 4 this.status 200)
-document.getElementById demo &quot;).
-innerHTML = this responseText;
-
-xhttp.open GET &quot; ajax_info.txt, true
-xhttp.send() ;
-
-AJAX XMLHttp
-
-The XMLHttpRequest object(XHR) is a core component of AJAX used to
-exchange data between a web browser and a server.
-
-Using XMLHttpRequest:
-
-javascript code let xhttp new XMLHttpRequest() ; xhttp.
-onreadystatechange function
-if(this.readyState 4 this.status
-200) console.log(this.responseText) ;
-
-xhttp.open GET data.txt, true) ; xhttp.send() ;
-
-AJAX Request
-
-AJAX requests enable communication between the browser and the server
-.
-
-Sending POST Request:
-
-javascript code
-
-let xhttp new XMLHttpRequest();
-xhttp.onreadystatechange = function0 1 if(this.readyState 4 this.status200)
-console.log(this.responseText) ;
-
-xhttp.open POST, process.php true)
-xhttp.setRequestHeader(&apos;d Content -
-type &apos;I, &apos;i application / x - www - form - urlencoded I&apos;) ; xhttp
-.send(0 name John&age =
-30
->
-Response
->
-Handling AJAX responses involves processing data received from the
-server.
->
-Handling &apos;SON Response:
->
-javascript code letxhttp = new XMLHttpRequest() ; xhttp.
-onreadystatechange = function
-if(this readyState 4 this.status
-200) et data = JSON.parse(this.
-responseText) ; console.log(data) ;
->
-xhttp.open GET &quot; data json &Hat;i&Hat; &apos;, true) ; xhttp.send() ;
-
-<h6>AJAX XML File</h6>
-
-AJAX can be used to fetch and handle XML files.
->
-Fetching XML File:
->
-javascript code let xhttp = new XMLHttpRequest
-xhttp.onreadystatechange = function
-if(this.readyState 4 this.status
-200) let xmlDoc = this responseXML;
->
-console.log(xmlDoc) ;
->
-xhttp.open GET &quot; data.xml &quot;, true) ; xhttp.send() ;
-
-<h6>AJAX PHP</h6>
-
-AJAX can interact with server - side technologies like PHP to exchange
-data
->
-Handling AJAX in PHP:
->
-javascript code letxhttp = new XMLHttpRequest() ; xhttp.
-onreadystatechange = function0 1 if(this readyState 4 this.status
-200) { console.log this.responseText) ;
->
-xhttp.open &quot; GET &quot; &apos; process php &quot;, true
-xhttp.send() ; php code
->
-// process php
->
-? php echo Hello from
-PHP
->
-ASP
->
-SimilarlY% AJAX can communicate with server - side technologies like
-ASP.
->
-AJAX with ASP:
->
-javascript code letxhttp = new XMLHttpRequest() ; xhttp.
-onreadystatechange = function
-if(this readyState 4 this.status
-200) 
->
-console.log this.responseText) ;
->
-1
->
-xhttp.open &quot; GET &quot; &apos; process.asp, true
-xhttp.send() ; asp code
-process asp &dash;-
-
-Response.Write(i&apos; Hello from ASP ! ii)
-
-<h6>AJAX Database</h6>
-
-AJAX can be used to interact with databases on the server.
-
-Database Interaction with AJAX:
-
-javascript code letxhttp = new XMLHttpRequest
-xhttp.onreadystatechange = function
-if(this.readyState 4 this.status
-200) console.log this.responseText) ;
-
-xhttp.open GET &quot;, fetch_data.php true)
-xhttp.send() ; php code
-
-// fetch_data.php
-
-? php
-
-// Fetch data from database and return as JSON
-
-<h6>AJAX Applications</h6>
-
-AJAX enables building interactive web applications with real - time
-data.
-
-Real - time Chat Application:
-
-javascript code setlnterval(O = &gt; {
-
-// Fetch new messages and update chat interface l, 5000) ;
-
-<h6>AJAX Examples</h6>
-
-Here are more examples demonstrating various AJAX functionalities.
-
-Example 1:
-
-javascript code
-
-// Fetch weather data from an API and display on a webpage
-
-AJAX Example 2:
-
-javascript code
-
-// Fetch user - specific data and update profile information
-dynamically
-
-This comprehensive guide covers AJAX(Asynchronous JavaScript and
-XML), including an introduction to AJAX, using XMLHttp, making AJAX
-requests and handling responses, fetching XML files, interacting with
-server - side technologies like PHP and ASP, working with databases,
-building AJAX applications, and providing examples and explanations
-for each concept.
-
-AJAX Example 3: Dynamic Content Loading
-
-HTML:
-
-html code &lt; ! DOCTYPE html&gt;
-
-&lt; html &gt;
-
-&lt; head&gt;
-
-&lt;title&gt;AJAX Dynamic Content&lt; / title&gt;
-
-&lt; script&gt; function loadContent() &lbrack; let xhttp = new XMLHttpRequest
-() ; xhttp.onreadystatechange = function
-}if(this.readyState 4 this.status
-200) &lbrack; document.getElementById(&apos;l dynamicContent &quot;).innerHTML
-this.responseText;
-
-xhttp.open(&apos;&Hat;i&Hat; GET content.html, true
-xhttp.
-send
-
- / script&gt;
-
- / heads
-
-&lt;button onclick z&quot; loadContent &gt;Load Content&lt; / button&gt;
-
-{div id dynamicContent / dip
-
- / bodY&gt;
-
-/ html&gt; content.html(Sample Content
-):
-
-html code
-
-<h2>Welcome to Dynamic Content</h2>
-
-&lt;p&gt;This content was loaded dynamically using AJAX.&lt; / ps
-
-This example demonstrates a simple button that triggers an AJAX
-request to load content from an external HTML file and displays it on
-the webpage without refreshing the entire page.
-
-AJAX Example 4: Form Submission with AJAX
-
-HTML:
-
-html code
-
- ! DOCTYPE html&gt;
-html &gt;
-
-ehead&gt;
-
-&lt;title&gt;AJAX Form Submission &lt; / title&gt;
-
-•script&gt; function submitForm let formData = new FormData(document.
-getElementById(t&Hat;i&Hat; myForm
-let xhttp = new XMLHttpRequest ; xhttp.
-onreadystatechange = function
-if(this readyState 4 this status 200)
-&lbrack; document.getElementById(&apos;i response &quot; innerHTML = this.
-responseText;
-
-xhttp.open POST, processForm.php t&apos;, true
-xhttp.send(formData) ;
-
- / scripts
-
- / heads
-
-
-&lt;input type text name username placeholder Username &gt;
-
-&lt;input type password t&apos; name password placeholder Password
-&lt;button type button onclick submitForm
-/ button&gt;
-
- / form&gt;
-
-IV id response &apos;i / divs
-
- / bodY&gt;
-
- / html&gt; processForm php(Server - side
-Processing
-php code
-
-&lt; ? php
-
-&dollar;&lowbar;SERVER &lbrack;l&apos; REQUEST_METHOD &apos;I&rbrack;
-POST
-
-&dollar;username &dollar;&lowbar;POST username
-&quot;l
-
-&dollar;password &dollar;&lowbar;POST &lbrack; l&apos;
-password
-
-// Perform validation or database operations echo Form submitted
-successfully by
-&dollar;username
-
-} else { echo Invalid request •
-
-This example demonstrates a form submission using AJAX.When the form
-is submitted, the data is sent asynchronously to a server - side PHP
-script for processing.The response from the server is displayed on
-the webpage without refreshing the entire page.
-
-AJAX Example 5: Fetching JSON Data
-
-JavaScript:
-
-javascript code fetch(&apos;data jsont
-
-.then(response = &gt; response.json 0)
-
-.then(data = { console.log(data) ;
-
-// Process and use the retrieved JSON data
-
-.catch(error = &gt; console.error(&apos;Error: error)) ; data json
-(Sample JSON Data):
-
-json code
-
-name &Hat;i&Hat;&apos;: John Doe
-age 30,
-
-&quot; city n: New York &quot;
-
-This example utilizes the Fetch API to make an AJAX request to fetch
-JSON data from a file.Upon successful retrievål, the JSON data is
-processed and used within the JavaScript code.
-
-These additional examples showcase various use cases of AJAX, such as
-loading dynamic content, form submission without page refresh, and
-fetching and using JSON data asynchronously.
-
-AJAX Example 6: Image Gallery with AJAX
-
-HTML:
-
-html code
-
- ! DOCTYPE html&gt;
-html &gt;
-
-&lt;title&gt;AJAX Image Gallery&lt; / title)
-
-•script&gt; function
-loadlmages
-
-let xhttp = new XMLHttpRequest ; xhttp onreadystatechange = function
-if(this readyState 4 this.status 200
-) &lbrack; let images = JSON.parse(this.responseText) ; let gallery =
-document.getElementById imageGallery t&apos;) ; images.forEach(img =
-{ let imageNode = document.createElement(i&apos; img &quot; ; imageNode.
-src = img url; gallery appendChild(imageNode) ;
-
-
-xhttp.open(0 GET o, images.json &quot;, true) ; xhttp.
-send
-
-&lt; / script&gt;
-
- / heads
-
-&lt;body onload loadlmages
-
-IV id imageGallery &quot; / diV&gt;
-
- / bodY&gt;
-
- / html&gt; images.json(Sample Image
-Data in JSON Format):
-
-json code
-
-url imagel.jpg,
-caption i&apos;.Image
-1
-
-url i&apos;: image2.jpg
-caption it.Image
-2
-
-// Add more image objects as needed
-
-This example demonstrates loading images dynamically into an image
-gallery on a webpage using AJAX.The images and their respective URLs
-are stored in a JSON file, which is fetched asynchronously, and the
-images are displayed in the gallery.
-
-AJAX Example 7: Autocomplete Search
-
-HTML:
-
-html code
-
-&lt; ! DOCTYPE html&gt;
-
-&lt; html &gt;
-
-&lt;head&gt;
-
-&lt;title&gt;Autocomplete Search&lt; / title&gt;
-
-&lt;script&gt; function search() { let query = document.getElementById
-searchlnput value; fetch(&apos; search.php?q &dollar;(query} &apos;
-
-
--   then(response = &gt; response.json 0)
-     then(data = &gt; { let results =
-    document.getElementById(&apos;i searchResults &quot;)
-    results.innerHTML =
-    
-let listltem = document.
-    createE1ement(&apos;i li ; listltem textContent = item name; results.
-    appendChild(listltem) ;
-
--   catch(error = console.error(&apos;Error: t, error ;
-
-&lt; / script&gt;
-
-/ heads
-
-&lt;input type text id searchlnput onkeyup search(Y&apos; placeholder
-Search cul id searchResu1ts /
-/ bodY&gt;
-
-/ html&gt; search php(Server - side
-Script Handling Search):
-
-php code
-
-&lt; ? php
-
-&dollar;searchTerm = &dollar;&lowbar;GET I &apos;q&apos; &rbrack; ; // Get search query
-
-// Perform database or data search operations based on the query and
-return results
-
-&dollar;results = ame &gt; Result &vert; 4&apos;&rbrack;,
-name &gt; Result 2 &Hat;il&Hat; l,
-
-// Add more search results as needed
-
-echojson_encode(&dollar;results) ; // Return results as JSON
-
-This example demonstrates an autocomplete search feature using AJAX.
-As the user types in the search input field, an AJAX request is made
-to a server - side PHP script(search.php) that processes the
-search query and returns matching results in JSON format, which are
-then displayed as autocomplete suggestions
-
-
-These additional examples showcase different functionalities of AJAX,
-such as creating an image gallery dynamically and implementing an
-autocomplete search feature, using asynchronous data fetching and
-manipulation on a webpage.
-
-AJAX Example 8: Live Data Update
-
-HTML:
-
-html code
-
-&lt; ! DOCTYPE html&gt;
-
-&lt; html &gt;
-
-&lt;head&gt;
-
-&lt;title&gt;Live Data Update&lt; / title&gt;
-
-&lt;script&gt; function updateData() { setlnterval
-fetch(&apos;live_data, php•
-
-
-.then(response = response json0)
-then(data = &lbrack; document.
-getElementById(&Hat;i&Hat; liveData&apos; inner Text = data.value;
-
-.catch(error = &gt; console.error(&apos;Error: j, error ;
-
-5000) ; // Update every 5 seconds
-
-window.onload = updateData;
-
- / scripts
-
-/ heads
-
-Data &lt; spanid liveData / span&gt;&lt; /
-h
-
- / bodY&gt;
-
- / html&gt; live_data.php(Server -
-side Script Providing Live Data
-php code
-
-&lt; ? php
-
-// Simulate live data update
-
-&dollar;data &lbrack; &apos;value&apos; &gt; rand(1, 100 ; // Generate random value echo
-json_encode(&dollar;data) ; // Return live data as JSON
-
-This example demonstrates updating live data on a webpage at regular
-intervals using AJAX.The JavaScript function updateData uses
-setlnterval to fetch updated data from the server - side PHP script(
-live_data.php) every 5 seconds and displays it on the webpage.
-
-AJAX Example 9: Infinite Scroll
-
-HTML: html code
-
-&lt; ! DOCTYPE html&gt;
-
-&lt; html &gt;
-
-&lt;head&gt;
-
-&lt;title&gt;lnfinite Scroll&lt; / titles
-
-&lt; style &gt;
-
-#content height: 200px; overflow - y:
-scroll;
-
-&lt; / style&gt; &lt;script&gt; let page
-function loadMoreContent { let content
-document.getElementById(&apos;content&apos;) let scrollHeight content.
-scrollHeight; let scrollTop content.scrollTop; let offsetHeight
-content.offsetHeight; if(scrollHeight - scrollTop offsetHeight) {
-fetch(content, php?page &dollar;{page}) then(response &gt; response text
-C)) then(data &gt;
-
-
-
-content.innerHTML +- data; page +4.
-
-.catch(error = &gt; console.error &apos;Error:, error)) ;
-
-window.onscroll = loadMoreContent;
-/ script&gt;
-
-/ heads
-
-IV id content t&apos; onscroll
-loadMoreContent(Y&Hat;i&Hat; 
-
-&lt; !&dash;- Initially loaded content &dash;- &gt;
-
-<h6>&lt; / dip</h6>
-
- / bodY&gt;
-
-/ html&gt; content.php(Server - side
-Script Providing Content
-php code
-
-&lt; ? php
-
-&dollar;page = &dollar;&lowbar;GET I &apos;page&apos; I ; // Get page number
-
-&dollar;limit= 10; // Number of items per page
-
-&dollar;start --- &dollar;page- 1 &dollar;limit; // Calculate starting index
-
-// Fetch content based on page number and limit
-
-// Example: &dollar;results = fetchDataFromDatabase(&dollar;start, &dollar;limit) ;
-
-// Generate sample content for demonstration
-
-&dollar;results = range(&dollar;start 1, &dollar;start + &dollar;limit) ; foreach(
-&dollar;results as &dollar;result) { echo cp&gt;ltem &dollar;result&lt;
-
-
-This example demonstrates an infinite scroll functionality using AJAX
-.As the user scrolls down the pagej the loadMoreContent function
-detects when the user reaches the bottom of the content area and
-triggers an AJAX request to fetch more content(content.php) from
-the server - side PHP script, which is then dynamically appended to
-the existing content on the webpage
-
-
-These additional examples showcase different functionalities of AJAX,
-such as live data updates and implementing infinite scroll behavior on
-a webpage, demonstrating how AJAX can be used to fetch and display
-data dynamically without page reloads.
-
-AJAX Example 10 File Upload with Progress Bar
-
-HTML:
-
-html code
-
-&lt; ! DOCTYPE html&gt;
-
-&lt; html &gt;
-
-&lt;head&gt;
-
-&lt;title&gt;File Upload with Progress&lt; / title&gt;
-
-&lt;script&gt; function uploadFile { let filelnput document.
-getElementById(&apos;filelnput&apos;) ; let file filelnput.files I O ;
-
-let formData = new FormData ; formData.append(file&apos;, file) ;
-
-let xhr = new XMLHttpRequest() ; xhr.open(&apos;POST&apos;, &apos;upload.
-phpl, true) xhr, upload.onprogress function(e
-) { e lengthComputab1e) { let
-percentComplete(e.loaded / e.total) &ast; 100; document.
-getElementById(&apos;progressBar&apos; style.width percentComplete
-+
-
-Xhr.onload function if(xhr.status
-alert(&apos;File uploaded successfully !
-) ;
-
-alert(&apos;Error uploading file
-,
-
-xhr.send(formData) ;
-
-&lt; / scripts
-
-&lt; / heads
-
-&lt;input type file &quot; id filelnput &quot; &gt;
-
-&lt;button onclick uploadFile(YI &gt;Upload&lt; / button&gt;
-
-&lt;div id progressBarContainer &Hat;0&Hat; &gt;
-
-&lt;div id progressBar / diV&gt;
-
- / dip
-
- / bodY&gt;
-
-} / html&gt; upload php(Server - side
-Script for File Upload):
-
-php code &lt; ? php
-
-&dollar;&lowbar;SERVER I &apos;REQUEST_METHOD I TOSTI
-isset(&dollar;&lowbar;FILES &lbrack; &apos;file&apos; l)) { &dollar;targetDir = &apos;uploads / I;
-
-&dollar;targetFile = &dollar;targetDir.basename(&dollar;&lowbar;FILES &lbrack; &apos;file&apos; Inamel
-l) if(move_uploaded_file(&dollar;&lowbar;FILES &lbrack;
-&ast;filet Il &apos;tmp_name• I &dollar;targetFile)) &lbrack; echo &apos;File uploaded
-successfully ! I;
-
-} else &lbrack; echo &apos;Error uploading file
-
-
-
-This example demonstrates a file upload functionality using AJAX with
-a progress bar.When a user selects a file and clicks the Upload I&apos;
-button, the file is uploaded asynchronously to the server using an
-XMLHttpRequest.The progress bar visually indicates the upload
-progress.
-
-AJAX Example 11: Displaying Time Dynamically
-
-HTML:
-
-html code
-
- ! DOCTYPE html&gt;
-html &gt;
-
-&lt;title&gt;Displaying Time Dynamically&lt; / title&gt;
-
-•script&gt; function displayTime() { let timeDisp1ay = document.
-getE1ementById(&apos;timeDisplay&Hat;i&Hat;) ; setlnterval
-fetch(&apos;getTime php &Hat;i&Hat;)
-then(response = response text C))
-
-.then(data = &lbrack; timeDisplay.innerHTML = data;
-
-.catch(error = &gt; console.error(&apos;Error: i, error ;
-
-1000) ; // Update every second
-
-window.onload = displayTime;
- / script&gt;
-
- / heads
-
-Chl &gt;Current Time(span id timeDisplay / span&gt;&lt; / 111b
-
- / bodY&gt;
-
- / html&gt;
-
-getTime.php(Server - side Script to Get Current Time):
-
-php code
-
-&lt; ? php echo date(&apos;h: i: s A&apos;) ; // Return current time
-
-This example demonstrates dynamically displaying the current time on a
-webpage using AJAX.The displayTime function fetches the current time
-from the server - side PHP script(getTime.php) at intervals of
-one second and updates the time display on the webpage.
-
-These examples showcase different functionalities of AJAX, including
-file uploads with progress tracking and displaying dynamic content(
-such as current time) on a webpage.AJAX allows for seamless
-interactions between the client and server without page reloads,
-enhancing user experience and providing dynamic content updates.
-
-<h6>JS JSON</h6>
-
-JSON(JavaScript Object Notation) is a lightweight data interchange
-format that is easy for humans to read and write and easy for machines
-to parse and generate.It is commonly used to transmit data between a
-server and a web application.
-
-<h6>JSON Intro</h6>
-
-JSON serves as a language - independent data format derived from
-JavaScript object literals It&apos;s widely used for data exchange between
-web servers and web clients
-
-Example of JSON Data
-json code
-
-name John Doe
-age n: 30, &Hat;i&Hat;&quot; email john@example com
-t&apos; isStudent i&apos;: false,
-address
-street i&apos;: 123 Main St
-city
-Anytown
-l, hobbies reading coding, traveling &quot;l
-
-<h6>JSON Syntax</h6>
-
-JSON syntax is derived from JavaScript object notation, consisting of
-key - value pairs enclosed in curly braces O, and values can be
-strings, numbers, objects, arrays, booleans, or null.
-
-Example of JSON Syntax:
-
-json code
-
-&quot; keyl &apos;4: valuel 
-
-&quot; key2 &apos;i: 123,
-
-&quot; key3 &apos;&Hat;i&Hat;: true,
-
-&quot; key4 &apos;i: null,
-
-&quot; key5 &apos;i: {
-nestedKey &apos;t:
-nestedValue
-
-key6 &quot;: &apos;i arrayVa1ue1 arrayVälue2
-&Hat;t&Hat;&apos; &rbrack;
-
-<h6>JSON vs XML</h6>
-
-JSON and XML are both used for data interchange, but JSON is generally
-more lightweight and easier to read and parse than XML.
-
-Example Comparison between JSON and XML:
-
-json code
-
-// JSON
-
-name John, age 25,
-city New
-York
-
-xml code
-
-XML
-euser&gt;
-
-•namesJohn&lt; / name&gt;
-
-/ ago
-
-•citY&gt;New York&lt; / citY&gt;
-
-
-/ user)
-
-JSON Data Types
-
-JSON supports several data types: strings, numbers, booleans,
-objects, arrays, null,
-
-Example of Different Data Types in JSON:
-
-json code
-
-&quot; string Hello, World
-number &Hat;Il&Hat;: 42,
-
-&quot; boolean I&apos;: true,
-
-&quot; nullValue &Hat;it&Hat;: null,
-object(&quot; key &apos;l: &quot; value
-l&apos
-
-&quot; array &lbrack; 1, 2, 3
-
-JSON Parse
-
-JSON.parse() is a method in JavaScript used to parse JSON data into
-a JavaScript object
-
-
-Example ofJSON Parsing:
-
-javascript code let jsonString - name &quot; Alice age •r: 28B; letjsonObj
-= JSON.parse(jsonString) ; console.log(jsonObj.name); //
-Output: Alice
-
-### JSON Stringify
-
-JSON.stringify() is a method in JavaScript used to convert a
-JavaScript object into a JSON string.
-
-Example of JSON Stringification:
-
-javascript code let obj {name Bob age: 30
-let jsonString = JSON.stringify(obj
-) ; console.log(jsonString) ; // Output: { &apos;&Hat;i&Hat; name Bob, age
-30)
-
-### JSON Objects
-
-JSON objects contain key - value pairs enclosed in curly braces f}.
-Keys must be strings, and values can be of any JSON data type.
-
-Example of a JSON Object:
-
-json code
-
-name Sarah t&apos; age 35,
-city &apos;i:
-London
-
-JSON Arrays
-
-JSON arrays are ordered lists of values enclosed in square brackets
-l&rbrack;, The values can be of any JSON data type
-
-
-Example of a JSON Array:
-
-json code apple, banana,
-orange
-
-### JSON Server
-
-JSON is commonly used to transfer data between a server and a web
-client in web development.Servers often provide data in JSON format
-through APIs.
-
-Example of JSON Data from a
-Server
-
-json code
-
-// Received from a server API endpoint
-
-
-
-title &apos;I: Sample
-Post
-
-&quot; content it: &quot; This is a sample post content.11
-
-JSON PHP
-
-In PHP, JSON data can be encoded and decoded using json_encode() and
-json_decode() functions respectively, to convert data to and from
-JSON format.
-
-Example of Encoding and Decoding JSON in PHP
-php code
-
-// Encoding PHP array to JSON
-
-&dollar;data array(It name &quot; Peter&quot; &quot; age &gt; 28) ;
-
-&dollar;jsonData = json_encode(&dollar;data) ;
-
-// Decoding JSON to PAP array
-
-&dollar;jsonString= name t&apos;: Alice, age &apos;i: 30}i;
-
-&dollar;decodedData = json_decode(&dollar;jsonString, true
-)
-
-JSON HTML
-
-JSON data can be used in HTML to dynamically generate content on
-webpages using JavaScript.
-
-Example of Using JSON Data in
-HTML
-
-html code id userList
-
-
-&lt; script&gt; const users
-name &apos; John &quot; age 25 1,
-name Alice &quot; age 301,
-name Bob &quot;, age 28
-
-&Hat;I&Hat;
-
-const userList = document.getElementByld(&apos;i userList ; users.
-forEach(user = &gt; f let listltem = document.createElement(&apos;i li
-t&apos;) ; listltem.textContent = &dollar;fuser name} - &dollar;{user.age) years
-old, userList.appendChi1d(listltem) ;
-
- / script&gt;
-
-JSON JSONP
-
-JSONP(JSON with Padding) is a technique for requesting JSON data
-from a different domain in web development to bypass the same - origin
-policy limitations.
-
-Example of JSONP Request:
-
-javascript code function handleData(data) f console.log(data)
-;
-
-let script document.createElement(&apos;script&apos;) ; script, src
-&apos;https:// example.com / data?callback handleData&apos;; document.
-head.appendChild(script) ;
-
-This comprehensive guide covers JSON(JavaScript Object Notation) in
-detail, including an introduction, syntax, comparison with XML, data
-types, parsing, stringifying, JSON objects and arrays, working with
-JSON in server - side technologies like FHP, HTML, and JSONP, with
-examples and explanations for each topic JSON plays a crucial role in
-data interchange in web development due to its simplicity, ease of
-use, and widespread support.
-
-I Creating aJSON Object:
-
-javascript code let person = {
-name John, age 30, t&apos; city &apos;i: i&apos;
-New York
-l;
-
-2..Accessing JSON Object Properties:
-
-javascript code console.log(person.name) ; // Output: John
-console.log(person.age) ; // Output: 30
-
-3. Nested JSON Objects:
-
-java script code
-
-let employee
-
-name Alice
-position &apos;i: Engineer
-contact
-email: alice@example com t&apos;
-phone &quot; 123 - 456 -
-7890
-
-4. JSON Array of Objects:
-
-javascript code let
-books
-
-&quot; title.
-&apos;  Book
-1, &quot; author Author 1
-title 0: Book 2
-,
-author Author 2
-&quot;
-title  Book3  &quot; author &apos;l: Author 3
-
-5. Converting JSON to String:
-
-javascript code let jsonString z JSON.stringify(person) ; console
-.log(jsonString) ; // Output: { name &quot; John&apos;, &quot; age 1&apos;• 30, &quot;
-city New York
-
-6. Parsing JSON String to Object:
-
-javascript code let jsonObject = JSON.parse(name Alice j age •t: 25,
-city London y) ; console.log(jsonObject.name) ; // Output: Alice
-
-7..Fetching JSON Data from URL(using Fetch API
-javascript code fetch(&apos;data.
-    json&apos;
-
-.then(response &gt; response.json C))
-
-.then(data &gt; console.log(data))
-
-.catch(error = &gt; console.error(&apos;Error: error)) ;
-
-8. Displaying JSON Data Dynamically in HTML: javascript code
-    letjsonData { &quot; name &apos;1: Bob &quot;, age
-    28
-
-let displayDiv document.getElementById(&apos;jsonDataDisplay&apos;) ;
-displayDiv.innerHTML = &lt;p&gt;Name: &dollar;fjsonData.name}&lt; / p&gt;&lt;p&gt;Age
-: &dollar;&lbrack;jsonData./ •
-
-9. Handling JSON Data in Forms:
-
-javascript code let form - document.getElementById(ImyForm&apos;) ;
-form.addEventListener(&apos;submit&apos;, function(event) { event.
-preventDefault() ; let formData = new FormData(form) ;
-letjsonObject O; formData.forEach((value, key) &gt; { jsonObject &lbrack;
-key I value;
-
-console.log(jsonObject) ;
-
-10..Stringifying and Parsing a More Complex Object:
-
-javascript code let complexObj &lbrack;
-
-&quot; name Sam &quot;,
-
-&quot; age 35,
-addresses
-type &Hat;1&Hat;&apos;: &quot; home address 123 Main St
-&quot;type u: &quot; work &quot;, &quot; address 456
-Business
-Ave
-
-let complexString = JSON.stringify(complexObj) ; let parsedObj =
-JSON.parse(complexString) ; console.log(parsedObj.addresses
-I O l.address) ; // Output: 123 Main St
-
-11..Filtering JSON Array Data:
-
-java script code let
-employees
-
-&quot; name n: &quot; John, department HR }
-&quot; name &Hat;n&Hat;: &quot; Alice, department
-IT
-
-&quot; name n: &quot; Bob &quot;,
-department
-
-let hrEmployees = employees.filter(employee &dash;- &gt; employee
-department HR &apos;)
-console.log(hrEmployees) ; //
-Output: name John
-department name &apos;i &quot; Bob
-department &apos;i: HR I &rbrack;
-
-12..Updating JSON Object Properties:
-
-javascript code let product &lbrack; name Chair price 50
-product.price 60; console.log(
-product) ; // Output: &lbrack; name &quot; Chair u price 60)
-
-13..Removing a Property from JSON Object:
-
-javascript code let data { &quot; name &apos;t: Kate &quot;age&quot;: 25 }
-delete data, age; console.log(data
-) ; // Output: f &quot; name.
-Kate
-
-14.Using JSON with Local Storage:
-
-javascript code let userData = f username i&apos;: user 123 email
-user@example.com localStorage.setltem(•userData&Hat;i&Hat; &dollar;
-JSON.stringify(userData)) ; let storedData = JSON.parse(
-localStorage.getltem(iuserData&Hat;i&Hat;
-console.log(storedData email) ; //
-Output: user@example.com
-
-15..Handling JSON Date Strings:
-
-java script code letjsonData date n: 2023 - 12 - 31T08: OO: OOZ
-let date = new Date(jsonData.date) ;
-console.log(date.toDateString ; // Output: Fri Dec 31 2023 16.
-Using JSON in Asynchronous Functions:
-
-javascript code async function fetchData O
-try &lbrack; let response = await fetch(
-&apos;data.jsonl let data await response.json
-console.log(data) ;
-
-} catch(error) { console.error(&apos;Error l, error) ;
-
-fetchData ;
-
-17..JSON Serialization with Custom Functions
-javascript code let obj - {
-
-&quot; name &apos;l Joe  birthday n: new Date(&apos;1990 - 01 -
-15TOO: OO: OOZ),
-
-&quot; toJson function &lbrack; return &quot; name &dollar;{this.name} &quot; birthday 1&apos;:
-&quot; &dollar;{this.birthday, tolSOString()
-l&apos;
-
-let jsonString obj.toJson
-console.log(jsonString) ; // Output:
-{ &quot; name &Hat;I&Hat; &apos;.&quot; Joe &quot; &quot; birthday l&apos; 1990 - 01 - 15TOO: 00:
-00 OOOZ
-
-18..Handling JSON Data from an API(Using Axios):
-
-javascript code axios.get(lhttps api.example.com / datal)
-
-.then(response &gt; console.log(response.data)).catch(
-error = &gt; console.error(&apos;Error: error)) ;
-
-19..Merging JSON Objects:
-
-javascript code let 0b) 1 name &quot; Tom age &Hat;u&Hat;: 30
-letobj2 { &quot; city &apos;l: Paris, country
-France let mergedObj &lbrack; • objl, &period;..obj2
-console.log(mergedObj) ; // Output: {
-&quot; name &apos;I: &quot; Tom &quot;, I&apos; age
-1&apos;
-20.Mapping JSON Data to Another Structure:
-
-javascript code let data = I
-
-name.Item 1 name &apos;i: Item 2 name Item
-3
-
-let mappedData = data.map(item = &gt;(&lbrack; itemld: item.idi
-itemName  console.log(mappedData) ;
-
-// Output: &lbrack; { itemld 1, &quot;itemName Item 1 Ij itemld &Hat;i&Hat; &apos;: 2,
-itemName Item 3 I
-
-city 1&apos;: Paris &apos;l country &quot;: &Hat;F&Hat;&apos;
-France
-
-item.name})) ;
-
-itemName Item
-2 itemld 0: 3,
-
-These examples showcase different aspects of using JSON in JavaScript,
-including creating, manipulating; parsingj and working with JSON data
-in various scenarios.
-
-<h3>JavaScript vs jQuery: A Comprehensive Comparison</h3>
-
-JavaScript and jQuery are both powerful tools used in web development
-JavaScript is a programming language, while jQuery is a library built
-with JavaScript.Understanding their differences, capabilities, and
-usage scenarios is crucial for developers.
-
-JavaScript Overview
-
-JavaScript is a versatile programming language primarily used for
-enhancing interactivity on web pages.It&apos;s a core technology in web
-development, enabling dynamic content updates, user interactions, and
-handling client - side functionalities.
-
-Example of JavaScript Functionality:
-
-javascript code
-
-// JavaScript code to change text color on button click function
-changeColor
-document.getElementById text I&apos;).
-style, color &quot; blue,
-
-JavaScript offers native methods and APIs to interact with the
-Document Object Model(DOM) and manipulate HTML elements, enabling
-developers to create dynamic web applications.
-
-<h3>jQuery Overview</h3>
-
-jQueryj on the other hand, is a fast, lightweight JavaScript library
-designed to simplify the process of client - side scripting and DOM
-manipulation It abstracts many complexities of JavaScript and provides
-a concise syntax for common tasks.
-
-Example of jQuery Functionality:
-
-javascript code
-
-// jQuery code to change text color on button click
-
-&dollar;(&apos;I #text &Hat;0&Hat;).CSS(&Hat;I&Hat;&apos; color &apos;l blue &apos;&Hat;l&Hat;) ;
-
-jQuery simplifies common JavaScript tasks, such as event handling,
-animations, AJAX requests, and DOM manipulation, offering a more
-concise syntax compared to native JavaScript.Differences Between
-JavaScript and jQuery
-
-I.Syntax:
-
--   JavaScript: Uses native syntax and methods provided by the language
-   .
-
--   jQuery: Offers a simpler syntax and concise methods for common
-    tasks, making code shorter and more readable,
-
-2. DOM Manipulation:
-
-    -   JavaScript: Provides direct DOM manipulation using methods like
-        getElementById and querySe1ector
- jQuery: Simplifies DOM
-        traversal and manipulation with methods like &dollar;() allowing
-        easier element selection and modification.
-
-3. Browser Compatibility:
-
-    -   JavaScript: Works across all modern browsers, but handling
-        cross - browser compatibility may require additional code.
-
-    -   jQuery: Provides cross - browser compatibility out - of- the -
-        box, reducing the need for explicit compatibility
-        handling
-
-4. Learning Curve:
-
-    -   JavaScript: Requires understanding core language concepts,
-        which might have a steeper learning curve for beginners
- jQuery: Offers a simpler
-        learning curve due to its concise syntax and abstraction of
-        complex JavaScript operations.
-
-<h3>jQuery Selectors</h3>
-
-jQuery provides powerful selectors that allow developers to effciently
-target and manipulate HTML elements
-
-
-Example of jQuery Selectors:
-
-javascript code
-
-// Selecting elements with class iexample&Hat;i&Hat;
-
-.example CSS(&apos;t font - size &Hat;i&Hat;
-16px
-
-// Selecting all elements inside &lt;div&gt; with ID &apos;content&apos; &dollar;(&quot;
-#content p addClass highlight &quot;) ; jQuery selectors, similar to CSS
-selectors, enable developers to target elements based on IDs, classes,
-attributes, element types, and more
-jQuery HTML Manipulation
-
-jQuery simplifies HTML content manipulation by providing methods to
-insert, remove, and modify HTML elements and their content.
-
-Example of jQuery HTML Manipulation
-javascript code
-
-// Appending a new element to an unordered list
-
-ul append(t&apos; &lt;li&gt;New Item&lt; / t&apos;)
-
-// Changing text content inside a &lt;div&gt; element
-
-&dollar; #content text(I&apos; Updated
-content
-
-With jQuery&apos;s methods like append, html text and remove, developers
-can effciently modify HTML content on the fly.
-
-<h3>jQuery CSS Manipulation</h3>
-
-jQuery facilitates CSS maniptilation, allowing changes to element
-styles dynamically.
-
-Example of jQuery CSS Manipulation:
-
-javascript code
-
-// Changing the background color of an element
-
-&dollar;(&apos;I #box Il).CSS background - color, #f2f2f2
-&quot;)
-
-// Toggling a CSS class on an element
-
-&dollar;(&apos;I #toggleBtn Il).click(function {
-
-#content toggleClass(I&apos; active &apos;1) ;
-
-jQueryls css, addClass, removeClass and toggleClass methods simplify
-applying, removing, and toggling CSS styles.
-
-<h3jQuery DOM Traversal</h3
-
-jQuery simplifies DOM traversal, enabling easy navigation between
-elements and their relationships within the
-DOM
-
-Example of jQuery DOM Traversal:
-
-javascript code
-
-// Finding the next sibling element
-
-&dollar;(&quot; #current next addClass highlight &apos;&Hat;i&Hat;) ;
-
-// Traversing up the DOM to find parent elements
-
-&dollar;(&quot; a &apos;l).closest div Il).addClass(&apos;I parent - div
-u)
-
-Using methods like next, prev.find, closest and siblings jQuery
-provides effcient ways to navigate and manipulate elements within the
-DOM.
-
-<h3Conclusion</h3
-
-JavaScript and jQuery each have their strengths and use cases in web
-development.JavaScript is the foundation language that provides
-extensive capabilities for building complex applications.jQuery, as
-a library built on JavaScript, simplifies common tasks, particularly
-DOM manipulation, offering a more concise syntax.
-
-For modern development, JavaScript&apos;s native features are often
-preferred due to advancements in web standards, while jQuery remains
-relevant for legacy projects or when compatibility with older browsers
-is a concern.Understanding both JavaScript and jQuery empowers
-developers to choose the right tool for the job and build robust,
-interactive web applications.
-
-JavaScript and jQuery in various Examples:
-
-I Selecting an Element by ID:
-
-JavaScript:
-
-javascript code let element = document.getElementById(t&apos; myElement
-&quot;) ; element.style color = blue ; jQuery:
-
-javascript code
-
-#myElement &ast; &Hat;I&Hat;).CSS(&apos;i color blue
-t&apos;) ; 2.Selecting Multiple Elements by Class:
-
-JavaScr ipt:
-
-javascript code let elements document.getElementsByClassName(&apos;t
-myClass &apos;l), for(let i O; i &lt; elements.length; i +4) { elements
-I i style fontWeight &quot; bold l&apos;,
-
-j Query:
-
-javascript code
-myClass CSS(t&apos; font - weight, bold
-&apos;
-
-3.Adding Event
-Listeners
-
-JavaScr ipt:
-
-java script code document.getElementById(I&apos; myButton
-addEventListener(&apos;l click function
-alert Button clicked !&quot;
-
-j Query:
-
-javascript code
-
-&dollar;(&quot; #myButtan on(t&apos; click &apos;&Hat;i&Hat; function
-alert(t&apos; Button clicked l&quot;) •
-
-4.Handling Document Ready
-Event
-
-JavaScr ipt:
-
-java script code document.addEventListener(&apos;l DOMContentLoaded n
-function() {
-
-// Code to execute when DOM is ready
-
-j Query:
-
-javascript code
-document ready(
-function
-
-// Code to execute when DOM is ready
-
-5.Creating a New Element:
-
-JavaScr ipt:
-
-java script code let newElement = document.createElement(&apos;I div
-&quot;) newElement.textContent &quot; New Content
-document.body.appendChild(
-newElement) ;
-
-j Query:
-
-javascript code
-
-&dollar;(&apos;i body 0).append(&apos;i &lt;div&gt;New Content&lt; / divs &apos;&Hat;i&Hat;)
-
-
-6.Removing an Element:
-
-JavaScript:
-
-javascript code let elementToRemove = document.getElementById(i&apos;
-toBeRemoved i&apos;) ; elementToRemove.parentNode.removeChild(
-elementToRemove) ; jQuery:
-
-javascript code
-
-&dollar; #toBeRemoved &apos;).remove
-7 Manipulating CSS Class:
-
-JavaScript:
-
-javascript code document.getElementById(&apos;i myDiv classList.add
-active jQuery:
-
-javascript code
-
-&dollar; #myDiv addClass(&apos;I active
-I&apos;)
-
-8. Changing Text
-    Content
-
-JavaScript:
-
-javascript code document.getElementById(0 mySpan) textContent =
-Updated Text,
-
-jQuery:
-
-javascript code
-
-&dollar;(&quot; #mySpan text(&apos;l Updated Text o) ;
-
-9. Hiding an Element:
-
-JavaScript:
-
-javascript code document.getE1ementById toHide i).style.display =
-none jQuery:
-
-javascript code
-
-&dollar; #toHide 0).hide() ;
-
-10..Fading In an
-    Element
-
-JavaScript:
-
-javascript code let elementToFade = document.getElementById toFade
-&quot;) ; elementToFade.style.opacity
-elementToFade style.transition =
-opacity Is elementToFade.style.opacity = 1;
-jQuery:
-
-javascript code
-
-&dollar; #toFade fadeln(1000
-)
-
-11..AJAX GET Request:
-
-JavaScript:
-
-javascript code let xhr = new XMLHttpRequest() ; xhr.
-onreadystatechange = function
-if(this.readyState 4 this.status
-200) { console.log this.responseText) ;
-
-l; xhr.open GET data.txt
-xhr.send ; jQuery:
-
-javascript code
-
-&dollar;.get(&apos;l data.txt,function(data) { console.log(data) ;
-
-12.AJAX POST Request:
-
-JavaScript:
-
-java script code let xhr = new XMLHttpRequest() ; xhr.open POST
-saveData true xhr.setRequestHeader Content - Type &quot;
-, application / json &Hat;i&Hat;&apos;) ; xhr.send(JSON.stringify({ name:
-John, age: 30)) ; jQuery:
-
-javascript code
-
-&dollar;.ajax(&lbrack; url saveData
-method: &quot; POST &quot;, contentType:
-application / json I
-data: JSON.stringify(&lbrack; name: &quot;
-John, age: 301)
-success: function(response) {
-
-console.log(response) ; 1
-
-13.Getting Attribute Value:
-
-JavaScr ipt:
-
-javascript code let linkHref &ast; document.getElementById(l&apos; myLink
-getAttribute(href ;
-
-j Query:
-
-javascript code let linkHref = &dollar;(&apos;i #myLink attr(i&apos; href &quot;) ;
-
-14.Setting Attribute Value:
-
-JavaScr ipt:
-
-javascript code document.getElementById(&apos;l mylmage &Hat;Il&Hat;).
-setAttribute(&apos;l src l&apos; new-image jpg &apos;I) ;
-
-j Query:
-
-javascript code
-
-#mylmage attr(&apos;t src new_image jpg
-N&apos;) ; 15.Getting Form Values:
-
-JavaScr ipt:
-
-javascript code let inputValue document.getElementById(&apos;l mylnput
-value;
-
-jQuery:
-
-javascript code let inputValue = &dollar;(&Hat;I&Hat;&apos; #mylnput &quot;) val ;
-
-16..Checking Checkbox State:
-
-JavaScript:
-
-javascript code let isChecked = document.getElementById myCheckbox
-checked;
-
-jQuery:
-
-javascript code let isChecked = &dollar;(&Hat;Il&Hat; #myCheckbox &apos;I).prop
-checked &quot;) ;
-
-17..Iterating Over NodeList:
-
-JavaScript:
-
-javascript code let elements = document.querySelectorAll myClass
-elements.forEach(function(element)
-{ console.log(element.textContent) ;
-
-jQuery:
-
-javascript code
-myClass each(function
-console.log(&dollar;(this).
-text
-
-18..Handling Form Submission:
-
-JavaScr ipt:
-
-java script code document.getElementById C&apos; myForm addEventListener
-(Q submit I, function(event) { event.preventDefau.lt() ; let
-formData new FormData(
-this
-
-// Process form data
-
-j Query:
-
-javascript code
-
-&dollar;(&quot; #myForm submit(function(event) f event.preventDefault()
-; let formData &dash;- &dollar;(this serialize() ; // Process form data
-
-19.Animating Element:
-
-JavaScr ipt:
-
-javascript code let element = document.getElementById(&apos;I myElement
-; element.style transition = transform 2s &apos;i ; element.style
-transform &quot; rotate(
-360deg
-
-j Query:
-
-javascript code
-
-&dollar;(&apos;i #myElement animate({rotate: 360deg 2000
-)
-
-20.Changing Background Color on Click:
-
-JavaScr ipt:
-
-javascript code let myDiv document.getElementById myDiv I
-myDiv.addEventListener(Il click &Hat;I&Hat;&apos;
-, function this.style backgroundC010r Il&quot; red ;
-
-j Query:
-
-javascript code
-
-&dollar;(&apos;i #myDiv click(function() f
-
-&dollar;(this css(&Hat;i&Hat;&apos; background - color red ;
-
-These examples demonstrate how JavaScript and jQuery can achieve
-similar tasks, showcasing the differences in syntax and complexity
-between the two when performing common web development operations
-JavaScript Graphics Libraries: Explained
-
-I JavaScript Graphics
-
-JavaScript is a versatile language that allows developers to create
-interactive graphics and visualizations on the web
-Several libraries and tools empower
-developers to generate captivating graphics for data representation,
-animations, games, and more.
-
-2..JS Canvas
-
-The HTML &lt;canvas&gt; element is a powerful tool in JavaScript for
-drawing graphics on a web page dynamically.It provides a bitmap area
-where JavaScript code can be used to create animations, render shapes,
-images, and complex visualizations.
-
-Example - Drawing a Circle on Canvas:
-
-javascript code const canvas = document.getElementById &apos;myCanvasI)
-; constctx = canvas.getContext(&apos;2dl) ; ctx.beginPath() ; ctx
-.arc(100, 100, 50, O, 2&ast; Math.PI) ; ctx.stroke() ;
-
-3. JS Plotly
-
-Plotly is a JavaScript graphing library that allows developers to
-create interactive and publication - quality graphs.It supports
-various chart types, including line plots, bar charts, pie charts,
-scatter plots, and more.Plotly provides easy to - use APIs for
-customization and interactivity.
-
-Example - Creating a Line Chart with Plotly
-javascript code constdata = &lbrack; 1, 2,
- 10, 15, 13,
-18&apos;scatteril I ; Plotly.newPlot(
-&apos;myDivi, data) ;
-
-4. JS Chart.js
-
-Chart.js is a popular JavaScript library for creating simple yet
-flexible charts.It supports various chart types and provides easy
-integration.With Chart.js, developers can create responsive and
-visually appealing charts.
-
-Example - Creating a Bar Chart with Chart.js:
-
-javascript code const ctx - document.getElementById(&apos;myChartI).
-getContext(&apos;2d&apos;) ;
-
-constmyChart = new Chart(ctx, { type: &apos;barf, data
-labels: &lbrack; &apos;Red&apos;, &apos;Blue, tYellow&apos;,
-&apos;Green&apos;, &apos;Purple&apos;, &apos;Orange&apos; datasets.
-
-label: of Votes&apos;, data &lbrack; 12, 19, 3, 5, 2, 3
-backgroundColor.
-
-
-132, 0 2
-)
-
-•rgba(54, 162, 235, 0 2
-)
-86, 0 2
-)
-
-•rgba(75, 192, 192, 0 2
-)
-
-&apos;rgba(153, 102, 255,0) t,
-
-•rgba(255, 159, O.2) t
-
-borderColor: I
-
-&apos;rgba(255, 99, 132, 1
-)
-
-•rgba(54, 162, 235, 1
-)
-
-•rgba(255, 206, 86, 1
-)
-
-•rgba(75, 192, 192, 1
-)
-
-&apos;rgba(153, 102, 255, 1) i,
-
-•rgba(255, 159, 64, 1) &apos;
-
-borderWidth: 1
-
-1,
-
-5.JS Google Chart
-
-Google Charts is a feature - rich JavaScript charting library that
-offers a wide range of visualization options.It allows the creation
-of interactive charts, maps, and graphs using declarative JavaScript
-syntax.
-
-Example - Creating a Pie Chart with Google Charts: javascript code
-google.charts.load(&apos;current&apos;, { packages: &lbrack; &apos;corechart&apos;
-google.charts.setOnLoadCallback(
-drawChart) ;
-
-function drawChart f constdata = google.visualization.
-arrayToDataTable(l
-
- &apos;Task&apos;, &apos;Hours per Day&apos; &rbrack;
-
-&lbrack; &apos;Work&apos;, 1 1
-
-I Eat&apos;, 2
-
- &apos;Commute&apos;, 2 &rbrack;
-&lbrack; &apos;Watch TV&apos;, 2
-
-1 &apos;Sleep&apos;, 7
-
-constoptions = &lbrack; title: &apos;My Daily Activities&apos;, pieHole: O 4,
-
-const chart new google.visualization.PieChart(document.
-getElementById(&apos;donutchartl)) ; chart.draw(data, options) ;
-
-6.JSD3.js
-
-D3 js(Data - Driven Documents) is a powerful JavaScript library
-used for creating data visualizations in SVG, HTML, and CSS.It
-provides comprehensive functionalities to manipulate documents based
-on data, enabling the creation of interactive and dynamic
-visualizations.
-
-Example - Creating a Basic SVG Circle with D3 js:
-
-java script code constsvg = d3.select(&apos;body&apos;)
-
-.append(Isvg&apos;)
-
-.attr(&apos;width&apos;, 100)
-attr(&quot;height&apos;, 100) ;
-
-svg.append(&Hat;i&Hat;circle&Hat;i&Hat;
-
-
-.attr(&Hat;i&Hat; cxt,
-50
-
-.attr(&Hat;i&Hat; cy&apos;&ast;
-50
-
-.attr(iri,
-40
-
-.attr(ibluei) ;
-
-Conclusion
-
-JavaScript graphics libraries and tools like Canvas, Plotly, Chart.
-js, Google Charts, and D3.js offer diverse capabilities for creating
-stunning visualizations and interactive graphics on the web.Each
-library has its strengths, from simplicity and ease of use to
-extensive customization and advanced features, catering to various
-needs in data representationj UI / UX enhancements, and more in web
-development.Understanding and leveraging these libraries empower
-developers to craft visually compelling and data - driven web
-applications
-
-You
-
-Canvas Examples:
-
-1. Draw Rectangle:
-
-javascript code const canvas = document.getElementById(&apos;myCanvasl
-const ctx = canvas.getContext(&apos;2d&apos;
-ctx.fillStyle &apos;blue&apos;; ctx.fillRect
-(10, 10, 100,
-50
-
-2. Draw Circle:
-
-javascript code const canvas = document.getE1ementById(imyCanvasi
-) ; const ctx = canvas.getContext(i2di) ; ctx.beginPath() ;
-ctx.arc(100, 100, 50, OJ Math.PI &ast; 2) ; ctx.fillStyle =
-iredi; ctx.fill O ;
-
-Plotly Examples:
-
-3. Create Line Chart:
-
-javascript code const data = &lbrack; { x: &lbrack; 1,
-2, 10, 15, 13, 18 1, type: &apos;scatter) I
-; Plotly.newP10t(&Hat;i&Hat; myDivt, data) ;
-
-4. Create Bar Chart:
-
-javascript code const data -({ x: I &apos;A, &apos;B, &apos;Cl l, y,
- 10, 20, 15 &vert;, type: &apos;bar&apos;) ; Plotly
-.newPlot(&apos;myDiv&apos;, data) ;
-
-Chart.js Examples:
-
-5. Bar Chart:
-
-javascript code const ctx - document.getElementById(&apos;myChart&apos;
-getContext(&apos;2d&apos;) ; constmyChart - new Chart(ctx, { type:
-&apos;bar&apos;, data: { labels(&apos;Red&apos;, &apos;Blue&apos;, &apos;Yellow&apos;, &apos;Green&apos;,
-&apos;Purple&apos;, &apos;Orange&apos;
-datasets.
-
-label: of Votes&apos;, data 12, 19, 3, 5, 2, 3 1, backgroundC010r:
-
-
-&apos;rgba(255, 99, 132.0.2
-)
-
-&apos;rgba(54, 162, 235, 0.2
-)
-
-// more colors
-
-borderWidth • 1
-
-6. Line Chart javascript code const ctx - document
-    getElementById(ImyChart&ast; getContext(&ast;2d&apos;) ; constmyChart -
-    new Chart(ctx,(type: &apos;line&apos;, data
-    labels:(&apos;January&apos;, &apos;February,
-    &apos;March&apos;, April&apos;, &apos;May&apos;, &apos;June&apos;, &apos;July&apos; I, datasets
-    label: &apos;My First Dataset&apos;, data
-    65, 59, 80, 81, 56, 55, 40 &vert;
-    borderColor: &apos;rgb(75, 192, 192)
-    g, borderWidth: 1
-
-Google Charts Examples:
-
-7. Pie Chart:
-
-javascript code google charts.load(&quot;current&apos;, { packages:
-&dollar;corechart&apos; I)) ;
-
-google.charts.setOnLoadCa11back(drawChart) ;
-
-function drawChart { constdata = google, visualization.
-arrayToDataTab1e(l
-
-&lbrack; &apos;Task&apos;, &apos;Hours per
-Day&Hat;l&Hat;
-
-&lbrack; &apos;Work&apos;, 1 1 &rbrack;,
-
-&lbrack; &apos;Eat&apos;,
-2
-
-(&apos;Commute&apos;,
-2
-
-(&apos;Watch TV&apos;, 2 &rbrack;,
-
-&lbrack; &apos;Sleep&apos;, 7 &vert;
-
-constoptions title: &apos;My Daily Activities&apos;, pieHole
-: O.4,
-
-const chart = new google.visualization.PieChart(document.
-getElementById(idonutcharti)) ; chart.draw(data, options) ;
-
-8&period; Area Chart:
-
-javascript code google.charts.load(&apos;current&apos;, { packages: &lbrack;
-&apos;corechart&apos; I) ; google.charts.setOnLoadCallback(drawChart)
-;
-
-function drawChart() { constdata = google.visualization.
-arrayToDataTab1e(i
-
-I &Hat;i&Hat;Year&apos;, &apos;Sales&apos;, &apos;Expenses&apos; &rbrack;,
-
-&vert; &apos;2013&apos;, 1000, 400 &rbrack;,
-
-&lbrack; 1 170, 460 &rbrack;, &vert; &apos;2015&apos;, 660, 1120 &rbrack;,
-
-&vert; &apos;2016&apos;, 1030, 540 &rbrack;
-
-constoptions { title: &apos;Company Performance&apos;, curveType:
-function&apos;, legend: {position:
-&apos;bottoml
-
-const chart = new google.visualization.AreaChart(document.
-getElementById(&apos;curve_chartl)) ; chart.draw(data, options) ;
-
-D3.js Examples:
-
-9. Create SVG Circle:
-
-javascript code const svg = d3.select(&apos;body&apos;)
-
-.append(&apos;svg&apos;)
-
-.attr(&apos;width&apos;, 100)
-
-.attr(&apos;height&apos;, 100) ;
-
-svg.append(&apos;circle&apos;)
-
-.attr(
-50
-
-.attr(Icy&apos;, 50)
-
-.attr(tri, 40)
-
-.attr(lfilll, &apos;blue&apos;) ;
-
-10.Create SVG Rectangle:
-
-javascript code const svg = d3.select(&apos;body&apos;)
-
-.append(&apos;svg&apos;)
-
-.attr(&apos;width&apos;, 100)
-
-.attr(&apos;height&apos;, 100) ;
-
-svg.append(irect&Hat;i&Hat;
-
-.attr(10.attr(10 
-
-.attr(•width&apos;, 80)
-
-.attr(&apos;height&apos;, 50)
-
-.attr(&apos;filli, &apos;greeni) ; Canvas Examples:
-
-1. Draw a Rectangle:
-
-javascript code const canvas document.getElementById(&apos;myCanvasl)
-; const ctx = canvas.getContext i2d&apos;) ; ctx.fillStyle =
-&apos;blue&apos;; ctx.fillRect(10, 10, 100,
-50
-
-2. Draw a Circle:
-
-javascript code const canvas - document.getElementById(
-&apos;myCanvas&apos;) ; const ctx - canvas, getContext(&apos;2d&apos;) ; ctx,
-beginPath
-ctx arc(100, 100, 50, O, Math
-ctx, fillStyle - &apos;red&apos;; ctx.fill ;
-
-Plotly Examples:
-
-3. Create a Line Chart:
-
-javascript code const data -
-10, 15, 13, 18, type: &apos;scatter&apos;) I
-; Plotly.newP10t(&apos;myDivt, data) ;
-
-4, Create a Bar Chart:
-
-javascript code const data = &lbrack; { x: &lbrack; 1B&apos;, &apos;Cl l, y
-•10, 20, 15 &vert;, type: bar
-Plotly.newPlot(ImyDiv&apos;, data) ;
-
-Chart.js Examples:
-
-5&period; Create a Bar Chart:
-
-javascript code const ctx = document.getElementById imyCharti).
-getContext(i2di) ; const myChart = new Chart(ctx,
-type: &apos;bar&apos;, data.
-
-labels: I &apos;Red&apos;, iB1ue% &apos;Yellow&apos;, &apos;Green% iPurp1ei, &apos;Orange&apos;
-&rbrack; j datasets.
-
-label: of Votes&apos;, data 12, 19, 3, 5, 2, 3 1, backgroundColor.
-
-trgba(99, 132, o.2)
-trgba(54, 162, 235, o.2) &Hat;i&Hat;,
-
-// more colors
-
-borderWidth: 1
-
-6. Create a Line Chart:
-
-javascript code const ctx - document.getElementById(&apos;myChart&apos;).
-getContext(&apos;2d&apos;) ; constmyChart - new Chart(ctx,(type:
-&apos;line&apos;, data:
-
-labels: &lbrack; &apos;January, &apos;February, &apos;March&apos;, &apos;Aprilt, &apos;May&apos;,
-&apos;June, &apos;Julyt
-datasets: &lbrack; { label: &apos;My First
-Dataset&apos;, data: &lbrack; 65, 59, 80, 81, 56, 55, 40
-borderColor.(75, 192, 192) g,
-borderWidth • 1
-
-Google Charts Examples:
-
-7. Create a Pie Chart:
-
-javascript code google.charts.load(dcurrenti, &lbrack; packages: &lbrack;
-&apos;corecharti I) ; google.charts.setOnLoadCa11back(drawChart) ;
-
-function drawChart
-constdata --- google.visualization.
-arrayToDataTab1e(l
-
-(&apos;Task&apos;, &apos;Hours per
-Day&apos;
-
-(&apos;Work&apos;, 1 1 1,
-
-(&apos;Eat&apos;,
-2
-
-(&apos;Commute&apos;, 2 &rbrack;,
-
-(&apos;Watch TV&apos;, 2,
-
-(&apos;Sleep&apos;, 7 &vert;
-
-constoptions =
-title: &apos;My Daily Activities &Hat;i&Hat;,
-pieHole: O 4, l;
-
-const chart = new google.visualization.PieChart(document.
-getElementById(&apos;donutchartl)) ; chart.draw(data, options) ;
-
-8&period; Create an Area Chart:
-
-javascript code google.charts.load(&quot;current&apos;, { packages: &lbrack;
-Icorechart&apos; I) ; google.charts.setOnLoadCallback(drawChart) ;
-
-function drawChart()
-constdata = google.visualization.
-arrayToDataTable(l
-&Hat;i&Hat;Year&apos;, &apos;Sales&apos;,
-Expenses&apos;
-
-&vert; &apos;2013% 1000, 400 &rbrack;,
-
-&vert; &apos;2014% 1170, 460 &rbrack;,
-
-&lbrack; &apos;2015, 660, 1120 &rbrack;,
-
-&vert; &apos;2016% 1030, 540 &rbrack;
-
-constoptions f title: &apos;Company Performance&apos;, curveType:
-function&apos;,
-
-legend: {position: &apos;bottomi
-l;
-
-const chart new google.visualization.AreaChart(document.
-getElementById(&apos;curve_chartl)) ; chart.draw(data, options) ;
-
-D3.js Examples:
-
-9. Create an SVG Circle:
-
-javascript code const svg d3.select(&apos;body&apos;)
- append(&apos;svg&apos;)
- attr(&apos;width&apos;, 100)
-attr(&ast;height&apos;, 100) ;
-
-svg.append(&apos;circle&apos;)
-
-.attr(Icx&apos;, 50)
-attr(Icy&apos;, 50)
-attr(40
-
-.attr(Ifilll, bluel) ;
-
-10.Create an SVG Rectangle:
-
-javascript code const svg d3.select(&apos;body&apos;)
-
-.append(&apos;svg&apos;)
-
-.attr(&apos;width&apos;, 100)
-
-.attr(&apos;height&apos;, 100) ;
-
-svg.append(&apos;rect&apos;)
-
-.attr(ixi, 10)
-
-.attr(tyl, 10
-
-.attr(&apos;width&apos;, 80
-
-.attr(&apos;height&apos;, 50)
-
-.attr(&apos;fill&apos;, &apos;greenl) ;
-
-These examples demonstrate how to create basic graphics, charts, and
-visualizations using different JavaScript libraries such as Canvas,
-Plotly, Chart.js, Google Charts, and D3.js.They serve as a
-starting point for building more complex and customized graphical
-representations in web applications,
-
-Basic Examples:
-
-1&period; Convert Celsius to Fahrenheit:
-
-javascript code function celsiusToFahrenheit(celsius) { return(
-celsius  32;
-
-let templnFahrenheit - celsiusToFahrenheit(25) ; // Output: 77
-
-2, Calculate Area of a Circle:
-
-javascript code function calculateCirc1eArea(radius) { return Math
-.PI&ast; radius &ast; radius;
-
-let area = calculateCircleArea(5) ; // Output.•.54
-
-String Manipulation:
-
-3. Reverse a String:
-
-javascript code function reverseString(str) f returnstr split().
-reverse(.join
-
-let reversed = reverseString(&apos;helloi) ; // Output: iollehi
-
-4. Check for Palindrome:
-
-javascript code function isPalindrome(str) { return str str.split
-(reverse join(
-)
-
-let checkPa1indrome - isPalindrome(&apos;madam&apos;) ; // Output: true
-
-Array Manipulation:
-
-5. Find Maximum Number in Array:
-
-javascript code let numbers = I 5, 8, 3, 12, 6
-let maxNumber = Math.max(...
-numbers) ; // Output: 12
-
-6. Sort Array of Objects by Property:
-
-javascript code let products I
-
-name: &apos;Laptop&quot;, price
-name: iPhonet, price: 600
-name: &Hat;i&Hat;Tablet,
-price
-
-products.sort((aj b) = &gt;a.price- b.price) ;
-
-Functions:
-
-7. Higher - Order Function - Map:
-
-javascript code let numbers = I
-let doubled = numbers.map(num = num
- &ast; 2) ; // Output: &vert; 2, 4, 6
-
-8. Immediately Invoked Function Expression(IIFE):
-
-javascript code
-
-(function() f console.log(&apos;IIFE executed.;
-
-Object Manipulation:
-
-9. Object Destructuring:
-
-javascript code let person = name: &apos;Alice&apos;, age: 30
-let { name, age} = person;
-
-10.Merge Objects:
-
-javascript code
-
-a: 1,
-let obj2 = {C 3 d
-
-let mergedObj = { &period;..objlj.obj2 1; Loops and Iterations:
-
-11.For &period;..Of Loop for Arrays:
-
-javascript code let colors = &apos;red&apos;, •green&apos;, &apos;blue&apos; &rbrack; ; for(
-let color of colors) f console.log(color) ;
-
-12.While Loop to Generate Random Numbers:
-
-javascript code let randomNums - &lbrack;l ; while(randomNums - length &lt; 5
-) { randomNums.push(Math.floor(Math.random &ast; 10) +
-1
-
-Error Handling:
-
-13.Try Catch for Error Handling:
-
-javascript code try &lbrack;
-
-// Code that may throw an error
-
-JSON.parse(
-&apos;invalidJSON&apos;
-} catch(error)
-
-console.error(&apos;Error occurred: error.message
-
-14.Custom Error Handling:
-
-javascript code function throwError throw new Error(&apos;Custom error
-message&apos;
-
-try throwError ;
-catch(error) { console.error(
-error.message) ;
-
-Asynchronous JavaScript:
-
-15.Promise Example:
-
-javascript code function fetchData() { return new Promise((resolve,
-reject) - &gt; {
-
-// Simulate fetching data setTimeout(()
-resolve(&apos;Data fetched successfully&apos;
-) ;
->
-
-
-
-fetchData then(data = console.log(data)) ;
-
-16.Async / Await Example:
-
-javascript code async function fetchData() { let data - await fetch(
-&apos;https api.example com / data&ast;) ; let jsonData - await data.
-json return jsonData;
-
-fetchData then(data &gt; console.log(data)) ; DOM Manipulation:
-
-Create Element and Append to DOM:
-
-javascript code let newElement - document createE1ement(&apos;div&ast;) ;
-newE1ement.textContent - &apos;New Element% document body.appendChild(
-newE1ement) ;
-
-18, Add Event Listener to Button Click:
-
-javascript code let button document.getElementById(ImyButton&apos;
-button.addEventListener(&apos;click&apos;,
-() &gt; { console.log(&apos;Button clicked !) ;
-
-Regular Expressions:
-
-19.Regular Expression Test:
-
-javascript code let pattern
-let isMatch = pattern.test(&apos;Hello
-123i) ; // Output.true
-
-20.Replacing String with Regex:
-
-javascript code let str - &apos;Hello 123&apos;; let replaced - str.replace
-(/ Nd +/, &apos;456&apos;) ; // Output &apos;Hello 456&apos;
-
-These examples cover a range of JavaScript functionalities, including
-basic operations, string / array manipulations, functions, objects,
-loops, error handling, asynchronous operations, DOM manipulations, and
-regular expressions.
-
-Advanced Functions:
-
-1&period; Closure Example:
-
-Javascript code function outerFunction(outerValue) { return
-function(innerValue) { returnouterValue -v innerVa1ue;
-
-
-let addFive = outerFunction(5
-let result = addFive(3) ; // Output
-: 8
-
-2. Currying Example:
-
-javascript code function multiply(a) { return function(b) {
-return a &ast; b; l;
-
-let multiplyByTwo = multiply(2) ; let product = multiplyByTwo(5)
-; // Output: 10
-
-Advanced Array Manipulation:
-
-3. Using Reduce to Sum Array
-javascript code let numbers = I
-et sum = numbers.reduce((acc,
-    curr) = acc + curr // Output: 15
-
-4. Using Filter and Map Together:
-
-javascript code let numbers - 1, 2, 3, 4,
-5
-
-let filteredAndDoubled - numbers filter(num --- &gt; num % 2 O).map
-(num &dash;- &gt; num
-Output: &vert; 4, 8 &rbrack;
-
-Advanced Object Manipulation:
-
-5. Object Destructuring with Default Values:
-
-javascript code let person = name: iAlicei
-let { name, age = 30 I = person;
-
-6. Computed Property Names:
-
-javascript code let key - &apos;dynamicKey&apos;; let obj ---(I key l:
-&apos;value&apos; //(dynamicKey: &apos;value&apos;)
-
-Advanced Loops and Iterations:
-
-7. For &period;..In Loop for Objects:
-
-javascript code let obj ---
-for(let keyin obj)(console.log(
-key, obj &lbrack; key l) ;
-
-8, Using For Of with Iterables:
-
-javascript code let iterable &lbrack;
-for(let value of iterable) f console
-.log(value) ;
-
-Promises and Async / Await:
-
-9&period; Promise Chaining
-javascript code function asyncFunction
-() { return new Promise((resolve, reject) - {
-
-setTimeout resolve(&apos;First part
-done&apos;
-
-1000) ;
-
-asyncFunction
-
-.then(result = &gt; &lbrack; console.log(result) ; return &apos;Second
-part donei;
-
-.then(result = &gt; console.log(result)) ;
-
-10.Async / Await with Error Handling
-javascript code function fetchData() { return new Promise((resolve,
-reject) &gt;
-setTimeout(() &gt; { reject(&apos;Failed to
-fetch data&apos;) ;
-
-, 2000) ;
-
-<h2>) ;</h2>
-
-async function getData() { try f let data - await fetchData() ;
-console.log(data) ;
-
-I catch(error) { console.error(error) ;
-
-getData
-
-Advanced DOM Manipulation:
-
-11.Creating and Appending Multiple Elements:
-
-javascript code let fragment = document.createDocumentFragment() ;
-for(let let newElement = document.createE1ement
-(&apos;divi) ; newE1ement.textContent = Element &dollar;1i)
-fragment.appendChild(newE1ement) ;
-
-document.body.appendChild(fragment) ;
-
-12.Event Delegation:
-
-javascript code document addEventListener(&apos;click&apos;, function(
-event) { if(event.target.matches(&apos;button&apos;)) f console log(
-&apos;Button clicked) ;
-
-<h2>D;</h2>
-
-ES6 + Features:
-
-13.Template Literals:
-
-javascript code let name = &apos;Alice&apos;; let message = • Hello, &dollar;{name)
-
-14.Spread Operator:
-
-javascript code letarr let newArr - arr, 4, 5) ; // &lbrack; 1, 2, 3, 4, 5
-Error Handling and Regular Expressions:
-
-15.Throwing Custom Errors:
-
-javascript code function validateNumber(num) f if(typeofnum
-&apos;number&apos;) { throw new Error(&apos;Invalid number&apos;) ;
-
-try &lbrack; validateNumber(
-&apos;abc&Hat;i&Hat;
-
-} catch(error) { console.error(error.message) ;
-
-16.Regular Expression to Validate Email:
-
-javascript code let emailPattern
-let isVa1idEmail - emailPattern.test
-(&apos;test@example, com&apos;) ; // Output: true
-
-These examples delve deeper into JavaScript&apos;s functionalities,
-including advanced functions, array and object manipulation, iteration
-methods, async operations, DOM manipulation, and newer ES6 + features,
-
-Advanced Functions and Functionality:
-
-1&period; Higher - Order Function - Filter:
-
-javascript code let numbers - I
-let evenNumbers - numbers.filter(num
---- &gt; num % 2 O) ; // Output 2, 4 &rbrack;
-
-2, Immediately Invoked Arrow Function Expression(IIAFE
-javascript code
-
-console.log(&apos;IIAFE executed,) ;
-
-Advanced Array Manipulation:
-
-3&period; Using FlatMap:
-
-javascript code let arr 1, 2
-let flatArray - arr, flatMap(innerArr
-&gt; innerArr map(item &gt; item &ast; 2)) ; // Output 6, 8, 10, 12 &rbrack;
-
-4, Using Reduce to Flatten Arrays:
-
-javascript code let nestedArrays = l, 2 1, &lbrack; 3/ 4 1, 1 5, 6 11 ;
-let flattenedArray = nestedArrays.reduce((acc; curr) = &gt; acc.
-concat(curr), // Output:1 1, 2, 3, 4, 5, 6 &rbrack;
-
-Advanced Object Manipulation:
-
-5&period; Object Sealing and Freezing:
-
-javascript code let obj = &lbrack; name: Alice&apos;
-Object.seal(obj) ; obj age = 30; //
-This change is not allowed in a sealed object
-
-let frozenObj -(name: &apos;Bob
-Object.freeze(frozenObj) ;
-frozenObj.age 25; // This change won&apos;t affect a frozen object
-
-6, Optional Chaining
-
-<h4>javascript code</h4>
-
-```
-let user name: &apos;Alice&apos;, address:
-street: &apos;123 Main st&apos;, city: &apos;New York&apos;
-let city - user?.address?.city; // Output: &quot;New York&apos;
-```
-
-Advanced Loops and Iterations:
-
-```
-7&period; For &period;..Await Loop for Asynchronous Operations
-javascript code async function
-asyncOperation(value) &lbrack; return new Promise(resolve =
-setTimeout(() = &gt; { console.log(
-value) ; resolve() ;
-async function executeAsyncOperations
-let values = I
-for await(letvalue of values)
-await asyncOperation(value) ;
-executeAsyncOperations
-```
-
-8. Using Array.from with Mapping:
-
-javascript code let newArray --- Array.from(length: 5), index) -
-&gt; index &ast; 2) ; // Output: I o, 2, 4, 6, 8 &vert;
-
-Advanced Error Handling:
-
-9. Using Finally Block:
-
-<h4>javascript code</h4>
-
-```
-function tryCatchFinally() &lbrack; try f console.log(
-&apos;Try block&apos;) ; throw new Error(&apos;Error
-occurred&apos;
-I catch(error) { console.error(error message) ;
-I finally
-console.log(&apos;Finally block&apos;) ;
-tryCatchFinally O ;
-10&period; Custom Error Class:
-```
-
-<h4>javascript code</h4>
-
-```
-class CustomError extends Error { constructor(
-message)(super(message) ; this name this.constructor.name;
-
-throw new CustomError(&apos;Custom error message&apos;) ;
-```
-
-These additional code snippets expand on various JavaScript concepts
-such as higher - order functions, array methods, object manipulation,
-advanced loops, error handling, and new features like optional
-chaining and async /
-await
-
-Advanced Object Manipulation
-
-```
-1.Object.defineProperty for Property Definition javascript code
-let obj =
-
-Object.defineProperty(obj, &Hat;i&Hat;fu11Name &Hat;i&Hat; /
-value: &apos;Alice Smith&ast;, writable:
-false, configurable: true
-```
-
-<h2>D;</h2>
-
-2. Object.setPrototypeOf for Setting Prototype:
-
-<h4>javascript code</h4>
-
-```
-let animal - f
-makeSound f console.log(&apos;Animal
-sound&apos;
-let dog - f};
-
-Object.setProtctypeOf(dog, animal) ; dog makeSound() ; // Output
-&apos;Animal sound&apos;
-```
-
-Advanced Array Manipulation:
-
-3. Using Set to Get Unique Values:
-
-<h4>javascript code</h4>
-
-```
-let numbers
-let uniqueNumbers = new Set(numbers ; // Output: &vert; 1, 2 j 3, 4, 5
-&vert;
-```
-
-4. Array..find to Get First Matching Element:
-
-<h4>javascript code</h4>
-
-```
-let users
-fid: 1, name: &apos;Alice&apos;
-}f id: 2, name: &apos;Bob&apos;), fid: 3, name: &apos;Charlie&apos; }
-
-let user - users find(user &gt; user, Id// Output • 2, name
-&apos;Bob&apos;
-```
-
-Advanced Functionality:
-
-5. Generator Function:
-
-<h4>javascript code</h4>
-
-```
-function &ast; generatorFunction
-yield 1; yield 2; yield 3;
-
-let generator - generatorFunction
-console.log(generator.next value)
-; console.log(generator.next value) ; 6, Async Generator
-Function:
-```
-
-<h4>javascript code</h4>
-
-```
-async function &ast; asyncGenerator() {
-
-// Output: 1
-
-// Output: 2
-
-yield &apos;First&quot;; await new Promise(resolve = &gt; setTimeout(
-resolve, 1000)) ; yield &apos;Second&apos;;
-
-async for await(let item of asyncGenerator
-onsole.log(item) ; // Output:
-&apos;First&apos; after Oms, &apos;Secondi after 1000ms
-```
-
-Advanced Error Handling:
-
-7. Handling Rejected Promises with catch:
-
-<h4>javascript code</h4>
-
-Promise.reject(Error message&apos;
-
-
-.catch(error = console.error(&apos;Caught error: i, error)) ;
-
-8. Handling Multiple Promises with Promise all:
-
-<h4>javascript code</h4>
-
-```
-let promise 1 - Promise.resolve(&apos;First&apos;) ; let
-promise2 - Promise.resolve(&apos;Second&apos;) ; Promise.all(l
-promisel, promise2 1)
-
-.then(values - &gt; console.log(values)) ; // Output: I
-&apos;First&apos;, &apos;Second&apos; I
-```
-
-ES6 + Features:
-
-9. Destructuring Nested Objects:
-
-<h4>javascript code</h4>
-
-```
-let user = {
-details:
-name: &apos;Alice&apos;, age: 30
-let { details: &lbrack;name, age} I = user;
-```
-
-10.Biglnt Data Type:
-
-<h4>javascript code</h4>
-
-```
-const bigNumber Biglnt(Number.MAVSAFE_INTEGER)
-Biglnt(l) ;Biglnt:
-
-9007199254740992n + In
-```
-
-These code snippets expand on JavaScript functionalities like object
-manipulation, array methods, generator functions, async operations,
-error handling with promises, and ES6 + features like destructuring and
-Biglnt data type.
-
-Advanced Functions and Operations:
-
-```
-1&period; Memoization using Closure:
-```
-
-<h4>javascript code</h4>
-
-```
-function memoize(fn) f const cache
-return function args) { constkey -
-JSON.stringify(args) ; if(cache I key l) { returncache &lbrack; key I ;
-
-const result = fn.apply(this, args) ; cache &lbrack; key I = result;
-return result;
-```
-
-<h2>l;</h2>
-
-```
-function factorial
-f(n 0 11 n 1) { return 1;
-
-return n &ast;
-factorial
-
-const memoizedFactorial = memoize(factorial) ;
-```
-
-2. Function Composition:
-
-<h4>javascript code</h4>
-
-```
-const add = x = &gt; x + 5; const multiply = x = &gt; x &ast;
-2; const compose = fns) = x = fns.reduceRight((acc, fn) = &gt; fn
-(acc), x) ; constaddAndMultip1y = compose(multiply, add) ;
-```
-
-Advanced Array Manipulation:
-
-3. Using Flat to Flatten Nested Arrays:
-
-<h4>javascript code</h4>
-
-let nestedArr = &vert; 1, 1 2, &lbrack; 3, 4 1, 5
-}let flattenedArr = nestedArr.flat(
-Infinity) ;
-
-4. Using Some and Every Methods:
-
-<h4>javascript code</h4>
-
-```
-let numbers(
-let allEven numbers.every(num - &gt;
-num let hasOdd numbers.some(num- &gt; num
-```
-
-Advanced Object Manipulation:
-
-5. Object.fromEntries Method:
-
-<h4>javascript code</h4>
-
-```
-let entries - - &apos;name&apos;, &apos;Alice&apos; &apos;age&apos;,
-30
-
-// Output:1 3, 4, 5, 6 1
-
-O); // Output: false
-
-O); // Output true
-
-let obj --- Object.fromEntries(entries) ; // Output: { name:
-&apos;Alicei, age: 30}
-```
-
-6, Object.getOwnPropertyDescriptors:
-
-<h4>javascript code</h4>
-
-```
-const obj {name: &apos;Alice&apos;
-const descriptors Object.
-getOwnPropertyDescriptors(obj) ;
-```
-
-Advanced Promises and Async / Await
-
-7. Promise.race for Fastest Response:
-
-<h4>javascript code</h4>
-
-```
-function fetchData(url, timeout) { return Promise.
-race(l fetch(url),
-
-new Promise reject) = setTimeout = &gt; reject(new Error(&Hat;i&Hat;
-Timeout&apos;)) j timeout))
-```
-
-8. Async / Await with Promise.allSettled:
-
-<h4>javascript code</h4>
-
-```
-async function fetchData() { constpromises
-fetch(&apos;https api example com /
-endpoint V), fetch(&apos;https api example com / endpoint?)
-
-const results await Promise.allSettled(promises) ; console, log
-(results) ;
-```
-
-ES6 Features:
-
-9. Optional Chaining with Ntillish Coalescing:
-
-<h4>javascript code</h4>
-
-```
-const data - { user.
-name: &apos;Alice&apos;, age: null
-const userName - data? - user? name ?? &apos;Unknown&apos;; // Output.•
-&apos;Alice&apos;
-const userAge = data?.user?.age ?? 25; // Output: 25
-```
-
-10.Array Buffer and Typed Arrays:
-
-<h4>javascript code</h4>
-
-```
-const buffer new ArrayBuffer(16
-constintArray --- new Int32Array(buffer
-) ; intArray 42;
-```
-
-These additional JavaScript code snippets demonstrate advanced function
-techniques, arr@Y methods, object manipulation, promises and async /
-await functionality, ES6 + features like optional chaining and array
-buffer with typed arrays,
-
-Advanced Functions and Operations:
-```
-1&period; Function Bind Method:
-```
-
-<h4>javascript code</h4>
-
-const x: 42, getX: function
-return this.x;
-
-constunboundGetX - obj - getX; const boundGetX - unboundGetX.bind(
-obj) ; console.log(boundGetX ; // Output: 42
-
-2, Immediately Resolved Promises:
-
-<h4>javascript code</h4>
-
-const immediatePromise = Promise.resolve(&quot;Immediate resolution&Hat;i&Hat;
-immediatePromise.then(result = &gt;
-console.log(result)) ; // Output: &apos;Immediate resolution&apos;
-
-Advanced Array Manipulation:
-
-3. Using Array.findlndex:
-
-<h4>javascript code</h4>
-
-```
-constarray = &lbrack; 5, 12, 8, 130,44
-constindex = array.findlndex(element =
-element &gt; 10) ; // Output: 1(index of first element &gt; 10)
-```
-
-4. Using Array.fill:
-
-<h4>javascript code</h4>
-
-```
-constarray 2,
-array fill(O, 2, 4) ; // Fills array
-from index 2 to index 4 with value O
-```
-
-Advanced Object Manipulation:
-
-5. Using Object.entries:
-
-<h4>javascript code</h4>
-
-```
-const obj = {foo: &Hat;i&Hat;bar% baz: 42
-constentries = Object.entries(obj)
-; // Output: &apos;fool, &apos;bari I j I &Hat;i&Hat;baz&Hat;i&Hat;, 42 Il
-```
-
-6. Object.preventExtensions:
-
-<h4>javascript code
-
-```
-constobj {prop: &apos;value&apos;
-)
-Object.preventExtensions(obj) ; obj newProp 10; // Cannot add new properties to obj
-```
-
-Advanced Promises and Async / Await:
-
-7. Promise.allSettled for All Promise States:
-
-<h4>javascript code</h4>
-
-```
-const promises = I
-Promise.resolve(&quot;Resolved&quot;), Promise.reject(&quot;Rejected&apos;
-new Promise(resolve = &gt; setTimeout
-(C) = &gt; resolve &apos;Resolved after timeouti), 1000))
-Promise.allSettled(promises)
-.then(results = &gt; console.log(results)) ;
-```
-
-8. Async Function Returning Rejected promise:
-
-<h4>javascript code</h4>
-
-```
-async function throwError() { throw new Error(
-&apos;Error thrown from async
-function&apos;
-throwError O.catch(error - &gt; console.error(error message)) ;
-// Output: &apos;Error thrown from async function&apos;
-```
-
-ES6 + Features:
-
-9. Numeric Separators for Readability:
-
-<h4>javascript code</h4>
-
-```
-const billion =
-onst binary = ob1010_0001;
-```
-
-10.Promise.finally Method:
-
-```
-Promise.resolve(&apos;Success&apos;)
-finally) &gt; console log(&apos;Finally
-block executed&ast;))
- then(result --- &gt; console, log(
-result)) ; // Output: &apos;Success&apos;
-```
-
-These JavaScript code snippets showcase more advanced function
-operations, array manipulations, object methods, promises and async /
-await functionalities, and ES6 + features like numeric separators and
-Promise, finally method,
-
-Advanced Functions and Operations:
-
-```
-1&period; Function Caching using Memoization:
-```
-
-<h4>javascript code</h4>
-
-```
-const memoize ---(fn) - &gt; { const cache
-return args)
-const stringifiedArgs - JSON.stringify
-(args) ; return cache &lbrack; stringifiedArgs &rbrack; Il(cache &lbrack;
-stringifiedArgs &rbrack; - fn args ;
-const sum console log(&apos;Calculating sum &period;..&apos;
-)
-returna + b
-const memoizedSum - memoize(SUm) ;
-console.log(memoizedSum(2, 3)) ; console.log(memoizedSum(2,
-3)) ;
-
-2&period; Function Throttling:
-```
-
-<h4>javascript code</h4>
-
-```
-const throttle -(func, limit) - &gt;(let inThrottle;
-return function const args arguments; const context this; if(!
-inThrott1e) f func apply(context, args) ; inThrottle true;
-setTimeout(() &gt; inThrottle
-
-function throttledFunc {
-
-// Output Calculating sum 5
-
-// Output 5(Retrieved from cache)
-
--   false, limit) ;
-
-console.log(&apos;Throttled function executed&apos;) ;
-
-const throttled = throttle(throttledFunc, 3000) ; Advanced Array
-```
-
-Manipulation:
-
-3. Using Array.from with Mapping and Filtering:
-
-```
-numbers = constnewArray = Array.from(numbers,
-x = x &ast; 2
-filter // Output: &lbrack; 6, 8, 10, 12 &vert;
-```
-
-4. Using Array reduceRight:
-
-<h4>javascript code</h4>
-
-```
-constarray - 1 1, 2, 3,4
-const sum - array.reduceRight((acc,
-curr) - &gt; acc + curr // Output: 10
-```
-
-Advanced Object Manipulation:
-
-5. Object.fromEntries with Map:
-
-<h4>javascript code</h4>
-
-```
-const entries - new
-Map
-
--   &apos;name&apos;, &apos;Alice&ast; I,
-
-&apos;age&apos;, 30
-
-constobj - Object.fromEntries(entries) ; // Output: { name
-&apos;Alice&apos;, age: 30)
-```
-
-6, Object.seal and Object.isSealed:
-
-<h4>javascript code</h4>
-
-```
-const { name:
-&apos;Alice&apos;
-
-Object.seal(obj) ; console log(Object.isSealed(obj)) ; //
-Output: true
-
-Advanced Promises and Async /
-Await
-```
-
-7. Promise.any for the First Fulfilled Promise:
-
-```
-promises = I
-Promise.reject(&quot;Rejected li)
-Promise.resolve(&quot;Resolved
-2&apos;
-Promise.resolve(&apos;Resolved
-3&apos;
-Promise.any(promises)
-.then(result = &gt; console.log(result)) ; // Output: &apos;Resolved 2t
-```
-
-8. Async Function Using for await of:
-
-<h4>javascript code</h4>
-
-```
-async function processltems(items) { for await(
-letitem of items) { console.log(&apos;Processing item: &dollar;{item}) ;
-```
-
-ES6 Features:
-
-9. Dynamic Import for Modules:
-
-<h4>javascript code</h4>
-
-```
-async function loadModule() { const module - await
-import &apos;./ module.js&apos;) ; module doSomething() ;
-```
-
-10.Nullish Coalescing Operator:
-
-```
-x = null; const y = x ?? &apos;default value&apos;; // Output: &apos;default
-value&Hat;i&Hat;
-```
-
-These JavaScript code snippets introduce advanced function operations,
-array manipulations, object methods, promises and async / await
-functionalities, and ES6 features like dynamic import and nullish
-coalescing operator.
-
-Advanced Functions and Operations:
-
-1..Partial Application of Functions:
-
-<h4>javascript code</h4>
-
-```
-const multiply =(a, b) = &gt; a &ast; b; const
-partialMultiplyByTwo = multiply.bind(null, 2
-console.log(partialMultiplyByTwo(5
-)) ; // Output: 10
-```
-
-2. Debouncing Function:
-
-<h4>javascript code</h4>
-
-```
-const debounce -(func, delay) - &gt;
-let timeout; return function const
-context --- this; const args - arguments; clearTimeout(timeout) ;
-timeout - setTimeout(() - &gt; func.apply(context, args), delay)
-; function handlelnput
-console.log(&apos;Input event handled&apos;
-) ;
-const debouncedInputHand1er = debounce(handlelnput, 300) ;
-```
-
-Advanced Array Manipulation:
-
-3. Using Array flat to Flatten Arrays:
-
-<h4>javascript code</h4>
-
-```
-const nestedArray -(1, 1 2, 3 Il, 4, &lbrack; 5
-const flatArray nestedArray.flat(
-Infinity) ; // Output: 1 1, 2, 3, 4, 5 1
-```
-
-4, Using Array.slice to Clone Arrays:
-
-<h4>javascript code</h4>
-
-```
-const originalArray &lbrack; 1, 2, 3, 4 1
-const clonedArray originalArray.slice
-() ; // Clones the originalArray
-```
-
-Advanced Object Manipulation:
-
-5, Using Object.keys with Mapping:
-
-<h4>javascript code</h4>
-
-```
-const constmappedObj = Object.fromEntries(
-Object.keys(obj).map(key
-&gt; &lbrack; key, obj &lbrack; key &rbrack; &quot; 2
-```
-
-6. Object.is for Strict Equality Comparison:
-
-<h4>javascript code</h4>
-
-```
-console.log(Object.is(5, 5)) ; // Output:
-true console.log(Object.is(5, &apos;51)) ; // Output: false
-```
-
-Advanced Promises and Async / Await:
-
-7. Promise.allSettled with Optional Chaining
-
-<h4>javascript code</h4>
-
-```
-const promises = I
-Promise.resolve({ name: Alice&apos;, age: 301),
-Promise.reject(new Error(&apos;Something went wrong)),
-Promise.resolve(null)
-const results = await Promise.allSettled(promises) ;
-```
-
-8. Async Generator Function:
-
-<h4>javascript code</h4>
-
-```
-async function asyncGenerator() { yield &apos;First&apos;;
-await new Promise(resolve - &gt; setTimeout(resolve, 1000)) ; yield
-&apos;Second&apos;;
-
-(async O
-for await(let item of asyncGenerator
-()) { console.log(item) ; // Output &apos;First&apos; after Oms,
-&apos;Second&apos; after 1000ms
-```
-
-ES6 + Features:
-
-9. Optional Chaining for Nested Properties
-
-
-<h4>javascript code</h4>
-
-```
-const user = {address
-   :(city: iNew York&apos;
-    const city = user.address?.city; //
-    Output: &apos;New York
-    const zipCode = user.address?.
-    zipCode ?? &apos;Not available&apos;; // Output: &quot;Not available&apos;
-```
-
-10.Biglnt for Large Integer Values:
-
-<h4>javascript code</h4>
-
-```
-const bigNumber Biglnt(
-Number Biglnt(1)
-Biglnt:
-
-9007199254740992n + In
-```
-
-These JavaScript code snippets explore advanced function operations,
-array manipulations, object methods, promises and async / await
-functionalities, and ES6 + features like optional chaining and Biglnt
-
-Advanced Functions and Operations:
-
-1. Currying Function:
-
-<h4>javascript code</h4>
-
-```
-const multiply
-constmultiplyByTwo = multiply(2) ;
-console.log(multiplyByTwo(5)) ; // Output • 10
-```
-
-2. Function Memoization Using Closures:
-
-<h4>javascript code</h4>
-
-```
-const memoize -(func) &gt;(const
-cache>
-return args) - - f&gt; const stringifiedArgs = JSON.stringify(args
-) ; return cache &lbrack; stringifiedArgs &rbrack; Il(cache &lbrack; stringifiedArgs
-&rbrack; - func args)) ; l;
-
-const sum =(a, b) = &gt;
-console.log(&apos;Calculating sum
-returna + b
-const memoizedSum = memoize(sum) ; console log(memoizedSum(2, 3
-)) ; // Output Calculating sum &period;..5 console log(memoizedSum(2.3
-; // Output 5(Retrieved from cache)
-```
-
-Advanced Array Manipulation:
-
-3. Using Array.reduce with Initial Value:
-
-<h4>javascript code</h4>
-
-```
-constarray = &vert; 1, 2, 3, 4, 5
-const sum = array.reduce((acc, curr)
-= &gt; acc + curr,O) ; // Output: 15
-```
-
-4. Array.findlndex with Custom Predicate:
-
-<h4>javascript code</h4>
-
-```
-const numbers - &lbrack; 10, 20, 30, 40, 50 &rbrack; ; const
-index - numbers.findlndex(num - &gt; num &gt; 25) ; // Output: 2(
-Index of first element &gt; 25)
-```
-
-Advanced Object Manipulation:
-
-5. Object.entries with Object.fromEntries:
-
-<h4>javascript code</h4>
-
-```
-const { name: &apos;Alice&apos;, age: 30
-const entries = Object.entries(obj)
-; // Output: &lbrack;l •name&apos;, &apos;Alicei I, I iagei, 30 Il const
-reconstructedObj = Object.fromEntries(entries) ;
-```
-
-6. Object.freeze for Immutable Objects:
-
-<h4>javascript code</h4>
-
-```
-constobj - {prop: •value&apos;)
-Object.freeze(obj) ; obj prop -
-&apos;newValue&dollar;; // Assignment not allowed in a frozen object
-```
-
-Advanced Promises and Async / Await:
-
-7. Promise.resolve and Promise.reject:
-
-<h4>javascript code</h4>
-
-```
-const resolvedPromise = Promise.resolve(Resolved&apos;
-) ; constrejectedPromise = Promise.reject(&apos;Rejected&apos;) ;
-
-resolvedPromise.then(result &gt; console.log(result)) ; //
-Output: Resolved&apos; rejectedPromise.catch(error &gt; console.error
-(error)) ; // Output: &apos;Rejected&apos;
-```
-
-8. Async Function Returning Resolved Promise:
-
-<h4>javascript code</h4>
-
-```
-async function returnResolved() { return Resolved
-from async function&apos;;
-
-returnResolved then(result = &gt; console.log(result)) ; //
-Output: &apos;Resolved from async functioni
-```
-
-ES6 + Features:
-
-9. Array Destructuring:
-
-<h4>javascript code</h4>
-
-```
-const &lbrack; first, second, rest I =
-console.log(first, second, rest) ;
-// Output: 1 2 3, 4, 5 1
-```
-
-10.Rest Parameters in Functions:
-
-<h4>javascript code</h4>
-
-```
-const sum - args) - &gt; args.reduce((acc, curr) -
-&gt; acc + curr, O) ; console.log(sum(1, 2, 3, 4, 5)) ; //
-Output: 15
-```
-
-These JavaScript code snippets demonstrate advanced function
-operations, array manipulations, object methods, promises and async /
-await functionalities,
-
-Advanced Functions and Operations:
-
-1. Function Composition with Multiple Functions:
-
-<h4>javascript code</h4>
-
-```
-const add =(x, y)
-const multiply =(x, y) = &gt; x y
-const compose funcs) &gt; funcs.reduce
-((f, g) &gt; args) - f(g args))) ;
-
-constaddAndMultiply = compose(multiply, add) ; console log(
-addAndMultiply(3, 4)) ; // Output: 21(3 +
-4
-```
-
-2. Using Function.toString() to Get Function Source Code:
-
-<h4>javascript code</h4>
-
-```
-function greet() { console, log(&apos;Hello !) ;
-
-constfunctionSource greet.toString
-console, log(functionSource) ; //
-Output: &quot;l function greet() { console log(&apos;Hello !) ;)
-I
-```
-
-Advanced Array Manipulation:
-
-3. Array.flatMap for Flattening and Mapping:
-
-<h4>javascript code</h4>
-
-```
-constarr 1, 2, 3 &rbrack; ; constmappedAndFlattened - arr.
-flatMap(x - &gt; &lbrack;x 2, 3 1); console.log(mappedAndFlattened) ; //
-Output 2, 3, 4, 6, 6, 9 &vert;
-```
-
-4, Using Array some with Custom Predicate:
-
-<h4>javascript code</h4>
-
-```
-constnumbers &lbrack; 5, 10, 15, 20 &rbrack; ; const isEvenPresent
-numbers.some(num &gt; num
-```
-
-%// Output: true
-
-Advanced Object Manipulation:
-
-5. Using Object.keys to Get Object&apos;s Own Properties:
-
-<h4>javascript code</h4>
-
-```
-const constkeys - Object.keys(obj) ; //
-Output: &lbrack; la&apos;, &apos;c&apos; I
-```
-
-6. Object.setPrototypeOf for Dynamic Prototype Setting:
-
-<h4>javascript code</h4>
-
-```
-const protoObj(greet() { console.log(
-&apos;Greetings !) ;
-
-const newObj O;
-
-Object.setPrototypeOf(newObj, protoObj) ; newObj greet ; //
-Output: Greetings !
-```
-
-Advanced Promises and Async / Await:
-
-7. Promise.race to Get Fastest Resolved Promise:
-
-javascript code const promise 1 - new Promise((resolve) - &gt;
-setTimeout(resolve, 1000, &apos;First&apos;)) ; constpromise2 - new Promise
-((resolve) - &gt; setTimeout(resolve, 500, &ast;Second&apos;)) ;
-
-Promise.race(promisel, promise2 1).then value)
-console.log(value) ; // Output:
-&apos;Secondl(Resolved earlier)
-
-8. Async Function Using try &period;..catch for Error Handling.
-
-<h4>javascript code</h4>
-
-```
-async function fetchData() { try &lbrack;
-
-const response = await fetch(ihttps api.example com / data&apos;) ;
-const data = awaitresponse.json() ; console.log(data) ;
-catch(error) { console.error(
-&apos;Error fetching data: t, error) ;
-```
-
-ES6 + Features:
-
-9. Template Literals for Dynamic Strings:
-
-<h4>javascript code</h4>
-
-```
-constname = &apos;Alice&apos;; constage = 30; console.log(
-
-My name is &dollar; {name} and lim &dollar;{age} years old
-```
-
-
-10.Array Spread Operator for Concatenation:
-
-<h4>javascript code</h4>
-
-```
-constarrl - 1 1, 2, 3 1 ; constarr2 5, 6 1 ; const
-combined - arrl, arr2 1; // Output: &lbrack; 1, 2, 3, 4, &vert;
-```
-
-These JavaScript code snippets explore advanced function operations,
-array manipulations, object methods, promises and async / await
-functionalities, and ES6 + features like template literals and array
-spread operator.
-
-Advanced Functions and Operations:
-
-1. Function Returning Functions - Higher - Order Functions:
-
-<h4>javascript code</h4>
-
-```
-const add =(x) = &gt;(y) =
-+ y; constaddTwo = add(2) ; console
-.log(addTwo(3)) ; // Output: 5
-```
-
-2. Function That Delays Execution:
-
-<h4>javascript code</h4>
-
-```
-const delayExecution(time) &gt; { return new Promise
-((resolve)
-setTimeout(resolve, time) ; n;
-
-delayExecution(2000).then(0 = &gt; console.log(Delayed
-execution&apos;)) ; // Output after 2 seconds
-```
-
-Advanced Array Manipulation:
-
-3, Array.every with Custom Predicate:
-
-<h4>javascript code</h4>
-
-```
-constnumbers &lbrack; 10, 20, 30
-const allGreaterThanFive numbers.every
-(num &gt; num &gt; 5) ; // Output: true
-```
-
-4. Using Array.reverse to Reverse an Array:
-
-<h4>javascript code</h4>
-```
-const array = &lbrack; 1, 2, 3, &rbrack; ; const reversedArray
-array.slice O.reverse // Output:1
-3, 2, 1 &rbrack;
-```
-
-Advanced Object Manipulation:
-
-5. Using Object.fromEntries to Convert Array to Object:
-
-<h4>javascript code</h4>
-
-```
-const entries = &lbrack;l I l, I &apos;b, 2 1, I 3 ; constobj
-= Object.fromEntries(entries) ; // Output: { a: 1, b: 2, c:
-31
-```
-
-6. Object.assign for Merging Objects:
-
-<h4>javascript code</h4>
-
-```
-constobJ1
-constobj2 - { b: 3, c: 4 }
-constmergedObj - Object.assign(f},
-objl, obj2) ; // Output: { a: li b
-:
-```
-
-Advanced Promises and Async / Await:
-
-7. Promise.resolve with Then Method:
-
-<h4>javascript code</h4>
-
-Promise.resolve(&apos;Resolved value&apos; then(value = &gt; console.log(
-value)) ; // Output: Resolved value&ast;
-
-8. Async Function with Promise..all for Parallel Execution:
-
-<h4>javascript code</h4>
-
-```
-async function fetchData() { const I datal, data2 1
-await Promise, all(l fetch(&apos;https api example com / datal&apos; fetch
-(&apos;https api example com / data2&apos;
-
-console, log(datal, data2) ;
-
-then(res &gt; res, json
-then(res
-&gt; res, json 0)
-```
-
-ES6 + Features:
-
-9. Computed Property Names in Objects:
-
-<h4>javascript code</h4>
-
-```
-constkey --- &Hat;d&Hat; dynamicKey&Hat;i&Hat;;
-
-const
-
-&lbrack; key l: &apos;Value based on dynamic key&Hat;i&Hat;
-
-console.log(obj.dynamicKey) ; // Output: &quot;Value based on
-dynamic key&apos;
-```
-
-10.Array.find for Finding Elements in an Array:
-
-<h4>javascript code</h4>
-
-```
-const users fid: 1, name:
-&apos;Alice&apos;
-
-{id 2, name: &apos;Bob&apos;
-
-id: 3, name:
-&apos;Charlie&apos;
-
-const user - users.find(user - &gt; user.id 2) ; // Output: fid: 2,
-name: &apos;Bob&apos;)
-```
-
-These JavaScript code snippets explore advanced function operations,
-array manipulations, object methods, promises and async / await
-functionalities, and ES6 + features like computed property names and
-array.find
-method
-
-Advanced Functions and Operations:
-
-1. Function Returning Another Function - Closure Example:
-
-<h4>javascript code</h4>
-
-function outerFunction(x) { function innerFunction(y) &lbrack; return x
--v y;
-
-returninnerFunction;
-
-const addFive outerFunction(5) ; console log(addFive(3)) ; //
-Output: 8
-
-2. Recursive Function for Factorial Calculation:
-
-<h4>javascript code</h4>
-
-```
-function factorial(n) { if(n = = 0 11 n =
-return 1;
-
-returnn &ast; factorial(n - 1) ;
-
-console.log(factorial(5)) ; // Output: 120 Advanced Array
-```
-
-Manipulation:
-
-3. Using Array.slice() for Subarray Creation:
-
-<h4>javascript code</h4>
-
-```
-constarr = &lbrack; 1, 2, 3, 4, 5 1; const subArray arr.
-slice(2,4) ; // Output: &lbrack; 3, 4 &rbrack;
-```
-
-4. Using Array includes for Checking Array Elements:
-
-<h4>javascript code</h4>
-
-```
-const fruits &apos;apple&apos;, &apos;banana&apos;, •orange&apos; &rbrack; ;
-const hasBanana fruits.includes(&apos;banana&apos;) ; // Output: true
-```
-
-Advanced Object Manipulation:
-
-5. Object.keys to Get Object Keys:
-
-<h4>javascript code</h4>
-
-```
-const const keys - Object.keys(obj) ; //
-Output: &lbrack; &apos;c&apos; I
-```
-
-6, Object.defineProperty() for Object Property Definition:
-
-<h4>javascript code</h4>
-```
-const>
-Object.defineProperty(obj, &apos;prop&apos;,
-value: &apos;some value&apos;, writable: false
-
-Advanced Promises and Async /
-Await
-```
-
-7. Promise..all for Multiple Promises Handling:
-
-<h4>javascript code</h4>
-```
-const promisel Promise.resolve(&apos;Resolved 1&apos;) ;
-const promise2 Promise.resolve(&apos;Resolved 2&apos;) ;
-Promise.all(promisel, promise2 1).then(
-values
-
-console.log(values) ; // Output: &lbrack; &apos;Resolved &apos;Resolved 2&apos; &vert;
-```
-
-8. Async / Await with Promise.catch() for Error Handling:
-
-<h4>javascript code</h4>
-```
-async function fetchUserData() { try f const
-response - await fetch(&apos;https api example com / users&apos;) ; const
-data - await response, json ; console.log(data) ;
-catch(error) { console.error(
-&apos;Error fetching user data: error) ;
-```
-
-ES6 Features:
-
-9. Object Destructuring for Variable Assignment:
-
-<h4>javascript code</h4>
-		
-const user - {name: &apos;Alice&apos;, age: 30
-const { name, age) - user; console.log
-(name, age) ; // Output: &apos;Alice&apos; 30
-
-10.Arrow Functions for Concise Function Definitions:
-
-<h4>javascript code</h4>
-
-```
-const sum =(a, b) = &gt; a + b; console log(sum(
-```
-
-2, 3 ; // Output: 5
-
-These JavaScript code snippets delve into advanced function
-operations, array manipulations, object methods, promises and async /
-await functionalities, and ES6 features like object destructuring and
-arrow functions
-
-Advanced Functions and Operations:
-
-1. IIFE(Immediately Invoked Function Expression):
-
-javascript code
-
-(function() f const localVar = Local variablei; console.log(
-localVar) ;
-
-2. Function that Returns Multiple Values:
-
-<h4>javascript code</h4>
-
-```
-function calculateValues(x, y) { return &lbrack;x + y, x
-y, x /
-yl
-
-const &lbrack; sum, product, division &rbrack; calculateValues(10, 5
-console log(sum, product, division) ;
-// Output: 15 50 2
-```
-
-Advanced Array Manipulation:
-
-3, Using Array map() for Transformation:
-
-<h4>javascript code</h4>
-```
-constnumbers &lbrack;
-const doubledNumhers numbers.map(num
-&gt; num &ast; 2) ; // Output: &vert; 2, 4, 6, 8, 10 &rbrack;
-```
-
-4. Array.find() to Get First Matching Element:
-
-<h4>javascript code</h4>
-
-```
-const users = fid: 1, name: &apos;Alice&apos;
-&lbrack; id: 2, name: &Hat;i&Hat;Bob&Hat;i&Hat;
-fid: 3, name:
-&apos;Charlie&apos;
-
-const user = users.find(user = &gt; user Id
-console.log(user) ; // Output: {id
-
-: 2 j name &apos;Bobi
-```
-
-<h4>Advanced Object Manipulation:</h4>
-
-5. Object.freeze to Prevent Object Modification:
-
-<h4>javascript code</h4>
-```
-constObj = {prop: &apos;value&ast;
-Object.freeze(obj) ; obj prop = •new
-value&apos;; // This change won&apos;t take effect due to object freezing
-```
-
-6. Using Object.values() to Get Object Values:
-
-<h4>javascript code</h4>
-
-```
-const const values --- Object.values(obj)
-; // Output: &lbrack; 1, 2, 3
-```
-
-Advanced Promises and Async / Await:
-
-7. Promise chaining with.then and.catch C):
-
-<h4>javascript code</h4>
-
-```
- async function fetchData() { return fetch(ihttps
-:// api.example.com / data&apos;)
-then(response = &gt; response.json
-0)
-
-.catch(error = console.error(&apos;Error fetching data: i, error
-)) ;
-```
-
-8. Async Function with Error Handling:
-
-<h4>javascript code</h4>
-```
-async function fetchData() {
-
-const response await fetch(&apos;https api example com / data&apos;) ;
-const data - await response, json ; console.log(data) ;
-catch(error) { console.error(
-&apos;Error fetching data: error) ;
-```
-
-ES6 Features:
-
-9. Optional Chaining for Object Properties:
-
-<h4>javascript code</h4>
-
-```
-const user - {profile: {email: &apos;user@example com&apos;
-}); const userEmail - user?.profile?.email; // Output:
-&apos;user@example.com&apos;
-```
-
-10.Promise finally() for Cleanup Tasks:
-
-<h4>javascript code</h4>
-
-```
-fetch(&apos;https:// api.example.com / data&apos;)
-.then(response &gt; response.json 0)
-.finally console.log(&Hat;i&Hat; Data fetching completed!)) ; // Runs
-```
-
-irrespective of resolution / rejection These JavaScript code snippets
-explore advanced function operations, array manipulations, object
-methods, promises and async / await functionalities, and ES6 +
-features like optional chaining and promise
-finally
-
-Advanced DOM Manipulation:
-
-1. Creating and Appending DOM Elements:
-javascript code
-
-// Create a new paragraph element const paragraph = document.
-createElement(&apos;p&apos;
-paragraph.textContent = This is a new
-paragraphi;
-// Append the paragraph to an existing element with id &ast;container&apos;
-const container - document.getE1ementById(&apos;container&apos;) ;
-container, appendChild(paragraph) ;
-2. Adding Event Listeners:
-javascript code const button document.getElementById(&apos;myButtonl)
-; button.addEventListener(&apos;click()
-console.log(&apos;Button clicked&apos;) ;
-D;
-DOM Traversal and Manipulation:
-3. Querying Elements and Modifying Styles:
-javascript code
-// Select all elements with class &apos;box&apos; and change their background
-color
-const boxes = document.querySelectorA11(box) ; boxes.forEach(
-box = { box.style.backgroundColor = &Hat;i&Hat; lightblue&apos;;
-4. Removing Elements from the DOM:
-javascript code const elementToRemove - document.getElementById(
-&apos;elementToRemove&apos;) ; if(elementToRemove) { elementToRemove,
-remove() ;
-Advanced Event Handling:
-5. Delegating Events using Event Bubbling:
-javascript code const list --- document getElementById(tmyList&apos;) ;
-list.addEventListener(&apos;click&apos;,(event)
-if(event.target.tagName
-console log(Clicked on list item:
-&dollar;{event.target.
-textContent}
-
-6, Creating and Dispatching Custom Events:
-javascript code const customEvent &dash;- new Custom Event(
-•customEventName•, detail &apos;Some datal}) ; document.dispatchEvent(
-customEvent) ;
-// Listening for the custom event document.addEventListener(
-icustomEventNamei,(event) = &gt; { console.log(Custom event
-triggered with data: &dollar;fevent.detail}
-D;
-DOM Content Manipulation:
-7. Changing Inner HTML of Elements:
-javascript code const element = document.getElementById(
-imyElement&apos;) ; element.innerHTML = icstronpNew HTML content&lt; /
-strong» &Hat;i&Hat;;
-8. Working with Forms and Input Elements:
-
-    javascript code const form - document.getElementById(&apos;myForrn&ast;
-form addEventListener(&apos;submit&apos;,(
-event) &gt; f event.preventDefault() ; const formData --- new
-FormData(event.target) ; constvalue - formData.get(
-&apos;inputFieldName&apos; console.log(Form submitted with
-value: &dollar;{value)) ;
-
-These JavaScript snippets demonstrate advanced techniques for
-interacting with the HTML DOM, including creating elements, event
-handling, manipulation, traversal, form interactions, and custom event
-creation.
-
-Input Event Handling:
-
-1. Input Event for Live Character Count:
-
-javascript code const inputField = document.getElementById(
-•textlnput&Hat;i&Hat;) ; const charCount = document.getE1ementById(
-icharCounti) ;
-
-inputField.addEventListener(&apos;input&apos;, oof charCount.textContent
-&apos; Character count: &dollar;finputField, value, length},
-
-2. Detecting Changes in Input Fields:
-
-javascript code constinputField document.getElementById(
-•textlnputl) ;
-
-inputField.addEventListener(&apos;change&apos;,(event) = &gt;
-console.log(Input value changed to:
-&dollar; {event.target.
-value)
-
-Form Validation and Submission:
-
-3. Real - time Password Strength Checker:
-
-javascript code const passwordField document.getElementById(
-&apos;password&apos;) ; const strengthlndicator --- document.getE1ementById
-(&apos;passwordStrengthl) ;
-
-passwordField.addEventListener(&apos;input&apos;,() - &gt;
-constpassword - passwordFie1d.value;
-let strength -
-i&apos;
-
-// Perform password strength checks
-
-// Update the &apos;strength&apos; variable based on password complexity
-strengthlndicator textContent Password Strength: &dollar;{strengthl
-&quot;
-
-4. Form Submission with Validation:
-
-javascript code const form = document.getElementById(&apos;myForm&Hat;I&Hat;
-const emailField - document.
-getElementById(&apos;email&apos;) ;
-
-form.addEventListener(&apos;submit&rbrack;(event)
-event.
-preventDefau1t
-
-// Validate the email input before submission if(! validateEmai1(
-emailField, value)) { console.error(&apos;Invalid email addresS) ;
-return;
-
-// Form is valid, proceed with submission form.submit() ;
-D,
-
-function validateEmai1(email) {
-
-// Regular expression or other validation logic for email validation
-return/ + + \\.NS +1.test(email) ;
-
-Advanced Input Handling:
-
-5&period; Using Range Input for Dynamic UI Updates
-javascript code constrangelnput =
-document.getElementById(•rangeSlideri) ; constvalueDisp1ay =
-document.getElementById(
-&Hat;i&Hat;rangeVa1ue&apos;
-
-rangelnput.addEventListener(&apos;input&apos;,
-valueDisplqy, textContent- Value: &dollar;
-{rangelnput.value)
-// Update UI based on range input value
-changes
-
-6, Input Masking for Phone Number Input:
-
-javascript code const phonelnput document.getElementById(
-&apos;phoneNumber&apos;) ;
-
-phonelnput addEventListener(&apos;input&apos;, - &gt;
-let value phonelnput.value.replace
-(/ / g,) ; value value.slice(OJ 10) ; // Limit to 10 digits for
-a phone number phonelnput.value value;
-
-These JavaScript snippets demonstrate input event handling, form
-validation, real - time UI updates based on input changes, and
-advanced input manipulation like input masking and range input
-handling in HTML forms.
-
-DOM Object Creation and Manipulation:
-
-1. Creating and Appending a New Image Element:
-
-javascript code const image = document.createE1ement(iimgi
-image.src = &apos;path / to / image.
-jpg&apos;; image alt = &apos;Image Description&apos;;
-
-const container document.getElementById(&apos;imageContainer&apos;) ;
-container.appendChild(image) ;
-
-2. Adding a New Option to Select Element:
-
-<h4>javascript code</h4>
-```
-const select = document.getElementById(ImySelect&apos;
-) ; constoption = document.createElement(&apos;option&quot;
-option.value - &apos;valuell; option.
-text = Option Text &Hat;l&Hat; ; select.appendChild(option) ;
-```
-Advanced Object Manipulation:
-
-3. Setting Custom Attributes to HTML Elements:
-
-<h4>javascript code</h4>
-```
-const element document.getElementByTd(
-&apos;myElement&apos;) ; element.setAttribute(data - custom&apos;,
-&apos;customValuel) ;
-```
-
-4. Removing Specific Attribute from an Element:
-
-<h4>javascript code</h4>
-```
-const element = document.getElementByld(
-&apos;myElementi) ; element.removeAttribute(&apos;data - custom&apos;) ;
-```
-
-Styling HTML Objects:
-
-5. Modifying CSS Properties of an Element:
-
-<h4>javascript code</h4>
-```
-const element = document.getElementById(
-&apos;myElementI) ; element.style.backgroundColor = &apos;blue&apos; element
-.style.color = &apos;white&apos;;
-```
-
-6. Adding and Removing CSS Classes:
-
-<h4>javascript code</h4>
-```
-const element - document.getElementById
-&apos;myElement&apos;) ; element.classList.add(&apos;newClass&apos;) ; element
-.classList.remove(
-•oldClass&apos;
-```
-
-Event Handling and Interaction:
-
-7. Creating and Handling Mouse Hover Effects:
-
-<h4>javascript code</h4>
-```
-const element = document.getElementByld(
-tmyElementi) ; element.addEventListener(&apos;mouseenter
-element.style backgroundC010r = red
-
-element.addEventListener(&apos;mouseleavel,() &gt; { element.style,
-backgroundC010r blue&apos;;
-```
-
-8. Triggering Click Event Programmatically:
-
-<h4>javascript code</h4>
-```
-const button = document.getElementById(
-trnyButton&Hat;i&Hat;
-button.click() ; // Triggering click
-event on the button element
-```
-
-Advanced Content Manipulation:
-
-9. Setting HTML Content Using InnerHTML:
-
-<h4>javascript code</h4>
-
-const element = document.getElementById(
-&apos;myElement&apos;) ; element.innerHTML = &apos;€strong»New HTML Content&lt; /
-strong)&quot;
-
-10.Appending Text Node to an Element:
-
-<h4>javascript code</h4>
-```
-const element - document.getElementById(
-&apos;myElement&apos;) ; const textNode - document.createTextNode(&apos;Text
-Content&apos;) ; element.appendChild(textNode) ;
-```
-
-These JavaScript snippets demonstrate advanced techniques for
-creating, manipulating, and interacting with HTML objects, including
-DOM creation, object manipulation, styling, event handling, and
-content manipulation.
-
-Event Handling:
-
-1. Keyboard Event Handling - Key Press:
-
-<h4>javascript code</h4>
-```
-document.addEventListener(ikeypressi,(event) =
-&gt; f console.log(• Key pressed: &dollar;{event keyl &apos;) ; D;
-```
-
-2. Handling Focus Events - Input Focus and Blur:
-
-<h4>javascript code</h4>
-
-```
-const inputField = document getElementById(imylnput
-&Hat;i&Hat;) ;
-
-inputField.addEventListener(&apos;focus&apos;,() &gt; { console.log(
-&apos;Input field focused&apos;) ;
-
-inputField addEventListener(&apos;blur()
-console.log(&apos;Input field
-blurred&apos;
-```
-
-Event Delegation and Bubbling:
-
-3. Event Delegation with Click Events:
-
-<h4>javascript code</h4>
-```
-const list --- document.getElementById(ImyListl);
-
-list.addEventListener(&apos;click,(event) = &gt;
-if(event.target.tagName &apos;Ll &Hat;i&Hat;
-) { console.log(&quot; Clicked on list item: &dollar;{event.target.
-textContent}
-```
-
-4. Event Bubbling - Click Event on Parent Element:
-
-<h4>javascript code</h4>
-```
-constparent - document.getElementById(
-&apos;parentE1ement&apos;) ;
-
-parent.addEventListener(&apos;click&apos;,(event) - &gt; {
-
-console.log(• Clicked on parent element •) ;
-```
-
-Window and Document Events:
-
-5. Window Load Event:
-
-<h4>javascript code</h4>
-```
-window.addEventListener(&apos;load,() = { console.
-log(&apos;Page fully loaded) ;
-```
-
-6. Document Ready Event(DOMContentLoaded
-<h4>javascript code</h4>
-```
-document
-    addEventListener(&apos;DOMContentLoaded&apos;,
-    console.log(&apos;DOM fully loaded and
-    parsed&apos;) ;
-```
-
-Form Events:
-
-7. Form Submission and Preventing Default Behavior:
-
-<h4>javascript code</h4>
-
-````
-const form = document.getElementById(
-imyFormi
-
-form.addEventListener(&apos;submit&apos;,(event) - &gt;
-event.preventDefault() ; console.log
-(&apos;Form submitted&apos;) ;
-```
-
-// Perform form data handling or validation
-
-8. Input Event for Real - time Validation:
-
-<h4>avascript code</h4>
-
-```
-const emailFie1d - document.getE1ementById(
-&apos;email&apos;) ;
-
-emailField.addEventListener(&apos;input&apos;, = &gt; { if(! emailField.
-validity.valid)(emailField.setCustomValidity(Enter a valid
-email address&apos;
-) else { emailField.setCustomValidity() ;
-```
-
-<h3>D;</h3>
-
-These JavaScript snippets showcase various event handling techniques,
-including keyboard events, focus and blur events, event delegation,
-bubbling, window and document events, and form - related events for
-submission and input validation.
-
-Browser Object Model(BOM) Manipulation:
-
-I.Opening a New Browser Window:
-
-<h4>javascript code<?h4>
-
-constopenWindowButton document.getElementById(
-&apos;openWindowButton&apos;) ;
-
-openWindowButton.addEventListener •click &gt;
-window.open(&apos;https:// example.
-com&apos;, Lblank&apos;, dwidth 500,height = 5001) ; D;
-
-2. Closing a Browser Window:
-
-<h4>javascript code</h4>
-
-```
-const closeWindowButton = document 
-getElementById(
-&apos;closeWindowButton&Hat;i&Hat;) ;
-
-closeWindowButton.addEventListener(&apos;click&apos;,() &gt; { window.
-close() ;
-```
-
-Navigator Object Exploration:
-
-3. Accessing Browser Information:
-
-<h4>javascript code</h4>
-
-```
-console.log(
-Browser name: &dollar;{navigator, appName});
-console log(Browser version: &dollar;{navigator.appVersion));
-console log(
-User Agent: &dollar;{navigator, userAgent}
-console log(
-Language: &dollar;{navigator, language));
-```
-
-4, Checking Geolocation Availability:
-
-<h4>javascript code</h4>
-
-```
-if(geolocation&apos; in navigator) { 
-console.log(&apos; Geolocation is supported);
-  else console.log(&apos;Geolocation is
-not supported);
-```
-
-Location Object Manipulation:
-
-5, Redirecting to Another Page:
-
-javascript code
-
-```
-function redirectToPage
-window location.href= ihttps://
-example com&quot;;
-```
-
-6. Accessing Current URL Information:
-
-<h4>javascript code</h4>
-
-```
-console log(
-Current URL: &dollar;fwindow location href)
-) ; console log(Hostname: &dollar;fwindow, location,
-hostname}) ; console, log(
-Protocol: &dollar;{window.location,
-protocol}) ; console log(
-Pathname: &dollar;{window.location,
-pathname}) ;
-```
-
-Screen Object Attributes:
-
-7. Retrieving Screen Dimensions:
-
-<h4>javascript code</h4>
-
-```
-console.log('Screen width: &dollar;{window.screen.width}');
-console.log('Screen height: &dollar{window.screen.height}');
-```
-
-8.Opening in Full Screen Mode:
-
-<h4>javascript code</h4>
-
-```
-const fullScreenButton = document.getElementById('fullScreenButton');
-
-fullScreenButton.addEventListener('click',() =&gt; {
-  if(document.fullscreenEnabled) {
-    document.documentElement.requestFullscreen();
-  }
-});
-```
-These JavaScript snippets showcase browser manipulation using the
-Browser Object Model(BOM) exploring navigator and location objects,
-screen attributes, opening / closing windows, accessing browser
-information, geolocation availability, URL manipulation, and full -
-screen mode functionality.
-
-Installing JavaScript:
-
-JavaScript is an interpreted programming language that runs in web
-browsers.As it&apos;s not a separate entity that needs to be installed,
-you don&apos;t install JavaScript itself; instead, you work with
-JavaScript within environments that support its execution, such as web
-browsers and server - side platforms like Node.js.
-
-<h3>Setting Up Visual Studio Code for JavaScript Development:</h3>
-
-1.Download and Install Visual Studio Code
-
-Visit the <a href="">Visual Studio Code website</a> and download the
-installer for your operating system.Run the installer and follow the
-installation instructions.
-
-2.Install Node.js(Optional but Recommended for Development):
-
-Node.js is a JavaScript runtime environment that allows executing
-JavaScript outside a web browser.You can download Node.js from the
-[omcial website] install it, and it will include the Node
-Package Manager(npm) with it.This is useful for running
-JavaScript programs locally and managing dependencies.
-
-3. Install Visual Studio Cade Extensions:
-
-  - <b>JavaScript(ES6) Code Snippets:</b> Provides handy code snippets
-    for JavaScript development.Search for it in the Extensions tab
-	in VS Code and install it.
-
-  - <b>Prettier - Code formatter:</b> For auto - formatting your code
-    according to predefined rules. It&apos;s optional but highly recommended.
-
-4. Create a JavaScript Project:
-
-  - Open Visual Studio Code.
-
-  - Create a new folder for your project or open an existing one.
-
-  - Inside the folder, create a new JavaScript file with the.js extension. Right-
-    click in the Explorer panel &gt; New File &gt; script.js.
-
-5. Writing and Running JavaScript Code:
-
-  - Write your JavaScript code in the script.js file.
-
-  - To run JavaScript code, open the integrated terminal in Visual Studio Code(Terminal 
-    &gt; New Terminal), navigate to your project directory, and run the JavaScript file 
-	using Node.js.For example:
-
-	bash code
-	node script.js
-
-  - To execute JavaScript code in a browser, create an HTML file(index.html) and link 
-    your JavaScript file in it using the &lt;script&gt; tag.Open the HTML file in your 
-	preferred web browser.
-
-6. Debugging JavaScript:
-
-  - Visual Studio Code has a powerful built-in debugger.You can set breakpoints in 
-    your code, inspect variables, and step through your code execution line by line.
-
-  - To use the debugger, add breakpoints by clicking in the margin next to your code 
-    line numbers.Then, run your JavaScript code in debug mode(click the Debug icon 
-	in the left sidebar).
-
-Conclusion:
-
-That&apos;s a basic setup to start coding in JavaScript with Visual Studio
-Code Remember, JavaScript development often involves web development,
-where you&apos;ll need to write JavaScript code within HTML/CSS files.
-For web - based development, you&apos;d generally use VS Code to manage
-the entire project structure.
-
-Additionally, for more advanced development or working on larger
-projects, using a module bundler like Webpack or a task runner like
-Gulp might be beneficial to enhance your development environment
-further.
-
-<!-- the end -->
-
-<!-- last editted 9-20-2024 10:17pm -->
-<!-- last editted 10/18/2024 5:51pm -->
-<!-- last editted 10/26/2024 5:40pm -->
-<!-- last editted 11/08/2024 2:44pm -->
-<!-- last editted 11/15/2024 1:01am -->
-<!-- last editted 12/09/2024 7:37pm -->
+<p>Boolean attributes are handled just as they would be within Ruby or
+HTML, all depending on the syntax being used.</p>
+
+<h4>Haml</h4>
+
+<pre>
+ 1  %input{:type =&gt; "checkbox", :checked =&gt; true}  
+ 2  %input(type="checkbox" checked=true)  
+ 3  %input(type="checkbox" checked) 
+</pre>
+
+<h4>Compiled HTML</h4>
+
+<pre>
+ 1  &lt;input type="checkbox" checked&gt;  
+</pre>
+
+<h4>Escaping Text</h4>
+
+<p>One of the benefits of Haml is the ability to evaluate and run Ruby,
+however this isn't always the desired action. Text, and lines of code,
+can be escaped by using a backslash, \&#0044; allowing the text to be
+rendered explicitly without being executed.</p>
+
+<p>In the example below, the first instance of = @author is executed Ruby,
+pulling the authors name from the application. The second instance,
+starting with the backslash, is escaped text, printing it as is, without
+execution.</p>
+
+<h4>Haml</h4>
+
+<pre>
+ 1  .author 
+ 2  = @author 
+ 3  \\= @author 
+</pre>
+
+<h4>Compiled HTML</h4>
+
+<pre>
+ 1  &lt;div class="author"&gt; 
+ 2    Shay Howe  
+ 3    = @author 
+ 4  &lt;/div&gt;
+</pre>
+
+<h4>Text Escaping Alternatives</h4>
+
+<p>Occasionally escaping text doesn't quite do the job and Ruby is needed
+to generate the desired output. One popular instance of this is when
+trying to include a period directly after a link, but not as part of the
+anchor text. Putting the period on a new line isn't acceptable as it
+will be treated as an empty class value, causing a compiling error.
+Adding a backslash before the period will escape the character however
+it places a blank space between the last word and the period. Again, not
+producing the desired output.</p>
+
+<p>In these cases a Ruby helper comes in handy. In the example below, the
+helper is used to place a period directly after the last word but still
+outside of the anchor text.</p>
+
+<h4>Haml</h4>
+
+<pre>
+ 1  %p
+ 2  Shay is 
+ 3  = succeed "." do 
+ 4  %a{:href =&gt; "#"} awesome 
+</pre>
+
+<h4>Compiled HTML</h4>
+
+<pre>
+ 1  &lt;p&gt;Shay is &lt;a href="#"&gt;awesome&lt;/a&gt;.&lt;/p&gt;  
+</pre>
+
+<h4>Comments</h4>
+
+<p>As with elements and attributes, comments are handled a bit differently
+in Haml as well. Simply enough, code can be commented out with the use
+of a single forward slash, /. Individual lines may be commented out with
+the use of a forward slash at the beginning of the line, and blocks of
+code can be commented out by being nested underneath a forward slash.</p>
+
+<h4>Haml</h4>
+
+<pre>
+ 1  %div 
+ 2  / Commented line
+ 3  Actual line
+ 4  / 
+ 5  %div 
+ 6  Commented block 
+</pre>
+
+<h4>Compiled HTML</h4>
+
+<pre>
+ 1  &lt;div&gt; 
+ 2    &lt;!-- Commented line --&gt; 
+ 3    Actual line
+ 4  &lt;/div&gt;
+ 5    &lt;!--  
+ 6  &lt;div&gt; 
+ 7    Commented block 
+ 8  &lt;/div&gt;
+ 9  --&gt;
+</pre>
+
+<h4>Conditional Comments</h4>
+
+<p>Conditional comments are also handled differently in Haml. To create a
+conditional comment use square brackets, [], around the condition.
+These square brackets need to be placed directly after the forward
+slash.</p>
+
+<h4>Haml</h4>
+
+<pre>
+ 1  &lbrack;if lt IE 9] 
+ 2  %script{:src =&gt; "html5shiv.js"}
+</pre>
+
+<h4>Compiled HTML</h4>
+
+<pre>
+ 1  &lt;!--&lbrack;if lt IE 9]&gt;
+ 2  &lt;script src="html5shiv.js"&gt;&lt;/script&gt;
+ 3  &lt;!&lbrack;endif]--&gt;  
+</pre>
+
+<h4>Silent Comments</h4>
+
+<p>Haml also provides the ability to create Haml specific comments, or
+silent comments. Silent comments differ from general HTML comments in
+that upon being complied any content within a silent comment is
+completely removed from the page, and is not displayed in the output.
+Silent comments are initialized with a dash then the number sign, -#. As
+with other comments, silent comments may be used to remove one line or
+multiple lines with the use of nesting.</p>
+
+<h4>Haml</h4>
+
+<pre>
+ 1  %div 
+ 2  -# Removed line 
+ 3  Actual line
+</pre>
+
+<h4>Compiled HTML</h4>
+
+<pre>
+ 1  &lt;div&gt; 
+ 2    Actual line
+ 3  &lt;/div&gt;
+</pre>
+
+<h4>Filters</h4>
+
+<p>Haml provides a handful of filters, allowing different types of input to
+be used inside of Haml. Filters are identified with a colon followed by
+the name of the filter, :markdown for example, with all of the content
+to be filtered nested underneath.</p>
+
+<h4>Common Filters</h4>
+
+<p>Below are some of the more common filters, with the more popular ones of
+the group being :css and :javascript.</p>
+
+<ul>
+  <li>:cdata</li>
+  <li>:coffee</li>
+  <li>:css</li>
+  <li>:erb</li>
+  <li>:escaped</li>
+  <li>:javascript</li>
+  <li>:less</li>
+  <li>:markdown</li>
+  <li>:maruku</li>
+  <li>:plain</li>
+  <li>:preserve</li>
+  <li>:ruby</li>
+  <li>:sass</li>
+  <li>:scss</li>
+  <li>:textile</li>
+</ul>
+
+<h4>Javascript Filter</h4>
+
+<h4>Haml</h4>
+
+<pre>
+ 1  :javascript
+ 2  $('button').on('click', function(event) {  
+ 3    $('p').hide('slow');
+ 4  });
+</pre>
+
+<h4>Compiled HTML</h4>
+
+<pre>
+ 1  &lt;script&gt; 
+ 2  $('button').on('click', function(event) {  
+ 3    $('p').hide('slow');
+ 4  });  
+ 5  &lt;/script&gt;
+</pre>
+
+<h4>CSS &amp; Sass Filters</h4>
+
+<h4>Haml</h4>
+
+<pre>
+ 1  :css 
+ 2  .container { 
+ 3    margin: 0 auto; 
+ 4    width: 960px;
+ 5  } 
+ 6  :sass
+ 7  .container 
+ 8  margin: 0 auto  
+ 9  width: 960px 
+</pre>
+
+<h4>Compiled HTML</h4>
+
+<pre>
+ 1  &lt;style&gt;  
+ 2  .container { 
+ 3    margin: 0 auto; 
+ 4    width: 960px;
+ 5  } 
+ 6  &lt;/style&gt; 
+</pre>
+
+<h4>Ruby Interpolation</h4>
+
+<p>As previously mentioned Haml can evaluate Ruby, and there may
+occasionally be times where Ruby needs to be evaluated inside of plain
+text. In this event Ruby needs to be interpolated, accomplished by
+wrapping the necessary Ruby code inside.</p>
+
+<p>Below is an example of Ruby being interpolated as part of a class name.</p>
+
+<h4>Haml</h4>
+
+<pre>
+ 1  %div{:class =&gt; "student-#{@student.name}"}
+</pre>
+
+<h4>Compiled HTML</h4>
+
+<pre>
+ 1  &lt;div class="student-shay"&gt;
+</pre>
+
+<h4 id="scss-sass">SCSS &amp; Sass</h4>
+
+<p>SCSS and Sass are preprocessing languages which are compiled to CSS,
+resembling Haml a bit in that they make writing code easier, and provide
+quite a bit of leverage in doing so. Individually SCSS and Sass come
+from the same origin however they are technical different syntaxes.</p>
+
+<p>Sass, <a href="https://sass-lang.com/documentation/" 
+rel="noopener noreferrer" target="_blank">Syntactically Awesome Stylesheets</a>, 
+came first and is a strict indented syntax. SCSS, Sassy CSS, followed shortly 
+after providing the same firing power of Sass but with a more flexible syntax, 
+including the ability to write plain CSS.</p>
+
+<h4>Installation</h4>
+
+<p>As with Haml, SCSS and Sass are <a href="http://sassmeister.com/" 
+rel="noopener noreferrer" target="_blank">compiled</a> using Ruby therefore Ruby 
+needs to be installed to produce CSS files. Please follow the directions from 
+before to install, or ensure Ruby is installed.</p>
+
+<p>Once Ruby is installed the gem install sass command needs to be run from
+the command line to install SCSS and Sass.</p>
+
+<pre>
+ 1  gem install sass
+</pre>
+
+<p>Files written in SCSS or Sass need to have the .scss or .sass file
+extensions respectively. To convert either of these file types
+to .css the following sass command needs to be run.</p>
+
+<pre>
+ 1  sass styles.sass styles.css 
+</pre>
+
+<p>The command above takes the styles.sass Sass file and compiles it to
+the styles.css file. As with Haml, these file names are paths and need
+to be executed respectively. The above command works when those files
+reside within the directory from which the command is run, should the
+files reside outside of the directory their path needs to be explicitly
+stated within the command.</p>
+
+<p>Should changes to a file be ongoing Sass can watch the file and
+recompile the CSS every time a change takes place. To watch a Sass file
+the following sass command may be run.</p>
+
+<pre>
+ 1  sass --watch styles.sass:styles.css 
+</pre>
+
+<p>Additionally, instead of compiling or watching individual files, Sass is
+capable of compiling and watching entire directories of files. For
+example, to watch an entire directory of Sass files and convert them to
+CSS the sass command below may be run.</p>
+
+<pre>
+ 1  sass --watch assets/sass:public/css 
+</pre>
+
+<h4>Converting Files from SCSS to Sass &amp; Vice Versa</h4>
+
+<p>On top of being able to convert SCSS and Sass files to CSS you can also
+convert files from SCSS to Sass and vice versa. To do so
+the sass commands below may be used to convert a SCSS file to Sass, and
+then a Sass file to SCSS respectively.</p>
+
+<pre>
+ 1  # Convert Sass to SCSS
+ 2  sass-convert styles.sass styles.scss  
+ 3  # Convert SCSS to Sass
+ 4  sass-convert styles.scss styles.sass  
+</pre>
+
+<h4>Syntax</h4>
+
+<p>As previously mentioned the primary difference between SCSS and Sass is
+their syntax, and their difference in severity. The syntax of SCSS isn't
+much different than that of regular CSS. In fact, standard CSS will run
+inside of SCSS. Sass on the other hand is fairly strict, and any
+indenting or character errors will prohibit the styles from compiling.
+Sass omits all curly brackets, {}, and semicolons, ;, relying on
+indentation and clear line breaks for formatting.</p>
+
+<h4>SCSS</h4>
+
+<pre>
+ 1  .new {  
+ 2    color: #ff7b29; 
+ 3    font-weight: bold; 
+ 4    span {  
+ 5      text-transform: uppercase;  
+ 6    } 
+ 7  } 
+</pre>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  .new 
+ 2  color: #ff7b29  
+ 3  font-weight: bold  
+ 4  span 
+ 5  text-transform: uppercase
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  .new {  
+ 2    color: #ff7b29; 
+ 3    font-weight: bold; 
+ 4  } 
+ 5  .new span {
+ 6    text-transform: uppercase;  
+ 7  } 
+</pre>
+
+<h4>Using SCSS vs. Sass</h4>
+
+<p>Deciding on whether to use SCSS or Sass boils down to personal
+preference, and is a decision to be made based on what is best for a
+specific team and project. There are pros and cons to each syntax, all
+of which are fair.</p>
+
+<p>Personally, I prefer the Sass syntax as it requires less characters and
+provides, I believe, a cleaner syntax. Sass will not allow straight CSS
+input as SCSS does, and will not put up with any composition errors.
+Sass has a bit more of a learning curve, however a learning curve I see
+well worth the ease of manageable styles.</p>
+
+<p>Moving forward the examples in this lesson will use Sass, however they
+may also all be accomplished with SCSS.</p>
+
+<h4>Nesting</h4>
+
+<p>In the syntax example above you will notice how selectors may be nested
+inside of one another to create compound selectors. The nesting quickly
+outlines identifiable selectors, however it is important not to go
+overboard. Do <b>not</b> nest selectors for unapparent reasons or go
+overboard nesting one selector under the prior one. Using specific
+selectors without raising specificity is important.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  .portfolio 
+ 2  border: 1px solid #9799a7
+ 3  ul
+ 4  list-style: none
+ 5  li
+ 6  float: left
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  .portfolio { 
+ 2    border: 1px solid #9799a7;  
+ 3  } 
+ 4  .portfolio ul { 
+ 5    list-style: none;  
+ 6  } 
+ 7  .portfolio li { 
+ 8    float: left; 
+ 9  } 
+</pre>
+
+<h4>Nesting Properties</h4>
+
+<p>On top of nesting selectors it is also possible to nest properties. Some
+of the most popular uses of this may be seen with font, margin, padding,
+and border properties. As with the decision of SCSS versus Sass, this is
+very much a personal decision. Many feel that shorthand values are fine
+and breaking out values in this longer format is unnecessary. Ultimately
+your decision is up to personal preference.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  div  
+ 2  font:
+ 3  family: Baskerville, Palatino, serif 
+ 4  style: italic
+ 5  weight: normal  
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  div {
+ 2    font-family: Baskerville, Palatino, serif;
+ 3    font-style: italic;
+ 4    font-weight: normal;  
+ 5  } 
+</pre>
+
+<h4>Nested Media Queries</h4>
+
+<p>Individual media queries may also be nested inside of a selector,
+changing property values based off a media condition.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  .container 
+ 2  width: 960px 
+ 3  @media screen and (max-width: 960px)
+ 4  width: 100%
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  .container { 
+ 2    width: 960px;
+ 3  } 
+ 4  @media screen and (max-width: 960px) { 
+ 5    .container { 
+ 6      width: 100%; 
+ 7    } 
+ 8  } 
+</pre>
+
+<h4>Parent Selector</h4>
+
+<p>Sass provides a way to add styles to a previous selector with the use of
+the parent selector, implemented by using an ampersand, &amp;. Most commonly
+the parent selector is used in conjunction with a pseudo class, such
+as :hover, however it doesn't have to be. Additionally the parent
+selector could be used to bind additional selectors to its parent, such
+as &amp;.featured.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  a 
+ 2  color: #0087cc  
+ 3  &:hover 
+ 4  color: #ff7b29  
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  a {  
+ 2    color: #0087cc; 
+ 3  } 
+ 4  a:hover {  
+ 5    color: #ff7b29; 
+ 6  } 
+</pre>
+
+<h4>Parent Key Selector</h4>
+
+<p>The parent selector may also be used as the key selector, adding
+qualifying selectors to make compound selectors. There are an abundance
+of ways to use the parent selector as the key selector but perhaps one
+of the most beneficial is inside of feature detection.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  .btn 
+ 2  background: linear-gradient(#fff, #9799a7)
+ 3  .no-cssgradients & 
+ 4  background: url("gradient.png") 0 0 repeat-x  
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  .btn {  
+ 2    background: linear-gradient(#fff, #9799a7);  
+ 3  } 
+ 4  .no-cssgradients .btn {  
+ 5    background: url("gradient.png") 0 0 repeat-x; 
+ 6  } 
+</pre>
+
+<h4>Comments</h4>
+
+<p>Sass handles comments very similar to that of Haml. The standard CSS
+syntax, /* ... */, for comments works as intended within Sass however
+there is also a syntax for silent comments to completely remove a
+comment or lines of code from being compiled.</p>
+
+<p>The syntax for silent comments is two forward slashes, //, and any
+content on that line or nested below it will be omitted from
+computation. Notice in the example below how the // Omitted comment line
+is not rendered in the compiled CSS.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  /* Normal comment */
+ 2  div  
+ 3  background: #333
+ 4  // Omitted comment 
+ 5  strong  
+ 6  display: block  
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  /* Normal comment */
+ 2  div {
+ 3    background: #333;  
+ 4  } 
+ 5  strong {
+ 6    display: block; 
+ 7  } 
+</pre>
+
+<h4>Variables</h4>
+
+<p>Variables are one of the more sought after features of CSS that Sass
+provides. With Sass you can define variables and then reuse them as
+necessary.</p>
+
+<p>Variables are defined with a dollar sign, $, followed by the variable
+name. Between the variable name and value is a colon followed by an
+empty space, such as $font-base: 1em. As for the value of the variable,
+it may be a number, string, color, boolean, null, or a list of values
+separated by spaces or commas.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  $font-base: 1em
+ 2  $serif: "Helvetica Neue", Arial, "Lucida Grande", sans-serif 
+ 3  p 
+ 4  font: $font-base $serif
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  p {  
+ 2    font: 1em "Helvetica Neue", Arial, "Lucida Grande", sans-serif;  
+ 3  } 
+</pre>
+
+<h4>Variable Interpolation</h4>
+
+<p>For the most part variables may be used anywhere inside of a Sass
+document. However, they may occasionally need to be interpolated using
+the syntax. A few instances of where variables need to be interpolated
+include when being used in a class name, property name, or inside a
+string of plain text.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  $location: chicago
+ 2  $offset: left  
+ 3  .#{$location}  
+ 4  #{$offset}: 20px  
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  .chicago { 
+ 2    left: 20px;
+ 3  } 
+</pre>
+
+<h4>Calculations</h4>
+
+<p>Sass also has the ability to do calculations in a variety of different
+manners. Calculations can handle most problems, such as addition,
+subtraction, division, multiplication, and rounding.</p>
+
+<p>Addition can be done by using the plus sign, '+', and may be completed
+with or without units of measurement. When done with units, the unit
+tied to the first number in the equation is the unit that will be used
+in the computed value. For example, ten pixels plus one inch will equal
+106 pixels. Subtraction is handled the same way as addition but with the
+minus sign, '-', instead.</p>
+
+<p>Multiplication is completed with the asterisk sign, '*', however only one
+of the numbers, if any, may include a unit of measurement. Using the
+percent sign, '%', will return the remainder of the two numbers upon being
+divided, and as with multiplication, only allows one number, if any, to
+have a unit.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  width: 40px + 6 
+ 2  width: 40px - 6 
+ 3  width: 40px * 6
+ 4  width: 40px % 6 
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  width: 46px; 
+ 2  width: 34px; 
+ 3  width: 240px;
+ 4  width: 4px;
+</pre>
+
+<h4>Division</h4>
+
+<p>Division is a bit trickier in Sass as the forward slash, /, used to
+perform division is already used in some CSS property values. Generally
+speaking, division will take place when any part of the value uses a
+variable, if the value is wrapped in parentheses, or if the value is
+used as part of another equation.</p>
+
+<p>When using one unit of measurement in division the value will reside in
+that unit. When using two units of measurement, however, the resulting
+value will be unitless.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  width: 100px / 10  
+ 2  width: (100px / 10)
+ 3  width: (100px / 10px) 
+ 4  $width: 100px  
+ 5  width: $width / 10
+ 6  width: 5px - 100px / 10  
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  width: 100px/10;
+ 2  width: 10px; 
+ 3  width: 10; 
+ 4  width: 10px; 
+ 5  width: -5px; 
+</pre>
+
+<h4>Detailed Math</h4>
+
+<p>As one may expect, Sass is also capable of combining multiple math operations. 
+Sass also recognizes which operations to execute first based on the use of parentheses.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  $grid: 16 
+ 2  $column: 40px  
+ 3  $gutter: 20px  
+ 4  $container: ($column * $grid) + ($gutter * $grid) 
+ 5  width: $container 
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  width: 960px;
+</pre>
+
+<h4>Number Functions</h4>
+
+<p>By default Sass includes a handful of 
+<a href="https://sass-lang.com/documentation/modules/math" 
+rel="noopener noreferrer" target="_blank">built in functions</a>, many of which 
+are used to manipulate number values as wished.</p>
+
+<p>The percentage() function turns a value into a percentage. The round() function 
+rounds a value to the closest whole number, defaulting to rounding up where necessary. 
+The ceil() function rounds a value up to the closest whole number, and the floor() 
+function rounds a value down to the closest whole number. Lastly, the abs() function 
+finds the absolute value of a given number.</p>
+
+<ul>
+  <li>percentage()</li>
+  <li>round()</li>
+  <li>ceil()</li>
+  <li>floor()</li>
+  <li>abs()</li>
+</ul>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  width: percentage(2.5)
+ 2  width: round(2.5px)
+ 3  width: ceil(2.5px) 
+ 4  width: floor(2.5px)
+ 5  width: abs(-2.5px) 
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  width: 250%; 
+ 2  width: 3px;
+ 3  width: 3px;
+ 4  width: 2px;
+ 5  width: 2.5px;
+</pre>
+
+<h4>Color</h4>
+
+<p>Sass provides quite a bit of assistance in working with colors, providing a 
+handful of different features to alter and manipulate colors. One of the more 
+popular color features in Sass is the ability to change a hexadecimal color, or 
+variable, and convert it into an RGBa value.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  color: rgba(#8ec63f, .25)
+ 2  $green: #8ec63f
+ 3  color: rgba($green, .25)
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  color: rgba(142, 198, 63, .25);
+</pre>
+
+<h4>Color Operations</h4>
+
+<p>On top of numbers, math may additionally be performed on colors using
+addition, subtraction, multiplication, and division. These computations
+are performed on the red, green, and blue components, changing them as
+intended.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  color: #8ec63f + #666 
+ 2  color: #8ec63f * 2
+ 3  color: rgba(142, 198, 63, .75) / rgba(255, 255, 255, .75)
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  color: #f4ffa5; 
+ 2  color: #ffff7e; 
+ 3  color: rgba(0, 0, 0, .75);  
+</pre>
+
+<h4>Color Alterations</h4>
+
+<p>Using color operators to perform calculations is helpful but can be a
+bit challenging as well. In this case color alterations may be a better
+option. Color alterations provide the ability to inverse colors, find
+complementary colors, mix colors together, or find the grayscale value
+of a color.</p>
+
+<ul>
+  <li>invert()</li>
+  <li>complement()</li>
+  <li>mix()</li>
+  <li>grayscale()</li>
+</ul>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  color: invert(#8ec63f)
+ 2  color: complement(#8ec63f)  
+ 3  color: mix(#8ec63f, #fff)
+ 4  color: mix(#8ec63f, #fff, 10%) 
+ 5  color: grayscale(#8ec63f)
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  color: #7139c0; 
+ 2  color: #773fc6; 
+ 3  color: #c6e29f; 
+ 4  color: #f3f9eb; 
+ 5  color: #838383; 
+</pre>
+
+<h4>HSLa Color Alterations</h4>
+
+<p>HSLa color alterations take things a step further, adding in even more alterations. 
+Some of the more popular HSLa color alterations include lighten(), darken(), saturate(), 
+and desaturate().</p>
+
+<ul>
+  <li>lighten()</li>
+  <li>darken()</li>
+  <li>saturate()</li>
+  <li>desaturate()</li>
+  <li>adjust-hue()</li>
+  <li>fade-in()</li>
+  <li>fade-out()</li>
+</ul>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  color: lighten(#8ec63f, 50%)
+ 2  color: darken(#8ec63f, 30%) 
+ 3  color: saturate(#8ec63f, 75%)  
+ 4  color: desaturate(#8ec63f, 25%)
+ 5  color: adjust-hue(#8ec63f, 30) 
+ 6  color: adjust-hue(#8ec63f, -30)
+ 7  color: fade-in(rgba(142, 198, 63, 0), .4) 
+ 8  color: fade-out(#8ec63f, .4)
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  color: white;
+ 2  color: #3b5319; 
+ 3  color: #98ff06; 
+ 4  color: #89a75e; 
+ 5  color: #4ac63f; 
+ 6  color: #c6bb3f; 
+ 7  color: rgba(142, 198, 63, 0.4);
+ 8  color: rgba(142, 198, 63, 0.6);
+</pre>
+
+<h4>Color Manipulation</h4>
+
+<p>Outside of altering colors Sass can also directly manipulate colors. Manipulating 
+colors provides the most control over how to finely tune specific color properties. 
+With this control also comes complexity, which is why color manipulations are a bit 
+less common than color alterations.</p>
+
+<pre>
+  - change-color() --- Set any property of a color
+    $color, &lbrack;$red], &lbrack;$green], &lbrack;$blue], &lbrack;$hue],
+    &lbrack;$saturation], &lbrack;$lightness], &lbrack;$alpha]
+
+  - adjust-color() --- Incrementally manipulate any property of a color
+    $color, &lbrack;$red], &lbrack;$green], &lbrack;$blue], &lbrack;$hue],
+    &lbrack;$saturation], &lbrack;$lightness], &lbrack;$alpha]
+
+  - scale-color() --- Fluidly scale any percentage based on property of
+    a color
+    $color, &lbrack;$red], &lbrack;$green], &lbrack;$blue], &lbrack;$saturation],
+    &lbrack;$lightness], &lbrack;$alpha]
+</pre>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  color: change-color(#8ec63f, $red: 60, $green: 255) 
+ 2  color: adjust-color(#8ec63f, $hue: 300, $lightness: 50%)  
+ 3  color: scale-color(#8ec63f, $lightness: 25%, $alpha: 30%) 
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  color: #3cff3f; 
+ 2  color: white;
+ 3  color: #aad46f; 
+</pre>
+
+<h4>Extends</h4>
+
+<p>Extends provide a way to easily share and reuse styles without having to
+explicitly repeat code or use additional classes, providing a perfect
+way to keep code modular. Both elements and class selectors may be used
+as an extend, and there is even a placeholder selector built just for
+extends.</p>
+
+<p>Extends are established by using the @extend rule followed by the
+selector to extend. Instead of duplicating the property and values, the
+original selector receives and additional selector, that of which is
+from the selector calling the extend.</p>
+
+<p>In all, this provides a way to quickly reuse code without driving up
+code weight. Additionally, extends parley nicely with OOCSS and SMACSS.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  .alert  
+ 2  border-radius: 10px
+ 3  padding: 10px 20px 
+ 4  .alert-error 
+ 5  @extend .alert 
+ 6  background: #f2dede
+ 7  color: #b94a48  
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  .alert, 
+ 2  .alert-error {  
+ 3  border-radius: 10px;  
+ 4  padding: 10px 20px;
+ 5  } 
+ 6  .alert-error {  
+ 7  background: #f2dede;  
+ 8  color: #b94a48; 
+ 9  } 
+</pre>
+
+<h4>Placeholder Selector Extend</h4>
+
+<p>To avoid building a bunch of unused classes purely for extends we can use what 
+is known as a placeholder selector. The placeholder selector is initialized with 
+a percentage sign, %, and is never directly compiled into CSS. Instead, it is used 
+to attach selectors to when it is called with an extend. In the refined example 
+below notice how the .alert selector never makes its way into the CSS.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  %alert  
+ 2  border-radius: 10px
+ 3  padding: 10px 20px 
+ 4  .alert-error 
+ 5  @extend %alert 
+ 6  background: #f2dede
+ 7  color: #b94a48  
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  .alert-error {  
+ 2    border-radius: 10px;  
+ 3    padding: 10px 20px;
+ 4  } 
+ 5  .alert-error {  
+ 6    background: #f2dede;  
+ 7    color: #b94a48; 
+ 8  } 
+</pre>
+
+<h4>Element Selector Extend</h4>
+
+<p>As with classes, extends also work with standard element selectors too.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  h2
+ 2  color: #9c6
+ 3  span 
+ 4  text-decoration: underline  
+ 5  .sub-heading 
+ 6  @extend h2
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  h2, .sub-heading { 
+ 2    color: #9c6; 
+ 3  } 
+ 4  h2 span, .sub-heading span {
+ 5    text-decoration: underline; 
+ 6  } 
+</pre>
+
+<h4>Mixins</h4>
+
+<p>Mixins provide a way to easily template properties and values, then
+share them amongst different selectors. Mixins differ from extends as
+mixins allow arguments to be passed in where extends are fixed values.</p>
+
+<p>Mixins are identified using the @mixin rule followed by any potential
+arguments, then any styles are outlined below the rule. To call a mixin
+from within a selector use the plus sign, +, followed by the name of the
+mixin and any desired argument values if needed.</p>
+
+<p>It is worth nothing that SCSS handles mixins a bit different. Instead of
+using a plus sign to call a mixin SCSS use an @include rule.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  @mixin btn($color, $color-hover)  
+ 2  color: $color  
+ 3  &:hover 
+ 4  color: $color-hover  
+ 5  .btn 
+ 6  +btn($color: #fff, $color-hover: #9799a7)  
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  .btn {  
+ 2  color: #fff; 
+ 3  } 
+ 4  .btn:hover { 
+ 5  color: #9799a7; 
+ 6  } 
+</pre>
+
+<h4>Default Arguments</h4>
+
+<p>Using the same example from above we can also specify default argument
+values, which may be over written if wished.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  @mixin btn($color: #fff, $color-hover: #9799a7) 
+ 2  color: $color  
+ 3  &:hover 
+ 4  color: $color-hover  
+ 5  .btn 
+ 6  +btn($color-hover: #9799a7)
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  .btn {  
+ 2    color: #fff; 
+ 3  } 
+ 4  .btn:hover { 
+ 5    color: #9799a7; 
+ 6  } 
+</pre>
+
+<h4>Variable Arguments</h4>
+
+<p>When one or more values need to be passed to an argument the variable
+name may end with ... inside of the mixin. In the example below with
+box shadows we can pass in comma separated values to the mixin.</p>
+
+<pre>
+ 1  @mixin box-shadow($shadow...)  
+ 2  -webkit-box-shadow: $shadow
+ 3  -moz-box-shadow: $shadow
+ 4  box-shadow: $shadow  
+ 5  .shadows
+ 6  +box-shadow(0 1px 2px #cecfd5, inset 0 0 5px #cecfd5) 
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  .shadows { 
+ 2  -moz-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;  
+ 3  -webkit-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;  
+ 4  box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5; 
+ 5  } 
+</pre>
+
+<h4>Imports</h4>
+
+<p>One of nicest parts of Sass is its ability to import
+multiple .scss or .sass files and condense them into one single file.
+Condensing all of the files into one allows for multiple stylesheets to
+be used for better organization without the worry of numerous HTTP
+request.</p>
+
+<p>Instead of referencing all of the different stylesheets within an HTML
+document only reference the one Sass file importing all of the other
+stylesheets.</p>
+
+<p>In the following examples, all three files &#0095;normalize.sass, 
+&#0095;grid.sass, and &#0095;typography.sass are all compiled into one file. In 
+the event that the Sass file importing all the other files is named styles.sass, 
+and it is compiled into styles.css, then only styles.css needs to be referenced 
+within the HTML document.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  @import "normalize"
+ 2  @import "grid", "typography" 
+</pre>
+
+<h4>Compiled HTML</h4>
+
+<pre>
+ 1  &lt;link href="styles.css" rel="stylesheet"&gt;
+</pre>
+
+<h4>Loops &amp; Conditionals</h4>
+
+<p>For a bit more intricate styling Sass supports different control
+directives. Its important to understand these directives are not
+intended for everyday styling but for creating detailed mixins and
+helpers. Many of these will look familiar as they are borrowed from
+other programming languages.</p>
+
+<h4>Operators</h4>
+
+<p>Some loops and conditionals will require operators to determine their
+behavior, of which can be broken down into relational and comparison
+operators. Relational operators looks at the relationship between two
+entities, while comparison operators determine equality or different
+between to entities.</p>
+
+<pre>
+	- &lt;
+	Less than
+
+	- &gt;
+	Greater than
+
+	- ==
+	Equal to
+
+	- &lt;=
+	Less than or equal to
+
+	- &gt;=
+	Greather than or equal to
+
+	- !=
+	Not equal to
+</pre>
+
+<pre>
+ 1  // Relational Operators  
+ 2  6 &lt; 10 // true 
+ 3  4 &lt;= 60 // true
+ 4  8 &gt; 2 // true  
+ 5  10 &gt;= 10 // true  
+ 6  // Comparison Operators  
+ 7  #fff == white // true 
+ 8  10 + 30 == 40 // true 
+ 9  normal != bold // true
+</pre>
+
+<h4>If Function</h4>
+
+<p>The @if rule test an expressions then loads the styles beneath that
+expression should it return anything other than false or null. The
+initial if statement may be proceeded by several else if statements and
+one else statement. Once a statement is successful identified the styles
+directly tied to it will be applied.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  $shay: awesome 
+ 2  .shay
+ 3  @if $shay == awesome
+ 4    background: #ff7b29
+ 5  @else if $shay == cool 
+ 6    background: #0087cc
+ 7  @else  
+ 8    background: #333
+</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>
+ 1  .shay { 
+ 2    background: #ff7b29;  
+ 3  } 
+</pre>
+
+<h4>For Loop</h4>
+
+<p>The @for rule outputs different sets of styles based off of a counter
+variable. There are two different forms available for for loops, those
+being to and through. The first, @for $i from 1 to 3 for example, will
+output styles up to, but not including, 3. The other form, @for $i from
+1 through 3, will output styles up to, and including, 3.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  @for $col from 1 to 6  
+ 2  .col-#{$col}
+ 3  width: 40px * $col  
+</pre>
+
+<details>
+  <summary>Compiled CSS</summary>
+
+<pre>
+ 1  .col-1 {
+ 2    width: 40px; 
+ 3  } 
+ 4  .col-2 {
+ 5    width: 80px; 
+ 6  } 
+ 7  .col-3 {
+ 8    width: 120px;
+ 9  } 
+ 10 .col-4 {
+ 11   width: 160px;
+ 12 } 
+ 13 .col-5 {
+ 14   width: 200px;
+ 15 } 
+</pre>
+
+</details>
+
+<h4>Each Loop</h4>
+
+<p>Simply enough, the @each rule returns styles for each item in a list.
+List may include multiple comma separated items.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  @each $class in uxd, rails, html, css 
+ 2  .#{$class}-logo
+ 3  background: url("/img/#{$class}.jpg")
+</pre>
+
+<details>
+  <summary>Compiled CSS</summary>
+
+<pre>
+ 1  .uxd-logo {
+ 2    background: url("/img/uxd.jpg");
+ 3  } 
+ 4  .rails-logo {
+ 5    background: url("/img/rails.jpg"); 
+ 6  } 
+ 7  .html-logo { 
+ 8    background: url("/img/html.jpg");  
+ 9  } 
+ 10 .css-logo {
+ 11   background: url("/img/css.jpg");
+ 12 } 
+</pre>
+
+</details>
+
+<h4>While Loop</h4>
+
+<p>The @while rule repeatedly returns styles until the statement becomes
+false. The directive accepts a handful of different operators and the
+counter variable can be finely controlled allowing for precise looping.</p>
+
+<h4>Sass</h4>
+
+<pre>
+ 1  $heading: 1 
+ 2  @while $heading <= 6  
+ 3  h#{$heading}
+ 4  font-size: 2em - ($heading * .25em)
+ 5  $heading: $heading + 1 
+</pre>
+
+<details>
+  <summary>Compiled CSS</summary>
+
+<pre>
+ 1  h1 {
+ 2    font-size: 1.75em;
+ 3  }
+ 4  h2 {
+ 5    font-size: 1.5em;
+ 6  }
+ 7  h3 {
+ 8    font-size: 1.25em;
+ 9  }
+ 10 h4 {
+ 11   font-size: 1em;
+ 12 }
+ 13 h5 {
+ 14   font-size: 0.75em;
+ 15 }
+ 16 h6 { 16 font-size: 0.5em;
+ 17 }
+</pre>
+
+</details>
+
+<h4 id="other-preprocessors">Other Preprocessors</h4>
+
+<p>Haml and Sass are far from the only preprocessing languages available,
+including JavaScript preprocessors as well. Some of the other popular
+preprocessors including <a href="http://jade-lang.com/" 
+rel="noopener noreferrer" target="_blank">Jade</a>, <a href="http://slim-lang.com/" 
+rel="noopener noreferrer" target="_blank">Slim</a>, <a href="http://lesscss.org/" 
+rel="noopener noreferrer" target="_blank">LESS</a>, and <a href="http://coffeescript.org/" 
+rel="noopener noreferrer" target="_blank">CoffeeScript</a>.</p>
+
+<p>In the interest of brevity Haml and Sass were the only preprocessors
+covered in this lesson. They were also chosen because they are built
+using Ruby and fit right into Ruby on Rails applications. They've also
+got tremendous community support.</p>
+
+<p>When it comes to choosing which, if any, preprocessor to use it is
+important to consider what is best for your team and project. Projects
+built in Node.js may likely better benefit from Jade. The most important
+aspect to consider, though, is what your team is accustomed to using. Do
+your research for each project and make the most educated decision.</p>
+
+<h4>Resources & Links</h4>
+
+<ul>
+  <li><a href="http://haml.info/" 
+    rel="noopener noreferrer" target="_blank">
+	Haml</a> --- HTML Abstraction Markup Language</li>
+  <li><a href="http://sass-lang.com/" 
+    rel="noopener noreferrer" target="_blank">
+	Sass</a> --- Syntactically Awesome Stylesheets</li>
+  <li><a href="http://haml.info/docs/yardoc/file.REFERENCE.html" 
+    rel="noopener noreferrer" target="_blank">
+	Haml Documentation Reference</a></li>
+  <li><a href="https://sass-lang.com/documentation/" 
+    rel="noopener noreferrer" target="_blank">
+	Sass Documentation Reference</a></li>
+  <li><a href="http://sassmeister.com/" 
+    rel="noopener noreferrer" target="_blank">
+	Sass Playground</a> via SassMeister</li>
+  <li><a href="https://sass-lang.com/documentation/modules" 
+    rel="noopener noreferrer" target="_blank">
+	SassScript Function</a> via Sass Documentation</li>
+</ul>
+
+<!-- 114, 13 left + 10 right -->
+<div>
+  <b>Lesson 5: </b><a href="#5-preprocessors">Preprocessors</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Lesson 7: </b><a href="#7-transforms">Transforms</a>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 align="center" id="6-jquery">Lesson 6: jQuery</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>In this Lesson 6:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<h4>JavaScript</h4>
+
+<ul>
+  <li><a href="#javascript">JavaScript Intro</a></li>
+  <li><a href="#jquery">jQuery Intro</a></li>
+  <li><a href="#selectors">Selectors</a></li>
+  <li><a href="#traversing">Traversing</a></li>
+  <li><a href="#manipulation">Manipulation</a></li>
+  <li><a href="#events">Events</a></li>
+  <li><a href="#effects">Effects</a></li>
+</ul>
+
+<h4>Share</h4>
+
+<p>In part of being a web designer or front end developer you will commonly run 
+into JavaScript, often referred to as JS, and jQuery. Within the top 10,000 
+websites JavaScript is used within <a href="https://trends.builtwith.com/docinfo/Javascript" 
+rel="noopener noreferrer" target="_blank">over 92%</a> of them, and jQuery is 
+used within in <a href="https://trends.builtwith.com/javascript/jQuery" 
+rel="noopener noreferrer" target="_blank">
+over 63%</a> of them. Needless to say, they are fairly popular. You may even 
+aspire to <a href="http://jsforcats.com/" 
+rel="noopener noreferrer" target="_blank">write</a> JavaScript or jQuery to 
+build your own behaviors at one point or another.</p>
+
+<p>If you are asking what exactly are JavaScript and jQuery fear not, this
+lesson gives a brief overview of JavaScript and then takes a look at
+jQuery.</p>
+
+<h4 id="javascript">JavaScript Intro</h4>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript" 
+rel="noopener noreferrer" target="_blank">JavaScript (20xx)</a> provides the 
+ability to add interactivity to a website, and help enrich the user experience. 
+HTML provides a page with <b>structure</b> and CSS provides a page with <b>appearance</b>, 
+JavaScript provide a page with <b>behavior</b>.</p>
+
+<p>Like CSS, JavaScript should be saved in an external file with the .js file 
+extension, and then referenced within an HTML document using the script element. 
+Where the JavaScript reference is placed with HTML depends on when it should be 
+executed. Generally speaking, the best place to reference JavaScript files is 
+right before the closing &lt;/body&gt; tag so that the JavaScript file is loaded 
+after all of the HTML has been parsed. However, at times, JavaScript is needed 
+to help render HTML and determine it's behavior, thus may be referenced within 
+a documents head.</p>
+
+<pre>
+ 1  &lt;script src="script.js"&gt;&lt;/script&gt;
+ 2 
+</pre>
+
+<h4>Values & Variables</h4>
+
+<p>Part of the fundamentals of JavaScript include values and variables.
+Values, in general, are the different types of values that JavaScript
+will recognize, while variables are used to store and share these
+values.</p>
+
+<p>Values may include strings of text, true or false Booleans,
+numbers, undefined, null, or other values such as functions or objects.</p>
+
+<p>One popular way variables are defined is with the var keyword, followed
+by the variable name, an equal sign (=), then the value, ending with a
+semicolon (;). The variable name must begin with a letter, underscore (_)
+(&#0095;), or dollar sign ($). Variables cannot begin with numbers, although
+they may be used subsequently, and they cannot use hyphens whatsoever.
+Additionally, JavaScript is case sensitive so letters
+include a through z in both lower and uppercase.</p>
+
+<p>The common convention around naming variables is to use 
+<a href="https://en.wikipedia.org/wiki/CamelCase" 
+rel="noopener noreferrer" target="_blank">camelCase</a>, without the use of any 
+dashes or underscores. camelCase consist of combining words while removing spaces, 
+capitalizing the beginning of each new word except for the initial word. For 
+example, shay_is_awesome would more commonly named shayIsAwesome.</p>
+
+<pre>
+ 1  var theStarterLeague = 125; 
+ 2  var food_truck = 'Coffee';
+ 3  var mixtape01 = true; 
+ 4  var vinyl = ]'Miles Davis', 'Frank Sinatra', 'Ray Charles'&lbrack;; 
+</pre>
+
+<h4>Statements</h4>
+
+<p>As a whole, JavaScript is a set of statements, of which are executed by
+the browser in the sequence they are written. These statements provide
+commands which determine the different behaviors to be taken. Statements
+come in all different shapes and sizes, with multiple statements
+separated with semicolons, ;. New statements should begin on a new line,
+and indentation should be used when nesting statements for better
+legibility, but is not required.</p>
+
+<pre>
+ 1  log(polaroid);  
+ 2  return('bicycle lane');
+ 3  alert('Congratulations, you ' + outcome);  
+</pre>
+
+<h4>Functions</h4>
+
+<p>Adding to the fundamentals of JavaScript, it is important to take a look
+at functions. Functions provide a way to perform a set of scripted
+behaviors now, or saved for later, and depending on the function they
+may even accept different arguments.</p>
+
+<p>A function is defined by using the function keyword followed by the function 
+name, a list of commas separated arguments wrapped in parentheses, if necessary, 
+and then the JavaScript statement, or statements, that defines the function 
+enclosed in curly braces, {}.</p>
+
+<pre>
+ 1  function sayHello(name) {
+ 2    return('Hello ' + name);  
+ 3  } 
+</pre>
+
+<h4>Arrays</h4>
+
+<p>As you may have recognized, some values may be returned as an array.
+Arrays include a way to store a list of items, or values. Arrays are
+helpful for many reasons, one being the ability to be traversed with
+different methods and operators. Additionally, depending on the
+situation, arrays can be used to store, and return, a variety of
+different values.</p>
+
+<p>Generally speaking arrays are identified within square brackets, [],
+with comma separated items. The items start at 0 and increase from
+there. When identifying the third item in a list it is actually
+identified as [2].</p>
+
+<h4>Objects</h4>
+
+<p>JavaScript is also built on the foundation of objects, which are a collection 
+of key and value pairs. For example, there may be an object named school which 
+includes the keys, also known as properties, name, location, students, and 
+teachers, and their values.</p>
+
+<p>In the example below the variable school is set up as an object to hold
+multiple properties. Each property has a key and value. The entire
+object is wrapped inside of curly braces, {}, with comma separated
+properties, each having a key followed by a colon and value.</p>
+
+<details>
+  <summary>Example, Object</summary>
+  
+<pre>
+ 1  // Object
+ 2  var school = {
+ 3    name: 'The Starter League',
+ 4    location: 'Merchandise Mart',
+ 5    students: 120,
+ 6    teachers: &lbrack;'Jeff', 'Raghu', 'Carolyn', 'Shay']
+ 7  };
+ 8  // Array
+ 9  var school = &lbrack;'Austin', 'Chicago', 'Portland'];
+</pre>
+
+</details>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 13. web inspector console (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image013.png"
+  style="width:50%"
+  title="Web Inspector Console"
+  alt="Web Inspector Console." />
+
+<p align="center"><small><small>Fig. 6</small></small></p>
+
+<p>Using the developer tools built into the Chrome web browser, JavaScript may be 
+run from within the console.</p>
+
+<h4 id="jquery">jQuery Intro</h4>
+
+<p>With a basic understanding of JavaScript and some of it's foundations, it is 
+time to take a look at jQuery. jQuery is an open source JavaScript library written 
+by John Resig that simplifies the interaction between HTML, CSS, and JavaScript. 
+Since 2006, when jQuery was released, it has taken off, being used by websites and 
+companies large and small.</p>
+
+<p>What has made jQuery so popular is it's 
+<a href="https://tutsplus.com/course/30-days-to-learn-jquery/" 
+rel="noopener noreferrer" target="_blank">ease of use</a>, with selections 
+resembling CSS and a comprehensible separation of behavior. The benefits of jQuery 
+are massive, however for our purpose we will only be considered about the ability 
+to find elements and perform actions with them.</p>
+
+<h4>Getting Started with jQuery</h4>
+
+<p>The first step to using jQuery is to reference it from within a HTML
+document. As previously mentioned with JavaScript, this is done using
+the script element just before the closing </body> tag. Since jQuery
+is it's own library it is best to keep it separate from all the other
+JavaScript being written.</p>
+
+<p>When referencing jQuery there are a few options, specifically as whether
+to use the minified or uncompressed version, and as whether to use a
+content delivery network, CDN, such as <a hre="https://developers.google.com/speed/libraries/devguide">
+Google hosted libraries</a>.  If the code being written is for a live, 
+production environment it is encouraged to use the minified version for better 
+loading times. Additionally, using a CDN like Google also helps with loading 
+time, and potential caching benefits.</p>
+
+<pre>
+ 1  &lt;script src="//aja
+ 2    x.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"&gt;&lt;/script&gt;
+ 3  &lt;script src="script.js"&gt;&lt;/script&gt;
+</pre>
+
+<p>In the code sample above, notice the second script element referencing a
+second JavaScript file. All of the custom, handwritten JavaScript and
+jQuery should be written in this file. Additionally, this file is
+specifically placed after the jQuery file so that it may reference
+jQuery functions already defined.</p>
+
+<h4>Where is the leading http?</h4>
+
+<p>You may have noticed that there isn't a leading http within Google CDN
+reference example above. The http has been omitted intentionally to
+allow for both http and https connections. When working locally, without
+the benefit of a web server, the leading http will need to be included
+to prevent attempting to locate the file on the systems local disk
+drive.</p>
+
+<h4>jQuery Object</h4>
+
+<p>jQuery comes with it's own object, the dollar sign, $, also known
+as jQuery. The $ object is specifically made for selecting an element
+and then returning that element node to perform an action on it. These
+selections and actions should be written in a new file, referenced
+outside of the actual jQuery library.</p>
+
+<pre>
+ 1  $();
+ 2  jQuery();  
+</pre>
+
+<h4>Document Ready</h4>
+
+<p>Before trigging any jQuery to traverse and manipulate a page it is best
+to wait until the DOM is finished loading. Fortunately jQuery has a
+ready event, .ready(), which can be called when the HTML document is
+ready to be altered. By placing all of our other custom written jQuery
+inside of this function we can guarantee that it will not be executed
+until the page has loaded and the DOM is ready.</p>
+
+<pre>
+ 1  $(document).ready(function(event){  
+ 2  // jQuery code  
+ 3  });  
+</pre>
+
+<h4 id="selectors">Selectors</h4>
+
+<p>As previously mentioned, one of the core concepts of jQuery is
+to <a href="http://api.jquery.com/category/selectors/" 
+rel="noopener noreferrer" target="_blank">select elements</a> and
+perform an action. jQuery has done a great job of making the task of
+selecting an element, or elements, extremely easy by mimicking that of
+CSS. On top of the general CSS selectors, jQuery has support for all of
+the unique CSS3 selectors, which work regardless of which browser is
+being used.</p>
+
+<p>Invoking the jQuery object, &dollar;(), containing a selector will return that
+DOM node to manipulate it. The selector falls within the
+parentheses, ('...'), and may select elements just like that of CSS.</p>
+
+<pre>
+ 1  $('.feature'); // Class selector  
+ 2  $('li strong'); // Descendant selector 
+ 3  $('em, i'); // Multiple selector  
+ 4  $('a&lbrack;target="_blank"]'); // Attribute selector
+ 5  $('p:nth-child(2)'); // Pseudo-class selector
+</pre>
+
+<h4>This Selection Keyword</h4>
+
+<p>When working inside of a jQuery function you may want to select the
+element in which was referenced inside of the original selector. In this
+event the this keyword may be used to refer to the element selected in
+the current handler.</p>
+
+<pre>
+ 1  $('div').click(function(event){
+ 2  $(this);  
+ 3  });  
+</pre>
+
+<h4>jQuery Selection Filters</h4>
+
+<p>Should CSS selectors not be enough there are also
+custom <a href="http://api.jquery.com/category/selectors/jquery-selector-extensions/" 
+rel="noopener noreferrer" target="_blank">
+filters</a> built into jQuery to help out. These filters are an extension to CSS3 and
+provide more control over selecting an element or its relatives.</p>
+
+<pre>
+ 1  $('div:has(strong)');  
+</pre>
+
+<p>As they stand these filters may be used inside of the selector, however
+not being native to the DOM they are a bit slow. The best results with
+using these filters is accomplished by using the :filter() method, which
+is part of the traversing feature in jQuery.</p>
+
+<h4 id="traversing">Traversing</h4>
+
+<p>At times the general CSS selectors alone don't cut it and a little more
+detailed control is desired. Fortunately jQuery provides a handful of
+methods for traversing up and down the DOM tree, filtering and selecting
+elements as necessary.</p>
+
+<p>To get started with filtering elements inside the DOM a general
+selection needs to be made, from which will be traversed from
+relatively. In the example below the original selection finds all of
+the div elements in the DOM, which are then filtered using
+the .not() method. With this specific method all of the div elements
+without a class of type or collection will be selected.</p>
+
+<pre>
+ 1  $('div').not('.type, .collection');
+</pre>
+
+<h4>Chaining Methods</h4>
+
+<p>For even more control as to which elements are selected different
+traversing methods may be chained together simply by using a dot
+in-between them.</p>
+
+<p>The code sample below uses both the .not() method and
+the .parent() method. Combined together this will only select the parent
+elements of div elements without a class of type or collection.</p>
+
+<pre>
+ 1  $('div').not('.type, .collection').parent();  
+</pre>
+
+<h4>Traversing Methods</h4>
+
+<p>jQuery has quite a 
+few <a href="http://api.jquery.com/category/traversing/" 
+rel="noopener noreferrer" target="_blank">traversing</a> methods
+available to use. In general, they all fall into three categories,
+filtering, miscellaneous traversing, and DOM tree traversing. The
+specific methods within each category may be seen below.</p>
+
+<h4>Filtering</h4>
+
+<ul>
+  <li>.eq()</li>
+  <li>.filter()</li>
+  <li>.first()</li>
+  <li>.has()</li>
+  <li>.is()</li>
+  <li>.last()</li>
+  <li>.map()</li>
+  <li>.not()</li>
+  <li>.slice()</li>
+</ul>
+
+<h4>Miscellaneous Traversing</h4>
+
+<ul>
+  <li>.add()</li>
+  <li>.andSelf()</li>
+  <li>.contents()</li>
+  <li>.end()</li>
+</ul>
+
+<h4>DOM Tree Traversal</h4>
+
+<ul>
+  <li>.children()</li>
+  <li>.closest()</li>
+  <li>.find()</li>
+  <li>.next()</li>
+  <li>.nextAll()</li>
+  <li>.nextUntil()</li>
+  <li>.offsetParent()</li>
+  <li>.parent()</li>
+  <li>.parents()</li>
+  <li>.parentsUntil()</li>
+  <li>.prev()</li>
+  <li>.prevAll()</li>
+  <li>.prevUntil()</li>
+  <li>.siblings()</li>
+</ul>
+
+<h4 id="manipulation">Manipulation</h4>
+
+<p>Selecting and traversing elements in the DOM is only part of what jQuery offers, 
+one other major part is what is possible with those elements once found. One 
+possibility is to 
+<a href="http://api.jquery.com/category/manipulation/" 
+rel="noopener noreferrer" target="_blank">manipulate</a> these elements, by either 
+reading, adding, or changing attributes or styles. Additionally, elements may be 
+altered in the DOM, changing their placement, removing them, adding new elements, 
+and so forth. Overall the options to manipulate elements are fairly vast.</p>
+
+<h4>Getting & Setting</h4>
+
+<p>The manipulation methods to follow are most commonly used in one of two
+directives, that being <i>getting</i> or <i>setting</i> information. Getting
+information revolves around using a selector in addition with a method
+to determine what piece of information is to be retrieved. Additionally,
+the same selector and method may also be used to set a piece of
+information.</p>
+
+<pre>
+ 1  // Gets the value of the alt attribute  
+ 2  $('img').attr('alt');  
+ 3  // Sets the value of the alt attribute  
+ 4  $('img').attr('alt', 'Wild kangaroo');
+</pre>
+
+<p>In the examples and snippets to follow methods will primarily be used in
+a setting mode, however they may also be able to be used in a getting
+mode as well.</p>
+
+<h4>Attribute Manipulation</h4>
+
+<p>One part of elements able to be inspected and manipulated are
+attributes. A few options include the ability to add, remove, or change
+an attribute or its value. In the examples below the .addClass() method
+is used to add a class to all even list items, the .removeClass() method
+is used to remove all classes from any paragraphs, and lastly
+the .attr() method is used to find the value of the title attribute of
+any abbr element and set it to Hello World.</p>
+
+<pre>
+ 1  $('li:even').addClass('even-item');
+ 2  $('p').removeClass(); 
+ 3  $('abbr').attr('title', 'Hello World');  
+</pre>
+
+<h4>Attribute Manipulation Methods</h4>
+
+<ul>
+  <li>.addClass()</li>
+  <li>.attr()</li>
+  <li>.hasClass()</li>
+  <li>.prop()</li>
+  <li>.removeAttr()</li>
+  <li>.removeClass()</li>
+  <li>.removeProp()</li>
+  <li>.toggleClass()</li>
+  <li>.val()</li>
+</ul>
+
+<h4>Style Manipulation</h4>
+
+<p>On top of manipulating attributes, the style of an element may also be
+manipulated using a variety of methods. When reading or setting the
+height, width, or position of an element there are a handful of special
+methods available, and for all other style manipulations
+the .css() method can handle any CSS alterations.</p>
+
+<p>The .css() method in particular may be used to set one property, or
+many, and the syntax for each varies. To set one property, the property
+name and value should each be in quotations and comma separated. To set
+multiple properties, the properties should be nested inside of curly
+brackets with the property name in camel case, removing any hyphens
+where necessary, followed by a colon and then the quoted value. Each of
+the property and value pairs need to be comma separated.</p>
+
+<p>The height, width, or position methods all default to using pixel
+values, however other units of measurement may be used. As seen below,
+to change the unit of measurement identify the value then use a plus
+sign followed by the quoted unit of measurement.</p>
+
+<pre>
+ 1  $('h1 span').css('font-size', 'normal'); 
+ 2  $('div').css({  
+ 3  fontSize: '13px',
+ 4  background: '#f60'  
+ 5  });  
+ 6  $('header').height(200); 
+ 7  $('.extend').height(30 + 'em'); 
+</pre>
+
+<h4>Style Manipulation Methods</h4>
+
+<ul>
+  <li>.css()</li>
+  <li>.height()</li>
+  <li>.innerHeight()</li>
+  <li>.innerWidth()</li>
+  <li>.offset()</li>
+  <li>.outerHeight()</li>
+  <li>.outerWidth()</li>
+  <li>.position()</li>
+  <li>.scrollLeft()</li>
+  <li>.scrollTop()</li>
+  <li>.width()</li>
+</ul>
+
+<h4>DOM Manipulation</h4>
+
+<p>Lastly, we are able to inspect and manipulate the DOM, changing the
+placement of elements, adding and removing elements, as well as flat out
+altering elements. The options here are deep and varied, allowing for
+any potential changes to be made inside the DOM.</p>
+
+<p>Each individual DOM manipulation method has it's own syntax but a few of
+them are outlined below. The .prepend() method is adding a
+new h3 element just inside any section, the .after() method is adding a
+new em element just after the link, and the .text() method is replacing
+the text of any h1 elements with the text Hello World.</p>
+
+<pre>
+ 1  $('section').prepend('&lt;h3&gt;Featured&lt;/h3&gt;');
+ 2  $('a&lbrack;target="_blank"]').after('&lt;em&gt;New window.&lt;/em&gt;'); 
+ 3  $('h1').text('Hello World'); 
+</pre>
+
+<h4>DOM Manipulation Methods</h4>
+
+<ul>
+  <li>.after()</li>
+  <li>.append()</li>
+  <li>.appendTo()</li>
+  <li>.before()</li>
+  <li>.clone()</li>
+  <li>.detach()</li>
+  <li>.empty()</li>
+  <li>.html()</li>
+  <li>.insertAfter()</li>
+  <li>.insertBefore()</li>
+  <li>.prepend()</li>
+  <li>.prependTo()</li>
+  <li>.remove()</li>
+  <li>.replaceAll()</li>
+  <li>.replaceWith()</li>
+  <li>.text()</li>
+  <li>.unwrap()</li>
+  <li>.wrap()</li>
+  <li>.wrapAll()</li>
+  <li>.wrapInner()</li>
+</ul>
+
+<h4 id"events">Events</h4>
+
+<p>One of the beauties of jQuery is the ability to easily add 
+<a href="http://api.jquery.com/category/events/" 
+rel="noopener noreferrer" target="_blank">event handlers</a>, which are methods 
+that are called only upon a specific event or action taking place. For example, 
+the method of adding a class to an element can be set to only occur upon that 
+element being clicked on.</p>
+
+<p>Below is a standard selector, grabbing all of the list items.
+The .click() event method is bound to the list item selector, setting up
+an action to take place upon clicking any list item. Inside
+the .click() event method is a function, which ensures any actions
+inside the event method are to be executed. The parentheses directly
+after the function are available to pass in parameters for the function,
+in which the event object is used in this example.</p>
+
+<p>Inside of the function is another selector with the .addClass() method
+bound to it. Now, when a list item is clicked on that list item, via
+the this keyword, receives the class of saved-item.</p>
+
+<pre>
+ 1  $('li').click(function(event){ 
+ 2    $(this).addClass('saved-item');
+ 3  });  
+</pre>
+
+<h4>Event Flexibility</h4>
+
+<p>The .click() event method, along with a handful of other event methods,
+is actually a <a href="http://jqfundamentals.com/chapter/events" 
+rel="noopener noreferrer" target="_blank">shorthand method</a> which uses the 
+.on() method introduced in jQuery 1.7.<br>
+The .on() method provides quite a bit of flexibility, using automatic delegation 
+for elements that get added to the page dynamically.</p>
+
+<p>Making use of the .on() method the first argument should be the native
+event name while the second argument should be the event handler
+function. Looking at the example from before, the .on() method is called
+in place of the .click() method. Now the click event name is passed in
+as the first argument inside the .on() method with the event handler
+function staying the same as before.</p>
+
+<pre>
+ 1  $('li').on('click', function(event){ 
+ 2    $(this).addClass('saved-item');
+ 3  });  
+</pre>
+
+<h4>Nesting Events</h4>
+
+<p>It is possible to have multiple event handlers and triggers, nesting one
+inside another. As an example, below the .on() event method is passed
+the hover argument, thus being called when hovering over any element
+with the class of pagination. Upon calling the .on() event
+the .click() event is called on the anchor with the up ID.</p>
+
+<pre>
+ 1  $('.pagination').on('hover', function(event){ 
+ 2    $('a#up').click(); 
+ 3  });  
+</pre>
+
+<h4>Event Demo</h4>
+
+<p>Using an alert message as a demo, the following code snippets show how
+to create an alert message and then removing that message based upon
+clicking the close icon.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;div class="notice-warning"&gt;
+ 2    &lt;div class="notice-close"&gt;x&lt;/div&gt;
+ 3    &lt;strong>Warning!&lt;/strong&gt; I"m about to lose my cool.
+ 4  &lt;/div&gt;
+</pre>
+
+<h4JavaScript</h4>
+
+<pre>
+ 1  $('.notice-close').on('click', function(event){
+ 2    $('.notice-warning').remove();  
+ 3  });
+</pre>
+
+<h4>Demo</h4>
+
+<h4>Event Methods</h4>
+
+<p>jQuery provides quite a few methods, all of which are based around
+registering user behaviors as they interact with the browser. These
+methods register quite a few events, most popularly, but not limited to,
+browser, form, keyboard, and mouse events. The most popular of these
+methods include:</p>
+
+<h4>Browser Events</h4>
+
+<ul>
+  <li>.resize()</li>
+  <li>.scroll()</li>
+</ul>
+
+<h4>Document Loading</h4>
+
+<ul>
+  <li>.ready()</li>
+</ul>
+
+<h4>Event Handler Attachment</h4>
+
+<ul>
+  <li>.off()</li>
+  <li>.on()</li>
+  <li>.one()</li>
+  <li>jQuery.proxy()</li>
+  <li>.trigger()</li>
+  <li>.triggerHandler()</li>
+  <li>.unbind()</li>
+  <li>.undelegate()</li>
+</ul>
+
+<h4>Event Object</h4>
+
+<ul>
+  <li>event.currentTarget</li>
+  <li>event.preventDefault()</li>
+  <li>event.stopPropagation()</li>
+  <li>event.target</li>
+  <li>event.type</li>
+</ul>
+
+<h4>Form Events</h4>
+
+<ul>
+  <li>.blur()</li>
+  <li>.change()</li>
+  <li>.focus()</li>
+  <li>.select()</li>
+  <li>.submit()</li>
+</ul>
+
+<h4>Keyboard Events</h4>
+
+<ul>
+  <li>.focusin()</li>
+  <li>.focusout()</li>
+  <li>.keydown()</li>
+  <li>.keypress()</li>
+  <li>.keyup()</li>
+</ul>
+
+<h4>Mouse Events</h4>
+
+<ul>
+  <li>.click()</li>
+  <li>.dblclick()</li>
+  <li>.focusin()</li>
+  <li>.focusout()</li>
+  <li>.hover()</li>
+  <li>.mousedown()</li>
+  <li>.mouseenter()</li>
+  <li>.mouseleave()</li>
+  <li>.mousemove()</li>
+  <li>.mouseout()</li>
+  <li>.mouseover()</li>
+  <li>.mouseup()</li>
+</ul>
+
+<h4 id="effects">Effects</h4>
+
+<p>Next to events, jQuery also provides a handful of customizable effects.
+These effects come by the way of different methods, including event
+methods for showing and hiding content, fading content in and out, or
+sliding content up and down. All of these are ready to use methods and
+may be customized as best see fit.</p>
+
+<p>Each effect method has it's own syntax so it is best to reference the
+jQuery <a href="http://api.jquery.com/category/effects/" 
+rel="noopener noreferrer" target="_blank">effects documentation</a> for specific 
+syntax around each method. Most commonly though, effects generally accept a 
+duration, easing, and the ability to specify a callback function.</p>
+
+<h4>jQuery CSS Animations</h4>
+
+<p>Custom animations of different CSS properties can be accomplished in
+jQuery, although this is a little less relevant as CSS can now handle
+animations itself. CSS animations offer better performance from a
+browser processing standpoint and are preferred where possible. jQuery
+animation effects, with the help of Modernizr, make for a perfect backup
+solution to any browser not supporting CSS animations.</p>
+
+<h4>Effect Duration</h4>
+
+<p>Using the .show() method as an example, the first parameter available to
+optionally pass in to the method is the duration, which can be
+accomplished using a keyword or milliseconds value. The
+keyword slow defaults to 600 milliseconds, while the
+keyword fast defaults to 200 milliseconds. Using a keyword value is
+fine, but millisecond values may also be passed in directly. Keyword
+values must be quoted while millisecond values do not.</p>
+
+<pre>
+ 1  $('.error').show();
+ 2  $('.error').show('slow'); 
+ 3  $('.error').show(500);
+</pre>
+
+<h4>Effect Easing</h4>
+
+<p>In addition to setting the duration in which an effect takes place the
+easing, or speed at which an animation progresses at during different
+times within the animation, may also be set. By default jQuery has two
+keyword values for easing, the default value is swing with the
+additional value being linear. The default swing value starts the
+animation at a slow pace, picking up speed during the animation, and
+then slows down again before completion. The linear value runs the
+animation at one constant pace for the entire duration.</p>
+
+<pre>
+ 1  $('.error').show('slow', 'linear');
+ 2  $('.error').show(500, 'linear');
+</pre>
+
+<h4>jQuery UI</h4>
+
+<p>The two easing values that come with jQuery may be extend with the use
+of different plug-ins, of which may offer additional values. One of the
+most popular plug-ins is the <a href="http://jqueryui.com/" 
+rel="noopener noreferrer" target="_blank">jQuery UI</a> suite.</p>
+
+<p>On top of new easing values jQuery UI also provides a handful other
+interactions, effects, widgets, and other helpful resources worth taking
+a look at.</p>
+
+<h4>Effect Callback</h4>
+
+<p>When an animation is completed it is possible to run another function,
+called a callback function. The callback function should be placed after
+the duration or easing, if either exist. Inside this function new events
+or effects may be placed, each following their own required syntax.</p>
+
+<pre>
+ 1  $('.error').show('slow', 'linear', function(event){  
+ 2  $('.error .status').text('Continue');
+ 3  });  
+</pre>
+
+<h4>Effect Syntax</h4>
+
+<p>As previously mentioned, each effect method has it's own syntax which can be 
+found in the jQuery 
+<a href="http://api.jquery.com/category/effects/" 
+rel="noopener noreferrer" target="_blank">effects documentation</a>.
+The duration, easing, and callback parameters outlined here are common, but not 
+available on every method. It is best to review the syntax of a method should 
+you have any questions around it.</p>
+
+<h4>Effects Demo</h4>
+
+<p>Taking the same events demo from above, the .remove() method is now used
+as part of a callback function on the .fadeOut() method. Using
+the .fadeOut() method allows for the alert message to gradually fade out
+rather than quickly disappearing, then be removed from the DOM after the
+animation is complete.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;div class="notice-warning"&gt;
+ 2    &lt;div class="notice-close"&gt;x&lt;/div&gt;
+ 3    &lt;strong&gt;Warning!&lt;/strong&gt; I'm about to lose my cool.
+ 4  &lt;/div&gt;
+</pre>
+
+<h4>JavaScript</h4>
+
+<pre>
+ 1  $('.notice-close').on('click', function(event){  
+ 2    $('.notice-warning').fadeOut('slow', function(event){  
+ 3      $(this).remove(); 
+ 4    });  
+ 5  });  
+</pre>
+
+<h4>Demo</h4>
+
+<h4>Basic Effects
+
+<ul>
+  <li>.hide()</li>
+  <li>.show()</li>
+  <li>.toggle()</li>
+</ul>
+
+<h4>Custom Effects</h4>
+
+<ul>
+  <li>.animate()</li>
+  <li>.clearQueue()</li>
+  <li>.delay()</li>
+  <li>.dequeue()</li>
+  <li>jQuery.fx.interval</li>
+  <li>jQuery.fx.off</li>
+  <li>.queue()</li>
+  <li>.stop()</li>
+</ul>
+
+<h4>Fading Effects</h4>
+
+<ul>
+  <li>.fadeIn()</li>
+  <li>.fadeOut()</li>
+  <li>.fadeTo()</li>
+  <li>.fadeToggle()</li>
+</ul>
+
+<h4>Sliding Effects</h4>
+
+<ul>
+  <li>.slideDown()</li>
+  <li>.slideToggle()</li>
+  <li>.slideUp()</li>
+</ul>
+
+<h4>Slide Demo</h4>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;div class="panel"&gt;  
+ 2    &lt;div class="panel-stage"&gt;&lt;/div&gt;
+ 3    &lt;a href="#" class="panel-tab"&gt;Open &lt;span&gt;&#9660;&lt;/span&gt;&lt;/a&gt; 
+ 4  &lt;/div&gt;
+</pre>
+
+<details>
+  <summary>JavaScript</summary>
+
+<pre&gt;
+ 1  $('.panel-tab').on('click', function(event){  
+ 2    event.preventDefault();  
+ 3    $('.panel-stage').slideToggle('slow', function(event){ 
+ 4      if($(this).is(':visible')){ 
+ 5        $('.panel-tab').html('Close &lt;span&gt;&#9650;&lt;/span&gt;');
+ 6      } else {
+ 7        $('.panel-tab').html('Open &lt;span&gt;&#9660;&lt;/span&gt;'); 
+ 8      } 
+ 9    });  
+ 10 });
+</pre>
+
+</details>
+
+<h4>Demo</h4>
+
+<h4>Tabs Demo</h4>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;ul class="tabs-nav"&gt; 
+ 2    &lt;li&gt;&lt;a href="#tab-1"&gt;Features&lt;/a&gt;&lt;/li&gt; 
+ 3    &lt;li&gt;&lt;a href="#tab-2"&gt;Details&lt;/a&gt;&lt;/li&gt;  
+ 4  &lt;/ul&gt;  
+ 5  &lt;div class="tabs-stage"&gt; 
+ 6    &lt;div id="tab-1"&gt;...&lt;/div&gt;
+ 7    &lt;div id="tab-2"&gt;...&lt;/div&gt;
+ 8  &lt;/div&gt; 
+</pre>
+
+<details>
+  <summary>JavaScript</summary>
+
+<pre>
+ 1  // Show the first tab by default
+ 2  $('.tabs-stage div').hide(); 
+ 3  $('.tabs-stage div:first').show(); 
+ 4  $('.tabs-nav li:first').addClass('tab-active');
+ 5  // Change tab class and display content 
+ 6  $('.tabs-nav a').on('click', function(event){  
+ 7    event.preventDefault();
+ 8    $('.tabs-nav li').removeClass('tab-active');
+ 9    $(this).parent().addClass('tab-active');
+ 10   $('.tabs-stage div').hide(); 
+ 11   $($(this).attr('href')).show();
+ 12 });
+</pre>
+
+</details>
+
+<h4>Demo</h4>
+
+<h4>Resources &amp; Links</h4>
+
+<ul>
+  <li><a href="http://jsforcats.com/" rel="noopener noreferrer" target="_blank">
+    JavaScript For Cats</a>
+  <li><a href="https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript"
+    rel="noopener noreferrer" target="_blank">
+    A Re-introduction to JavaScript</a> via Mozilla Developer Network</li>
+  <li><a href="https://tutsplus.com/course/30-days-to-learn-jquery/"
+    rel="noopener noreferrer" target="_blank">
+    30 Days to Learn jQuery</a> via Tuts+ Premium</li>
+  <li><a href="https://developers.google.com/speed/libraries/devguide" 
+    rel="noopener noreferrer" target="_blank">
+    Google Hosted Libraries</a></li>
+  <li><a href="http://docs.jquery.com/" rel="noopener noreferrer" target="_blank">
+    jQuery Documentation</a></li>
+  <li><a href="http://jqfundamentals.com/" rel="noopener noreferrer" target="_blank">
+    jQuery Fundamentals</a> via Bocoup</li>
+  <li><a href="http://jqueryui.com/" rel="noopener noreferrer" target="_blank">
+    jQuery UI</a></li>
+</ul>
+
+
+<!-- 104 -->
+<p><b>Lesson 6: </b><a href="#6-jquery">jQuery</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>Lesson 8: </b><a href="#8-transitions-animations">Transitions &amp; Animations</a>
+</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 align="center" id="7-transforms">Lesson 7: Transforms</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>In this Lesson 7:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>GitlabGitLab is the most comprehensive AI-powered DevSecOps Platform.
+Software. Faster.</p>
+
+<h4>CSS</h4>
+
+<ul>
+  <li><a href="#transform-syntax">Transform Syntax</a></li>
+  <li><a href="#two-dimensional-transforms">2D Transforms</a></li>
+  <li><a href="#combining-transforms">Combining Transforms</a></li>
+  <li><a href="#transform-origin">Transform Origin</a></li>
+  <li><a href="#perspective">Perspective</a></li>
+  <li><a href="#three-dimensional-transforms">3D Transforms</a></li>
+  <li><a href="#transform-style">Transform Style</a></li>
+  <li><a href="#backface-visibility">Backface Visibility</a></li>
+</ul>
+
+<h4>SHARE</h4>
+
+<p>With CSS3 came new ways to position and alter elements. Now general layout 
+techniques can be revisited with alternative ways to size, position, and change 
+elements. All of these new techniques are made possible by the transform property.</p>
+
+<p>The transform property comes in two different settings, two-dimensional and 
+three-dimensional. Each of these come with their own individual properties and 
+values.</p>
+
+<p>Within this lesson we'll take a look at both two-dimensional and three-dimensional 
+transforms. Generally speaking, browser support for the transform property isn't great, 
+but it is getting better every day. For the best support vendor prefixes are encouraged, 
+however you may need to download the nightly version of 
+<a href="https://tools.google.com/dlpage/chromesxs/" 
+rel="noopener noreferrer" target="_blank">Chrome</a> to see all of these transforms 
+in action.</p>
+
+<h4>Transform Syntax</h4>
+
+<p>The actual syntax for the transform property is quite simple, including
+the transform property followed by the value. The value specifies the
+transform type followed by a specific amount inside parentheses.</p>
+
+<pre>
+ 1  div {
+ 2    -webkit-transform: scale(1.5);
+ 3    -moz-transform: scale(1.5);
+ 4    -o-transform: scale(1.5);
+ 5    transform: scale(1.5);
+ 6  }
+</pre>
+
+<p>Notice how the transform property includes multiple vendor prefixes to
+gain the best support across all browsers. The un-prefixed declaration
+comes last to overwrite the prefixed versions, should a browser fully
+support the transform property.</p>
+
+<p>In the interest of brevity, the remainder of this lesson will not
+include vendor prefixes. They are, however, strongly encouraged for any
+code in a production environment. Over time we will be able to remove
+these prefixes, however keeping them in is the safest approach for the
+time being.</p>
+
+<h4>2D Transforms</h4>
+
+<p>Elements may be distorted, or transformed, on both a two-dimensional plane or 
+a three-dimensional plane. Two-dimensional transforms work on the x and y axes, 
+known as horizontal and vertical axes. Three-dimensional transforms work on both 
+the x and y axes, as well as the z axis. These three-dimensional transforms help 
+define not only the length and width of an element, but also the depth. We'll 
+start by discussing how to <a href="http://www.css3files.com/transform/" 
+rel="noopener noreferrer" target="_blank">transform elements</a> on a two-dimensional 
+plane, and then work our way into three-dimensional transforms.</p>
+
+<h4>2D Rotate</h4>
+
+<p>The transform property accepts a handful of different values.
+The rotate value provides the ability to rotate an element
+from 0 to 360 degrees. Using a positive value will rotate an element
+clockwise, and using a negative value will rotate the element
+counterclockwise. The default point of rotation is the center of the
+element, 50% 50%, both horizontally and vertically. Later we will
+discuss how you can change this default point of rotation.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  .box-1 {
+ 2    transform: rotate(20deg);
+ 3  } 
+ 4  .box-2 {
+ 5    transform: rotate(-55deg);  
+ 6  } 
+</pre>
+
+<h4>Rotate Demo</h4>
+
+<p>The gray box behind the rotated element symbolizes the original position
+of the element. Additionally, upon hover the box will rotate 360 degrees
+horizontally. As the lesson progresses, keep an eye out for the gray box
+within each demonstration as a reference to the element's original
+position and the horizontal rotation to help demonstrate an elements
+alteration and depth.</p>
+
+<h4>2D Scale</h4>
+
+<p>Using the scale value within the transform property allows you to change
+the appeared size of an element. The default scale value is 1, therefore
+any value between .99 and .01 makes an element appear smaller while any
+value greater than or equal to 1.01 makes an element appear larger.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  .box-1 {
+ 2    transform: scale(.75);
+ 3  } 
+ 4  .box-2 {
+ 5    transform: scale(1.25);  
+ 6  } 
+</pre>
+
+<h4>Scale Demo</h4>
+
+<p>It is possible to scale only the height or width of an element using
+the scaleX and scaleY values. The scaleX value will scale the width of
+an element while the scaleY value will scale the height of an element.
+To scale both the height and width of an element but at different sizes,
+the x and y axis values may be set simultaneously. To do so, use
+the scale transform declaring the x axis value first, followed by a
+comma, and then the y axis value.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
+ 3  &lt;figure class="box-3"&gt;Box 3&lt;/figure&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  .box-1 {
+ 2    transform: scaleX(.5);
+ 3  } 
+ 4  .box-2 {
+ 5    transform: scaleY(1.15); 
+ 6  } 
+ 7  .box-3 {
+ 8    transform: scale(.5, 1.15); 
+ 9  } 
+</pre>
+
+<h4>Multiple Scaling Demo</h4>
+
+<h4>2D Translate</h4>
+
+<p>The translate value works a bit like that of relative positioning,
+pushing and pulling an element in different directions without
+interrupting the normal flow of the document. Using the translateX value
+will change the position of an element on the horizontal axis while
+using the translateY value will change the position of an element on the
+vertical axis.</p>
+
+<p>As with the scale value, to set both the x and y axis values at once,
+use the translate value and declare the x axis value first, followed by
+a comma, and then the y axis value.</p>
+
+<p>The distance values used within the translate value may be any general
+length measurement, most commonly pixels or percentages. Positive values
+will push an element down and to the right of its default position while
+negative values will pull an element up and to the left of its default
+position.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
+ 3  &lt;figure class="box-3"&gt;Box 3&lt;/figure&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  .box-1 {
+ 2    transform: translateX(-10px);  
+ 3  } 
+ 4  .box-2 {
+ 5    transform: translateY(25%); 
+ 6  } 
+ 7  .box-3 {
+ 8    transform: translate(-10px, 25%); 
+ 9  } 
+</pre>
+
+<h4>Translate Demo</h4>
+
+<h4>2D Skew</h4>
+
+<p>The last transform value in the group, skew, is used to distort elements
+on the horizontal axis, vertical axis, or both. The syntax is very
+similar to that of the scale and translate values. Using the skewX value
+distorts an element on the horizontal axis while the skewY value
+distorts an element on the vertical axis. To distort an element on both
+axes the skew value is used, declaring the x axis value first, followed
+by a comma, and then the y axis value.%p</p>
+
+<p>The distance calculation of the skew value is measured in units of
+degrees. Length measurements, such as pixels or percentages, do not
+apply here.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
+ 3  &lt;figure class="box-3"&gt;Box 3&lt;/figure&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  .box-1 {
+ 2    transform: skewX(5deg);  
+ 3  } 
+ 4  .box-2 {
+ 5    transform: skewY(-20deg);
+ 6  } 
+ 7  .box-3 {
+ 8    transform: skew(5deg, -20deg); 
+ 9  } 
+</pre>
+
+<h4>Skew Demo</h4>
+
+<h4>Combining Transforms</h4>
+
+<p>It is common for multiple transforms to be used at once, rotating and
+scaling the size of an element at the same time for example. In this
+event multiple transforms can be combined together. To combine
+transforms, list the transform values within the transform property one
+after the other without the use of commas.</p>
+
+<p>Using multiple transform declarations will not work, as each declaration
+will overwrite the one above it. The behavior in that case would be the
+same as if you were to set the height of an element numerous times.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  .box-1 {
+ 2    transform: rotate(25deg) scale(.75);
+ 3  }
+ 4  .box-2 {
+ 5    transform: skew(10deg, 20deg) translateX(20px);
+ 6  }
+</pre>
+
+<h4>Combining Transforms Demo</h4>
+
+<p>Behind every transform there is also a matrix explicitly defining the behavior 
+of the transform. Using the rotate, scale, transition, and skew values provide an 
+easy way to establish this matrix. However, should you be mathematically inclined, 
+and prefer to take a 
+<a href="http://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/" 
+rel="noopener noreferrer" target="_blank">deeper dive</a> into transforms, try your 
+hand at using the matrix property.</p>
+
+<h4>2D Cube Demo</h4>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;div class="cube"&gt; 
+ 2    &lt;figure class="side top"&gt;1&lt;/figure&gt;  
+ 3    &lt;figure class="side left"&gt;2&lt;/figure&gt; 
+ 4    &lt;figure class="side right"&gt;3&lt;/figure&gt;
+ 5  &lt;/div&gt; 
+</pre>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .cube {
+ 2    position: relative;
+ 3  }
+ 4  .side {
+ 5    height: 95px;
+ 6    position: absolute;
+ 7    width: 95px;
+ 8  }
+ 9  .top {
+ 10   background: #9acc53;
+ 11   transform: rotate(-45deg) skew(15deg, 15deg);
+ 12 }
+ 13 .left {
+ 14   background: #8ec63f;
+ 15   transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%);
+ 16 }
+ 17 .right {
+ 18   background: #80b239;
+ 19   transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%,
+ 10   100%);
+ 21 }
+</pre>
+
+</details>
+
+<h4>Demo</h4>
+
+<h4>Transform Origin</h4>
+
+<p>As previously mentioned, the default transform origin is the dead center
+of an element, both 50% horizontally and 50% vertically. To change this
+default origin position the transform-origin property may be used.</p>
+
+<p>The transform-origin property can accept one or two values. When only
+one value is specified, that value is used for both the horizontal and
+vertical axes. If two values are specified, the first is used for the
+horizontal axis and the second is used for the vertical axis.</p>
+
+<p>Individually the values are treated like that of a background image
+position, using either a length or keyword value. That said, 0 0 is the
+same value as top left, and 100% 100% is the same value as bottom right.
+More specific values can also be set, for example 20px 50px would set
+the origin to 20 pixels across and 50 pixels down the element.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
+ 3  &lt;figure class="box-3"&gt;Box 3&lt;/figure&gt;
+ 4  &lt;figure class="box-4"&gt;Box 3&lt;/figure&gt;
+</pre>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .box-1 {
+ 2    transform: rotate(15deg);
+ 3    transform-origin: 0 0;
+ 4  }
+ 5  .box-2 {
+ 6    transform: scale(.5);
+ 7    transform-origin: 100% 100%;
+ 8  }
+ 9  .box-3 {
+ 10   transform: skewX(20deg);
+ 11   transform-origin: top left;
+ 12  }
+ 13 .box-4 {
+ 14   transform: scale(.75) translate(-10px, -10px);
+ 15   transform-origin: 20px 50px;
+ 16 }
+</pre>
+
+</details>
+
+<h4>Transform Origin Demo</h4>
+
+<p>Notably, the transform-origin property does run into some issues when
+also using the translate transform value. Since both of them are
+attempting to position the element, their values can collide. Use the
+two of these with caution, always checking to make sure the desired
+outcome is achieved.</p>
+
+<h4>Perspective</h4>
+
+<p>In order for three-dimensional transforms to work the elements need a
+perspective from which to transform. The perspective for each element
+can be thought of as a <i>vanishing point</i>, similar to that which can be
+seen in three-dimensional drawings.</p>
+
+<p>The perspective of an element can be set in two different ways. One way
+includes using the perspective value within the transform property on
+individual elements, while the other includes using
+the perspective property on the parent element residing over child
+elements being transformed.</p>
+
+<p>Using the perspective value within the transform property works great
+for transforming one element from a single, unique perspective. When you
+want to transform a group of elements all with the same perspective, or
+vanishing point, apply the perspective property to their parent element.</p>
+
+<p>The example below shows a handful of elements all transformed using
+their individual perspectives with the perspective value.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;figure class="box"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box"&gt;Box 2&lt;/figure&gt;
+ 3  &lt;figure class="box"&gt;Box 3&lt;/figure&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  .box {
+ 2    transform: perspective(200px) rotateX(45deg);
+ 3  }
+</pre>
+
+<h4>Perspective Value Demo</h4>
+
+<p>The following example shows a handful of elements, side by side, all
+transformed using the same perspective, accomplished by using
+the perspective property on their direct parent element.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;div class="group"&gt;  
+ 2    &lt;figure class="box"&gt;Box 1&lt;/figure&gt;
+ 3    &lt;figure class="box"&gt;Box 2&lt;/figure&gt;
+ 4    &lt;figure class="box"&gt;Box 3&lt;/figure&gt;
+ 5  &lt;/div&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  .group {
+ 2    perspective: 200px;
+ 3  }
+ 4  .box {
+ 5    transform: rotateX(45deg);
+ 6  }
+</pre>
+
+<h4>Perspective Property Demo</h4>
+
+<h4>Perspective Depth Value</h4>
+
+<p>The perspective value can be set as none or a length measurement.
+The none value turns off any perspective, while the length value will
+set the depth of the perspective. The higher the value, the further away
+the perspective appears, thus creating a fairly low intensity
+perspective and a small three-dimensional change. The lower the value
+the closer the perspective appears, thus creating a high intensity
+perspective and a large three-dimensional change.</p>
+
+<p>Imagine yourself standing 10 feet away from a 10 foot cube as compared
+to standing 1,000 feet away from the same cube. At 10 feet, your
+distance to the cube is the same as the dimensions of the cube,
+therefore the perspective shift is much greater than it will be at 1,000
+feet, where the dimensions of the cube are only one one-hundredth of
+your distance to the cube. The same thinking applies to perspective
+depth values.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  .box-1 {
+ 2    transform: perspective(100px) rotateX(45deg);
+ 3  }
+ 4  .box-2 {
+ 5    transform: perspective(1000px) rotateX(45deg);
+ 6  }
+</pre>
+
+<h4>Perspective Depth Value Demo</h4>
+
+<h4>Perspective Origin</h4>
+
+<p>As with setting a transform-origin you can also set a perspective-origin. The 
+same values used for the transform-origin property may also be used with the 
+perspective-origin property, and maintain the same relationship to the element. 
+The large difference between the two falls where the origin of a transform 
+determines the coordinates used to calculate the change of a transform, while 
+the origin of a perspective identifies the coordinates of the vanishing point 
+of a transform.</p>
+
+<details>
+  <summary>HTML</summary>
+
+<pre>
+ 1  &lt;div class="original original-1"&gt;
+ 2    &lt;figure class="box"&gt;Box 1&lt;/figure&gt;
+ 3  &lt;/div&gt;
+ 4  &lt;div class="original original-2"&gt;
+ 5    &lt;figure class="box"&gt;Box 2&lt;/figure&gt;
+ 6  &lt;/div&gt;
+ 7  &lt;div class="original original-3"&gt;
+ 8    &lt;figure class="box"&gt;Box 3&lt;/figure&gt;
+ 9  &lt;/div&gt;
+</pre>
+
+</details>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .original {
+ 2    perspective: 200px;
+ 3  }
+ 4  .box {
+ 5    transform: rotateX(45deg);
+ 6  }
+ 7  .original-1 {
+ 8    perspective-origin: 0 0;
+ 9  }
+ 10 .original-2 {
+ 11   perspective-origin: 75% 75%;
+ 12 }
+ 13  .original-3 {
+ 14   perspective-origin: 20px 40px;
+ 15 }
+</pre>
+
+</details>
+
+<h4>Perspective Origin Demo</h4>
+
+<h4>3D Transforms</h4>
+
+<p>Working with two-dimensional transforms we are able to alter elements on the 
+horizontal and vertical axes, however there is another axis along which we can 
+transform elements. Using <a href="http://24ways.org/2010/intro-to-css-3d-transforms" 
+rel="noopener noreferrer" target="_blank">three-dimensional transforms</a> we can 
+change elements on the z axis, giving us control of depth as well as length and 
+width.</p>
+
+<h4>3D Rotate</h4>
+
+<p>So far we've discussed how to rotate an object either clockwise or
+counterclockwise on a flat plane. With three-dimensional transforms we
+can rotate an element around any axes. To do so, we use three
+new transform values, including rotateX, rotateY, and rotateZ.</p>
+
+<p>Using the rotateX value allows you to rotate an element around
+the x axis, as if it were being bent in half horizontally. Using
+the rotateY value allows you to rotate an element around the y axis, as
+if it were being bent in half vertically. Lastly, using
+the rotateZ value allows an element to be rotated around the z axis.</p>
+
+<p>As with the general rotate value before, positive values will rotate the
+element around its dedicated axis clockwise, while negative values will
+rotate the element counterclockwise.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
+ 3  &lt;figure class="box-3"&gt;Box 3&lt;/figure&gt;
+</pre>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .box-1 {
+ 2    transform: perspective(200px) rotateX(45deg);
+ 3  }
+ 4  .box-2 {
+ 5    transform: perspective(200px) rotateY(45deg);
+ 6  }
+ 7  .box-3 {
+ 8    transform: perspective(200px) rotateZ(45deg);
+ 9  }
+</pre>
+
+</details>
+
+<h4>3D Rotate Demo</h4>
+
+<h4>3D Scale</h4>
+
+<p>By using the scaleZ three-dimensional transform elements may be scaled
+on the z axis. This isn't extremely exciting when no other
+three-dimensional transforms are in place, as there is nothing in
+particular to scale.</p>
+
+<p>In the demonstration below the elements are being
+scaled up and down on the z axis, however the rotateX value is added in
+order to see the behavior of the scaleZ value. When removing
+the rotateX in this case, the elements will appear to be unchanged.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  .box-1 {
+ 2    transform: perspective(200px) scaleZ(1.75) rotateX(45deg);
+ 3  }
+ 4  .box-2 {
+ 5    transform: perspective(200px) scaleZ(.25) rotateX(45deg);
+ 6  }
+</pre>
+
+<h4>3D Scale Demo</h4>
+
+<h4>3D Translate</h4>
+
+<p>Elements may also be translated on the z axis using
+the translateZ value. A negative value here will push an element further
+away on the z axis, resulting in a smaller element. Using a positive
+value will pull an element closer on the z axis, resulting in a larger
+element.</p>
+
+<p>While this may appear to be very similar to that of the two-dimensional
+transform scale value, it is actually quite different. The transform is
+taking place on the z axis, not the x or y axes. When working with
+three-dimensional transforms, being able to move an element on
+the z axis does have great benefits, like when building the cube below
+for example.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  .box-1 {
+ 2    transform: perspective(200px) translateZ(-50px);
+ 3  }
+ 4  .box-2 {
+ 5    transform: perspective(200px) translateZ(50px);
+ 6  }
+</pre>
+
+<h4>3D Translate Demo</h4>
+
+<h4>3D Skew</h4>
+
+<p>Skew is the one two-dimensional transform that <b>cannot</b> be transformed
+on a three-dimensional scale. Elements may be skewed on
+the x and y axis, then transformed three-dimensionally as wished, but
+they cannot be skewed on the z axis.</p>
+
+<h4>Shorthand 3D Transforms</h4>
+
+<p>As with combining two-dimensional transforms, there are also properties
+to write out shorthand three-dimensional transforms. These properties
+include rotate3d, scale3d, transition3d, and matrix3d. These properties
+do require a bit more math, as well as a
+strong <a href="https://developer.mozilla.org/en/CSS/transform-function" 
+rel="noopener noreferrer" target="_blank">understanding</a> of the matrices 
+behind each transform. Should you be interested in looking a bit deeper into 
+them, please do!</p>
+
+<h4>Transform Style</h4>
+
+<p>On occasion three-dimensional transforms will be applied on an element
+that is nested within a parent element which is also being transformed.
+In this event, the nested, transformed elements will not appear in their
+own three-dimensional space. To allow nested elements to transform in
+their own three-dimensional plane use the transform-style property with
+the preserve-3d value.</p>
+
+<p>The transform-style property needs to be placed on the parent element,
+above any nested transforms. The preserve-3d value allows the
+transformed children elements to appear in their own three-dimensional
+plane while the flat value forces the transformed children elements to
+lie flat on the two-dimensional plane.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;div class="rotate three-d"&gt;  
+ 2    &lt;figure class="box"&gt;Box 1&lt;/figure&gt;
+ 3  &lt;/div&gt;
+ 4  &lt;div class="rotate"&gt; 
+ 5    &lt;figure class="box"&gt;Box 2&lt;/figure&gt;
+ 6  &lt;/div&gt;
+</pre>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .rotate {
+ 2    transform: perspective(200px) rotateY(45deg);
+ 3  }
+ 4  .three-d {
+ 5    transform-style: preserve-3d;
+ 6  }
+ 7  .box {
+ 8    transform: rotateX(15deg) translateZ(20px);
+ 9    transform-origin: 0 0;
+ 10 }
+</pre>
+
+</details>
+
+<h4>Transform Style Demo</h4>
+
+<p>To see an additional example of the transform-style property in action
+check out the WebKit <a href="http://www.webkit.org/blog-files/3d-transforms/transform-style.html" 
+rel="noopener noreferrer" target="_blank">explanation</a>.</p>
+
+<h4>Backface Visibility</h4>
+
+<p>When working with three-dimensional transforms, elements will
+occasionally be transformed in a way that causes them to face away from
+the screen. This may be caused by setting the rotateY(180deg) value for
+example. By default these elements are shown from the back. So if you
+prefer not to see these elements at all, set
+the backface-visibility property to hidden, and you will hide the
+element whenever it is facing away from the screen.</p>
+
+<p>The other value to backface-visibility is visible which is the default
+value, always displaying an element, no matter which direction it faces.</p>
+
+<p>In the demonstration below notice how the second box isn't displayed
+because backface-visibility: hidden; declaration has been set.
+The backface-visibility property takes even more significance when
+using <a href="https://css-tricks.com/almanac/properties/b/backface-visibility/" 
+rel="noopener noreferrer" target="_blank">animations</a>.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre>
+ 1  .box-1 {
+ 2    transform: rotateY(180deg);
+ 3  }
+ 4  .box-2 {
+ 5    backface-visibility: hidden;
+ 6    transform: rotateY(180deg);
+ 7  }
+</pre>
+
+<h4>Backface Visibility Demo</h4>
+
+<h4>3D Cube Demo</h4>
+
+<details>
+  <summary>HTML</summary>
+
+<pre>
+ 1  &lt;div class="cube-container"&gt;
+ 2    &lt;div class="cube"&gt; 
+ 3      &lt;figure class="side front"&gt;1&lt;/figure&gt;
+ 4      &lt;figure class="side back"&gt;2&lt;/figure&gt; 
+ 5      &lt;figure class="side left"&gt;3&lt;/figure&gt; 
+ 6      &lt;figure class="side right"&gt;4&lt;/figure&gt;
+ 7      &lt;figure class="side top"&gt;5&lt;/figure&gt;  
+ 8      &lt;figure class="side bottom"&gt;6&lt;/figure&gt;  
+ 9    &lt;/div&gt; 
+ 10 &lt;/div&gt;
+</pre>
+
+</details>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .cube-container {
+ 2    height: 200px;
+ 3    perspective: 300;
+ 4    position: relative;
+ 5    width: 200px;
+ 6  }
+ 7  .cube {
+ 8    height: 100%;
+ 9    position: absolute;
+ 10   transform: translateZ(-100px);
+ 11   transform-style: preserve-3d;
+ 12   width: 100%;
+ 13 }
+ 14 .side {
+ 15   background: rgba(45, 179, 74, .3);
+ 16   border: 2px solid #2db34a;
+ 17   height: 196px;
+ 18   position: absolute;
+ 19   width: 196px;
+ 20 }
+ 21 .front {
+ 22   transform: translateZ(100px);
+ 23 }
+ 24 .back {
+ 25   transform: rotateX(180deg) translateZ(100px);
+ 26 }
+ 27 .left {
+ 28   transform: rotateY(-90deg) translateZ(100px);
+ 29 }
+ 30 .right {
+ 31   transform: rotateY(90deg) translateZ(100px); 
+ 32 } 
+ 33 .top {  
+ 34   transform: rotateX(90deg) translateZ(100px); 
+ 35 } 
+ 36 .bottom { 
+ 37   transform: rotateX(-90deg) translateZ(100px);
+ 38 } 
+</pre>
+
+</details>
+
+<h3>Demo</h3>
+
+<h3>Resources & Links</h3>
+
+<ul>
+  <li><a href="http://www.css3files.com/transform/"
+    rel="noopener noreferrer" target="_blank">
+    Transform Property</a> via CSS3 Files</li>
+  <li><a href="http://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/"
+    rel="noopener noreferrer" target="_blank">
+	Understanding the CSS Transforms Matrix</a> via Dev.Opera</li>
+  <li><a href="http://24ways.org/2010/intro-to-css-3d-transforms"
+    rel="noopener noreferrer" target="_blank">
+	An Introduction to CSS 3-D Transforms</a> via 24 Ways</li>
+  <li><a href="https://developer.mozilla.org/en/CSS/transform-function"
+    rel="noopener noreferrer" target="_blank">
+	Transform Function</a> via Mozilla Developer Network</li>
+  <li><a href="http://www.webkit.org/blog-files/3d-transforms/transform-style.html"
+    rel="noopener noreferrer" target="_blank">
+	Transform Style</a> via WebKit</li>
+  <li><a href="https://css-tricks.com/almanac/properties/b/backface-visibility/"
+    rel="noopener noreferrer" target="_blank">
+	Backface Visibility</a> via CSS-Tricks</li>
+</ul>
+
+<!-- 94 perfect + 10 + 17 = 121 -->
+<p>
+  <b>Lesson 7: </b><a href="#7-css-transforms">Transforms</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Lesson 9: </b><a href="#9-feature-support-polyfills/">Feature Support &amp; Polyfills</a>
+</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 align="center" id="8-transitions-animations">Lesson 8: Transitions &amp; Animations</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>In this Lesson 8:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<p>GitlabGitLab is the only place where enterprises build mission critical software.</p>
+
+<h4>CSS</h4>
+
+<ul>
+  <li><a href="#transitions">Transitions</a></li>
+  <li><a href="#shorthand-transitions">Shorthand Transitions</a></li>
+  <li><a href="#animations">Animations</a></li>
+  <li><a href="#customizing-animations">Customizing Animations</a></li>
+  <li><a href="#shorthand-animations">Shorthand Animations</a></li>
+</ul>
+
+<h4>SHARE</h4>
+
+<p>One evolution with CSS3 was the ability to write behaviors for
+transitions and animations. Front end developers have been asking for
+the ability to design these interactions within HTML and CSS, without
+the use of JavaScript or Flash, for years. Now their wish has come true.</p>
+
+<p>With CSS3 transitions you have the potential to alter the appearance and
+behavior of an element whenever a state change occurs, such as when it
+is hovered over, focused on, active, or targeted.</p>
+
+<p>Animations within CSS3 allow the appearance and behavior of an element
+to be altered in multiple keyframes. Transitions provide a change from
+one state to another, while animations can set multiple points of
+transition upon different keyframes.</p>
+
+<h4 id="transitions">Transitions</h4>
+
+<p>As mentioned, for a 
+<a href="http://www.alistapart.com/articles/understanding-css3-transitions/" 
+rel="noopener noreferrer" target="_blank">transition (2010)</a> to take place, 
+an element must have a change in state, and different styles must be identified 
+for each state. The easiest way for determining styles for different states is 
+by using the :hover, :focus, :active, and :target pseudo-classes.</p>
+
+<p>There are four transition related properties in total, including transition-property, 
+transition-duration, transition-timing-function, and transition-delay. Not all of these 
+are required to build a transition, with the first three are the most popular.</p>
+
+<p>In the example below the box will change its background color over the
+course of 1 second in a linear fashion.</p>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .box {
+ 2    background: #2db34a;
+ 3    transition-property: background;
+ 4    transition-duration: 1s;
+ 5    transition-timing-function: linear;
+ 6  }
+ 7  .box:hover {
+ 8    background: #ff7b29;
+ 9  }
+</pre>
+
+</details>
+
+<h4>Transition Demo</h4>
+
+<h4>Vendor Prefixes</h4>
+
+<p>The code above, as with the rest of the code samples in this lesson, are
+not vendor prefixed. This is intentionally un-prefixed in the interest
+of keeping the code snippet small and comprehensible. For the best
+support across all browsers, use vendor prefixes.</p>
+
+<p>For reference, the prefixed version of the code above would look like
+the following.</p>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .box {
+ 2    background: #2db34a;
+ 3    -webkit-transition-property: background;
+ 4    -moz-transition-property: background; 
+ 5    -o-transition-property: background;
+ 6    transition-property: background;
+ 7    -webkit-transition-duration: 1s;
+ 8    -moz-transition-duration: 1s;
+ 9    -o-transition-duration: 1s;  
+ 10   transition-duration: 1s;  
+ 11   -webkit-transition-timing-function: linear;
+ 12   -moz-transition-timing-function: linear;
+ 13   -o-transition-timing-function: linear;
+ 14   transition-timing-function: linear;
+ 15 } 
+ 16 .box:hover {
+ 17   background: #ff7b29;
+ 18 } 
+</pre>
+
+</details>
+
+<h4>Transitional Property</h4>
+
+<p>The transition-property property determines exactly what properties will
+be altered in conjunction with the other transitional properties. By
+default, all of the properties within an element's different states will
+be altered upon change. However, only the properties identified within
+the transition-property value will be affected by any transitions.</p>
+
+<p>In the example above, the background property is identified in
+the transition-property value. Here the background property is the only
+property that will change over the duration of 1 second in
+a linear fashion. Any other properties included when changing an
+element's state, but not included within the transition-property value,
+will not receive the transition behaviors as set by
+the transition-duration or transition-timing-function properties.</p>
+
+<p>If multiple properties need to be transitioned they may be comma
+separated within the transition-property value. Additionally, the
+keyword value all may be used to transition all properties of an
+element.</p>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .box {
+ 2    background: #2db34a;
+ 3    border-radius: 6px
+ 4    transition-property: background, border-radius;
+ 5    transition-duration: 1s;
+ 6    transition-timing-function: linear;
+ 7  }
+ 8  .box:hover {
+ 9    background: #ff7b29;
+ 10   border-radius: 50%;
+ 11 }
+</pre>
+
+</details>
+
+<h4>Transition Property Demo</h4>
+
+<h4>Transitional Properties</h4>
+
+<p>It is important to note, <b>not all properties may be transitioned</b>,
+only properties that have an identifiable halfway point. Colors, font
+sizes, and the alike may be transitioned from one value to another as
+they have recognizable values in-between one another.</p>
+
+<p>The display property, for example, may not be transitioned as it does
+not have any midpoint. A handful of the more popular transitional
+properties include the following.</p>
+
+<ul>
+  <li>background-color</li>
+  <li>background-position</li>
+  <li>border-color</li>
+  <li>border-width</li>
+  <li>border-spacing</li>
+  <li>bottom</li>
+  <li>clip</li>
+  <li>color</li>
+  <li>crop</li>
+  <li>font-size</li>
+  <li>font-weight</li>
+  <li>height</li>
+  <li>left</li>
+  <li>letter-spacing</li>
+  <li>line-height</li>
+  <li>margin</li>
+  <li>max-height</li>
+  <li>max-width</li>
+  <li>min-height</li>
+  <li>min-width</li>
+  <li>opacity</li>
+  <li>outline-color</li>
+  <li>outline-offset</li>
+  <li>outline-width</li>
+  <li>padding</li>
+  <li>right</li>
+  <li>text-indent</li>
+  <li>text-shadow</li>
+  <li>top</li>
+  <li>vertical-align</li>
+  <li>visibility</li>
+  <li>width</li>
+  <li>word-spacing</li>
+  <li>z-index</li>
+</ul>
+
+<h4>Transition Duration</h4>
+
+<p>The duration in which a transition takes place is set using
+the transition-duration property. The value of this property can be set
+using general timing values, including seconds (s) and milliseconds
+(ms). These timing values may also come in fractional
+measurements, .2s for example.</p>
+
+<p>When transitioning multiple properties you can set multiple durations,
+one for each property. As with the transition-property property value,
+multiple durations can be declared using comma separated values. The
+order of these values when identifying individual properties and
+durations does matter. For example, the first property identified within
+the transition-property property will match up with the first time
+identified within the transition-duration property, and so forth.</p>
+
+<p>If multiple properties are being transitioned with only one duration
+value declared, that one value will be the duration of all the
+transitioned properties.</p>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .box {
+ 2    background: #2db34a;
+ 3    border-radius: 6px;
+ 4    transition-property: background, border-radius;
+ 5    transition-duration: .2s, 1s;
+ 6    transition-timing-function: linear;
+ 7  }
+ 8  .box:hover {
+ 9    background: #ff7b29;
+ 10   border-radius: 50%;
+ 11 }
+</pre>
+
+</details>
+
+<h4>Transition Duration Demo</h4>
+
+<h4>Transition Timing</h4>
+
+<p>The transition-timing-function property is used to set the speed in
+which a transition will move. Knowing the duration from
+the transition-duration property a transition can have multiple speeds
+within a single duration. A few of the more popular keyword values for
+the transition-timing-function property
+include linear, ease-in, ease-out, and ease-in-out.</p>
+
+<p>The linear keyword value identifies a transition moving in a constant
+speed from one state to another. The ease-in value identifies a
+transition that starts slowly and speeds up throughout the transition,
+while the ease-out value identifies a transition that starts quickly and
+slows down throughout the transition. The ease-in-out value identifies a
+transition that starts slowly, speeds up in the middle, then slows down
+again before ending.</p>
+
+<!-- was "http://www.roblaplaca.com/examples/bezierBuilder/" -->
+<p>Each timing function has a <a href="https://www.cssportal.com/css-cubic-bezier-generator/" 
+rel="noopener noreferrer" target="_blank">cubic-bezier curve</a> behind it, which 
+can be specifically set using the cubic-bezier(x1, y1, x2, y2) value. Additional 
+values include step-start, step-stop, and a uniquely identified steps(number_of_steps, 
+direction) value.</p>
+
+<p>When transitioning multiple properties, you can identify multiple timing
+functions. These timing function values, as with other transition
+property values, may be declared as comma separated values.</p>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .box {
+ 2    background: #2db34a;
+ 3    border-radius: 6px;
+ 4    transition-property: background, border-radius;
+ 5    transition-duration: .2s, 1s;
+ 6    transition-timing-function: linear, ease-in;
+ 7  }
+ 8  .box:hover {
+ 9    background: #ff7b29;
+ 10   border-radius: 50%;
+ 11 }
+</pre>
+
+</details>
+
+<h4>Transition Timing Demo</h4>
+
+<h4>Transition Delay</h4>
+
+<p>On top of declaring the transition property, duration, and timing
+function, you can also set a delay with the transition-delay property.
+The delay sets a time value, seconds or milliseconds, that determines
+how long a transition should be stalled before executing. As with all
+other transition properties, to delay numerous transitions, each delay
+can be declared as comma separated values.</p>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .box {
+ 2    background: #2db34a;
+ 3    border-radius: 6px
+ 4    transition-property: background, border-radius;
+ 5    transition-duration: .2s, 1s;
+ 6    transition-timing-function: linear, ease-in;
+ 7    transition-delay: 0s, 1s;
+ 8  }
+ 9  .box:hover {
+ 10   background: #ff7b29;
+ 11   border-radius: 50%;
+ 12 }
+</pre>
+
+</details>
+
+<h4>Transition Delay Demo</h4>
+
+<h4 id="shorthand-transitions">Shorthand Transitions</h4>
+
+<p>Declaring every transition property individually can become quite
+intensive, especially with vendor prefixes. Fortunately there is a
+shorthand property, transition, capable of supporting all of these
+different properties and values. Using the transition value alone, you
+can set every transition value in the order
+of transition-property, transition-duration, transition-timing-function,
+and lastly transition-delay. Do not use commas with these values unless
+you are identifying numerous transitions.</p>
+
+<p>To set numerous transitions at once, set each individual group of
+transition values, then use a comma to separate each additional group of
+transition values.</p>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .box {
+ 2    background: #2db34a;
+ 3    border-radius: 6px;
+ 4    transition: background .2s linear, border-radius 1s ease-in 1s;
+ 5  }
+ 6  .box:hover {
+ 7    color: #ff7b29;
+ 8    border-radius: 50%;
+ 9  }
+</pre>
+
+</details>
+
+<h4>Shorthand Transitions Demo</h4>
+
+<h4>Transitional Button</h4>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;button&gt;Awesome Button&lt;/button&gt;
+</pre>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  button { 
+ 2    border: 0; 
+ 3    background: #0087cc;
+ 4    border-radius: 4px; 
+ 5    box-shadow: 0 5px 0 #006599; 
+ 6    color: #fff;  
+ 7    cursor: pointer; 
+ 8    font: inherit;
+ 9    margin: 0; 
+ 10   outline: 0;
+ 11   padding: 12px 20px; 
+ 12   transition: all .1s linear;  
+ 13 }  
+ 14 button:active {  
+ 15   box-shadow: 0 2px 0 #006599; 
+ 16   transform: translateY(3px);  
+ 17 }  
+</pre>
+
+</details>
+
+<h4>Demo</h4>
+
+<h4>Card Flip</h4>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;div class="card-container"&gt;
+ 2    &lt;div class="card"&gt;
+ 3      &lt;div class="side"&gt;...&lt;/div&gt;
+ 4      &lt;div class="side back"&gt;...&lt;/div&gt;
+ 5    &lt;/div&gt;
+ 6  &lt;/div&gt;
+</pre>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  .card-container {
+ 2    height: 150px;
+ 3    perspective: 600;
+ 4    position: relative;
+ 5    width: 150px;
+ 6  }
+ 7  .card {
+ 8    height: 100%;
+ 9    position: absolute;
+ 10   transform-style: preserve-3d;
+ 11   transition: all 1s ease-in-out;
+ 12   width: 100%;
+ 13 }
+ 14 .card:hover {
+ 15   transform: rotateY(180deg);
+ 16 }
+ 17 .card .side {
+ 18   backface-visibility: hidden;
+ 19   height: 100%;
+ 20   position: absolute;
+ 21   width: 100%;
+ 22 }
+ 23 .card .back {
+ 24   transform: rotateY(180deg);
+ 25 }
+</pre>
+
+</details>
+
+<h4>Demo</h4>
+
+<h4 id="animations">Animations</h4>
+
+<p>Transitions do a great job of building out visual interactions from one
+state to another, and are perfect for these kinds of single state
+changes. However, when more control is required, transitions need to
+have multiple states. In return, this is where 
+<a href="http://coding.smashingmagazine.com/2011/09/14/the-guide-to-css-animation-principles-and-examples/" 
+rel="noopener noreferrer" target="_blank">animations (2011)</a> pick up where transitions 
+leave off.</p>
+
+<h4>Animations Keyframes</h4>
+
+<p>To set multiple points at which an element should undergo a transition,
+use the @keyframes rule. The @keyframes rule includes the animation
+name, any animation breakpoints, and the properties intended to be
+animated.</p>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1  @keyframes slide {
+ 2    0% {
+ 3      left: 0;
+ 4      top: 0;
+ 5    }
+ 6    50% {
+ 7      left: 244px;
+ 8      top: 100px;
+ 9    }
+ 10   100% {
+ 11     left: 488px;
+ 12     top: 0;
+ 13   }
+ 14 }
+</pre>
+
+</details>
+
+<h4>Vendor Prefixing the Keyframe Rule</h4>
+
+<p>The @keyframes rule must be vendor prefixed, just like all of the
+other transition and animation properties. The vendor prefixes for
+the @keyframes rule look like the following:</p>
+
+<ul>
+  <li>@-moz-keyframes</li>
+  <li>@-o-keyframes</li>
+  <li>@-webkit-keyframes</li>
+</ul>
+
+<p>The animation above is named slide, stated directly after the
+opening @keyframes rule. The different keyframe breakpoints are set
+using percentages, starting at 0% and working to 100% with an
+intermediate breakpoint at 50%. The keywords from and to could be used
+in place of 0% and 100% if wished. Additional breakpoints, besides 50%,
+may also be stated. The element properties to be animated are listed
+inside each of the breakpoints, left and top in the example above.</p>
+
+<p>It is important to note, as with transitions only individual properties
+may be animated. Consider how you might move an element from top to
+bottom for example. Trying to animate from top: 0; to bottom: 0; will
+not work, because animations can only apply a transition within a single
+property, not from one property to another. In this case, the element
+will need to be animated from top: 0; to top: 100%;.</p>
+
+<h4>Animations Keyframes Demo</h4>
+
+<p>Hover over the ball below to see the animation in action.</p>
+
+<h4>Animation Name</h4>
+
+<p>Once the keyframes for an animation have been declared they need to be
+assigned to an element. To do so, the animation-name property is used
+with the animation name, identified from the @keyframes rule, as the
+property value. The animation-name declaration is applied to the element
+in which the animation is to be applied to.</p>
+
+<pre>
+ 1  .stage:hover .ball {
+ 2    animation-name: slide;
+ 3  }
+</pre>
+
+<p>Using the animation-name property alone isn't enough though. You also
+need to declare an animation-duration property and value so that the
+browser knows how long an animation should take to complete.</p>
+
+<h4>Animation Duration, Timing Function, & Delay</h4>
+
+<p>Once you have declared the animation-name property on an element,
+animations behave similarly to transitions. They include a duration,
+timing function, and delay if desired. To start, animations need a
+duration declared using the animation-duration property. As with
+transitions, the duration may be set in seconds or milliseconds.</p>
+
+<pre>
+ 1  .stage:hover .ball {
+ 2    animation-name: slide;
+ 3    animation-duration: 2s;
+ 4  }
+</pre>
+
+<p>A timing function and delay can be declared using the animation-timing-function 
+and animation-delay properties respectively. The values for these properties mimic 
+and behave just as they do with transitions.</p>
+
+<pre>
+ 1  .stage:hover .ball {
+ 2    animation-name: slide;
+ 3    animation-duration: 2s;
+ 4    animation-timing-function: ease-in-out;
+ 5    animation-delay: .5s;
+ 6  }
+</pre>
+
+<p>The animation below should cause the ball to bounce once while moving to
+the left, however only when hovering over the stage.</p>
+
+<h4>HTML</h4>
+
+<pre>
+ 1  &lt;div class="stage"&gt;
+ 2    &lt;figure class="ball"&gt;&lt;/figure&gt;
+ 3  &lt;/div&gt;
+</pre>
+
+<details>
+  <summary>CSS</summary>
+
+<pre>
+ 1   @keyframes slide {
+ 2     0% {
+ 3       left: 0;
+ 4       top: 0;
+ 5     }
+ 6     50% {
+ 7       left: 244px;
+ 8       top: 100px;
+ 9     }
+ 10    100% {
+ 11      left: 488px;
+ 12      top: 0;
+ 13    }
+ 14  }
+ 15  .stage {
+ 16    height: 150px;
+ 17    position: relative;
+ 18  }
+ 19  .ball {
+ 20    height: 50px;
+ 21    position: absolute;
+ 22    width: 50px;
+ 23  }
+ 24  .stage:hover .ball {
+ 25    animation-name: slide;
+ 26    animation-duration: 2s;
+ 27    animation-timing-function: ease-in-out;
+ 28    animation-delay: .5s;
+ 29  }
+</pre>
+
+</details>
+
+<h4>Animation Demo</h4>
+
+<p>Hover over the ball below to see the animation in action.</p>
+
+<h4 id="customizing-animations">Customizing Animations</h4>
+
+<p>Animations also provide the ability to further customize an element's
+behavior, including the ability to declare the number of times an
+animation runs, as well as the direction in which an animation
+completes.</p>
+
+<h4>Animation Iteration</h4>
+
+<p>By default, animations run their cycle once from beginning to end and
+then stop. To have an animation repeat itself numerous times
+the animation-iteration-count property may be used. Values for
+the animation-iteration-count property include either an integer or
+the infinite keyword. Using an integer will repeat the animation as many
+times as specified, while the infinite keyword will repeat the animation
+indefinitely in a never ending fashion.</p>
+
+<details>
+  <summary>Example, Animation Iteration</summary>
+
+<pre>
+ 1  .stage:hover .ball {
+ 2    animation-name: slide;
+ 3    animation-duration: 2s;
+ 4    animation-timing-function: ease-in-out;
+ 5    animation-delay: .5s;
+ 6    animation-iteration-count: infinite;
+ 7  }
+</pre>
+
+</details>
+
+<h4>Animation Iteration Demo</h4>
+
+Hover over the ball below to see the animation in action.
+
+<h4>Animation Direction</h4>
+
+<p>On top of being able to set the number of times an animation repeats,
+you may also declare the direction an animation completes using
+the animation-direction property. Values for
+the animation-direction property include normal, reverse, alternate,
+and alternate-reverse.</p>
+
+<p>The normal value plays an animation as intended from beginning to end.
+The reverse value will play the animation exactly opposite as identified
+within the @keyframes rule, thus starting at 100% and working backwards
+to 0%.</p>
+
+<p>The alternate value will play an animation forwards then backwards.
+Within the keyframes that includes running forward from 0% to 100% and
+then backwards from 100% to 0%. Using
+the animation-iteration-count property may limit the number of times an
+animation runs both forwards and backwards. The count starts
+at 1 running an animation forwards from 0% to 100%, then adds 1 running
+an animation backwards from 100% to 0%. Combining for a total
+of 2 iterations. The alternate value also inverses any timing functions
+when playing in reverse. If an animation uses the ease-in value going
+from 0% to 100%, it then uses the ease-out value going from 100% to 0%.</p>
+
+<p>Lastly, the alternate-reverse value combines both
+the alternate and reverse values, running an animation backwards then
+forwards. The alternate-reverse value starts at 100% running to 0% and
+then back to 100% again.</p>
+
+<details>
+  <summary>Example, Alternate Reverse</summary>
+
+<pre>
+ 1  .stage:hover .ball {
+ 2    animation-name: slide;
+ 3    animation-duration: 2s;
+ 4    animation-timing-function: ease-in-out;
+ 5    animation-delay: .5s;
+ 6    animation-iteration-count: infinite;
+ 7    animation-direction: alternate;
+ 8  }
+</pre>
+
+</details>
+
+<h4>Animation Direction Demo</h4>
+
+<p>Hover over the ball below to see the animation in action.</p>
+
+<h4>Animation Play State</h4>
+
+<p>The animation-play-state property allows an animation to be played or
+paused using the running and paused keyword values respectively. When
+you play a paused animation, it will resume running from its current
+state rather than starting from the very beginning again.</p>
+
+<p>In the example below the animation-play-state property is set
+to paused when making the stage active by clicking on it. Notice how the
+animation will temporarily pause until you let up on the mouse.</p>
+
+<details>
+  <summary>Example, Animation Play State</summary>
+
+<pre>
+ 1  .stage:hover .ball {
+ 2    animation-name: slide;
+ 3    animation-duration: 2s;
+ 4    animation-timing-function: ease-in-out;
+ 5    animation-delay: .5s;
+ 6    animation-iteration-count: infinite;
+ 7    animation-direction: alternate;
+ 8  }
+ 9  .stage:active .ball {
+ 10   animation-play-state: paused;
+ 11 }
+</pre>
+
+</details>
+
+<h4>Animation Play State Demo</h4>
+
+<p>Hover over the ball below to see the animation in action. Click to pause
+the animation.</p>
+
+<h4>Animation Fill Mode</h4>
+
+<p>The animation-fill-mode property identifies how an element should be
+styled either before, after, or before and after an animation is run.
+The animation-fill-mode property accepts four keyword values,
+including none, forwards, backwards, and both.</p>
+
+<p>The none value will not apply any styles to an element before or after
+an animation has been run.</p>
+
+<p>The forwards value will keep the styles declared within the last
+specified keyframe. These styles may, however, be affected by
+the animation-direction and animation-iteration-count property values,
+changing exactly where an animation ends.</p>
+
+<p>The backwards value will apply the styles within the first specified
+keyframe as soon as being identified, before the animation has been run.
+This does include applying those styles during any time that may be set
+within an animation delay. The backwards value may also be affected by
+the animation-direction property value.</p>
+
+<p>Lastly, the both value will apply the behaviors from both
+the forwards and backwards values.</p>
+
+<details>
+  <summary>Example, Animation</summary>
+
+<pre>
+ 1  .stage:hover .ball {
+ 2    animation-name: slide;
+ 3    animation-duration: 2s;
+ 4    animation-timing-function: ease-in-out;
+ 5    animation-delay: .5s;
+ 6    animation-fill-mode: forwards;
+ 7  }
+ 8  .stage:active .ball { 
+ 9    animation-play-state: paused;
+ 10 }
+</pre>
+
+</details>
+
+<h4>Animation Fill Mode Demo</h4>
+
+<p>Hover over the ball below to see the animation in action. Click to pause
+the animation.</p>
+
+<h4 id="shorthand-animations">Shorthand Animations</h4>
+
+<p>Fortunately <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations" 
+rel="noopener noreferrer" target="_blank">animations</a>, just like transitions, 
+can be written out in a shorthand format. This is accomplished with one animation 
+property, rather than multiple declarations. The order of values within the animation 
+property should be animation-name, animation-duration, animation-timing-function, 
+animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, 
+and lastly animation-play-state.</p>
+
+<pre>
+ 1  .stage:hover .ball {
+ 2    animation: slide 2s ease-in-out .5s infinite alternate;
+ 3  }
+ 4  .stage:active .ball {
+ 5    animation-play-state: paused;
+ 6  }
+</pre>
+
+<h4>Shorthand Animations Demo</h4>
+
+<p>Hover over the ball below to see the animation in action. Click to pause
+the animation.</p>
+
+<h4>Resources & Links</h4>
+
+<ul>
+  <li><a href="http://www.alistapart.com/articles/understanding-css3-transitions/" 
+    rel="noopener noreferrer" target="_blank">
+    Understanding CSS3 Transitions</a> via A List Apart.</li>
+  <li><a href="http://www.roblaplaca.com/examples/bezierBuilder/" 
+    rel="noopener noreferrer" target="_blank">
+    CSS Cubic-Bezier Builder</a> via Rob LaPlaca.</li>
+  <li><a href="http://coding.smashingmagazine.com/2011/09/14/the-guide-to-css-animation-principles-and-examples/" 
+    rel="noopener noreferrer" target="_blank">
+    The Guide To CSS Animation: Principles and Examples</a> via Smashing Magazine.</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations" 
+    rel="noopener noreferrer" target="_blank">
+    Using CSS Animations</a> via Mozilla Developer Network.</li>
+</ul>
+
+<!-- 94 perfect + 10 + 17 = 121 -->
+<p>
+  <b>Lesson 7: </b><a href="#7-css-transforms">Transforms</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Lesson 9: </b><a href="#9-feature-support-polyfills/">Feature Support &amp; Polyfills</a>
+</p>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 align="center" id="9-feature-support-polyfills">Lesson 9: Feature Support &amp; Polyfills</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>In this Lesson 9:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<h4>HTML</h4>
+
+<ul>
+  <li><a href="#html5-shiv">HTML5 Shiv</a>.</li>
+  <li><a href="#cross-browser-testing">Cross Browser Testing</a>.</li>
+</ul>
+
+<h4>CSS</h4>
+
+<ul>
+  <li><a href="#detecting-browser-features">Detecting Browser Features</a>.</li>
+</ul>
+
+<b>JAVASCRIPT</b>
+
+<ul>
+  <li><a href="#conditionally-loading-files">Conditionally Loading Files]</a></li>
+</ul>
+
+<p>Building a website can be both extremely rewarding and frustrating.
+Common frustrations arise from trying to get a website to look and
+perform the same in every browser. All front end developers have shared
+this frustration at one point or another.</p>
+
+<p>Truth be told, websites <b>do not</b> need to look or perform the same in
+every browser. Exactly how close a website works in each browser is up
+to you and your level of comfort for a given website. If a website
+receives under half a percent of traffic from Internet Explorer 6 it
+might make sense to drop support for it. If that half a percent is still
+contributing to thousands of dollars in sales, support may be mandatory.
+Determine what is acceptable for a given website and work from there.</p>
+
+<p>There are a handful of common practices to get websites to perform
+adequately in all browsers, some of which have already been covered
+within this guide. When incorporating CSS3 properties, fallbacks are
+recommend to support older browsers. Other techniques include shivs and
+polyfills. Generally speaking, shivs and polyfills are small JavaScript
+plugins that add support for a requested set of features not natively
+supported by a specific browser.</p>
+
+<h4>HTML5 Shiv</h4>
+
+<p>Perhaps the most popular shiv, and one you may have likely used already,
+is the HTML5 Shiv. The HTML5 Shiv was 
+<a href="http://paulirish.com/2011/the-history-of-the-html5-shiv/" 
+rel="noopener noreferrer" target="_blank">
+created by Remy Sharp</a> to provide the ability to use HTML5 elements within 
+versions of Internet Explorer 8 and below. The HTML5 Shiv not only creates 
+support for HTML5 elements but also allows them to be properly styled with CSS.</p>
+
+<p>The <a href="https://code.google.com/p/html5shiv/" 
+rel="noopener noreferrer" target="_blank">shiv</a> should be
+downloaded from Google, where Remy maintains the latest version, then
+hosted on your server. For the best performance, reference the shiv
+JavaScript file within the head of the document, after any stylesheet
+references. Additionally, you want to reference the shiv inside of
+a <a href="https://css-tricks.com/how-to-create-an-ie-only-stylesheet/" 
+rel="noopener noreferrer" target="_blank">
+conditional comment</a>, making sure that the file is only loaded within 
+versions of Internet Explorer 8 and below.</p>
+
+<p>In this case the conditional comment looks like <!--[if lt IE 9]>...<![endif]-->.</p>
+
+<pre>
+ 1  &lt;!--&lbrack;if lt IE 9&rbrack;&gt;
+ 2  &lt;script src="html5shiv.js"&gt;&lt;/script&gt;
+ 3  &lt;!-- &lbrack;endif&rbrack;--&gt;
+</pre>
+
+<h4>The Difference Between a Shiv &amp; a Shim</h4>
+
+<p>Chances are you may have heard of both the HTML5 <i>Shiv</i> and
+HTML5 <i>Shim</i>, and wondered what the difference, if any, may be. Oddly
+enough, there is <b>no</b> difference between the HTML5 Shiv and HTML5
+Shim. The two words are often used interchangeably and are commonly
+transposed.</p>
+
+<p>Additionally, once the new HTML5 elements are created using the shiv,
+any block level elements need to be identified and updated using
+the display: block; declaration.</p>
+
+<details>
+  <summary>display: block</summary>
+
+<pre>
+ 1  article,
+ 2  aside,
+ 3  details,
+ 4  figcaption,
+ 5  figure,
+ 6  footer,
+ 7  header,
+ 8  hgroup,
+ 9  nav,
+ 10 section,
+ 11 summary {
+ 12   display: block;
+ 13 }
+</pre>
+
+</details>
+
+<p>Lastly, Internet Explorer 8 and 9 do not correctly define styles for a
+few HTML5 inline-block level elements. As before, these styles will need
+to be explicitly stated. After which, all versions of Internet Explorer
+should be good to go using any new HTML5 elements.</p>
+
+<pre>
+ 1  audio,
+ 2  canvas,
+ 3  video {
+ 4    display: inline-block;
+ 5  }
+</pre>
+
+<h4>Detecting Browser Features</h4>
+
+<p>Referencing the HTML5 Shiv works well with a conditional comment because
+the intention is to specifically target browsers that don't support new
+HTML5 features and elements. Additionally, there is a way to to provide
+support for specific HTML5 and CSS3 features, regardless of which
+browser is being used.</p>
+
+<p>Feature detection, as provided
+by <a href="http://modernizr.com/" 
+rel="noopener noreferrer" target="_blank">Modernizr</a>, provides a way to
+write conditional CSS and JavaScript based on whether or not a browser
+supports a specific feature. For example, if a browser supports rounded
+corners Modernizr will add the class of borderradius to
+the html element. If the browser doesn't support rounded corners,
+Modernizr will add the class of no-borderradius to the html element.</p>
+
+<h4>Loading Modernizr</h4>
+
+<p>To get feature detection with Modernizr up and running, visit
+their <a href="http://modernizr.com/download/" 
+rel="noopener noreferrer" target="_blank">download</a> page and
+customize what features you are looking to detect. Once downloaded,
+upload the JavaScript file on your server and reference it within
+the head of your HTML document, below any referenced style sheets.</p>
+
+<p>It is worth noting that Modernizr may be configured to include the HTML5
+Shiv, in which case the shiv doesn't need to be referenced on top of
+Modernizr.</p>
+
+<pre>
+ 1  &lt;script src="modernizr.js"&gt;&lt;/script&gt;
+</pre>
+
+<h4>Conditionally Applying CSS Styles</h4>
+
+<p>Once Modernizr is up and running CSS styles may be conditionally applied
+based on the features a given browser supports. Modernizr has detection
+for the majority of the CSS3 properties and values, all of which can be
+found in the Modernizr <a href="https://modernizr.com/docs" 
+rel="noopener noreferrer" target="_blank">documentation</a>.</p>
+
+<p>One item to weigh out is if feature detection is necessary for certain
+styles. For example, using an RGBa color value may easily be supported
+with a fallback hexadecimal value without the use of feature detection.
+When deciding to use feature detection, it is important to keep styles
+organized and performance in mind. Avoid duplicating any code or making
+additional HTTP requests when possible.</p>
+
+<details>
+  <summary>Conditionally Applying CSS Styles</summary>
+
+<pre>
+ 1   button {
+ 2     border: 0;
+ 3     color: #fff;
+ 4     cursor: pointer;
+ 5     font-size: 14px;
+ 6     font-weight: 600;
+ 7     margin: 0;
+ 8     outline: 0;
+ 9   }
+ 10  /* With CSS Gradient Styles */
+ 11  .cssgradients button {
+ 12    border: 1px solid #0080c2;
+ 13    background: linear-gradient(#00a2f5, #0087cc);
+ 14    border-radius: 6px;
+ 15    padding: 15px 30px;
+ 16  }
+ 17  .cssgradients button:hover {
+ 18    background: linear-gradient(#1ab1ff, #009beb);
+ 19  }
+ 20  .cssgradients button:active {
+ 21    box-shadow: inset 0 1px 10px rgba(255, 255, 255, .5);
+ 22  }
+ 23  /* Without CSS Gradient Styles */
+ 24  .no-cssgradients button {
+ 25    background: transparent url("button.png") 0 0 no-repeat;
+ 26    padding: 16px 31px;
+ 27  }
+ 28  .no-cssgradients button:hover {
+ 29    background-position: 0 -49px;
+ 30  }
+ 31  .no-cssgradients button:active {
+ 32    background-position: 0 -98px;
+ 33  }
+</pre>
+
+</details>
+
+<h4>Feature Detection Demo</h4>
+
+<p>In the demonstration above, the button inherits some default styles.
+However, specific styles are only applied based on whether or not CSS3
+gradient background are supported. In this case, rounded corners and box
+shadows are also included within the conditional styles. Those browsers
+that support gradients get a gradient background, rounded corners, and a
+box shadow. Those browsers that do not receive an image with all of
+these styles included within the image. With this code none of the
+styles are being over written and an HTTP request is only made when
+necessary.</p>
+
+<p>When working with CSS3 feature detection it is hard to know what the
+styles look like in browsers that do not support specific CSS3 features.
+Fortunately, there is a bookmarklet
+called <a href="https://github.com/davatron5000/deCSS3" 
+rel="noopener noreferrer" target="_blank">deCSS3</a> which
+disables any CSS3 features. Doing so allows you to see what a website
+would look like without CSS3, and if your conditional styles are
+working.</p>
+
+<h4>Conditionally Loading Files</h4>
+
+<p>On top of conditionally loading styles, Modernizr also provides a way to
+use <a href="https://modernizr.com/docs#using-modernizr-with-javascript" 
+rel="noopener noreferrer" target="_blank">
+feature detection in JavaScript</a>. With this, JavaScript polyfills and 
+conditional files may be loaded based on the detection of a given feature 
+with the help of jQuery and the jQuery getScript method.</p>
+
+<p>Using Modernizr to set the condition of an if statement in Javascript
+allows different scripts to be executed based on whether or not the
+given condition is true or false. Below Modernizr is checking for local
+storage support. If local storage is supported 
+<a href="https://davidwalsh.name/loading-scripts-jquery" 
+rel="noopener noreferrer" target="_blank">jQuery is used to load</a>
+the storage.js file using the getScript method, and if local storage is not supported jQuery
+is used the storage-polyfill.js file using the getScript method.</p>
+
+<details>
+  <summary>jQuery Conditional Load</summary>
+
+<pre>
+ 1  $(document).ready(function() {
+ 2    if (Modernizr.localstorage) {
+ 3      // Local storage is available
+ 4      jQuery.getScript('storage.js');
+ 5    } else {
+ 6      // Local storage is not available
+ 7      jQuery.getScript('storage-polyfill.js');
+ 8    }
+ 9  });
+</pre>
+
+</details>
+
+<h4>Conditionally Loading Based on Media Queries</h4>
+
+<p>One interesting condition Modernizr can test against is media queries.
+Doing so provides the ability to only load files based on different
+media query conditions. Not loading unnecessary files can be extremely
+beneficial for performance.</p>
+
+<pre>
+ 1  $(document).ready(function() {
+ 2    if (Modernizr.mq('screen and (min-width: 640px)')) {
+ 3      jQuery.getScript('tabs.js'); 
+ 4    } 
+ 5  });  
+</pre>
+
+<p>Above, Modernizr looks to detect screens above 640 pixels wide,
+primarily desktops, and then loads the tabs.js file based off of this
+condition. It is important to note that this condition is tested only
+once, when the page loads, and that is it. Should a user resize the
+page, this condition will not be retested. Should this condition need to
+be retested, additional JavaScript would need to be included.</p>
+
+<h4>Conditionally Running Scripts</h4>
+
+<p>Using Modernizr, all of the HTML5 and CSS3 features they detect may be
+tested within JavaScript. For example, it may be worth disabling
+tooltips on mobile devices due to not having hover capabilities, and
+instead showing the tooltip in plain text on the screen. The script for
+calling these tooltips could be wrapped in a Modernizr condition,
+preventing the script from loading on smaller screens.</p>
+
+<pre>
+ 1  $(document).ready(function() {
+ 2    if (Modernizr.mq('screen and (max-width: 400px)')) {
+ 3      $('.size').text('small');
+ 4    }
+ 5  });
+</pre>
+
+<h4>Conditionally Running Scripts Demo</h4>
+
+<p>Above is a basic example of how JavaScript can be executed based on a
+condition established by Modernizr. Upon loading the page, if the screen
+is above 800 pixels wide nothing happens. However, if the screen is
+below 800 pixels wide, upon being loaded, the word 'small' will be
+swapped for 'large' based off of the executed JavaScript.</p>
+
+<h4>HTML5 & CSS3 Polyfills</h4>
+
+<p>Currently there are polyfills for nearly all of the different HTML5 and
+CSS3 features. The team over at Modernizr has put together quite an
+exhaustive <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills" 
+rel="noopener noreferrer" target="_blank">
+list of polyfills</a>. These polyfills can be dropped in as needed.</p>
+
+<p>The same people behind Modernizr have also put together
+a <a href="http://html5please.com/" 
+rel="noopener noreferrer" target="_blank">list</a> of all of the new HTML5
+and CSS3 features, including instructions on how to use them
+responsibly. Understand, not all of these features need polyfills. Quite
+a few of them can be used outright or with the use of a fallback.</p>
+
+<h4>Cross Browser Testing</h4>
+
+<p>Perhaps the most dreaded part of web design and development is cross
+browser testing, making sure a website works well in all browsers.
+Generally speaking the more modern browsers, Chrome, Firefox, and
+Safari, all perform pretty well. The largest pitfalls live within
+Internet Explorer, and testing different versions of Internet Explorer
+can be difficult.</p>
+
+<p>There are a <a href="http://www.smashingmagazine.com/2011/08/07/a-dozen-cross-browser-testing-tools/" 
+rel="noopener noreferrer" target="_blank">
+handful</a> of services out there that do help with cross browser testing, some are
+interactive while others are not. Being able to interact with a browser,
+rather than seeing a rendered screenshot, is far more helpful for
+debugging code. One of the best ways to boot up multiple versions of
+Internet Explorer is by using multiple virtual machines, each with a
+different version of Internet Explorer.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 14. virtualbox (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--
+<p align="center" width="100%">
+  <img src="./images/image014.png"
+  style="width:40%"
+  title="VirtualBox"
+  alt="VirtualBox" />
+</p>
+<h6 align="center" width="40%">Fig. 9. VirtualBox running on Mac OS X with Internet Explorer
+versions 6 through 9.</h6>
+
+<p>Microsoft provides a handful of VirtualPCs that can be used solely for
+testing. Setting all of these up can be a herculean task. Fortunately,
+Greg Thornton has built an <a href="https://github.com/xdissent/ievms" 
+rel="noopener noreferrer" target="_blank">
+automated installer</a> for all of these virtual machines. The installation 
+takes a while to download all of the different virtual machines, and requires 
+a decent amount of disk space. Prepare adequately by only installing the necessary 
+virtual machines and by clearing up the necessary disk space ahead of time.
+Depending on how often the virtual machines are used, it may be worth
+installing them on an external hard drive.</p>
+
+<p>Internet Explorer versions 8 and above have built-in development tools,
+unfortunately versions 7 and below do not. The web inspector and all of
+the other debugging tools we've grown to love are not readily available
+within Internet Explorer 7 and below.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 15. virtualbox (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image015.png"
+  style="width:40%"
+  title="VirtualBox"
+  alt="VirtualBox" />
+</p>
+<p align="center" width="40%"><small><small>Fig. 9. Internet Explorer 7 running inside of a virtual machine with the Firebug Lite
+bookmarklet open for debugging.</small></small></p>
+
+<h4>Resources & Links</h4>
+
+<ul>
+  <li><a href="https://code.google.com/p/html5shiv/">HTML5 Shiv</a> via Remy Sharp</li>
+  <li><a href="https://css-tricks.com/how-to-create-an-ie-only-stylesheet/">
+    How To Create an IE-Only Stylesheet</a> via CSS-Tricks</li>
+  <li><a href="http://modernizr.com/">Modernizr</a>http://modernizr.com/</li>
+  <li><a href="https://davidwalsh.name/loading-scripts-jquery">
+    Loading Scripts with jQuery</a> via David Walsh</li>
+  <li><a href="https://github.com/davatron5000/deCSS3">deCSS3</a> via Dave Rupert</li>
+  <li><a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills">
+    HTML5 Cross Browser Polyfills</a></li>
+  <li><a href="http://html5please.com/">HTML5 Please</a></li>
+  <li><a href="https://github.com/xdissent/ievms">Microsoft IE Virtual Machines</a> via Greg Thornton</li>
+</ul>
+
+<!-- 70 spaces between -->
+<div>
+  <b>Lesson 8: </b><a href="#8-transitions-animations">Transitions &amp; Animations</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;
+  <b>Lesson 10: </b><a href="#10-semantics-accessibility">Extending Semantics &amp; Accessibility</a>
+</div>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 align="center" id="10-semantics-accessibility">Lesson 10: Extending Semantics & Accessibility</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>In this Lesson 10:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>HTML</h5>
+
+<ul>
+  <li><a href="#semantic-motivation">Semantic Motivation</a></li>
+  <li><a href="#structural-semantics">Structural Semantics</a></li>
+  <li><a href="#text-level-semantics">Text Level Semantics</a></li>
+  <li><a href="#microdata">Microdata</a></li>
+  <li><a href="#wai-aria">WAI-ARIA</a></li>
+</ul>
+
+<b>Share</b>
+
+<p>Semantics and accessibility are naturally part of HTML by design,
+however they are not fully leveraged unless used accordingly. Knowing
+how to write semantic and accessible code properly takes an
+understanding of how semantics and accessibility work, and how users and
+machines interpret them. Writing semantic and accessible code isn't
+incredibly difficult, but it can be time consuming. In the long run,
+however, the benefits win out.</p>
+
+<p>One of the more important parts to remember when writing semantic and
+accessible code is to do your best to leverage the standard markup
+language. Do your best to write the cleanest code possible, and take
+pride in your work. Generally speaking, don't use a meaningless element
+where another element might make more semantic sense, using a div where
+a h1 would be better fitted for example. Use semantic elements and
+attributes, as well as microdata and WAI-ARIA to extend the value of
+your code.</p>
+
+<p>Additionally, <b>be an advocate for semantics and accessibility</b>. Tell
+others why you've written certain code, and provide reasoning why
+certain modules of content are marked up in a specific way. Outline
+goals and objectives within your code, and explain how those goals and
+objectives are being accomplished. The practice of writing semantic and
+accessible code is growing, however adoption at large has not yet been
+achieved. Be an advocate for the code you write.</p>
+
+<h4>Semantic Motivation</h4>
+
+<p>Occasionally, one may ask if semantics really make a difference. You may
+hear they slow down development, are poorly supported, or that they are
+even opinionated. While this may have some validity, you still need to
+retain integrity and continue to write the best code possible, for
+semantics provide a larger meaning in writing code.</p>
+
+<p>The fact of the matter is, 
+<a href="http://www.vanseodesign.com/web-design/semantic-html/" 
+rel="noopener noreferrer" target="_blank">semantics largely 
+benefit everyone</a>. For starters, semantics provide a shared and unambiguous 
+meaning to content. Semantics give content solid structure and value, while also
+favoring accessibility, providing better user interfaces and more defined 
+information to assistive technologies. Search and globalization is more 
+permanent with semantics, making it easier to serve content internationally 
+and making it more search engine friendly. Should that not be enough, semantics 
+also promote interoperability, allowing the exchange and use of information 
+across different platforms and devices.</p>
+
+<p>It's safe to say semantics are important, and here to stay. To briefly
+recap, semantics provide:</p>
+
+<ul>
+  <li>Unambiguous, shared meaning within content</li>
+  <li>Accessibility</li>
+  <li>Search and globalization</li>
+  <li>Interoperability</li>
+</ul>
+
+<h4>Structural Semantics</h4>
+
+<p>Within the beginner's guide we discuss the use of 
+<a href="https://learn.shayhowe.com/html-css/getting-to-know-html/" 
+rel="noopener noreferrer" target="_blank">
+structural semantics</a>, specifically using the header, nav, article, section, 
+aside, and footer elements. These elements are used to provide additional
+background context to the content within them, communicating their core
+meaning to web browsers and other devices. This is important, as it
+provides a better way to outline and structure pages, not to mention a
+more meaningful solution than divisions.</p>
+
+<h4>Hiding Content</h4>
+
+<p>Every now and then you may want to hide a block of content on the page,
+perhaps showing or hiding an element depending on a user's state. For
+example, having a success message hidden from a user until they complete
+a desired action. Most commonly, this is accomplished with the display:
+none; CSS declaration. While this does work, it is semantically
+incorrect.</p>
+
+<p>A better option is to use the hidden Boolean attribute, which is a
+global attribute available to all elements for use. Functionally it
+performs the same way as the CSS declaration, but semantically it
+represents an element that should be hidden, or ignored, for the time
+being. Screen readers and other devices will recognize this, temporarily
+skipping it, where they may not done so with the CSS declaration.</p>
+
+<pre>
+ 1  &lt;!-- Good --&gt;  
+ 2  &lt;div hidden&gt;...&lt;/div&gt;  
+ 3  &lt;!-- Not good --&gt; 
+ 4  &lt;div style="display: none;"&gt;...&lt;/div&gt; 
+</pre>
+
+<p>Imagine a blind user attempting to fill out a form and the first piece
+of content, before even filling out the form, is a success message. This
+is a poor user experience, and one that can easily be fixed using proper
+semantics.</p>
+
+<h4>Text Level Semantics</h4>
+
+<p>The majority of content on the web lives within text, and we primarily
+browse the Internet looking for this content. Using the
+proper <a href="https://developers.whatwg.org/text-level-semantics.html" 
+rel="noopener noreferrer" target="_blank">
+semantic markup</a> for text makes it easier for users to find what they need.</p>
+
+<h4>Bolding Text</h4>
+
+<p>There are a few different ways to make text bold, including multiple
+elements and the <a href="https://learn.shayhowe.com/html-css/working-with-typography/" 
+rel="noopener noreferrer" target="_blank">
+font weight</a> CSS property. The two main elements used in this case include strong 
+and b. While these two elements have the same presentation they have completely
+different semantic meanings.</p>
+
+<p>The strong element outlines text that has a <b>strong importance</b>. On
+the contrasting side, the b element identifies text that is to
+be <b>stylistically offset</b>, without importance. Generally speaking,
+the b element should be used solely as a styling hook to change the
+presentation of an element, where the strong element should be used to
+identify significantly important text.</p>
+
+<pre>
+ 1  &lt;!-- Strong importance --&gt;
+ 2  &lt;strong&gt;Caution:&lt;/strong&gt; Falling rocks.
+ 3  &lt;!-- Stylistically offset --&gt;
+ 4  This recipe calls for &lt;b&gt;bacon&lt;/b&gt; and &lt;b&gt;baconnaise&lt;/b&gt;.
+</pre>
+
+<h4>Bolding Text Demo</h4>
+
+<h4>Italicizing Text</h4>
+
+<p>Italicizing text falls in line with that of bolding text, where we can
+use multiple elements or the <a href="https://learn.shayhowe.com/html-css/working-with-typography/" 
+rel="noopener noreferrer" target="_blank">
+font style</a> CSS property to achieve a desired presentation. When italicizing text, the
+two elements most commonly used are em and i. Again, these share the
+same presentation, yet have completely different semantic meanings.</p>
+
+<p>The em element places a <b>stressed emphasis</b> on text, while
+the i element identifies text to be expressed in an <b>alternate voice or
+tone</b>. Using the em element really drives prominence with an added
+importance. On the other hand, the i element is primarily used within
+dialog or prose, offsetting text without any added emphasis or
+importance.</p>
+
+<pre>
+ 1  &lt;!-- Stressed emphasis --&gt;
+ 2  I &lt;em&gt;love&lt;/em&gt; Chicago!
+ 3  &lt;!-- Alternative voice or tone --&gt;
+ 4  The name &lt;i&gt;Shay&lt;/i&gt; means a gift.
+</pre>
+
+<h4>Italicizing Text Demo</h4>
+
+<h4>Using i for Icons</h4>
+
+<p>Recently there has been a small movement of front end programmers using
+the i element for including icons on a page, specifically as seen
+within <a href="https://getbootstrap.com/" 
+rel="noopener noreferrer" target="_blank">Bootstrap</a>.
+The i element is used as a hook, to which a class then determines which
+icon background image to apply to the element. Depending on how closely
+you wish to follow semantics this may or may not be an acceptable
+practices.</p>
+
+<h4>Underlining Text</h4>
+
+<p>Continuing the pattern of having multiple elements with the same
+presentation, underlining text is no different. There are a couple of
+different elements we can use as well as the 
+<a href="https://learn.shayhowe.com/html-css/working-with-typography/" 
+rel="noopener noreferrer" target="_blank">
+text decoration</a> CSS property. In this case, the two primary elements 
+used to underline text are ins and u.</p>
+
+<p>The ins element is used to identify text that has been recently <b>added
+to the document</b>, and the u element simply refers to an <b>unarticulated
+annotation</b>.</p>
+
+<p>For more semantic code, the ins element may be used with
+the cite and datetime attributes. The datetime attribute identifies when
+the content was added to the document, and the cite attribute provides a
+machine readable source providing reference for the addition, perhaps
+documentation or a request ticket.</p>
+
+<p>The u element is typically used to label text as a proper name, often in
+another language, or to point out a misspelling.</p>
+
+<p>Underlining text does require a bit of additional care, as it may be
+confused with a hyperlink. By default hyperlinks are underlined, and
+thus have become a standard design practice. Underlining text that is
+not a hyperlink can confuse users and cause quite a bit of frustration.
+Use underlines with caution.</p>
+
+<details>
+  <summary>Example, Underline</summary>
+
+<pre>
+ 1  &lt;!-- Added to the document --&gt;
+ 2  &lt;ins cite="http://learn.shayhowe.com" datetime="2012-07-01"&gt;
+ 3    Updated: This website now contains an advanced guide. 
+ 4  &lt;/ins&gt;
+ 5  &lt;!-- Unarticulated annotation --&gt;
+ 6  &lt;u&gt;Urushihara Yuuji&lt;/u&gt; won &lt;u&gt;Sasuke 27&lt;/u&gt;. 
+</pre>
+
+</details>
+
+<h4>Underlining Text Demo</h4>
+
+<h4>Striking Text</h4>
+
+<p>Striking text follows the same pattern as before where different
+elements may be used, as may the 
+<a href="https://learn.shayhowe.com/html-css/working-with-typography/" 
+rel="noopener noreferrer" target="_blank">
+text decoration</a> CSS property. The two properties most commonly used 
+include del and s.</p>
+
+<p>The del element is used to identify text <b>deleted or removed from the
+document</b>. As with the ins element, it may be used with
+the cite and datetime attributes. Each of which hold the identical
+semantic values as before, cite specifying a resource that explains the
+change and datetime identifying when the content was removed from the
+document.</p>
+
+The s element identifies text that is no longer accurate or relevant.</p>
+
+<details>
+  <summary>Example, Striking Text</summary>
+  
+<pre>
+ 1  &lt;!-- Deleted from the document --&gt;  
+ 2  I am an avid cyclist, &lt;del cite="http://shayhowe.com" 
+ 3  datetime="2012-07-01"&gt;
+ 4  skateboarder&lt;/del&gt; and designer.
+ 5  &lt;!-- No longer accurate or relevant --&gt;  
+ 6  &lt;s&gt;$24.99&lt;/s&gt; $19.99  
+</pre>
+
+</details>
+
+<h4>Striking Text Demo</h4>
+
+<h4>Highlighting Text</h4>
+
+<p>To highlight text for reference purposes the mark element should be
+used. Added in HTML5, the mark element provides a clean, semantic way to
+identify text, specifically for reference purposes without having to use
+an un-semantic text level element.</p>
+
+<pre>
+ 1  &lt;!-- Highlighted for reference purposes --&gt; 
+ 2  Search results for &lt;mark&gt;'chicago'&lt;/mark&gt;.
+</pre>
+
+<h4>Highlighting Text Demo</h4>
+
+<h4>Abbreviations</h4>
+
+<p>Abbreviations, the shortened form of a phrase, can be semantically
+marked up in HTML using the abbr element. The abbr element should be
+used along with the title attribute, of which includes the full value of
+the phrase being abbreviated. The acronym element was originally used to
+distinguish acronyms from abbreviations but has since been deprecated,
+and shouldn't be used.</p>
+
+<pre>
+ 1  &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;
+ 2  &lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt;
+</pre>
+
+<h4>Abbreviations Demo</h4>
+
+<h4>Sub & Superscripts</h4>
+
+<p>Subscripts and superscripts may be marked up accordingly using
+the sub and sup elements respectively. It is important to note that
+these elements should be reserved for typographical conventions, not for
+presentational purposes.</p>
+
+<pre>
+ 1  &lt;!-- Subscript --&gt;
+ 2  H&lt;sub&gt;2&lt;/sub&gt;O 
+ 3  &lt;!-- Superscripts --&gt;
+ 4  1&lt;sup&gt;st&lt;/sup&gt; Place 
+</pre>
+
+<h4>Sub &amp; Superscripts Demo</h4>
+
+<h4>Meter &amp; Progress</h4>
+
+<p>To gauge scale or indicate progress the meter and progress elements
+should be used. The meter element is used to measure a fixed value, one
+that does not change over time, while the progress element measures the
+progress of a increasing measurement.</p>
+
+<p>The meter element may be used with the min, max, low, high, optimum,
+and value attributes. The min and max attributes set the lower and upper
+bounds of the range, where the value attribute sets the exact measured
+value. The low and high attributes identify what is to be considered the
+lower and higher parts of the range, while the optimum value identifies
+the most favorable part of the range, of which may be in the lower or
+higher parts.</p>
+
+<p>The progress element indicates progress rather than a fixed measurement.
+It specifically represents the completion of a task, either by what is
+left to be completed or what has been completed thus far. There are two
+attributes that may be applied to the progress element, value and max.
+The value attributes indicates where the progress currently stands and
+the max attribute indicates what progress needs to be reached.</p>
+
+<details>
+  <summary>Example, Meter &amp; Progress</summary>
+
+<pre>
+ 1  &lt;!-- Meter --&gt;
+ 2  &lt;meter value="7" max="10"&gt;7 stars&lt;/meter&gt;
+ 3  &lt;meter value="47" min="0" max="105" low="5" high="65" optimum="45"&gt;The car 
+ 4    is moving at a decent average mile per hour.&lt;/meter&gt;
+ 5  &lt;!-- Progress --&gt;
+ 6  You are &lt;progress value="50" max="100"&gt;50%&lt;/progress&gt; 
+ 7  complete.
+ 8  &lt;progress value="50" min="0" max="100"&gt;Hold tight, you"re getting there.&lt;/progress&gt;
+</pre>
+
+</details>
+
+<h4>Meter &amp; Progress Demo</h4>
+
+<h4>Time &amp; Address</h4>
+
+<p>Representing time and addresses in HTML can be accomplished using
+the time and address elements respectively. The time element may be used
+with, or without, the datetime attribute, depending on how the text
+within the element is formatted. If the content is formatted with the
+correct time stamp then the datetime attribute may be omitted.
+Furthermore, if the time is representing the date or time of a
+publication the pubdate Boolean attribute should be used.</p>
+
+<p>The address element may be used to hold any contact information,
+including a physical address as well as a website or email address. It
+should not include any further information than the contact information,
+and other content needs to be placed outside of the address element.</p>
+
+<details>
+  <summary>Example, Time &amp; Address</summary>
+  
+<pre>
+ 1  &lt;!-- Time --&gt;  
+ 2  &lt;time&gt;2011-08-24&lt;/time&gt; 
+ 3  &lt;time datetime="2011-08-24" pubdate&gt;August 24th, 2011&lt;/time&gt;
+ 4  &lt;time datetime="15:00"&gt;3pm&lt;/time&gt; 
+ 5  &lt;time datetime="2011-08-24T15:00"&gt;August 24th, 2011 at 3pm&lt;/time&gt; 
+ 6  &lt;!-- Address --&gt;
+ 7  &lt;address&gt; &lt;strong&gt;Shay Howe&lt;/strong&gt;&lt;br&gt;
+ 8    &lt;a href="http://learn.shayhowe.com"&gt;http://learn.shayhowe.com&lt;/a&gt;&lt;br&gt; 
+ 9    &lt;a href="mailto:hello@awesome.com"&gt;hello@awesome.com&lt;/a&gt;&lt;br&gt; 
+ 10    600 W. Chicago Ave.&lt;br&gt;
+ 11   Suite 620&lt;br&gt; 
+ 12   Chicago, IL 60654&lt;br&gt; USA  
+ 13 &lt;/address&gt; 
+</pre>
+
+</details>
+
+<h4>Time & Address Demo</h4>
+
+<h4>Presenting Code</h4>
+
+<p>Presenting code snippets, or samples, within a page can be accomplished
+using either the code or pre elements, or a combination of the two.
+The code element is commonly used to represent a fragment of code and is
+displayed in the default monospace font. The code element is an inline
+level element and may be used within paragraphs of text, or other block
+and inline level elements.</p>
+
+<p>For large blocks of code, the pre element can be used in conjunction
+with the code element. The pre element represent preformatted text and
+will display text exactly as it is typed, whitespace included. Nesting
+the code element within the pre element semantically identifies larger
+samples of code, which include whitepsace, displayed in a block level
+manner.</p>
+
+<pre>
+ 1  &lt;!-- Inline code samples --&gt;  
+ 2  Use the &lt;code&gt;article&lt;/code&gt; element. 
+ 3  &lt;!-- Larger, block level code snippets --&gt;  
+ 4  &lt;pre&gt;&lt;code&gt;body { 
+ 5    color: #666; 
+ 6    font: 14px/20px Arial, sans-serif;
+ 7  }&lt;/code&gt;&lt;/pre&gt;
+</pre>
+
+<h4>Presenting Code Demo</h4>
+
+<h4>Line & Word Breaks</h4>
+
+<p>Occasionally you may want to include a line break within a line of text,
+in which case the br element may be used. The br element does not have a
+closing tag, simply a beginning. In XHTML the br element is self
+closing, including a trailing forward slash,</p> <br />.
+
+<p>Line breaks are not to be used for thematic grouping of content.
+Paragraphs or other elements are better suited for thematic grouping.
+Line breaks are specifically to be used where line breaks exist as part
+of the content, for example as within addresses and poems.</p>
+
+<p>In addition to line breaks, you may also specify word breaking
+opportunities with the wbr element. Using the wbr element in the middle
+of a word ensures that, should the word need to wrap two lines, it does
+in a legible fashion.</p>
+
+<pre>
+ 1  &lt;!-- Line break --&gt;  
+ 2  600 W. Chicago Ave.&lt;br&gt;
+ 3  Chicago, IL 60654&lt;br&gt;  
+ 4  USA  
+ 5  &lt;!-- Word break --&gt;  
+ 6  http://shay&lt;wbr&gt;howe.com  
+</pre>
+
+<h4>Line & Word Breaks Demo</h4>
+
+<h4>Side Comments</h4>
+
+<p>Originally the small element was used to render text as one font size
+smaller than the default, purely for presentational purposes. As we are
+aware, presentation and style should only live within CSS, not HTML.
+Within HTML5, the small element preserves the presentation of being
+displayed at a smaller font size, however it semantically means to be
+rendered as a side comments or small print. This often includes
+copyright information or legal print.</p>
+
+<pre>
+ 1  &lt;!-- Side comments or small print --&gt; 
+ 2  &lt;small&gt;&copy; 2012 Shay Howe&lt;/small&gt;
+</pre>
+
+<h4>Side Comments Demo</h4>
+
+<h4>Citations & Quotes</h4>
+
+<p>The beginner's guide discusses <a href="https://learn.shayhowe.com/html-css/working-with-typography/" 
+rel="noopener noreferrer" target="_blank">
+citations and quotes</a>, and when to use the cite, q, and blockquote elements accordingly. As a
+quick reminder, the cite element refers to a title of work, the q element identifies dialog or 
+prose, and the blockquote element is used to code longer formed quotes, commonly from external 
+sources.</p>
+
+<h4>Hyperlink Attributes</h4>
+
+<p>The beginner's guide also
+outlines <a href="https://learn.shayhowe.com/html-css/getting-to-know-html/" 
+rel="noopener noreferrer" target="_blank">
+hyperlinks</a>, and some of their different behaviors. What is not covered, 
+however, is some of the semantic benefits to hyperlinks, specifically with 
+the use of the download and rel attributes.</p>
+
+<h4>Download Attribute</h4>
+
+<p>The download attribute tells the browser to prompt a download for a
+file, rather than the default behavior of navigation to the file. As an
+example, if the hyperlink reference attribute, href, is pointing to an
+image, the browser will prompt a user to download the image instead of
+opening the image within the browser.</p>
+
+<p>The download attribute can serve as a Boolean attribute, downloading the
+file as is, or it may contain a value, of which becomes the file name
+once downloaded. Using a specific value here lets you name the file as
+you wish on your server while still providing users with a meaningful
+name.</p>
+
+<pre>
+ 1  &lt;!-- Boolean --&gt;
+ 2  &lt;a href="twitter-logo.png" download&gt;Twitter Logo&lt;/a&gt;
+ 3  &lt;!-- With a value --&gt;
+ 4  &lt;a href="twitter-logo.png" download="Logo"&gt;Twitter Logo&lt;/a&gt;
+</pre>
+
+<h4>Download Attribute Demo</h4>
+
+<h4>Relationship Attribute</h4>
+
+<p>For any hyperlinks including a reference attribute, href, you may also
+include the relationship attribute, rel. The rel attribute identifies
+the relationship between the current document and the document being
+referenced. For example, when linking to a copyright statement
+the rel attribute value of copyright should be used.</p>
+
+<pre>
+ 1  &lt;a href="legal.html" rel="copyright"&gt;Terms of Use&lt;/a&gt;
+ 2  &lt;a href="toc.html" rel="contents"&gt;Table of Contents&lt;/a&gt;
+</pre>
+
+<p>A few <a href="http://microformats.org/wiki/existing-rel-values" 
+rel="noopener noreferrer" target="_blank">popular</a> rel attribute values include:</p>
+
+<ul>
+  <li>alternate</li>
+  <li>author</li>
+  <li>bookmark</li>
+  <li>help</li>
+  <li>license</li>
+  <li>next</li>
+  <li>nofollow</li>
+  <li>noreferrer</li>
+  <li>prefetch</li>
+  <li>prev</li>
+  <li>search</li>
+  <li>tag</li>
+</ul>
+
+<h4>Microdata</h4>
+
+<p><a href="http://www.w3.org/TR/microdata/" 
+rel="noopener noreferrer" target="_blank">Microdata</a> is HTML
+extended with nested groups of name-value pairs that allow machines,
+including browsers and search engines, to pick up additional semantics
+and information for rich content. Adding microdata to your website is
+accomplished by using predetermined attributes and values. These
+attributes and values will then be interpreted, and extended, as
+intended. Currently, the more popular uses of microdata reside within
+coding contact information and calendar events, however there are 
+<a href="http://schema.org/docs/schemas.html" 
+rel="noopener noreferrer" target="_blank">encoding models</a> for products,
+reviews, and more.</p>
+
+<p>One example of microdata at work is within Google, where microdata is
+interpreted and used within search results to display more relevant
+data. Often performing a search for a business location yields the
+address and sub sequential contact information within the results.
+Chances are this information is being pulled from microdata written on
+an existing website.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 16. google microdata (181) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image016.jpeg"
+   style="width:40%"
+   title="Google Microdata"
+   alt="Google Microdata." />
+</p>
+<p align="center" width="40%"><small><small>Fig. 10. Google uses microdata to identify business locations, contact
+information, hours, pricing, ratings, and more.</small></small></p>
+
+<h4>Microdata vs. Microformats vs. RDFa</h4>
+
+<p>There are actually a handful of rich, structured data standards,
+including <a href="http://www.w3.org/TR/microdata/" 
+rel="noopener noreferrer" target="_blank">microdata</a>,
+<a href="http://microformats.org/wiki/Main_Page" 
+rel="noopener noreferrer" target="_blank">microformats</a>, and 
+<a href="http://www.w3.org/TR/xhtml-rdfa-primer/" 
+rel="noopener noreferrer" target="_blank">RDFa</a>. All
+of these have their pros and cons, and all of which are still viable to
+practice.</p>
+
+<p>Microdata is the recommended format from 
+<a href="https://support.google.com/webmasters/bin/answer.py?hl=en&answer=99170" 
+rel="noopener noreferrer" target="_blank">
+Google</a>, and other search engines, as well as part of the HTML5 specification. It
+uses findings from both microformats and RDFa to base it's design
+around, thus looking to be a solid choice, and the one covered here. It
+is, however, recommended you do your research, take the pulse of the
+community, find what works best for your situation, and use that. Using
+one of these standards is substantially better than not using any. Find
+what will provide the best benefit for your users.</p>
+
+<h4>Outlining Microdata</h4>
+
+<p>Microdata is identified using three main
+attributes, itemscope, itemtype, and itemprop.</p>
+
+<p>The itemscope Boolean attribute declares the scope of each microdata
+item. Place this attribute on the parent element where all of the
+microdata information pertaining to this item should reside.</p>
+
+<p>Once you have determined the scope, use the itemtype attribute to
+identify what microdata vocabulary should be used. Generally speaking,
+some of the more popular microdata item types have been outlined
+at <a href="http://schema.org/docs/schemas.html" 
+rel="noopener noreferrer" target="_blank">Schema.org</a>.
+There are, however, other websites which outline additional, and
+different, item types. You may also write your own item types should you
+find the need.</p>
+
+<pre>
+ 1  &lt;section itemscope itemtype="http://schema.org/Person"&gt;
+ 2    ... 
+ 3  &lt;/section&gt;
+</pre>
+
+<p>Once the scope and type of the item have been determined, properties may
+then be set. These properties are identified by different elements which
+include the itemprop attribute. The value of this attribute determines
+what property is being referenced, and the content within the element
+itself most commonly determines the value of the property.</p>
+
+<pre>
+ 1  &lt;section itemscope itemtype="http://schema.org/Person"&gt; 
+ 2    &lt;h1 itemprop="name"&gt;Shay Howe&lt;/h1&gt;
+ 3  &lt;/section&gt; 
+</pre>
+
+<p>Some elements, however, do not get their itemprop value from the content
+within the element. Instead, their value is determined from the value of
+another attribute on the element. The table below outlines these one-off
+elements and what attribute is used for their property value.</p>
+
+  | <b>Element</b>                                       | <b>Value</b>       |
+  |------------------------------------------------------|--------------------|
+  | &lt;meta&gt;                                               | content attribute  |
+  | &lt;audio&gt;, &lt;embed&gt;, &lt;iframe&gt;, &lt;img&gt;, &lt;source&gt;, &lt;video&gt; | src attribute      |
+  | &lt;a&gt;, &lt;area&gt;, &lt;link&gt;                                  | href attribute     |
+  | &lt;object&gt;                                             | data attribute     |
+  | &lt;time&gt;                                               | datetime attribute |
+
+<h4>Person Microdata</h4>
+
+<p>When referring to a person the <a href="http://schema.org/Person" 
+rel="noopener noreferrer" target="_blank">person</a> microdata library
+should be used. Below is an example of what a person microdata item
+might look like. Please notice, the person item type is used, as is the
+postal address item type within it. Also, please notice the different
+item properties and their corresponding values.</p>
+
+<details>
+  <summary>Example, Person Microdata</summary>
+  
+<pre>
+ 1  &lt;section itemscope itemtype="http://schema.org/Person"&gt; 
+ 2    &lt;strong itemprop="name"&gt;Shay Howe&lt;/strong&gt;
+ 3    &lt;img src="shay.jpg" itemprop="image" alt="Shay Howe"&gt;  
+ 4    &lt;div itemprop="jobTitle"&gt;Designer and Front-end Developer&lt;/div&gt;  
+ 5    &lt;a href="http://www.shayhowe.com" itemprop="url"&gt;shayhowe.com&lt;/a&gt; 
+ 6    &lt;div itemprop="telephone"&gt;(555) 123-4567&lt;/div&gt;  
+ 7    &lt;a href="mailto:shay@awesome.com" itemprop="email"&gt;shay@awesome.com&lt;/a&gt;
+ 8    &lt;address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"&gt;  
+ 9      &lt;span itemprop="streetAddress"&gt;600 W. Chicago Ave.&lt;/span&gt;
+ 10     &lt;span itemprop="addressLocality"&gt;Chicago&lt;/span&gt;,
+ 11     &lt;abbr itemprop="addressRegion" title="Illinois"&gt;IL&lt;/abbr&gt; 
+ 12     &lt;span itemprop="postalCode"&gt;60654&lt;/span&gt;  
+ 13   &lt;/address&gt; 
+ 14 &lt;/section&gt; 
+</pre>
+
+</details>
+
+<h4>Person Microdata Demo</h4>
+
+<p>Please keep in mind, this code is for an individual person. Should you
+wish to refer to an organization, a more specific <a href="http://schema.org/Organization" 
+rel="noopener noreferrer" target="_blank">organization</a> microdata
+library should be followed.</p>
+
+<h4>Event Microdata</h4>
+
+<p>The event microdata is very similar to that of the person microdata,
+however it uses the <a href="http://schema.org/Event" 
+rel="noopener noreferrer" target="_blank">event</a> microdata library
+instead. Common property similarities between the two can be identified,
+as can some of the nested item types.</p>
+
+<details>
+  <summary>Example, Event Microdata</summary>
+
+<pre>
+ 1  &lt;section itemscope itemtype="http://schema.org/Event"&gt;  
+ 2    &lt;a itemprop="url" href="#"&gt; 
+ 3      &lt;span itemprop="name"&gt;Styles Conference&lt;/span&gt;  
+ 4    &lt;/a&gt;  
+ 5    &lt;time itemprop="startDate" datetime="2014-08-2409:00"&gt;Sunday, August 24, 
+ 6      2014 at 9:00 a.m.&lt;/time&gt;  
+ 7    &lt;div itemprop="location" itemscope itemtype="http://schema.org/Place"&gt;  
+ 8      &lt;a itemprop="url" href="http://www.thechicagotheatre.com/"&gt;Chicago Theatre&lt;/a&gt; 
+ 9      &lt;address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"&gt;  
+ 10       &lt;div itemprop="streetAddress"&gt;175 N. State St.&lt;/div&gt;  
+ 11       &lt;span itemprop="addressLocality"&gt;Chicago&lt;/span&gt;,
+ 12       &lt;abbr itemprop="addressRegion" title="Illinois"&gt;IL&lt;/abbr&gt; 
+ 13       &lt;span itemprop="postalCode"&gt;60601&lt;/span&gt;  
+ 14     &lt;/address&gt; 
+ 15   &lt;/div&gt;
+ 16 &lt;/section&gt; 
+</pre>
+
+</details>
+
+<h4>Event Microdata Demo</h4>
+
+<p>Microdata provides a lot of ways to further extend the content of a
+page. We have only touched the surface here. Further information on
+microdata may be found at <a href="http://diveintohtml5.info/extensibility.html" 
+rel="noopener noreferrer" target="_blank">
+Dive Into HTML5 Microdata</a> and <a href="https://developers.whatwg.org/links.html#microdata" 
+rel="noopener noreferrer" target="_blank">WHATWG Microdata</a>.</p>
+
+<h4>WAI-ARIA</h4>
+
+<p><a href="http://www.w3.org/WAI/intro/aria" 
+rel="noopener noreferrer" target="_blank">WAI-ARIA</a>, also know as
+Web Accessibility Initiative --- Accessible Rich Internet Applications,
+is a specification that helps make web pages and applications more
+accessible to those with disabilities. Specifically, WAI-ARIA helps
+define roles (for what blocks of content do), states (for how blocks of
+content are configured), and additional properties to support assistive
+technologies.</p>
+
+<h4>Roles</h4>
+
+<p>Setting <a href="https://www.w3.org/TR/wai-aria/#roles" 
+rel="noopener noreferrer" target="_blank">WAI-ARIA roles</a> is
+accomplished using the role attribute. These roles then specify what
+certain elements and blocks of content do on a page.</p>
+
+<pre>
+ 1  &lt;header role="banner"&gt;...&lt;/header&gt; 
+</pre>
+
+<p>WAI-ARIA roles break down into four different categories, including
+abstract, widget, document structure, and landmark roles. For this
+lesson we will focus primarily on the <b>document structure</b> and <b>landmark
+roles</b>. <b>Document structure roles</b> define the organizational structure
+of content on a page, while <b>landmark roles</b> define the regions of a
+page. Specific role values for each of these categories are broken out
+below.</p>
+
+<h4>Document Structure Roles:</h4>
+
+<ul>
+  <li>article</li>
+  <li>columnheader</li>
+  <li>definition</li>
+  <li>directory</li>
+  <li>document</li>
+  <li>group</li>
+  <li>heading</li>
+  <li>img</li>
+  <li>list</li>
+  <li>listitem</li>
+  <li>math</li>
+  <li>note</li>
+  <li>presentation</li>
+  <li>region</li>
+  <li>row</li>
+  <li>rowheader</li>
+  <li>separator</li>
+  <li>toolbar</li>
+</ul>
+
+<h4>Landmark Roles</h4>
+
+<ul>
+  <li>application</li>
+  <li>banner</li>
+  <li>complementary</li>
+  <li>contentinfo</li>
+  <li>form</li>
+  <li>main</li>
+  <li>navigation</li>
+  <li>search</li>
+</ul>
+
+<p>HTML5 introduced a handful of new structural elements which commonly
+match up against the document structure and landmark roles. Exactly how
+these roles match up against specific elements may be seen below.</p>
+
+<p>Please notice, the header and footer elements do not have an implied role, and
+the acceptable roles for these elements may only be used <b>once</b> per
+page. That said, if you have multiple header and footer elements on a
+page the banner and contentinfo roles should be applied on the elements
+directly tied to the document from a top level perspective, not elements
+nested within other regions of the document structure.</p>
+
+| Element | Implied Role  | Acceptable Roles                        |
+|---------|---------------|-----------------------------------------|
+| article | article	      | application, article, document, or main |
+| aside   | complementary | complementary, note, or search          |
+| footer  | —             | contentinfo (Only once per page)        |
+| header  | —             | banner (Only once per page)             |
+| nav     | navigation    | navigation                              |
+| section | region        | alert, alertdialog, application, contentinfo, dialog, document, log, main, marquee, region, search, or status. |
+
+<p>Combining the elements with their matched roles in HTML5 would look like
+the following code snippet.</p>
+
+<pre>
+ 1  &lt;header role="banner"&gt;  
+ 2    &lt;nav role="navigation"&gt;...&lt;/nav&gt; 
+ 3  &lt;/header&gt;
+ 4  &lt;article role="article"&gt;
+ 5    &lt;section role="region"&gt;...&lt;/section&gt;  
+ 6  &lt;/article&gt; 
+ 7  &lt;aside role="complementary"&gt;...&lt;/aside&gt;  
+ 8  &lt;footer role="contentinfo"&gt;...&lt;/footer&gt;  
+</pre>
+
+<h3>States & Properties</h3>
+
+<p>In combination with WAI-ARIA roles there are also 
+<a href="https://www.w3.org/TR/wai-aria/#states_and_properties" 
+rel="noopener noreferrer" target="_blank">states and properties</a> 
+which help inform assistive technologies how content is configured. Like roles, 
+the states and properties are broken into four categories, including 
+<b>widget attributes</b>, <b>live region attributes</b>, <b>drag-and-drop attributes</b>, 
+and <b>relationship attributes</b>.</p>
+
+<ul>
+  <li>The <b>widget attributes</b> support widget roles and are specific to the 
+    user interface and where users take actions.</li>
+  <li>The <b>live region attributes</b> may be applied to any element and are used 
+    to indicate content changes for assistive technologies, on page alerts and 
+	notifications for example.</li>
+  <li><b>Drag-and-drop attributes</b> supply information about drag-and-drop 
+    interface elements and provide alternate behaviors to assistive technologies.</li>
+  <li>Lastly, <b>relationship attributes</b> outline the relationship between 
+    elements when the document structure cannot be determined.</li>
+</ul>
+
+<details>
+  <summary>Resources</summary>
+
+  <h3>Resources &amp; Links</h3>
+
+  <ul>
+   <li><a href="https://developers.whatwg.org/text-level-semantics.html" 
+     rel="noopener noreferrer" target="_blank">
+     Text-Level Semantics</a> via WHATWG</li>
+   <li><a href="http://microformats.org/wiki/existing-rel-values" 
+     rel="noopener noreferrer" target="_blank">
+     Existing rel Values</a> via Microformats.org</li>
+   <li><a href="http://schema.org/docs/schemas.html" 
+     rel="noopener noreferrer" target="_blank">
+     Organization of Schemas</a> via Schema.org</li>
+   <li><a href="http://diveintohtml5.info/extensibility.html" 
+     rel="noopener noreferrer" target="_blank">
+     Microdata</a> via Dive Into HTML5</li>
+   <li><a href="http://www.w3.org/WAI/intro/aria" 
+     rel="noopener noreferrer" target="_blank">
+     WAI-ARIA Overview</a>) via W3.org</li>
+   <li><a href="https://www.w3.org/TR/wai-aria/#roles" 
+     rel="noopener noreferrer" target="_blank">
+     The Roles Model</a> via W3.org</li>
+  </ul>
+
+</details>
+
+<h3><b>Lesson 9: </b><a href="#9-feature-support-polyfills">Feature Support &amp; Polyfills</a></h3>
+
+...the end.
+<h6>5/14/2024 4:58pm<br>
+5/19/2024 6:53pm<br>
+6/21/2024 Fri 1:25am<br>
+8/16/2024 Fri 3:55pm<br>
+10/21/2024 Mon 11:33pm<br/>
+10/23/2024 Wed 12:33pm<br/>
+12/06/2024 Fri 9:50am<br/>
+12/11/2024 Wed 12:53pm</h6>
